@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <!--
+        هذه القوائم تُضاف تحت القائمة الرئيسية للموقع الافتراضي.
+        بإمكانك ترتيبها أو حذفها لاحقًا من: الموقع الإلكتروني ▸ التخصيص ▸ القوائم
+    -->
+
+    <record id="menu_atawah_services" model="website.menu">
+        <field name="name">Services</field>
+        <field name="url">/#services</field>
+        <field name="parent_id" ref="website.main_menu"/>
+        <field name="website_id" ref="website.default_website"/>
+        <field name="sequence">10</field>
+    </record>
+
+    <record id="menu_atawah_about" model="website.menu">
+        <field name="name">About</field>
+        <field name="url">/#about</field>
+        <field name="parent_id" ref="website.main_menu"/>
+        <field name="website_id" ref="website.default_website"/>
+        <field name="sequence">20</field>
+    </record>
+
+    <record id="menu_atawah_process" model="website.menu">
+        <field name="name">Process</field>
+        <field name="url">/#process</field>
+        <field name="parent_id" ref="website.main_menu"/>
+        <field name="website_id" ref="website.default_website"/>
+        <field name="sequence">30</field>
+    </record>
+
+    <record id="menu_atawah_insights" model="website.menu">
+        <field name="name">Insights</field>
+        <field name="url">/#insights</field>
+        <field name="parent_id" ref="website.main_menu"/>
+        <field name="website_id" ref="website.default_website"/>
+        <field name="sequence">40</field>
+    </record>
+
+    <record id="menu_atawah_contact" model="website.menu">
+        <field name="name">Contact</field>
+        <field name="url">/#contact</field>
+        <field name="parent_id" ref="website.main_menu"/>
+        <field name="website_id" ref="website.default_website"/>
+        <field name="sequence">50</field>
+    </record>
+
+</odoo>

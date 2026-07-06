@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="s_atawah_contact" name="Atawah Contact">
+        <section id="contact" class="s_atawah_contact pt96 pb96" data-snippet="s_atawah_contact" data-name="Atawah Contact">
+            <div class="container">
+                <div class="atawah_contact_card">
+                    <div class="atawah_contact_intro">
+                        <h2>Let's talk about your numbers</h2>
+                        <p>
+                            Book a free 30-minute consultation. We'll review your current setup and outline what a
+                            partnership with ATAWAH could look like.
+                        </p>
+                        <a href="mailto:hello@atawah.ae" class="btn atawah_btn_primary">Schedule a call</a>
+
+                        <div class="atawah_contact_info">
+                            <div class="atawah_contact_info_item">
+                                <span class="atawah_contact_label">Email</span>
+                                <a href="mailto:hello@atawah.ae">hello@atawah.ae</a>
+                            </div>
+                            <div class="atawah_contact_info_item">
+                                <span class="atawah_contact_label">Phone</span>
+                                <a href="tel:+97140000000">+971 4 000 0000</a>
+                            </div>
+                            <div class="atawah_contact_info_item">
+                                <span class="atawah_contact_label">Address</span>
+                                <span>Dubai, United Arab Emirates</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form action="/website/form/" method="post" enctype="multipart/form-data"
+                          class="s_website_form atawah_contact_form" data-model_name="crm.lead"
+                          data-success-page="/contactus-thank-you">
+                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                        <input type="hidden" name="name" value="Website contact form"/>
+
+                        <div class="atawah_form_field">
+                            <label for="atawah_contact_name">Full name</label>
+                            <input type="text" id="atawah_contact_name" name="contact_name"
+                                   class="form-control" required="required"/>
+                        </div>
+                        <div class="atawah_form_field">
+                            <label for="atawah_contact_email">Work email</label>
+                            <input type="email" id="atawah_contact_email" name="email_from"
+                                   class="form-control" required="required"/>
+                        </div>
+                        <div class="atawah_form_field">
+                            <label for="atawah_contact_phone">Phone</label>
+                            <input type="tel" id="atawah_contact_phone" name="phone" class="form-control"/>
+                        </div>
+                        <div class="atawah_form_field">
+                            <label for="atawah_contact_message">How can we help?</label>
+                            <textarea id="atawah_contact_message" name="description"
+                                      class="form-control" rows="3"/>
+                        </div>
+
+                        <button type="submit" class="btn atawah_btn_primary w-100 s_website_form_send">
+                            Send message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <!-- تعطيل الصفحة الرئيسية الافتراضية في أودو -->
+    <record id="website.homepage" model="ir.ui.view">
+        <field name="active" eval="False"/>
+    </record>
+
+    <!-- الصفحة الرئيسية الجديدة بنفس ترتيب أقسام تصميم ATAWAH -->
+    <record id="page_home" model="website.page">
+        <field name="name">Home</field>
+        <field name="key">atawah_website_theme.page_home</field>
+        <field name="url">/</field>
+        <field name="type">qweb</field>
+        <field name="is_published" eval="True"/>
+        <field name="is_homepage" eval="True"/>
+        <field name="website_id" ref="website.default_website"/>
+        <field name="arch" type="xml">
+            <t t-name="atawah_website_theme.page_home">
+                <t t-call="website.layout">
+                    <t t-set="additional_title">ATAWAH — Financial Consultancy &amp; Auditing</t>
+
+                    <div id="wrap" class="oe_structure">
+                        <t t-call="atawah_website_theme.s_atawah_hero"/>
+                        <t t-call="atawah_website_theme.s_atawah_stats"/>
+                        <t t-call="atawah_website_theme.s_atawah_services"/>
+                        <t t-call="atawah_website_theme.s_atawah_about"/>
+                        <t t-call="atawah_website_theme.s_atawah_why"/>
+                        <t t-call="atawah_website_theme.s_atawah_details"/>
+                        <t t-call="atawah_website_theme.s_atawah_process"/>
+                        <t t-call="atawah_website_theme.s_atawah_insights"/>
+                        <t t-call="atawah_website_theme.s_atawah_contact"/>
+                    </div>
+                </t>
+            </t>
+        </field>
+    </record>
+
+</odoo>

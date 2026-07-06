@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="s_atawah_services" name="Atawah Services">
+        <section id="services" class="s_atawah_services pt96 pb96" data-snippet="s_atawah_services" data-name="Atawah Services">
+            <div class="container">
+                <div class="atawah_section_head">
+                    <h2>Six disciplines, <em>one team</em></h2>
+                    <p>From day-to-day bookkeeping to ERP rollouts and board-level advisory, every engagement is led by senior specialists.</p>
+                </div>
+
+                <div class="atawah_services_grid_wrapper">
+                    <div class="atawah_services_grid">
+                        <t t-foreach="request.env['atawah.service'].sudo().search([])" t-as="service">
+                            <div class="atawah_service_card" t-att-data-service-index="service_index">
+                                <div class="atawah_service_card_inner">
+                                    <div class="atawah_service_card_head">
+                                        <span class="atawah_service_icon" t-att-data-icon="service_index % 6"/>
+                                        <span class="atawah_service_number" t-esc="service.code"/>
+                                    </div>
+                                    <span class="atawah_service_tag" t-esc="service.category"/>
+                                    <h3 t-esc="service.name"/>
+                                    <p t-esc="service.description"/>
+                                    <a t-att-href="service.link_url or '#contact'" class="atawah_service_link">
+                                        Learn more <span class="atawah_arrow">→</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </t>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

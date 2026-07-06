@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- ===================== Custom Header ===================== -->
+    <template id="atawah_header" inherit_id="website.layout" name="Atawah Header">
+        <xpath expr="//header" position="replace">
+            <header class="atawah_header" data-name="Header">
+                <div class="container atawah_header_inner">
+                    <a href="/" class="atawah_logo">
+                        <span class="atawah_logo_mark">A</span>
+                        <span class="atawah_logo_text">ATAWAH</span>
+                    </a>
+
+                    <button class="atawah_nav_toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+                        <span/><span/><span/>
+                    </button>
+
+                    <nav class="atawah_nav">
+                        <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                            <a t-att-href="submenu.url" t-esc="submenu.name"/>
+                        </t>
+                    </nav>
+
+                    <div class="atawah_header_actions">
+                        <a href="#contact" class="atawah_link_action">Sign in</a>
+                        <a href="#contact" class="btn atawah_btn_primary atawah_btn_sm">Get a quote</a>
+                    </div>
+                </div>
+            </header>
+        </xpath>
+    </template>
+
+    <!-- ===================== Custom Footer ===================== -->
+    <template id="atawah_footer" inherit_id="website.layout" name="Atawah Footer">
+        <xpath expr="//footer" position="replace">
+            <footer class="atawah_footer" data-name="Footer">
+                <div class="container atawah_footer_inner">
+                    <a href="/" class="atawah_logo">
+                        <span class="atawah_logo_mark">A</span>
+                        <span class="atawah_logo_text">ATAWAH</span>
+                    </a>
+                    <p class="atawah_footer_copy">
+                        © <t t-esc="datetime.datetime.now().year"/> ATAWAH Financial Consultancy &amp; Auditing. All rights reserved.
+                    </p>
+                </div>
+            </footer>
+        </xpath>
+    </template>
+
+
+</odoo>

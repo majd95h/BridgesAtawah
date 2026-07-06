@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="report_invoice_document_custom_gold">
+        <t t-name="custom_invoice_layout.report_invoice_document_custom_gold">
+
+            <t t-foreach="docs" t-as="o">
+                <t t-set="o" t-value="o.with_context(lang=o.partner_id.lang)"/>
+
+                <main style="background-color: #ffffff; width: 100%; max-width: 850px; min-height: 1100px; position: relative; box-shadow: 0 4px 15px rgba(0,0,0,0.1); overflow: hidden; padding: 0; margin: 0 auto;">
+
+                    <svg style="position: absolute; top: 0; left: 0; width: 100%; height: 250px; z-index: 0; pointer-events: none;" viewBox="0 0 850 250" preserveAspectRatio="none">
+                        <defs>
+                            <linearGradient id="gold-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#ebd197;stop-opacity:1" />
+                                <stop offset="50%" style="stop-color:#d4af37;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#b5852a;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <path d="M 0,220 C 350,220 400,-20 850,40 L 850,-10 L 0,-10 Z" fill="url(#gold-grad)" opacity="0.3"/>
+                        <path d="M 0,210 C 350,210 420,-10 850,50 L 850,-10 L 0,-10 Z" fill="url(#gold-grad)"/>
+                        <path d="M 0,195 C 330,195 440,5 850,60 L 850,-10 L 0,-10 Z" fill="#ffffff"/>
+                    </svg>
+
+                    <header style="position: relative; z-index: 1; padding: 40px 40px 20px 40px;">
+                        
+                        <div style="width: 100%; text-align: center; color: #c39d48; margin-bottom: 30px;">
+                            <svg style="width: 150px; height: auto;" viewBox="0 0 200 60">
+                                <path d="M 30,50 L 30,20 Q 100,-10 170,20 L 170,50 L 155,50 L 155,25 Q 100,5 45,25 L 45,50 Z" fill="#d4af37"/>
+                                <rect x="70" y="10" width="10" height="30" fill="#d4af37"/>
+                                <rect x="95" y="5" width="10" height="35" fill="#d4af37"/>
+                                <rect x="120" y="10" width="10" height="30" fill="#d4af37"/>
+                                <text x="100" y="58" font-family="'DejaVu Sans', sans-serif" font-size="10" font-weight="bold" fill="#d4af37" text-anchor="middle">جسور عبر البحار ش.م.م</text>
+                            </svg>
+                            <h2 style="font-size: 16px; font-weight: 700; margin-top: 5px; letter-spacing: 0.5px;"><t t-out="o.company_id.name or 'Bridges Overseas LLC'"/></h2>
+                        </div>
+
+                        <table style="width: 100%; border-collapse: collapse; margin-top: 10px; table-layout: fixed;">
+                            <tr>
+                                <td style="vertical-align: middle; color: #c39d48; width: 50%;">
+                                    <h1 style="font-size: 32px; font-weight: 700; text-transform: uppercase; line-height: 1.1; margin: 0;">INVOICE</h1>
+                                    <t t-if="'show_arabic_text' in o._fields and o.show_arabic_text">
+                                        <h1 style="font-size: 28px; color: #333333; margin-top: 5px;">فاتورة</h1>
+                                    </t>
+                                </td>
+                                <td style="vertical-align: middle; text-align: right; width: 50%;">
+                                    <table style="border-collapse: collapse; margin-left: auto;">
+                                        <tr>
+                                            <td style="vertical-align: middle; white-space: nowrap; padding: 0 10px 0 0; font-size: 12px; font-weight: 600; color: #333333;">
+                                                <span style="display: inline-block; vertical-align: middle; color: #c39d48;">
+                                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                                                </span>
+                                                <span style="display: inline-block; vertical-align: middle; color: #555555; margin-left: 4px;">Invoice No.</span>
+                                                <span style="display: inline-block; vertical-align: middle; margin-left: 4px;"><t t-out="o.name"/></span>
+                                            </td>
+                                            <td style="vertical-align: middle; white-space: nowrap; padding: 0 10px; font-size: 12px; font-weight: 600; color: #333333;">
+                                                <span style="display: inline-block; vertical-align: middle; color: #c39d48;">
+                                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                                                </span>
+                                                <span style="display: inline-block; vertical-align: middle; color: #555555; margin-left: 4px;">Date</span>
+                                                <span style="display: inline-block; vertical-align: middle; margin-left: 4px;"><t t-out="o.invoice_date.strftime('%d %B %Y') if o.invoice_date else ''"/></span>
+                                            </td>
+                                            <td style="vertical-align: middle; white-space: nowrap; padding: 0 0 0 10px; font-size: 12px; font-weight: 600; color: #333333;">
+                                                <span style="display: inline-block; vertical-align: middle; color: #c39d48;">
+                                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><rect x="8" y="14" width="4" height="4"/></svg>
+                                                </span>
+                                                <span style="display: inline-block; vertical-align: middle; color: #555555; margin-left: 4px;">Due Date</span>
+                                                <span style="display: inline-block; vertical-align: middle; margin-left: 4px;"><t t-out="o.invoice_date_due.strftime('%d %B %Y') if o.invoice_date_due else ''"/></span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </header>
+
+                    <section style="position: relative; z-index: 1; padding: 20px 40px;">
+                        <table style="width: 100%; border-collapse: collapse; table-layout: fixed;">
+                            <tr>
+                                <td style="vertical-align: top; width: 50%; padding-right: 15px;">
+                                    <h3 style="color: #c39d48; font-size: 15px; margin-bottom: 10px; font-weight: 700;">Bill To</h3>
+                                    <p style="font-size: 13px; line-height: 1.8; color: #333333; font-weight: 600; margin: 0;"><t t-out="o.partner_id.name"/></p>
+                                    <p t-if="o.partner_id.street" style="font-size: 13px; line-height: 1.8; color: #333333; font-weight: 600; margin: 0;"><t t-out="o.partner_id.street"/></p>
+                                    <p t-if="o.partner_id.city" style="font-size: 13px; line-height: 1.8; color: #333333; font-weight: 600; margin: 0;"><t t-out="o.partner_id.city"/>, <t t-out="o.partner_id.country_id.name or ''"/></p>
+                                    <p t-if="o.partner_id.vat" style="font-size: 13px; line-height: 1.8; color: #333333; font-weight: 600; margin: 0;">VAT: <t t-out="o.partner_id.vat"/></p>
+                                </td>
+                                <t t-if="'show_arabic_text' in o._fields and o.show_arabic_text">
+                                    <td style="vertical-align: top; width: 50%; text-align: right; padding-left: 15px;" dir="rtl">
+                                        <h3 style="text-align: right; color: #c39d48; font-size: 15px; margin-bottom: 10px; font-weight: 700;">فاتورة إلى</h3>
+                                        <p style="font-size: 13px; line-height: 1.8; color: #333333; font-weight: 600; margin: 0;"><t t-out="o.partner_id.name"/></p>
+                                        <p t-if="o.partner_id.street" style="font-size: 13px; line-height: 1.8; color: #333333; font-weight: 600; margin: 0;"><t t-out="o.partner_id.street"/></p>
+                                        <p t-if="o.partner_id.city" style="font-size: 13px; line-height: 1.8; color: #333333; font-weight: 600; margin: 0;"><t t-out="o.partner_id.city"/>, <t t-out="o.partner_id.country_id.name or ''"/></p>
+                                        <p t-if="o.partner_id.vat" style="font-size: 13px; line-height: 1.8; color: #333333; font-weight: 600; margin: 0;">الرقم الضريبي: <t t-out="o.partner_id.vat"/></p>
+                                    </td>
+                                </t>
+                            </tr>
+                        </table>
+                    </section>
+
+                    <section style="position: relative; z-index: 1; padding: 10px 40px;">
+                        <table style="width: 100%; border-collapse: collapse; font-size: 13px;">
+                            <thead>
+                                <tr>
+                                    <th style="background-color: #f9f5e9; color: #333333; font-weight: 700; padding: 12px 10px; border-top: 1px solid #e5d5a8; border-bottom: 1px solid #e5d5a8; text-align: center; width: 5%;">#</th>
+                                    <th style="background-color: #f9f5e9; color: #333333; font-weight: 700; padding: 12px 10px; border-top: 1px solid #e5d5a8; border-bottom: 1px solid #e5d5a8; text-align: left; width: 45%;">
+                                        <div style="display: inline-block;">Description</div>
+                                        <t t-if="'show_arabic_text' in o._fields and o.show_arabic_text">
+                                            <div style="color: #c39d48; display: inline-block; float: right;">البيان</div>
+                                        </t>
+                                    </th>
+                                    <th style="background-color: #f9f5e9; color: #333333; font-weight: 700; padding: 12px 10px; border-top: 1px solid #e5d5a8; border-bottom: 1px solid #e5d5a8; text-align: center; width: 15%;">
+                                        <div>Quantity</div>
+                                        <t t-if="'show_arabic_text' in o._fields and o.show_arabic_text">
+                                            <div style="color: #c39d48;">الكمية</div>
+                                        </t>
+                                    </th>
+                                    <th style="background-color: #f9f5e9; color: #333333; font-weight: 700; padding: 12px 10px; border-top: 1px solid #e5d5a8; border-bottom: 1px solid #e5d5a8; text-align: right; width: 15%;">
+                                        <div>Unit Price</div>
+                                        <t t-if="'show_arabic_text' in o._fields and o.show_arabic_text">
+                                            <div style="color: #c39d48;">سعر الوحدة</div>
+                                        </t>
+                                    </th>
+                                    <th style="background-color: #f9f5e9; color: #333333; font-weight: 700; padding: 12px 10px; border-top: 1px solid #e5d5a8; border-bottom: 1px solid #e5d5a8; text-align: right; width: 20%;">
+                                        <div>Amount (<t t-out="o.currency_id.name"/>)</div>
+                                        <t t-if="'show_arabic_text' in o._fields and o.show_arabic_text">
+                                            <div style="color: #c39d48;">المبلغ (<t t-out="o.currency_id.name"/>)</div>
+                                        </t>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="o.invoice_line_ids" t-as="line">
+                                    <t t-if="not line.display_type">
+                                        <tr>
+                                            <td style="padding: 15px 10px; border-bottom: 1px solid #e5d5a8; font-weight: 600; text-align: center;"><t t-out="line_index + 1"/></td>
+                                            <td style="padding: 15px 10px; border-bottom: 1px solid #e5d5a8; font-weight: 600; text-align: left;">
+                                                <span><t t-out="line.name"/></span>
+                                            </td>
+                                            <td style="padding: 15px 10px; border-bottom: 1px solid #e5d5a8; font-weight: 600; text-align: center;"><t t-out="'{:.2f}'.format(line.quantity)"/></td>
+                                            <td style="padding: 15px 10px; border-bottom: 1px solid #e5d5a8; font-weight: 600; text-align: right;"><t t-out="'{:.3f}'.format(line.price_unit)"/></td>
+                                            <td style="padding: 15px 10px; border-bottom: 1px solid #e5d5a8; font-weight: 600; text-align: right;"><t t-out="'{:.3f}'.format(line.price_subtotal)"/></td>
+                                        </tr>
+                                    </t>
+                                </t>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <section style="position: relative; z-index: 1; padding: 20px 40px; margin-top: 10px;">
+                        <table style="width: 100%; border-collapse: collapse; page-break-inside: avoid;">
+                            <tr>
+                                <td style="width: 55%; vertical-align: top; padding-right: 20px;">
+                                    <t t-if="('amount_in_words_en' in o._fields and o.amount_in_words_en) or ('amount_in_words_ar' in o._fields and o.amount_in_words_ar)">
+                                        <div>
+                                            <h4 style="font-size: 13px; color: #555555; margin-bottom: 5px; font-weight: 600;">Amount in Words</h4>
+                                            <t t-if="'amount_in_words_en' in o._fields and o.amount_in_words_en">
+                                                <p style="font-size: 13px; font-weight: 700; margin-bottom: 20px;"><t t-out="o.amount_in_words_en"/></p>
+                                            </t>
+                                            <t t-if="'show_arabic_text' in o._fields and o.show_arabic_text and 'amount_in_words_ar' in o._fields and o.amount_in_words_ar">
+                                                <p style="font-size: 13px; font-weight: 600; margin-top: 2px; margin-bottom: 20px;" dir="rtl"><t t-out="o.amount_in_words_ar"/></p>
+                                            </t>
+                                        </div>
+                                    </t>
+
+                                    <div style="margin-top: 20px;">
+                                        <table style="width: 100%; border-collapse: collapse; font-size: 11px; line-height: 1.6; color: #333333; font-weight: 600;">
+                                            <tr>
+                                                <td colspan="2"><h4 style="color: #c39d48; margin-bottom: 8px; font-size: 12px;">Terms &amp; Conditions <t t-if="'show_arabic_text' in o._fields and o.show_arabic_text">/ الشروط والأحكام</t></h4></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="vertical-align: top; width: 50%;">
+                                                    <ul style="list-style-type: disc; padding-left: 20px; margin: 0;">
+                                                        <li style="margin-bottom: 6px;">Payment to be made within 30 days from the invoice date.</li>
+                                                        <li style="margin-bottom: 6px;">Please include the invoice number in your payment.</li>
+                                                        <li style="margin-bottom: 6px;">This is a computer generated document and does not require signature.</li>
+                                                    </ul>
+                                                </td>
+                                                <t t-if="'show_arabic_text' in o._fields and o.show_arabic_text">
+                                                    <td style="vertical-align: top; width: 50%; text-align: right;" dir="rtl">
+                                                        <ul style="list-style-type: disc; padding-right: 20px; padding-left: 0; margin: 0;">
+                                                            <li style="margin-bottom: 6px;">يجب الدفع خلال 30 يوما من تاريخ الفاتورة.</li>
+                                                            <li style="margin-bottom: 6px;">يرجى اذكر رقم الفاتورة عند الدفع.</li>
+                                                            <li style="margin-bottom: 6px;">هذا مستند إلكتروني ولا يتطلب توقيع.</li>
+                                                        </ul>
+                                                    </td>
+                                                </t>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </td>
+
+                                <td style="width: 45%; vertical-align: top;">
+                                    <div style="border: 1px solid #e5d5a8; border-radius: 4px; overflow: hidden;">
+                                        <table style="width: 100%; border-collapse: collapse;">
+                                            <tr>
+                                                <td style="padding: 12px 15px; font-size: 13px; font-weight: 700; border-bottom: 1px solid #e5d5a8;">Subtotal</td>
+                                                <td style="padding: 12px 15px; font-size: 13px; font-weight: 700; border-bottom: 1px solid #e5d5a8; text-align: right;"><t t-out="'{:.3f}'.format(o.amount_untaxed)"/></td>
+                                            </tr>
+                                            <t t-foreach="o.line_ids" t-as="tax_line">
+                                                <t t-if="tax_line.tax_repartition_line_id">
+                                                    <tr>
+                                                        <td style="padding: 12px 15px; font-size: 13px; font-weight: 700; border-bottom: 1px solid #e5d5a8;"><t t-out="tax_line.name"/></td>
+                                                        <td style="padding: 12px 15px; font-size: 13px; font-weight: 700; border-bottom: 1px solid #e5d5a8; text-align: right;"><t t-out="'{:.3f}'.format(tax_line.balance)"/></td>
+                                                    </tr>
+                                                </t>
+                                            </t>
+                                            <tr style="background-color: #dfc57b;">
+                                                <td style="padding: 15px; font-size: 16px; font-weight: 700;">
+                                                    <div>Total (<t t-out="o.currency_id.name"/>)</div>
+                                                    <t t-if="'show_arabic_text' in o._fields and o.show_arabic_text">
+                                                        <div style="font-size: 13px;">الإجمالي (<t t-out="o.currency_id.name"/>)</div>
+                                                    </t>
+                                                </td>
+                                                <td style="padding: 15px; font-size: 16px; font-weight: 700; text-align: right; vertical-align: middle;">
+                                                    <t t-out="'{:.3f}'.format(o.amount_total)"/>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </section>
+
+                    <footer style="position: relative; z-index: 1; padding: 30px 40px; margin-top: auto; font-size: 12px; font-weight: 600; color: #333333; text-align: center;">
+                        <div t-if="o.company_id.phone" style="display: inline-block; margin: 0 10px;">
+                            <svg style="width: 16px; height: 16px; fill: #c39d48; vertical-align: middle; margin-right: 5px;" viewBox="0 0 24 24"><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.01.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1zM19 12h2a9 9 0 0 0-9-9v2c3.87 0 7 3.13 7 7zm-4 0h2c0-2.76-2.24-5-5-5v2c1.66 0 3 1.34 3 3z"/></svg>
+                            <span style="vertical-align: middle;"><t t-out="o.company_id.phone"/></span>
+                        </div>
+                        <div t-if="o.company_id.email" style="display: inline-block; margin: 0 10px;">
+                            <svg style="width: 16px; height: 16px; fill: #c39d48; vertical-align: middle; margin-right: 5px;" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                            <a t-attf-href="mailto:{{o.company_id.email}}" style="color: #333333; text-decoration: none; vertical-align: middle;"><t t-out="o.company_id.email"/></a>
+                        </div>
+                        <div t-if="o.company_id.city" style="display: inline-block; margin: 0 10px;">
+                            <svg style="width: 16px; height: 16px; fill: #c39d48; vertical-align: middle; margin-right: 5px;" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                            <span style="vertical-align: middle;"><t t-out="o.company_id.city"/></span>
+                        </div>
+                        <div t-if="o.company_id.website" style="display: inline-block; margin: 0 10px;">
+                            <svg style="width: 16px; height: 16px; fill: #c39d48; vertical-align: middle; margin-right: 5px;" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.91 4.33 3.56zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.9-4.33-3.56zm2.95-8H5.08c1.37-2.16 3.63-3.6 6.27-3.92-.85 1.19-1.52 2.51-1.96 3.92zm3.97 8.04c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.6 14H9.4c-.08-.66-.14-1.32-.14-2 0-.68.06-1.34.14-2h5.2c.08.66.14 1.32.14 2 0 .68-.06 1.34-.14 2zm1.42 3.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.65-2.49 2.93-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"/></svg>
+                            <a t-attf-href="http://{{o.company_id.website}}" style="color: #333333; text-decoration: none; vertical-align: middle;"><t t-out="o.company_id.website"/></a>
+                        </div>
+                    </footer>
+
+                    <svg style="position: absolute; bottom: 0; right: 0; width: 300px; height: 150px; z-index: 0; pointer-events: none;" viewBox="0 0 300 150" preserveAspectRatio="none">
+                        <path d="M 50,150 C 150,100 200,0 300,0 L 300,150 Z" fill="none" stroke="#d4af37" stroke-width="15" opacity="0.4"/>
+                        <path d="M 100,150 C 200,80 250,20 300,30 L 300,150 Z" fill="none" stroke="#d4af37" stroke-width="8" opacity="0.6"/>
+                        <path d="M 180,150 C 240,110 270,60 300,70 L 300,150 Z" fill="#d4af37" opacity="0.3"/>
+                    </svg>
+
+                </main>
+
+            </t>
+        </t>
+    </template>
+
+    <record id="action_report_custom_gold_invoice" model="ir.actions.report">
+        <field name="name">Gold Bilingual Invoice</field>
+        <field name="model">account.move</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">custom_invoice_layout.report_invoice_document_custom_gold</field>
+        <field name="report_file">custom_invoice_layout.report_invoice_document_custom_gold</field>
+        <field name="binding_model_id" ref="account.model_account_move"/>
+        <field name="binding_type">report</field>
+    </record>
+
+</odoo>

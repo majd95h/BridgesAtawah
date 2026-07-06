@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="s_atawah_process" name="Atawah Process">
+        <section id="process" class="s_atawah_process pt96 pb96" data-snippet="s_atawah_process" data-name="Atawah Process">
+            <div class="container">
+                <div class="atawah_section_head">
+                    <span class="atawah_eyebrow_tag">How we work</span>
+                    <h2>A simple, transparent process</h2>
+                </div>
+
+                <div class="atawah_process_timeline">
+                    <t t-foreach="request.env['atawah.process.step'].sudo().search([])" t-as="step">
+                        <div class="atawah_process_step">
+                            <span class="atawah_process_code" t-esc="step.code"/>
+                            <h3 t-esc="step.name"/>
+                            <p t-esc="step.description"/>
+                        </div>
+                    </t>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

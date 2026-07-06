@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--
+        يضيف هذا القالب مجموعة "Atawah" جديدة إلى شاشة اختيار الـ Building
+        Blocks في محرر الموقع (Website Builder v18/v19)، ثم يسجّل كل قسم من
+        أقسام تصميم Atawah داخل هذه المجموعة، بحيث يمكن سحب أي قسم منها
+        وإفلاته على أي صفحة أخرى غير الصفحة الرئيسية أيضًا.
+
+        هذا النمط مطابق لما تشرحه وثائق أودو 19 الرسمية (Developer Tutorials
+        ▸ Build a website theme ▸ Chapter 3 ▸ Create your custom building
+        blocks).
+    -->
+    <template id="snippets_atawah" inherit_id="website.snippets" name="Atawah Snippets">
+
+        <!-- 1) بطاقة/تصنيف "Atawah" في الشاشة الرئيسية لاختيار الـ Building Blocks -->
+        <xpath expr="//snippets[@id='snippet_groups']/*[1]" position="before">
+            <t snippet-group="atawah"
+               t-snippet="website.s_snippet_group"
+               string="Atawah"
+               t-thumbnail="/atawah_website_theme/static/src/img/thumbs/s_atawah_hero.svg"/>
+        </xpath>
+
+        <!-- 2) الأقسام التسعة مسجّلة داخل مجموعة Atawah -->
+        <xpath expr="//snippets[@id='snippet_structure']/*[1]" position="before">
+
+            <t t-snippet="atawah_website_theme.s_atawah_hero" string="Atawah Hero" group="atawah"
+               t-thumbnail="/atawah_website_theme/static/src/img/thumbs/s_atawah_hero.svg">
+                <keywords>Hero, Header, Atawah</keywords>
+            </t>
+
+            <t t-snippet="atawah_website_theme.s_atawah_stats" string="Atawah Stats" group="atawah"
+               t-thumbnail="/atawah_website_theme/static/src/img/thumbs/s_atawah_stats.svg">
+                <keywords>Stats, Counters, Numbers, Atawah</keywords>
+            </t>
+
+            <t t-snippet="atawah_website_theme.s_atawah_services" string="Atawah Services" group="atawah"
+               t-thumbnail="/atawah_website_theme/static/src/img/thumbs/s_atawah_services.svg">
+                <keywords>Services, Cards, Atawah</keywords>
+            </t>
+
+            <t t-snippet="atawah_website_theme.s_atawah_about" string="Atawah About" group="atawah"
+               t-thumbnail="/atawah_website_theme/static/src/img/thumbs/s_atawah_about.svg">
+                <keywords>About, Vision, Mission, Pillars, Atawah</keywords>
+            </t>
+
+            <t t-snippet="atawah_website_theme.s_atawah_why" string="Atawah Why Quote" group="atawah"
+               t-thumbnail="/atawah_website_theme/static/src/img/thumbs/s_atawah_why.svg">
+                <keywords>Quote, Why, Atawah</keywords>
+            </t>
+
+            <t t-snippet="atawah_website_theme.s_atawah_details" string="Atawah Details" group="atawah"
+               t-thumbnail="/atawah_website_theme/static/src/img/thumbs/s_atawah_details.svg">
+                <keywords>Details, Info cards, Atawah</keywords>
+            </t>
+
+            <t t-snippet="atawah_website_theme.s_atawah_process" string="Atawah Process" group="atawah"
+               t-thumbnail="/atawah_website_theme/static/src/img/thumbs/s_atawah_process.svg">
+                <keywords>Process, Steps, Timeline, Atawah</keywords>
+            </t>
+
+            <t t-snippet="atawah_website_theme.s_atawah_insights" string="Atawah Insights" group="atawah"
+               t-thumbnail="/atawah_website_theme/static/src/img/thumbs/s_atawah_insights.svg">
+                <keywords>Insights, Blog, Articles, Atawah</keywords>
+            </t>
+
+            <t t-snippet="atawah_website_theme.s_atawah_contact" string="Atawah Contact" group="atawah"
+               t-thumbnail="/atawah_website_theme/static/src/img/thumbs/s_atawah_contact.svg">
+                <keywords>Contact, Form, CTA, Atawah</keywords>
+            </t>
+
+        </xpath>
+    </template>
+</odoo>

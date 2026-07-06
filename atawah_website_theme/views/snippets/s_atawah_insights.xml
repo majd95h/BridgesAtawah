@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="s_atawah_insights" name="Atawah Insights">
+        <section id="insights" class="s_atawah_insights pt96 pb96" data-snippet="s_atawah_insights" data-name="Atawah Insights">
+            <div class="container">
+                <div class="atawah_section_head">
+                    <span class="atawah_eyebrow_tag">Insights</span>
+                    <h2>Ideas worth reading before your next filing</h2>
+                </div>
+
+                <!--
+                    بطاقات ثابتة قابلة للتعديل من محرر الموقع مباشرة.
+                    إن كان موديول website_blog مثبتًا ولديه تدوينات منشورة، سيستبدلها
+                    ملف atawah_theme.js تلقائيًا بأحدث 3 تدوينات فعلية.
+                -->
+                <div class="atawah_insights_grid" id="atawah_insights_grid">
+                    <div class="atawah_insight_card">
+                        <span class="atawah_insight_tag">Guide</span>
+                        <h3>Getting VAT-ready before year end</h3>
+                        <p>A practical checklist finance teams can run through before the filing deadline.</p>
+                    </div>
+                    <div class="atawah_insight_card">
+                        <span class="atawah_insight_tag">Guide</span>
+                        <h3>What auditors actually look for</h3>
+                        <p>The recurring findings that slow down sign-off — and how to avoid them.</p>
+                    </div>
+                    <div class="atawah_insight_card">
+                        <span class="atawah_insight_tag">Guide</span>
+                        <h3>Odoo ERP: build vs. customize</h3>
+                        <p>When to use Odoo out of the box, and when a tailored build pays for itself.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

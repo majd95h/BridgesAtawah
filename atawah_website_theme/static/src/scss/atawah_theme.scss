@@ -1,0 +1,1143 @@
+// ==========================================================================
+// Atawah Theme — Component Styles (UPDATED)
+// ==========================================================================
+
+.s_atawah_hero,
+.s_atawah_stats,
+.s_atawah_services,
+.s_atawah_about,
+.s_atawah_why,
+.s_atawah_details,
+.s_atawah_process,
+.s_atawah_insights,
+.s_atawah_contact,
+.atawah_header,
+.atawah_footer {
+    font-family: var(--atawah-font);
+    color: var(--atawah-text);
+
+    * {
+        box-sizing: border-box;
+    }
+}
+
+.atawah_eyebrow_tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--atawah-gold-500);
+    background: var(--atawah-gold-100);
+    padding: 0.3em 0.9em;
+    border-radius: 999px;
+    margin-bottom: 1rem;
+
+    &.atawah_eyebrow_light {
+        background: rgba(255, 255, 255, 0.12);
+        color: var(--atawah-gold-400);
+    }
+}
+
+.atawah_section_head {
+    max-width: 640px;
+    margin-bottom: 2.5rem;
+
+    h2, h3 {
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 0.75rem;
+
+        em {
+            font-style: italic;
+            color: var(--atawah-text-muted);
+        }
+    }
+
+    p {
+        color: var(--atawah-text-muted);
+        margin: 0;
+    }
+
+    &.atawah_section_head_mt {
+        margin-top: 4rem;
+    }
+
+    &.atawah_section_head_center {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+// ---- Buttons -------------------------------------------------------------
+.atawah_btn_primary {
+    background: var(--atawah-navy-900);
+    color: var(--atawah-text-on-dark) !important;
+    border: 1px solid var(--atawah-navy-900);
+    border-radius: var(--atawah-radius-sm);
+    padding: 0.85rem 1.6rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+
+    &:hover {
+        background: var(--atawah-navy-800);
+        transform: translateY(-1px);
+        box-shadow: var(--atawah-shadow-soft);
+        color: var(--atawah-text-on-dark) !important;
+    }
+}
+
+.atawah_btn_ghost {
+    background: transparent;
+    color: var(--atawah-text) !important;
+    border: 1px solid var(--atawah-border);
+    border-radius: var(--atawah-radius-sm);
+    padding: 0.85rem 1.6rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: border-color 0.15s ease, transform 0.15s ease;
+
+    &:hover {
+        border-color: var(--atawah-navy-900);
+        transform: translateY(-1px);
+        color: var(--atawah-text) !important;
+    }
+}
+
+.atawah_btn_sm {
+    padding: 0.55rem 1.15rem;
+    font-size: 0.9rem;
+}
+
+// ==========================================================================
+// Header
+// ==========================================================================
+.atawah_header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(247, 248, 251, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--atawah-border);
+    transition: box-shadow 0.2s ease;
+
+    &.atawah_header_scrolled {
+        box-shadow: var(--atawah-shadow-soft);
+    }
+
+    .atawah_header_inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.5rem;
+        padding: 0.9rem 1rem;
+    }
+}
+
+.atawah_logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-weight: 800;
+    letter-spacing: 0.03em;
+    color: var(--atawah-text) !important;
+    text-decoration: none !important;
+
+    .atawah_logo_mark {
+        width: 34px;
+        height: 34px;
+        border-radius: 9px;
+        background: var(--atawah-navy-900);
+        color: var(--atawah-gold-400);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+    }
+}
+
+.atawah_nav {
+    display: flex;
+    align-items: center;
+    gap: 1.75rem;
+    flex-wrap: wrap;
+
+    a {
+        color: var(--atawah-text-muted) !important;
+        font-weight: 500;
+        text-decoration: none !important;
+        font-size: 0.92rem;
+        transition: color 0.15s ease;
+
+        &:hover {
+            color: var(--atawah-text) !important;
+        }
+    }
+}
+
+.atawah_header_actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .atawah_link_action {
+        color: var(--atawah-text) !important;
+        font-weight: 600;
+        font-size: 0.9rem;
+        text-decoration: none !important;
+    }
+}
+
+.atawah_nav_toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: transparent;
+    border: 0;
+    padding: 8px;
+
+    span {
+        width: 22px;
+        height: 2px;
+        background: var(--atawah-text);
+        border-radius: 2px;
+    }
+}
+
+// ==========================================================================
+// Hero
+// ==========================================================================
+.s_atawah_hero {
+    background: var(--atawah-bg);
+    overflow: hidden;
+    padding: 4rem 0;
+}
+
+.atawah_hero_stage {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 600px;
+}
+
+.atawah_hero_content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    max-width: 700px;
+}
+
+.atawah_hero_logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 2rem;
+    background: var(--atawah-navy-900);
+    border-radius: 50%;
+
+    svg {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+.atawah_hero_badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.85rem;
+    color: var(--atawah-text-muted);
+    background: var(--atawah-surface);
+    border: 1px solid var(--atawah-border);
+    border-radius: 999px;
+    padding: 0.5em 1.1em;
+    margin-bottom: 1.5rem;
+}
+
+.atawah_sparkle {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.atawah_hero_title {
+    font-size: clamp(2.2rem, 4.2vw, 3.4rem);
+    font-weight: 800;
+    line-height: 1.12;
+    margin-bottom: 1.25rem;
+    color: var(--atawah-text);
+}
+
+.atawah_hero_text {
+    font-size: 1.05rem;
+    color: var(--atawah-text-muted);
+    max-width: 480px;
+    margin: 0 auto 2rem;
+}
+
+.atawah_hero_actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+// Floating Cards
+.atawah_float_card {
+    position: absolute;
+    background: var(--atawah-surface);
+    border: 1px solid var(--atawah-border);
+    border-radius: var(--atawah-radius-md);
+    padding: 1.2rem;
+    box-shadow: var(--atawah-shadow-soft);
+    animation: float 3s ease-in-out infinite;
+    max-width: 280px;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+}
+
+.atawah_float_note {
+    top: 60px;
+    left: 2%;
+    background: #fffaeb;
+    border-color: #fef08a;
+    animation-delay: 0s;
+    rotate: 350deg;
+
+    .atawah_float_note_label {
+        display: block;
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: var(--atawah-text);
+        margin-bottom: 0.5rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+        color: var(--atawah-text);
+        margin: 0;
+        font-style: italic;
+    }
+}
+
+.atawah_float_reminders {
+    top: 60px;
+    right: 3%;
+    rotate: 350deg;
+    animation-delay: 0.2s;
+
+    .atawah_float_kicker {
+        display: block;
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: var(--atawah-gold-500);
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+    }
+
+    .atawah_float_sub {
+        display: block;
+        font-size: 0.75rem;
+        color: var(--atawah-text-muted);
+        margin-bottom: 0.3rem;
+    }
+
+    strong {
+        display: block;
+        font-size: 0.95rem;
+        color: var(--atawah-text);
+        margin-bottom: 0.3rem;
+    }
+}
+
+.atawah_float_progress {
+    bottom: 80px;
+    rotate: 6deg;
+    left: 4%;
+    animation-delay: 0.4s;
+
+    .atawah_float_progress_head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+
+        span:first-child {
+            font-weight: 700;
+            color: var(--atawah-text);
+        }
+    }
+
+    .atawah_pill_status {
+        display: inline-block;
+        font-size: 0.7rem;
+        font-weight: 700;
+        padding: 0.25em 0.7em;
+        border-radius: 999px;
+        background: #dcfce7;
+        color: #166534;
+    }
+
+    .atawah_progress_row {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.8rem;
+        margin-bottom: 0.4rem;
+        color: var(--atawah-text-muted);
+    }
+
+    .atawah_progress_bar {
+        height: 6px;
+        background: #e5e7eb;
+        border-radius: 999px;
+        overflow: hidden;
+        margin-bottom: 0.9rem;
+
+        span {
+            display: block;
+            height: 100%;
+            background: linear-gradient(90deg, #3b82f6, #60a5fa);
+            border-radius: 999px;
+        }
+
+        &.atawah_progress_green span {
+            background: linear-gradient(90deg, #10b981, #34d399);
+        }
+    }
+}
+
+.atawah_float_tags {
+    bottom: 120px;
+    right: 2%;
+    rotate: 6deg;
+    animation-delay: 0.6s;
+
+    .atawah_float_kicker {
+        display: block;
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: var(--atawah-gold-500);
+        text-transform: uppercase;
+        margin-bottom: 0.8rem;
+    }
+
+    .atawah_mockup_tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+
+        span {
+            font-size: 0.75rem;
+            padding: 0.35em 0.8em;
+            border-radius: 999px;
+            background: var(--atawah-bg);
+            border: 1px solid var(--atawah-border);
+            color: var(--atawah-text-muted);
+        }
+    }
+}
+
+// ==========================================================================
+// Stats
+// ==========================================================================
+.s_atawah_stats {
+    background: var(--atawah-navy-950);
+    color: var(--atawah-text-on-dark);
+    padding: 3.5rem 0;
+}
+
+.atawah_stats_row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.atawah_stat_item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.atawah_stat_number {
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 800;
+    color: var(--atawah-gold-400);
+}
+
+.atawah_stat_label {
+    font-size: 0.85rem;
+    color: var(--atawah-text-on-dark-muted);
+}
+
+// ==========================================================================
+// Services (UPDATED - Grid Layout)
+// ==========================================================================
+.s_atawah_services {
+    background: var(--atawah-bg);
+    padding: 4rem 0;
+}
+
+.atawah_services_grid_wrapper {
+    position: relative;
+}
+
+.atawah_services_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
+}
+
+.atawah_service_card {
+    position: relative;
+    border-radius: var(--atawah-radius-md);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: translateY(-8px);
+
+        .atawah_service_card_inner {
+            box-shadow: var(--atawah-shadow-card);
+        }
+    }
+
+    // Color variants for each card based on index
+    &[data-service-index="0"] .atawah_service_card_inner {
+        background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
+        border-color: #bae6fd;
+    }
+
+    &[data-service-index="1"] .atawah_service_card_inner {
+        background: linear-gradient(135deg, #f3f4f6 0%, #ffffff 100%);
+        border-color: #e5e7eb;
+    }
+
+    &[data-service-index="2"] .atawah_service_card_inner {
+        background: linear-gradient(135deg, #fed7aa 0%, #fef3c7 100%);
+        border-color: #fcd34d;
+    }
+
+    &[data-service-index="3"] .atawah_service_card_inner {
+        background: linear-gradient(135deg, #dcfce7 0%, #f0fdf4 100%);
+        border-color: #86efac;
+    }
+
+    &[data-service-index="4"] .atawah_service_card_inner {
+        background: linear-gradient(135deg, #dbeafe 0%, #eff6ff 100%);
+        border-color: #93c5fd;
+    }
+
+    &[data-service-index="5"] .atawah_service_card_inner {
+        background: linear-gradient(135deg, #f3e8ff 0%, #faf5ff 100%);
+        border-color: #e9d5ff;
+    }
+}
+
+.atawah_service_card_inner {
+    background: var(--atawah-surface);
+    border: 1px solid var(--atawah-border);
+    border-radius: var(--atawah-radius-md);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    transition: box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.atawah_service_card_head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.atawah_service_icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+    flex-shrink: 0;
+
+    // Icon colors per service
+    [data-service-index="0"] & {
+        background: #dbeafe;
+        color: #0369a1;
+    }
+
+    [data-service-index="1"] & {
+        background: #bfdbfe;
+        color: #1e40af;
+    }
+
+    [data-service-index="2"] & {
+        background: #fed7aa;
+        color: #b45309;
+    }
+
+    [data-service-index="3"] & {
+        background: #86efac;
+        color: #166534;
+    }
+
+    [data-service-index="4"] & {
+        background: #93c5fd;
+        color: #1e3a8a;
+    }
+
+    [data-service-index="5"] & {
+        background: #c4b5fd;
+        color: #5b21b6;
+    }
+}
+
+.atawah_service_number {
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: var(--atawah-text-muted);
+    opacity: 0.6;
+}
+
+.atawah_service_tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--atawah-gold-500);
+    margin-top: 0.5rem;
+}
+
+.atawah_service_card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0.5rem 0;
+    color: var(--atawah-text);
+}
+
+.atawah_service_card p {
+    font-size: 0.95rem;
+    color: var(--atawah-text-muted);
+    margin: 0 0 0.75rem;
+    flex-grow: 1;
+    line-height: 1.5;
+}
+
+.atawah_service_link {
+    color: var(--atawah-text) !important;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: gap 0.15s ease;
+
+    .atawah_arrow {
+        transition: transform 0.15s ease;
+    }
+
+    &:hover .atawah_arrow {
+        transform: translateX(4px);
+    }
+}
+
+.o_rtl .atawah_service_link:hover .atawah_arrow {
+    transform: translateX(-4px);
+}
+
+// ==========================================================================
+// About / Vision / Mission / Pillars
+// ==========================================================================
+.s_atawah_about {
+    background: var(--atawah-surface);
+}
+
+.atawah_lead_text {
+    color: var(--atawah-text-muted);
+    font-size: 1rem;
+}
+
+.atawah_feature_block {
+    padding: 1.5rem 0;
+    border-top: 1px solid var(--atawah-border);
+
+    &:first-child {
+        border-top: 0;
+        padding-top: 0;
+    }
+
+    h3 {
+        font-weight: 700;
+        margin: 0.3rem 0 0.5rem;
+    }
+
+    p {
+        color: var(--atawah-text-muted);
+        margin: 0;
+    }
+}
+
+.atawah_pillars_grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.25rem;
+}
+
+.atawah_pillar_card {
+    background: var(--atawah-bg);
+    border: 1px solid var(--atawah-border);
+    border-radius: var(--atawah-radius-md);
+    padding: 1.4rem;
+
+    h4 {
+        font-size: 1rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+    }
+
+    p {
+        font-size: 0.85rem;
+        color: var(--atawah-text-muted);
+        margin: 0;
+    }
+}
+
+// ==========================================================================
+// Why quote
+// ==========================================================================
+.s_atawah_why {
+    background: var(--atawah-navy-950);
+    color: var(--atawah-text-on-dark);
+    text-align: center;
+
+    .container {
+        max-width: 760px;
+    }
+}
+
+.atawah_quote {
+    font-size: clamp(1.6rem, 3.4vw, 2.4rem);
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+}
+
+.atawah_quote_sub {
+    color: var(--atawah-text-on-dark-muted);
+    font-size: 1rem;
+    margin: 0;
+}
+
+// ==========================================================================
+// Details (About ATAWAH + info cards)
+// ==========================================================================
+.s_atawah_details {
+    background: var(--atawah-bg);
+}
+
+.atawah_check_list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+
+    li {
+        position: relative;
+        padding-inline-start: 1.75rem;
+        color: var(--atawah-text);
+        font-weight: 500;
+
+        &::before {
+            content: "✓";
+            position: absolute;
+            inset-inline-start: 0;
+            top: 0;
+            color: var(--atawah-gold-500);
+            font-weight: 800;
+        }
+    }
+}
+
+.atawah_info_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+}
+
+.atawah_info_card {
+    background: var(--atawah-surface);
+    border: 1px solid var(--atawah-border);
+    border-radius: var(--atawah-radius-md);
+    padding: 1.4rem;
+
+    .atawah_info_label {
+        display: block;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--atawah-gold-500);
+        margin-bottom: 0.6rem;
+    }
+
+    strong {
+        display: block;
+        font-size: 1.05rem;
+        margin-bottom: 0.3rem;
+    }
+
+    p {
+        font-size: 0.85rem;
+        color: var(--atawah-text-muted);
+        margin: 0;
+    }
+
+    .atawah_info_tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+
+        span {
+            font-size: 0.75rem;
+            padding: 0.3em 0.75em;
+            border-radius: 999px;
+            background: var(--atawah-bg);
+            border: 1px solid var(--atawah-border);
+            color: var(--atawah-text-muted);
+        }
+    }
+}
+
+// ==========================================================================
+// Process timeline
+// ==========================================================================
+.s_atawah_process {
+    background: var(--atawah-surface);
+}
+
+.atawah_process_timeline {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.atawah_process_step {
+    position: relative;
+    padding-top: 1.75rem;
+    border-top: 2px solid var(--atawah-border);
+
+    .atawah_process_code {
+        display: block;
+        font-size: 0.85rem;
+        font-weight: 800;
+        color: var(--atawah-gold-500);
+        margin-bottom: 0.6rem;
+    }
+
+    h3 {
+        font-weight: 700;
+        margin-bottom: 0.4rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+        color: var(--atawah-text-muted);
+        margin: 0;
+    }
+}
+
+// ==========================================================================
+// Insights
+// ==========================================================================
+.s_atawah_insights {
+    background: var(--atawah-bg);
+}
+
+.atawah_insights_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.atawah_insight_card {
+    background: var(--atawah-surface);
+    border: 1px solid var(--atawah-border);
+    border-radius: var(--atawah-radius-md);
+    padding: 1.5rem;
+
+    .atawah_insight_tag {
+        display: inline-block;
+        font-size: 0.72rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--atawah-gold-500);
+        margin-bottom: 0.6rem;
+    }
+
+    h3 {
+        font-size: 1.05rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+    }
+
+    p {
+        font-size: 0.88rem;
+        color: var(--atawah-text-muted);
+        margin: 0;
+    }
+
+    a {
+        text-decoration: none !important;
+        color: inherit !important;
+    }
+}
+
+// ==========================================================================
+// Contact
+// ==========================================================================
+.s_atawah_contact {
+    background: var(--atawah-navy-950);
+    color: var(--atawah-text-on-dark);
+}
+
+.atawah_contact_card {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 2.5rem;
+    background: var(--atawah-navy-900);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--atawah-radius-lg);
+    padding: 2.5rem;
+}
+
+.atawah_contact_intro {
+    h2 {
+        font-size: clamp(1.6rem, 3vw, 2.1rem);
+        font-weight: 800;
+        margin-bottom: 0.75rem;
+    }
+
+    p {
+        color: var(--atawah-text-on-dark-muted);
+        margin-bottom: 1.5rem;
+        max-width: 420px;
+    }
+}
+
+.atawah_contact_info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 2rem;
+
+    .atawah_contact_info_item {
+        display: flex;
+        gap: 0.5rem;
+        font-size: 0.9rem;
+
+        a, span {
+            color: var(--atawah-text-on-dark-muted) !important;
+            text-decoration: none !important;
+        }
+    }
+
+    .atawah_contact_label {
+        color: var(--atawah-text-on-dark) !important;
+        font-weight: 600;
+        min-width: 70px;
+    }
+}
+
+.atawah_contact_form {
+    background: var(--atawah-surface);
+    border-radius: var(--atawah-radius-md);
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.atawah_form_field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+
+    label {
+        font-size: 0.82rem;
+        font-weight: 600;
+        color: var(--atawah-text);
+    }
+
+    .form-control {
+        border: 1px solid var(--atawah-border);
+        border-radius: var(--atawah-radius-sm);
+        padding: 0.65rem 0.9rem;
+        font-size: 0.92rem;
+
+        &:focus {
+            border-color: var(--atawah-navy-900);
+            box-shadow: none;
+        }
+    }
+}
+
+// ==========================================================================
+// Footer
+// ==========================================================================
+.atawah_footer {
+    background: var(--atawah-navy-950);
+    color: var(--atawah-text-on-dark-muted);
+    padding: 2.5rem 0;
+
+    .atawah_footer_inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .atawah_logo {
+        color: var(--atawah-text-on-dark) !important;
+    }
+
+    .atawah_footer_copy {
+        font-size: 0.82rem;
+        margin: 0;
+    }
+}
+
+// ==========================================================================
+// Scroll reveal (JS adds .atawah_in-view)
+// ==========================================================================
+.atawah_reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+
+    &.atawah_in-view {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+// ==========================================================================
+// Utility Classes
+// ==========================================================================
+.pt96 {
+    padding-top: 6rem;
+}
+
+.pb96 {
+    padding-bottom: 6rem;
+}
+
+// ==========================================================================
+// Responsive
+// ==========================================================================
+@media (max-width: 991px) {
+    .atawah_nav,
+    .atawah_header_actions .atawah_link_action {
+        display: none;
+    }
+
+    .atawah_nav_toggle {
+        display: inline-flex;
+    }
+
+    .atawah_header.atawah_nav_open .atawah_nav {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        inset-inline: 0;
+        background: var(--atawah-surface);
+        border-bottom: 1px solid var(--atawah-border);
+        padding: 1rem 1.5rem 1.5rem;
+        gap: 1rem;
+    }
+
+    .atawah_services_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .atawah_pillars_grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .atawah_process_timeline,
+    .atawah_stats_row,
+    .atawah_info_grid,
+    .atawah_insights_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .atawah_contact_card {
+        grid-template-columns: 1fr;
+    }
+
+    .atawah_float_card {
+        position: static;
+        margin-bottom: 1rem;
+    }
+
+    .atawah_hero_stage {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 575px) {
+    .atawah_services_grid,
+    .atawah_insights_grid,
+    .atawah_pillars_grid,
+    .atawah_process_timeline,
+    .atawah_stats_row,
+    .atawah_info_grid {
+        grid-template-columns: 1fr;
+    }
+
+    .atawah_hero_title {
+        font-size: 1.8rem;
+    }
+
+    .atawah_hero_actions {
+        flex-direction: column;
+    }
+
+    .atawah_btn_primary,
+    .atawah_btn_ghost {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .atawah_contact_card {
+        padding: 1.5rem;
+    }
+
+    .atawah_section_head {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

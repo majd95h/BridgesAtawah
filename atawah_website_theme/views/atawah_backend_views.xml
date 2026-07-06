@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- ===================== Services ===================== -->
+    <record id="view_atawah_service_tree" model="ir.ui.view">
+        <field name="name">atawah.service.tree</field>
+        <field name="model">atawah.service</field>
+        <field name="arch" type="xml">
+            <list string="Atawah Services">
+                <field name="sequence" widget="handle"/>
+                <field name="code"/>
+                <field name="category"/>
+                <field name="name"/>
+                <field name="active" optional="hide"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_atawah_service_form" model="ir.ui.view">
+        <field name="name">atawah.service.form</field>
+        <field name="model">atawah.service</field>
+        <field name="arch" type="xml">
+            <form string="Atawah Service">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="code"/>
+                            <field name="category"/>
+                            <field name="name"/>
+                        </group>
+                        <group>
+                            <field name="link_url"/>
+                            <field name="active"/>
+                        </group>
+                    </group>
+                    <group string="Description">
+                        <field name="description" nolabel="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_atawah_service" model="ir.actions.act_window">
+        <field name="name">Services</field>
+        <field name="res_model">atawah.service</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- ===================== Process steps ===================== -->
+    <record id="view_atawah_process_step_tree" model="ir.ui.view">
+        <field name="name">atawah.process.step.tree</field>
+        <field name="model">atawah.process.step</field>
+        <field name="arch" type="xml">
+            <list string="Atawah Process Steps">
+                <field name="sequence" widget="handle"/>
+                <field name="code"/>
+                <field name="name"/>
+                <field name="active" optional="hide"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_atawah_process_step_form" model="ir.ui.view">
+        <field name="name">atawah.process.step.form</field>
+        <field name="model">atawah.process.step</field>
+        <field name="arch" type="xml">
+            <form string="Atawah Process Step">
+                <sheet>
+                    <group>
+                        <field name="code"/>
+                        <field name="name"/>
+                        <field name="active"/>
+                    </group>
+                    <group string="Description">
+                        <field name="description" nolabel="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_atawah_process_step" model="ir.actions.act_window">
+        <field name="name">Process Steps</field>
+        <field name="res_model">atawah.process.step</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- ===================== Menus ===================== -->
+    <menuitem id="menu_atawah_root" name="Atawah" sequence="90" web_icon="atawah_website_theme,static/description/icon.png"/>
+    <menuitem id="menu_atawah_content" name="Homepage Content" parent="menu_atawah_root" sequence="10"/>
+    <menuitem id="menu_atawah_service" name="Services" parent="menu_atawah_content" action="action_atawah_service" sequence="10"/>
+    <menuitem id="menu_atawah_process_step" name="Process Steps" parent="menu_atawah_content" action="action_atawah_process_step" sequence="20"/>
+
+</odoo>
