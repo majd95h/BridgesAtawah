@@ -18,11 +18,7 @@ and custom SVG decorations.
     'data': [
         'views/invoice_view.xml',
     ],
-    # 'assets': {
-    #     'web.report_assets_pdf': [
-    #         'custom_invoice_layout/static/src/css/invoice_style.css',
-    #     ],
-    # },
+  
     'installable': True,
     'application': False,
     'auto_install': False,
