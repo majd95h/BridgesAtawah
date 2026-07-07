@@ -9,7 +9,7 @@
 <style type="text/css">
 
     .custom-invoice-wrapper {
-        font-family: 'Segoe UI', 'Cairo', sans-serif;
+        font-family: 'Lato', 'Inter', 'Cairo', Helvetica, Arial, sans-serif;
         color: #2a2a2a;
         display: flex;
         justify-content: center;
@@ -27,10 +27,10 @@
 
     .curve-top {
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 320px;
+        top: -35px;
+        left: -20px;
+        width: 105%;
+        height: 340px;
         z-index: 0;
         pointer-events: none;
     }
@@ -56,6 +56,8 @@
     .logo-section {
         width: 100%;
         display: flex;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .brand-logo {
@@ -63,78 +65,110 @@
         margin-left: -10px;
     }
 
-   
+    .company-info-text {
+        margin-top: 8px;
+        font-size: 13px;
+        color: #555555;
+        line-height: 1.4;
+    }
+
+    .company-info-text .comp-name {
+        font-size: 18px;
+        color: #c39d48;
+        margin-left: 18px;
+        font-weight: 800;
+        display: block;
+        margin-bottom: 2px;
+    }
+
+    .company-info-text .comp-tagline {
+        font-style: italic;
+        font-weight: 600;
+        display: block;
+    }
+
+    .company-info-text .comp-location {
+        font-weight: 800;
+        color: #2a2a2a;
+        margin-left: 18px;
+        display: block;
+        margin-top: 2px;
+    }
+
    .title-details-row {
-    width: 100%;
-    margin-top: 15px;
-    overflow: hidden;   
-    display:flex;
-    align-items:center;
-}
+        width: 100%;
+        margin-top: 15px;
+        overflow: hidden;   
+        display: flex;
+        align-items: center;
+    }
 
    .invoice-title {
-    float:right;
-    text-align: left; 
-}
-.invoice-title h1 {
-    font-size: 28px;
-    font-weight: 800;
-    color: #c39d48;
-    text-transform: uppercase;
-    line-height: 1.1;
-    margin: 0;
-}
-.invoice-title h1.arabic {
-    font-family: 'Cairo', sans-serif;
-    font-size: 26px;
-    color: #2a2a2a;
-    margin-top: 2px;
-}
+        float: right;
+        text-align: left; 
+    }
+
+    .invoice-title h1 {
+        font-size: 28px;
+        font-weight: 800;
+        color: #c39d48;
+        text-transform: uppercase;
+        line-height: 1.1;
+        margin: 0;
+    }
+
+    .invoice-title h1.arabic {
+        font-family: 'Cairo', sans-serif;
+        font-size: 26px;
+        color: #2a2a2a;
+        margin-top: 2px;
+    }
 
    .invoice-details {
-    float: right;
-    width: 30%;
-    box-sizing: border-box;
-    display: table; 
-    grid-template-columns: auto auto auto;
-    font-size: 14px;
-    font-weight: 700;
-    color: #2a2a2a;
-    background: rgba(255, 255, 255, 0);
-    border-radius: 8px;
-}
-.detail-row {
-    display: table-row;
-}
-.detail-row > div {
-    display: table-cell;
-    vertical-align: middle;
-    padding: 4px 6px;               /* spacing inside the row */
-}
+        float: right;
+        width: 30%;
+        box-sizing: border-box;
+        display: table; 
+        grid-template-columns: auto auto auto;
+        font-size: 14px;
+        font-weight: 700;
+        color: #2a2a2a;
+        background: rgba(255, 255, 255, 0);
+        border-radius: 8px;
+    }
+
+    .detail-row {
+        display: table-row;
+    }
+
+    .detail-row > div {
+        display: table-cell;
+        vertical-align: middle;
+        padding: 4px 6px;
+    }
 
     .invoice-details .icon {
-    width: 24px;                    /* fixed small width for icons */
-    color: #c39d48;
-    text-align: center;
+        width: 24px;
+        color: #c39d48;
+        text-align: center;
     }
 
     .invoice-details .label {
-       color: #555555;
-    text-align: left;
-    white-space: nowrap;
-
+        color: #555555;
+        text-align: left;
+        white-space: nowrap;
     }
 
     .invoice-details .value {
-      text-align: right;
-    white-space: nowrap;
+        text-align: right;
+        white-space: nowrap;
     }
 
     .billing-section {
         position: relative;
         z-index: 1;
         padding: 15px 40px;
-        margin-top:80px !important;
+        margin-top: 40px !important;
         width: 100%;
         box-sizing: border-box;
         overflow: hidden;    
@@ -216,25 +250,18 @@
     th:nth-child(5) { width: 20%; }
 
     .bottom-section {
-    position: relative;
-    z-index: 1;
-    padding: 10px 40px;
-    overflow: hidden;          /* clearfix for floats */
-    /* remove display: flex, justify-content, align-items */
-}
+        position: relative;
+        z-index: 1;
+        padding: 10px 40px;
+        overflow: hidden;
+    }
 
- .bottom-section {
-    position: relative;
-    z-index: 1;
-    padding: 10px 40px;
-    overflow: hidden;          /* clearfix */
-    /* DO NOT use display:flex or justify-content */
-}
-.terms-section {
-    float: left;
-    width: 55%;
-    box-sizing: border-box;
-}
+    .terms-section {
+        float: left;
+        width: 55%;
+        box-sizing: border-box;
+    }
+
     .amount-words h4 {
         font-size: 14px;
         color: #2a2a2a;
@@ -293,6 +320,7 @@
         margin-bottom: 5px;
         padding-left: 10px;
     }
+
     .terms-grid ul.ar li {
         padding-left: 0;
         padding-right: 10px;
@@ -311,18 +339,21 @@
         right: 0;
         left: auto;
     }
-.o_company_logo_small {
-    max-height: none !important;
-}
- .totals-section {
-    float: right;
-    width: 38%;
-    box-sizing: border-box;
-    border: 1px solid #e5d8b8;
-    border-radius: 4px;
-    overflow: hidden;
-    margin-top: -5px;
-}
+
+    .o_company_logo_small {
+        max-height: none !important;
+    }
+
+    .totals-section {
+        float: right;
+        width: 38%;
+        box-sizing: border-box;
+        border: 1px solid #e5d8b8;
+        border-radius: 4px;
+        overflow: hidden;
+        margin-top: -5px;
+    }
+
     .total-row {
         display: flex;
         justify-content: space-between;
@@ -382,83 +413,88 @@
     }
 </style>
 
-                        <div class="invoice-container">
-                            
-                            <svg class="curve-top" viewBox="0 0 850 320" preserveAspectRatio="none">
-    <defs>
-        <linearGradient id="top-grad" x1="0%" y1="100%" x2="100%" y2="0%">
-            <stop offset="0%" style="stop-color:#f1dec1;stop-opacity:1" />
-            <stop offset="30%" style="stop-color:#d4b365;stop-opacity:1" />
-            <stop offset="75%" style="stop-color:#be9238;stop-opacity:1" />
-        </linearGradient>
-    </defs>
+<div class="invoice-container">
     
-    <path d="M -20,305 C 380,305 490, 10 770, -20 L 785, -20 C 500, 20 390, 312 -20, 312 Z" 
-          fill="url(#top-grad)" 
-          transform="translate(-20, -15)"/>
-          
-    <path d="M -20,305 C 380,305 490, 10 770, -20 L 785, -20 C 500, 20 390, 312 -20, 312 Z" 
-          fill="#b98f33"/>
-</svg>
+    <!-- تم تعديل المنحنى هنا واستعادة خصائص الإزاحة للخطين المزدوجين لمنع التطابق -->
+    <svg class="curve-top" viewBox="0 0 850 320" preserveAspectRatio="none">
+        <defs>
+            <linearGradient id="top-grad" x1="0%" y1="100%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#f1dec1;stop-opacity:1" />
+                <stop offset="30%" style="stop-color:#d4b365;stop-opacity:1" />
+                <stop offset="75%" style="stop-color:#be9238;stop-opacity:1" />
+            </linearGradient>
+        </defs>
+        
+        <!-- الخط الأول (المتدرج) مع الحفاظ على إزاحته النسبية الأصلية ليظهر الخطين منفصلين -->
+        <path d="M -20,305 C 380,305 490, 10 770, -20 L 785, -20 C 500, 20 390, 312 -20, 312 Z" 
+              fill="url(#top-grad)" 
+              transform="translate(-20, -15)"/>
+              
+        <!-- الخط الثاني (الذهبي المصمت) فوقه مباشرة بتناسق -->
+        <path d="M -20,305 C 380,305 490, 10 770, -20 L 785, -20 C 500, 20 390, 312 -20, 312 Z" 
+              fill="#b98f33"/>
+    </svg>
 
-                            <header>
-    <div class="invoice-title">
-        <h1>Invoice</h1>
-        <h1 class="arabic">فاتورة</h1>
-    </div>
-    
-    <!-- الشعار هيكون فوق التفاصيل -->
-    <div class="logo-section">
-        <img t-if="o.company_id.logo" class="o_company_logo_small" 
-             t-att-src="image_data_uri(o.company_id.logo)" alt="Logo" 
-             style="height: 120px; width: 300;" />
-    </div>
-
-    <div class="title-details-row">
-        <div class="invoice-details">
-            <!-- محتويات التفاصيل زي ما هي -->
-            <div class="detail-row">
-                <div class="icon">
-                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                        <polyline points="14 2 14 8 20 8"></polyline>
-                        <line x1="16" y1="13" x2="8" y2="13"></line>
-                        <line x1="16" y1="17" x2="8" y2="17"></line>
-                        <polyline points="10 9 9 9 8 9"></polyline>
-                    </svg>
-                </div>
-                <div class="label">Invoice No.</div>
-                <div class="value"><t t-esc="o.name"/></div>
-            </div>
-            <div class="detail-row">
-                <div class="icon">
-                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                        <line x1="16" y1="2" x2="16" y2="6"></line>
-                        <line x1="8" y1="2" x2="8" y2="6"></line>
-                        <line x1="3" y1="10" x2="21" y2="10"></line>
-                    </svg>
-                </div>
-                <div class="label">Date</div>
-                <div class="value"><t t-esc="o.invoice_date" t-options='{"widget": "date"}'/></div>
-            </div>
-            <div class="detail-row">
-                <div class="icon">
-                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                        <line x1="16" y1="2" x2="16" y2="6"></line>
-                        <line x1="8" y1="2" x2="8" y2="6"></line>
-                        <line x1="3" y1="10" x2="21" y2="10"></line>
-                        <rect x="8" y="14" width="4" height="4"></rect>
-                    </svg>
-                </div>
-                <div class="label">Due Date</div>
-                <div class="value"><t t-esc="o.invoice_date_due" t-options='{"widget": "date"}'/></div>
+    <header>
+        <div class="invoice-title">
+            <h1>Invoice</h1>
+            <h1 class="arabic">فاتورة</h1>
+        </div>
+        
+        <div class="logo-section">
+            <img t-if="o.company_id.logo" class="o_company_logo_small" 
+                 t-att-src="image_data_uri(o.company_id.logo)" alt="Logo" 
+                 style="height: 110px; width: 290px; object-fit: contain;" />
+            
+            <div class="company-info-text">
+                <span class="comp-name">Bridges Oversears LLC</span>
+                <span class="comp-location">Oman, Muscat</span>
             </div>
         </div>
-    </div>
-</header>
 
+        <div class="title-details-row">
+            <div class="invoice-details">
+                <div class="detail-row">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                    </div>
+                    <div class="label">Invoice No.</div>
+                    <div class="value"><t t-esc="o.name"/></div>
+                </div>
+                <div class="detail-row">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                    </div>
+                    <div class="label">Date</div>
+                    <div class="value"><t t-esc="o.invoice_date" t-options='{"widget": "date"}'/></div>
+                </div>
+                <div class="detail-row">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                            <rect x="8" y="14" width="4" height="4"></rect>
+                        </svg>
+                    </div>
+                    <div class="label">Due Date</div>
+                    <div class="value"><t t-esc="o.invoice_date_due" t-options='{"widget": "date"}'/></div>
+                </div>
+            </div>
+        </div>
+    </header>
                             <section class="billing-section">
                                 <div class="bill-to">
                                     <h3>Bill To</h3>
@@ -585,20 +621,20 @@
                             <footer>
                                 <div class="footer-item">
                                     <svg viewBox="0 0 24 24"><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.01.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1zM19 12h2a9 9 0 0 0-9-9v2c3.87 0 7 3.13 7 7zm-4 0h2c0-2.76-2.24-5-5-5v2c1.66 0 3 1.34 3 3z"/></svg>
-                                    <span><t t-esc="o.company_id.phone"/></span>
+                                    <span>+968 9533 0877</span>
                                 </div>
                                 <div class="footer-item">
                                     <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-                                    <a t-att-href="'mailto:' + str(o.company_id.email)"><t t-esc="o.company_id.email"/></a>
+                                    <a href="Khalid@bridgesoverseas.com"><span>Khalid@bridgesoverseas.com</span></a>
                                 </div>
                                 <div class="footer-item">
                                     <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                                    <span><t t-esc="o.company_id.city"/>, <t t-esc="o.company_id.country_id.name"/></span>
+                                    <span>Oman,Muscat</span>
                                 </div>
-                                <div class="footer-item">
+                                <!-- <div class="footer-item">
                                     <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.91 4.33 3.56zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.9-4.33-3.56zm2.95-8H5.08c1.37-2.16 3.63-3.6 6.27-3.92-.85 1.19-1.52 2.51-1.96 3.92zm3.97 8.04c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.6 14H9.4c-.08-.66-.14-1.32-.14-2 0-.68.06-1.34.14-2h5.2c.08.66.14 1.32.14 2 0 .68-.06 1.34-.14 2zm1.42 3.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.65-2.49 2.93-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"/></svg>
                                     <a t-att-href="o.company_id.website"><t t-esc="o.company_id.website"/></a>
-                                </div>
+                                </div> -->
                             </footer>
 
                            <svg version="1.1" class="curve-bottom" viewBox="0 0 2048 1565"  preserveAspectRatio="none">
@@ -731,7 +767,7 @@
 
         <style type="text/css">
     .custom-invoice-wrapper {
-        font-family: 'Segoe UI', 'Cairo', sans-serif;
+        font-family: 'Lato', 'Inter', 'Cairo', Helvetica, Arial, sans-serif;
         color: #2a2a2a;
         display: flex;
         justify-content: center;
@@ -749,10 +785,10 @@
 
     .curve-top {
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 320px;
+        top: -35px;
+        left: -20px;
+        width: 105%;
+        height: 340px;
         z-index: 0;
         pointer-events: none;
     }
@@ -778,6 +814,8 @@
     .logo-section {
         width: 100%;
         display: flex;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .brand-logo {
@@ -785,6 +823,35 @@
         margin-left: -10px;
     }
 
+    .company-info-text {
+        margin-top: 8px;
+        font-size: 13px;
+        color: #555555;
+        line-height: 1.4;
+    }
+
+    .company-info-text .comp-name {
+        font-size: 18px;
+        color: #c39d48;
+        margin-left: 18px;
+        font-weight: 800;
+        display: block;
+        margin-bottom: 2px;
+    }
+
+    .company-info-text .comp-tagline {
+        font-style: italic;
+        font-weight: 600;
+        display: block;
+    }
+
+    .company-info-text .comp-location {
+        font-weight: 800;
+        color: #2a2a2a;
+        margin-left: 18px;
+        display: block;
+        margin-top: 2px;
+    }
    .title-details-row {
         width: 100%;
         margin-top: 15px;
@@ -858,7 +925,7 @@
         position: relative;
         z-index: 1;
         padding: 15px 40px;
-        margin-top:80px !important;
+        margin-top: 40px !important;
         width: 100%;
         box-sizing: border-box;
         overflow: hidden;    
@@ -1103,80 +1170,87 @@
     }
 </style>
 
-                        <div class="invoice-container">
-                            
-                            <svg class="curve-top" viewBox="0 0 850 320" preserveAspectRatio="none">
-                                <defs>
-                                    <linearGradient id="top-grad" x1="0%" y1="100%" x2="100%" y2="0%">
-                                        <stop offset="0%" style="stop-color:#f1dec1;stop-opacity:1" />
-                                        <stop offset="30%" style="stop-color:#d4b365;stop-opacity:1" />
-                                        <stop offset="75%" style="stop-color:#be9238;stop-opacity:1" />
-                                    </linearGradient>
-                                </defs>
-                                <path d="M -20,305 C 380,305 490, 10 770, -20 L 785, -20 C 500, 20 390, 312 -20, 312 Z" 
-                                      fill="url(#top-grad)" 
-                                      transform="translate(-20, -15)"/>
-                                <path d="M -20,305 C 380,305 490, 10 770, -20 L 785, -20 C 500, 20 390, 312 -20, 312 Z" 
-                                      fill="#b98f33"/>
-                            </svg>
+<div class="invoice-container">
+    
+    <svg class="curve-top" viewBox="0 0 850 320" preserveAspectRatio="none">
+        <defs>
+            <linearGradient id="top-grad" x1="0%" y1="100%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#f1dec1;stop-opacity:1" />
+                <stop offset="30%" style="stop-color:#d4b365;stop-opacity:1" />
+                <stop offset="75%" style="stop-color:#be9238;stop-opacity:1" />
+            </linearGradient>
+        </defs>
+        
+        <path d="M -20,305 C 380,305 490, 10 770, -20 L 785, -20 C 500, 20 390, 312 -20, 312 Z" 
+              fill="url(#top-grad)" 
+              transform="translate(-20, -15)"/>
+              
+        <path d="M -20,305 C 380,305 490, 10 770, -20 L 785, -20 C 500, 20 390, 312 -20, 312 Z" 
+              fill="#b98f33"/>
+    </svg>
 
-                            <header>
-                                <div class="invoice-title">
-                                    <h1 t-if="o.state in ['draft', 'sent']">Quotation</h1>
-                                    <h1 t-else="">Sales Order</h1>
-                                    <h1 class="arabic" t-if="o.state in ['draft', 'sent']">عرض سعر</h1>
-                                    <h1 class="arabic" t-else="">أمر بيع</h1>
-                                </div>
-                                
-                                <div class="logo-section">
-                                    <img t-if="o.company_id.logo" class="o_company_logo_small" 
-                                         t-att-src="image_data_uri(o.company_id.logo)" alt="Logo" 
-                                         style="height: 120px; width: 300;" />
-                                </div>
+    <header>
+        <div class="invoice-title">
+            <h1 t-if="o.state in ['draft', 'sent']">Quotation</h1>
+            <h1 t-else="">Sales Order</h1>
+            <h1 class="arabic" t-if="o.state in ['draft', 'sent']">عرض سعر</h1>
+            <h1 class="arabic" t-else="">أمر بيع</h1>
+        </div>
+        
+        <div class="logo-section">
+            <img t-if="o.company_id.logo" class="o_company_logo_small" 
+                 t-att-src="image_data_uri(o.company_id.logo)" alt="Logo" 
+                 style="height: 110px; width: 290px; object-fit: contain;" />
+                 
+            <div class="company-info-text">
+                <span class="comp-name">Bridges LLC</span>
+                <span class="comp-location">Oman, Muscat</span>
+            </div>
+        </div>
 
-                                <div class="title-details-row">
-                                    <div class="invoice-details">
-                                        <div class="detail-row">
-                                            <div class="icon">
-                                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                                                    <polyline points="14 2 14 8 20 8"></polyline>
-                                                    <line x1="16" y1="13" x2="8" y2="13"></line>
-                                                    <line x1="16" y1="17" x2="8" y2="17"></line>
-                                                    <polyline points="10 9 9 9 8 9"></polyline>
-                                                </svg>
-                                            </div>
-                                            <div class="label">Order No.</div>
-                                            <div class="value"><t t-esc="o.name"/></div>
-                                        </div>
-                                        <div class="detail-row">
-                                            <div class="icon">
-                                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                                                    <line x1="16" y1="2" x2="16" y2="6"></line>
-                                                    <line x1="8" y1="2" x2="8" y2="6"></line>
-                                                    <line x1="3" y1="10" x2="21" y2="10"></line>
-                                                </svg>
-                                            </div>
-                                            <div class="label">Date</div>
-                                            <div class="value"><t t-esc="o.date_order" t-options='{"widget": "date"}'/></div>
-                                        </div>
-                                        <div class="detail-row">
-                                            <div class="icon">
-                                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                                                    <line x1="16" y1="2" x2="16" y2="6"></line>
-                                                    <line x1="8" y1="2" x2="8" y2="6"></line>
-                                                    <line x1="3" y1="10" x2="21" y2="10"></line>
-                                                    <rect x="8" y="14" width="4" height="4"></rect>
-                                                </svg>
-                                            </div>
-                                            <div class="label">Expiration</div>
-                                            <div class="value"><t t-esc="o.validity_date" t-options='{"widget": "date"}'/></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </header>
+        <div class="title-details-row">
+            <div class="invoice-details">
+                <div class="detail-row">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                    </div>
+                    <div class="label">Order No.</div>
+                    <div class="value"><t t-esc="o.name"/></div>
+                </div>
+                <div class="detail-row">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                    </div>
+                    <div class="label">Date</div>
+                    <div class="value"><t t-esc="o.date_order" t-options='{"widget": "date"}'/></div>
+                </div>
+                <div class="detail-row">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                            <rect x="8" y="14" width="4" height="4"></rect>
+                        </svg>
+                    </div>
+                    <div class="label">Expiration</div>
+                    <div class="value"><t t-esc="o.validity_date" t-options='{"widget": "date"}'/></div>
+                </div>
+            </div>
+        </div>
+    </header>
 
                             <section class="billing-section">
                                 <div class="bill-to">
@@ -1304,20 +1378,20 @@
                             <footer>
                                 <div class="footer-item">
                                     <svg viewBox="0 0 24 24"><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.01.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1zM19 12h2a9 9 0 0 0-9-9v2c3.87 0 7 3.13 7 7zm-4 0h2c0-2.76-2.24-5-5-5v2c1.66 0 3 1.34 3 3z"/></svg>
-                                    <span><t t-esc="o.company_id.phone"/></span>
+                                    <span>+968 9533 0877</span>
                                 </div>
                                 <div class="footer-item">
                                     <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-                                    <a t-att-href="'mailto:' + str(o.company_id.email)"><t t-esc="o.company_id.email"/></a>
+                                    <a href="Khalid@bridgesoverseas.com"><span>Khalid@bridgesoverseas.com</span></a>
                                 </div>
                                 <div class="footer-item">
                                     <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                                    <span><t t-esc="o.company_id.city"/>, <t t-esc="o.company_id.country_id.name"/></span>
+                                    <span>Oman,Muscat</span>
                                 </div>
-                                <div class="footer-item">
+                                <!-- <div class="footer-item">
                                     <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.91 4.33 3.56zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.9-4.33-3.56zm2.95-8H5.08c1.37-2.16 3.63-3.6 6.27-3.92-.85 1.19-1.52 2.51-1.96 3.92zm3.97 8.04c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.6 14H9.4c-.08-.66-.14-1.32-.14-2 0-.68.06-1.34.14-2h5.2c.08.66.14 1.32.14 2 0 .68-.06 1.34-.14 2zm1.42 3.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.65-2.49 2.93-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"/></svg>
                                     <a t-att-href="o.company_id.website"><t t-esc="o.company_id.website"/></a>
-                                </div>
+                                </div> -->
                             </footer>
 <svg version="1.1" class="curve-bottom" viewBox="0 0 2048 1565"  preserveAspectRatio="none">
 <defs>
