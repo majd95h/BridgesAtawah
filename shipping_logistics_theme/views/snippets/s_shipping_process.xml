@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="s_shipping_process" name="Shipping Process">
+        <section id="process" class="s_shipping_process pt96 pb96" data-snippet="s_shipping_process" data-name="Shipping Process">
+            <div class="container">
+                <div class="shipping_section_head shipping_section_head_center">
+                    <h2>Clear Steps to Secure Your <em>Shipment</em></h2>
+                </div>
+
+                <div class="shipping_process_timeline">
+                    <t t-foreach="request.env['shipping.process.step'].sudo().search([])" t-as="step">
+                        <div class="shipping_process_step">
+                            <span class="shipping_process_code" t-esc="step.code"/>
+                            <h3 t-esc="step.name"/>
+                            <p t-esc="step.description"/>
+                        </div>
+                    </t>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ===================== Services ===================== -->
+    <record id="view_shipping_service_tree" model="ir.ui.view">
+        <field name="name">shipping.service.tree</field>
+        <field name="model">shipping.service</field>
+        <field name="arch" type="xml">
+            <list string="Shipping Services">
+                <field name="sequence" widget="handle"/>
+                <field name="code"/>
+                <field name="category"/>
+                <field name="name"/>
+                <field name="active" optional="hide"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_shipping_service_form" model="ir.ui.view">
+        <field name="name">shipping.service.form</field>
+        <field name="model">shipping.service</field>
+        <field name="arch" type="xml">
+            <form string="Shipping Service">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="code"/>
+                            <field name="category"/>
+                            <field name="name"/>
+                        </group>
+                        <group>
+                            <field name="icon_type"/>
+                            <field name="active"/>
+                        </group>
+                    </group>
+                    <group string="Description">
+                        <field name="description" nolabel="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_shipping_service" model="ir.actions.act_window">
+        <field name="name">Services</field>
+        <field name="res_model">shipping.service</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- ===================== Process steps ===================== -->
+    <record id="view_shipping_process_step_tree" model="ir.ui.view">
+        <field name="name">shipping.process.step.tree</field>
+        <field name="model">shipping.process.step</field>
+        <field name="arch" type="xml">
+            <list string="Shipping Process Steps">
+                <field name="sequence" widget="handle"/>
+                <field name="code"/>
+                <field name="name"/>
+                <field name="active" optional="hide"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_shipping_process_step_form" model="ir.ui.view">
+        <field name="name">shipping.process.step.form</field>
+        <field name="model">shipping.process.step</field>
+        <field name="arch" type="xml">
+            <form string="Shipping Process Step">
+                <sheet>
+                    <group>
+                        <field name="code"/>
+                        <field name="name"/>
+                        <field name="active"/>
+                    </group>
+                    <group string="Description">
+                        <field name="description" nolabel="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_shipping_process_step" model="ir.actions.act_window">
+        <field name="name">Process Steps</field>
+        <field name="res_model">shipping.process.step</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- ===================== Blog Articles ===================== -->
+    <record id="view_shipping_blog_article_tree" model="ir.ui.view">
+        <field name="name">shipping.blog.article.tree</field>
+        <field name="model">shipping.blog.article</field>
+        <field name="arch" type="xml">
+            <list string="Shipping Blog Articles">
+                <field name="name"/>
+                <field name="is_published"/>
+                <field name="create_date"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_shipping_blog_article_form" model="ir.ui.view">
+        <field name="name">shipping.blog.article.form</field>
+        <field name="model">shipping.blog.article</field>
+        <field name="arch" type="xml">
+            <form string="Blog Article">
+                <sheet>
+                    <group>
+                        <field name="name" string="Title"/>
+                        <field name="slug"/>
+                        <field name="is_published"/>
+                    </group>
+                    <group string="Excerpt">
+                        <field name="excerpt" nolabel="1"/>
+                    </group>
+                    <group string="Content">
+                        <field name="content" nolabel="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_shipping_blog_article" model="ir.actions.act_window">
+        <field name="name">Blog Articles</field>
+        <field name="res_model">shipping.blog.article</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- ===================== Menus ===================== -->
+    <menuitem id="menu_shipping_root" name="Shipping" sequence="90" web_icon="shipping_logistics_theme,static/description/icon.png"/>
+    <menuitem id="menu_shipping_content" name="Homepage Content" parent="menu_shipping_root" sequence="10"/>
+    <menuitem id="menu_shipping_service" name="Services" parent="menu_shipping_content" action="action_shipping_service" sequence="10"/>
+    <menuitem id="menu_shipping_process_step" name="Process Steps" parent="menu_shipping_content" action="action_shipping_process_step" sequence="20"/>
+    <menuitem id="menu_shipping_blog_article" name="Blog Articles" parent="menu_shipping_content" action="action_shipping_blog_article" sequence="30"/>
+</odoo>

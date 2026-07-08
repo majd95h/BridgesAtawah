@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <!-- ===================== Services ===================== -->
+    <record id="shipping_service_1" model="shipping.service">
+        <field name="sequence">10</field>
+        <field name="code">01</field>
+        <field name="category">Industrial</field>
+        <field name="name">Production Lines &amp; Machinery for Factories</field>
+        <field name="description">Securing integrated production lines, heavy industrial equipment, and spare parts for factories with complete technical coordination to match required specifications.</field>
+        <field name="icon_type">factory</field>
+    </record>
+
+    <record id="shipping_service_2" model="shipping.service">
+        <field name="sequence">20</field>
+        <field name="code">02</field>
+        <field name="category">Construction</field>
+        <field name="name">Construction Materials &amp; Architectural Fittings</field>
+        <field name="description">Meeting the needs of residential and commercial real estate projects for finishing materials, ceramics, lighting, sanitary ware, and decorations at competitive prices.</field>
+        <field name="icon_type">construction</field>
+    </record>
+
+    <record id="shipping_service_3" model="shipping.service">
+        <field name="sequence">30</field>
+        <field name="code">03</field>
+        <field name="category">Commerce</field>
+        <field name="name">Commercial Import &amp; Wholesale for Businesses</field>
+        <field name="description">Assisting traders and startups in importing consumer goods and spare parts in bulk, with support for customization options and private labeling (OEM / ODM).</field>
+        <field name="icon_type">wholesale</field>
+    </record>
+
+    <record id="shipping_service_4" model="shipping.service">
+        <field name="sequence">40</field>
+        <field name="code">04</field>
+        <field name="category">Logistics</field>
+        <field name="name">Special Orders &amp; Individual Services (LCL)</field>
+        <field name="description">Fulfilling limited orders through consolidation services and Less-than-Container-Load (LCL) solutions to reduce costs for startups and individual projects.</field>
+        <field name="icon_type">lcl</field>
+    </record>
+
+    <!-- ===================== Process steps ===================== -->
+    <record id="shipping_process_1" model="shipping.process.step">
+        <field name="sequence">10</field>
+        <field name="code">01</field>
+        <field name="name">Request Reception &amp; Definition</field>
+        <field name="description">You send us your product details, technical specifications, and estimated budget.</field>
+    </record>
+
+    <record id="shipping_process_2" model="shipping.process.step">
+        <field name="sequence">20</field>
+        <field name="code">02</field>
+        <field name="name">Sourcing &amp; Technical Evaluation</field>
+        <field name="description">We contact suitable factories, present available options, and provide initial cost estimates.</field>
+    </record>
+
+    <record id="shipping_process_3" model="shipping.process.step">
+        <field name="sequence">30</field>
+        <field name="code">03</field>
+        <field name="name">Production Follow-up &amp; Quality Inspection</field>
+        <field name="description">We monitor sample manufacturing and conduct on-site technical inspection to ensure goods meet standards.</field>
+    </record>
+
+    <record id="shipping_process_4" model="shipping.process.step">
+        <field name="sequence">40</field>
+        <field name="code">04</field>
+        <field name="name">Shipping &amp; Delivery</field>
+        <field name="description">We coordinate shipment of goods and handle necessary customs paperwork for smooth delivery.</field>
+    </record>
+
+    <!-- ===================== Blog Articles ===================== -->
+    <record id="shipping_blog_1" model="shipping.blog.article">
+        <field name="name">Is Importing from China Still Profitable? A Realistic Analysis and New Challenges</field>
+        <field name="slug">importing-from-china-profitable-2024</field>
+        <field name="excerpt">With global economic changes and evolving trade laws, many entrepreneurs are questioning the viability of importing from China. We present a realistic analysis of market opportunities and how import has shifted to organized smart import strategies.</field>
+        <field name="is_published">True</field>
+    </record>
+
+    <record id="shipping_blog_2" model="shipping.blog.article">
+        <field name="name">Your Comprehensive Guide to Participating in the Canton Fair</field>
+        <field name="slug">canton-fair-sourcing-guide</field>
+        <field name="excerpt">The Canton Fair in Guangzhou is the world's largest commercial gathering for those seeking direct suppliers. This guide details the fair's schedule, phases, and practical tips for negotiating with exhibitors.</field>
+        <field name="is_published">True</field>
+    </record>
+
+    <record id="shipping_blog_3" model="shipping.blog.article">
+        <field name="name">Avoiding Customs Detention: Key Documents and Certificates Required</field>
+        <field name="slug">customs-clearance-documents-guide</field>
+        <field name="excerpt">Shipments often face customs obstacles due to missing documents. We detail the basic requirements such as Commercial Invoice, Packing List, Bill of Lading, and importance of conformity certificates.</field>
+        <field name="is_published">True</field>
+    </record>
+
+    <record id="shipping_blog_4" model="shipping.blog.article">
+        <field name="name">The Safety Protocol: Ensuring Goods Match Specifications Before Leaving China</field>
+        <field name="slug">pre-shipment-inspection-protocol</field>
+        <field name="excerpt">Why not rely entirely on factory promises? This article explains how to implement field Pre-Shipment Inspection protocols and container loading supervision standards.</field>
+        <field name="is_published">True</field>
+    </record>
+</odoo>

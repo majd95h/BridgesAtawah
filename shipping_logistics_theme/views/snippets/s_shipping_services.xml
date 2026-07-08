@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="s_shipping_services" name="Shipping Services">
+        <section id="services" class="s_shipping_services pt96 pb96" data-snippet="s_shipping_services" data-name="Shipping Services">
+            <div class="container">
+                <div class="shipping_section_head shipping_section_head_center">
+                    <h2>Import Solutions Covering All Your <em>Needs</em></h2>
+                    <p>We provide diverse services that suit the size and aspirations of your various projects.</p>
+                    <div class="shipping_drag_tip">
+                        <span class="shipping_drag_dot"/>
+                        Tip: grab any card and drag it around the canvas
+                    </div>
+                </div>
+
+                <div class="shipping_services_canvas" id="shipping_services_canvas">
+                    <span class="shipping_canvas_label">DRAG CANVAS · 04 SERVICES</span>
+                    <span class="shipping_canvas_hint">arrange your engagement</span>
+                    <div class="shipping_services_scatter">
+                        <t t-foreach="request.env['shipping.service'].sudo().search([])" t-as="service">
+                            <div class="shipping_drag_card" tabindex="0" role="group" t-att-aria-label="service.name">
+                                <div class="shipping_drag_card_head">
+                                    <span class="shipping_service_icon" t-att-data-icon="service_index % 4"/>
+                                    <span class="shipping_service_number" t-esc="service.code"/>
+                                </div>
+                                <span class="shipping_service_tag" t-esc="service.category"/>
+                                <h3 t-esc="service.name"/>
+                                <p t-esc="service.description"/>
+                                <a t-att-href="service.link_url or '#contact'" class="shipping_service_link">
+                                    Learn more <span class="shipping_arrow">→</span>
+                                </a>
+                            </div>
+                        </t>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>

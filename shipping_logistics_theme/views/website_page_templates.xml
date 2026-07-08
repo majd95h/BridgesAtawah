@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="shipping_header" inherit_id="website.layout" name="Shipping Header">
+        <xpath expr="//header" position="replace">
+            <header class="shipping_header" data-name="Header">
+                <div class="container shipping_header_inner">
+                    <a href="/" class="shipping_logo">
+                        <span class="shipping_logo_mark">✓</span>
+                        <span class="shipping_logo_text">Shipping</span>
+                    </a>
+                    <nav class="shipping_nav">
+                        <t t-foreach="website.menu_id.child_id" t-as="submenu">
+                            <a t-att-href="submenu.url" t-esc="submenu.name"/>
+                        </t>
+                    </nav>
+                    <div class="shipping_header_actions">
+                        <a href="#contact" class="btn shipping_btn_primary shipping_btn_sm">Contact Us</a>
+                    </div>
+                </div>
+            </header>
+        </xpath>
+    </template>
+
+    <template id="shipping_footer" inherit_id="website.layout" name="Shipping Footer">
+        <xpath expr="//footer" position="replace">
+            <footer class="shipping_footer" data-name="Footer">
+                <div class="container shipping_footer_inner">
+                    <p class="shipping_footer_copy">
+                        © <t t-esc="datetime.datetime.now().year"/> Shipping &amp; Logistics Solutions. All rights reserved.
+                    </p>
+                </div>
+            </footer>
+        </xpath>
+    </template>
+</odoo>
