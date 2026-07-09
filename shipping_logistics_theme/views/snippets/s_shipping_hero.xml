@@ -4,6 +4,17 @@
         <section class="s_shipping_hero" data-snippet="s_shipping_hero" data-name="Shipping Hero">
             <div class="container">
                 <div class="shipping_hero_stage">
+                <!-- Company Logo -->
+                    <div class="shipping_hero_logo">
+    <t t-if="website.company_id.logo">
+        <img t-att-src="image_data_uri(website.company_id.logo)" t-att-alt="website.company_id.name" />
+    </t>
+    <t t-else="">
+        <div style="font-size: 24px; color: #D4AF37; font-weight: bold;">
+            <t t-out="website.company_id.name"/>
+        </div>
+    </t>
+</div>
                     <!-- بطاقة 1: Your Partner (أصفر) -->
                     <div class="shipping_float_card shipping_float_note" aria-hidden="true">
                         <span class="shipping_float_note_label">Your Partner</span>
