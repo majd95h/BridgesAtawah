@@ -12,7 +12,8 @@
                     </div>
                 </div>
 
-                <div class="shipping_services_canvas" id="shipping_services_canvas">
+                <div class="shipping_services_canvas" id="shipping_services_canvas"
+     t-att-style="'--logo-bg: url(%s);' % image_data_uri(website.company_id.logo) if website.company_id.logo else ''">
                     <span class="shipping_canvas_label">DRAG CANVAS · 04 SERVICES</span>
                     <span class="shipping_canvas_hint">arrange your engagement</span>
                     <div class="shipping_services_scatter">

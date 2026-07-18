@@ -2,6 +2,45 @@
 import publicWidget from "@web/legacy/js/public/public_widget";
 import { rpc } from "@web/core/network/rpc";
 
+publicWidget.registry.ShippingHeroBgCarousel = publicWidget.Widget.extend({
+    selector: ".shipping_hero_bg_carousel",
+
+    init() {
+        this._super(...arguments);
+        this.currentIndex = 0;
+        this.interval = 5000; // change image every 5 seconds
+        this.timer = null;
+    },
+
+    start() {
+        this.slides = this.el.querySelectorAll(".shipping_hero_bg_slide");
+        if (this.slides.length > 0) {
+            this._showSlide(0);
+            this._startTimer();
+        }
+        return this._super(...arguments);
+    },
+
+    destroy() {
+        clearInterval(this.timer);
+        this._super(...arguments);
+    },
+
+    _showSlide(index) {
+        // Remove 'active' from all slides
+        this.slides.forEach(slide => slide.classList.remove("active"));
+        // Add to the target slide
+        this.slides[index].classList.add("active");
+    },
+
+    _startTimer() {
+        this.timer = setInterval(() => {
+            this.currentIndex = (this.currentIndex + 1) % this.slides.length;
+            this._showSlide(this.currentIndex);
+        }, this.interval);
+    },
+});
+
 publicWidget.registry.ShippingNetworkMap = publicWidget.Widget.extend({
     selector: "#shipping_routes_map",
 
@@ -28,26 +67,46 @@ publicWidget.registry.ShippingNetworkMap = publicWidget.Widget.extend({
 
         // 3. Add the Asia Map (Polygons)
         let polygonSeries = chart.series.push(am5map.MapPolygonSeries.new(root, {
-            geoJSON: am5geodata_region_world_asiaLow // <-- Fixed variable name
-        }));
+    geoJSON: am5geodata_region_world_asiaLow
+}));
 
-        polygonSeries.mapPolygons.template.setAll({
-            fill: am5.color(0xe3e3e3), 
-            stroke: am5.color(0xffffff), 
-            strokeWidth: 1
-        });
+// Default look for all countries
+polygonSeries.mapPolygons.template.setAll({
+    fill: am5.color(0xe3e3e3),   // light grey for non-highlighted
+    stroke: am5.color(0xffffff),
+    strokeWidth: 1
+});
+
+// List of country ISO codes you want to highlight in gold
+const highlightedCountries = ["CN", "SA", "AE", "QA", "KW", "BH", "OM"];
+
+// Conditionally apply the gold fill
+polygonSeries.mapPolygons.template.adapters.add("fill", function(fill, target) {
+    if (target.dataItem && target.dataItem.dataContext) {
+        const id = target.dataItem.dataContext.id;   // country ISO code
+        if (highlightedCountries.includes(id)) {
+            return am5.color(0xD4AF37);   // gold fill
+        }
+    }
+    return fill;  // keep default grey
+});
 
         // 4. Define the Cities (Origin and Destinations)
-        const origin = { id: "cn", title: "Shanghai", geometry: { type: "Point", coordinates: [121.4737, 31.2304] }, color: 0xd98f2b };
+      const origin = { 
+    id: "cn", 
+    title: "Central China", 
+    geometry: { type: "Point", coordinates: [104.0, 36.0] },  // roughly Lanzhou region – centrally placed
+    color: 0xD4AF37 
+};
         
         const destinations = [
-            { id: "sa", title: "Saudi Arabia", geometry: { type: "Point", coordinates: [45.0792, 23.8859] }, color: 0x3b78e0 },
-            { id: "ae", title: "UAE", geometry: { type: "Point", coordinates: [54.3666, 24.4667] }, color: 0x2f9e68 },
-            { id: "qa", title: "Qatar", geometry: { type: "Point", coordinates: [51.5310, 25.2854] }, color: 0xe74c3c },
-            { id: "kw", title: "Kuwait", geometry: { type: "Point", coordinates: [47.9774, 29.3759] }, color: 0x9b59b6 },
-            { id: "bh", title: "Bahrain", geometry: { type: "Point", coordinates: [50.5860, 26.2285] }, color: 0xf39c12 },
-            { id: "om", title: "Oman", geometry: { type: "Point", coordinates: [58.4059, 23.5859] }, color: 0x1abc9c }
-        ];
+    { id: "sa", title: "Saudi Arabia", geometry: { type: "Point", coordinates: [45.0792, 23.8859] }, color: 0xD4AF37 },
+    { id: "ae", title: "UAE",          geometry: { type: "Point", coordinates: [54.3666, 24.4667] }, color: 0xD4AF37 },
+    { id: "qa", title: "Qatar",        geometry: { type: "Point", coordinates: [51.5310, 25.2854] }, color: 0xD4AF37 },
+    { id: "kw", title: "Kuwait",       geometry: { type: "Point", coordinates: [47.9774, 29.3759] }, color: 0xD4AF37 },
+    { id: "bh", title: "Bahrain",      geometry: { type: "Point", coordinates: [50.5860, 26.2285] }, color: 0xD4AF37 },
+    { id: "om", title: "Oman",         geometry: { type: "Point", coordinates: [58.4059, 23.5859] }, color: 0xD4AF37 }
+];
 
         // 5. Add Points (Cities) to the Map
         let pointSeries = chart.series.push(am5map.MapPointSeries.new(root, {}));
@@ -118,6 +177,96 @@ publicWidget.registry.ShippingNetworkMap = publicWidget.Widget.extend({
         });
 
         chart.appear(1000, 100);
+    }
+});
+// 3D Depth-of-Field Coverflow Testimonials
+publicWidget.registry.ShippingCoverflow = publicWidget.Widget.extend({
+    selector: ".shipping_coverflow_wrapper",
+    events: {
+        "click .btn_next": "_onNextClick",
+        "click .btn_prev": "_onPrevClick",
+        "click .shipping_coverflow_card": "_onCardClick",
+        "mouseenter .shipping_coverflow_deck": "_pauseAutoPlay",
+        "mouseleave .shipping_coverflow_deck": "_startAutoPlay",
+    },
+
+    init() {
+        this._super(...arguments);
+        this.currentIndex = 0;
+        this.autoPlayInterval = null;
+        this.delay = 5000; // Auto-play delay
+    },
+
+    start() {
+        this.cards = Array.from(this.el.querySelectorAll(".shipping_coverflow_card"));
+        if (this.cards.length > 0) {
+            this._updateCoverflow();
+            this._startAutoPlay();
+        }
+        return this._super(...arguments);
+    },
+
+    destroy() {
+        this._pauseAutoPlay();
+        this._super(...arguments);
+    },
+
+    _updateCoverflow() {
+        const total = this.cards.length;
+        
+        this.cards.forEach((card, index) => {
+            // Calculate distance from current index
+            let offset = index - this.currentIndex;
+            
+            // Adjust offset for an infinite circular loop
+            if (offset > Math.floor(total / 2)) {
+                offset -= total;
+            } else if (offset < -Math.floor(total / 2)) {
+                offset += total;
+            }
+
+            // Assign the dataset position for CSS targeting
+            // If the card is more than 2 spaces away, hide it deep in the background
+            if (Math.abs(offset) > 2) {
+                card.dataset.pos = "hidden";
+            } else {
+                card.dataset.pos = offset;
+            }
+        });
+    },
+
+    _onNextClick() {
+        this.currentIndex = (this.currentIndex + 1) % this.cards.length;
+        this._updateCoverflow();
+    },
+
+    _onPrevClick() {
+        this.currentIndex = (this.currentIndex - 1 + this.cards.length) % this.cards.length;
+        this._updateCoverflow();
+    },
+
+    _onCardClick(ev) {
+        // If the user clicks a side card, move the carousel to that card
+        const clickedPos = parseInt(ev.currentTarget.dataset.pos);
+        if (clickedPos === 0 || isNaN(clickedPos)) return; // Already active
+
+        // Calculate new index
+        this.currentIndex = (this.currentIndex + clickedPos + this.cards.length) % this.cards.length;
+        this._updateCoverflow();
+    },
+
+    _startAutoPlay() {
+        this._pauseAutoPlay();
+        this.autoPlayInterval = setInterval(() => {
+            this._onNextClick();
+        }, this.delay);
+    },
+
+    _pauseAutoPlay() {
+        if (this.autoPlayInterval) {
+            clearInterval(this.autoPlayInterval);
+            this.autoPlayInterval = null;
+        }
     }
 });
 
@@ -267,19 +416,22 @@ publicWidget.registry.ShippingBlog = publicWidget.Widget.extend({
     async start() {
         const _super = this._super(...arguments);
         try {
-            const data = await rpc("/shipping/blog", {limit: 4});
+            const data = await rpc("/shipping/blog", { limit: 4 });
             const articles = (data && data.articles) || [];
             if (articles.length) {
-                this.el.innerHTML = articles.map((article) => `
-                    <a class="shipping_blog_card" href="${this._escape(article.url)}">
-                        <span class="shipping_blog_tag">${this._escape(article.date || "Article")}</span>
-                        <h3>${this._escape(article.title)}</h3>
-                        <p>${this._escape(article.excerpt)}</p>
-                    </a>
-                `).join("");
+                // Get all back faces (same order as static cards)
+                const backs = this.el.querySelectorAll('.shipping_blog_back');
+                articles.forEach((article, index) => {
+                    if (backs[index]) {
+                        backs[index].innerHTML = `
+                            <h3>${this._escape(article.title)}</h3>
+                            <p>${this._escape(article.excerpt)}</p>
+                        `;
+                    }
+                });
             }
         } catch (error) {
-            console.log("Blog loading failed, using default content");
+            console.log("Blog loading failed, static cards remain as fallback");
         }
         return _super;
     },

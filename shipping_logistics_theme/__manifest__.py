@@ -41,6 +41,7 @@ Shipping & Logistics Business Theme
         'data/website_menu_data.xml',
         'views/shipping_backend_views.xml',
         'views/snippets/s_shipping_hero.xml',
+        'views/snippets/s_shipping_cards_carousel.xml',
         'views/snippets/s_shipping_services.xml',
         'views/snippets/s_shipping_why.xml',
         'views/snippets/s_shipping_process.xml',

@@ -15,6 +15,46 @@
     }
 }
 
+.s_shipping_hero {
+    background: var(--shipping-bg); /* fallback */
+    padding: 4rem 0 5rem;
+    position: relative;
+    overflow: hidden;
+
+    /* Remove the old ::before single-image overlay if present */
+    // &::before { ... }   ← comment out or delete
+}
+
+/* Carousel container – full size behind everything */
+.shipping_hero_bg_carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* behind the content (content has z-index: 1 via .shipping_hero_stage) */
+    overflow: hidden;
+}
+
+/* Each slide – full cover, stacked on top of each other */
+.shipping_hero_bg_slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;                 /* hidden by default */
+    transition: opacity 1s ease-in-out; /* smooth fade */
+}
+
+/* The active slide */
+.shipping_hero_bg_slide.active {
+    opacity: 0.5;                 /* shown with fade */
+}
+
 // ===== Header (Sticky + Glass Effect) =====
 .shipping_header {
     position: sticky;
@@ -202,20 +242,51 @@
     align-items: center;
 }
 
+// ===== Hero Text Animations =====
+@keyframes heroFadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .shipping_hero_title {
     font-size: clamp(2.4rem, 5vw, 4rem);
     line-height: 1.1;
     letter-spacing: -0.01em;
     margin-bottom: 1.5rem;
+    color: #1a1a1a; /* Enforces the dark color seen in the image */
+    text-shadow: 0 4px 16px rgba(255, 255, 255, 0.6); /* Soft white glow to separate from background */
+    
+    /* Animation */
+    opacity: 0;
+    animation: heroFadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
 }
 
 .shipping_hero_text {
-    font-size: 1.05rem;
-    color: var(--shipping-text-muted);
-    max-width: 540px;
-    margin: 0 auto 2rem;
+    /* 1. Improved Typography & New Color */
+    font-size: 1.15rem; 
+    line-height: 1.6;
+    font-weight: 500; /* Made slightly thicker so the dark color stands out */
+    color: #1e293b; /* A deep, elegant slate blue that matches the ocean and your buttons */
+    max-width: 600px;
+    margin: 0 auto 2.5rem;
+    
+    /* 2. Soft White Glow (Replaces the dark shadow) */
+    /* This creates a subtle "halo" around the dark text so it doesn't blend into the ship */
+    text-shadow: 
+        0 0 10px rgba(255, 255, 255, 0.9),
+        0 0 20px rgba(250, 246, 236, 0.8),
+        0 2px 4px rgba(255, 255, 255, 0.5);
+        
+    /* 3. Entrance Animation */
+    opacity: 0;
+    animation: heroFadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) 0.2s forwards; 
 }
-
 .shipping_hero_actions {
     display: flex;
     flex-wrap: wrap;
@@ -391,6 +462,31 @@
     padding: 3rem 1.5rem 3.5rem;
     min-height: 520px;
     overflow: hidden;
+
+    /* Watermark – company logo at low opacity */
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: var(--logo-bg, none);   /* set via inline style in XML */
+        background-size: contain;                 /* or cover, if you prefer a tighter crop */
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0.3;                            /* adjust this for transparency */
+        z-index: 0;
+        pointer-events: none;                     /* lets clicks pass through */
+    }
+
+    /* All canvas content stays above the watermark */
+    .shipping_canvas_label,
+    .shipping_canvas_hint,
+    .shipping_services_scatter {
+        position: relative;
+        z-index: 1;
+    }
 }
 
 .shipping_canvas_label {
@@ -484,10 +580,170 @@
 }
 
 .shipping_drag_card {
-    &:nth-child(4n+1) { top: 0; left: 2%; transform: rotate(-4deg); z-index: 4; }
-    &:nth-child(4n+2) { top: 0; left: 34%; transform: rotate(2deg); z-index: 3; }
-    &:nth-child(4n+3) { top: 0; left: 66%; transform: rotate(3deg); z-index: 2; }
-    &:nth-child(4n+4) { top: 250px; left: 18%; transform: rotate(-3deg); z-index: 3; }
+   &:nth-child(4n+1) { top: 20px; left: 3%; transform: rotate(-3deg); z-index: 4; }
+    &:nth-child(4n+2) { top: 50px; left: 27%; transform: rotate(2deg); z-index: 3; }
+    &:nth-child(4n+3) { top: 15px; left: 51%; transform: rotate(-2deg); z-index: 2; }
+    &:nth-child(4n+4) { top: 45px; left: 75%; transform: rotate(3deg); z-index: 3; }
+}
+.s_shipping_testimonials {
+    background: var(--shipping-surface);
+    overflow: hidden;
+}
+
+.shipping_coverflow_wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+/* The 3D Stage */
+.shipping_coverflow_deck {
+    position: relative;
+    height: 480px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1200px; /* Gives the deep 3D effect */
+    transform-style: preserve-3d;
+}
+
+/* Base Card Styles */
+.shipping_coverflow_card {
+    position: absolute;
+    width: 340px;
+    background: var(--shipping-bg);
+    border: 1px solid var(--shipping-border);
+    border-radius: var(--shipping-radius-md);
+    padding: 3rem 2rem;
+    text-align: center;
+    box-shadow: var(--shipping-shadow-card);
+    cursor: pointer;
+    
+    /* Core Animation Physics */
+    transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), 
+                opacity 0.6s ease, 
+                z-index 0.6s,
+                filter 0.6s ease;
+    will-change: transform, opacity, filter;
+
+    /* Content Styling (Matches your theme) */
+    .shipping_quote_mark {
+        font-family: var(--shipping-font-serif);
+        font-size: 4rem;
+        line-height: 0.5;
+        color: var(--shipping-accent);
+        opacity: 0.3;
+        margin-bottom: 1.5rem;
+    }
+    .shipping_stars {
+        color: var(--shipping-accent);
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+        margin-bottom: 1.2rem;
+    }
+    .shipping_testi_text {
+        font-size: 1.05rem;
+        line-height: 1.6;
+        color: var(--shipping-text);
+        margin-bottom: 2rem;
+        font-style: italic;
+    }
+    .shipping_testi_author strong {
+        display: block;
+        font-size: 1.1rem;
+        color: var(--shipping-navy-900);
+    }
+    .shipping_testi_author span {
+        display: block;
+        font-size: 0.8rem;
+        color: var(--shipping-text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+}
+
+/* === 3D Positional States (Controlled by JS) === */
+
+/* Active Center Card */
+.shipping_coverflow_card[data-pos="0"] {
+    transform: translateX(0) translateZ(0) rotateY(0deg) scale(1);
+    z-index: 5;
+    opacity: 1;
+    filter: blur(0);
+    box-shadow: 0 25px 50px -12px rgba(18, 23, 42, 0.2);
+}
+
+/* First Card Left (-1) & Right (1) */
+.shipping_coverflow_card[data-pos="-1"] {
+    transform: translateX(-55%) translateZ(-150px) rotateY(20deg) scale(0.9);
+    z-index: 4;
+    opacity: 0.7;
+    filter: blur(2px); /* Depth of field effect */
+}
+.shipping_coverflow_card[data-pos="1"] {
+    transform: translateX(55%) translateZ(-150px) rotateY(-20deg) scale(0.9);
+    z-index: 4;
+    opacity: 0.7;
+    filter: blur(2px);
+}
+
+/* Second Card Left (-2) & Right (2) */
+.shipping_coverflow_card[data-pos="-2"] {
+    transform: translateX(-95%) translateZ(-300px) rotateY(35deg) scale(0.8);
+    z-index: 3;
+    opacity: 0.4;
+    filter: blur(4px);
+}
+.shipping_coverflow_card[data-pos="2"] {
+    transform: translateX(95%) translateZ(-300px) rotateY(-35deg) scale(0.8);
+    z-index: 3;
+    opacity: 0.4;
+    filter: blur(4px);
+}
+
+/* Hover effect on side cards to indicate they are clickable */
+.shipping_coverflow_card:not([data-pos="0"]):hover {
+    opacity: 0.9;
+    filter: blur(1px);
+}
+
+/* Hidden Cards (Pushed way back if there are more than 5 cards) */
+.shipping_coverflow_card[data-pos="hidden"] {
+    transform: translateX(0) translateZ(-500px) scale(0.5);
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Controls */
+.shipping_carousel_controls {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    
+    button {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+    }
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .shipping_coverflow_deck { height: 420px; }
+    .shipping_coverflow_card { width: 280px; padding: 2rem 1.5rem; }
+    .shipping_coverflow_card[data-pos="-1"] { transform: translateX(-40%) translateZ(-150px) rotateY(15deg) scale(0.85); }
+    .shipping_coverflow_card[data-pos="1"] { transform: translateX(40%) translateZ(-150px) rotateY(-15deg) scale(0.85); }
+    .shipping_coverflow_card[data-pos="-2"], 
+    .shipping_coverflow_card[data-pos="2"] { opacity: 0; pointer-events: none; } /* Hide outer cards on small screens */
 }
 
 // ===== Why Section =====
@@ -543,10 +799,238 @@
     }
     h3 { font-size: 1rem; margin-bottom: 0.4rem; }
     p { font-size: 0.9rem; color: var(--shipping-text-muted); margin: 0; }
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;                         // exactly at the border‑top line
+        left: 0;                        // start of the line (left edge)
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background-color: var(--shipping-bg);   // matches section background
+        background-image: url('/shipping_logistics_theme/static/src/img/gold_ship.png');
+        background-size: 30px 30px;     // logo size inside the circle
+        background-position: center;
+        background-repeat: no-repeat;
+        border: 1px solid var(--shipping-accent); // gold border (#D4AF37)
+        transform: translate(-50%, -50%); // centres the circle on the line’s start
+        z-index: 2;
+    }
+}
+// Add to your main styles file
+// ===== CONTINUOUS ANIMATIONS FOR CURVED LINES =====
+
+// Animation Option 1: Gentle Floating Wave (Recommended - Most Beautiful)
+@keyframes floatingWave {
+    0%, 100% {
+        transform: translateY(0px);
+        opacity: 0.6;
+    }
+    50% {
+        transform: translateY(-8px);
+        opacity: 0.8;
+    }
 }
 
-// ===== Blog =====
-.s_shipping_blog { background: var(--shipping-surface); }
+// Animation Option 2: Breathing/Pulsing Effect
+@keyframes breathingPulse {
+    0%, 100% {
+        opacity: 0.4;
+        filter: blur(0.5px);
+    }
+    50% {
+        opacity: 0.8;
+        filter: blur(0px);
+    }
+}
+
+// Animation Option 3: Flowing Gradient Wave (Advanced)
+@keyframes flowingGradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 0%;
+    }
+}
+
+// Animation Option 4: Subtle Scale Breathing
+@keyframes subtleScale {
+    0%, 100% {
+        transform: scaleY(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scaleY(1.05);
+        opacity: 0.8;
+    }
+}
+
+// Animation Option 5: Horizontal Shimmer (Elegant)
+@keyframes horizontalShimmer {
+    0%, 100% {
+        background-position: -100% center;
+        opacity: 0.4;
+    }
+    50% {
+        background-position: 100% center;
+        opacity: 0.8;
+    }
+}
+
+// Animation Option 6: Wave Propagation (Most Organic)
+@keyframes wavePropagation {
+    0%, 100% {
+        filter: blur(0px) brightness(0.95);
+        opacity: 0.5;
+    }
+    25% {
+        filter: blur(0px) brightness(1.1);
+        opacity: 0.7;
+    }
+    50% {
+        filter: blur(0.5px) brightness(1);
+        opacity: 0.8;
+    }
+    75% {
+        filter: blur(0px) brightness(1.05);
+        opacity: 0.65;
+    }
+}
+
+// ===== SERVICES SECTION - APPLY ANIMATIONS =====
+.s_shipping_services {
+    position: relative;
+    overflow: visible;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        height: 100px;
+        background: url('data:image/svg+xml,<svg viewBox="0 0 1200 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,50 Q300,10 600,30 T1200,40" fill="none" stroke="%23D4AF37" stroke-width="4" opacity="0.6"/></svg>') no-repeat center;
+        background-size: cover;
+        pointer-events: none;
+        z-index: 2;
+        
+        // ===== CHOOSE ONE ANIMATION BELOW =====
+        
+        // Option 1: Gentle Floating (RECOMMENDED)
+        animation: floatingWave 4s ease-in-out infinite;
+        
+        // Option 2: Breathing Pulse
+        // animation: breathingPulse 3s ease-in-out infinite;
+        
+        // Option 3: Subtle Scale
+        // animation: subtleScale 3.5s ease-in-out infinite;
+        
+        // Option 4: Wave Propagation (MOST ORGANIC)
+        // animation: wavePropagation 4.5s ease-in-out infinite;
+        
+        // Uncomment one and comment out others
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -100px;
+        left: 0;
+        right: 0;
+        height: 100px;
+        background: url('data:image/svg+xml,<svg viewBox="0 0 1200 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,40 Q300,80 600,60 T1200,50" fill="none" stroke="%23D4AF37" stroke-width="4" opacity="0.6"/></svg>') no-repeat center;
+        background-size: cover;
+        pointer-events: none;
+        z-index: 2;
+        
+        // Apply animation with slight delay for wave effect
+        animation: floatingWave 4s ease-in-out infinite;
+        animation-delay: 0.3s;
+    }
+}
+
+// ===== TESTIMONIALS SECTION - APPLY ANIMATIONS =====
+.s_shipping_testimonials_coverflow {
+    position: relative;
+    overflow: visible;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 200px;
+        background: url('data:image/svg+xml,<svg viewBox="0 0 1200 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,40 Q300,80 600,60 T1200,50" fill="none" stroke="%23D4AF37" stroke-width="50" opacity="0.2"/></svg>') no-repeat center;
+        background-size: cover;
+        pointer-events: none;
+        z-index: 2;
+        
+        // Apply animation with larger stroke width (thicker line)
+        animation: wavePropagation 5s ease-in-out infinite;
+        animation-delay: 0s;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -100px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 200px;
+        background: url('data:image/svg+xml,<svg viewBox="0 0 1200 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,50 Q300,10 600,30 T1200,40" fill="none" stroke="%23D4AF37" stroke-width="50" opacity="0.2"/></svg>') no-repeat center;
+        background-size: cover;
+        pointer-events: none;
+        z-index: 2;
+        
+        // Apply animation with delay
+        animation: wavePropagation 5s ease-in-out infinite;
+        animation-delay: 0.5s;
+    }
+}
+
+// ===== RESPONSIVE ADJUSTMENTS =====
+@media (max-width: 768px) {
+    .s_shipping_services {
+        &::before,
+        &::after {
+            height: 60px;
+            // Animations still work but on smaller curves
+        }
+    }
+
+    .s_shipping_testimonials_coverflow {
+        &::before,
+        &::after {
+            height: 100px;
+            // Animations still work with adjusted sizing
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .s_shipping_services {
+        &::before,
+        &::after {
+            // Optionally disable animations on mobile for performance
+            animation: none !important;
+        }
+    }
+
+    .s_shipping_testimonials_coverflow {
+        &::before,
+        &::after {
+            animation: none !important;
+        }
+    }
+}
+
+.s_shipping_blog {
+    background: var(--shipping-surface);
+}
 
 .shipping_blog_grid {
     display: grid;
@@ -554,18 +1038,54 @@
     gap: 1.5rem;
 }
 
+/* --- Flip Card Container --- */
 .shipping_blog_card {
-    background: var(--shipping-bg);
-    border: 1px solid var(--shipping-border);
-    border-radius: var(--shipping-radius-md);
-    padding: 1.5rem;
-    transition: all 0.3s ease;
-    text-decoration: none !important;
-    &:hover {
-        transform: translateY(-4px);
-        box-shadow: var(--shipping-shadow-soft);
-        border-color: var(--shipping-accent);
+    background: transparent;      /* no background on the outer wrapper */
+    border: none;
+    padding: 0;
+    perspective: 800px;          /* 3D depth */
+    height: 280px;               /* fixed height – adjust as needed */
+    cursor: pointer;
+
+    &:hover .shipping_blog_inner {
+        transform: rotateY(180deg);
     }
+}
+
+/* --- Inner flip wrapper – fills card height --- */
+.shipping_blog_inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s ease;
+    transform-style: preserve-3d;
+}
+
+/* --- Both faces – identical card styling --- */
+.shipping_blog_front,
+.shipping_blog_back {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: var(--shipping-radius-md);
+    border: 1px solid var(--shipping-border);
+    background: var(--shipping-bg);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* --- Front face: normal card look --- */
+.shipping_blog_front {
+    z-index: 2;
+    transform: rotateY(0deg);
+
     .shipping_blog_tag {
         display: inline-block;
         font-size: 0.72rem;
@@ -575,8 +1095,64 @@
         color: var(--shipping-accent);
         margin-bottom: 0.6rem;
     }
-    h3 { font-size: 1.05rem; margin-bottom: 0.5rem; color: var(--shipping-text); }
-    p { font-size: 0.88rem; color: var(--shipping-text-muted); margin: 0; }
+    h3 {
+        font-size: 1.05rem;
+        margin-bottom: 0.5rem;
+        color: var(--shipping-text);
+    }
+    p {
+        font-size: 0.88rem;
+        color: var(--shipping-text-muted);
+        margin: 0;
+    }
+}
+
+/* --- Back face: dynamic content + company logo overlay --- */
+.shipping_blog_back {
+    transform: rotateY(180deg);
+
+    /* Semi‑transparent logo watermark */
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background-image: var(--blog-bg-logo, none);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0.3;                   /* exactly as requested */
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    /* JS‑injected text must be above the overlay */
+    h3, p {
+        position: relative;
+        z-index: 1;
+    }
+    h3 {
+        font-size: 1.05rem;
+        margin-bottom: 0.5rem;
+        color: var(--shipping-text);
+    }
+    p {
+        font-size: 0.88rem;
+        color: var(--shipping-text-muted);
+        margin: 0;
+    }
+}
+
+/* --- Responsive adjustments --- */
+@media (max-width: 991px) {
+    .shipping_blog_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 575px) {
+    .shipping_blog_grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 // ===== CTA =====

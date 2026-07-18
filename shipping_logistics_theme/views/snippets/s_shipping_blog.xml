@@ -8,27 +8,59 @@
                     <p>Commercial knowledge and awareness of logistics are the foundation of successful and safe importing from China.</p>
                 </div>
 
-                <div class="shipping_blog_grid" id="shipping_blog_grid">
+                <div class="shipping_blog_grid" id="shipping_blog_grid"
+                     t-att-style="'--blog-bg-logo: url(%s);' % image_data_uri(website.company_id.logo) if website.company_id.logo else ''">
+
+                    <!-- Card 1 -->
                     <div class="shipping_blog_card">
-                        <span class="shipping_blog_tag">Market Analysis</span>
-                        <h3>Is Importing from China Still Profitable?</h3>
-                        <p>A realistic analysis of market opportunities and how import has shifted to organized smart import strategies.</p>
+                        <div class="shipping_blog_inner">
+                            <div class="shipping_blog_front">
+                                <span class="shipping_blog_tag">Market Analysis</span>
+                                <h3>Is Importing from China Still Profitable?</h3>
+                                <p>A realistic analysis of market opportunities and how import has shifted to organized smart import strategies.</p>
+                            </div>
+                            <div class="shipping_blog_back">
+                                <!-- JS will inject title + excerpt here -->
+                            </div>
+                        </div>
                     </div>
+
+                    <!-- Card 2 -->
                     <div class="shipping_blog_card">
-                        <span class="shipping_blog_tag">Exhibitions</span>
-                        <h3>Your Guide to the Canton Fair</h3>
-                        <p>The world's largest commercial gathering for those seeking direct suppliers and factories in China.</p>
+                        <div class="shipping_blog_inner">
+                            <div class="shipping_blog_front">
+                                <span class="shipping_blog_tag">Exhibitions</span>
+                                <h3>Your Guide to the Canton Fair</h3>
+                                <p>The world's largest commercial gathering for those seeking direct suppliers and factories in China.</p>
+                            </div>
+                            <div class="shipping_blog_back"></div>
+                        </div>
                     </div>
+
+                    <!-- Card 3 -->
                     <div class="shipping_blog_card">
-                        <span class="shipping_blog_tag">Customs Guide</span>
-                        <h3>Avoiding Customs Detention</h3>
-                        <p>Key documents and certificates required for professional clearance of your goods.</p>
+                        <div class="shipping_blog_inner">
+                            <div class="shipping_blog_front">
+                                <span class="shipping_blog_tag">Customs Guide</span>
+                                <h3>Avoiding Customs Detention</h3>
+                                <p>Key documents and certificates required for professional clearance of your goods.</p>
+                            </div>
+                            <div class="shipping_blog_back"></div>
+                        </div>
                     </div>
+
+                    <!-- Card 4 -->
                     <div class="shipping_blog_card">
-                        <span class="shipping_blog_tag">Quality Assurance</span>
-                        <h3>The Safety Protocol</h3>
-                        <p>How to ensure goods match specifications before the container leaves China.</p>
+                        <div class="shipping_blog_inner">
+                            <div class="shipping_blog_front">
+                                <span class="shipping_blog_tag">Quality Assurance</span>
+                                <h3>The Safety Protocol</h3>
+                                <p>How to ensure goods match specifications before the container leaves China.</p>
+                            </div>
+                            <div class="shipping_blog_back"></div>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </section>
