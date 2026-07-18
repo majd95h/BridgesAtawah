@@ -1,20 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <template id="s_shipping_network" name="Shipping Network Map">
         <section class="s_shipping_network pt64 pb64">
-            <div class="container">
-                <div class="text-center mb-5">
+            <style>
+                /* Enhanced Map Container Styles */
+                .s_shipping_network {
+                    background: linear-gradient(135deg, #f8f9fa 0%, #f0f2f5 100%);
+                    position: relative;
+                    overflow: hidden;
+                }
+
+                /* Animated background decoration */
+                .s_shipping_network::before {
+                    content: '';
+                    position: absolute;
+                    top: -50%;
+                    right: -10%;
+                    width: 600px;
+                    height: 600px;
+                    background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+                    border-radius: 50%;
+                    animation: float-bg 20s ease-in-out infinite;
+                    pointer-events: none;
+                }
+
+                .s_shipping_network::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -30%;
+                    left: -5%;
+                    width: 500px;
+                    height: 500px;
+                    background: radial-gradient(circle, rgba(30, 41, 59, 0.05) 0%, transparent 70%);
+                    border-radius: 50%;
+                    animation: float-bg-alt 25s ease-in-out infinite;
+                    pointer-events: none;
+                }
+
+                @keyframes float-bg {
+                    0%, 100% { transform: translateY(0px) translateX(0px); }
+                    50% { transform: translateY(-30px) translateX(-20px); }
+                }
+
+                @keyframes float-bg-alt {
+                    0%, 100% { transform: translateY(0px) translateX(0px); }
+                    50% { transform: translateY(30px) translateX(20px); }
+                }
+
+                .shipping_network_container {
+                    position: relative;
+                    z-index: 1;
+                }
+
+                /* Header Styling */
+                .shipping_network_header {
+                    text-align: center;
+                    margin-bottom: 3rem;
+                    animation: fadeInDown 0.8s ease-out;
+                }
+
+                .shipping_network_header h2 {
+                    font-size: 2.5rem;
+                    font-weight: 700;
+                    color: #1a1a1a;
+                    margin-bottom: 0.8rem;
+                    letter-spacing: -0.5px;
+                }
+
+                .shipping_network_header p {
+                    font-size: 1.1rem;
+                    color: #666;
+                    max-width: 600px;
+                    margin: 0 auto;
+                    line-height: 1.6;
+                }
+
+                /* Map Container with Enhanced Styling */
+                .shipping_map_wrapper {
+                    position: relative;
+                    border-radius: 16px;
+                    overflow: hidden;
+                    background: #ffffff;
+                    box-shadow: 
+                        0 20px 60px -12px rgba(18, 23, 42, 0.15),
+                        0 0 1px rgba(18, 23, 42, 0.1),
+                        inset 0 1px 0 rgba(255, 255, 255, 0.5);
+                    border: 1px solid rgba(212, 175, 55, 0.1);
+                    min-height: 600px;
+                    animation: slideUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) 0.2s backwards;
+                }
+
+                @keyframes slideUp {
+                    from {
+                        opacity: 0;
+                        transform: translateY(40px);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+
+                @keyframes fadeInDown {
+                    from {
+                        opacity: 0;
+                        transform: translateY(-20px);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+
+                #shipping_routes_map {
+                    width: 100% !important;
+                    height: 600px !important;
+                    background-color: #ffffff !important;
+                    position: relative;
+                }
+
+                /* Enhanced amCharts styling */
+                .am5-root {
+                    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+                }
+
+                /* Tooltip Enhancement */
+                .am5-tooltip {
+                    background: rgba(26, 26, 26, 0.95) !important;
+                    border-radius: 8px !important;
+                    padding: 10px 12px !important;
+                    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2) !important;
+                    border: 1px solid rgba(212, 175, 55, 0.3) !important;
+                    font-size: 13px !important;
+                    color: #fff !important;
+                }
+
+                /* Add subtle gridlines */
+                #shipping_routes_map::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-image: 
+                        linear-gradient(rgba(212, 175, 55, 0.02) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(212, 175, 55, 0.02) 1px, transparent 1px);
+                    background-size: 50px 50px;
+                    pointer-events: none;
+                    border-radius: 16px;
+                }
+
+                /* Info Cards */
+                .shipping_network_info {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 1.5rem;
+                    margin-top: 2.5rem;
+                    animation: fadeIn 0.8s ease-out 0.4s backwards;
+                }
+
+                @keyframes fadeIn {
+                    from { opacity: 0; }
+                    to { opacity: 1; }
+                }
+
+                .shipping_info_card {
+                    background: rgba(255, 255, 255, 0.6);
+                    border: 1px solid rgba(212, 175, 55, 0.2);
+                    border-radius: 12px;
+                    padding: 1.5rem;
+                    text-align: center;
+                    transition: all 0.3s ease;
+                    backdrop-filter: blur(10px);
+                }
+
+                .shipping_info_card:hover {
+                    background: rgba(255, 255, 255, 0.8);
+                    border-color: rgba(212, 175, 55, 0.5);
+                    transform: translateY(-4px);
+                    box-shadow: 0 12px 24px rgba(212, 175, 55, 0.15);
+                }
+
+                .shipping_info_value {
+                    font-size: 2rem;
+                    font-weight: 700;
+                    color: #D4AF37;
+                    margin-bottom: 0.5rem;
+                }
+
+                .shipping_info_label {
+                    font-size: 0.9rem;
+                    color: #666;
+                    font-weight: 500;
+                }
+
+                /* Responsive */
+                @media (max-width: 991px) {
+                    .shipping_network_header h2 {
+                        font-size: 2rem;
+                    }
+                    
+                    .shipping_network_info {
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+                }
+
+                @media (max-width: 575px) {
+                    .shipping_map_wrapper {
+                        min-height: 400px;
+                    }
+
+                    #shipping_routes_map {
+                        height: 400px !important;
+                    }
+
+                    .shipping_network_info {
+                        grid-template-columns: 1fr;
+                    }
+
+                    .shipping_network_header h2 {
+                        font-size: 1.5rem;
+                    }
+                }
+            </style>
+
+            <div class="container shipping_network_container">
+                <!-- Header Section -->
+                <div class="shipping_network_header">
                     <h2>Our Global Network</h2>
                     <p>Trading routes connecting China with the Middle East and beyond.</p>
                 </div>
-                
+
+                <!-- amCharts5 Scripts -->
                 <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
                 <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
                 <script src="https://cdn.amcharts.com/lib/5/geodata/region/world/asiaLow.js"></script>
                 <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
 
-                <div id="shipping_routes_map" style="width: 100%; height: 500px; background-color: #f8f9fa;"></div>
-                
+                <!-- Map Container -->
+                <div class="shipping_map_wrapper">
+                    <div id="shipping_routes_map"></div>
                 </div>
+
+                <!-- Info Cards -->
+                <div class="shipping_network_info">
+                    <div class="shipping_info_card">
+                        <div class="shipping_info_value">7</div>
+                        <div class="shipping_info_label">Key Markets</div>
+                    </div>
+                    <div class="shipping_info_card">
+                        <div class="shipping_info_value">24/7</div>
+                        <div class="shipping_info_label">Operations</div>
+                    </div>
+                    <div class="shipping_info_card">
+                        <div class="shipping_info_value">50+</div>
+                        <div class="shipping_info_label">Routes</div>
+                    </div>
+                </div>
+            </div>
         </section>
     </template>
 </odoo>

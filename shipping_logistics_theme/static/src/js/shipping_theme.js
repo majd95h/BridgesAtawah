@@ -42,7 +42,7 @@ publicWidget.registry.ShippingHeroBgCarousel = publicWidget.Widget.extend({
 });
 
 publicWidget.registry.ShippingNetworkMap = publicWidget.Widget.extend({
-    selector: "#shipping_routes_map",
+        selector: "#shipping_routes_map",
 
     start() {
         this._renderAmChart();
@@ -53,105 +53,135 @@ publicWidget.registry.ShippingNetworkMap = publicWidget.Widget.extend({
         // 1. Initialize amCharts Root
         let root = am5.Root.new(this.el);
 
-        // Set animated theme
+        // Set animated theme with custom colors
         root.setThemes([am5themes_Animated.new(root)]);
 
-        // 2. Create the Map Chart with a static default center (No auto-zoom animation)
+        // 2. Create the Map Chart with enhanced settings
         let chart = root.container.children.push(am5map.MapChart.new(root, {
-            panX: "translateX",
-            panY: "translateY",
+                panX: "none",      // Locks horizontal map panning
+    panY: "none",      // Locks vertical map panning
+    wheelX: "none",    // Locks mouse wheel horizontal zoom
+    wheelY: "none" ,    // Locks mouse wheel vertical zoom
             projection: am5map.geoMercator(),
-            homeGeoPoint: { longitude: 85, latitude: 28 }, // Centers map statically between China and Gulf
-            homeZoomLevel: 1.6 // Adjust this number if you want the map slightly closer or further out
+            homeGeoPoint: { longitude: 85, latitude: 28 },
+            homeZoomLevel: 1.6
         }));
 
-        // 3. Add the Asia Map (Polygons)
+        // 3. Add the Asia Map (Polygons) with enhanced styling
         let polygonSeries = chart.series.push(am5map.MapPolygonSeries.new(root, {
-    geoJSON: am5geodata_region_world_asiaLow
-}));
+            geoJSON: am5geodata_region_world_asiaLow
+        }));
 
-// Default look for all countries
-polygonSeries.mapPolygons.template.setAll({
-    fill: am5.color(0xe3e3e3),   // light grey for non-highlighted
-    stroke: am5.color(0xffffff),
-    strokeWidth: 1
-});
+        // Enhanced polygon styling
+        polygonSeries.mapPolygons.template.setAll({
+            fill: am5.color(0xe8e8e8),      // slightly warmer grey
+            stroke: am5.color(0xffffff),
+            strokeWidth: 1.5,
+            strokeOpacity: 0.8
+        });
 
-// List of country ISO codes you want to highlight in gold
-const highlightedCountries = ["CN", "SA", "AE", "QA", "KW", "BH", "OM"];
+        // List of country ISO codes to highlight
+        const highlightedCountries = ["CN", "SA", "AE", "QA", "KW", "BH", "OM"];
 
-// Conditionally apply the gold fill
-polygonSeries.mapPolygons.template.adapters.add("fill", function(fill, target) {
-    if (target.dataItem && target.dataItem.dataContext) {
-        const id = target.dataItem.dataContext.id;   // country ISO code
-        if (highlightedCountries.includes(id)) {
-            return am5.color(0xD4AF37);   // gold fill
-        }
-    }
-    return fill;  // keep default grey
-});
+        // Apply gold fill to highlighted countries
+        polygonSeries.mapPolygons.template.adapters.add("fill", function(fill, target) {
+            if (target.dataItem && target.dataItem.dataContext) {
+                const id = target.dataItem.dataContext.id;
+                if (highlightedCountries.includes(id)) {
+                    return am5.color(0xD4AF37);   // gold
+                }
+            }
+            return fill;
+        });
+
+        // Add subtle hover effect to countries
+        polygonSeries.mapPolygons.template.set("tooltipText", "{name}");
+        polygonSeries.mapPolygons.template.adapters.add("strokeOpacity", function(opacity, target) {
+            if (target.isHover || target.isActive) {
+                return 1;
+            }
+            return 0.8;
+        });
 
         // 4. Define the Cities (Origin and Destinations)
-      const origin = { 
-    id: "cn", 
-    title: "Central China", 
-    geometry: { type: "Point", coordinates: [104.0, 36.0] },  // roughly Lanzhou region – centrally placed
-    color: 0xD4AF37 
-};
+        const origin = { 
+            id: "cn", 
+            title: "Central China", 
+            subtitle: "Distribution Hub",
+            geometry: { type: "Point", coordinates: [104.0, 36.0] },
+            color: 0xD4AF37 
+        };
         
         const destinations = [
-    { id: "sa", title: "Saudi Arabia", geometry: { type: "Point", coordinates: [45.0792, 23.8859] }, color: 0xD4AF37 },
-    { id: "ae", title: "UAE",          geometry: { type: "Point", coordinates: [54.3666, 24.4667] }, color: 0xD4AF37 },
-    { id: "qa", title: "Qatar",        geometry: { type: "Point", coordinates: [51.5310, 25.2854] }, color: 0xD4AF37 },
-    { id: "kw", title: "Kuwait",       geometry: { type: "Point", coordinates: [47.9774, 29.3759] }, color: 0xD4AF37 },
-    { id: "bh", title: "Bahrain",      geometry: { type: "Point", coordinates: [50.5860, 26.2285] }, color: 0xD4AF37 },
-    { id: "om", title: "Oman",         geometry: { type: "Point", coordinates: [58.4059, 23.5859] }, color: 0xD4AF37 }
-];
+            { id: "sa", title: "Saudi Arabia", subtitle: "Riyadh", geometry: { type: "Point", coordinates: [45.0792, 23.8859] }, color: 0xD4AF37 },
+            { id: "ae", title: "UAE", subtitle: "Dubai", geometry: { type: "Point", coordinates: [54.3666, 24.4667] }, color: 0xD4AF37 },
+            { id: "qa", title: "Qatar", subtitle: "Doha", geometry: { type: "Point", coordinates: [51.5310, 25.2854] }, color: 0xD4AF37 },
+            { id: "kw", title: "Kuwait", subtitle: "Kuwait City", geometry: { type: "Point", coordinates: [47.9774, 29.3759] }, color: 0xD4AF37 },
+            { id: "bh", title: "Bahrain", subtitle: "Manama", geometry: { type: "Point", coordinates: [50.5860, 26.2285] }, color: 0xD4AF37 },
+            { id: "om", title: "Oman", subtitle: "Muscat", geometry: { type: "Point", coordinates: [58.4059, 23.5859] }, color: 0xD4AF37 }
+        ];
 
-        // 5. Add Points (Cities) to the Map
+        // 5. Add Points (Cities) to the Map with Enhanced Animation
         let pointSeries = chart.series.push(am5map.MapPointSeries.new(root, {}));
         
         pointSeries.bullets.push(function(root, series, dataItem) {
             let container = am5.Container.new(root, {});
             
-            container.children.push(am5.Circle.new(root, {
-                radius: 6,
+            // Main solid circle (smaller)
+            let mainCircle = container.children.push(am5.Circle.new(root, {
+                radius: 8,
                 fill: am5.color(dataItem.dataContext.color),
-                tooltipText: "{title}"
+                strokeWidth: 2,
+                stroke: am5.color(0xffffff)
             }));
 
-            let circle = container.children.push(am5.Circle.new(root, {
-                radius: 6,
-                fill: am5.color(dataItem.dataContext.color),
-                opacity: 0.5
-            }));
-            
-            circle.animate({
-                key: "radius",
-                to: 15,
-                duration: 1500,
-                easing: am5.ease.out(am5.ease.cubic),
+            // Glow layers (multiple circles with opacity decay)
+            for (let i = 0; i < 3; i++) {
+                let glowCircle = container.children.push(am5.Circle.new(root, {
+                    radius: 8,
+                    fill: am5.color(dataItem.dataContext.color),
+                    opacity: 0.3 - (i * 0.1)
+                }));
+                
+                glowCircle.animate({
+                    key: "radius",
+                    to: 20 + (i * 6),
+                    duration: 1500 + (i * 300),
+                    easing: am5.ease.out(am5.ease.cubic),
+                    loops: Infinity
+                });
+            }
+
+            // Pulsing animation on main circle
+            mainCircle.animate({
+                key: "opacity",
+                from: 1,
+                to: 0.7,
+                duration: 1000,
+                easing: am5.ease.inOut(am5.ease.sine),
                 loops: Infinity
             });
 
             return am5.Bullet.new(root, {
-                sprite: container
+                sprite: container,
+                tooltipText: "{title}"
             });
         });
 
         pointSeries.data.push(origin);
         destinations.forEach(dest => pointSeries.data.push(dest));
 
-        // 6. Draw the Lines between Origin and Destinations
+        // 6. Draw the Lines with Enhanced Styling
         let lineSeries = chart.series.push(am5map.MapLineSeries.new(root, {}));
         
         lineSeries.mapLines.template.setAll({
-            strokeWidth: 2,
-            strokeOpacity: 0.6,
-            strokeDasharray: [4, 4]
+            strokeWidth: 3,
+            strokeOpacity: 0.7,
+            strokeDasharray: [5, 5],
+            strokeLinecap: "round"
         });
 
-        destinations.forEach(dest => {
+        destinations.forEach((dest, index) => {
             lineSeries.data.push({
                 geometry: {
                     type: "LineString",
@@ -160,22 +190,26 @@ polygonSeries.mapPolygons.template.adapters.add("fill", function(fill, target) {
                         dest.geometry.coordinates
                     ]
                 },
-                stroke: am5.color(dest.color)
+                stroke: am5.color(dest.color),
+                dataContext: { index: index }
             });
         });
 
-        lineSeries.mapLines.template.adapters.add("stroke", function(stroke, target) {
-            if (target.dataItem) {
-                return target.dataItem.dataContext.stroke;
-            }
-            return stroke;
+        // Apply animated dash offset for flowing effect
+        lineSeries.mapLines.template.adapters.add("strokeDasharray", function(dasharray, target) {
+            // Animated effect will be handled by CSS if needed
+            return dasharray;
         });
 
-        // Tells amCharts to automatically show the map at the home position instantly
+        // Add subtle shadows to lines
+        lineSeries.mapLines.template.set("tooltipText", "Trade Route");
+
+        // 7. Auto-zoom to show all data
         polygonSeries.events.on("datavalidated", function () {
             chart.goHome();
         });
 
+        // Add entrance animation
         chart.appear(1000, 100);
     }
 });
@@ -442,3 +476,430 @@ publicWidget.registry.ShippingBlog = publicWidget.Widget.extend({
         return div.innerHTML;
     },
 });
+
+publicWidget.registry.ShippingFooterContact = publicWidget.Widget.extend({
+    selector: ".s_shipping_footer_contact",
+    events: {
+        "submit #shipping_contact_form": "_onFormSubmit",
+        "click .chat_channel_btn": "_onChatClick",
+        "focus .form_input, .form_select, .form_textarea": "_onFormFieldFocus",
+        "blur .form_input, .form_select, .form_textarea": "_onFormFieldBlur",
+    },
+
+    start() {
+        this._initializeAnimations();
+        this._setupFormValidation();
+        return this._super(...arguments);
+    },
+
+    /**
+     * Initialize scroll animations for elements
+     */
+    _initializeAnimations() {
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = "slideUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards";
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards for animation
+        this.el.querySelectorAll(".shipping_office_card, .email_channel_card, .chat_channel_btn").forEach(card => {
+            observer.observe(card);
+        });
+    },
+
+    /**
+     * Setup form validation
+     */
+    _setupFormValidation() {
+        this.form = this.el.querySelector("#shipping_contact_form");
+        if (this.form) {
+            this.form.noValidate = true; // Use custom validation
+        }
+    },
+
+    /**
+     * Handle form submission
+     */
+    async _onFormSubmit(ev) {
+        ev.preventDefault();
+
+        if (!this._validateForm()) {
+            return;
+        }
+
+        const formData = new FormData(this.form);
+        const data = Object.fromEntries(formData);
+
+        // Show loading state
+        const submitBtn = this.form.querySelector(".form_submit_btn");
+        const originalText = submitBtn.textContent;
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Sending...";
+
+        try {
+            // Send to RPC endpoint
+            const result = await rpc("/shipping/contact/submit", {
+                name: data.name,
+                company: data.company,
+                email: data.email,
+                phone: data.phone,
+                subject: data.subject,
+                message: data.message,
+            });
+
+            if (result.status === "success") {
+                this._showSuccessMessage();
+                this.form.reset();
+            } else {
+                this._showErrorMessage("Failed to send inquiry. Please try again.");
+            }
+        } catch (error) {
+            console.error("Form submission error:", error);
+            this._showErrorMessage("An error occurred. Please try again later.");
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalText;
+        }
+    },
+
+    /**
+     * Validate form fields
+     */
+    _validateForm() {
+        const form = this.form;
+        const fields = form.querySelectorAll("[required]");
+        let isValid = true;
+
+        fields.forEach(field => {
+            if (!field.value.trim()) {
+                this._showFieldError(field, `${field.previousElementSibling.textContent} is required`);
+                isValid = false;
+            } else if (field.type === "email" && !this._isValidEmail(field.value)) {
+                this._showFieldError(field, "Please enter a valid email address");
+                isValid = false;
+            } else if (field.type === "tel" && !this._isValidPhone(field.value)) {
+                this._showFieldError(field, "Please enter a valid phone number");
+                isValid = false;
+            } else {
+                this._clearFieldError(field);
+            }
+        });
+
+        const privacyCheckbox = form.querySelector("#contact_privacy");
+        if (!privacyCheckbox.checked) {
+            this._showFieldError(privacyCheckbox, "You must agree to the privacy policy");
+            isValid = false;
+        }
+
+        return isValid;
+    },
+
+    /**
+     * Show field error message
+     */
+    _showFieldError(field, message) {
+        this._clearFieldError(field);
+        
+        const errorDiv = document.createElement("div");
+        errorDiv.className = "form_error";
+        errorDiv.textContent = message;
+        errorDiv.style.cssText = `
+            color: #e74c3c;
+            font-size: 0.85rem;
+            margin-top: 0.4rem;
+            display: block;
+        `;
+
+        field.parentNode.insertBefore(errorDiv, field.nextSibling);
+        field.style.borderColor = "#e74c3c";
+        field.style.boxShadow = "0 0 0 3px rgba(231, 76, 60, 0.1)";
+    },
+
+    /**
+     * Clear field error message
+     */
+    _clearFieldError(field) {
+        const errorDiv = field.parentNode.querySelector(".form_error");
+        if (errorDiv) {
+            errorDiv.remove();
+        }
+        field.style.borderColor = "";
+        field.style.boxShadow = "";
+    },
+
+    /**
+     * Validate email format
+     */
+    _isValidEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    },
+
+    /**
+     * Validate phone format (basic)
+     */
+    _isValidPhone(phone) {
+        const phoneRegex = /^[+\d\s\-()]+$/;
+        return phoneRegex.test(phone) && phone.replace(/\D/g, "").length >= 7;
+    },
+
+    /**
+     * Show success message
+     */
+    _showSuccessMessage() {
+        const toast = document.createElement("div");
+        toast.className = "shipping_toast shipping_toast_success";
+        toast.innerHTML = `
+            <div class="toast_icon">✓</div>
+            <div class="toast_content">
+                <div class="toast_title">Inquiry Sent Successfully!</div>
+                <div class="toast_message">We'll get back to you within 24-48 hours.</div>
+            </div>
+        `;
+        toast.style.cssText = `
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            max-width: 400px;
+            z-index: 9999;
+            animation: slideUpToast 0.4s ease-out;
+        `;
+
+        document.body.appendChild(toast);
+
+        setTimeout(() => {
+            toast.style.animation = "slideDownToast 0.4s ease-out forwards";
+            setTimeout(() => toast.remove(), 400);
+        }, 5000);
+    },
+
+    /**
+     * Show error message
+     */
+    _showErrorMessage(message) {
+        const toast = document.createElement("div");
+        toast.className = "shipping_toast shipping_toast_error";
+        toast.innerHTML = `
+            <div class="toast_icon">!</div>
+            <div class="toast_content">
+                <div class="toast_title">Error</div>
+                <div class="toast_message">${message}</div>
+            </div>
+        `;
+        toast.style.cssText = `
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            max-width: 400px;
+            z-index: 9999;
+            animation: slideUpToast 0.4s ease-out;
+        `;
+
+        document.body.appendChild(toast);
+
+        setTimeout(() => {
+            toast.style.animation = "slideDownToast 0.4s ease-out forwards";
+            setTimeout(() => toast.remove(), 400);
+        }, 5000);
+    },
+
+    /**
+     * Handle chat channel clicks
+     */
+    _onChatClick(ev) {
+        const btn = ev.currentTarget;
+        
+        // Add click animation
+        btn.style.transform = "scale(0.98)";
+        setTimeout(() => {
+            btn.style.transform = "";
+        }, 100);
+
+        // Handle WeChat specially (show QR code or message)
+        if (btn.classList.contains("wechat")) {
+            const wechatId = btn.dataset.wechatId;
+            this._showWeChatInfo(wechatId);
+            ev.preventDefault();
+        }
+    },
+
+    /**
+     * Show WeChat information
+     */
+    _showWeChatInfo(wechatId) {
+        const modal = document.createElement("div");
+        modal.className = "shipping_wechat_modal";
+        modal.innerHTML = `
+            <div class="modal_overlay"></div>
+            <div class="modal_content">
+                <button class="modal_close">&times;</button>
+                <h3>Connect on WeChat</h3>
+                <p>Scan the QR code below or search for our WeChat ID:</p>
+                <div class="wechat_id_box">${wechatId}</div>
+                <p style="font-size: 0.85rem; color: #666; margin-top: 1rem;">
+                    WeChat is primarily used for coordination with our industrial clients and our China office.
+                </p>
+            </div>
+        `;
+
+        modal.style.cssText = `
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            animation: fadeIn 0.3s ease-out;
+        `;
+
+        const overlay = modal.querySelector(".modal_overlay");
+        overlay.style.cssText = `
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+        `;
+
+        const content = modal.querySelector(".modal_content");
+        content.style.cssText = `
+            position: relative;
+            background: white;
+            border-radius: 12px;
+            padding: 2.5rem;
+            max-width: 400px;
+            width: 90%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            z-index: 2;
+            text-align: center;
+            animation: slideUp 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+        `;
+
+        const closeBtn = modal.querySelector(".modal_close");
+        closeBtn.style.cssText = `
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #999;
+            padding: 0;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: color 0.2s ease;
+        `;
+
+        closeBtn.onmouseover = () => closeBtn.style.color = "#1a1a1a";
+        closeBtn.onmouseout = () => closeBtn.style.color = "#999";
+
+        const wechatIdBox = modal.querySelector(".wechat_id_box");
+        wechatIdBox.style.cssText = `
+            background: linear-gradient(135deg, #09B83E 0%, #08A030 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 1.5rem 0;
+            font-family: monospace;
+        `;
+
+        closeBtn.onclick = () => modal.remove();
+        overlay.onclick = () => modal.remove();
+
+        document.body.appendChild(modal);
+    },
+
+    /**
+     * Handle form field focus
+     */
+    _onFormFieldFocus(ev) {
+        const field = ev.currentTarget;
+        field.style.background = "#fffbf5";
+    },
+
+    /**
+     * Handle form field blur
+     */
+    _onFormFieldBlur(ev) {
+        const field = ev.currentTarget;
+        if (!field.value.trim()) {
+            field.style.background = "#fff";
+        }
+    }
+});
+
+// Add global toast animations
+const styleSheet = document.createElement("style");
+styleSheet.textContent = `
+    @keyframes slideUpToast {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes slideDownToast {
+        from {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        to {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    @media (max-width: 575px) {
+        .shipping_toast {
+            bottom: 1rem !important;
+            right: 1rem !important;
+            left: 1rem !important;
+            max-width: none !important;
+        }
+    }
+`;
+document.head.appendChild(styleSheet);

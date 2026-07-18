@@ -1195,6 +1195,829 @@
     margin: 0;
 }
 
+/* ============================================================
+   ENHANCED ANIMATIONS & EFFECTS FOR SHIPPING NETWORK MAP
+   ============================================================ */
+
+/* 1. FLOWING LINE ANIMATION (Animated Dashes) */
+@keyframes flowDash {
+    0% {
+        stroke-dashoffset: 0;
+    }
+    100% {
+        stroke-dashoffset: -10px;
+    }
+}
+
+.am5map-line {
+    animation: flowDash 20s linear infinite;
+}
+
+/* 2. GLOW EFFECTS FOR POINTS */
+@keyframes pointGlow {
+    0%, 100% {
+        filter: drop-shadow(0 0 0 rgba(212, 175, 55, 0.5));
+    }
+    50% {
+        filter: drop-shadow(0 0 12px rgba(212, 175, 55, 0.8));
+    }
+}
+
+.am5-circle {
+    animation: pointGlow 2s ease-in-out infinite;
+}
+
+/* 3. MAP FADE-IN EFFECT */
+@keyframes mapFadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.98);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.am5-root {
+    animation: mapFadeIn 0.8s ease-out;
+}
+
+/* 4. POLYGON HOVER EFFECT */
+@keyframes polygonHighlight {
+    0% {
+        filter: brightness(1);
+    }
+    100% {
+        filter: brightness(1.1);
+    }
+}
+
+.am5map-polygon:hover {
+    animation: polygonHighlight 0.3s ease-out forwards;
+}
+
+/* 5. PULSE EFFECT FOR ORIGIN POINT */
+@keyframes originPulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Apply to center point (origin) */
+.shipping_origin-point {
+    animation: originPulse 1.5s ease-in-out infinite;
+}
+
+/* 6. DESTINATION ROTATION EFFECT */
+@keyframes destinationRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.shipping_destination-point {
+    animation: destinationRotate 8s linear infinite;
+}
+
+/* 7. SOFT APPEARANCE WITH STAGGER */
+@keyframes staggerAppear {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.shipping_info_card:nth-child(1) {
+    animation: staggerAppear 0.6s ease-out 0.1s backwards;
+}
+
+.shipping_info_card:nth-child(2) {
+    animation: staggerAppear 0.6s ease-out 0.2s backwards;
+}
+
+.shipping_info_card:nth-child(3) {
+    animation: staggerAppear 0.6s ease-out 0.3s backwards;
+}
+
+/* 8. SMOOTH SCROLL REVEAL */
+@keyframes revealOnScroll {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.shipping_map_wrapper {
+    animation: revealOnScroll 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) 0.2s backwards;
+}
+
+/* 9. BREATHING EFFECT FOR MAP CONTAINER */
+@keyframes breathe {
+    0%, 100% {
+        box-shadow: 
+            0 20px 60px -12px rgba(18, 23, 42, 0.15),
+            0 0 1px rgba(18, 23, 42, 0.1);
+    }
+    50% {
+        box-shadow: 
+            0 20px 60px -12px rgba(18, 23, 42, 0.25),
+            0 0 20px rgba(212, 175, 55, 0.2);
+    }
+}
+
+.shipping_map_wrapper {
+    animation: breathe 4s ease-in-out infinite;
+}
+
+/* 10. FLOATING EFFECT */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+.shipping_network_header h2 {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* 11. SHIMMER EFFECT ON BORDER */
+@keyframes shimmer {
+    0% {
+        border-color: rgba(212, 175, 55, 0.1);
+    }
+    50% {
+        border-color: rgba(212, 175, 55, 0.3);
+    }
+    100% {
+        border-color: rgba(212, 175, 55, 0.1);
+    }
+}
+
+.shipping_map_wrapper {
+    animation: shimmer 3s ease-in-out infinite;
+}
+
+/* 12. LABEL FADE & SCALE */
+@keyframes labelScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.am5-tooltip {
+    animation: labelScale 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+/* 13. SMOOTH INFO VALUE TRANSITION */
+.shipping_info_value {
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.shipping_info_card:hover .shipping_info_value {
+    color: #ffd700;
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+    transform: scale(1.1);
+}
+
+/* 14. ENHANCED RESPONSIVE ANIMATIONS */
+@media (max-width: 768px) {
+    /* Reduce animation intensity on mobile */
+    .am5-circle {
+        animation: none;
+    }
+    
+    .am5map-line {
+        animation: none;
+    }
+    
+    .s_shipping_network::before,
+    .s_shipping_network::after {
+        animation: none;
+    }
+}
+
+/* 15. DARK MODE SUPPORT */
+@media (prefers-color-scheme: dark) {
+    .s_shipping_network {
+        background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    }
+    
+    .shipping_map_wrapper {
+        background: #222;
+        box-shadow: 
+            0 20px 60px -12px rgba(0, 0, 0, 0.5),
+            0 0 1px rgba(255, 255, 255, 0.1);
+    }
+
+    #shipping_routes_map {
+        background-color: #222 !important;
+    }
+
+    .shipping_network_header h2 {
+        color: #f5f5f5;
+    }
+
+    .shipping_network_header p {
+        color: #aaa;
+    }
+}
+
+  /* ============================================================
+                   SHIPPING FOOTER CONTACT - COMPLETE STYLING
+                   ============================================================ */
+
+                /* Base Section Styling */
+                .s_shipping_footer_contact_final {
+                    background: linear-gradient(135deg, #f8f9fa 0%, #f0f2f5 100%);
+                    position: relative;
+                    overflow: hidden;
+                }
+
+                /* Animated Background Decoration */
+                .s_shipping_footer_contact_final::before {
+                    content: '';
+                    position: absolute;
+                    top: -50%;
+                    right: -10%;
+                    width: 600px;
+                    height: 600px;
+                    background: radial-gradient(circle, rgba(212, 175, 55, 0.06) 0%, transparent 70%);
+                    border-radius: 50%;
+                    animation: float-footer-bg 25s ease-in-out infinite;
+                    pointer-events: none;
+                    z-index: 0;
+                }
+
+                @keyframes float-footer-bg {
+                    0%, 100% { transform: translateY(0px) translateX(0px); }
+                    50% { transform: translateY(-40px) translateX(-20px); }
+                }
+
+                /* Typography & Spacing Defaults */
+                .s_shipping_footer_contact_final * {
+                    box-sizing: border-box;
+                }
+
+                .s_shipping_footer_contact_final a {
+                    transition: all 0.3s ease;
+                }
+
+                /* ===== SECTION HEADERS ===== */
+                .shipping_footer_title {
+                    position: relative;
+                    z-index: 1;
+                    text-align: center;
+                    margin-bottom: 3rem;
+                    animation: fadeInDown 0.8s ease-out;
+                }
+
+                .shipping_footer_title h2 {
+                    font-size: 2.2rem;
+                    font-weight: 700;
+                    color: #1a1a1a;
+                    margin: 0 0 1rem;
+                    letter-spacing: -0.5px;
+                    line-height: 1.2;
+                }
+
+                .shipping_footer_title p {
+                    font-size: 1.05rem;
+                    color: #666;
+                    max-width: 650px;
+                    margin: 0 auto;
+                    line-height: 1.6;
+                }
+
+                /* ===== CONSULTATION CTA CARD ===== */
+                .shipping_consultation_cta_block {
+                    position: relative;
+                    z-index: 1;
+                    margin-bottom: 3rem;
+                }
+
+                .consultation_card {
+                    background: rgba(255, 255, 255, 0.9);
+                    border: 2px solid rgba(212, 175, 55, 0.2);
+                    border-radius: 16px;
+                    padding: 3rem 2.5rem;
+                    text-align: center;
+                    backdrop-filter: blur(10px);
+                    transition: all 0.3s ease;
+                    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+                }
+
+                .consultation_card:hover {
+                    border-color: rgba(212, 175, 55, 0.5);
+                    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.15);
+                    transform: translateY(-4px);
+                }
+
+                .consultation_icon {
+                    width: 80px;
+                    height: 80px;
+                    background: linear-gradient(135deg, #D4AF37 0%, #ffd700 100%);
+                    border-radius: 12px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: white;
+                    margin: 0 auto 1.5rem;
+                    font-size: 2rem;
+                    animation: float 3s ease-in-out infinite;
+                }
+
+                @keyframes float {
+                    0%, 100% { transform: translateY(0px); }
+                    50% { transform: translateY(-8px); }
+                }
+
+                .consultation_card h3 {
+                    font-size: 1.6rem;
+                    font-weight: 700;
+                    color: #1a1a1a;
+                    margin-bottom: 0.8rem;
+                }
+
+                .consultation_card > p {
+                    font-size: 1rem;
+                    color: #666;
+                    line-height: 1.6;
+                    margin: 0 0 2rem;
+                }
+
+                .consultation_actions {
+                    display: flex;
+                    gap: 1rem;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                }
+
+                /* ===== OFFICE LOCATIONS ===== */
+                .shipping_offices_section {
+                    position: relative;
+                    z-index: 1;
+                    margin-top: 3rem;
+                    padding-top: 3rem;
+                    border-top: 2px solid rgba(212, 175, 55, 0.1);
+                }
+
+                .section_header {
+                    text-align: center;
+                    margin-bottom: 2.5rem;
+                }
+
+                .section_header h3 {
+                    font-size: 1.8rem;
+                    font-weight: 700;
+                    color: #1a1a1a;
+                    margin-bottom: 0.5rem;
+                }
+
+                .section_header > p {
+                    font-size: 0.95rem;
+                    color: #666;
+                    margin: 0;
+                }
+
+                .shipping_offices_grid {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 2rem;
+                    animation: slideUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) 0.2s backwards;
+                }
+
+                .shipping_office_card {
+                    background: white;
+                    border: 1px solid #e8e8e8;
+                    border-radius: 12px;
+                    padding: 2.5rem;
+                    position: relative;
+                    transition: all 0.3s ease;
+                    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+                }
+
+                .shipping_office_card:hover {
+                    transform: translateY(-6px);
+                    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.15);
+                    border-color: rgba(212, 175, 55, 0.3);
+                }
+
+                .office_badge {
+                    position: absolute;
+                    top: 1.5rem;
+                    right: 1.5rem;
+                }
+
+                .badge_text {
+                    display: inline-block;
+                    font-size: 0.7rem;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    letter-spacing: 0.05em;
+                    background: linear-gradient(135deg, #D4AF37 0%, #ffd700 100%);
+                    color: white;
+                    padding: 0.4rem 0.9rem;
+                    border-radius: 20px;
+                }
+
+                .office_title {
+                    font-size: 1.35rem;
+                    font-weight: 700;
+                    color: #1a1a1a;
+                    margin-bottom: 1.5rem;
+                    margin-top: 0;
+                    padding-top: 0;
+                }
+
+                .office_content {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1.2rem;
+                }
+
+                .office_info_item {
+                    border-bottom: 1px solid #f0f0f0;
+                    padding-bottom: 1rem;
+                    text-align: left;
+                }
+
+                .office_info_item:last-child {
+                    border-bottom: none;
+                    padding-bottom: 0;
+                }
+
+                .info_label {
+                    display: block;
+                    font-size: 0.8rem;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    letter-spacing: 0.05em;
+                    color: #999;
+                    margin-bottom: 0.4rem;
+                }
+
+                .info_value {
+                    font-size: 0.95rem;
+                    line-height: 1.6;
+                    color: #333;
+                    margin: 0;
+                }
+
+                .office_link {
+                    color: #D4AF37;
+                    text-decoration: none;
+                    font-weight: 600;
+                    transition: all 0.2s ease;
+                }
+
+                .office_link:hover {
+                    color: #ffd700;
+                    text-decoration: underline;
+                }
+
+                /* ===== EMAIL CHANNELS ===== */
+                .shipping_email_section {
+                    position: relative;
+                    z-index: 1;
+                    margin-top: 3rem;
+                    padding-top: 3rem;
+                    border-top: 2px solid rgba(212, 175, 55, 0.1);
+                }
+
+                .email_channels_grid {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 2rem;
+                    margin-top: 2rem;
+                }
+
+                .email_channel_card {
+                    background: white;
+                    border: 1px solid #e8e8e8;
+                    border-radius: 12px;
+                    padding: 2rem;
+                    text-align: center;
+                    transition: all 0.3s ease;
+                    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+                }
+
+                .email_channel_card:hover {
+                    transform: translateY(-4px);
+                    box-shadow: 0 12px 35px rgba(212, 175, 55, 0.2);
+                    border-color: #D4AF37;
+                }
+
+                .channel_icon {
+                    width: 60px;
+                    height: 60px;
+                    background: rgba(212, 175, 55, 0.1);
+                    border-radius: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #D4AF37;
+                    margin: 0 auto 1rem;
+                    transition: all 0.3s ease;
+                    font-size: 1.5rem;
+                }
+
+                .email_channel_card:hover .channel_icon {
+                    background: #D4AF37;
+                    color: white;
+                    transform: scale(1.1);
+                }
+
+                .email_channel_card h4 {
+                    font-size: 1.1rem;
+                    font-weight: 700;
+                    color: #1a1a1a;
+                    margin-bottom: 0.8rem;
+                }
+
+                .channel_email {
+                    display: block;
+                    font-size: 0.9rem;
+                    color: #D4AF37;
+                    text-decoration: none;
+                    font-weight: 600;
+                    transition: all 0.2s ease;
+                    word-break: break-all;
+                }
+
+                .channel_email:hover {
+                    color: #1a1a1a;
+                    text-decoration: underline;
+                }
+
+                /* ===== CHAT CHANNELS ===== */
+                .shipping_chat_section {
+                    position: relative;
+                    z-index: 1;
+                    margin-top: 3rem;
+                    margin-bottom: 3rem;
+                    padding-top: 3rem;
+                    border-top: 2px solid rgba(212, 175, 55, 0.1);
+                }
+
+                .chat_channels_group {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 2rem;
+                    margin-top: 2rem;
+                }
+
+                .chat_channel_btn {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 1rem;
+                    padding: 2.5rem 2rem;
+                    background: white;
+                    border: 2px solid #e8e8e8;
+                    border-radius: 12px;
+                    text-decoration: none;
+                    color: #333;
+                    transition: all 0.3s ease;
+                    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+                }
+
+                .chat_channel_btn:hover {
+                    transform: translateY(-8px);
+                    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.2);
+                    border-color: #D4AF37;
+                }
+
+                .chat_channel_btn.whatsapp:hover {
+                    border-color: #25D366;
+                }
+
+                .chat_channel_btn.wechat:hover {
+                    border-color: #09B83E;
+                }
+
+                .channel_icon_large {
+                    width: 80px;
+                    height: 80px;
+                    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(212, 175, 55, 0.05));
+                    border-radius: 12px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #D4AF37;
+                    transition: all 0.3s ease;
+                    font-size: 2rem;
+                }
+
+                .chat_channel_btn.whatsapp .channel_icon_large {
+                    color: #25D366;
+                    background: rgba(37, 211, 102, 0.1);
+                }
+
+                .chat_channel_btn.wechat .channel_icon_large {
+                    color: #09B83E;
+                    background: rgba(9, 184, 62, 0.1);
+                }
+
+                .chat_channel_btn:hover .channel_icon_large {
+                    transform: scale(1.1);
+                    background: rgba(212, 175, 55, 0.15);
+                }
+
+                .chat_channel_btn.whatsapp:hover .channel_icon_large {
+                    background: rgba(37, 211, 102, 0.15);
+                }
+
+                .chat_channel_btn.wechat:hover .channel_icon_large {
+                    background: rgba(9, 184, 62, 0.15);
+                }
+
+                .chat_channel_btn span {
+                    font-size: 1.15rem;
+                    font-weight: 700;
+                    color: #1a1a1a;
+                }
+
+                .chat_channel_btn small {
+                    font-size: 0.85rem;
+                    color: #666;
+                    text-align: center;
+                    line-height: 1.4;
+                }
+
+                /* ===== BUTTONS ===== */
+                .shipping_btn_primary {
+                    background: var(--shipping-navy-900, #121729);
+                    color: white !important;
+                    border: 1px solid var(--shipping-navy-900, #121729);
+                    border-radius: 50px;
+                    padding: 0.85rem 1.8rem;
+                    font-weight: 600;
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    transition: all 0.3s ease;
+                    text-decoration: none !important;
+                    cursor: pointer;
+                    font-size: 0.95rem;
+                }
+
+                .shipping_btn_primary:hover {
+                    background: #0a0f1a;
+                    transform: translateY(-2px);
+                    box-shadow: 0 8px 20px rgba(18, 23, 42, 0.2);
+                }
+
+                .shipping_btn_ghost {
+                    background: transparent;
+                    color: white !important;
+                    border: 2px solid white;
+                    border-radius: 50px;
+                    padding: 0.75rem 1.6rem;
+                    font-weight: 600;
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    transition: all 0.3s ease;
+                    text-decoration: none !important;
+                    cursor: pointer;
+                    font-size: 0.95rem;
+                }
+
+                .shipping_btn_ghost:hover {
+                    background: rgba(255, 255, 255, 0.1);
+                    transform: translateY(-2px);
+                }
+
+                /* ===== ANIMATIONS ===== */
+                @keyframes slideUp {
+                    from { opacity: 0; transform: translateY(40px); }
+                    to { opacity: 1; transform: translateY(0); }
+                }
+
+                @keyframes fadeInDown {
+                    from { opacity: 0; transform: translateY(-20px); }
+                    to { opacity: 1; transform: translateY(0); }
+                }
+
+                @keyframes slideUpToast {
+                    from { opacity: 0; transform: translateY(20px); }
+                    to { opacity: 1; transform: translateY(0); }
+                }
+
+                @keyframes slideDownToast {
+                    from { opacity: 1; transform: translateY(0); }
+                    to { opacity: 0; transform: translateY(20px); }
+                }
+
+                /* ===== RESPONSIVE ===== */
+                @media (max-width: 991px) {
+                    .shipping_offices_grid,
+                    .chat_channels_group {
+                        grid-template-columns: 1fr;
+                    }
+
+                    .email_channels_grid {
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+
+                    .shipping_footer_title h2 {
+                        font-size: 1.8rem;
+                    }
+
+                    .consultation_actions {
+                        flex-direction: column;
+                    }
+
+                    .consultation_actions .shipping_btn_primary,
+                    .consultation_actions .shipping_btn_ghost {
+                        width: 100%;
+                        justify-content: center;
+                    }
+                }
+
+                @media (max-width: 767px) {
+                    .s_shipping_footer_contact_final {
+                        padding-top: 2rem !important;
+                        padding-bottom: 2rem !important;
+                    }
+
+                    .shipping_offices_grid,
+                    .email_channels_grid,
+                    .chat_channels_group {
+                        grid-template-columns: 1fr;
+                    }
+
+                    .shipping_office_card,
+                    .email_channel_card,
+                    .chat_channel_btn,
+                    .consultation_card {
+                        padding: 1.5rem;
+                    }
+
+                    .shipping_footer_title h2 {
+                        font-size: 1.5rem;
+                    }
+
+                    .section_header h3 {
+                        font-size: 1.4rem;
+                    }
+
+                    .consultation_actions {
+                        width: 100%;
+                    }
+
+                    .channel_icon_large {
+                        width: 60px;
+                        height: 60px;
+                        font-size: 1.5rem;
+                    }
+                }
+
+                @media (max-width: 480px) {
+                    .shipping_office_card,
+                    .email_channel_card {
+                        padding: 1.2rem;
+                    }
+
+                    .office_title,
+                    .email_channel_card h4 {
+                        font-size: 1rem;
+                    }
+
+                    .info_value,
+                    .channel_email {
+                        font-size: 0.85rem;
+                    }
+                }
 // ===== Responsive =====
 @media (max-width: 991px) {
     .shipping_why_grid { grid-template-columns: repeat(2, 1fr); }

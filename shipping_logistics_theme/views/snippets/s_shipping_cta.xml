@@ -1,14 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <template id="s_shipping_cta" name="Shipping CTA">
-        <section id="contact" class="s_shipping_cta pt96 pb96" data-snippet="s_shipping_cta" data-name="Shipping CTA">
+    <template id="s_shipping_footer_contact" name="Shipping Footer Contact - Styled">
+        <!-- Full Footer Section with All Styling Included -->
+        <section class="s_shipping_footer_contact_final pt80 pb60">
             <div class="container">
-                <div class="shipping_cta_card">
-                    <h2>Are you looking to discuss your next import order?</h2>
-                    <p>We are happy to receive your inquiries and help you study the feasibility of importing your goods from China. Our team is ready to provide appropriate advice.</p>
-                    <div class="shipping_cta_actions">
-                        <a href="#" class="btn shipping_btn_primary">Request a Free Consultation Now</a>
-                        <a href="#" class="btn shipping_btn_ghost">Contact Us Directly</a>
+                <!-- Header -->
+                <div class="shipping_footer_title">
+                    <h2>Ready to Expand Your Business?</h2>
+                    <p>Get in touch with our team for personalized consulting on your import needs</p>
+                </div>
+
+                <!-- Consultation CTA -->
+                <div class="shipping_consultation_cta_block">
+                    <div class="consultation_card">
+                        <div class="consultation_icon">💬</div>
+                        <h3>Looking for a Consultation?</h3>
+                        <p>If you're preparing a commercial deal or want to verify a specific Chinese factory, we're here to help with our field expertise and logistics knowledge.</p>
+                        <div class="consultation_actions">
+                            <a href="#contact_form" class="shipping_btn_primary">Discuss Your Request</a>
+                            <a href="#contact_form" class="shipping_btn_ghost"  style="color:#000 !important;">Submit Import Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Office Locations Section -->
+                <div class="shipping_offices_section">
+                    <div class="section_header">
+                        <h3>Our Offices &amp; Contact Info</h3>
+                        <p>Reach out to us through our regional and sourcing offices</p>
+                    </div>
+
+                    <div class="shipping_offices_grid">
+                        <!-- Regional Office -->
+                        <div class="shipping_office_card">
+                            <div class="office_badge">
+                                <span class="badge_text">Regional Hub</span>
+                            </div>
+                            <h4 class="office_title">🌍 Regional Office - Middle East</h4>
+                            <div class="office_content">
+                                <div class="office_info_item">
+                                    <span class="info_label">Address</span>
+                                    <p class="info_value">[Building Name], [Street Name], Muscat, Oman</p>
+                                </div>
+                                <div class="office_info_item">
+                                    <span class="info_label">Business Hours</span>
+                                    <p class="info_value">Sunday - Thursday | 8:30 AM - 4:30 PM (Local Time)</p>
+                                </div>
+                                <div class="office_info_item">
+                                    <span class="info_label">Phone / WhatsApp</span>
+                                    <p class="info_value"><a href="tel:+968XXXXXXXX" class="office_link">+968 XXXXXXXX</a></p>
+                                </div>
+                                <div class="office_info_item">
+                                    <span class="info_label">Email</span>
+                                    <p class="info_value"><a href="mailto:info@yourdomain.com" class="office_link">info@yourdomain.com</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- China Office -->
+                        <div class="shipping_office_card">
+                            <div class="office_badge">
+                                <span class="badge_text">Sourcing Hub</span>
+                            </div>
+                            <h4 class="office_title">🏭 Procurement &amp; Coordination Office - China</h4>
+                            <div class="office_content">
+                                <div class="office_info_item">
+                                    <span class="info_label">Address</span>
+                                    <p class="info_value">Unit [#], Tianhe District, Guangzhou, China</p>
+                                </div>
+                                <div class="office_info_item">
+                                    <span class="info_label">Business Hours</span>
+                                    <p class="info_value">Monday - Friday | 9:00 AM - 6:00 PM (Beijing Time)</p>
+                                </div>
+                                <div class="office_info_item">
+                                    <span class="info_label">Specialization</span>
+                                    <p class="info_value">Factory Verification • Quality Inspection • Container Coordination</p>
+                                </div>
+                                <div class="office_info_item">
+                                    <span class="info_label">WeChat ID</span>
+                                    <p class="info_value"><span class="office_link">[WeChat_ID_Or_QR]</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Email Channels Section -->
+                <div class="shipping_email_section">
+                    <div class="section_header">
+                        <h3>📧 Specialized Email Channels</h3>
+                        <p>Route your inquiry directly to the right department</p>
+                    </div>
+
+                    <div class="email_channels_grid">
+                        <div class="email_channel_card">
+                            <div class="channel_icon">✉️</div>
+                            <h4>Sales &amp; Import</h4>
+                            <a href="mailto:sales@yourdomain.com" class="channel_email">sales@yourdomain.com</a>
+                        </div>
+
+                        <div class="email_channel_card">
+                            <div class="channel_icon">✓</div>
+                            <h4>Logistics &amp; Clearance</h4>
+                            <a href="mailto:logistics@yourdomain.com" class="channel_email">logistics@yourdomain.com</a>
+                        </div>
+
+                        <div class="email_channel_card">
+                            <div class="channel_icon">👤</div>
+                            <h4>Sourcing &amp; Suppliers</h4>
+                            <a href="mailto:sourcing@yourdomain.com" class="channel_email">sourcing@yourdomain.com</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chat Channels Section -->
+                <div class="shipping_chat_section">
+                    <div class="section_header">
+                        <h3>💬 Direct Chat Channels</h3>
+                        <p>For urgent inquiries, reach out to us instantly</p>
+                    </div>
+
+                    <div class="chat_channels_group">
+                        <a href="https://wa.me/968XXXXXXXX" class="chat_channel_btn whatsapp" target="_blank" rel="noopener">
+                            <div class="channel_icon_large">📱</div>
+                            <span>WhatsApp Business</span>
+                            <small>Quick consultations &amp; order tracking</small>
+                        </a>
+
+                        <a href="#" class="chat_channel_btn wechat" onclick="return false;">
+                            <div class="channel_icon_large">💬</div>
+                            <span>WeChat (微信)</span>
+                            <small>For industrial sector &amp; China coordination</small>
+                        </a>
                     </div>
                 </div>
             </div>
