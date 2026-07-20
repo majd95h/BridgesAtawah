@@ -862,6 +862,486 @@ publicWidget.registry.ShippingFooterContact = publicWidget.Widget.extend({
         }
     }
 });
+publicWidget.registry.ShippingServicesDetailTabs = publicWidget.Widget.extend({
+    selector: ".s_shipping_services_detail",
+    events: {
+        "click .shipping_tab_btn": "_onTabClick",
+    },
+
+    start() {
+        this.tabs = this.el.querySelectorAll(".shipping_tab_btn");
+        this.panes = this.el.querySelectorAll(".shipping_tab_pane");
+        
+        // Set first tab as active by default
+        if (this.tabs.length > 0) {
+            this.tabs[0].classList.add("active");
+            const firstPane = this.el.querySelector(`.shipping_tab_pane[data-pane="0"]`);
+            if (firstPane) {
+                firstPane.classList.add("active");
+            }
+        }
+        
+        return this._super(...arguments);
+    },
+
+    _onTabClick(ev) {
+        const btn = ev.currentTarget;
+        const tabIndex = btn.dataset.tab;
+        
+        // Remove active from all tabs and panes
+        this.tabs.forEach(tab => tab.classList.remove("active"));
+        this.panes.forEach(pane => pane.classList.remove("active"));
+        
+        // Add active to clicked tab and corresponding pane
+        btn.classList.add("active");
+        const pane = this.el.querySelector(`.shipping_tab_pane[data-pane="${tabIndex}"]`);
+        if (pane) {
+            pane.classList.add("active");
+        }
+    },
+});
+
+/**
+ * ============================================================
+ * IMPORT REQUEST FORM WIDGET
+ * ============================================================
+ */
+publicWidget.registry.ShippingImportForm = publicWidget.Widget.extend({
+    selector: ".s_shipping_import_form",
+    events: {
+        "submit #shipping_import_form": "_onFormSubmit",
+        "focus .form_input, .form_select, .form_textarea": "_onFormFieldFocus",
+        "blur .form_input, .form_select, .form_textarea": "_onFormFieldBlur",
+        "change [name='category']": "_onCategoryChange",
+    },
+
+    start() {
+        this.form = this.el.querySelector("#shipping_import_form");
+        this._setupFormValidation();
+        return this._super(...arguments);
+    },
+
+    /**
+     * Setup form validation
+     */
+    _setupFormValidation() {
+        if (this.form) {
+            this.form.noValidate = true; // Use custom validation
+        }
+    },
+
+    /**
+     * Handle form submission
+     */
+    async _onFormSubmit(ev) {
+        ev.preventDefault();
+
+        if (!this._validateForm()) {
+            this._scrollToError();
+            return;
+        }
+
+        const formData = new FormData(this.form);
+        const data = Object.fromEntries(formData);
+
+        // Show loading state
+        const submitBtn = this.form.querySelector(".form_submit_btn");
+        const originalText = submitBtn.textContent;
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Submitting...";
+
+        try {
+            // Send to RPC endpoint
+            const result = await rpc("/shipping/import/submit", {
+                name: data.name,
+                company: data.company,
+                email: data.email,
+                phone: data.phone,
+                country: data.country,
+                category: data.category,
+                product_name: data.product_name,
+                specifications: data.specifications,
+                quantity: data.quantity,
+                budget: data.budget,
+                currency: data.currency,
+                custom_branding: data.custom_branding,
+                shipping_method: data.shipping_method,
+                customs_help: data.customs_help,
+                import_license: data.import_license,
+            });
+
+            if (result.status === "success") {
+                this._showSuccessMessage();
+                this.form.reset();
+                
+                // Scroll to success message
+                setTimeout(() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                }, 500);
+            } else {
+                this._showErrorMessage(result.message || "Failed to submit request. Please try again.");
+            }
+        } catch (error) {
+            console.error("Form submission error:", error);
+            this._showErrorMessage("An error occurred. Please try again later.");
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalText;
+        }
+    },
+
+    /**
+     * Validate all form fields
+     */
+    _validateForm() {
+        const form = this.form;
+        const fields = form.querySelectorAll("[required]");
+        let isValid = true;
+
+        fields.forEach(field => {
+            if (!field.value.trim()) {
+                const label = field.previousElementSibling?.textContent || field.name;
+                this._showFieldError(field, `${label} is required`);
+                isValid = false;
+            } else if (field.type === "email" && !this._isValidEmail(field.value)) {
+                this._showFieldError(field, "Please enter a valid email address");
+                isValid = false;
+            } else if (field.type === "tel" && !this._isValidPhone(field.value)) {
+                this._showFieldError(field, "Please enter a valid phone number");
+                isValid = false;
+            } else {
+                this._clearFieldError(field);
+            }
+        });
+
+        const privacyCheckbox = form.querySelector("[name='privacy_consent']");
+        if (privacyCheckbox && !privacyCheckbox.checked) {
+            this._showFieldError(privacyCheckbox, "You must agree to the privacy policy");
+            isValid = false;
+        }
+
+        return isValid;
+    },
+
+    /**
+     * Show field error
+     */
+    _showFieldError(field, message) {
+        this._clearFieldError(field);
+        
+        const errorDiv = document.createElement("div");
+        errorDiv.className = "form_error";
+        errorDiv.textContent = message;
+        errorDiv.style.cssText = `
+            color: #e74c3c;
+            font-size: 0.8rem;
+            margin-top: 0.3rem;
+            display: block;
+        `;
+
+        field.parentNode.appendChild(errorDiv);
+        field.style.borderColor = "#e74c3c";
+        field.style.boxShadow = "0 0 0 3px rgba(231, 76, 60, 0.1)";
+    },
+
+    /**
+     * Clear field error
+     */
+    _clearFieldError(field) {
+        const errorDiv = field.parentNode.querySelector(".form_error");
+        if (errorDiv) {
+            errorDiv.remove();
+        }
+        field.style.borderColor = "";
+        field.style.boxShadow = "";
+    },
+
+    /**
+     * Validate email format
+     */
+    _isValidEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    },
+
+    /**
+     * Validate phone format
+     */
+    _isValidPhone(phone) {
+        const phoneRegex = /^[+\d\s\-()]+$/;
+        return phoneRegex.test(phone) && phone.replace(/\D/g, "").length >= 7;
+    },
+
+    /**
+     * Show success message
+     */
+    _showSuccessMessage() {
+        const toast = document.createElement("div");
+        toast.className = "shipping_toast shipping_toast_success";
+        toast.innerHTML = `
+            <div class="toast_icon">✓</div>
+            <div class="toast_content">
+                <div class="toast_title">Request Submitted Successfully!</div>
+                <div class="toast_message">We'll review your request and contact you within 24-48 hours.</div>
+            </div>
+        `;
+        toast.style.cssText = `
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            max-width: 400px;
+            z-index: 9999;
+            animation: slideUpToast 0.4s ease-out;
+        `;
+
+        document.body.appendChild(toast);
+
+        setTimeout(() => {
+            toast.style.animation = "slideDownToast 0.4s ease-out forwards";
+            setTimeout(() => toast.remove(), 400);
+        }, 5000);
+    },
+
+    /**
+     * Show error message
+     */
+    _showErrorMessage(message) {
+        const toast = document.createElement("div");
+        toast.className = "shipping_toast shipping_toast_error";
+        toast.innerHTML = `
+            <div class="toast_icon">!</div>
+            <div class="toast_content">
+                <div class="toast_title">Error</div>
+                <div class="toast_message">${message}</div>
+            </div>
+        `;
+        toast.style.cssText = `
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            max-width: 400px;
+            z-index: 9999;
+            animation: slideUpToast 0.4s ease-out;
+        `;
+
+        document.body.appendChild(toast);
+
+        setTimeout(() => {
+            toast.style.animation = "slideDownToast 0.4s ease-out forwards";
+            setTimeout(() => toast.remove(), 400);
+        }, 5000);
+    },
+
+    /**
+     * Scroll to first error field
+     */
+    _scrollToError() {
+        const errorField = this.form.querySelector(".form_error")?.previousElementSibling;
+        if (errorField) {
+            errorField.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+    },
+
+    /**
+     * Handle form field focus
+     */
+    _onFormFieldFocus(ev) {
+        const field = ev.currentTarget;
+        field.style.background = "#fffbf5";
+    },
+
+    /**
+     * Handle form field blur
+     */
+    _onFormFieldBlur(ev) {
+        const field = ev.currentTarget;
+        if (!field.value.trim()) {
+            field.style.background = "white";
+        }
+    },
+
+    /**
+     * Handle category change
+     */
+    _onCategoryChange(ev) {
+        const category = ev.currentTarget.value;
+        const productNameField = this.form.querySelector("[name='product_name']");
+        
+        // Update placeholder based on category
+        const placeholders = {
+            machinery: "e.g., CNC Drilling Machine, 5-axis Processing Center, etc.",
+            construction: "e.g., Ceramic Tiles 60x60cm, Marble Slabs, Bathroom Fixtures, etc.",
+            furniture: "e.g., Office Desk, LED Ceiling Lights, Hotel Chair Set, etc.",
+            wholesale: "e.g., USB Cables (1000 units), T-Shirt Wholesale (500 pieces), etc.",
+            partial: "e.g., Combination of small orders from multiple suppliers",
+        };
+        
+        if (productNameField) {
+            productNameField.placeholder = placeholders[category] || "Enter product name...";
+        }
+    },
+});
+
+/**
+ * ============================================================
+ * BLOG NEWSLETTER SIGNUP
+ * ============================================================
+ */
+publicWidget.registry.ShippingBlogNewsletter = publicWidget.Widget.extend({
+    selector: ".s_shipping_blog_articles",
+    events: {
+        "submit .newsletter_form": "_onNewsletterSubmit",
+    },
+
+    async _onNewsletterSubmit(ev) {
+        ev.preventDefault();
+
+        const form = ev.currentTarget;
+        const email = form.querySelector("[type='email']").value;
+        const submitBtn = form.querySelector("[type='submit']");
+
+        if (!this._isValidEmail(email)) {
+            this._showErrorMessage("Please enter a valid email address");
+            return;
+        }
+
+        const originalText = submitBtn.textContent;
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Subscribing...";
+
+        try {
+            const result = await rpc("/shipping/newsletter/subscribe", {
+                email: email,
+            });
+
+            if (result.status === "success") {
+                this._showSuccessMessage("Successfully subscribed to our newsletter!");
+                form.reset();
+            } else {
+                this._showErrorMessage(result.message || "Subscription failed. Please try again.");
+            }
+        } catch (error) {
+            console.error("Newsletter subscription error:", error);
+            this._showErrorMessage("An error occurred. Please try again later.");
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalText;
+        }
+    },
+
+    _isValidEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    },
+
+    _showSuccessMessage(message) {
+        const toast = document.createElement("div");
+        toast.innerHTML = `
+            <div class="toast_icon">✓</div>
+            <div class="toast_content">
+                <div class="toast_message">${message}</div>
+            </div>
+        `;
+        toast.style.cssText = `
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            z-index: 9999;
+            animation: slideUpToast 0.4s ease-out;
+        `;
+
+        document.body.appendChild(toast);
+
+        setTimeout(() => {
+            toast.style.animation = "slideDownToast 0.4s ease-out forwards";
+            setTimeout(() => toast.remove(), 400);
+        }, 4000);
+    },
+
+    _showErrorMessage(message) {
+        const toast = document.createElement("div");
+        toast.innerHTML = `
+            <div class="toast_icon">!</div>
+            <div class="toast_content">
+                <div class="toast_message">${message}</div>
+            </div>
+        `;
+        toast.style.cssText = `
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            z-index: 9999;
+            animation: slideUpToast 0.4s ease-out;
+        `;
+
+        document.body.appendChild(toast);
+
+        setTimeout(() => {
+            toast.style.animation = "slideDownToast 0.4s ease-out forwards";
+            setTimeout(() => toast.remove(), 400);
+        }, 4000);
+    },
+});
+
+/**
+ * ============================================================
+ * SMOOTH SCROLL TO SECTION
+ * ============================================================
+ */
+publicWidget.registry.ShippingSmoothScroll = publicWidget.Widget.extend({
+    selector: "a[href*='#']",
+    events: {
+        "click": "_onLinkClick",
+    },
+
+    _onLinkClick(ev) {
+        const href = ev.currentTarget.getAttribute("href");
+        
+        // Only handle internal hash links
+        if (href && href.startsWith("#")) {
+            const targetId = href.substring(1);
+            const target = document.getElementById(targetId);
+            
+            if (target) {
+                ev.preventDefault();
+                target.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+        }
+    },
+});
+
 
 // Add global toast animations
 const styleSheet = document.createElement("style");

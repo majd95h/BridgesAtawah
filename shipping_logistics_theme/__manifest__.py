@@ -50,6 +50,7 @@ Shipping & Logistics Business Theme
         'views/snippets/s_shipping_cta.xml',
         'views/snippets_registry.xml',
         'views/website_page_templates.xml',
+        'views/missing_sections_complete.xml',
         'data/website_page_data.xml',
     ],
     'assets': {

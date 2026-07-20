@@ -1,0 +1,826 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ============================================================
+         1. ABOUT US SECTION (من نحن)
+         ============================================================ -->
+    <template id="s_shipping_about" name="Shipping About Us">
+        <section class="s_shipping_about" data-snippet="s_shipping_about" data-name="Shipping About Us">
+            <div class="container">
+                <!-- Section Header -->
+                <div class="shipping_section_head shipping_section_head_center">
+                    <h2>About <em>Our Company</em></h2>
+                    <p>Your trusted partner in international trade and logistics</p>
+                </div>
+
+                <!-- About Content Grid -->
+                <div class="shipping_about_grid">
+                    <!-- Left: Mission and Vision -->
+                    <div class="shipping_about_column">
+                        <div class="shipping_about_card">
+                            <span class="shipping_card_kicker">Our Story</span>
+                            <h3>We Bridge Continents</h3>
+                            <p>
+                                Established as an integrated entity providing commercial brokerage and supply chain services from China to the Middle East and North Africa. We address the market's need for a trusted partner representing commercial interests in China with professionalism.
+                            </p>
+                        </div>
+
+                        <div class="shipping_about_card shipping_about_card_secondary">
+                            <span class="shipping_card_kicker">Our Mission</span>
+                            <h4>Empowering Business Growth</h4>
+                            <p>
+                                To enable clients (individuals, companies, and industrial facilities) to achieve their business goals through flexible, reliable import solutions that reduce risks and minimize logistics costs.
+                            </p>
+                        </div>
+
+                        <div class="shipping_about_card shipping_about_card_secondary">
+                            <span class="shipping_card_kicker">Our Vision</span>
+                            <h4>Regional Leadership</h4>
+                            <p>
+                                To be the preferred partner for regional companies in facilitating trade and goods flow with Chinese markets through professional, transparent, and sustainable business relationships.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Right: Core Values -->
+                    <div class="shipping_about_column">
+                        <h3 class="shipping_values_title">Our Core Values</h3>
+                        
+                        <div class="shipping_values_list">
+                            <div class="shipping_value_item">
+                                <div class="value_icon" data-icon="0">💎</div>
+                                <h4>Integrity and Transparency</h4>
+                                <p>Complete clarity on costs, commissions, and real-time shipment status without hidden fees</p>
+                            </div>
+
+                            <div class="shipping_value_item">
+                                <div class="value_icon" data-icon="1">✓</div>
+                                <h4>Strict Quality Control</h4>
+                                <p>Rigorous field inspections and product testing before shipment to ensure compliance</p>
+                            </div>
+
+                            <div class="shipping_value_item">
+                                <div class="value_icon" data-icon="2">🌐</div>
+                                <h4>Flexibility and Inclusivity</h4>
+                                <p>Solutions tailored to serve large manufacturers, SMEs, and individual importers equally</p>
+                            </div>
+
+                            <div class="shipping_value_item">
+                                <div class="value_icon" data-icon="3">⚖️</div>
+                                <h4>Legal Responsibility</h4>
+                                <p>Thorough contract and customs document review ensuring regulatory compliance</p>
+                            </div>
+                        </div>
+
+                        <!-- Network Highlight -->
+                        <div class="shipping_network_highlight">
+                            <span class="shipping_card_kicker">Our Presence</span>
+                            <h4>Strong Ground Network in China</h4>
+                            <ul class="shipping_cities_list">
+                                <li>🏭 Guangzhou - Manufacturing Hub</li>
+                                <li>🏢 Shenzhen - Tech and Electronics</li>
+                                <li>🛍️ Yiwu - Trade and Commerce</li>
+                                <li>⚓ Ningbo - Port and Logistics</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats Section -->
+                <div class="shipping_about_stats">
+                    <div class="shipping_stat_card">
+                        <strong class="stat_number">500+</strong>
+                        <span>Satisfied Clients</span>
+                    </div>
+                    <div class="shipping_stat_card">
+                        <strong class="stat_number">24/7</strong>
+                        <span>Support Ready</span>
+                    </div>
+                    <div class="shipping_stat_card">
+                        <strong class="stat_number">100%</strong>
+                        <span>Transparency</span>
+                    </div>
+                    <div class="shipping_stat_card">
+                        <strong class="stat_number">15+</strong>
+                        <span>Years Experience</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <!-- ============================================================
+         2. SERVICES DETAILS SECTION (تفاصيل الخدمات)
+         ============================================================ -->
+    <template id="s_shipping_services_detail" name="Shipping Services Details">
+        <section class="s_shipping_services_detail" data-snippet="s_shipping_services_detail" data-name="Shipping Services Details">
+            <div class="container">
+                <!-- Section Header -->
+                <div class="shipping_section_head shipping_section_head_center">
+                    <h2>Our <em>Core Services</em></h2>
+                    <p>Comprehensive solutions designed to meet diverse import needs</p>
+                </div>
+
+                <!-- Tabs Navigation -->
+                <div class="shipping_services_tabs">
+                    <button class="shipping_tab_btn active" data-tab="0">
+                        <span class="tab_icon">🏭</span>
+                        <span class="tab_label">Industrial Machinery</span>
+                    </button>
+                    <button class="shipping_tab_btn" data-tab="1">
+                        <span class="tab_icon">🏗️</span>
+                        <span class="tab_label">Construction Materials</span>
+                    </button>
+                    <button class="shipping_tab_btn" data-tab="2">
+                        <span class="tab_icon">📦</span>
+                        <span class="tab_label">Wholesale and Trade</span>
+                    </button>
+                    <button class="shipping_tab_btn" data-tab="3">
+                        <span class="tab_icon">🚚</span>
+                        <span class="tab_label">Partial Shipping</span>
+                    </button>
+                    <button class="shipping_tab_btn" data-tab="4">
+                        <span class="tab_icon">🔗</span>
+                        <span class="tab_label">Logistics Support</span>
+                    </button>
+                </div>
+
+                <!-- Tab Content -->
+                <div class="shipping_services_content">
+                    <!-- Tab 1: Industrial Machinery -->
+                    <div class="shipping_tab_pane active" data-pane="0">
+                        <div class="service_detail_row">
+                            <div class="service_detail_col">
+                                <h3>Industrial Production Lines and Machinery</h3>
+                                <p>We support industrial and manufacturing facilities with integrated services to secure machinery and heavy equipment that meet technical requirements.</p>
+                                
+                                <div class="service_features">
+                                    <div class="feature_item">
+                                        <strong>Technical Research and Comparison</strong>
+                                        <p>Identify leading Chinese manufacturers and provide detailed technical comparisons</p>
+                                    </div>
+                                    <div class="feature_item">
+                                        <strong>Specification Matching</strong>
+                                        <p>Coordinate with your engineers to ensure equipment meets precise requirements</p>
+                                    </div>
+                                    <div class="feature_item">
+                                        <strong>Initial Performance Testing</strong>
+                                        <p>Conduct pre-shipment testing to verify mechanical and software functionality</p>
+                                    </div>
+                                    <div class="feature_item">
+                                        <strong>Spare Parts and Materials</strong>
+                                        <p>Facilitate ongoing sourcing of spare parts and raw materials for production continuity</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="service_detail_col">
+                                <div class="service_detail_image">
+                                    <img src="/shipping_logistics_theme/static/src/img/industrial.jpg" alt="Industrial Machinery" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab 2: Construction Materials -->
+                    <div class="shipping_tab_pane" data-pane="1">
+                        <div class="service_detail_row">
+                            <div class="service_detail_col">
+                                <h3>Construction and Decoration Sourcing</h3>
+                                <p>We provide comprehensive solutions for real estate developers, contractors, and project managers to equip and finish buildings of all sizes.</p>
+                                
+                                <div class="service_features">
+                                    <div class="feature_item">
+                                        <strong>Building Materials and Finishes</strong>
+                                        <p>Natural marble, ceramics, porcelain, plumbing fixtures, windows, and doors</p>
+                                    </div>
+                                    <div class="feature_item">
+                                        <strong>Custom Equipment and Furnishings</strong>
+                                        <p>Modern lighting solutions, kitchens, office furniture, and hotel fixtures</p>
+                                    </div>
+                                    <div class="feature_item">
+                                        <strong>Code Compliance Verification</strong>
+                                        <p>Ensure all materials meet local building codes and safety certifications</p>
+                                    </div>
+                                    <div class="feature_item">
+                                        <strong>Supply Chain Coordination</strong>
+                                        <p>Schedule material shipments to align with project construction phases</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="service_detail_col">
+                                <div class="service_detail_image">
+                                    <img src="/shipping_logistics_theme/static/src/img/construction.jpg" alt="Construction Materials" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab 3: Wholesale and Trade -->
+                    <div class="shipping_tab_pane" data-pane="2">
+                        <div class="service_detail_row">
+                            <div class="service_detail_col">
+                                <h3>Wholesale and Business Sourcing</h3>
+                                <p>We support traders, distributors, and companies in growing their business through streamlined commercial import processes.</p>
+                                
+                                <div class="service_features">
+                                    <div class="feature_item">
+                                        <strong>Direct Supplier Connection</strong>
+                                        <p>Connect directly with Chinese factories to access competitive prices</p>
+                                    </div>
+                                    <div class="feature_item">
+                                        <strong>Product Development (OEM/ODM)</strong>
+                                        <p>Coordinate with manufacturers for custom branding and packaging</p>
+                                    </div>
+                                    <div class="feature_item">
+                                        <strong>Production Monitoring</strong>
+                                        <p>Track manufacturing phases to ensure on-time delivery schedules</p>
+                                    </div>
+                                    <div class="feature_item">
+                                        <strong>License and Documentation Review</strong>
+                                        <p>Verify quality certificates and customs documentation requirements</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="service_detail_col">
+                                <div class="service_detail_image">
+                                    <img src="/shipping_logistics_theme/static/src/img/wholesale.jpg" alt="Wholesale Trade" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab 4: Partial Shipping -->
+                    <div class="shipping_tab_pane" data-pane="3">
+                        <div class="service_detail_row">
+                            <div class="service_detail_col">
+                                <h3>Partial Shipping and Consolidation</h3>
+                                <p>Designed specifically for SMEs, e-commerce startups, and individuals who don't require full container shipments.</p>
+                                
+                                <div class="service_features">
+                                    <div class="feature_item">
+                                        <strong>Goods Consolidation</strong>
+                                        <p>Combine purchases from multiple suppliers into one shared container</p>
+                                    </div>
+                                    <div class="feature_item">
+                                        <strong>Partial Shipping (LCL)</strong>
+                                        <p>Pay only for your shipment volume, not the entire container</p>
+                                    </div>
+                                    <div class="feature_item">
+                                        <strong>Re-packaging and Inspection</strong>
+                                        <p>Verify packaging quality and re-wrap items to prevent damage</p>
+                                    </div>
+                                    <div class="feature_item">
+                                        <strong>Business Consulting</strong>
+                                        <p>Help startups understand real import costs and feasibility</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="service_detail_col">
+                                <div class="service_detail_image">
+                                    <img src="/shipping_logistics_theme/static/src/img/shipping.jpg" alt="Partial Shipping" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab 5: Logistics Support -->
+                    <div class="shipping_tab_pane" data-pane="4">
+                        <div class="service_detail_row">
+                            <div class="service_detail_col">
+                                <h3>Supporting Logistics Services</h3>
+                                <p>To ensure your shipment arrives safely, we manage essential logistics aspects for peace of mind.</p>
+                                
+                                <div class="service_features">
+                                    <div class="feature_item">
+                                        <strong>Quality and Quantity Inspection</strong>
+                                        <p>Random or complete lot inspection before loading for specification compliance</p>
+                                    </div>
+                                    <div class="feature_item">
+                                        <strong>International Shipping Management</strong>
+                                        <p>Coordinate with major shipping lines for competitive rates</p>
+                                    </div>
+                                    <div class="feature_item">
+                                        <strong>Customs Clearance Facilitation</strong>
+                                        <p>Review all documents and certificates to ensure smooth port clearance</p>
+                                    </div>
+                                    <div class="feature_item">
+                                        <strong>End-to-End Tracking</strong>
+                                        <p>Real-time monitoring from factory to final delivery destination</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="service_detail_col">
+                                <div class="service_detail_image">
+                                    <img src="/shipping_logistics_theme/static/src/img/logistics.jpg" alt="Logistics Support" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA -->
+                <div class="shipping_services_detail_cta">
+                    <h3>Ready to Get Started?</h3>
+                    <p>Discuss your specific needs with our team</p>
+                    <a href="#contact" class="btn shipping_btn_primary">Start Your Import Request</a>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <!-- ============================================================
+         3. PROCESS and QUALITY ASSURANCE SECTION
+         ============================================================ -->
+    <template id="s_shipping_process_quality" name="Shipping Process and Quality">
+        <section class="s_shipping_process_quality" data-snippet="s_shipping_process_quality" data-name="Shipping Process and Quality">
+            <div class="container">
+                <!-- Section Header -->
+                <div class="shipping_section_head shipping_section_head_center">
+                    <h2>Our Process &amp; <em>Quality Assurance</em></h2>
+                    <p>Systematic, transparent procedures to minimize risk and ensure excellence</p>
+                </div>
+
+                <!-- Process Steps Section -->
+                <div class="shipping_process_section">
+                    <h3>Step-by-Step Process</h3>
+                    <div class="shipping_process_detailed">
+                        <!-- Step 1 -->
+                        <div class="process_step_detail">
+                            <div class="step_number">01</div>
+                            <h4>Requirements Analysis and Research</h4>
+                            <div class="step_content">
+                                <div class="sub_step">
+                                    <strong>Analyze Your Needs</strong>
+                                    <p>Review technical specifications, quantities, budget, and required certifications</p>
+                                </div>
+                                <div class="sub_step">
+                                    <strong>Search and Compare</strong>
+                                    <p>Connect with suitable manufacturers and present available options with detailed comparison</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div class="process_step_detail">
+                            <div class="step_number">02</div>
+                            <h4>Sample Approval and Contracting</h4>
+                            <div class="step_content">
+                                <div class="sub_step">
+                                    <strong>Request and Test Samples</strong>
+                                    <p>Ship sample units for your review and approval before bulk production</p>
+                                </div>
+                                <div class="sub_step">
+                                    <strong>Contract Preparation</strong>
+                                    <p>Review and finalize commercial contracts to protect your interests</p>
+                                </div>
+                                <div class="sub_step">
+                                    <strong>Initial Payment</strong>
+                                    <p>Transfer deposit to manufacturer to commence production</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div class="process_step_detail">
+                            <div class="step_number">03</div>
+                            <h4>Production Monitoring</h4>
+                            <div class="step_content">
+                                <div class="sub_step">
+                                    <strong>Timeline Management</strong>
+                                    <p>Maintain regular contact with production management for progress updates</p>
+                                </div>
+                                <div class="sub_step">
+                                    <strong>Periodic Reports</strong>
+                                    <p>Receive brief progress reports on manufacturing stages</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 4 -->
+                        <div class="process_step_detail">
+                            <div class="step_number">04</div>
+                            <h4>Quality Inspection (Critical)</h4>
+                            <div class="step_content">
+                                <div class="sub_step">
+                                    <strong>Pre-Shipment Inspection</strong>
+                                    <p>Our field inspectors visit the factory to conduct comprehensive quality checks</p>
+                                </div>
+                                <div class="sub_step">
+                                    <strong>Random and Full Lot Testing</strong>
+                                    <p>Sample inspection based on AQL standards or your specific requirements</p>
+                                </div>
+                                <div class="sub_step">
+                                    <strong>Photo/Video Report</strong>
+                                    <p>Detailed inspection report with photos and video evidence before final payment</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 5 -->
+                        <div class="process_step_detail">
+                            <div class="step_number">05</div>
+                            <h4>Shipping and Delivery</h4>
+                            <div class="step_content">
+                                <div class="sub_step">
+                                    <strong>Logistics Coordination</strong>
+                                    <p>Arrange ocean or air freight based on timeline and budget</p>
+                                </div>
+                                <div class="sub_step">
+                                    <strong>Customs Documentation</strong>
+                                    <p>Prepare all required certificates and customs documents</p>
+                                </div>
+                                <div class="sub_step">
+                                    <strong>Final Delivery</strong>
+                                    <p>Track shipment until arrival at your destination</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quality Assurance Standards -->
+                <div class="shipping_quality_section">
+                    <h3>Quality Assurance Standards</h3>
+                    <div class="shipping_qa_grid">
+                        <!-- QA Card 1 -->
+                        <div class="qa_card">
+                            <div class="qa_icon" data-qa="1">✓</div>
+                            <h4>Factory Verification (Audit)</h4>
+                            <p>Before any agreement, we verify:</p>
+                            <ul class="qa_list">
+                                <li>Valid government licenses and export permits</li>
+                                <li>Compliance with international technical standards</li>
+                                <li>Relevant certifications (ISO, CE, etc.)</li>
+                            </ul>
+                        </div>
+
+                        <!-- QA Card 2 -->
+                        <div class="qa_card">
+                            <div class="qa_icon" data-qa="2">🔍</div>
+                            <h4>Pre-Shipment Inspection</h4>
+                            <p>At 80%+ production completion:</p>
+                            <ul class="qa_list">
+                                <li>Random sample testing per AQL standards</li>
+                                <li>Visual and dimensional verification</li>
+                                <li>Performance testing for electrical/mechanical items</li>
+                                <li>Packaging quality inspection</li>
+                            </ul>
+                        </div>
+
+                        <!-- QA Card 3 -->
+                        <div class="qa_card">
+                            <div class="qa_icon" data-qa="3">📦</div>
+                            <h4>Loading Supervision</h4>
+                            <p>During container loading, we verify:</p>
+                            <ul class="qa_list">
+                                <li>Container integrity (no cracks or moisture)</li>
+                                <li>Proper arrangement inside container</li>
+                                <li>Official sealing with recorded seal numbers</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Commitment Statement -->
+                <div class="shipping_qa_commitment">
+                    <h3>Our Commitment to Transparency</h3>
+                    <p>We understand that quality is your capital. We don't rely solely on factory promises—instead, we implement rigorous practical standards to verify and certify. We maintain absolute transparency, reporting the real status of your goods as they are on the ground, empowering you to make informed business decisions based on reliable reports.</p>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <!-- ============================================================
+         4. IMPORT REQUEST FORM SECTION
+         ============================================================ -->
+    <template id="s_shipping_import_form" name="Shipping Import Request Form">
+        <section class="s_shipping_import_form" data-snippet="s_shipping_import_form" data-name="Shipping Import Form">
+            <div class="container">
+                <!-- Section Header -->
+                <div class="shipping_section_head shipping_section_head_center">
+                    <h2>Import Request <em>Form</em></h2>
+                    <p>Tell us your requirements, and we'll provide an accurate quote within 48-72 hours</p>
+                </div>
+
+                <div class="shipping_form_wrapper">
+                    <form id="shipping_import_form" class="shipping_import_form_main">
+                        <!-- Section 1: Contact Information -->
+                        <div class="form_section">
+                            <h3 class="form_section_title">Contact Information</h3>
+                            
+                            <div class="form_row">
+                                <div class="form_group">
+                                    <label for="contact_name">Full Name / Contact Person *</label>
+                                    <input type="text" id="contact_name" name="name"  class="form_input" />
+                                </div>
+                                <div class="form_group">
+                                    <label for="contact_company">Company / Organization (Optional)</label>
+                                    <input type="text" id="contact_company" name="company" class="form_input" />
+                                </div>
+                            </div>
+
+                            <div class="form_row">
+                                <div class="form_group">
+                                    <label for="contact_email">Business Email *</label>
+                                    <input type="email" id="contact_email" name="email"  class="form_input" />
+                                </div>
+                                <div class="form_group">
+                                    <label for="contact_phone">Phone Number (with country code) *</label>
+                                    <input type="tel" id="contact_phone" name="phone"  class="form_input" />
+                                </div>
+                            </div>
+
+                            <div class="form_row">
+                                <div class="form_group">
+                                    <label for="contact_country">Destination Country *</label>
+                                    <select id="contact_country" name="country"  class="form_select">
+                                        <option value="">-- Select Country --</option>
+                                        <option value="sa">Saudi Arabia</option>
+                                        <option value="ae">UAE</option>
+                                        <option value="qa">Qatar</option>
+                                        <option value="kw">Kuwait</option>
+                                        <option value="bh">Bahrain</option>
+                                        <option value="om">Oman</option>
+                                        <option value="jo">Jordan</option>
+                                        <option value="eg">Egypt</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Section 2: Product Details -->
+                        <div class="form_section">
+                            <h3 class="form_section_title">Product Details</h3>
+                            
+                            <div class="form_row">
+                                <div class="form_group">
+                                    <label for="product_category">Service Category *</label>
+                                    <select id="product_category" name="category"  class="form_select">
+                                        <option value="">-- Select Category --</option>
+                                        <option value="machinery">Industrial Production Lines &amp; Machinery</option>
+                                        <option value="construction">Construction Materials &amp; Fixtures</option>
+                                        <option value="furniture">Furniture &amp; Lighting &amp; Decor</option>
+                                        <option value="wholesale">Wholesale Goods (Electronics, Supplies, Clothing, etc.)</option>
+                                        <option value="partial">Small Orders &amp; Partial Shipping</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form_row">
+                                <div class="form_group">
+                                    <label for="product_name">Product/Item Name (in detail) *</label>
+                                    <input type="text" id="product_name" name="product_name"  class="form_input" placeholder="e.g., CNC Drilling Machine, Ceramic Tiles 60x60cm, etc." />
+                                </div>
+                            </div>
+
+                            <div class="form_row">
+                                <div class="form_group full-width">
+                                    <label for="product_specs">Technical Specifications (Materials, Sizes, Colors, Standards) *</label>
+                                    <textarea id="product_specs" name="specifications"  class="form_textarea" rows="4" placeholder="Provide as much detail as possible..."></textarea>
+                                </div>
+                            </div>
+
+                            <div class="form_row">
+                                <div class="form_group">
+                                    <label for="product_attachments">Upload Images, Drawings, or Files (Optional)</label>
+                                    <input type="file" id="product_attachments" name="attachments"  accept=".pdf,.jpg,.png,.zip,.dwg" class="form_file" />
+                                    <small>Accepted: PDF, JPG, PNG, CAD files</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Section 3: Order Details -->
+                        <div class="form_section">
+                            <h3 class="form_section_title">Order Details</h3>
+                            
+                            <div class="form_row">
+                                <div class="form_group">
+                                    <label for="order_quantity">Quantity Needed (units, kg, or cubic meters) *</label>
+                                    <input type="text" id="order_quantity" name="quantity"  class="form_input" placeholder="e.g., 100 units, 500 kg, etc." />
+                                </div>
+                                <div class="form_group">
+                                    <label for="order_budget">Estimated Budget (Optional)</label>
+                                    <div class="budget_input_group">
+                                        <input type="number" id="order_budget" name="budget" class="form_input" placeholder="Amount" />
+                                        <select name="currency" class="form_select budget_currency">
+                                            <option value="usd">USD</option>
+                                            <option value="sar">SAR</option>
+                                            <option value="aed">AED</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form_row">
+                                <div class="form_group">
+                                    <label>Do you want custom branding or packaging (OEM/ODM)? *</label>
+                                    <div class="radio_group">
+                                        <label class="radio_label">
+                                            <input type="radio" name="custom_branding" value="yes" /> Yes, I want custom branding
+                                        </label>
+                                        <label class="radio_label">
+                                            <input type="radio" name="custom_branding" value="no" /> No, standard factory specs
+                                        </label>
+                                        <label class="radio_label">
+                                            <input type="radio" name="custom_branding" value="unsure" /> Unsure, discuss later
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Section 4: Logistics and Customs -->
+                        <div class="form_section">
+                            <h3 class="form_section_title">Logistics &amp; Customs Options</h3>
+                            
+                            <div class="form_row">
+                                <div class="form_group">
+                                    <label>Preferred Shipping Method *</label>
+                                    <div class="radio_group">
+                                        <label class="radio_label">
+                                            <input type="radio" name="shipping_method" value="fcl" /> Full Container (FCL) - Best for large quantities
+                                        </label>
+                                        <label class="radio_label">
+                                            <input type="radio" name="shipping_method" value="lcl" /> Partial Shipping (LCL) - Cost-effective for smaller orders
+                                        </label>
+                                        <label class="radio_label">
+                                            <input type="radio" name="shipping_method" value="air" /> Air Freight - Fast delivery
+                                        </label>
+                                        <label class="radio_label">
+                                            <input type="radio" name="shipping_method" value="unsure" /> Unsure, advise me
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form_row">
+                                <div class="form_group">
+                                    <label>Do you need customs clearance assistance? *</label>
+                                    <div class="radio_group">
+                                        <label class="radio_label">
+                                            <input type="radio" name="customs_help" value="yes" /> Yes, handle everything for me
+                                        </label>
+                                        <label class="radio_label">
+                                            <input type="radio" name="customs_help" value="no" /> No, I'll handle it with my broker
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form_row">
+                                <div class="form_group">
+                                    <label>Do you have valid import license/business registration? *</label>
+                                    <div class="radio_group">
+                                        <label class="radio_label">
+                                            <input type="radio" name="import_license" value="yes" /> Yes, valid registration
+                                        </label>
+                                        <label class="radio_label">
+                                            <input type="radio" name="import_license" value="no" /> No, importing as individual
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Section 5: Consent -->
+                        <div class="form_section">
+                            <div class="form_group">
+                                <label class="checkbox_label">
+                                    <input type="checkbox" name="privacy_consent"  /> 
+                                    I agree to the privacy policy and allow contact within 48-72 hours *
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="form_actions">
+                            <button type="submit" class="btn shipping_btn_primary form_submit_btn">
+                                Submit Import Request
+                            </button>
+                            <p class="form_note">We'll review your request and contact you with a quote and next steps</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <!-- ============================================================
+         5. BLOG ARTICLES and KNOWLEDGE BASE SECTION
+         ============================================================ -->
+    <template id="s_shipping_blog_articles" name="Shipping Blog Articles">
+        <section class="s_shipping_blog_articles" data-snippet="s_shipping_blog_articles" data-name="Shipping Blog">
+            <div class="container">
+                <!-- Section Header -->
+                <div class="shipping_section_head shipping_section_head_center">
+                    <h2>Blog &amp; <em>Knowledge Base</em></h2>
+                    <p>Expert insights to help you master international trade</p>
+                </div>
+
+                <!-- Articles Grid -->
+                <div class="shipping_articles_grid">
+                    <!-- Article 1 -->
+                    <article class="shipping_article_card">
+                        <div class="article_meta">
+                            <span class="article_tag">Market Analysis</span>
+                            <span class="article_date">June 2024</span>
+                        </div>
+                        <h3>Is Importing from China Still Profitable? A Realistic Analysis</h3>
+                        <p>Explore how imports have transformed from "random importing" to "smart, organized importing" focused on private labels and custom solutions that enhance competitiveness.</p>
+                        <a href="#" class="article_link">Read Article →</a>
+                    </article>
+
+                    <!-- Article 2 -->
+                    <article class="shipping_article_card">
+                        <div class="article_meta">
+                            <span class="article_tag">Trade Events</span>
+                            <span class="article_date">May 2024</span>
+                        </div>
+                        <h3>Your Complete Guide to Canton Fair (Guangzhou)</h3>
+                        <p>Canton Fair is the world's largest trade gathering for sourcing manufacturers. Learn tips for planning your visit, understanding each pavilion, and negotiating professionally with exhibitors.</p>
+                        <a href="#" class="article_link">Read Article →</a>
+                    </article>
+
+                    <!-- Article 3 -->
+                    <article class="shipping_article_card">
+                        <div class="article_meta">
+                            <span class="article_tag">Customs and Compliance</span>
+                            <span class="article_date">April 2024</span>
+                        </div>
+                        <h3>Avoid Customs Detention: Essential Documents and Certificates</h3>
+                        <p>Shipments often face delays due to missing documents. Learn which commercial invoices, packing lists, certificates of origin, and compliance certifications are required for smooth clearance.</p>
+                        <a href="#" class="article_link">Read Article →</a>
+                    </article>
+
+                    <!-- Article 4 -->
+                    <article class="shipping_article_card">
+                        <div class="article_meta">
+                            <span class="article_tag">Quality Control</span>
+                            <span class="article_date">March 2024</span>
+                        </div>
+                        <h3>Security Protocol: Ensuring Product Compliance Before Shipment</h3>
+                        <p>Why you shouldn't rely solely on internet photos or factory promises. Discover pre-shipment inspection protocols using AQL sampling standards and proper loading supervision practices.</p>
+                        <a href="#" class="article_link">Read Article →</a>
+                    </article>
+                </div>
+
+                <!-- Newsletter Signup -->
+                <div class="shipping_newsletter_signup">
+                    <div class="newsletter_content">
+                        <h3>Stay Updated on Market Changes</h3>
+                        <p>Subscribe to our newsletter for updates on shipping rates, holiday seasons in China affecting production, and changes to customs regulations.</p>
+                    </div>
+                    <form class="newsletter_form">
+                        <input type="email" placeholder="Enter your business email"  class="form_input" />
+                        <button type="submit" class="btn shipping_btn_primary">Subscribe Now</button>
+                    </form>
+                </div>
+
+                <!-- CTA -->
+                <div class="shipping_blog_cta">
+                    <h3>Need Direct Consultation?</h3>
+                    <p>If you have specific questions about your current shipment, our team is ready to help</p>
+                    <a href="#contact" class="btn shipping_btn_primary">Contact Our Team</a>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <!-- ============================================================
+         REGISTER ALL NEW SNIPPETS
+         ============================================================ -->
+    <template id="snippets_shipping_complete" inherit_id="website.snippets" name="Complete Shipping Snippets">
+        <xpath expr="//snippets[@id='snippet_structure']/*[1]" position="before">
+            <!-- Add About Us -->
+            <t t-snippet="shipping_logistics_theme.s_shipping_about" string="Shipping About Us" group="structure"
+               t-thumbnail="/shipping_logistics_theme/static/src/img/thumbs/s_shipping_about.svg">
+                <keywords>About, Company, Story, Mission, Values</keywords>
+            </t>
+
+            <!-- Add Services Detail -->
+            <t t-snippet="shipping_logistics_theme.s_shipping_services_detail" string="Shipping Services Detail" group="structure"
+               t-thumbnail="/shipping_logistics_theme/static/src/img/thumbs/s_shipping_services_detail.svg">
+                <keywords>Services, Details, Industrial, Construction, Wholesale</keywords>
+            </t>
+
+            <!-- Add Process and Quality -->
+            <t t-snippet="shipping_logistics_theme.s_shipping_process_quality" string="Shipping Process and Quality" group="structure"
+               t-thumbnail="/shipping_logistics_theme/static/src/img/thumbs/s_shipping_process_quality.svg">
+                <keywords>Process, Quality, QA, Assurance, Inspection</keywords>
+            </t>
+
+            <!-- Add Import Form -->
+            <t t-snippet="shipping_logistics_theme.s_shipping_import_form" string="Shipping Import Form" group="structure"
+               t-thumbnail="/shipping_logistics_theme/static/src/img/thumbs/s_shipping_import_form.svg">
+                <keywords>Form, Request, Import, Order, Contact</keywords>
+            </t>
+
+            <!-- Add Blog Articles -->
+            <t t-snippet="shipping_logistics_theme.s_shipping_blog_articles" string="Shipping Blog Articles" group="structure"
+               t-thumbnail="/shipping_logistics_theme/static/src/img/thumbs/s_shipping_blog_articles.svg">
+                <keywords>Blog, Articles, Knowledge, News, Updates</keywords>
+            </t>
+        </xpath>
+    </template>
+</odoo>
