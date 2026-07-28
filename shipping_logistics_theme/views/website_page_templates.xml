@@ -4,17 +4,58 @@
         <xpath expr="//header" position="replace">
             <header class="shipping_header" data-name="Header">
                 <div class="container shipping_header_inner">
+                    <!-- Logo -->
                     <a href="/" class="shipping_logo">
                         <span class="shipping_logo_mark">✓</span>
                         <span class="shipping_logo_text">Shipping</span>
                     </a>
+
+                    <!-- Main Navigation with Dropdowns -->
                     <nav class="shipping_nav">
-                        <t t-foreach="website.menu_id.child_id" t-as="submenu">
-                            <a t-att-href="submenu.url" t-esc="submenu.name"/>
-                        </t>
+                        <!-- Services Dropdown -->
+                        <div class="shipping_nav_group">
+                            <a href="#s_shipping_services" class="shipping_nav_link">Services</a>
+                            <div class="shipping_nav_dropdown">
+                                <a href="#s_shipping_services" class="shipping_dropdown_item">Overview</a>
+                                <a href="#s_shipping_services_detail" class="shipping_dropdown_item">Detailed Services</a>
+                            </div>
+                        </div>
+
+                        <!-- Solutions Dropdown -->
+                        <div class="shipping_nav_group">
+                            <a href="#s_shipping_why" class="shipping_nav_link">Solutions</a>
+                            <div class="shipping_nav_dropdown">
+                                <a href="#s_shipping_why" class="shipping_dropdown_item">Why Choose Us</a>
+                                <a href="#s_shipping_import_form" class="shipping_dropdown_item">Import Request</a>
+                            </div>
+                        </div>
+
+                        <!-- Process Dropdown -->
+                        <div class="shipping_nav_group">
+                            <a href="#s_shipping_process" class="shipping_nav_link">How It Works</a>
+                            <div class="shipping_nav_dropdown">
+                                <a href="#s_shipping_process" class="shipping_dropdown_item">Our Process</a>
+                                <a href="#s_shipping_process_quality" class="shipping_dropdown_item">Quality Assurance</a>
+                            </div>
+                        </div>
+
+                        <!-- Direct Navigation Links -->
+                        <a href="#s_shipping_network" class="shipping_nav_link">Network</a>
+                        <a href="#s_shipping_testimonials_coverflow" class="shipping_nav_link">Testimonials</a>
+                        
+                        <!-- Resources Dropdown -->
+                        <div class="shipping_nav_group">
+                            <a href="#s_shipping_blog" class="shipping_nav_link">Resources</a>
+                            <div class="shipping_nav_dropdown">
+                                <a href="#s_shipping_blog" class="shipping_dropdown_item">Blog</a>
+                                <a href="#s_shipping_about" class="shipping_dropdown_item">About Us</a>
+                            </div>
+                        </div>
                     </nav>
+
+                    <!-- Header Actions -->
                     <div class="shipping_header_actions">
-                        <a href="#contact" class="btn shipping_btn_primary shipping_btn_sm">Contact Us</a>
+                        <a href="#s_shipping_footer_contact" class="shipping_btn_primary shipping_btn_sm">Contact Us</a>
                     </div>
                 </div>
             </header>
@@ -23,7 +64,7 @@
 
     <template id="shipping_footer" inherit_id="website.layout" name="Shipping Footer">
         <xpath expr="//footer" position="replace">
-            
+            <!-- Footer removed - using s_shipping_footer_contact instead -->
         </xpath>
     </template>
 </odoo>

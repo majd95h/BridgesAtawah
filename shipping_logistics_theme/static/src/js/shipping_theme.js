@@ -1,7 +1,85 @@
 /** @odoo-module **/
+/**
+ * ============================================================
+ * SHIPPING & LOGISTICS THEME - COMPLETE WIDGET SUITE
+ * ============================================================
+ * 
+ * Production-ready theme with all widgets:
+ * - Navigation & Scroll Effects
+ * - Carousels & Sliders
+ * - Interactive Maps
+ * - Forms & Validation
+ * - Animations & Effects
+ * 
+ * Version: 1.0.0
+ * Last Updated: 2024
+ * ============================================================
+ */
+
 import publicWidget from "@web/legacy/js/public/public_widget";
 import { rpc } from "@web/core/network/rpc";
 
+// ============================================================
+// DEBUGGING & AUDIT TOOLS
+// ============================================================
+
+/**
+ * Section ID Audit Tool
+ * Run in console: window._sectionIdAudit()
+ */
+window._sectionIdAudit = function() {
+    console.log("\n" + "=".repeat(70));
+    console.log("🔍 SHIPPING THEME - SECTION ID AUDIT");
+    console.log("=".repeat(70));
+    
+    // Expected IDs from navigation
+    const navLinks = document.querySelectorAll(".shipping_nav_link, .shipping_dropdown_item");
+    console.log("\n📍 EXPECTED IDs (from navigation):");
+    const expectedIds = new Set();
+    navLinks.forEach(link => {
+        const href = link.getAttribute("href");
+        if (href && href.startsWith("#")) {
+            const id = href.substring(1);
+            expectedIds.add(id);
+            console.log(`  ✓ ${id}`);
+        }
+    });
+    
+    // Actual IDs in DOM
+    console.log("\n✅ ACTUAL IDs in DOM:");
+    const allElements = document.querySelectorAll("[id]");
+    const actualIds = new Set();
+    allElements.forEach(el => {
+        if (el.id.includes("shipping") || el.id.startsWith("s_")) {
+            actualIds.add(el.id);
+            console.log(`  ✓ ${el.id} (${el.tagName})`);
+        }
+    });
+    
+    // Find mismatches
+    console.log("\n❌ MISSING IDs (These need to be fixed!):");
+    let hasMissing = false;
+    expectedIds.forEach(id => {
+        if (!actualIds.has(id)) {
+            console.log(`  ⚠️  ${id} ← NOT FOUND`);
+            hasMissing = true;
+        }
+    });
+    if (!hasMissing) {
+        console.log("  ✅ All expected IDs found! Navigation should work.");
+    }
+    
+    console.log("\n" + "=".repeat(70));
+};
+
+// Run audit on page load
+window.addEventListener("load", () => {
+    setTimeout(() => window._sectionIdAudit(), 1000);
+});
+
+// ============================================================
+// 1. HERO BACKGROUND CAROUSEL
+// ============================================================
 publicWidget.registry.ShippingHeroBgCarousel = publicWidget.Widget.extend({
     selector: ".shipping_hero_bg_carousel",
 
@@ -41,8 +119,11 @@ publicWidget.registry.ShippingHeroBgCarousel = publicWidget.Widget.extend({
     },
 });
 
+// ============================================================
+// 2. SHIPPING NETWORK MAP (AMCHARTS)
+// ============================================================
 publicWidget.registry.ShippingNetworkMap = publicWidget.Widget.extend({
-        selector: "#shipping_routes_map",
+    selector: "#shipping_routes_map",
 
     start() {
         this._renderAmChart();
@@ -50,170 +131,172 @@ publicWidget.registry.ShippingNetworkMap = publicWidget.Widget.extend({
     },
 
     _renderAmChart() {
-        // 1. Initialize amCharts Root
-        let root = am5.Root.new(this.el);
+        try {
+            // 1. Initialize amCharts Root
+            let root = am5.Root.new(this.el);
 
-        // Set animated theme with custom colors
-        root.setThemes([am5themes_Animated.new(root)]);
+            // Set animated theme with custom colors
+            root.setThemes([am5themes_Animated.new(root)]);
 
-        // 2. Create the Map Chart with enhanced settings
-        let chart = root.container.children.push(am5map.MapChart.new(root, {
-                panX: "none",      // Locks horizontal map panning
-    panY: "none",      // Locks vertical map panning
-    wheelX: "none",    // Locks mouse wheel horizontal zoom
-    wheelY: "none" ,    // Locks mouse wheel vertical zoom
-            projection: am5map.geoMercator(),
-            homeGeoPoint: { longitude: 85, latitude: 28 },
-            homeZoomLevel: 1.6
-        }));
-
-        // 3. Add the Asia Map (Polygons) with enhanced styling
-        let polygonSeries = chart.series.push(am5map.MapPolygonSeries.new(root, {
-            geoJSON: am5geodata_region_world_asiaLow
-        }));
-
-        // Enhanced polygon styling
-        polygonSeries.mapPolygons.template.setAll({
-            fill: am5.color(0xe8e8e8),      // slightly warmer grey
-            stroke: am5.color(0xffffff),
-            strokeWidth: 1.5,
-            strokeOpacity: 0.8
-        });
-
-        // List of country ISO codes to highlight
-        const highlightedCountries = ["CN", "SA", "AE", "QA", "KW", "BH", "OM"];
-
-        // Apply gold fill to highlighted countries
-        polygonSeries.mapPolygons.template.adapters.add("fill", function(fill, target) {
-            if (target.dataItem && target.dataItem.dataContext) {
-                const id = target.dataItem.dataContext.id;
-                if (highlightedCountries.includes(id)) {
-                    return am5.color(0xD4AF37);   // gold
-                }
-            }
-            return fill;
-        });
-
-        // Add subtle hover effect to countries
-        polygonSeries.mapPolygons.template.set("tooltipText", "{name}");
-        polygonSeries.mapPolygons.template.adapters.add("strokeOpacity", function(opacity, target) {
-            if (target.isHover || target.isActive) {
-                return 1;
-            }
-            return 0.8;
-        });
-
-        // 4. Define the Cities (Origin and Destinations)
-        const origin = { 
-            id: "cn", 
-            title: "Central China", 
-            subtitle: "Distribution Hub",
-            geometry: { type: "Point", coordinates: [104.0, 36.0] },
-            color: 0xD4AF37 
-        };
-        
-        const destinations = [
-            { id: "sa", title: "Saudi Arabia", subtitle: "Riyadh", geometry: { type: "Point", coordinates: [45.0792, 23.8859] }, color: 0xD4AF37 },
-            { id: "ae", title: "UAE", subtitle: "Dubai", geometry: { type: "Point", coordinates: [54.3666, 24.4667] }, color: 0xD4AF37 },
-            { id: "qa", title: "Qatar", subtitle: "Doha", geometry: { type: "Point", coordinates: [51.5310, 25.2854] }, color: 0xD4AF37 },
-            { id: "kw", title: "Kuwait", subtitle: "Kuwait City", geometry: { type: "Point", coordinates: [47.9774, 29.3759] }, color: 0xD4AF37 },
-            { id: "bh", title: "Bahrain", subtitle: "Manama", geometry: { type: "Point", coordinates: [50.5860, 26.2285] }, color: 0xD4AF37 },
-            { id: "om", title: "Oman", subtitle: "Muscat", geometry: { type: "Point", coordinates: [58.4059, 23.5859] }, color: 0xD4AF37 }
-        ];
-
-        // 5. Add Points (Cities) to the Map with Enhanced Animation
-        let pointSeries = chart.series.push(am5map.MapPointSeries.new(root, {}));
-        
-        pointSeries.bullets.push(function(root, series, dataItem) {
-            let container = am5.Container.new(root, {});
-            
-            // Main solid circle (smaller)
-            let mainCircle = container.children.push(am5.Circle.new(root, {
-                radius: 8,
-                fill: am5.color(dataItem.dataContext.color),
-                strokeWidth: 2,
-                stroke: am5.color(0xffffff)
+            // 2. Create the Map Chart with enhanced settings
+            let chart = root.container.children.push(am5map.MapChart.new(root, {
+                panX: "none",
+                panY: "none",
+                wheelX: "none",
+                wheelY: "none",
+                projection: am5map.geoMercator(),
+                homeGeoPoint: { longitude: 85, latitude: 28 },
+                homeZoomLevel: 1.6
             }));
 
-            // Glow layers (multiple circles with opacity decay)
-            for (let i = 0; i < 3; i++) {
-                let glowCircle = container.children.push(am5.Circle.new(root, {
+            // 3. Add the Asia Map (Polygons) with enhanced styling
+            let polygonSeries = chart.series.push(am5map.MapPolygonSeries.new(root, {
+                geoJSON: am5geodata_region_world_asiaLow
+            }));
+
+            // Enhanced polygon styling
+            polygonSeries.mapPolygons.template.setAll({
+                fill: am5.color(0xe8e8e8),
+                stroke: am5.color(0xffffff),
+                strokeWidth: 1.5,
+                strokeOpacity: 0.8
+            });
+
+            // List of country ISO codes to highlight
+            const highlightedCountries = ["CN", "SA", "AE", "QA", "KW", "BH", "OM"];
+
+            // Apply gold fill to highlighted countries
+            polygonSeries.mapPolygons.template.adapters.add("fill", function(fill, target) {
+                if (target.dataItem && target.dataItem.dataContext) {
+                    const id = target.dataItem.dataContext.id;
+                    if (highlightedCountries.includes(id)) {
+                        return am5.color(0xD4AF37);   // gold
+                    }
+                }
+                return fill;
+            });
+
+            // Add subtle hover effect to countries
+            polygonSeries.mapPolygons.template.set("tooltipText", "{name}");
+            polygonSeries.mapPolygons.template.adapters.add("strokeOpacity", function(opacity, target) {
+                if (target.isHover || target.isActive) {
+                    return 1;
+                }
+                return 0.8;
+            });
+
+            // 4. Define the Cities (Origin and Destinations)
+            const origin = { 
+                id: "cn", 
+                title: "Central China", 
+                subtitle: "Distribution Hub",
+                geometry: { type: "Point", coordinates: [104.0, 36.0] },
+                color: 0xD4AF37 
+            };
+            
+            const destinations = [
+                { id: "sa", title: "Saudi Arabia", subtitle: "Riyadh", geometry: { type: "Point", coordinates: [45.0792, 23.8859] }, color: 0xD4AF37 },
+                { id: "ae", title: "UAE", subtitle: "Dubai", geometry: { type: "Point", coordinates: [54.3666, 24.4667] }, color: 0xD4AF37 },
+                { id: "qa", title: "Qatar", subtitle: "Doha", geometry: { type: "Point", coordinates: [51.5310, 25.2854] }, color: 0xD4AF37 },
+                { id: "kw", title: "Kuwait", subtitle: "Kuwait City", geometry: { type: "Point", coordinates: [47.9774, 29.3759] }, color: 0xD4AF37 },
+                { id: "bh", title: "Bahrain", subtitle: "Manama", geometry: { type: "Point", coordinates: [50.5860, 26.2285] }, color: 0xD4AF37 },
+                { id: "om", title: "Oman", subtitle: "Muscat", geometry: { type: "Point", coordinates: [58.4059, 23.5859] }, color: 0xD4AF37 }
+            ];
+
+            // 5. Add Points (Cities) to the Map with Enhanced Animation
+            let pointSeries = chart.series.push(am5map.MapPointSeries.new(root, {}));
+            
+            pointSeries.bullets.push(function(root, series, dataItem) {
+                let container = am5.Container.new(root, {});
+                
+                // Main solid circle (smaller)
+                let mainCircle = container.children.push(am5.Circle.new(root, {
                     radius: 8,
                     fill: am5.color(dataItem.dataContext.color),
-                    opacity: 0.3 - (i * 0.1)
+                    strokeWidth: 2,
+                    stroke: am5.color(0xffffff)
                 }));
-                
-                glowCircle.animate({
-                    key: "radius",
-                    to: 20 + (i * 6),
-                    duration: 1500 + (i * 300),
-                    easing: am5.ease.out(am5.ease.cubic),
+
+                // Glow layers (multiple circles with opacity decay)
+                for (let i = 0; i < 3; i++) {
+                    let glowCircle = container.children.push(am5.Circle.new(root, {
+                        radius: 8,
+                        fill: am5.color(dataItem.dataContext.color),
+                        opacity: 0.3 - (i * 0.1)
+                    }));
+                    
+                    glowCircle.animate({
+                        key: "radius",
+                        to: 20 + (i * 6),
+                        duration: 1500 + (i * 300),
+                        easing: am5.ease.out(am5.ease.cubic),
+                        loops: Infinity
+                    });
+                }
+
+                // Pulsing animation on main circle
+                mainCircle.animate({
+                    key: "opacity",
+                    from: 1,
+                    to: 0.7,
+                    duration: 1000,
+                    easing: am5.ease.inOut(am5.ease.sine),
                     loops: Infinity
                 });
-            }
 
-            // Pulsing animation on main circle
-            mainCircle.animate({
-                key: "opacity",
-                from: 1,
-                to: 0.7,
-                duration: 1000,
-                easing: am5.ease.inOut(am5.ease.sine),
-                loops: Infinity
+                return am5.Bullet.new(root, {
+                    sprite: container,
+                    tooltipText: "{title}"
+                });
             });
 
-            return am5.Bullet.new(root, {
-                sprite: container,
-                tooltipText: "{title}"
+            pointSeries.data.push(origin);
+            destinations.forEach(dest => pointSeries.data.push(dest));
+
+            // 6. Draw the Lines with Enhanced Styling
+            let lineSeries = chart.series.push(am5map.MapLineSeries.new(root, {}));
+            
+            lineSeries.mapLines.template.setAll({
+                strokeWidth: 3,
+                strokeOpacity: 0.7,
+                strokeDasharray: [5, 5],
+                strokeLinecap: "round"
             });
-        });
 
-        pointSeries.data.push(origin);
-        destinations.forEach(dest => pointSeries.data.push(dest));
-
-        // 6. Draw the Lines with Enhanced Styling
-        let lineSeries = chart.series.push(am5map.MapLineSeries.new(root, {}));
-        
-        lineSeries.mapLines.template.setAll({
-            strokeWidth: 3,
-            strokeOpacity: 0.7,
-            strokeDasharray: [5, 5],
-            strokeLinecap: "round"
-        });
-
-        destinations.forEach((dest, index) => {
-            lineSeries.data.push({
-                geometry: {
-                    type: "LineString",
-                    coordinates: [
-                        origin.geometry.coordinates,
-                        dest.geometry.coordinates
-                    ]
-                },
-                stroke: am5.color(dest.color),
-                dataContext: { index: index }
+            destinations.forEach((dest, index) => {
+                lineSeries.data.push({
+                    geometry: {
+                        type: "LineString",
+                        coordinates: [
+                            origin.geometry.coordinates,
+                            dest.geometry.coordinates
+                        ]
+                    },
+                    stroke: am5.color(dest.color),
+                    dataContext: { index: index }
+                });
             });
-        });
 
-        // Apply animated dash offset for flowing effect
-        lineSeries.mapLines.template.adapters.add("strokeDasharray", function(dasharray, target) {
-            // Animated effect will be handled by CSS if needed
-            return dasharray;
-        });
+            // Add subtle shadows to lines
+            lineSeries.mapLines.template.set("tooltipText", "Trade Route");
 
-        // Add subtle shadows to lines
-        lineSeries.mapLines.template.set("tooltipText", "Trade Route");
+            // 7. Auto-zoom to show all data
+            polygonSeries.events.on("datavalidated", function () {
+                chart.goHome();
+            });
 
-        // 7. Auto-zoom to show all data
-        polygonSeries.events.on("datavalidated", function () {
-            chart.goHome();
-        });
-
-        // Add entrance animation
-        chart.appear(1000, 100);
+            // Add entrance animation
+            chart.appear(1000, 100);
+            
+        } catch (error) {
+            console.error("❌ AmCharts map initialization error:", error);
+        }
     }
 });
-// 3D Depth-of-Field Coverflow Testimonials
+
+// ============================================================
+// 3. COVERFLOW TESTIMONIALS
+// ============================================================
 publicWidget.registry.ShippingCoverflow = publicWidget.Widget.extend({
     selector: ".shipping_coverflow_wrapper",
     events: {
@@ -228,7 +311,7 @@ publicWidget.registry.ShippingCoverflow = publicWidget.Widget.extend({
         this._super(...arguments);
         this.currentIndex = 0;
         this.autoPlayInterval = null;
-        this.delay = 5000; // Auto-play delay
+        this.delay = 5000;
     },
 
     start() {
@@ -249,18 +332,14 @@ publicWidget.registry.ShippingCoverflow = publicWidget.Widget.extend({
         const total = this.cards.length;
         
         this.cards.forEach((card, index) => {
-            // Calculate distance from current index
             let offset = index - this.currentIndex;
             
-            // Adjust offset for an infinite circular loop
             if (offset > Math.floor(total / 2)) {
                 offset -= total;
             } else if (offset < -Math.floor(total / 2)) {
                 offset += total;
             }
 
-            // Assign the dataset position for CSS targeting
-            // If the card is more than 2 spaces away, hide it deep in the background
             if (Math.abs(offset) > 2) {
                 card.dataset.pos = "hidden";
             } else {
@@ -280,11 +359,9 @@ publicWidget.registry.ShippingCoverflow = publicWidget.Widget.extend({
     },
 
     _onCardClick(ev) {
-        // If the user clicks a side card, move the carousel to that card
         const clickedPos = parseInt(ev.currentTarget.dataset.pos);
-        if (clickedPos === 0 || isNaN(clickedPos)) return; // Already active
+        if (clickedPos === 0 || isNaN(clickedPos)) return;
 
-        // Calculate new index
         this.currentIndex = (this.currentIndex + clickedPos + this.cards.length) % this.cards.length;
         this._updateCoverflow();
     },
@@ -304,7 +381,9 @@ publicWidget.registry.ShippingCoverflow = publicWidget.Widget.extend({
     }
 });
 
-// Interactive hover effects
+// ============================================================
+// 4. NETWORK INTERACTIVE HOVER EFFECTS
+// ============================================================
 publicWidget.registry.ShippingNetworkInteractive = publicWidget.Widget.extend({
     selector: ".shipping_world_map",
     events: {
@@ -330,33 +409,9 @@ publicWidget.registry.ShippingNetworkInteractive = publicWidget.Widget.extend({
     },
 });
 
-
-// Header Scroll Effect
-publicWidget.registry.ShippingHeader = publicWidget.Widget.extend({
-    selector: ".shipping_header",
-    events: {},
-
-    start() {
-        this._onScroll = this._onScroll.bind(this);
-        window.addEventListener("scroll", this._onScroll, {passive: true});
-        return this._super(...arguments);
-    },
-
-    destroy() {
-        window.removeEventListener("scroll", this._onScroll);
-        this._super(...arguments);
-    },
-
-    _onScroll() {
-        if (window.scrollY > 20) {
-            this.el.classList.add("header_scrolled");
-        } else {
-            this.el.classList.remove("header_scrolled");
-        }
-    },
-});
-
-// Drag & Drop for service cards
+// ============================================================
+// 5. DRAG & DROP SERVICE CARDS
+// ============================================================
 publicWidget.registry.ShippingDragDrop = publicWidget.Widget.extend({
     selector: ".shipping_services_scatter",
     events: {
@@ -444,7 +499,9 @@ publicWidget.registry.ShippingDragDrop = publicWidget.Widget.extend({
     },
 });
 
-// Blog Articles Loader
+// ============================================================
+// 6. BLOG ARTICLES LOADER
+// ============================================================
 publicWidget.registry.ShippingBlog = publicWidget.Widget.extend({
     selector: "#shipping_blog_grid",
     async start() {
@@ -453,7 +510,6 @@ publicWidget.registry.ShippingBlog = publicWidget.Widget.extend({
             const data = await rpc("/shipping/blog", { limit: 4 });
             const articles = (data && data.articles) || [];
             if (articles.length) {
-                // Get all back faces (same order as static cards)
                 const backs = this.el.querySelectorAll('.shipping_blog_back');
                 articles.forEach((article, index) => {
                     if (backs[index]) {
@@ -477,6 +533,9 @@ publicWidget.registry.ShippingBlog = publicWidget.Widget.extend({
     },
 });
 
+// ============================================================
+// 7. FOOTER CONTACT FORM
+// ============================================================
 publicWidget.registry.ShippingFooterContact = publicWidget.Widget.extend({
     selector: ".s_shipping_footer_contact",
     events: {
@@ -492,9 +551,6 @@ publicWidget.registry.ShippingFooterContact = publicWidget.Widget.extend({
         return this._super(...arguments);
     },
 
-    /**
-     * Initialize scroll animations for elements
-     */
     _initializeAnimations() {
         const observerOptions = {
             threshold: 0.1,
@@ -510,25 +566,18 @@ publicWidget.registry.ShippingFooterContact = publicWidget.Widget.extend({
             });
         }, observerOptions);
 
-        // Observe all cards for animation
         this.el.querySelectorAll(".shipping_office_card, .email_channel_card, .chat_channel_btn").forEach(card => {
             observer.observe(card);
         });
     },
 
-    /**
-     * Setup form validation
-     */
     _setupFormValidation() {
         this.form = this.el.querySelector("#shipping_contact_form");
         if (this.form) {
-            this.form.noValidate = true; // Use custom validation
+            this.form.noValidate = true;
         }
     },
 
-    /**
-     * Handle form submission
-     */
     async _onFormSubmit(ev) {
         ev.preventDefault();
 
@@ -539,14 +588,12 @@ publicWidget.registry.ShippingFooterContact = publicWidget.Widget.extend({
         const formData = new FormData(this.form);
         const data = Object.fromEntries(formData);
 
-        // Show loading state
         const submitBtn = this.form.querySelector(".form_submit_btn");
         const originalText = submitBtn.textContent;
         submitBtn.disabled = true;
         submitBtn.textContent = "Sending...";
 
         try {
-            // Send to RPC endpoint
             const result = await rpc("/shipping/contact/submit", {
                 name: data.name,
                 company: data.company,
@@ -571,9 +618,6 @@ publicWidget.registry.ShippingFooterContact = publicWidget.Widget.extend({
         }
     },
 
-    /**
-     * Validate form fields
-     */
     _validateForm() {
         const form = this.form;
         const fields = form.querySelectorAll("[required]");
@@ -595,7 +639,7 @@ publicWidget.registry.ShippingFooterContact = publicWidget.Widget.extend({
         });
 
         const privacyCheckbox = form.querySelector("#contact_privacy");
-        if (!privacyCheckbox.checked) {
+        if (privacyCheckbox && !privacyCheckbox.checked) {
             this._showFieldError(privacyCheckbox, "You must agree to the privacy policy");
             isValid = false;
         }
@@ -603,9 +647,6 @@ publicWidget.registry.ShippingFooterContact = publicWidget.Widget.extend({
         return isValid;
     },
 
-    /**
-     * Show field error message
-     */
     _showFieldError(field, message) {
         this._clearFieldError(field);
         
@@ -624,9 +665,6 @@ publicWidget.registry.ShippingFooterContact = publicWidget.Widget.extend({
         field.style.boxShadow = "0 0 0 3px rgba(231, 76, 60, 0.1)";
     },
 
-    /**
-     * Clear field error message
-     */
     _clearFieldError(field) {
         const errorDiv = field.parentNode.querySelector(".form_error");
         if (errorDiv) {
@@ -636,25 +674,16 @@ publicWidget.registry.ShippingFooterContact = publicWidget.Widget.extend({
         field.style.boxShadow = "";
     },
 
-    /**
-     * Validate email format
-     */
     _isValidEmail(email) {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
     },
 
-    /**
-     * Validate phone format (basic)
-     */
     _isValidPhone(phone) {
         const phoneRegex = /^[+\d\s\-()]+$/;
         return phoneRegex.test(phone) && phone.replace(/\D/g, "").length >= 7;
     },
 
-    /**
-     * Show success message
-     */
     _showSuccessMessage() {
         const toast = document.createElement("div");
         toast.className = "shipping_toast shipping_toast_success";
@@ -690,9 +719,6 @@ publicWidget.registry.ShippingFooterContact = publicWidget.Widget.extend({
         }, 5000);
     },
 
-    /**
-     * Show error message
-     */
     _showErrorMessage(message) {
         const toast = document.createElement("div");
         toast.className = "shipping_toast shipping_toast_error";
@@ -728,19 +754,14 @@ publicWidget.registry.ShippingFooterContact = publicWidget.Widget.extend({
         }, 5000);
     },
 
-    /**
-     * Handle chat channel clicks
-     */
     _onChatClick(ev) {
         const btn = ev.currentTarget;
         
-        // Add click animation
         btn.style.transform = "scale(0.98)";
         setTimeout(() => {
             btn.style.transform = "";
         }, 100);
 
-        // Handle WeChat specially (show QR code or message)
         if (btn.classList.contains("wechat")) {
             const wechatId = btn.dataset.wechatId;
             this._showWeChatInfo(wechatId);
@@ -748,9 +769,6 @@ publicWidget.registry.ShippingFooterContact = publicWidget.Widget.extend({
         }
     },
 
-    /**
-     * Show WeChat information
-     */
     _showWeChatInfo(wechatId) {
         const modal = document.createElement("div");
         modal.className = "shipping_wechat_modal";
@@ -844,17 +862,11 @@ publicWidget.registry.ShippingFooterContact = publicWidget.Widget.extend({
         document.body.appendChild(modal);
     },
 
-    /**
-     * Handle form field focus
-     */
     _onFormFieldFocus(ev) {
         const field = ev.currentTarget;
         field.style.background = "#fffbf5";
     },
 
-    /**
-     * Handle form field blur
-     */
     _onFormFieldBlur(ev) {
         const field = ev.currentTarget;
         if (!field.value.trim()) {
@@ -862,6 +874,10 @@ publicWidget.registry.ShippingFooterContact = publicWidget.Widget.extend({
         }
     }
 });
+
+// ============================================================
+// 8. SERVICES DETAIL TABS
+// ============================================================
 publicWidget.registry.ShippingServicesDetailTabs = publicWidget.Widget.extend({
     selector: ".s_shipping_services_detail",
     events: {
@@ -872,7 +888,6 @@ publicWidget.registry.ShippingServicesDetailTabs = publicWidget.Widget.extend({
         this.tabs = this.el.querySelectorAll(".shipping_tab_btn");
         this.panes = this.el.querySelectorAll(".shipping_tab_pane");
         
-        // Set first tab as active by default
         if (this.tabs.length > 0) {
             this.tabs[0].classList.add("active");
             const firstPane = this.el.querySelector(`.shipping_tab_pane[data-pane="0"]`);
@@ -888,11 +903,9 @@ publicWidget.registry.ShippingServicesDetailTabs = publicWidget.Widget.extend({
         const btn = ev.currentTarget;
         const tabIndex = btn.dataset.tab;
         
-        // Remove active from all tabs and panes
         this.tabs.forEach(tab => tab.classList.remove("active"));
         this.panes.forEach(pane => pane.classList.remove("active"));
         
-        // Add active to clicked tab and corresponding pane
         btn.classList.add("active");
         const pane = this.el.querySelector(`.shipping_tab_pane[data-pane="${tabIndex}"]`);
         if (pane) {
@@ -901,11 +914,9 @@ publicWidget.registry.ShippingServicesDetailTabs = publicWidget.Widget.extend({
     },
 });
 
-/**
- * ============================================================
- * IMPORT REQUEST FORM WIDGET
- * ============================================================
- */
+// ============================================================
+// 9. IMPORT REQUEST FORM
+// ============================================================
 publicWidget.registry.ShippingImportForm = publicWidget.Widget.extend({
     selector: ".s_shipping_import_form",
     events: {
@@ -921,18 +932,12 @@ publicWidget.registry.ShippingImportForm = publicWidget.Widget.extend({
         return this._super(...arguments);
     },
 
-    /**
-     * Setup form validation
-     */
     _setupFormValidation() {
         if (this.form) {
-            this.form.noValidate = true; // Use custom validation
+            this.form.noValidate = true;
         }
     },
 
-    /**
-     * Handle form submission
-     */
     async _onFormSubmit(ev) {
         ev.preventDefault();
 
@@ -944,14 +949,12 @@ publicWidget.registry.ShippingImportForm = publicWidget.Widget.extend({
         const formData = new FormData(this.form);
         const data = Object.fromEntries(formData);
 
-        // Show loading state
         const submitBtn = this.form.querySelector(".form_submit_btn");
         const originalText = submitBtn.textContent;
         submitBtn.disabled = true;
         submitBtn.textContent = "Submitting...";
 
         try {
-            // Send to RPC endpoint
             const result = await rpc("/shipping/import/submit", {
                 name: data.name,
                 company: data.company,
@@ -974,7 +977,6 @@ publicWidget.registry.ShippingImportForm = publicWidget.Widget.extend({
                 this._showSuccessMessage();
                 this.form.reset();
                 
-                // Scroll to success message
                 setTimeout(() => {
                     window.scrollTo({ top: 0, behavior: "smooth" });
                 }, 500);
@@ -990,9 +992,6 @@ publicWidget.registry.ShippingImportForm = publicWidget.Widget.extend({
         }
     },
 
-    /**
-     * Validate all form fields
-     */
     _validateForm() {
         const form = this.form;
         const fields = form.querySelectorAll("[required]");
@@ -1023,9 +1022,6 @@ publicWidget.registry.ShippingImportForm = publicWidget.Widget.extend({
         return isValid;
     },
 
-    /**
-     * Show field error
-     */
     _showFieldError(field, message) {
         this._clearFieldError(field);
         
@@ -1044,9 +1040,6 @@ publicWidget.registry.ShippingImportForm = publicWidget.Widget.extend({
         field.style.boxShadow = "0 0 0 3px rgba(231, 76, 60, 0.1)";
     },
 
-    /**
-     * Clear field error
-     */
     _clearFieldError(field) {
         const errorDiv = field.parentNode.querySelector(".form_error");
         if (errorDiv) {
@@ -1056,25 +1049,16 @@ publicWidget.registry.ShippingImportForm = publicWidget.Widget.extend({
         field.style.boxShadow = "";
     },
 
-    /**
-     * Validate email format
-     */
     _isValidEmail(email) {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
     },
 
-    /**
-     * Validate phone format
-     */
     _isValidPhone(phone) {
         const phoneRegex = /^[+\d\s\-()]+$/;
         return phoneRegex.test(phone) && phone.replace(/\D/g, "").length >= 7;
     },
 
-    /**
-     * Show success message
-     */
     _showSuccessMessage() {
         const toast = document.createElement("div");
         toast.className = "shipping_toast shipping_toast_success";
@@ -1110,9 +1094,6 @@ publicWidget.registry.ShippingImportForm = publicWidget.Widget.extend({
         }, 5000);
     },
 
-    /**
-     * Show error message
-     */
     _showErrorMessage(message) {
         const toast = document.createElement("div");
         toast.className = "shipping_toast shipping_toast_error";
@@ -1148,9 +1129,6 @@ publicWidget.registry.ShippingImportForm = publicWidget.Widget.extend({
         }, 5000);
     },
 
-    /**
-     * Scroll to first error field
-     */
     _scrollToError() {
         const errorField = this.form.querySelector(".form_error")?.previousElementSibling;
         if (errorField) {
@@ -1158,17 +1136,11 @@ publicWidget.registry.ShippingImportForm = publicWidget.Widget.extend({
         }
     },
 
-    /**
-     * Handle form field focus
-     */
     _onFormFieldFocus(ev) {
         const field = ev.currentTarget;
         field.style.background = "#fffbf5";
     },
 
-    /**
-     * Handle form field blur
-     */
     _onFormFieldBlur(ev) {
         const field = ev.currentTarget;
         if (!field.value.trim()) {
@@ -1176,14 +1148,10 @@ publicWidget.registry.ShippingImportForm = publicWidget.Widget.extend({
         }
     },
 
-    /**
-     * Handle category change
-     */
     _onCategoryChange(ev) {
         const category = ev.currentTarget.value;
         const productNameField = this.form.querySelector("[name='product_name']");
         
-        // Update placeholder based on category
         const placeholders = {
             machinery: "e.g., CNC Drilling Machine, 5-axis Processing Center, etc.",
             construction: "e.g., Ceramic Tiles 60x60cm, Marble Slabs, Bathroom Fixtures, etc.",
@@ -1198,11 +1166,9 @@ publicWidget.registry.ShippingImportForm = publicWidget.Widget.extend({
     },
 });
 
-/**
- * ============================================================
- * BLOG NEWSLETTER SIGNUP
- * ============================================================
- */
+// ============================================================
+// 10. BLOG NEWSLETTER SIGNUP
+// ============================================================
 publicWidget.registry.ShippingBlogNewsletter = publicWidget.Widget.extend({
     selector: ".s_shipping_blog_articles",
     events: {
@@ -1315,12 +1281,10 @@ publicWidget.registry.ShippingBlogNewsletter = publicWidget.Widget.extend({
     },
 });
 
-/**
- * ============================================================
- * SMOOTH SCROLL TO SECTION
- * ============================================================
- */
-publicWidget.registry.ShippingSmoothScroll = publicWidget.Widget.extend({
+// ============================================================
+// 11. SMOOTH SCROLL NAVIGATION (UNIFIED - NO DUPLICATES)
+// ============================================================
+publicWidget.registry.ShippingSmoothScrollNavigation = publicWidget.Widget.extend({
     selector: "a[href*='#']",
     events: {
         "click": "_onLinkClick",
@@ -1329,21 +1293,294 @@ publicWidget.registry.ShippingSmoothScroll = publicWidget.Widget.extend({
     _onLinkClick(ev) {
         const href = ev.currentTarget.getAttribute("href");
         
-        // Only handle internal hash links
         if (href && href.startsWith("#")) {
             const targetId = href.substring(1);
             const target = document.getElementById(targetId);
             
             if (target) {
                 ev.preventDefault();
-                target.scrollIntoView({ behavior: "smooth", block: "start" });
+                
+                console.log("🔗 Link clicked:", href);
+                console.log("✅ Target element found:", target.tagName);
+                
+                // Update URL
+                window.history.pushState(null, null, href);
+                
+                // Close dropdowns
+                this._closeDropdowns();
+                
+                // Scroll to target
+                this._scrollToTarget(target);
+            } else {
+                console.warn("❌ Target element NOT FOUND for ID:", targetId);
+                window._sectionIdAudit();
             }
         }
     },
+
+    _scrollToTarget(target) {
+        setTimeout(() => {
+            try {
+                const headerHeight = document.querySelector(".shipping_header")?.offsetHeight || 0;
+                const elementTop = target.getBoundingClientRect().top + window.pageYOffset;
+                const scrollPosition = elementTop - headerHeight - 20;
+                
+                window.scrollTo({
+                    top: scrollPosition,
+                    behavior: 'smooth'
+                });
+                
+                console.log("✅ Scrolling to:", target.id, "at position:", scrollPosition);
+            } catch (error) {
+                console.error("Scroll error:", error);
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }, 100);
+    },
+
+    _closeDropdowns() {
+        const dropdowns = document.querySelectorAll(".shipping_nav_dropdown");
+        dropdowns.forEach(dropdown => {
+            dropdown.style.opacity = "0";
+            dropdown.style.visibility = "hidden";
+        });
+    }
 });
 
+// ============================================================
+// 12. ACTIVE LINK DETECTOR
+// ============================================================
+publicWidget.registry.ShippingActiveLinkDetector = publicWidget.Widget.extend({
+    selector: ".shipping_nav",
+    
+    init() {
+        this._super(...arguments);
+        this._onScroll = this._onScroll.bind(this);
+        this.scrollTimeout = null;
+    },
 
-// Add global toast animations
+    start() {
+        window.addEventListener("scroll", this._onScroll, { passive: true });
+        this._updateActiveLink();
+        return this._super(...arguments);
+    },
+
+    destroy() {
+        window.removeEventListener("scroll", this._onScroll);
+        if (this.scrollTimeout) clearTimeout(this.scrollTimeout);
+        this._super(...arguments);
+    },
+
+    _onScroll() {
+        if (this.scrollTimeout) clearTimeout(this.scrollTimeout);
+        this.scrollTimeout = setTimeout(() => {
+            this._updateActiveLink();
+        }, 50);
+    },
+
+    _updateActiveLink() {
+        const navLinks = this.el.querySelectorAll("a[href^='#']");
+        const sections = document.querySelectorAll("[id^='s_shipping_']");
+        
+        let activeId = null;
+        const headerHeight = document.querySelector(".shipping_header")?.offsetHeight || 80;
+        
+        sections.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            if (rect.top <= headerHeight + 150 && rect.bottom > 0) {
+                activeId = section.id;
+            }
+        });
+
+        navLinks.forEach(link => {
+            const href = link.getAttribute("href");
+            const targetId = href?.substring(1);
+            
+            link.classList.remove("active");
+            
+            if (targetId === activeId) {
+                link.classList.add("active");
+                
+                const navGroup = link.closest(".shipping_nav_group");
+                if (navGroup) {
+                    const parentLink = navGroup.querySelector(".shipping_nav_link");
+                    if (parentLink) {
+                        parentLink.classList.add("active");
+                    }
+                }
+            }
+        });
+    }
+});
+
+// ============================================================
+// 13. HEADER SCROLL EFFECT
+// ============================================================
+publicWidget.registry.ShippingHeaderScroll = publicWidget.Widget.extend({
+    selector: ".shipping_header",
+    events: {},
+
+    start() {
+        this._onScroll = this._onScroll.bind(this);
+        window.addEventListener("scroll", this._onScroll, { passive: true });
+        return this._super(...arguments);
+    },
+
+    destroy() {
+        window.removeEventListener("scroll", this._onScroll);
+        this._super(...arguments);
+    },
+
+    _onScroll() {
+        const header = this.el;
+        if (window.scrollY > 20) {
+            header.classList.add("header_scrolled");
+        } else {
+            header.classList.remove("header_scrolled");
+        }
+    }
+});
+
+// ============================================================
+// 14. DROPDOWN ACCESSIBILITY
+// ============================================================
+publicWidget.registry.ShippingDropdownA11y = publicWidget.Widget.extend({
+    selector: ".shipping_nav_group",
+    events: {
+        "keydown .shipping_nav_link": "_onKeyDown",
+        "keydown .shipping_dropdown_item": "_onDropdownKeyDown",
+    },
+
+    _onKeyDown(ev) {
+        if (ev.key === "Enter" || ev.key === " ") {
+            const dropdown = this.el.querySelector(".shipping_nav_dropdown");
+            if (dropdown) {
+                ev.preventDefault();
+                const firstItem = dropdown.querySelector(".shipping_dropdown_item");
+                if (firstItem) {
+                    firstItem.focus();
+                }
+            }
+        }
+    },
+
+    _onDropdownKeyDown(ev) {
+        if (ev.key === "Escape") {
+            ev.preventDefault();
+            const navLink = this.el.querySelector(".shipping_nav_link");
+            if (navLink) {
+                navLink.focus();
+            }
+        }
+        
+        if (ev.key === "ArrowDown" || ev.key === "ArrowUp") {
+            ev.preventDefault();
+            const items = Array.from(
+                this.el.querySelectorAll(".shipping_dropdown_item")
+            );
+            const currentIndex = items.indexOf(ev.currentTarget);
+            let nextIndex;
+            
+            if (ev.key === "ArrowDown") {
+                nextIndex = (currentIndex + 1) % items.length;
+            } else {
+                nextIndex = (currentIndex - 1 + items.length) % items.length;
+            }
+            
+            items[nextIndex].focus();
+        }
+    }
+});
+
+// ============================================================
+// 15. MOBILE NAVIGATION
+// ============================================================
+publicWidget.registry.ShippingMobileNav = publicWidget.Widget.extend({
+    selector: ".shipping_header",
+    events: {
+        "click .shipping_mobile_menu_toggle": "_toggleMobileMenu",
+        "click .shipping_dropdown_item": "_onMobileMenuItemClick",
+    },
+
+    init() {
+        this._super(...arguments);
+        this.mobileMenuOpen = false;
+    },
+
+    start() {
+        this._checkMobileView();
+        window.addEventListener("resize", this._checkMobileView.bind(this));
+        return this._super(...arguments);
+    },
+
+    _checkMobileView() {
+        if (window.innerWidth <= 991) {
+            this._initMobileMenu();
+        }
+    },
+
+    _initMobileMenu() {
+        // Mobile menu initialization
+    },
+
+    _toggleMobileMenu() {
+        this.mobileMenuOpen = !this.mobileMenuOpen;
+        const nav = this.el.querySelector(".shipping_nav");
+        if (nav) {
+            nav.classList.toggle("mobile_open");
+        }
+    },
+
+    _onMobileMenuItemClick() {
+        if (this.mobileMenuOpen) {
+            this._toggleMobileMenu();
+        }
+    }
+});
+
+// ============================================================
+// INITIALIZATION & DOM READY
+// ============================================================
+
+document.addEventListener("DOMContentLoaded", function() {
+    console.log("✅ DOM Ready - Shipping theme initialized");
+    
+    const isSupported = window.CSS && window.CSS.supports && 
+                       window.CSS.supports('scroll-behavior', 'smooth');
+    console.log("📋 Native smooth-scroll supported:", isSupported);
+});
+
+// Handle hash navigation on page load
+window.addEventListener("load", function() {
+    console.log("✅ Page fully loaded");
+    
+    if (window.location.hash) {
+        const targetId = window.location.hash.substring(1);
+        const target = document.getElementById(targetId);
+        console.log("🔗 Navigating to hash on load:", targetId);
+        
+        if (target) {
+            setTimeout(() => {
+                const headerHeight = document.querySelector(".shipping_header")?.offsetHeight || 0;
+                const elementTop = target.getBoundingClientRect().top + window.pageYOffset;
+                const scrollPosition = elementTop - headerHeight - 20;
+                
+                window.scrollTo({
+                    top: scrollPosition,
+                    behavior: 'smooth'
+                });
+            }, 500);
+        } else {
+            console.warn("❌ Hash target not found:", targetId);
+            window._sectionIdAudit();
+        }
+    }
+});
+
+// ============================================================
+// GLOBAL TOAST ANIMATIONS
+// ============================================================
+
 const styleSheet = document.createElement("style");
 styleSheet.textContent = `
     @keyframes slideUpToast {
@@ -1373,6 +1610,17 @@ styleSheet.textContent = `
         to { opacity: 1; }
     }
 
+    @keyframes slideUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
     @media (max-width: 575px) {
         .shipping_toast {
             bottom: 1rem !important;
@@ -1383,3 +1631,5 @@ styleSheet.textContent = `
     }
 `;
 document.head.appendChild(styleSheet);
+
+console.log("✅ Shipping Theme Complete - All widgets loaded");

@@ -2853,6 +2853,356 @@
         flex-direction: column;
     }
 }
+// ===== NAVIGATION STYLES =====
+
+.shipping_nav {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+
+    a {
+        color: var(--shipping-text-muted) !important;
+        font-weight: 500;
+        text-decoration: none !important;
+        font-size: 0.92rem;
+        transition: color 0.15s ease;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--shipping-accent);
+            transition: width 0.3s ease;
+        }
+
+        &:hover {
+            color: var(--shipping-text) !important;
+            &::after { width: 100%; }
+        }
+    }
+}
+
+// ===== NAVIGATION GROUP (Dropdown Container) =====
+.shipping_nav_group {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+
+    .shipping_nav_link {
+        padding: 0.5rem 0;
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--shipping-accent);
+            transition: width 0.3s ease;
+        }
+
+        &::after {
+            display: none; /* Override default link underline */
+        }
+    }
+
+    &:hover .shipping_nav_link {
+        color: var(--shipping-text) !important;
+        
+        &::before { width: 100%; }
+    }
+}
+
+// ===== DROPDOWN MENU =====
+.shipping_nav_dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    background: white;
+    border: 1px solid var(--shipping-border);
+    border-radius: var(--shipping-radius-md);
+    box-shadow: 0 10px 30px rgba(18, 23, 42, 0.12);
+    padding: 0.5rem 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    z-index: 1000;
+    margin-top: 0.5rem;
+
+    /* Dropdown arrow indicator */
+    &::before {
+        content: '';
+        position: absolute;
+        top: -6px;
+        left: 15px;
+        width: 12px;
+        height: 12px;
+        background: white;
+        border: 1px solid var(--shipping-border);
+        border-bottom: none;
+        border-right: none;
+        transform: rotate(45deg);
+    }
+}
+
+// ===== DROPDOWN ITEMS =====
+.shipping_dropdown_item {
+    display: block;
+    padding: 0.75rem 1.25rem !important;
+    color: var(--shipping-text-muted) !important;
+    font-weight: 500;
+    text-decoration: none !important;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
+    
+    &::after {
+        display: none !important;
+    }
+
+    &:hover {
+        color: var(--shipping-text) !important;
+        background: rgba(212, 175, 55, 0.08);
+        border-left-color: var(--shipping-accent);
+        padding-left: 1.5rem !important;
+    }
+
+    &:first-child {
+        border-radius: var(--shipping-radius-md) var(--shipping-radius-md) 0 0;
+    }
+
+    &:last-child {
+        border-radius: 0 0 var(--shipping-radius-md) var(--shipping-radius-md);
+    }
+}
+
+// ===== SHOW DROPDOWN ON HOVER =====
+.shipping_nav_group:hover .shipping_nav_dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+// ===== RESPONSIVE NAVIGATION =====
+@media (max-width: 1200px) {
+    .shipping_nav {
+        gap: 0.25rem;
+        
+        a {
+            font-size: 0.88rem;
+        }
+    }
+
+    .shipping_nav_dropdown {
+        min-width: 180px;
+        
+        .shipping_dropdown_item {
+            padding: 0.65rem 1rem !important;
+            font-size: 0.85rem;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .shipping_header_inner {
+        gap: 1rem;
+    }
+
+    .shipping_nav {
+        display: none; /* Hide nav on tablet - implement mobile menu if needed */
+        gap: 0;
+    }
+
+    .shipping_header_actions {
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 575px) {
+    .shipping_nav {
+        display: none;
+    }
+
+    .shipping_header_inner {
+        gap: 0.5rem;
+    }
+
+    .shipping_logo_text {
+        display: none;
+    }
+
+    .shipping_logo {
+        font-size: 0.95rem;
+    }
+
+    .shipping_btn_sm {
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+    }
+}
+
+// ===== SMOOTH SCROLL BEHAVIOR =====
+html {
+    scroll-behavior: smooth;
+}
+
+// ===== ACTIVE LINK INDICATOR (Optional - for page section awareness) =====
+.shipping_nav_link.active {
+    color: var(--shipping-text) !important;
+
+    &::after {
+        width: 100%;
+    }
+}
+
+// ===== DROPDOWN ANIMATION VARIANTS =====
+
+/* Stagger animation for dropdown items */
+.shipping_dropdown_item {
+    animation: dropdownFadeIn 0.3s ease forwards;
+
+    &:nth-child(1) { animation-delay: 0.05s; }
+    &:nth-child(2) { animation-delay: 0.1s; }
+    &:nth-child(3) { animation-delay: 0.15s; }
+}
+
+@keyframes dropdownFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Dropdown hover state animation */
+.shipping_nav_dropdown {
+    .shipping_dropdown_item {
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(212, 175, 55, 0.08);
+            transition: left 0.3s ease;
+            z-index: -1;
+        }
+
+        &:hover::before {
+            left: 0;
+        }
+    }
+}
+
+// ===== NAVIGATION ACCESSIBILITY =====
+
+/* Focus states for keyboard navigation */
+.shipping_nav_link:focus-visible,
+.shipping_dropdown_item:focus-visible {
+    outline: 2px solid var(--shipping-accent);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: more) {
+    .shipping_nav_group:hover .shipping_nav_dropdown {
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    .shipping_dropdown_item:hover {
+        border-left-color: var(--shipping-accent);
+        font-weight: 600;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .shipping_nav_dropdown {
+        transition: none;
+    }
+
+    .shipping_dropdown_item {
+        animation: none !important;
+
+        &::before {
+            transition: none;
+        }
+    }
+
+    .shipping_nav_link::after {
+        transition: none;
+    }
+}
+
+// ===== HEADER STICKY POSITIONING ADJUSTMENTS =====
+
+.shipping_header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(250, 246, 236, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(236, 228, 211, 0.4);
+    transition: box-shadow 0.2s ease;
+    padding: 0.9rem 0;
+
+    &.header_scrolled {
+        box-shadow: 0 8px 24px rgba(18, 23, 42, 0.1);
+        background: rgba(250, 246, 236, 0.95);
+    }
+}
+
+.shipping_header_inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 0 1rem;
+    flex-wrap: wrap;
+}
+
+// ===== SCROLL ANCHOR PADDING =====
+/* Add padding-top to sections so they scroll below the fixed header */
+
+section[id^="s_shipping_"],
+div[id^="s_shipping_"] {
+    scroll-margin-top: 80px; /* Adjust based on header height */
+}
+
+@media (max-width: 991px) {
+    section[id^="s_shipping_"],
+    div[id^="s_shipping_"] {
+        scroll-margin-top: 70px;
+    }
+}
+
+@media (max-width: 575px) {
+    section[id^="s_shipping_"],
+    div[id^="s_shipping_"] {
+        scroll-margin-top: 60px;
+    }
+}
+
 
 @media (max-width: 575px) {
     .shipping_form_wrapper {
