@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <menuitem id="menu_eh_log_dg_declarations"
+                  name="DG Declarations"
+                  parent="eh_log_base.menu_eh_log_operations"
+                  sequence="90"
+                  action="action_eh_log_dg_declaration"
+                  groups="eh_log_base.group_eh_log_user"/>
+
+        <menuitem id="menu_eh_log_dg_un_numbers"
+                  name="UN Numbers"
+                  parent="eh_log_base.menu_eh_log_master_data"
+                  sequence="210"
+                  action="action_eh_log_dg_un_number"
+                  groups="eh_log_base.group_eh_log_manager"/>
+
+        <menuitem id="menu_eh_log_dg_classes"
+                  name="DG Hazard Classes"
+                  parent="eh_log_base.menu_eh_log_master_data"
+                  sequence="220"
+                  action="action_eh_log_dg_class"
+                  groups="eh_log_base.group_eh_log_manager"/>
+
+    </data>
+</odoo>

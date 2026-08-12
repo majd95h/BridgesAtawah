@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="view_eh_log_transport_driver_list" model="ir.ui.view">
+            <field name="name">eh.log.transport.driver.list</field>
+            <field name="model">eh.log.transport.driver</field>
+            <field name="arch" type="xml">
+                <list string="Drivers" decoration-danger="is_license_expired">
+                    <field name="name"/>
+                    <field name="license_number"/>
+                    <field name="license_class"/>
+                    <field name="license_expiry_date"/>
+                    <field name="is_license_expired"/>
+                    <field name="phone" optional="show"/>
+                    <field name="active" optional="hide"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="view_eh_log_transport_driver_form" model="ir.ui.view">
+            <field name="name">eh.log.transport.driver.form</field>
+            <field name="model">eh.log.transport.driver</field>
+            <field name="arch" type="xml">
+                <form string="Driver">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name"/>
+                            <h1><field name="name"/></h1>
+                        </div>
+                        <group>
+                            <group string="License">
+                                <field name="license_number"/>
+                                <field name="license_class"/>
+                                <field name="license_expiry_date"/>
+                                <field name="license_country_id" options="{'no_create': True}"/>
+                                <field name="is_license_expired" readonly="1"/>
+                            </group>
+                            <group string="Contact">
+                                <field name="phone" widget="phone"/>
+                                <field name="partner_id" options="{'no_create': True}"/>
+                                <field name="company_id" groups="base.group_multi_company"/>
+                                <field name="active" widget="boolean_toggle"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="notes" colspan="2"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_eh_log_transport_driver" model="ir.actions.act_window">
+            <field name="name">Drivers</field>
+            <field name="res_model">eh.log.transport.driver</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="view_eh_log_customs_hs_code_list" model="ir.ui.view">
+            <field name="name">eh.log.customs.hs.code.list</field>
+            <field name="model">eh.log.customs.hs.code</field>
+            <field name="arch" type="xml">
+                <list string="HS Codes">
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="level"/>
+                    <field name="country_id" optional="show"/>
+                    <field name="duty_rate_pct" optional="show"/>
+                    <field name="vat_rate_pct" optional="show"/>
+                    <field name="active" optional="hide"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="view_eh_log_customs_hs_code_form" model="ir.ui.view">
+            <field name="name">eh.log.customs.hs.code.form</field>
+            <field name="model">eh.log.customs.hs.code</field>
+            <field name="arch" type="xml">
+                <form string="HS Code">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="code"/>
+                            <h1>
+                                <field name="code" placeholder="8517.62"/>
+                            </h1>
+                            <field name="name" placeholder="Routers, switches, and similar"/>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="parent_id" options="{'no_create': True}"/>
+                                <field name="level"/>
+                                <field name="country_id" options="{'no_create': True}"/>
+                                <field name="active" widget="boolean_toggle"/>
+                            </group>
+                            <group>
+                                <field name="duty_rate_pct"/>
+                                <field name="vat_rate_pct"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="notes" colspan="2"/>
+                        </group>
+                        <notebook>
+                            <page string="Children">
+                                <field name="child_ids">
+                                    <list>
+                                        <field name="code"/>
+                                        <field name="name"/>
+                                        <field name="duty_rate_pct"/>
+                                    </list>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_eh_log_customs_hs_code_search" model="ir.ui.view">
+            <field name="name">eh.log.customs.hs.code.search</field>
+            <field name="model">eh.log.customs.hs.code</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="country_id"/>
+                    <separator/>
+                    <filter string="Chapters" name="filter_chapters" domain="[('level', '=', 'chapter')]"/>
+                    <filter string="Headings" name="filter_headings" domain="[('level', '=', 'heading')]"/>
+                    <filter string="Subheadings" name="filter_subheadings" domain="[('level', '=', 'subheading')]"/>
+                    <filter string="Group by Country" name="group_country" context="{'group_by': 'country_id'}"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_eh_log_customs_hs_code" model="ir.actions.act_window">
+            <field name="name">HS Codes</field>
+            <field name="res_model">eh.log.customs.hs.code</field>
+            <field name="view_mode">list,form</field>
+            <field name="search_view_id" ref="view_eh_log_customs_hs_code_search"/>
+        </record>
+
+    </data>
+</odoo>

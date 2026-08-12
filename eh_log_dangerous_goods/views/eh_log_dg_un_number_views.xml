@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="view_eh_log_dg_un_number_list" model="ir.ui.view">
+            <field name="name">eh.log.dg.un.number.list</field>
+            <field name="model">eh.log.dg.un.number</field>
+            <field name="arch" type="xml">
+                <list string="UN Numbers">
+                    <field name="un_number"/>
+                    <field name="proper_shipping_name"/>
+                    <field name="primary_class_id"/>
+                    <field name="packing_group"/>
+                    <field name="marine_pollutant" optional="show"/>
+                    <field name="iata_passenger_aircraft_forbidden" optional="hide"/>
+                    <field name="ems_code" optional="hide"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="view_eh_log_dg_un_number_form" model="ir.ui.view">
+            <field name="name">eh.log.dg.un.number.form</field>
+            <field name="model">eh.log.dg.un.number</field>
+            <field name="arch" type="xml">
+                <form string="UN Number">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="un_number"/>
+                            <h1><field name="un_number" placeholder="UN1090"/></h1>
+                            <field name="proper_shipping_name"/>
+                        </div>
+                        <group>
+                            <group string="Classification">
+                                <field name="primary_class_id" options="{'no_create': True}"/>
+                                <field name="subsidiary_class_ids" widget="many2many_tags" options="{'no_create': True}"/>
+                                <field name="packing_group"/>
+                                <field name="marine_pollutant"/>
+                                <field name="flashpoint_celsius"/>
+                                <field name="ems_code"/>
+                                <field name="active" widget="boolean_toggle"/>
+                            </group>
+                            <group string="Air Transport (IATA)">
+                                <field name="iata_passenger_aircraft_forbidden"/>
+                                <field name="iata_cargo_aircraft_forbidden"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Special Provisions">
+                                <group>
+                                    <field name="imdg_special_provisions"/>
+                                    <field name="iata_special_provisions"/>
+                                    <field name="adr_special_provisions"/>
+                                </group>
+                            </page>
+                            <page string="Description">
+                                <field name="description"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_eh_log_dg_un_number_search" model="ir.ui.view">
+            <field name="name">eh.log.dg.un.number.search</field>
+            <field name="model">eh.log.dg.un.number</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="un_number"/>
+                    <field name="proper_shipping_name"/>
+                    <field name="primary_class_id"/>
+                    <separator/>
+                    <filter string="Marine Pollutant" name="filter_mp" domain="[('marine_pollutant', '=', True)]"/>
+                    <filter string="Forbidden on Passenger Aircraft" name="filter_pax_forbidden" domain="[('iata_passenger_aircraft_forbidden', '=', True)]"/>
+                    <filter string="Group by Class" name="group_class" context="{'group_by': 'primary_class_id'}"/>
+                    <filter string="Group by Packing Group" name="group_pg" context="{'group_by': 'packing_group'}"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_eh_log_dg_un_number" model="ir.actions.act_window">
+            <field name="name">UN Numbers</field>
+            <field name="res_model">eh.log.dg.un.number</field>
+            <field name="view_mode">list,form</field>
+            <field name="search_view_id" ref="view_eh_log_dg_un_number_search"/>
+        </record>
+
+    </data>
+</odoo>

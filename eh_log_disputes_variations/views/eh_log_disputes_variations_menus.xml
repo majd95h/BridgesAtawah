@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <menuitem id="menu_eh_log_dispute_root"
+              name="Disputes &amp; Variations"
+              parent="eh_log_base.menu_eh_log_operations"
+              sequence="85"/>
+
+    <menuitem id="menu_eh_log_disputes"
+              name="Disputes"
+              parent="menu_eh_log_dispute_root"
+              action="action_eh_log_dispute"
+              sequence="10"/>
+
+    <menuitem id="menu_eh_log_variations"
+              name="Variations"
+              parent="menu_eh_log_dispute_root"
+              action="action_eh_log_variation"
+              sequence="20"/>
+
+    <menuitem id="menu_eh_log_dispute_config_root"
+              name="Disputes &amp; Variations"
+              parent="eh_log_base.menu_eh_log_configuration"
+              sequence="85"/>
+
+    <menuitem id="menu_eh_log_dispute_categories"
+              name="Dispute Categories"
+              parent="menu_eh_log_dispute_config_root"
+              action="action_eh_log_dispute_category"
+              sequence="10"/>
+
+</odoo>

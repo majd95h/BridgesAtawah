@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <menuitem id="menu_eh_log_edi_root"
+              name="EDI Hub"
+              parent="eh_log_base.menu_eh_log_operations"
+              sequence="70"/>
+
+    <menuitem id="menu_eh_log_edi_outbound"
+              name="Outbound"
+              parent="menu_eh_log_edi_root"
+              action="action_eh_log_edi_outbound"
+              sequence="10"/>
+
+    <menuitem id="menu_eh_log_edi_inbound"
+              name="Inbound"
+              parent="menu_eh_log_edi_root"
+              action="action_eh_log_edi_inbound"
+              sequence="20"/>
+
+    <menuitem id="menu_eh_log_edi_config_root"
+              name="EDI Hub"
+              parent="eh_log_base.menu_eh_log_configuration"
+              sequence="70"/>
+
+    <menuitem id="menu_eh_log_edi_partners"
+              name="EDI Partners"
+              parent="menu_eh_log_edi_config_root"
+              action="action_eh_log_edi_partner"
+              sequence="10"/>
+
+    <menuitem id="menu_eh_log_edi_transports"
+              name="Transports"
+              parent="menu_eh_log_edi_config_root"
+              action="action_eh_log_edi_transport"
+              sequence="20"/>
+
+    <menuitem id="menu_eh_log_edi_message_types"
+              name="Message Types"
+              parent="menu_eh_log_edi_config_root"
+              action="action_eh_log_edi_message_type"
+              sequence="30"/>
+
+</odoo>

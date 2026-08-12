@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="1">
+    <data>
+
+        <record id="message_type_iftmin" model="eh.log.edi.message.type">
+            <field name="code">IFTMIN</field>
+            <field name="name">IFTMIN - Forwarding Instruction</field>
+            <field name="direction">out</field>
+            <field name="encoding">edifact</field>
+            <field name="description">UN/EDIFACT D.96B forwarding instruction. Sent from forwarder to carrier or upstream agent to instruct handling of a shipment.</field>
+        </record>
+
+        <record id="message_type_iftsta" model="eh.log.edi.message.type">
+            <field name="code">IFTSTA</field>
+            <field name="name">IFTSTA - International Multimodal Status Report</field>
+            <field name="direction">in</field>
+            <field name="encoding">edifact</field>
+            <field name="description">UN/EDIFACT D.96B status report. Received from carrier or upstream agent reporting on the progress of a shipment.</field>
+        </record>
+
+    </data>
+</odoo>

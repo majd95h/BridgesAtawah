@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="1">
+    <data>
+
+        <!-- Default husbandry catalog. Operators add per-call lines as
+             needed; the seeded set covers the most common services
+             so a fresh install can issue a proforma without
+             additional master data setup. -->
+
+        <record id="husbandry_crew_change_transport" model="eh.log.ship.husbandry.service">
+            <field name="name">Crew Change Transport</field>
+            <field name="code">CREW_TRP</field>
+            <field name="category">crew_change</field>
+            <field name="description">Ground transportation between vessel and airport for sign-on / sign-off crew.</field>
+        </record>
+
+        <record id="husbandry_ship_spares" model="eh.log.ship.husbandry.service">
+            <field name="name">Ship Spares Clearance</field>
+            <field name="code">SPARES</field>
+            <field name="category">spares</field>
+            <field name="description">Customs clearance and delivery of spare parts to the vessel.</field>
+        </record>
+
+        <record id="husbandry_provisions" model="eh.log.ship.husbandry.service">
+            <field name="name">Provisions and Chandlery</field>
+            <field name="code">PROVS</field>
+            <field name="category">provisions</field>
+            <field name="description">Supply of food, water, and ship chandlery items.</field>
+        </record>
+
+        <record id="husbandry_fresh_water" model="eh.log.ship.husbandry.service">
+            <field name="name">Fresh Water Supply</field>
+            <field name="code">FW</field>
+            <field name="category">fresh_water</field>
+            <field name="description">Coordinated fresh water bunkering at the berth.</field>
+        </record>
+
+        <record id="husbandry_garbage" model="eh.log.ship.husbandry.service">
+            <field name="name">Garbage Removal</field>
+            <field name="code">GARB</field>
+            <field name="category">garbage</field>
+            <field name="description">MARPOL-compliant garbage removal and certificate.</field>
+        </record>
+
+        <record id="husbandry_slop" model="eh.log.ship.husbandry.service">
+            <field name="name">Slop Reception</field>
+            <field name="code">SLOP</field>
+            <field name="category">slop</field>
+            <field name="description">Reception of oily water and slops via licensed contractor.</field>
+        </record>
+
+        <record id="husbandry_bunker" model="eh.log.ship.husbandry.service">
+            <field name="name">Bunker Coordination</field>
+            <field name="code">BNKR</field>
+            <field name="category">bunker</field>
+            <field name="description">Coordination of bunker delivery between supplier and vessel.</field>
+        </record>
+
+        <record id="husbandry_medical" model="eh.log.ship.husbandry.service">
+            <field name="name">Medical Assistance</field>
+            <field name="code">MED</field>
+            <field name="category">medical</field>
+            <field name="description">Doctor on board, hospital transport, repatriation logistics.</field>
+        </record>
+
+    </data>
+</odoo>

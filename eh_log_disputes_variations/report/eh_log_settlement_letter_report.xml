@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="action_report_settlement_letter" model="ir.actions.report">
+        <field name="name">Settlement Letter</field>
+        <field name="model">eh.log.dispute</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">eh_log_disputes_variations.report_settlement_letter_document</field>
+        <field name="report_file">eh_log_disputes_variations.report_settlement_letter_document</field>
+        <field name="binding_model_id" ref="model_eh_log_dispute"/>
+        <field name="binding_type">report</field>
+        <field name="paperformat_id" ref="eh_log_base.paperformat_eh_log_portrait"/>
+    </record>
+
+    <template id="report_settlement_letter_document">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="dispute">
+                <t t-call="eh_log_base.eh_log_clean_layout">
+                    <t t-set="company" t-value="dispute.company_id"/>
+                    <t t-set="report_type" t-value="'pdf'"/>
+                    <t t-call="eh_log_base.eh_log_report_styles"/>
+                    <div class="page eh_pdf_page">
+                        <t t-call="eh_log_base.eh_log_report_header">
+                            <t t-set="title" t-value="'Settlement Letter'"/>
+                            <t t-set="company" t-value="dispute.company_id"/>
+                        </t>
+
+                        <div class="eh_pdf_meta">
+                            <span><strong>Reference:</strong> <t t-out="dispute.name"/></span>
+                            <span><strong>Customer:</strong> <t t-out="dispute.customer_id.display_name"/></span>
+                            <span><strong>Source:</strong> <t t-out="dispute.source_display"/></span>
+                        </div>
+
+                        <h2 class="eh_pdf_subtitle">Settlement</h2>
+                        <p>
+                            We confirm settlement of dispute
+                            <strong><t t-out="dispute.name"/></strong>
+                            (<t t-out="dispute.subject"/>) for the amount of
+                            <strong><t t-out="'{:.2f}'.format(dispute.settled_amount)"/></strong>
+                            <t t-out="dispute.currency_id.name"/>.
+                        </p>
+                        <p>
+                            This settlement is in full and final
+                            satisfaction of the matter described,
+                            and no further claim will be entertained
+                            against the same shipment or source
+                            transaction.
+                        </p>
+
+                        <h2 class="eh_pdf_subtitle">Acknowledgement</h2>
+                        <table class="eh_pdf_table">
+                            <thead>
+                                <tr>
+                                    <th>Role</th>
+                                    <th>Name</th>
+                                    <th>Signature</th>
+                                    <th>Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Agent</td><td>__________________</td><td>__________________</td><td>__________</td></tr>
+                                <tr><td>Customer</td><td>__________________</td><td>__________________</td><td>__________</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>

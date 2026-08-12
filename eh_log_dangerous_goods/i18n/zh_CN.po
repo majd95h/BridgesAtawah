@@ -1,0 +1,1404 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* eh_log_dangerous_goods
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-01 04:33+0000\n"
+"PO-Revision-Date: 2026-07-01 04:33+0000\n"
+"Last-Translator: ERP Heritage <info@erpheritage.com.au>\n"
+"Language-Team: Chinese (Simplified)\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. module: eh_log_dangerous_goods
+#. odoo-python
+#: code:addons/eh_log_dangerous_goods/models/eh_log_dg_declaration.py:0
+msgid "(none)"
+msgstr "(无)"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_class__primary_class__1
+msgid "1 Explosives"
+msgstr "1 爆炸品"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_class__primary_class__2
+msgid "2 Gases"
+msgstr "2 种气体"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_class__primary_class__3
+msgid "3 Flammable Liquids"
+msgstr "3 易燃液体"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_class__primary_class__4
+msgid "4 Flammable Solids and Self-Reactive"
+msgstr "4 易燃固体和自反应物质"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_class__primary_class__5
+msgid "5 Oxidising Substances and Organic Peroxides"
+msgstr "5 氧化性物质和有机过氧化物"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_class__primary_class__6
+msgid "6 Toxic and Infectious Substances"
+msgstr "6 有毒和感染性物质"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_class__primary_class__7
+msgid "7 Radioactive Material"
+msgstr "7 放射性物质"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_class__primary_class__8
+msgid "8 Corrosive Substances"
+msgstr "8 腐蚀性物质"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_class__primary_class__9
+msgid "9 Miscellaneous Dangerous Substances"
+msgstr "9 杂项危险物质"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid ""
+"<span class=\"eh_pdf_status_badge eh_pdf_status_warn\">MARINE "
+"POLLUTANT</span>"
+msgstr "<span class=\"eh_pdf_status_badge eh_pdf_status_warn\">海洋污染物</span>"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid "<strong>Mode:</strong>"
+msgstr "<strong>模式：</strong>"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid "<strong>Reference:</strong>"
+msgstr "<strong>编号：</strong>"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_declaration_form
+msgid "<strong>Segregation incompatibilities detected.</strong>"
+msgstr "<strong>检测到职责分离不兼容项。</strong>"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid "<strong>State:</strong>"
+msgstr "<strong>状态：</strong>"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_un_number__adr_special_provisions
+msgid "ADR Special Provisions"
+msgstr "ADR 特别规定"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.un.number,proper_shipping_name:eh_log_dangerous_goods.un_1090
+msgid "Acetone"
+msgstr "丙酮"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__message_needaction
+msgid "Action Needed"
+msgstr "所需操作"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_class__active
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_un_number__active
+msgid "Active"
+msgstr "有效"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__activity_ids
+msgid "Activities"
+msgstr "活动"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "活动异常标示"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__activity_state
+msgid "Activity State"
+msgstr "活动状态"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "活动类型图标"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.un.number,proper_shipping_name:eh_log_dangerous_goods.un_1950
+msgid "Aerosols"
+msgstr "气雾剂"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_declaration__mode__air
+msgid "Air (IATA DGR)"
+msgstr "空运 (IATA DGR)"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_un_number_form
+msgid "Air Transport (IATA)"
+msgstr "航空运输 (IATA)"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,help:eh_log_dangerous_goods.field_eh_log_dg_declaration__flight_number
+msgid "Air only."
+msgstr "仅限空运。"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__message_attachment_count
+msgid "Attachment Count"
+msgstr "附件数量"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_declaration_form
+msgid "Audit"
+msgstr "审计"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid "Authorised Signatory"
+msgstr "授权签署人"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_declaration_form
+msgid "Back to Draft"
+msgstr "退回草稿"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.un.number,proper_shipping_name:eh_log_dangerous_goods.un_2794
+msgid "Batteries, wet, filled with acid"
+msgstr "电池，湿式，充有酸液"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.un.number,proper_shipping_name:eh_log_dangerous_goods.un_3373
+msgid "Biological substance, Category B"
+msgstr "生物物质，B 类"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_declaration_form
+msgid "Cancel"
+msgstr "取消"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_declaration__state__cancelled
+msgid "Cancelled"
+msgstr "已取消"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid "Class"
+msgstr "类"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_class__code
+msgid "Class Code"
+msgstr "类别代码"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,help:eh_log_dangerous_goods.field_eh_log_dg_class__incompatible_class_ids
+msgid ""
+"Classes that cannot share a transport unit with this class without specific "
+"segregation. Drives the segregation detector on the declaration."
+msgstr "如无特定隔离，则无法与此类别共用同一运输单元的类别。用于驱动申报单上的隔离检测器。"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_un_number_form
+msgid "Classification"
+msgstr "分类"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__company_ids
+msgid "Companies"
+msgstr "公司"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__company_id
+msgid "Company"
+msgstr "公司"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_declaration__segregation_status__ok
+msgid "Compatible"
+msgstr "兼容"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,help:eh_log_dangerous_goods.field_eh_log_dg_declaration__segregation_status
+msgid ""
+"Computed from the lines' primary classes versus each class's incompatibility"
+" list."
+msgstr "根据明细行的主要类别与每个类别的不兼容列表计算。"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__consignee_id
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid "Consignee"
+msgstr "收货人"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.class,placard_description:eh_log_dangerous_goods.dg_class_8
+msgid "Corrosive"
+msgstr "腐蚀性"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.class,name:eh_log_dangerous_goods.dg_class_8
+msgid "Corrosive Substance"
+msgstr "腐蚀性物质"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_class__create_uid
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__create_uid
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration_line__create_uid
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_un_number__create_uid
+msgid "Created by"
+msgstr "创建人"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_class__create_date
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__create_date
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration_line__create_date
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_un_number__create_date
+msgid "Created on"
+msgstr "创建日期"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_freight_job_form_dg
+msgid "DG"
+msgstr "危险品 DG"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_declaration_form
+msgid "DG Declaration"
+msgstr "危险品申报"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model,name:eh_log_dangerous_goods.model_eh_log_dg_declaration_line
+msgid "DG Declaration Line"
+msgstr "危险品申报明细"
+
+#. module: eh_log_dangerous_goods
+#. odoo-python
+#: code:addons/eh_log_dangerous_goods/models/eh_log_freight_job.py:0
+#: model:ir.actions.act_window,name:eh_log_dangerous_goods.action_eh_log_dg_declaration
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_freight_job__dg_declaration_count
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_freight_job__dg_declaration_ids
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_sale_order__eh_log_dg_declaration_count
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_sale_order__eh_log_dg_declaration_ids
+#: model:ir.ui.menu,name:eh_log_dangerous_goods.menu_eh_log_dg_declarations
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_declaration_list
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_sale_order_form_eh_log_dg
+msgid "DG Declarations"
+msgstr "危险品申报单"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.ui.menu,name:eh_log_dangerous_goods.menu_eh_log_dg_classes
+msgid "DG Hazard Classes"
+msgstr "危险品危害等级"
+
+#. module: eh_log_dangerous_goods
+#. odoo-python
+#: code:addons/eh_log_dangerous_goods/models/eh_log_dg_declaration.py:0
+msgid ""
+"DG declaration %(name)s cannot be marked ready. Resolve:\n"
+"\n"
+"- %(list)s"
+msgstr ""
+"危险品申报 %(name)s 无法标记为就绪。请解决：\n"
+"\n"
+"- %(list)s"
+
+#. module: eh_log_dangerous_goods
+#. odoo-python
+#: code:addons/eh_log_dangerous_goods/models/eh_log_dg_declaration.py:0
+msgid ""
+"DG declaration %(name)s cannot move from %(current)s to %(target)s. Allowed "
+"transitions from %(current)s: %(allowed)s."
+msgstr ""
+"危险品申报 %(name)s 无法从 %(current)s 转到 %(target)s。从 %(current)s "
+"允许的转换：%(allowed)s。"
+
+#. module: eh_log_dangerous_goods
+#. odoo-python
+#: code:addons/eh_log_dangerous_goods/models/eh_log_dg_declaration.py:0
+msgid "DG declaration %(name)s moved to %(state)s."
+msgstr "危险品申报 %(name)s 已转到 %(state)s。"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_sale_order__eh_log_dg_required
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_sale_order_form_eh_log_dg
+msgid "Dangerous Goods"
+msgstr "危险品"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model,name:eh_log_dangerous_goods.model_eh_log_dg_declaration
+msgid "Dangerous Goods Declaration"
+msgstr "危险品申报"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model,name:eh_log_dangerous_goods.model_eh_log_dg_class
+msgid "Dangerous Goods Hazard Class"
+msgstr "危险品危害等级"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.class,name:eh_log_dangerous_goods.dg_class_4_3
+#: model:eh.log.dg.class,placard_description:eh_log_dangerous_goods.dg_class_4_3
+msgid "Dangerous When Wet"
+msgstr "遇水危险"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration_line__declaration_id
+msgid "Declaration"
+msgstr "申报"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_class__description
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_un_number__description
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_class_form
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_un_number_form
+msgid "Description"
+msgstr "描述"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid "Discharge"
+msgstr "解除"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_class__display_name
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__display_name
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration_line__display_name
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_un_number__display_name
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_freight_job__display_name
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_sale_order__display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_declaration__state__draft
+msgid "Draft"
+msgstr "草稿"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid "EmS"
+msgstr ""
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_un_number__ems_code
+msgid "EmS Code"
+msgstr "EmS 代码"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid "Emergency (24h)"
+msgstr "紧急联系（24小时）"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_declaration_form
+msgid "Emergency Contact (24-hour)"
+msgstr "紧急联系人（24小时）"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__emergency_contact_name
+msgid "Emergency Contact (24h)"
+msgstr "紧急联系人（24小时）"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__emergency_contact_phone
+msgid "Emergency Phone (24h)"
+msgstr "紧急电话（24小时）"
+
+#. module: eh_log_dangerous_goods
+#. odoo-python
+#: code:addons/eh_log_dangerous_goods/models/eh_log_dg_declaration.py:0
+msgid "Emergency contact phone is required."
+msgstr "紧急联系人电话为必填项。"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.un.number,proper_shipping_name:eh_log_dangerous_goods.un_3082
+msgid "Environmentally hazardous substance, liquid, n.o.s."
+msgstr "环境有害物质，液态，未另列明（n.o.s.）"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.un.number,proper_shipping_name:eh_log_dangerous_goods.un_3077
+msgid "Environmentally hazardous substance, solid, n.o.s."
+msgstr "环境有害物质，固态，未另列明（n.o.s.）"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.un.number,proper_shipping_name:eh_log_dangerous_goods.un_1170
+msgid "Ethanol or Ethyl alcohol"
+msgstr "乙醇或乙基醇"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.class,placard_description:eh_log_dangerous_goods.dg_class_1
+msgid "Explosive"
+msgstr "爆炸物"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.class,name:eh_log_dangerous_goods.dg_class_1
+msgid "Explosives"
+msgstr "爆炸物"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid "Field"
+msgstr "字段"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.class,name:eh_log_dangerous_goods.dg_class_2_1
+#: model:eh.log.dg.class,placard_description:eh_log_dangerous_goods.dg_class_2_1
+msgid "Flammable Gas"
+msgstr "易燃气体"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.class,name:eh_log_dangerous_goods.dg_class_3
+#: model:eh.log.dg.class,placard_description:eh_log_dangerous_goods.dg_class_3
+msgid "Flammable Liquid"
+msgstr "易燃液体"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.class,name:eh_log_dangerous_goods.dg_class_4_1
+#: model:eh.log.dg.class,placard_description:eh_log_dangerous_goods.dg_class_4_1
+msgid "Flammable Solid"
+msgstr "易燃固体"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_un_number__flashpoint_celsius
+msgid "Flashpoint (degC)"
+msgstr "闪点（摄氏度）"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__flight_number
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid "Flight"
+msgstr "航班"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__message_follower_ids
+msgid "Followers"
+msgstr "关注者"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "关注者（合作伙伴）"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,help:eh_log_dangerous_goods.field_eh_log_dg_declaration__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Font Awesome图标，例如：fa-tasks"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_un_number__iata_cargo_aircraft_forbidden
+msgid "Forbidden on Cargo Aircraft"
+msgstr "禁止装载于货机"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_un_number__iata_passenger_aircraft_forbidden
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_un_number_search
+msgid "Forbidden on Passenger Aircraft"
+msgstr "禁止装载于客机"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,help:eh_log_dangerous_goods.field_eh_log_dg_un_number__un_number
+msgid "Format: UN followed by 4 digits, e.g. UN1090."
+msgstr "格式：UN 后跟 4 位数字，例如 UN1090。"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,help:eh_log_dangerous_goods.field_eh_log_dg_declaration_line__packaging_description
+msgid "Free-form packaging description, e.g. '20 fibreboard boxes, 1 L each'."
+msgstr "自由格式的包装描述，例如“20 个纤维板箱，每箱 1 L”。"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model,name:eh_log_dangerous_goods.model_eh_log_freight_job
+msgid "Freight Forwarding Job"
+msgstr "货运代理任务"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__freight_job_id
+msgid "Freight Job"
+msgstr "货运任务"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_un_number_search
+msgid "Group by Class"
+msgstr "按类别分组"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_declaration_search
+msgid "Group by Mode"
+msgstr "按模式分组"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_un_number_search
+msgid "Group by Packing Group"
+msgstr "按包装组分组"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_declaration_search
+msgid "Group by State"
+msgstr "按状态分组"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__has_message
+msgid "Has Message"
+msgstr "有消息"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_class_form
+msgid "Hazard Class"
+msgstr "危险等级"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.actions.act_window,name:eh_log_dangerous_goods.action_eh_log_dg_class
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_class_list
+msgid "Hazard Classes"
+msgstr "危险等级"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.constraint,message:eh_log_dangerous_goods.constraint_eh_log_dg_class_code_unique
+msgid "Hazard class code must be unique."
+msgstr "危险等级代码必须唯一。"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.un.number,proper_shipping_name:eh_log_dangerous_goods.un_1965
+msgid "Hydrocarbon gas mixture, liquefied (LPG)"
+msgstr "液化烃类气体混合物 (LPG)"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.un.number,proper_shipping_name:eh_log_dangerous_goods.un_1789
+msgid "Hydrochloric acid"
+msgstr "盐酸"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_un_number__packing_group__i
+msgid "I (High danger)"
+msgstr "I（高危险）"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid ""
+"I hereby declare that the contents of this consignment are fully and "
+"accurately described above by the proper shipping name, and are classified, "
+"packaged, marked and labelled, and are in all respects in proper condition "
+"for transport according to applicable international and national "
+"governmental regulations."
+msgstr ""
+"本人在此声明，本托运货物的内容已在上文以正确的运输名称完整而准确地描述，并已按照适用的国际及国家政府法规进行分类、包装、标记和标签，且在各方面均处于适合运输的状态。"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_un_number__iata_special_provisions
+msgid "IATA Special Provisions"
+msgstr "IATA 特殊规定"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_class__id
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__id
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration_line__id
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_un_number__id
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_freight_job__id
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_sale_order__id
+msgid "ID"
+msgstr "识别号"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_un_number__packing_group__ii
+msgid "II (Medium danger)"
+msgstr "II（中等危险）"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_un_number__packing_group__iii
+msgid "III (Low danger)"
+msgstr "III（低危险）"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,help:eh_log_dangerous_goods.field_eh_log_dg_un_number__ems_code
+msgid "IMDG Emergency Schedule code (e.g. F-E, S-V)."
+msgstr "IMDG 应急计划代码（例如 F-E、S-V）。"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_un_number__imdg_special_provisions
+msgid "IMDG Special Provisions"
+msgstr "IMDG 特殊规定"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__activity_exception_icon
+msgid "Icon"
+msgstr "图标"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,help:eh_log_dangerous_goods.field_eh_log_dg_declaration__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "指示异常活动的图标。"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,help:eh_log_dangerous_goods.field_eh_log_dg_declaration__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "如果勾选此项，则需要查看新消息。"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,help:eh_log_dangerous_goods.field_eh_log_dg_declaration__message_has_error
+#: model:ir.model.fields,help:eh_log_dangerous_goods.field_eh_log_dg_declaration__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "如果勾选此项， 某些消息将出现发送错误。"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_declaration__segregation_status__warning
+msgid "Incompatibilities Detected"
+msgstr "检测到不兼容项"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_class__incompatible_class_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_class_form
+msgid "Incompatible Classes"
+msgstr "不兼容类别"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.class,name:eh_log_dangerous_goods.dg_class_6_2
+#: model:eh.log.dg.class,placard_description:eh_log_dangerous_goods.dg_class_6_2
+msgid "Infectious Substance"
+msgstr "感染性物质"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.un.number,proper_shipping_name:eh_log_dangerous_goods.un_2814
+msgid "Infectious substance, affecting humans"
+msgstr "感染性物质，影响人类"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__message_is_follower
+msgid "Is Follower"
+msgstr "是关注者"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_declaration_form
+msgid "Issue"
+msgstr "议题"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_declaration__state__issued
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_declaration_search
+msgid "Issued"
+msgstr "已充值"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__issued_at
+msgid "Issued At"
+msgstr "签发时间"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__issued_by_id
+msgid "Issued By"
+msgstr "签发人"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid "Issued by"
+msgstr "签发人"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_declaration_line__net_quantity_uom__l
+msgid "L"
+msgstr ""
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_declaration_form
+msgid "Lane"
+msgstr "运输路线"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_class__write_uid
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__write_uid
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration_line__write_uid
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_un_number__write_uid
+msgid "Last Updated by"
+msgstr "最后更新人"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_class__write_date
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__write_date
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration_line__write_date
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_un_number__write_date
+msgid "Last Updated on"
+msgstr "上次更新日期"
+
+#. module: eh_log_dangerous_goods
+#. odoo-python
+#: code:addons/eh_log_dangerous_goods/models/eh_log_dg_declaration.py:0
+msgid "Line %(seq)s has no packaging description."
+msgstr "行 %(seq)s 没有包装说明。"
+
+#. module: eh_log_dangerous_goods
+#. odoo-python
+#: code:addons/eh_log_dangerous_goods/models/eh_log_dg_declaration.py:0
+msgid "Line %(seq)s has zero net quantity."
+msgstr "行 %(seq)s 的净数量为零。"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__line_count
+msgid "Lines"
+msgstr "行"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.un.number,proper_shipping_name:eh_log_dangerous_goods.un_3480
+msgid "Lithium ion batteries"
+msgstr "锂离子电池"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.un.number,proper_shipping_name:eh_log_dangerous_goods.un_3481
+msgid "Lithium ion batteries contained in equipment"
+msgstr "设备中包含的锂离子电池"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid "Loading"
+msgstr "正在加载"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration_line__marine_pollutant
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_un_number__marine_pollutant
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_declaration_search
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_un_number_search
+msgid "Marine Pollutant"
+msgstr "海洋污染物"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__has_marine_pollutant
+msgid "Marine Pollutant on Board"
+msgstr "船上载有海洋污染物"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_declaration_form
+msgid "Mark Ready"
+msgstr "标记为就绪"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__message_has_error
+msgid "Message Delivery error"
+msgstr "消息发送错误"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__message_ids
+msgid "Messages"
+msgstr "消息"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.class,placard_description:eh_log_dangerous_goods.dg_class_9
+msgid "Miscellaneous"
+msgstr "杂项"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.class,name:eh_log_dangerous_goods.dg_class_9
+msgid "Miscellaneous Dangerous Substance"
+msgstr "其他危险物质"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__mode
+msgid "Mode"
+msgstr "模式"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_declaration_form
+msgid "Mode and Linkage"
+msgstr "模式与关联"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_declaration__mode__multimodal
+msgid "Multimodal"
+msgstr "多模态"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "我的活动截止时间"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_class__name
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid "Name"
+msgstr "名称"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration_line__net_quantity
+msgid "Net Quantity"
+msgstr "净数量"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid "Net per Pkg"
+msgstr "每包净重"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,help:eh_log_dangerous_goods.field_eh_log_dg_declaration_line__net_quantity
+msgid ""
+"Net quantity per package. Multiplied by package count to derive the gross "
+"quantity printed on the declaration."
+msgstr "每包净数量。乘以包装数量以得出申报单上打印的总数量。"
+
+#. module: eh_log_dangerous_goods
+#. odoo-python
+#: code:addons/eh_log_dangerous_goods/models/eh_log_dg_declaration.py:0
+msgid "New"
+msgstr "新建"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "下一活动日历事件"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "下一活动截止日期"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__activity_summary
+msgid "Next Activity Summary"
+msgstr "下一活动摘要"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__activity_type_id
+msgid "Next Activity Type"
+msgstr "下一活动类型"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.un.number,proper_shipping_name:eh_log_dangerous_goods.un_1977
+msgid "Nitrogen, refrigerated liquid"
+msgstr "氮，冷冻液体"
+
+#. module: eh_log_dangerous_goods
+#. odoo-python
+#: code:addons/eh_log_dangerous_goods/models/eh_log_dg_declaration.py:0
+msgid "No UN lines on the declaration."
+msgstr "申报单上没有 UN 行项目。"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.class,placard_description:eh_log_dangerous_goods.dg_class_2_2
+msgid "Non-flammable Gas"
+msgstr "非易燃气体"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.class,name:eh_log_dangerous_goods.dg_class_2_2
+msgid "Non-flammable, Non-toxic Gas"
+msgstr "非易燃、无毒气体"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_declaration__segregation_status__not_assessed
+msgid "Not Assessed"
+msgstr "未评估"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_un_number__packing_group__none
+msgid "Not applicable"
+msgstr "不适用"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__notes
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration_line__notes
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_declaration_form
+msgid "Notes"
+msgstr "备注"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__notify_party_id
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid "Notify Party"
+msgstr "通知方"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__message_needaction_counter
+msgid "Number of Actions"
+msgstr "操作数量"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__message_has_error_counter
+msgid "Number of errors"
+msgstr "错误数量"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,help:eh_log_dangerous_goods.field_eh_log_dg_declaration__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "需要采取行动的消息数量"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,help:eh_log_dangerous_goods.field_eh_log_dg_declaration__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "发送错误的消息的数量"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_declaration_search
+msgid "Open"
+msgstr "打开"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.class,name:eh_log_dangerous_goods.dg_class_5_2
+#: model:eh.log.dg.class,placard_description:eh_log_dangerous_goods.dg_class_5_2
+msgid "Organic Peroxide"
+msgstr "有机过氧化物"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.class,placard_description:eh_log_dangerous_goods.dg_class_5_1
+msgid "Oxidiser"
+msgstr "氧化剂"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.class,name:eh_log_dangerous_goods.dg_class_5_1
+msgid "Oxidising Substance"
+msgstr "氧化性物质"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid "PG"
+msgstr ""
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration_line__package_count
+msgid "Packages"
+msgstr "包裹"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration_line__packaging_description
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid "Packaging"
+msgstr "包装"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration_line__packing_group
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_un_number__packing_group
+msgid "Packing Group"
+msgstr "包装组"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.un.number,proper_shipping_name:eh_log_dangerous_goods.un_1263
+msgid "Paint or Paint related material"
+msgstr "油漆或与油漆相关的材料"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_declaration_form
+msgid "Parties"
+msgstr "各方"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.un.number,proper_shipping_name:eh_log_dangerous_goods.un_1203
+msgid "Petrol or Gasoline"
+msgstr "汽油"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid "Phone"
+msgstr "电话"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid "Pkgs"
+msgstr "包裹"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_class__placard_description
+msgid "Placard Description"
+msgstr "标示牌说明"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.class,placard_description:eh_log_dangerous_goods.dg_class_2_3
+msgid "Poison Gas"
+msgstr "毒气"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__pod_name
+msgid "Port or Airport of Discharge"
+msgstr "卸货港口或机场"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__pol_name
+msgid "Port or Airport of Loading"
+msgstr "装货港口或机场"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_class__primary_class
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration_line__primary_class
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_un_number__primary_class_id
+msgid "Primary Class"
+msgstr "主类别"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_un_number__proper_shipping_name
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid "Proper Shipping Name"
+msgstr "正确运输名称"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.class,placard_description:eh_log_dangerous_goods.dg_class_7
+msgid "Radioactive"
+msgstr "放射性"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.class,name:eh_log_dangerous_goods.dg_class_7
+msgid "Radioactive Material"
+msgstr "放射性材料"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_declaration__mode__rail
+msgid "Rail (RID)"
+msgstr "铁路 (RID)"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__rating_ids
+msgid "Ratings"
+msgstr "点评"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_declaration__state__ready
+msgid "Ready"
+msgstr "就绪"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__name
+msgid "Reference"
+msgstr "参考号"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,help:eh_log_dangerous_goods.field_eh_log_dg_declaration_line__marine_pollutant
+#: model:ir.model.fields,help:eh_log_dangerous_goods.field_eh_log_dg_un_number__marine_pollutant
+msgid "Required IMDG flag for substances harmful to marine life."
+msgstr "对危害海洋生物的物质所需的 IMDG 标志。"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,help:eh_log_dangerous_goods.field_eh_log_dg_un_number__flashpoint_celsius
+msgid "Required for class 3 entries on IATA DGR and IMDG."
+msgstr "IATA DGR 和 IMDG 中第 3 类条目所必需。"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,help:eh_log_dangerous_goods.field_eh_log_dg_declaration_line__technical_name
+msgid ""
+"Required when the proper shipping name is generic (e.g. 'Flammable liquid "
+"n.o.s.'). The technical name appears in parentheses on the printed "
+"declaration."
+msgstr "当正确运输名称为通用名称（例如 'Flammable liquid n.o.s.'）时需要。技术名称将以括号形式显示在打印的申报单上。"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__activity_user_id
+msgid "Responsible User"
+msgstr "责任用户"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_declaration__mode__road
+msgid "Road (ADR)"
+msgstr "公路 (ADR)"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid "Role"
+msgstr "角色"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "短信发送错误"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__sale_order_id
+msgid "Sale Order"
+msgstr "销售订单"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model,name:eh_log_dangerous_goods.model_sale_order
+msgid "Sales Order"
+msgstr "销售订单"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_declaration__mode__sea
+msgid "Sea (IMDG)"
+msgstr "海运 (IMDG)"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,help:eh_log_dangerous_goods.field_eh_log_dg_declaration__vessel_name
+#: model:ir.model.fields,help:eh_log_dangerous_goods.field_eh_log_dg_declaration__voyage_number
+msgid "Sea only."
+msgstr "仅限海运。"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__segregation_status
+msgid "Segregation"
+msgstr "职责分离"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid "Segregation Notice"
+msgstr "职责分离通知"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__segregation_summary
+msgid "Segregation Summary"
+msgstr "职责分离摘要"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration_line__sequence
+msgid "Sequence"
+msgstr "序列"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__shipper_id
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid "Shipper"
+msgstr "发货人"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.actions.report,name:eh_log_dangerous_goods.action_report_eh_log_dg_declaration
+msgid "Shipper's Declaration for Dangerous Goods"
+msgstr "危险品托运人申报单"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,help:eh_log_dangerous_goods.field_eh_log_dg_class__placard_description
+msgid "Short text printed on the orange placard."
+msgstr "打印在橙色标牌上的简短文字。"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_un_number_form
+msgid "Special Provisions"
+msgstr "特殊规定"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.class,name:eh_log_dangerous_goods.dg_class_4_2
+#: model:eh.log.dg.class,placard_description:eh_log_dangerous_goods.dg_class_4_2
+msgid "Spontaneously Combustible"
+msgstr "自燃物质"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__state
+msgid "State"
+msgstr "状态"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,help:eh_log_dangerous_goods.field_eh_log_dg_declaration__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"基于活动的状态\n"
+"逾期：超出到期日期\n"
+"今天：活动日期是今天\n"
+"计划：未来活动。"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_class__stowage_notes
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_class_form
+msgid "Stowage Notes"
+msgstr "积载说明"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_un_number__subsidiary_class_ids
+msgid "Subsidiary Risks"
+msgstr "子公司风险"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.un.number,proper_shipping_name:eh_log_dangerous_goods.un_1830
+msgid "Sulphuric acid"
+msgstr "硫酸"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration_line__technical_name
+msgid "Technical Name"
+msgstr "技术名称"
+
+#. module: eh_log_dangerous_goods
+#. odoo-python
+#: code:addons/eh_log_dangerous_goods/models/eh_log_freight_job.py:0
+msgid "To be set"
+msgstr "待设置"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid "Total"
+msgstr "总计"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration_line__total_quantity
+msgid "Total Quantity"
+msgstr "数量总计"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.class,placard_description:eh_log_dangerous_goods.dg_class_6_1
+msgid "Toxic"
+msgstr "有毒"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.class,name:eh_log_dangerous_goods.dg_class_2_3
+msgid "Toxic Gas"
+msgstr "有毒气体"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.class,name:eh_log_dangerous_goods.dg_class_6_1
+msgid "Toxic Substance"
+msgstr "有毒物质"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,help:eh_log_dangerous_goods.field_eh_log_dg_declaration__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "记录中异常活动的类型。"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid "UN"
+msgstr ""
+
+#. module: eh_log_dangerous_goods
+#. odoo-python
+#: code:addons/eh_log_dangerous_goods/models/eh_log_dg_declaration.py:0
+msgid ""
+"UN %(un)s (%(name)s) is forbidden on both passenger and cargo aircraft per "
+"IATA DGR. It cannot appear on an air declaration."
+msgstr "根据 IATA DGR，UN %(un)s (%(name)s) 在客机和货机上均被禁止。它不能出现在航空申报单上。"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model,name:eh_log_dangerous_goods.model_eh_log_dg_un_number
+msgid "UN Dangerous Goods Number"
+msgstr "UN 危险品编号"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__line_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_declaration_form
+msgid "UN Lines"
+msgstr "UN 明细行"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration_line__un_number_id
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_un_number__un_number
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_un_number_form
+msgid "UN Number"
+msgstr "UN 编号"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.actions.act_window,name:eh_log_dangerous_goods.action_eh_log_dg_un_number
+#: model:ir.ui.menu,name:eh_log_dangerous_goods.menu_eh_log_dg_un_numbers
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_un_number_list
+msgid "UN Numbers"
+msgstr "UN 编号"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,help:eh_log_dangerous_goods.field_eh_log_dg_class__code
+#: model:ir.model.fields,help:eh_log_dangerous_goods.field_eh_log_dg_declaration_line__primary_class
+msgid "UN hazard class code, e.g. '1', '1.1', '2.1', '4.3'."
+msgstr "UN 危险类别代码，例如 '1'、'1.1'、'2.1'、'4.3'。"
+
+#. module: eh_log_dangerous_goods
+#. odoo-python
+#: code:addons/eh_log_dangerous_goods/models/eh_log_dg_un_number.py:0
+msgid ""
+"UN number %(un)s does not match the required format. Use 'UN' followed by 4 "
+"digits, e.g. UN1090."
+msgstr "UN 编号 %(un)s 与所需格式不匹配。请使用 'UN' 后跟 4 位数字，例如 UN1090。"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.constraint,message:eh_log_dangerous_goods.constraint_eh_log_dg_un_number_un_number_unique
+msgid "UN number must be unique."
+msgstr "UN 编号必须唯一。"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_un_number_form
+msgid "UN1090"
+msgstr ""
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration_line__net_quantity_uom
+msgid "UoM"
+msgstr "计量单位"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid "Value"
+msgstr "值"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_declaration_form
+msgid "Verdict"
+msgstr "结论"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__vessel_name
+msgid "Vessel"
+msgstr "船舶"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid "Vessel / Voyage"
+msgstr "船舶 / 航次"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__voyage_number
+msgid "Voyage"
+msgstr "航次"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__website_message_ids
+msgid "Website Messages"
+msgstr "网站消息"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,help:eh_log_dangerous_goods.field_eh_log_dg_declaration__website_message_ids
+msgid "Website communication history"
+msgstr "网站沟通记录"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,help:eh_log_dangerous_goods.field_sale_order__eh_log_dg_required
+msgid ""
+"When checked, the freight job spawned from this order auto-creates a "
+"Dangerous Goods declaration."
+msgstr "勾选后，由此订单生成的货运作业会自动创建危险品申报。"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_declaration_search
+msgid "With Incompatibilities"
+msgstr "存在不兼容项"
+
+#. module: eh_log_dangerous_goods
+#. odoo-python
+#: code:addons/eh_log_dangerous_goods/models/eh_log_dg_declaration.py:0
+msgid ""
+"[EHL-DG-DECL-001] State changes on a DG declaration must go through the "
+"action buttons. Direct writes are rejected."
+msgstr "[EHL-DG-DECL-001] DG 申报单的状态变更必须通过操作按钮进行。直接写入会被拒绝。"
+
+#. module: eh_log_dangerous_goods
+#. odoo-python
+#: code:addons/eh_log_dangerous_goods/models/eh_log_freight_job.py:0
+msgid "freight_job_id"
+msgstr ""
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_declaration_line__net_quantity_uom__g
+msgid "g"
+msgstr ""
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_declaration_line__net_quantity_uom__kg
+msgid "kg"
+msgstr ""
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_declaration_line__net_quantity_uom__ml
+msgid "mL"
+msgstr ""
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid "on"
+msgstr "在"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_declaration_line__net_quantity_uom__pcs
+msgid "pieces"
+msgstr "件"

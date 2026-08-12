@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_eh_log_ship_vessel_list" model="ir.ui.view">
+        <field name="name">eh.log.ship.vessel.list</field>
+        <field name="model">eh.log.ship.vessel</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="imo_number"/>
+                <field name="call_sign" optional="hide"/>
+                <field name="mmsi" optional="hide"/>
+                <field name="vessel_type"/>
+                <field name="flag_country_id"/>
+                <field name="gross_tonnage"/>
+                <field name="active"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_eh_log_ship_vessel_form" model="ir.ui.view">
+        <field name="name">eh.log.ship.vessel.form</field>
+        <field name="model">eh.log.ship.vessel</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1><field name="name"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="imo_number"/>
+                            <field name="call_sign"/>
+                            <field name="mmsi"/>
+                            <field name="vessel_type"/>
+                            <field name="flag_country_id"/>
+                        </group>
+                        <group>
+                            <field name="owner_partner_id"/>
+                            <field name="operator_partner_id"/>
+                            <field name="active" widget="boolean_toggle"/>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                        </group>
+                    </group>
+                    <group string="Dimensions">
+                        <group>
+                            <field name="gross_tonnage"/>
+                            <field name="net_tonnage"/>
+                            <field name="deadweight_tonnage"/>
+                        </group>
+                        <group>
+                            <field name="length_overall_m"/>
+                            <field name="beam_m"/>
+                            <field name="draft_m"/>
+                        </group>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_eh_log_ship_vessel" model="ir.actions.act_window">
+        <field name="name">Vessels</field>
+        <field name="res_model">eh.log.ship.vessel</field>
+        <field name="view_mode">list,form</field>
+        <field name="views" eval="[(False, 'list'), (False, 'form')]"/>
+    </record>
+
+</odoo>

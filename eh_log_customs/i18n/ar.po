@@ -1,0 +1,1438 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* eh_log_customs
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-01 04:33+0000\n"
+"PO-Revision-Date: 2026-07-01 04:33+0000\n"
+"Last-Translator: ERP Heritage <info@erpheritage.com.au>\n"
+"Language-Team: Arabic\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid "(none)"
+msgstr "(لا شيء)"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid ""
+"<i class=\"fa fa-id-card-o\" style=\"font-size:1.6rem;color:#D4A055;\" "
+"title=\"Customs declaration\"/>"
+msgstr ""
+"<i class=\"fa fa-id-card-o\" style=\"font-size:1.6rem;color:#D4A055;\" "
+"title=\"الإقرار الجمركي\"/>"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__account_number
+msgid "Account Number"
+msgstr "رقم الحساب"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__account_number
+msgid "Account number issued by the customs authority."
+msgstr "رقم الحساب الصادر عن سلطة الجمارك."
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__message_needaction
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__message_needaction
+msgid "Action Needed"
+msgstr "إجراء مطلوب"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__active
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__active
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__active
+msgid "Active"
+msgstr "نشط"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__activity_ids
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__activity_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_customs_declaration_activity
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__activity_exception_decoration
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "زخرفة استثناء النشاط"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__activity_state
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__activity_type_icon
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "أيقونة نوع النشاط"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__regulator_profile_id
+msgid ""
+"Adapter profile through which this declaration is submitted. Country packs "
+"ship default profiles; operators pick the right one per declaration."
+msgstr ""
+"ملف تعريف المحول الذي يتم من خلاله تقديم هذا الإقرار. حزم الدول توفر ملفات "
+"تعريف افتراضية؛ يختار المشغلون الملف المناسب لكل إقرار."
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__amount
+msgid "Amount"
+msgstr "مبلغ"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_61
+msgid "Apparel, knitted or crocheted"
+msgstr "الملابس، المصنوعة بالحياكة أو الكروشيه"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_62
+msgid "Apparel, not knitted or crocheted"
+msgstr "ملابس، غير محبوكة أو مصنوعة بالكروشيه"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_73
+msgid "Articles of iron or steel"
+msgstr "مصنوعات من الحديد أو الصلب"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration__state__assessed
+msgid "Assessed"
+msgstr "تم التقييم"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__assessed_at
+msgid "Assessed At"
+msgstr "تم التقييم في"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__message_attachment_count
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_deferment_account_form
+msgid "Balance"
+msgstr "الرصيد"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_22
+msgid "Beverages, spirits, vinegar"
+msgstr "المشروبات والكحوليات والخل"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__broker_reference
+msgid "Broker Reference"
+msgstr "مرجع الوسيط"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__customs_value
+msgid ""
+"CIF value declared to customs. Duty and VAT are computed against this. "
+"Discrepancy between this and the supplier invoice is the #1 cause of "
+"regulator queries."
+msgstr ""
+"قيمة CIF المصرح بها للجمارك. تُحتسب الرسوم و VAT على أساسها. التباين بين هذه"
+" القيمة وفاتورة المورد هو السبب الأول لاستفسارات الجهة التنظيمية."
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration__state__cancelled
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_deferment_entry__state__cancelled
+msgid "Cancelled"
+msgstr "تم الإلغاء"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_hs_code__level__chapter
+msgid "Chapter (2 digits)"
+msgstr "الفصل (رقمان)"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_hs_code_search
+msgid "Chapters"
+msgstr "الفصول"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__child_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_hs_code_form
+msgid "Children"
+msgstr "الفروع"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration__state__cleared
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "Cleared"
+msgstr "تم التخليص"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__cleared_at
+msgid "Cleared At"
+msgstr "تم التخليص في"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Close"
+msgstr "إغلاق"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration__state__closed
+msgid "Closed"
+msgstr "مغلق"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__closed_at
+msgid "Closed At"
+msgstr "أُغلقت في"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__code
+msgid "Code"
+msgstr "رمز"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__company_ids
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__company_ids
+msgid "Companies"
+msgstr "الشركات"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__company_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__company_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__country_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__country_id
+msgid "Country"
+msgstr "الدولة"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__country_of_origin_id
+msgid "Country of Origin"
+msgstr "بلد المنشأ"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "Created Month"
+msgstr "شهر الإنشاء"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "Created Today"
+msgstr "تم الإنشاء اليوم"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__create_uid
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__create_uid
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__create_uid
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__create_uid
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__create_uid
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__create_date
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__create_date
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__create_date
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__create_date
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__create_date
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_deferment_entry__entry_kind__credit
+msgid "Credit (top-up)"
+msgstr "دائن (شحن رصيد)"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__currency_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__currency_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__currency_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__current_balance
+msgid "Current Balance"
+msgstr "الرصيد الحالي"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__customer_id
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "Customer"
+msgstr "العميل"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_pivot
+msgid "Customs Analysis"
+msgstr "تحليل الجمارك"
+
+#. module: eh_log_customs
+#: model:ir.model,name:eh_log_customs.model_eh_log_customs_declaration
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__declaration_id
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Customs Declaration"
+msgstr "الإقرار الجمركي"
+
+#. module: eh_log_customs
+#: model:ir.model,name:eh_log_customs.model_eh_log_customs_declaration_line
+msgid "Customs Declaration Line"
+msgstr "بند الإقرار الجمركي"
+
+#. module: eh_log_customs
+#: model:ir.model,name:eh_log_customs.model_eh_log_customs_declaration_type
+msgid "Customs Declaration Type"
+msgstr "نوع الإقرار الجمركي"
+
+#. module: eh_log_customs
+#: model:ir.actions.act_window,name:eh_log_customs.action_eh_log_customs_declaration
+#: model:ir.model.fields,field_description:eh_log_customs.field_sale_order__eh_log_customs_declaration_count
+#: model:ir.model.fields,field_description:eh_log_customs.field_sale_order__eh_log_customs_declaration_ids
+#: model:ir.ui.menu,name:eh_log_customs.menu_eh_log_customs_declarations
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_list
+msgid "Customs Declarations"
+msgstr "الإقرارات الجمركية"
+
+#. module: eh_log_customs
+#: model:ir.model,name:eh_log_customs.model_eh_log_customs_deferment_account
+msgid "Customs Deferment Account"
+msgstr "حساب تأجيل الرسوم الجمركية"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__customs_value
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__customs_value
+msgid "Customs Value"
+msgstr "القيمة الجمركية"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid ""
+"Customs declaration %(name)s cannot move from %(current)s to %(target)s. "
+"Allowed transitions from %(current)s: %(allowed)s."
+msgstr ""
+"لا يمكن نقل الإقرار الجمركي %(name)s من %(current)s إلى %(target)s. التحولات"
+" المسموح بها من %(current)s: %(allowed)s."
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid "Customs declaration %(name)s moved to %(state)s."
+msgstr "تم نقل الإقرار الجمركي %(name)s إلى %(state)s."
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Customs value"
+msgstr "القيمة الجمركية"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__regulator_reference
+msgid ""
+"Customs-issued declaration number returned at submission. Captured from the "
+"adapter response."
+msgstr ""
+"رقم الإقرار الصادر عن الجمارك والمُعاد عند التقديم. تم التقاطه من استجابة "
+"المحوّل."
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_deferment_entry__entry_kind__debit
+msgid "Debit (duty payment or adjustment)"
+msgstr "مدين (دفع رسوم أو تسوية)"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__declaration_id
+msgid "Declaration"
+msgstr "الإقرار"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid ""
+"Declaration %(name)s cannot be marked ready. Resolve the following before re-trying:\n"
+"\n"
+"- %(list)s"
+msgstr ""
+"لا يمكن وضع علامة جاهز على الإقرار %(name)s. قم بحل ما يلي قبل إعادة المحاولة:\n"
+"\n"
+"- %(list)s"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__declaration_date
+msgid "Declaration Date"
+msgstr "تاريخ الإقرار"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__declaration_type_id
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_type_form
+msgid "Declaration Type"
+msgstr "نوع الإقرار"
+
+#. module: eh_log_customs
+#: model:ir.actions.act_window,name:eh_log_customs.action_eh_log_customs_declaration_type
+#: model:ir.ui.menu,name:eh_log_customs.menu_eh_log_customs_declaration_types
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_type_list
+msgid "Declaration Types"
+msgstr "أنواع الإقرار"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Declaration date"
+msgstr "تاريخ الإقرار"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid ""
+"Declaration has no HS lines. Add at least one HS code with customs value "
+"before marking ready."
+msgstr ""
+"لا يحتوي الإقرار على بنود HS. أضف رمز HS واحدًا على الأقل مع قيمة جمركية قبل"
+" وضع علامة جاهز."
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid ""
+"Declaration type %(type)s requires a deferment account but none is set on "
+"declaration %(name)s. Pick a deferment account."
+msgstr ""
+"يتطلب نوع الإقرار %(type)s حساب تأجيل ولكن لم يتم تعيين أي حساب على الإقرار "
+"%(name)s. اختر حساب تأجيل."
+
+#. module: eh_log_customs
+#: model:ir.model.constraint,message:eh_log_customs.constraint_eh_log_customs_declaration_type_code_country_unique
+msgid "Declaration type code must be unique per country."
+msgstr "يجب أن يكون رمز نوع الإقرار فريدًا لكل دولة."
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_graph
+msgid "Declarations by State"
+msgstr "الإقرارات حسب الحالة"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_hs_code__duty_rate_pct
+msgid ""
+"Default ad valorem duty rate at this code. Can be overridden per declaration"
+" line."
+msgstr ""
+"معدل الرسوم القيمية الافتراضي عند هذا الرمز. يمكن تجاوزه لكل سطر إقرار."
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_hs_code__vat_rate_pct
+msgid ""
+"Default destination VAT rate. Country packs set this per national overlay."
+msgstr "معدل VAT الافتراضي للوجهة. تحدد حزم البلدان هذا لكل تراكب وطني."
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__deferment_account_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__account_id
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_deferment_account_form
+msgid "Deferment Account"
+msgstr "حساب التأجيل"
+
+#. module: eh_log_customs
+#: model:ir.model,name:eh_log_customs.model_eh_log_customs_deferment_entry
+msgid "Deferment Account Entry"
+msgstr "قيد حساب التأجيل"
+
+#. module: eh_log_customs
+#: model:ir.actions.act_window,name:eh_log_customs.action_eh_log_customs_deferment_account
+#: model:ir.ui.menu,name:eh_log_customs.menu_eh_log_customs_deferment_accounts
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_deferment_account_list
+msgid "Deferment Accounts"
+msgstr "حسابات التأجيل"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid ""
+"Deferment account %(account)s has balance %(balance)s, less than the "
+"declaration payable %(payable)s. Top up before submission."
+msgstr ""
+"حساب التأجيل %(account)s لديه رصيد %(balance)s، أقل من الإقرار المستحق "
+"%(payable)s. أضف رصيدًا قبل الإرسال."
+
+#. module: eh_log_customs
+#: model:ir.model.constraint,message:eh_log_customs.constraint_eh_log_customs_deferment_account_account_number_per_co_dcd2e1b6
+msgid "Deferment account number must be unique per (regulator, company)."
+msgstr "يجب أن يكون رقم حساب التأجيل فريدًا لكل (regulator, company)."
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__description
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__description
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__description
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__name
+msgid "Description"
+msgstr "الوصف"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__direction
+msgid "Direction"
+msgstr "الاتجاه"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__display_name
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__display_name
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__display_name
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__display_name
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__display_name
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__display_name
+#: model:ir.model.fields,field_description:eh_log_customs.field_sale_order__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration__state__draft
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_deferment_entry__state__draft
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__duty_amount
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__duty_amount
+msgid "Duty"
+msgstr "الرسوم الجمركية"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Duty + VAT"
+msgstr "الرسوم الجمركية + VAT"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__duty_rate_pct
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__duty_rate_pct
+msgid "Duty Rate (%)"
+msgstr "معدل الرسوم الجمركية (%)"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid "Duty and VAT for declaration %(name)s"
+msgstr "الرسوم الجمركية وVAT للإقرار %(name)s"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_85
+msgid "Electrical machinery and equipment"
+msgstr "الآلات والمعدات الكهربائية"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_hs_code__country_id
+msgid ""
+"Empty for WCO-level codes (chapter, heading, subheading). Country pack "
+"national overlays carry the country."
+msgstr ""
+"فارغ لرموز مستوى WCO (الفصل، البند، البند الفرعي). التراكبات الوطنية لحزمة "
+"الدولة تحمل الدولة."
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__entry_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_deferment_account_form
+msgid "Entries"
+msgstr "القيود"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__entry_date
+msgid "Entry Date"
+msgstr "تاريخ إدخال القيد"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration_type__direction__export
+msgid "Export"
+msgstr "تصدير"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.declaration.type,name:eh_log_customs.dt_export
+msgid "Export Declaration"
+msgstr "إقرار التصدير"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Exporter"
+msgstr "المُصدّر"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__exporter_id
+msgid "Exporter or Shipper"
+msgstr "المُصدّر أو الشاحن"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_03
+msgid "Fish, crustaceans, molluscs"
+msgstr "أسماك وقشريات ورخويات"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__message_follower_ids
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__message_follower_ids
+msgid "Followers"
+msgstr "المتابعين"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__message_partner_ids
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعين (الشركاء)"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__activity_type_icon
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "أيقونة من Font awesome مثال: fa-tasks"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_64
+msgid "Footwear, gaiters and similar"
+msgstr "الأحذية والجوارب الواقية وما شابهها"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__freight_job_id
+msgid "Freight Job"
+msgstr "مهمة الشحن"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_94
+msgid "Furniture, lamps, prefabricated buildings"
+msgstr "الأثاث والمصابيح والمباني الجاهزة"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_hs_code_search
+msgid "Group by Country"
+msgstr "التجميع حسب الدولة"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search
+msgid "Group by Regulator"
+msgstr "تجميع حسب الجهة التنظيمية"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search
+msgid "Group by State"
+msgstr "تجميع حسب الحالة"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search
+msgid "Group by Type"
+msgstr "تجميع حسب النوع"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__hs_code_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__code
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_hs_code_form
+msgid "HS Code"
+msgstr "بند التعرفة الجمركية"
+
+#. module: eh_log_customs
+#: model:ir.actions.act_window,name:eh_log_customs.action_eh_log_customs_hs_code
+#: model:ir.ui.menu,name:eh_log_customs.menu_eh_log_customs_hs_codes
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_hs_code_list
+msgid "HS Codes"
+msgstr "رموز HS"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__line_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "HS Lines"
+msgstr "بنود HS"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_hs_code.py:0
+msgid ""
+"HS code %(code)s has invalid length %(length)d. Allowed lengths: 2 "
+"(chapter), 4 (heading), 6 (subheading), 8 or 10 (national)."
+msgstr ""
+"رمز HS %(code)s له طول غير صالح %(length)d. الأطوال المسموح بها: 2 (فصل)، 4 "
+"(بند)، 6 (بند فرعي)، 8 أو 10 (وطني)."
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_hs_code.py:0
+msgid ""
+"HS code %(code)s is not numeric. HS codes are all-digit, length 2 / 4 / 6 / "
+"8 / 10."
+msgstr ""
+"رمز HS %(code)s ليس رقميًا. رموز HS كلها أرقام، بطول 2 / 4 / 6 / 8 / 10."
+
+#. module: eh_log_customs
+#: model:ir.model.constraint,message:eh_log_customs.constraint_eh_log_customs_hs_code_code_country_unique
+msgid "HS code must be unique per country (empty country = WCO scope)."
+msgstr "يجب أن يكون رمز HS فريدًا لكل دولة (دولة فارغة = نطاق WCO)."
+
+#. module: eh_log_customs
+#: model:ir.model,name:eh_log_customs.model_eh_log_customs_hs_code
+msgid "Harmonised System (HS) Code"
+msgstr "رمز النظام المنسق (HS)"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__has_message
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__has_message
+msgid "Has Message"
+msgstr "يحتوي على رسالة"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_hs_code__level__heading
+msgid "Heading (4 digits)"
+msgstr "العنوان (4 أرقام)"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_hs_code_search
+msgid "Headings"
+msgstr "الترويسات"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__id
+#: model:ir.model.fields,field_description:eh_log_customs.field_sale_order__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_type_form
+msgid "IMP"
+msgstr ""
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__activity_exception_icon
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__activity_exception_icon
+msgid "Icon"
+msgstr "الأيقونة"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__activity_exception_icon
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "الأيقونة للإشارة إلى النشاط المستثنى."
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__message_needaction
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "إذا كان محددًا، فهناك رسائل جديدة عليك رؤيتها."
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__message_has_error
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__message_has_sms_error
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__message_has_error
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا كان محددًا، فقد حدث خطأ في تسليم بعض الرسائل."
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration_type__direction__import
+msgid "Import"
+msgstr "استيراد"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__declaration_type_id
+msgid ""
+"Import / Export / Transit / Re-export / Temporary. Determines which fields "
+"are mandatory and which regulator endpoint the adapter posts to."
+msgstr ""
+"الاستيراد / التصدير / العبور / إعادة التصدير / المؤقت. يحدد الحقول الإلزامية"
+" ونقطة نهاية الجهة المنظِّمة التي يرسل إليها المُهايئ."
+
+#. module: eh_log_customs
+#: model:eh.log.customs.declaration.type,name:eh_log_customs.dt_import
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_type_form
+msgid "Import Declaration"
+msgstr "بيان الاستيراد"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Importer"
+msgstr "المستورد"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__importer_id
+msgid "Importer or Consignee"
+msgstr "المستورد أو المرسل إليه"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__broker_reference
+msgid ""
+"Internal broker reference (your file number). Surfaces on the regulator "
+"submission and on customer invoices."
+msgstr ""
+"المرجع الداخلي للوسيط (رقم ملفك). يظهر في تقديم الجهة التنظيمية وعلى فواتير "
+"العملاء."
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_72
+msgid "Iron and steel"
+msgstr "الحديد والصلب"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__message_is_follower
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__entry_kind
+msgid "Kind"
+msgstr "النوع"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__write_uid
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__write_uid
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__write_uid
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__write_uid
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__write_uid
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__write_date
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__write_date
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__write_date
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__write_date
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__write_date
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__level
+msgid "Level"
+msgstr "المستوى"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid "Line %(seq)s has no HS code."
+msgstr "السطر %(seq)s ليس له رمز HS."
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid "Line %(seq)s has zero customs value."
+msgstr "السطر %(seq)s له قيمة جمركية صفرية."
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__line_count
+msgid "Lines"
+msgstr "البنود"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Linkage"
+msgstr "الربط"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_01
+msgid "Live animals"
+msgstr "حيوانات حية"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__is_low
+msgid "Low"
+msgstr "منخفض"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__low_balance_threshold
+msgid "Low Balance Threshold"
+msgstr "حد الرصيد المنخفض"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_84
+msgid "Machinery, mechanical appliances"
+msgstr "الآلات والأجهزة الميكانيكية"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Mark Assessed"
+msgstr "وضع علامة تم التقييم"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Mark Cleared"
+msgstr "وضع علامة تم التخليص"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Mark Queried"
+msgstr "وضع علامة قيد الاستعلام"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Mark Ready"
+msgstr "وضع علامة جاهز"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__message_has_error
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسائل"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__message_ids
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_27
+msgid "Mineral fuels, oils"
+msgstr "الوقود المعدني والزيوت"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__my_activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "الموعد النهائي لنشاطاتي"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "My Declarations"
+msgstr "إقراراتي"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__name
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_hs_code__level__national_10
+msgid "National (10 digits)"
+msgstr "وطني (10 أرقام)"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_hs_code__level__national_8
+msgid "National (8 digits)"
+msgstr "وطني (8 أرقام)"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid "New"
+msgstr "جديد"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__activity_calendar_event_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "الفعالية التالية في تقويم الأنشطة"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__activity_summary
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__activity_type_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid ""
+"No adapter is registered for provider '%(provider)s'. Install the country "
+"pack that owns this regulator. Currently registered: %(list)s."
+msgstr ""
+"لم يتم تسجيل أي محول للمزود '%(provider)s'. قم بتثبيت حزمة البلد المالكة "
+"لهذه الجهة التنظيمية. المسجلون حالياً: %(list)s."
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__notes
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__notes
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__notes
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__notes
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__notes
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_deferment_account_form
+msgid "Notes"
+msgstr "الملاحظات"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__message_needaction_counter
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__message_has_error_counter
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الأخطاء"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__message_needaction_counter
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "عدد الرسائل التي تتطلب اتخاذ إجراء"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__message_has_error_counter
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل الحادث بها خطأ في التسليم"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_hs_code__code
+msgid ""
+"Numeric. 2 digits = chapter, 4 = heading, 6 = WCO subheading, 8 or 10 = "
+"national tariff line."
+msgstr ""
+"رقمي. رقمان = فصل، 4 = بند، 6 = بند فرعي وفق WCO، 8 أو 10 = سطر تعريفة وطني."
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "Open"
+msgstr "فتح"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__opening_balance
+msgid "Opening Balance"
+msgstr "الرصيد الافتتاحي"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__name
+msgid ""
+"Operator-friendly label (e.g. 'Mirsal Deferment, Acme Logistics LLC, AED')."
+msgstr "تسمية سهلة للمشغّل (مثل 'Mirsal Deferment, Acme Logistics LLC, AED')."
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration_type__country_id
+msgid ""
+"Optional country scope. Empty means the type applies globally (used by the "
+"universal seed). Country packs set the country to scope their authority-"
+"specific variants."
+msgstr ""
+"نطاق دولة اختياري. الفراغ يعني أن النوع ينطبق عالمياً (يُستخدم بواسطة البذرة"
+" العالمية). تحدد حزم الدول الدولة لتحديد نطاق متغيراتها الخاصة بالجهة "
+"المختصة."
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration_type__direction__other
+msgid "Other"
+msgstr "غير ذلك"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration__state__paid
+msgid "Paid"
+msgstr "مدفوع"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__parent_id
+msgid "Parent"
+msgstr "الأصل"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__parent_path
+msgid "Parent Path"
+msgstr "المسار الرئيسي"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Parties"
+msgstr "الأطراف"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Pay (Debit Deferment)"
+msgstr "الدفع (تأجيل الخصم)"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_30
+msgid "Pharmaceutical products"
+msgstr "المنتجات الصيدلانية"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_39
+msgid "Plastics and articles thereof"
+msgstr "اللدائن ومصنوعاتها"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_deferment_entry__state__posted
+msgid "Posted"
+msgstr "مُرحّل"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__posted_at
+msgid "Posted At"
+msgstr "تاريخ الترحيل"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__quantity
+msgid "Quantity"
+msgstr "الكمية"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "Queried"
+msgstr "تم الاستعلام"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration__state__queried
+msgid "Queried by Customs"
+msgstr "استعلام من الجمارك"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__rating_ids
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__rating_ids
+msgid "Ratings"
+msgstr "التقييمات"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration_type__direction__re_export
+msgid "Re-export"
+msgstr "إعادة التصدير"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.declaration.type,name:eh_log_customs.dt_re_export
+msgid "Re-export Declaration"
+msgstr "إقرار إعادة التصدير"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration__state__ready
+msgid "Ready"
+msgstr "جاهز"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__name
+msgid "Reference"
+msgstr "الرقم المرجعي"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_kanban
+msgid "Reg ref:"
+msgstr "المرجع التنظيمي:"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__regulator_profile_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__regulator_profile_id
+msgid "Regulator Profile"
+msgstr "ملف الجهة التنظيمية"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Regulator Ref:"
+msgstr "مرجع الجهة التنظيمية:"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__regulator_reference
+msgid "Regulator Reference"
+msgstr "مرجع الجهة التنظيمية"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid ""
+"Regulator profile is not set. Pick the regulator this declaration is filed "
+"with."
+msgstr ""
+"لم يتم تعيين ملف الجهة التنظيمية. اختر الجهة التنظيمية التي يُقدَّم هذا "
+"الإقرار إليها."
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid "Regulator rejected submission. Code %(code)s: %(message)s"
+msgstr "رفضت الجهة التنظيمية التقديم. الرمز %(code)s: %(message)s"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration__state__rejected
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "Rejected"
+msgstr "تم الرفض"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__requires_deferment
+msgid "Requires Deferment Account"
+msgstr "يتطلب حساب التأجيل"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__activity_user_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_hs_code_form
+msgid "Routers, switches, and similar"
+msgstr "أجهزة التوجيه والمحولات وما شابهها"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__message_has_sms_error
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل النصية القصيرة"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__sale_order_id
+msgid "Sale Order"
+msgstr "أمر البيع"
+
+#. module: eh_log_customs
+#: model:ir.model,name:eh_log_customs.model_sale_order
+msgid "Sales Order"
+msgstr "أمر البيع"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "Search Declarations"
+msgstr "البحث في الإقرارات"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__sequence
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__sequence
+msgid "Sequence"
+msgstr "تسلسل"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_entry__declaration_id
+msgid ""
+"Set when the entry is auto-posted by a declaration submission. Empty for "
+"manual top-ups and adjustments."
+msgstr ""
+"يُضبط عندما يتم ترحيل القيد تلقائيًا عبر تقديم إقرار. فارغ لعمليات الإضافة "
+"والتعديلات اليدوية."
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration_type__code
+msgid ""
+"Stable identifier (IMP, EXP, TRA, TRF, REX, TADM, ...). Country packs prefix"
+" their codes with an ISO country code (AE-IMP-LOCAL, SA-IMP-SABER, etc.) to "
+"namespace without colliding with the universal codes."
+msgstr ""
+"معرّف ثابت (IMP, EXP, TRA, TRF, REX, TADM, ...). تُسبق حزم الدول رموزها برمز"
+" دولة ISO (AE-IMP-LOCAL, SA-IMP-SABER، إلخ) لإنشاء مساحة أسماء دون التعارض "
+"مع الرموز العالمية."
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__state
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__state
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "State"
+msgstr "الحالة"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__activity_state
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"الأنشطة المعتمدة على الحالة\n"
+"المتأخرة: تاريخ الاستحقاق مر\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"المخطط: الأنشطة المستقبلية."
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_hs_code__level__subheading
+msgid "Subheading (6 digits)"
+msgstr "العنوان الفرعي (6 أرقام)"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_hs_code_search
+msgid "Subheadings"
+msgstr "العناوين الفرعية"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid ""
+"Submission failed (status %(status)s). The declaration stays in 'ready'. Re-"
+"submit from the form or replay from the message log."
+msgstr ""
+"فشل الإرسال (الحالة %(status)s). يظل الإقرار في حالة 'ready'. أعد الإرسال من"
+" النموذج أو أعد التشغيل من سجل الرسائل."
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Submit to Regulator"
+msgstr "الإرسال إلى الجهة التنظيمية"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration__state__submitted
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "Submitted"
+msgstr "تم الإرسال"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__submitted_at
+msgid "Submitted At"
+msgstr "تاريخ الإرسال"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__payable_amount
+msgid ""
+"Sum of duty plus VAT plus other charges. Drawn from the deferment account on"
+" assessment."
+msgstr ""
+"مجموع الرسوم الجمركية بالإضافة إلى VAT بالإضافة إلى الرسوم الأخرى. يُسحب من "
+"حساب التأجيل عند التقييم."
+
+#. module: eh_log_customs
+#: model:eh.log.customs.declaration.type,name:eh_log_customs.dt_temporary
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration_type__direction__temporary
+msgid "Temporary Admission"
+msgstr "الإدخال المؤقت"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "This Month"
+msgstr "هذا الشهر"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Timeline"
+msgstr "المخطط الزمني"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__payable_amount
+msgid "Total Payable"
+msgstr "الاجمالى الدائن"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Totals"
+msgstr "الإجماليات"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration_type__direction__transfer
+msgid "Transfer"
+msgstr "تحويل"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.declaration.type,name:eh_log_customs.dt_transfer
+msgid "Transfer Declaration"
+msgstr "إقرار التحويل"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration_type__direction__transit
+msgid "Transit"
+msgstr "العبور"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.declaration.type,name:eh_log_customs.dt_transit
+msgid "Transit Declaration"
+msgstr "إقرار العبور"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "Type"
+msgstr "النوع"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Type and Authority"
+msgstr "النوع والجهة المختصة"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__activity_exception_decoration
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع النشاط المستثنى في السجل."
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__unit_value
+msgid "Unit Value"
+msgstr "قيمة الوحدة"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__vat_amount
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__vat_amount
+msgid "VAT"
+msgstr "ضريبة القيمة المضافة"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__vat_rate_pct
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__vat_rate_pct
+msgid "VAT Rate (%)"
+msgstr "معدل VAT (%)"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_87
+msgid "Vehicles other than rail or tram"
+msgstr "مركبات غير القطارات أو الترام"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__website_message_ids
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع الإلكتروني"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__website_message_ids
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__website_message_ids
+msgid "Website communication history"
+msgstr "سجل تواصل الموقع الإلكتروني"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration_type__requires_deferment
+msgid ""
+"When True, declarations of this type cannot move past submitted without a "
+"deferment account configured. Suitable for import declarations where duty "
+"must be paid before release."
+msgstr ""
+"عندما تكون القيمة True، لا يمكن للإقرارات من هذا النوع تجاوز حالة 'مقدَّم' "
+"دون تكوين حساب سداد مؤجل. مناسب لإقرارات الاستيراد التي يجب فيها سداد الرسوم"
+" قبل الإفراج."
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__low_balance_threshold
+msgid ""
+"When current balance drops below this value, a warning activity is raised to"
+" the account owner."
+msgstr ""
+"عندما ينخفض الرصيد الحالي دون هذه القيمة، يتم إصدار نشاط تحذير لمالك الحساب."
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_44
+msgid "Wood and articles of wood"
+msgstr "الخشب ومصنوعاته"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid ""
+"[EHL-CUSTOMS-DECL-001] State changes on a customs declaration must go "
+"through the action buttons. Direct writes are rejected."
+msgstr ""
+"[EHL-CUSTOMS-DECL-001] يجب أن تتم تغييرات الحالة على الإقرار الجمركي عبر "
+"أزرار الإجراءات. تُرفض عمليات الكتابة المباشرة."

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_eh_log_dispute_mass_settle_form" model="ir.ui.view">
+        <field name="name">eh.log.dispute.mass.settle.form</field>
+        <field name="model">eh.log.dispute.mass.settle</field>
+        <field name="arch" type="xml">
+            <form string="Mass-settle Disputes">
+                <group>
+                    <field name="dispute_ids" widget="many2many_tags" readonly="1"/>
+                    <field name="use_offered_amount"/>
+                </group>
+                <footer>
+                    <button name="action_apply" type="object" string="Settle All" class="btn-primary"/>
+                    <button special="cancel" string="Cancel" class="btn-secondary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_eh_log_dispute_mass_settle" model="ir.actions.act_window">
+        <field name="name">Mass-settle</field>
+        <field name="res_model">eh.log.dispute.mass.settle</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="binding_model_id" ref="model_eh_log_dispute"/>
+        <field name="binding_view_types">list</field>
+    </record>
+
+    <record id="view_eh_log_dispute_mass_write_off_form" model="ir.ui.view">
+        <field name="name">eh.log.dispute.mass.write.off.form</field>
+        <field name="model">eh.log.dispute.mass.write.off</field>
+        <field name="arch" type="xml">
+            <form string="Mass-write-off Disputes">
+                <group>
+                    <field name="dispute_ids" widget="many2many_tags" readonly="1"/>
+                    <field name="reason" colspan="2"/>
+                </group>
+                <footer>
+                    <button name="action_apply" type="object" string="Write Off All" class="btn-danger"/>
+                    <button special="cancel" string="Cancel" class="btn-secondary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_eh_log_dispute_mass_write_off" model="ir.actions.act_window">
+        <field name="name">Mass-write-off</field>
+        <field name="res_model">eh.log.dispute.mass.write.off</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="binding_model_id" ref="model_eh_log_dispute"/>
+        <field name="binding_view_types">list</field>
+    </record>
+
+</odoo>

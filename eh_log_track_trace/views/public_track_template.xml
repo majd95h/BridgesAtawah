@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <template id="public_track_layout" name="Public Tracking Layout">
+        <html>
+            <head>
+                <meta charset="utf-8"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1"/>
+                <title>Shipment Tracking</title>
+                <link rel="stylesheet"
+                      href="/eh_log_track_trace/static/src/css/public_track.css"/>
+            </head>
+            <body>
+                <div class="eh-track-container">
+                    <t t-out="0"/>
+                </div>
+            </body>
+        </html>
+    </template>
+
+    <template id="public_track_page" name="Public Tracking Page">
+        <t t-call="eh_log_track_trace.public_track_layout">
+            <div class="eh-track-header">
+                <h1>Shipment Tracking</h1>
+                <div class="reference">
+                    <t t-out="model_label"/>:
+                    <strong>
+                        <t t-out="reference"/>
+                    </strong>
+                </div>
+            </div>
+            <div class="eh-track-timeline">
+                <t t-if="not timeline">
+                    <div class="eh-track-empty">
+                        No tracking events yet. Check back shortly.
+                    </div>
+                </t>
+                <t t-if="timeline">
+                    <t t-foreach="timeline" t-as="event">
+                        <div t-att-class="'eh-track-event ' + (event['category'] or '')">
+                            <div class="icon">
+                                <i t-att-class="'fa ' + (event['icon'] or 'fa-circle-info')"/>
+                            </div>
+                            <div class="body">
+                                <div class="label">
+                                    <t t-out="event['label']"/>
+                                </div>
+                                <div class="meta">
+                                    <t t-out="event['occurred_at']"/>
+                                    <t t-if="event['location']">
+                                        <span> &#183; </span>
+                                        <t t-out="event['location']"/>
+                                    </t>
+                                </div>
+                                <div t-if="event['description']" class="meta">
+                                    <t t-out="event['description']"/>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </div>
+        </t>
+    </template>
+
+    <template id="public_track_not_found" name="Public Tracking Not Found">
+        <t t-call="eh_log_track_trace.public_track_layout">
+            <div class="eh-track-header">
+                <h1>Shipment Tracking</h1>
+            </div>
+            <div class="eh-track-timeline">
+                <div class="eh-track-empty">
+                    No shipment matched the tracking link. Check the link and try again.
+                </div>
+            </div>
+        </t>
+    </template>
+
+</odoo>

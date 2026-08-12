@@ -1,0 +1,2056 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* eh_log_warehouse_3pl
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-01 04:34+0000\n"
+"PO-Revision-Date: 2026-07-01 04:34+0000\n"
+"Last-Translator: ERP Heritage <info@erpheritage.com.au>\n"
+"Language-Team: Polish\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_billing_run.py:0
+msgid "%(service)s (%(period_start)s to %(period_end)s)"
+msgstr "%(service)s (od %(period_start)s do %(period_end)s)"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model,name:eh_log_warehouse_3pl.model_eh_log_warehouse_client
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__client_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__client_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__client_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__client_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_snapshot__client_id
+msgid "3PL Client"
+msgstr "Klient 3PL"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.actions.act_window,name:eh_log_warehouse_3pl.action_eh_log_warehouse_client
+#: model:ir.ui.menu,name:eh_log_warehouse_3pl.menu_eh_log_warehouse_clients
+msgid "3PL Clients"
+msgstr "Klienci 3PL"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model,name:eh_log_warehouse_3pl.model_eh_log_warehouse_rate_card
+msgid "3PL Rate Card"
+msgstr "Cennik 3PL"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model,name:eh_log_warehouse_3pl.model_eh_log_warehouse_rate_line
+msgid "3PL Rate Line"
+msgstr "Wiersz stawki 3PL"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_grn_document
+msgid "<strong>Arrived:</strong>"
+msgstr "<strong>Przybył:</strong>"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_grn_document
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_pick_list_document
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_storage_statement_document
+msgid "<strong>Client:</strong>"
+msgstr "<strong>Klient:</strong>"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_pick_list_document
+msgid "<strong>Customer:</strong>"
+msgstr "<strong>Klient:</strong>"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_grn_document
+msgid "<strong>Expected:</strong>"
+msgstr "<strong>Oczekiwane:</strong>"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_grn_document
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_pick_list_document
+msgid "<strong>Facility:</strong>"
+msgstr "<strong>Obiekt:</strong>"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_storage_statement_document
+msgid "<strong>Period:</strong>"
+msgstr "<strong>Okres:</strong>"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_pick_list_document
+msgid "<strong>Planned:</strong>"
+msgstr "<strong>Zaplanowane:</strong>"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_storage_statement_document
+msgid "<strong>Rate Card:</strong>"
+msgstr "<strong>Cennik:</strong>"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_grn_document
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_pick_list_document
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_storage_statement_document
+msgid "<strong>Reference:</strong>"
+msgstr "<strong>Odnośnik:</strong>"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_grn_document
+msgid "<strong>Supplier:</strong>"
+msgstr "<strong>Dostawca:</strong>"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_storage_statement_document
+msgid "<strong>Total</strong>"
+msgstr "<strong>Suma</strong>"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__message_needaction
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__message_needaction
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__message_needaction
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__message_needaction
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__message_needaction
+msgid "Action Needed"
+msgstr "Wymagane działanie"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__active
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__active
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_location__active
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_card__active
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_zone__active
+msgid "Active"
+msgstr "Aktywne"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_client__rate_card_id
+msgid ""
+"Active rate card. Changing the rate card affects bills raised after the "
+"change date; historic snapshots and movements stay linked to the rate card "
+"in force at that time through the billing line audit."
+msgstr ""
+"Aktywna karta stawek. Zmiana karty stawek wpływa na rachunki wystawione po "
+"dacie zmiany; historyczne migawki i ruchy pozostają powiązane z kartą stawek"
+" obowiązującą w danym momencie poprzez audyt wierszy rozliczeniowych."
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__activity_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__activity_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__activity_ids
+msgid "Activities"
+msgstr "Czynności"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__activity_exception_decoration
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__activity_exception_decoration
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Dekoracja wyjątku aktywności"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__activity_state
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__activity_state
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__activity_state
+msgid "Activity State"
+msgstr "Stan aktywności"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__activity_type_icon
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__activity_type_icon
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Ikona typu aktywności"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__address_id
+msgid "Address"
+msgstr "Adres"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_movement__movement_type__adjustment_in
+msgid "Adjustment In"
+msgstr "Korekta przychodu"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_movement__movement_type__adjustment_out
+msgid "Adjustment Out"
+msgstr "Korekta rozchodu"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_client_form
+msgid "Allowed Facilities"
+msgstr "Dozwolone obiekty"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_receipt__state__arrived
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search_full
+msgid "Arrived"
+msgstr "Przybył"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__arrived_at
+msgid "Arrived At"
+msgstr "Przybył o"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__message_attachment_count
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__message_attachment_count
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__message_attachment_count
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__message_attachment_count
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__message_attachment_count
+msgid "Attachment Count"
+msgstr "Liczba załączników"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_client__storage_charging_basis__snapshot_average
+msgid "Average of Daily Snapshots"
+msgstr "Średnia z dziennych migawek"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_billing_run_pivot
+msgid "Billing Analysis"
+msgstr "Analiza rozliczeń"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__billing_day
+msgid "Billing Day"
+msgstr "Dzień rozliczenia"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_line__run_id
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_billing_run_form
+msgid "Billing Run"
+msgstr "Przebieg rozliczenia"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.actions.act_window,name:eh_log_warehouse_3pl.action_eh_log_warehouse_billing_run
+#: model:ir.ui.menu,name:eh_log_warehouse_3pl.menu_eh_log_warehouse_billing_runs
+msgid "Billing Runs"
+msgstr "Przebiegi rozliczeń"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_client__partner_id
+msgid ""
+"Billing and shipping partner. The monthly billing run raises a sale order "
+"against this partner."
+msgstr ""
+"Partner rozliczeniowy i wysyłkowy. Miesięczny przebieg rozliczenia tworzy "
+"zamówienie sprzedaży dla tego partnera."
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_billing_run_graph
+msgid "Billing by Client"
+msgstr "Rozliczenie według klienta"
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_billing_run.py:0
+msgid "Billing run %(name)s cannot move from %(from)s to %(to)s."
+msgstr "Przebieg rozliczenia %(name)s nie może przejść z %(from)s do %(to)s."
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_facility__customs_status__bonded
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_zone__purpose__bonded
+msgid "Bonded"
+msgstr "Pod dozorem celnym"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_billing_run_form
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_form
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_form
+msgid "Cancel"
+msgstr "Anuluj"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_billing_run__state__cancelled
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_pick__state__cancelled
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_receipt__state__cancelled
+msgid "Cancelled"
+msgstr "Anulowano"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_storage_statement_document
+msgid "Charges"
+msgstr "Opłaty"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_pick_list_document
+msgid "Checker"
+msgstr "Weryfikator"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_billing_run_search_full
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_search_full
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search_full
+msgid "Client"
+msgstr "Klient"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.constraint,message:eh_log_warehouse_3pl.constraint_eh_log_warehouse_client_client_code_unique
+msgid "Client code must be unique per company."
+msgstr "Kod klienta musi być unikalny w obrębie firmy."
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_form
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_form
+msgid "Close"
+msgstr "Zamknij"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_pick__state__closed
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_receipt__state__closed
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_search_full
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search_full
+msgid "Closed"
+msgstr "Zamknięte"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__closed_at
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__closed_at
+msgid "Closed At"
+msgstr "Zamknięto"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__code
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__code
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_location__code
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_card__code
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_zone__code
+msgid "Code"
+msgstr "Kod"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_line__company_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__company_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__company_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__company_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_location__company_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__company_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__company_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick_line__company_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_card__company_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_line__company_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__company_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt_line__company_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_snapshot__company_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_zone__company_id
+msgid "Company"
+msgstr "Firma"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_form
+msgid "Complete Putaway"
+msgstr "Zakończ odkładanie"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_location__full_code
+msgid ""
+"Composite location reference of facility code, zone code, and location code "
+"joined by slashes. Printed on labels and pick lists."
+msgstr ""
+"Złożone odniesienie lokalizacji składające się z kodu obiektu, kodu strefy i"
+" kodu lokalizacji połączonych ukośnikami. Drukowane na etykietach i listach "
+"pobrań."
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_billing_run_form
+msgid "Compute Charges"
+msgstr "Oblicz opłaty"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_billing_run__state__computed
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_billing_run_search_full
+msgid "Computed"
+msgstr "Obliczone"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_line__create_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__create_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__create_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__create_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_location__create_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__create_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__create_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick_line__create_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_card__create_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_line__create_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__create_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt_line__create_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_snapshot__create_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_zone__create_uid
+msgid "Created by"
+msgstr "Utworzył(a)"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_line__create_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__create_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__create_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__create_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_location__create_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__create_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__create_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick_line__create_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_card__create_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_line__create_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__create_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt_line__create_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_snapshot__create_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_zone__create_date
+msgid "Created on"
+msgstr "Data utworzenia"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_line__currency_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__currency_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__currency_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_card__currency_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_line__currency_id
+msgid "Currency"
+msgstr "Waluta"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_search_full
+msgid "Customer"
+msgstr "Klient"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__customer_reference
+msgid "Customer Reference"
+msgstr "Odnośnik klienta"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__customs_status
+msgid "Customs Status"
+msgstr "Status celny"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__expected_date
+msgid ""
+"Date the receipt is expected to arrive. Drives the dock scheduling list view"
+" and the late-arrival alerts."
+msgstr ""
+"Data spodziewanego przybycia przyjęcia. Zasila widok listy harmonogramu "
+"doków oraz alerty o opóźnionym przybyciu."
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_client__billing_day
+msgid ""
+"Day of the month the periodic billing run targets. The run cron checks this "
+"field; clients on different days let billing load be spread across the "
+"month."
+msgstr ""
+"Dzień miesiąca, na który jest ukierunkowany cykliczny przebieg rozliczeń. "
+"Cron przebiegu sprawdza to pole; rozłożenie klientów na różne dni pozwala "
+"rozproszyć obciążenie rozliczeniowe na cały miesiąc."
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt_line__destination_location_id
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_grn_document
+msgid "Destination"
+msgstr "Miejsce docelowe"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__destination_location_id
+msgid "Destination Location"
+msgstr "Lokacja docelowa"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_line__display_name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__display_name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__display_name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__display_name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_location__display_name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__display_name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__display_name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick_line__display_name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_card__display_name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_line__display_name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__display_name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt_line__display_name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_snapshot__display_name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_zone__display_name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_sale_order__display_name
+msgid "Display Name"
+msgstr "Nazwa wyświetlana"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_facility__customs_status__domestic
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_zone__purpose__domestic
+msgid "Domestic"
+msgstr "Krajowy"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_billing_run__state__draft
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_billing_run_search_full
+msgid "Draft"
+msgstr "Wersja robocza"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_grn_document
+msgid "Driver"
+msgstr "Kierowca"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_location__purpose
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_zone__purpose
+msgid ""
+"Drives movement validation. Bonded zones require a customs declaration on "
+"inbound; free zones require a domestic-customs entry on outbound to a non-"
+"free destination."
+msgstr ""
+"Steruje walidacją przesunięć. Strefy celne wymagają zgłoszenia celnego przy "
+"przyjęciu; strefy wolnocłowe wymagają krajowego zgłoszenia celnego przy "
+"wydaniu do miejsca docelowego spoza strefy wolnocłowej."
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.constraint,message:eh_log_warehouse_3pl.constraint_eh_log_warehouse_rate_line_rate_line_unique
+msgid "Duplicate rate line for the same service and product."
+msgstr "Zduplikowany wiersz stawki dla tej samej usługi i produktu."
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.constraint,message:eh_log_warehouse_3pl.constraint_eh_log_warehouse_snapshot_snapshot_unique
+msgid "Duplicate snapshot for the same date / client / location."
+msgstr "Zduplikowana migawka dla tej samej daty / klienta / lokalizacji."
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_receipt__state__expected
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search_full
+msgid "Expected"
+msgstr "Spodziewany"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__expected_date
+msgid "Expected Date"
+msgstr "Przewidywana data"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search_full
+msgid "Expected Day"
+msgstr "Oczekiwany dzień"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search_full
+msgid "Expected Today"
+msgstr "Oczekiwane dzisiaj"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_grn_document
+msgid "Expiry"
+msgstr "Wygaśnięcie"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt_line__expiry_date
+msgid "Expiry Date"
+msgstr "Data wygaśnięcia"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.actions.act_window,name:eh_log_warehouse_3pl.action_eh_log_warehouse_facility
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__facility_ids
+#: model:ir.ui.menu,name:eh_log_warehouse_3pl.menu_eh_log_warehouse_facilities
+msgid "Facilities"
+msgstr "Obiekty"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_client__facility_ids
+msgid ""
+"Facilities the client may store in. Receipts and picks are restricted to "
+"this set."
+msgstr ""
+"Obiekty, w których klient może przechowywać. Przyjęcia i pobrania są "
+"ograniczone do tego zestawu."
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_location__facility_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__facility_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__facility_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__facility_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_snapshot__facility_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_zone__facility_id
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_search_full
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search_full
+msgid "Facility"
+msgstr "Obiekt"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.constraint,message:eh_log_warehouse_3pl.constraint_eh_log_warehouse_facility_facility_code_unique
+msgid "Facility code must be unique per company."
+msgstr "Kod obiektu musi być unikalny w obrębie firmy."
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_client__storage_charging_basis__snapshot_first_of_month
+msgid "First-of-Month Snapshot"
+msgstr "Migawka z początku miesiąca"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__message_follower_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__message_follower_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__message_follower_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__message_follower_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__message_follower_ids
+msgid "Followers"
+msgstr "Obserwujący"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__message_partner_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__message_partner_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__message_partner_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__message_partner_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Obserwujący (partnerzy)"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__activity_type_icon
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__activity_type_icon
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Ikona Font awesome np. fa-tasks"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_facility__customs_status__free_zone
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_zone__purpose__free
+msgid "Free Zone"
+msgstr "Strefa wolnocłowa"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__freight_job_id
+msgid "Freight Job"
+msgstr "Zlecenie frachtowe"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_location__full_code
+msgid "Full Code"
+msgstr "Pełny kod"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__sale_order_id
+msgid "Generated Sale Order"
+msgstr "Wygenerowane zamówienie sprzedaży"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.actions.report,name:eh_log_warehouse_3pl.action_report_eh_log_warehouse_grn
+msgid "Goods Receipt Note"
+msgstr "Potwierdzenie otrzymania towarów"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_billing_line__service_type__handling_in
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_rate_line__service_type__handling_in
+msgid "Handling In (per pallet)"
+msgstr "Obsługa przyjęcia (za paletę)"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_billing_line__service_type__handling_out
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_rate_line__service_type__handling_out
+msgid "Handling Out (per pallet)"
+msgstr "Obsługa wydania (za paletę)"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__has_message
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__has_message
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__has_message
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__has_message
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__has_message
+msgid "Has Message"
+msgstr "Ma wiadomość"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_client__storage_charging_basis
+msgid ""
+"How storage charges are derived from the snapshot history. Average is the "
+"industry default; peak is a punitive option used for surge-pricing "
+"contracts."
+msgstr ""
+"Jak opłaty za magazynowanie są wyliczane z historii migawek. Średnia to "
+"standard branżowy; szczyt to opcja karna stosowana w umowach z cenami "
+"szczytowymi."
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_line__id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_location__id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick_line__id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_card__id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_line__id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt_line__id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_snapshot__id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_zone__id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_sale_order__id
+msgid "ID"
+msgstr ""
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__activity_exception_icon
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__activity_exception_icon
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__activity_exception_icon
+msgid "Icon"
+msgstr "Ikona"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__activity_exception_icon
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__activity_exception_icon
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Ikona wskazująca na wyjątek aktywności."
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__message_needaction
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_client__message_needaction
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__message_needaction
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__message_needaction
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Jeśli zaznaczone, nowe wiadomości wymagają twojej uwagi."
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__message_has_error
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__message_has_sms_error
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_client__message_has_error
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_client__message_has_sms_error
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__message_has_error
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__message_has_sms_error
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__message_has_error
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__message_has_sms_error
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__message_has_error
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+"Jeśli zaznaczone, niektóre wiadomości napotkały błędy podczas doręczenia."
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_location__inbound_movement_ids
+msgid "Inbound Movements"
+msgstr "Ruchy przychodzące"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_receipt__state__inspecting
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search_full
+msgid "Inspecting"
+msgstr "Kontrolowanie"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_movement__movement_type__transfer
+msgid "Internal Transfer"
+msgstr "Przesunięcie wewnętrzne"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__message_is_follower
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__message_is_follower
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__message_is_follower
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__message_is_follower
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__message_is_follower
+msgid "Is Follower"
+msgstr "Jest obserwatorem"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_line__write_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__write_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__write_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__write_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_location__write_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__write_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__write_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick_line__write_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_card__write_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_line__write_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__write_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt_line__write_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_snapshot__write_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_zone__write_uid
+msgid "Last Updated by"
+msgstr "Ostatnio aktualizowane przez"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_line__write_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__write_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__write_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__write_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_location__write_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__write_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__write_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick_line__write_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_card__write_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_line__write_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__write_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt_line__write_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_snapshot__write_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_zone__write_date
+msgid "Last Updated on"
+msgstr "Data ostatniej aktualizacji"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__line_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__line_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_card__line_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__line_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_grn_document
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_pick_list_document
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_billing_run_form
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_form
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_rate_card_form
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_form
+msgid "Lines"
+msgstr "Pozycje"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__freight_job_id
+msgid ""
+"Linked freight job when the receipt is the destination of an inbound "
+"shipment. Optional; standalone receipts for direct supplier deliveries leave"
+" it empty."
+msgstr ""
+"Powiązane zadanie frachtowe, gdy przyjęcie jest miejscem docelowym przesyłki"
+" przychodzącej. Opcjonalne; samodzielne przyjęcia dla bezpośrednich dostaw "
+"od dostawców pozostawiają je puste."
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_location__pallets_on_hand
+msgid ""
+"Live pallet count derived from the movement log. Authoritative for put-away "
+"decisions; storage billing uses the daily snapshot instead."
+msgstr ""
+"Bieżąca liczba palet wyprowadzona z dziennika ruchów. Wiarygodna dla decyzji"
+" o składowaniu; rozliczanie magazynowania korzysta natomiast z dziennej "
+"migawki."
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_snapshot__location_id
+msgid "Location"
+msgstr "Miejsce"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.constraint,message:eh_log_warehouse_3pl.constraint_eh_log_warehouse_location_location_code_unique
+msgid "Location code must be unique per zone."
+msgstr "Kod lokalizacji musi być unikalny w obrębie strefy."
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_zone.py:0
+#: model:ir.actions.act_window,name:eh_log_warehouse_3pl.action_eh_log_warehouse_location
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__location_count
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_zone__location_count
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_zone__location_ids
+#: model:ir.ui.menu,name:eh_log_warehouse_3pl.menu_eh_log_warehouse_locations
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_zone_form
+msgid "Locations"
+msgstr "Strefy magazynowe"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_grn_document
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_pick_list_document
+msgid "Lot"
+msgstr "Partia"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__lot_reference
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick_line__lot_reference
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt_line__lot_reference
+msgid "Lot / Batch"
+msgstr "Partia / Seria"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_form
+msgid "Mark Arrived"
+msgstr "Oznacz jako przybyłe"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_form
+msgid "Mark Packed"
+msgstr "Oznacz jako spakowane"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_form
+msgid "Mark Shipped"
+msgstr "Oznacz jako wysłane"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__message_has_error
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__message_has_error
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__message_has_error
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__message_has_error
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__message_has_error
+msgid "Message Delivery error"
+msgstr "Błąd doręczenia wiadomości"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__message_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__message_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__message_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__message_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__message_ids
+msgid "Messages"
+msgstr "Wiadomości"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_line__minimum_quantity
+msgid "Minimum Units"
+msgstr "Minimalna liczba jednostek"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_line__minimum_quantity
+msgid ""
+"Minimum billable quantity for the period. If actual consumption is lower, "
+"the engine bills the minimum."
+msgstr ""
+"Minimalna ilość podlegająca rozliczeniu w danym okresie. Jeśli rzeczywiste "
+"zużycie jest niższe, silnik nalicza minimum."
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_billing_line__service_type__monthly_minimum
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_rate_line__service_type__monthly_minimum
+msgid "Monthly Minimum Charge"
+msgstr "Miesięczna opłata minimalna"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.actions.act_window,name:eh_log_warehouse_3pl.action_eh_log_warehouse_movement
+#: model:ir.ui.menu,name:eh_log_warehouse_3pl.menu_eh_log_warehouse_movements
+msgid "Movements"
+msgstr "Ruchy"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__my_activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__my_activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Ostateczny termin moich aktywności"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_location__name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_card__name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_zone__name
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_grn_document
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_pick_list_document
+msgid "Name"
+msgstr "Nazwa"
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_billing_run.py:0
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_pick.py:0
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_receipt.py:0
+msgid "New"
+msgstr "Nowe"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__activity_calendar_event_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__activity_calendar_event_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "Następna Czynność wydarzenia w kalendarzu"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Termin kolejnej aktywności"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__activity_summary
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__activity_summary
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__activity_summary
+msgid "Next Activity Summary"
+msgstr "Podsumowanie kolejnej aktywności"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__activity_type_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__activity_type_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__activity_type_id
+msgid "Next Activity Type"
+msgstr "Typ następnej aktywności"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__message_needaction_counter
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__message_needaction_counter
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__message_needaction_counter
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__message_needaction_counter
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Liczba akcji"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__message_has_error_counter
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__message_has_error_counter
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__message_has_error_counter
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__message_has_error_counter
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__message_has_error_counter
+msgid "Number of errors"
+msgstr "Liczba błędów"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__message_needaction_counter
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_client__message_needaction_counter
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__message_needaction_counter
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__message_needaction_counter
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Liczba wiadomości wymagających akcji"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__message_has_error_counter
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_client__message_has_error_counter
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__message_has_error_counter
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__message_has_error_counter
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Liczba wiadomości z błędami przy doręczeniu"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__occurred_at
+msgid "Occurred At"
+msgstr "Wystąpiło"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_search_full
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search_full
+msgid "Open"
+msgstr "Otwarta"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__notes
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_movement_form
+msgid "Operator Notes"
+msgstr "Notatki operatora"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__total_pallet_capacity
+msgid ""
+"Operator-supplied design capacity. Reported as a utilisation percentage on "
+"the dashboard but does not block put-away above the threshold; over-capacity"
+" is a valid temporary state during a peak."
+msgstr ""
+"Pojemność projektowa podana przez operatora. Wyświetlana na pulpicie jako "
+"procent wykorzystania, ale nie blokuje składowania powyżej progu; "
+"przekroczenie pojemności jest prawidłowym tymczasowym stanem w czasie "
+"szczytu."
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_line__product_id
+msgid ""
+"Optional. Constrain this line to a specific product. If empty, the line "
+"applies to any product. The billing engine prefers product-specific lines."
+msgstr ""
+"Opcjonalne. Ogranicz ten wiersz do konkretnego produktu. Jeśli puste, wiersz"
+" dotyczy dowolnego produktu. Silnik rozliczeń preferuje wiersze specyficzne "
+"dla produktu."
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_location__outbound_movement_ids
+msgid "Outbound Movements"
+msgstr "Ruchy wychodzące"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_pick__state__packed
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_search_full
+msgid "Packed"
+msgstr "Zapakowane"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__total_pallet_capacity
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_location__pallet_capacity
+msgid "Pallet Capacity"
+msgstr "Pojemność palet"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__pallet_count
+msgid ""
+"Pallet count for storage billing. The snapshot table records this per day "
+"for storage charge computation."
+msgstr ""
+"Liczba palet do rozliczenia magazynowania. Tabela migawek zapisuje ją "
+"codziennie na potrzeby obliczenia opłat za magazynowanie."
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__pallet_count
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__pallet_count
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick_line__pallet_count
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__pallet_count
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt_line__pallet_count
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_grn_document
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_pick_list_document
+msgid "Pallets"
+msgstr "Palety"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_location__pallets_on_hand
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_snapshot__pallets_on_hand
+msgid "Pallets On Hand"
+msgstr "Palety w magazynie"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_form
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_form
+msgid "Parties"
+msgstr "Strony"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__partner_id
+msgid "Partner"
+msgstr "Kontrahent"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__address_id
+msgid ""
+"Partner record carrying the street, city, country, and geo coordinates. "
+"Reused on receipts and picks to render the facility address on documents."
+msgstr ""
+"Rekord kontrahenta zawierający ulicę, miasto, kraj i współrzędne "
+"geograficzne. Wykorzystywany ponownie na przyjęciach i kompletacjach do "
+"wyświetlania adresu obiektu na dokumentach."
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_client__storage_charging_basis__snapshot_peak
+msgid "Peak of Daily Snapshots"
+msgstr "Szczyt dziennych migawek"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_location__pallet_capacity
+msgid ""
+"Per-bin pallet ceiling. Put-away above this triggers a warning but does not "
+"block; over-capacity is a valid transient state."
+msgstr ""
+"Górny limit palet na miejsce składowania. Odkładanie powyżej niego wywołuje "
+"ostrzeżenie, ale nie blokuje; przekroczenie pojemności to prawidłowy stan "
+"przejściowy."
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__period_end
+msgid "Period End"
+msgstr "Koniec okresu"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_billing_run_search_full
+msgid "Period Month"
+msgstr "Miesiąc okresu"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__period_start
+msgid "Period Start"
+msgstr "Rozpoczęcie okresu"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick_line__pick_id
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_movement__movement_type__pick
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_form
+msgid "Pick"
+msgstr "Kompletacja"
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_pick.py:0
+msgid ""
+"Pick %(name)s cannot move from %(from)s to %(to)s. Allowed: %(allowed)s."
+msgstr ""
+"Kompletacja %(name)s nie może przejść z %(from)s do %(to)s. Dozwolone: "
+"%(allowed)s."
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_pick_list_document
+msgid "Pick Confirmation"
+msgstr "Potwierdzenie kompletacji"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_billing_line__service_type__pick_line
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_rate_line__service_type__pick_line
+msgid "Pick Line"
+msgstr "Wiersz kompletacji"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__pick_line_count
+msgid "Pick Lines"
+msgstr "Wiersze kompletacji"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.actions.report,name:eh_log_warehouse_3pl.action_report_eh_log_warehouse_pick_list
+msgid "Pick List"
+msgstr "Lista kompletacji"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_pivot
+msgid "Pick Volume"
+msgstr "Wolumen kompletacji"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_pick_list_document
+msgid "Picked"
+msgstr "Skompletowano"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_pick_list_document
+msgid "Picker"
+msgstr "Kompletator"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_pick__state__picking
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_search_full
+msgid "Picking"
+msgstr "Pobranie"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__picking_started_at
+msgid "Picking Started At"
+msgstr "Kompletację rozpoczęto o"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.actions.act_window,name:eh_log_warehouse_3pl.action_eh_log_warehouse_pick
+#: model:ir.ui.menu,name:eh_log_warehouse_3pl.menu_eh_log_warehouse_picks
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_calendar
+msgid "Picks"
+msgstr "Kompletacje"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_pick__state__planned
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_search_full
+msgid "Planned"
+msgstr "Zaplanowane"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__planned_date
+msgid "Planned Date"
+msgstr "Planowana data"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_search_full
+msgid "Planned Today"
+msgstr "Zaplanowane dzisiaj"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_billing_run_form
+msgid "Post to Sale Order"
+msgstr "Zaksięguj na zamówieniu sprzedaży"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_billing_run__state__posted
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_billing_run_search_full
+msgid "Posted"
+msgstr "Zaksięgowano"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__product_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick_line__product_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt_line__product_id
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_grn_document
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_pick_list_document
+msgid "Product"
+msgstr "Produkt"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_line__product_id
+msgid "Product Override"
+msgstr "Zastąpienie produktu"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_location__purpose
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_zone__purpose
+msgid "Purpose"
+msgstr "Cel"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_receipt__state__putaway
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search_full
+msgid "Putaway"
+msgstr "Odkładanie"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__putaway_at
+msgid "Putaway At"
+msgstr "Odkładanie w"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_line__quantity
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__quantity
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick_line__quantity
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt_line__quantity
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_grn_document
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_pick_list_document
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_storage_statement_document
+msgid "Quantity"
+msgstr "Ilość"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_zone__purpose__quarantine
+msgid "Quarantine"
+msgstr "Kwarantanna"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__rate_card_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__rate_card_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_line__rate_card_id
+msgid "Rate Card"
+msgstr "Cennik"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.actions.act_window,name:eh_log_warehouse_3pl.action_eh_log_warehouse_rate_card
+#: model:ir.ui.menu,name:eh_log_warehouse_3pl.menu_eh_log_warehouse_rate_cards
+msgid "Rate Cards"
+msgstr "Cenniki"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.constraint,message:eh_log_warehouse_3pl.constraint_eh_log_warehouse_rate_card_rate_card_code_unique
+msgid "Rate card code must be unique per company."
+msgstr "Kod cennika musi być unikalny w obrębie firmy."
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__rate_card_id
+msgid ""
+"Rate card snapshotted onto the run. Defaults to the client's current card; "
+"can be overridden for replays."
+msgstr ""
+"Cennik zarejestrowany jako migawka na potrzeby uruchomienia. Domyślnie "
+"bieżący cennik klienta; można go zastąpić na potrzeby powtórek."
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__rating_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__rating_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__rating_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__rating_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__rating_ids
+msgid "Ratings"
+msgstr "Oceny"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt_line__receipt_id
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_movement__movement_type__receipt
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_form
+msgid "Receipt"
+msgstr "Przyjęcie"
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_receipt.py:0
+msgid ""
+"Receipt %(name)s cannot move from %(from)s to %(to)s. Allowed: %(allowed)s."
+msgstr ""
+"Przyjęcie %(name)s nie może przejść z %(from)s do %(to)s. Dozwolone: "
+"%(allowed)s."
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_grn_document
+msgid "Receipt Confirmation"
+msgstr "Potwierdzenie odbioru"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_pivot
+msgid "Receipt Volume"
+msgstr "Wolumen przyjęć"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.actions.act_window,name:eh_log_warehouse_3pl.action_eh_log_warehouse_receipt
+#: model:ir.ui.menu,name:eh_log_warehouse_3pl.menu_eh_log_warehouse_receipts
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_calendar
+msgid "Receipts"
+msgstr "Przyjęcia"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_graph
+msgid "Receipts by State"
+msgstr "Przyjęcia według stanu"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_grn_document
+msgid "Receiver"
+msgstr "Odbiorca"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__name
+msgid "Reference"
+msgstr "Odnośnik"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_billing_run_form
+msgid "Reset to Draft"
+msgstr "Przywróć do wersji roboczej"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__activity_user_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__activity_user_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__activity_user_id
+msgid "Responsible User"
+msgstr "Użytkownik odpowiedzialny"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_grn_document
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_pick_list_document
+msgid "Role"
+msgstr "Rola"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__message_has_sms_error
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__message_has_sms_error
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__message_has_sms_error
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__message_has_sms_error
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Błąd dostarczenia wiadomości SMS"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__sale_order_id
+msgid "Sale Order"
+msgstr "Zamówienie sprzedaży"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model,name:eh_log_warehouse_3pl.model_sale_order
+msgid "Sales Order"
+msgstr "Zamówienie sprzedaży"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_form
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_form
+msgid "Schedule"
+msgstr "Harmonogram"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_billing_run_search_full
+msgid "Search Billing Runs"
+msgstr "Szukaj przebiegów rozliczeń"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_search_full
+msgid "Search Picks"
+msgstr "Szukaj kompletacji"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search_full
+msgid "Search Receipts"
+msgstr "Szukaj paragonów"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick_line__sequence
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt_line__sequence
+msgid "Sequence"
+msgstr "Sekwencja"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_line__service_type
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_line__service_type
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_storage_statement_document
+msgid "Service"
+msgstr "Usługa"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__customer_id
+msgid "Ship-To Customer"
+msgstr "Klient docelowy dostawy"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_pick__state__shipped
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_search_full
+msgid "Shipped"
+msgstr "Wysłano"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__shipped_at
+msgid "Shipped At"
+msgstr "Wysłano dnia"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__code
+msgid ""
+"Short code prefixed onto location codes. Limit eight characters so the "
+"composite location reference fits a label sticker."
+msgstr ""
+"Krótki kod poprzedzający kody lokalizacji. Ogranicz do ośmiu znaków, aby "
+"złożone odniesienie do lokalizacji zmieściło się na naklejce z etykietą."
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_grn_document
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_pick_list_document
+msgid "Signature"
+msgstr "Podpis"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_snapshot__snapshot_date
+msgid "Snapshot Date"
+msgstr "Data migawki"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.actions.act_window,name:eh_log_warehouse_3pl.action_eh_log_warehouse_snapshot
+#: model:ir.ui.menu,name:eh_log_warehouse_3pl.menu_eh_log_warehouse_snapshots
+msgid "Snapshots"
+msgstr "Migawki"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick_line__source_location_id
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_pick_list_document
+msgid "Source"
+msgstr "Źródło"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__source_location_id
+msgid "Source Location"
+msgstr "Strefa źródłowa"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__pick_id
+msgid "Source Pick"
+msgstr "Źródłowe pobranie"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__receipt_id
+msgid "Source Receipt"
+msgstr "Źródłowe przyjęcie"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_sale_order__eh_log_warehouse_billing_run_id
+msgid ""
+"Source billing run if this order was generated by the monthly warehouse "
+"billing engine."
+msgstr ""
+"Źródłowy przebieg rozliczeniowy, jeśli to zamówienie zostało wygenerowane "
+"przez miesięczny silnik rozliczeń magazynowych."
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__sale_order_id
+msgid ""
+"Source sale order if the pick was spawned from a warehouse 3PL service line;"
+" standalone picks leave this empty."
+msgstr ""
+"Źródłowe zamówienie sprzedaży, jeśli pobranie zostało utworzone z linii "
+"usługi 3PL magazynu; samodzielne pobrania pozostawiają to pole puste."
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_zone__purpose__staging
+msgid "Staging"
+msgstr "Środowisko testowe"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_form
+msgid "Start Inspection"
+msgstr "Rozpocznij inspekcję"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_form
+msgid "Start Picking"
+msgstr "Rozpocznij kompletację"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__state
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__state
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__state
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_billing_run_search_full
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_search_full
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search_full
+msgid "State"
+msgstr "Stan"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__activity_state
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__activity_state
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Status na podstawie czynności\n"
+"Zaległe: Termin już minął\n"
+"Dzisiaj: Data czynności przypada na dzisiaj\n"
+"Zaplanowane: Przyszłe czynności."
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__storage_charging_basis
+msgid "Storage Basis"
+msgstr "Podstawa magazynowania"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.actions.report,name:eh_log_warehouse_3pl.action_report_eh_log_warehouse_storage_statement
+msgid "Storage Statement"
+msgstr "Zestawienie magazynowania"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_billing_line__service_type__storage_pallet_day
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_rate_line__service_type__storage_pallet_day
+msgid "Storage per Pallet per Day"
+msgstr "Magazynowanie za paletę za dzień"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_line__subtotal
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_storage_statement_document
+msgid "Subtotal"
+msgstr "Wartość"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__supplier_id
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search_full
+msgid "Supplier"
+msgstr "Dostawca"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__supplier_reference
+msgid "Supplier Reference"
+msgstr "Odniesienie dostawcy"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__supplier_id
+msgid ""
+"Supplier who shipped the goods. The receipt reconciles this party against "
+"the PO when the freight job is linked."
+msgstr ""
+"Dostawca, który wysłał towary. Przyjęcie uzgadnia tę stronę z zamówieniem "
+"zakupu po powiązaniu zlecenia transportowego."
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search_full
+msgid "This Week"
+msgstr "Ten tydzień"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__total
+msgid "Total"
+msgstr "Suma"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_facility__customs_status__transit
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_zone__purpose__transit
+msgid "Transit"
+msgstr "Tranzyt"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__movement_type
+msgid "Type"
+msgstr "Typ"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__activity_exception_decoration
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__activity_exception_decoration
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Typ wyjątku działania na rekordzie."
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_line__unit_price
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_line__unit_price
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_storage_statement_document
+msgid "Unit Price"
+msgstr "Cena jednostkowa"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_billing_line__service_type__vas_kit
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_rate_line__service_type__vas_kit
+msgid "Value-Added Services - Kit"
+msgstr "Usługi o wartości dodanej - Zestaw"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_billing_line__service_type__vas_label
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_rate_line__service_type__vas_label
+msgid "Value-Added Services - Label"
+msgstr "Usługi o wartości dodanej - Etykieta"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_billing_line__service_type__vas_scan
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_rate_line__service_type__vas_scan
+msgid "Value-Added Services - Scan"
+msgstr "Usługi o wartości dodanej - Skanowanie"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.ui.menu,name:eh_log_warehouse_3pl.menu_eh_log_warehouse_config_root
+#: model:ir.ui.menu,name:eh_log_warehouse_3pl.menu_eh_log_warehouse_root
+msgid "Warehouse 3PL"
+msgstr "Magazyn 3PL"
+
+#. module: eh_log_warehouse_3pl
+#: model:product.template,name:eh_log_warehouse_3pl.product_warehouse_billing_product_template
+msgid "Warehouse 3PL Service"
+msgstr "Usługa magazynowa 3PL"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model,name:eh_log_warehouse_3pl.model_eh_log_warehouse_billing_line
+msgid "Warehouse Billing Line"
+msgstr "Wiersz rozliczenia magazynu"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model,name:eh_log_warehouse_3pl.model_eh_log_warehouse_billing_run
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_sale_order__eh_log_warehouse_billing_run_id
+msgid "Warehouse Billing Run"
+msgstr "Uruchomienie rozliczenia magazynu"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model,name:eh_log_warehouse_3pl.model_eh_log_warehouse_facility
+msgid "Warehouse Facility"
+msgstr "Obiekt magazynowy"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model,name:eh_log_warehouse_3pl.model_eh_log_warehouse_location
+msgid "Warehouse Location"
+msgstr "Lokalizacja magazynu"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model,name:eh_log_warehouse_3pl.model_eh_log_warehouse_movement
+msgid "Warehouse Movement"
+msgstr "Ruch magazynowy"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model,name:eh_log_warehouse_3pl.model_eh_log_warehouse_snapshot
+msgid "Warehouse On-Hand Snapshot"
+msgstr "Migawka stanu magazynowego"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model,name:eh_log_warehouse_3pl.model_eh_log_warehouse_pick
+msgid "Warehouse Pick"
+msgstr "Kompletacja magazynowa"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model,name:eh_log_warehouse_3pl.model_eh_log_warehouse_pick_line
+msgid "Warehouse Pick Line"
+msgstr "Wiersz kompletacji magazynowej"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model,name:eh_log_warehouse_3pl.model_eh_log_warehouse_receipt
+msgid "Warehouse Receipt"
+msgstr "Przyjęcie magazynowe"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model,name:eh_log_warehouse_3pl.model_eh_log_warehouse_receipt_line
+msgid "Warehouse Receipt Line"
+msgstr "Wiersz przyjęcia magazynowego"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model,name:eh_log_warehouse_3pl.model_eh_log_warehouse_zone
+msgid "Warehouse Zone"
+msgstr "Strefa magazynowa"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.actions.server,name:eh_log_warehouse_3pl.cron_capture_daily_snapshot_ir_actions_server
+msgid "Warehouse: Capture Daily On-Hand Snapshot"
+msgstr "Magazyn: przechwyć dzienną migawkę stanu magazynowego"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.actions.server,name:eh_log_warehouse_3pl.cron_run_monthly_billing_ir_actions_server
+msgid "Warehouse: Run Monthly Billing"
+msgstr "Magazyn: uruchom miesięczne rozliczenie"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__website_message_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__website_message_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__website_message_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__website_message_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__website_message_ids
+msgid "Website Messages"
+msgstr "Wiadomości"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__website_message_ids
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_client__website_message_ids
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__website_message_ids
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__website_message_ids
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__website_message_ids
+msgid "Website communication history"
+msgstr "Historia komunikacji"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_pick_line__source_location_id
+msgid ""
+"Where this line is picked from. Required before the picking action runs; "
+"planning may use a soon-to-be-resolved location."
+msgstr ""
+"Skąd pobierana jest ta linia. Wymagane przed uruchomieniem akcji "
+"kompletacji; planowanie może użyć lokalizacji, która wkrótce zostanie "
+"ustalona."
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt_line__destination_location_id
+msgid ""
+"Where this line will be put away. Required before the put-away action runs; "
+"until then, leaving it blank is allowed so the receipt can be created from "
+"the supplier ASN before the storage plan is finalised."
+msgstr ""
+"Gdzie ta linia zostanie odłożona. Wymagane przed uruchomieniem akcji "
+"odkładania; do tego czasu można pozostawić puste, aby przyjęcie mogło zostać"
+" utworzone z ASN dostawcy przed sfinalizowaniem planu składowania."
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_location__zone_id
+msgid "Zone"
+msgstr "Strefa"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.constraint,message:eh_log_warehouse_3pl.constraint_eh_log_warehouse_zone_zone_code_unique
+msgid "Zone code must be unique per facility."
+msgstr "Kod strefy musi być unikalny dla każdego obiektu."
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_facility.py:0
+#: model:ir.actions.act_window,name:eh_log_warehouse_3pl.action_eh_log_warehouse_zone
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__zone_count
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__zone_ids
+#: model:ir.ui.menu,name:eh_log_warehouse_3pl.menu_eh_log_warehouse_zones
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_facility_form
+msgid "Zones"
+msgstr "Strefy"
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_facility.py:0
+msgid ""
+"[EHL-WHS-001] Facility code %(code)s must be alphanumeric or underscore "
+"only."
+msgstr ""
+"[EHL-WHS-001] Kod obiektu %(code)s może zawierać tylko znaki alfanumeryczne "
+"lub podkreślenie."
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_zone.py:0
+msgid ""
+"[EHL-WHS-002] Zone code %(code)s must be alphanumeric or underscore only."
+msgstr ""
+"[EHL-WHS-002] Kod strefy %(code)s może zawierać tylko znaki alfanumeryczne "
+"lub podkreślenie."
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_location.py:0
+msgid ""
+"[EHL-WHS-003] Location code %(code)s must be alphanumeric or underscore "
+"only."
+msgstr ""
+"[EHL-WHS-003] Kod lokalizacji %(code)s może zawierać tylko znaki "
+"alfanumeryczne lub podkreślenie."
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_client.py:0
+msgid ""
+"[EHL-WHS-004] Billing day %(day)s must be between 1 and 28 so the cron fires"
+" every month."
+msgstr ""
+"[EHL-WHS-004] Dzień rozliczenia %(day)s musi mieścić się w zakresie od 1 do "
+"28, aby cron uruchamiał się co miesiąc."
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_client.py:0
+msgid ""
+"[EHL-WHS-005] Facility %(facility)s is not in client %(client)s's allowed "
+"facilities list."
+msgstr ""
+"[EHL-WHS-005] Obiekt %(facility)s nie znajduje się na liście dozwolonych "
+"obiektów klienta %(client)s."
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_rate_card.py:0
+msgid "[EHL-WHS-006] Rate line unit price cannot be negative."
+msgstr "[EHL-WHS-006] Cena jednostkowa wiersza stawki nie może być ujemna."
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_pick.py:0
+msgid ""
+"[EHL-WHS-007] Pick state must be changed via the action buttons, not by "
+"direct write."
+msgstr ""
+"[EHL-WHS-007] Stan kompletacji należy zmieniać za pomocą przycisków akcji, a"
+" nie przez bezpośredni zapis."
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_receipt.py:0
+msgid ""
+"[EHL-WHS-007] Receipt state must be changed via the action buttons, not by "
+"direct write."
+msgstr ""
+"[EHL-WHS-007] Stan przyjęcia należy zmieniać za pomocą przycisków akcji, a "
+"nie przez bezpośredni zapis."
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_receipt.py:0
+msgid "[EHL-WHS-008] Receipt %(name)s is %(state)s; lines are read-only."
+msgstr ""
+"[EHL-WHS-008] Przyjęcie %(name)s ma stan %(state)s; wiersze są tylko do "
+"odczytu."
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_pick.py:0
+msgid "[EHL-WHS-009] Pick %(name)s is %(state)s; lines are read-only."
+msgstr ""
+"[EHL-WHS-009] Kompletacja %(name)s ma stan %(state)s; wiersze są tylko do "
+"odczytu."
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_receipt.py:0
+msgid ""
+"[EHL-WHS-010] Receipt %(name)s has no lines; add lines before completing "
+"put-away."
+msgstr ""
+"[EHL-WHS-010] Przyjęcie %(name)s nie ma wierszy; dodaj wiersze przed "
+"zakończeniem układania."
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_receipt.py:0
+msgid ""
+"[EHL-WHS-011] Receipt line for product %(product)s has no destination "
+"location."
+msgstr ""
+"[EHL-WHS-011] Wiersz przyjęcia dla produktu %(product)s nie ma lokalizacji "
+"docelowej."
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_pick.py:0
+msgid "[EHL-WHS-012] Pick %(name)s has no lines."
+msgstr "[EHL-WHS-012] Kompletacja %(name)s nie ma wierszy."
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_pick.py:0
+msgid "[EHL-WHS-013] Pick line for %(product)s has no source location."
+msgstr ""
+"[EHL-WHS-013] Wiersz kompletacji dla %(product)s nie ma lokalizacji "
+"źródłowej."
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_movement.py:0
+msgid ""
+"[EHL-WHS-014] Warehouse movements must be created through receipt put-away, "
+"pick picking, transfer wizard, or adjustment workflow."
+msgstr ""
+"[EHL-WHS-014] Ruchy magazynowe muszą być tworzone poprzez układanie "
+"przyjęcia, kompletację, kreatora przesunięcia lub proces korekty."
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_movement.py:0
+msgid ""
+"[EHL-WHS-015] Movement field(s) %(fields)s are immutable after creation. "
+"Post a reversing adjustment instead."
+msgstr ""
+"[EHL-WHS-015] Pola ruchu %(fields)s są niezmienne po utworzeniu. Zaksięguj "
+"zamiast tego korektę odwracającą."
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_movement.py:0
+msgid ""
+"[EHL-WHS-016] Warehouse movements are append-only and cannot be deleted."
+msgstr ""
+"[EHL-WHS-016] Ruchy magazynowe są tylko do dopisywania i nie można ich "
+"usunąć."
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_snapshot.py:0
+msgid ""
+"[EHL-WHS-017] Snapshots are created by the daily cron or the explicit "
+"rebuild action; direct ORM creates are blocked."
+msgstr ""
+"[EHL-WHS-017] Migawki są tworzone przez codzienny cron lub jawną akcję "
+"przebudowy; bezpośrednie tworzenie przez ORM jest zablokowane."
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_snapshot.py:0
+msgid "[EHL-WHS-018] Snapshots are immutable."
+msgstr "[EHL-WHS-018] Migawki są niezmienne."
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_snapshot.py:0
+msgid ""
+"[EHL-WHS-019] Snapshots are append-only; use the rebuild action for back-"
+"fill."
+msgstr ""
+"[EHL-WHS-019] Migawki są tylko do dopisywania; do uzupełniania wstecznego "
+"użyj akcji przebudowy."
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_billing_run.py:0
+msgid ""
+"[EHL-WHS-020] Billing run period start %(start)s is after period end "
+"%(end)s."
+msgstr ""
+"[EHL-WHS-020] Początek okresu przebiegu rozliczeniowego %(start)s przypada "
+"po końcu okresu %(end)s."
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_billing_run.py:0
+msgid "[EHL-WHS-021] Billing run %(name)s has no computed lines."
+msgstr ""
+"[EHL-WHS-021] Przebieg rozliczeniowy %(name)s nie ma obliczonych wierszy."
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_billing_run.py:0
+msgid "[EHL-WHS-022] Billing run state must change via the action buttons."
+msgstr ""
+"[EHL-WHS-022] Stan przebiegu rozliczeniowego należy zmieniać za pomocą "
+"przycisków akcji."
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_billing_run.py:0
+msgid ""
+"[EHL-WHS-023] Billing lines are created by the compute action; direct ORM "
+"creates are blocked."
+msgstr ""
+"[EHL-WHS-023] Wiersze rozliczeniowe są tworzone przez akcję obliczania; "
+"bezpośrednie tworzenie przez ORM jest zablokowane."
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_billing_run.py:0
+msgid ""
+"[EHL-WHS-024] Billing lines can only be cleared by re-running the compute "
+"action."
+msgstr ""
+"[EHL-WHS-024] Wiersze rozliczeniowe można wyczyścić tylko przez ponowne "
+"uruchomienie akcji obliczania."
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_facility.py:0
+msgid "facility_id"
+msgstr ""
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_kanban
+msgid "lines /"
+msgstr "Wiersze /"
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_pick.py:0
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_receipt.py:0
+msgid "none"
+msgstr "brak"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_kanban
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_kanban
+msgid "pal."
+msgstr ""
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_zone.py:0
+msgid "zone_id"
+msgstr ""

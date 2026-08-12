@@ -1,0 +1,1420 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* eh_log_last_mile
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-01 04:34+0000\n"
+"PO-Revision-Date: 2026-07-01 04:34+0000\n"
+"Last-Translator: ERP Heritage <info@erpheritage.com.au>\n"
+"Language-Team: Swedish\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/wizards/eh_log_last_mile_mass_action.py:0
+msgid "%(count)d wave(s) dispatched."
+msgstr "%(count)d våg(or) skickades."
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_delivery.py:0
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_wave.py:0
+msgid "(none)"
+msgstr "(ingen)"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_kanban
+msgid "<i class=\"fa fa-cube me-1\" title=\"Packages\"/>"
+msgstr "<i class=\"fa fa-cube me-1\" title=\"Paket\"/>"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_kanban
+msgid "<i class=\"fa fa-id-badge me-1\" title=\"Driver\"/>"
+msgstr "<i class=\"fa fa-id-badge me-1\" title=\"Förare\"/>"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_kanban
+msgid "<i class=\"fa fa-truck me-1\" title=\"Vehicle\"/>"
+msgstr "<i class=\"fa fa-truck me-1\" title=\"Fordon\"/>"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+msgid ""
+"<i class=\"fa fa-truck\" style=\"font-size:1.6rem;color:#D4A055;\" title=\"Last mile delivery\"/>\n"
+"                                        <span class=\"ms-2\" style=\"font-family:'DM Mono',ui-monospace,monospace;font-size:0.78rem;letter-spacing:0.18em;text-transform:uppercase;color:#E8C887;font-weight:600;\">Last mile</span>"
+msgstr ""
+"<i class=\"fa fa-truck\" style=\"font-size:1.6rem;color:#D4A055;\" title=\"Sista milen-leverans\"/>\n"
+"                                        <span class=\"ms-2\" style=\"font-family:'DM Mono',ui-monospace,monospace;font-size:0.78rem;letter-spacing:0.18em;text-transform:uppercase;color:#E8C887;font-weight:600;\">Sista milen</span>"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+msgid "<strong>Date:</strong>"
+msgstr "<strong>Datum:</strong>"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+msgid "<strong>Driver:</strong>"
+msgstr "<strong>Förare:</strong>"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+msgid ""
+"<strong>Failed delivery.</strong>\n"
+"                            Either reschedule for another attempt or return to sender."
+msgstr ""
+"<strong>Leverans misslyckades.</strong>\n"
+"                            Boka om för ett nytt försök eller returnera till avsändaren."
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+msgid "<strong>Vehicle:</strong>"
+msgstr "<strong>Fordon:</strong>"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+msgid "<strong>Wave:</strong>"
+msgstr "<strong>Våg:</strong>"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__message_needaction
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__message_needaction
+msgid "Action Needed"
+msgstr "Åtgärd krävs"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__activity_ids
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__activity_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_last_mile_delivery_activity
+msgid "Activities"
+msgstr "Aktiviteter"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__activity_exception_decoration
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Undantagsaktiviteter dekoration"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__activity_state
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__activity_state
+msgid "Activity State"
+msgstr "Aktivitetsstatus"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__activity_type_icon
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Ikon för aktivitetstyp"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+msgid "Address"
+msgstr "Adress"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_attempt__outcome__address_incorrect
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_delivery__return_reason__address_incorrect
+msgid "Address Incorrect"
+msgstr "Felaktig adress"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+msgid "Amount"
+msgstr "Belopp"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__message_attachment_count
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__message_attachment_count
+msgid "Attachment Count"
+msgstr "Antal bilagor"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_attempt_form
+msgid "Attempt"
+msgstr "Försök"
+
+#. module: eh_log_last_mile
+#: model:ir.actions.act_window,name:eh_log_last_mile.action_eh_log_last_mile_attempt
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__attempt_count
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__attempt_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_attempt_list
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+msgid "Attempts"
+msgstr "Försök"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_delivery__cod_collection_method__transfer
+msgid "Bank Transfer"
+msgstr "Banköverföring"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_kanban
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_form
+msgid "COD"
+msgstr ""
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__cod_collected_amount
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__cod_collected
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+msgid "COD Collected"
+msgstr "COD inkasserat"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__cod_amount
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__cod_expected
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+msgid "COD Expected"
+msgstr "Förväntat COD"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__cod_outstanding
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search_full
+msgid "COD Outstanding"
+msgstr "Utestående COD"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_search_full
+msgid "COD Required"
+msgstr "COD krävs"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+msgid "COD amount"
+msgstr "COD-belopp"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_kanban
+msgid "COD outstanding:"
+msgstr "Utestående COD:"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_mass_dispatch_form
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_mass_mark_delivered_form
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_form
+msgid "Cancel"
+msgstr "Avbryt"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_delivery__state__cancelled
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_wave__state__cancelled
+msgid "Cancelled"
+msgstr "Avbruten"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_delivery__cod_collected_amount
+msgid ""
+"Captured at delivery confirmation. Driven by the Delivered action; cannot "
+"exceed cod_amount."
+msgstr ""
+"Fångas vid leveransbekräftelse. Styrs av åtgärden Levererad; får inte "
+"överstiga cod_amount."
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_delivery__cod_collection_method__card
+msgid "Card"
+msgstr "Kort"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+msgid "Cargo"
+msgstr "Last"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__cargo_description
+msgid "Cargo Description"
+msgstr "Lastbeskrivning"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_delivery__cod_collection_method__cash
+msgid "Cash"
+msgstr "Kontanter"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_delivery__cod_amount
+msgid "Cash to collect on delivery. Zero for non-COD stops."
+msgstr "Kontanter att inkassera vid leverans. Noll för stopp utan COD."
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_form
+msgid "Close (cash up)"
+msgstr "Stäng (kassaavstämning)"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_wave__state__closed
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search_full
+msgid "Closed"
+msgstr "Stängd"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__cod_collection_method
+msgid "Collection Method"
+msgstr "Inkasseringsmetod"
+
+#. module: eh_log_last_mile
+#: model:ir.model,name:eh_log_last_mile.model_res_company
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__company_ids
+msgid "Companies"
+msgstr "Företag"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_attempt__company_id
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__company_id
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__company_id
+msgid "Company"
+msgstr "Företag"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_form
+msgid "Complete"
+msgstr "Slutför"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__completed_at
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_wave__state__completed
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search_full
+msgid "Completed"
+msgstr "Slutförd"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__completion_pct
+msgid "Completion (%)"
+msgstr "Slutförande (%)"
+
+#. module: eh_log_last_mile
+#: model:ir.model,name:eh_log_last_mile.model_res_config_settings
+msgid "Config Settings"
+msgstr "Inställningar"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_form
+msgid "Counters"
+msgstr "Räknare"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_attempt__create_uid
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__create_uid
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_mass_dispatch__create_uid
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_mass_mark_delivered__create_uid
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__create_uid
+msgid "Created by"
+msgstr "Skapad av"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_attempt__create_date
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__create_date
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_mass_dispatch__create_date
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_mass_mark_delivered__create_date
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__create_date
+msgid "Created on"
+msgstr "Skapad den"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__currency_id
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__currency_id
+msgid "Currency"
+msgstr "Valuta"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__customer_id
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_search_full
+msgid "Customer"
+msgstr "Kund"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_attempt__outcome__customer_not_home
+msgid "Customer Not Home"
+msgstr "Kunden inte hemma"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_delivery__return_reason__recall
+msgid "Customer Recall"
+msgstr "Kundåterkallelse"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__customer_reference
+msgid "Customer Reference"
+msgstr "Kundreferens"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_delivery__return_reason__damaged
+msgid "Damaged"
+msgstr "Skadad"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_attempt__outcome__damaged
+msgid "Damaged in Transit"
+msgstr "Skadad under transport"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_delivery__delivery_partner_id
+msgid ""
+"Defaults to the customer's address; override for a ship-to-third-party "
+"scenario."
+msgstr ""
+"Standard till kundens adress; åsidosätt för ett scenario med leverans till "
+"tredje part."
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__delivered_count
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_attempt__outcome__delivered
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_delivery__state__delivered
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_search_full
+msgid "Delivered"
+msgstr "Levererade"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__delivered_at
+msgid "Delivered At"
+msgstr "Levererad den"
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_delivery.py:0
+msgid "Delivered to %s"
+msgstr "Levererad till %s"
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_wave.py:0
+#: model:ir.actions.act_window,name:eh_log_last_mile.action_eh_log_last_mile_delivery
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_mass_mark_delivered__delivery_ids
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__delivery_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_calendar
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_list
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_form
+msgid "Deliveries"
+msgstr "Leveranser"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_graph
+msgid "Deliveries by State"
+msgstr "Leveranser efter status"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_attempt__delivery_id
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+msgid "Delivery"
+msgstr "Leverans"
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_delivery.py:0
+msgid ""
+"Delivery %(name)s cannot move from %(current)s to %(target)s. Allowed "
+"transitions from %(current)s: %(allowed)s."
+msgstr ""
+"Leverans %(name)s kan inte flyttas från %(current)s till %(target)s. "
+"Tillåtna övergångar från %(current)s: %(allowed)s."
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__delivery_partner_id
+msgid "Delivery Address"
+msgstr "Leveransadress"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_pivot
+msgid "Delivery Analysis"
+msgstr "Leveransanalys"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_attempt_form
+msgid "Delivery Attempt"
+msgstr "Leveransförsök"
+
+#. module: eh_log_last_mile
+#: model:ir.ui.menu,name:eh_log_last_mile.menu_eh_log_last_mile_attempts
+msgid "Delivery Attempts"
+msgstr "Leveransförsök"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_delivery__wave_id
+msgid ""
+"Delivery wave this drop belongs to. The wave groups deliveries by driver / "
+"vehicle / planned date so dispatch is one click."
+msgstr ""
+"Leveransvåg som denna avlämning tillhör. Vågen grupperar leveranser efter "
+"förare / fordon / planerat datum så att utskicket sker med ett klick."
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__departed_at
+msgid "Departed"
+msgstr "Avrest"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_form
+msgid "Dispatch"
+msgstr "Försändelse"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_mass_dispatch_form
+msgid "Dispatch All"
+msgstr "Leverera alla"
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/wizards/eh_log_last_mile_mass_action.py:0
+msgid "Dispatch complete"
+msgstr "Utleverans slutförd"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_wave__state__dispatched
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search_full
+msgid "Dispatched"
+msgstr "Utlevererad"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_attempt__display_name
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__display_name
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_mass_dispatch__display_name
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_mass_mark_delivered__display_name
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__display_name
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_res_company__display_name
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_sale_order__display_name
+msgid "Display Name"
+msgstr "Visningsnamn"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_wave__state__draft
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search_full
+msgid "Draft"
+msgstr "Utkast"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__driver_id
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search_full
+msgid "Driver"
+msgstr "Förare"
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_wave.py:0
+msgid "Driver %(driver)s has an expired license (expired %(date)s)."
+msgstr "Föraren %(driver)s har ett utgånget körkort (gick ut %(date)s)."
+
+#. module: eh_log_last_mile
+#: model:ir.actions.report,name:eh_log_last_mile.action_report_eh_log_last_mile_manifest
+msgid "Driver Manifest"
+msgstr "Förarmanifest"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+msgid "Driver Signature"
+msgstr "Förarens signatur"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+msgid ""
+"Driver acknowledges receipt of the deliveries listed above and undertakes to"
+" remit any COD amounts collected at end-of-shift cash-up."
+msgstr ""
+"Föraren bekräftar mottagandet av de leveranser som anges ovan och åtar sig "
+"att överlämna eventuella insamlade COD-belopp vid kassaavstämningen i slutet"
+" av skiftet."
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_delivery__scheduled_window_end
+msgid "End of the customer's promised delivery window."
+msgstr "Slutet på det leveransfönster som utlovats till kunden."
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+msgid "End-of-Shift Cash-Up"
+msgstr "Kassaavstämning vid skiftets slut"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__failed_count
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_delivery__state__failed
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_search_full
+msgid "Failed"
+msgstr "Misslyckades"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__message_follower_ids
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__message_follower_ids
+msgid "Followers"
+msgstr "Följare"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__message_partner_ids
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Följare (Partners)"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_delivery__activity_type_icon
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_wave__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Font Awesome-ikon t.ex. fa-tasks"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_attempt__gps_latitude
+msgid "GPS Latitude"
+msgstr "GPS-latitud"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_attempt__gps_longitude
+msgid "GPS Longitude"
+msgstr "GPS-longitud"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_attempt_form
+msgid "Geotag"
+msgstr "Geotagg"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search
+msgid "Group by Date"
+msgstr "Gruppera efter datum"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search
+msgid "Group by Driver"
+msgstr "Gruppera efter förare"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_attempt__happened_at
+msgid "Happened At"
+msgstr "Inträffade"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__has_message
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__has_message
+msgid "Has Message"
+msgstr "Har meddelande"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_attempt__id
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__id
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_mass_dispatch__id
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_mass_mark_delivered__id
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__id
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_res_company__id
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_res_config_settings__id
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_sale_order__id
+msgid "ID"
+msgstr ""
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__activity_exception_icon
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__activity_exception_icon
+msgid "Icon"
+msgstr "Ikon"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_delivery__activity_exception_icon
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_wave__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Ikon för att indikera en undantagsaktivitet."
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_delivery__message_needaction
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_wave__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+"Om ikryssad, så finns det nya meddelanden som kräver din uppmärksamhet."
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_delivery__message_has_error
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_delivery__message_has_sms_error
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_wave__message_has_error
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_wave__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Om ikryssad, så finns det meddelanden med leveransfel."
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_wave__state__in_progress
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_form
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search_full
+msgid "In Progress"
+msgstr "Pågående"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__message_is_follower
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__message_is_follower
+msgid "Is Follower"
+msgstr "Är Följare"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+msgid "Item"
+msgstr "Objekt"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_sale_order__eh_log_last_mile_required
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_res_config_settings_eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_sale_order_form_eh_log_last_mile
+msgid "Last Mile"
+msgstr "Sista milen"
+
+#. module: eh_log_last_mile
+#: model:ir.model,name:eh_log_last_mile.model_eh_log_last_mile_attempt
+msgid "Last Mile Attempt"
+msgstr "Sista milen-försök"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_sale_order__eh_log_last_mile_delivery_count
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_sale_order__eh_log_last_mile_delivery_ids
+#: model:ir.ui.menu,name:eh_log_last_mile.menu_eh_log_last_mile_deliveries
+msgid "Last Mile Deliveries"
+msgstr "Sista milen-leveranser"
+
+#. module: eh_log_last_mile
+#: model:ir.model,name:eh_log_last_mile.model_eh_log_last_mile_delivery
+msgid "Last Mile Delivery"
+msgstr "Sista milen-leverans"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_res_config_settings__eh_log_last_mile_max_attempts_param
+msgid "Last Mile Max Attempts (system param)"
+msgstr "Max sista milen-försök (systemparameter)"
+
+#. module: eh_log_last_mile
+#: model:ir.model,name:eh_log_last_mile.model_eh_log_last_mile_wave
+msgid "Last Mile Wave"
+msgstr "Sista milen-våg"
+
+#. module: eh_log_last_mile
+#: model:ir.ui.menu,name:eh_log_last_mile.menu_eh_log_last_mile_waves
+msgid "Last Mile Waves"
+msgstr "Sista milen-vågor"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_attempt__write_uid
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__write_uid
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_mass_dispatch__write_uid
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_mass_mark_delivered__write_uid
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__write_uid
+msgid "Last Updated by"
+msgstr "Senast uppdaterad av"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_attempt__write_date
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__write_date
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_mass_dispatch__write_date
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_mass_mark_delivered__write_date
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__write_date
+msgid "Last Updated on"
+msgstr "Senast uppdaterad den"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_mass_mark_delivered_form
+msgid "Mark All Delivered"
+msgstr "Markera alla som levererade"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+msgid "Mark Delivered"
+msgstr "Markera som levererad"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+msgid "Mark Failed Attempt"
+msgstr "Markera som misslyckat försök"
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/wizards/eh_log_last_mile_mass_action.py:0
+msgid "Marked %(moved)d delivered. Skipped %(skipped)d (COD or wrong state)."
+msgstr ""
+"%(moved)d markerade som levererade. Hoppade över %(skipped)d (postförskott "
+"eller fel status)."
+
+#. module: eh_log_last_mile
+#: model:ir.actions.act_window,name:eh_log_last_mile.action_eh_log_last_mile_mass_dispatch
+msgid "Mass Dispatch"
+msgstr "Massutskick"
+
+#. module: eh_log_last_mile
+#: model:ir.model,name:eh_log_last_mile.model_eh_log_last_mile_mass_dispatch
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_mass_dispatch_form
+msgid "Mass Dispatch Waves"
+msgstr "Massutskicksvågor"
+
+#. module: eh_log_last_mile
+#: model:ir.actions.act_window,name:eh_log_last_mile.action_eh_log_last_mile_mass_mark_delivered
+#: model:ir.model,name:eh_log_last_mile.model_eh_log_last_mile_mass_mark_delivered
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_mass_mark_delivered_form
+msgid "Mass Mark Delivered"
+msgstr "Massmarkera som levererad"
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/wizards/eh_log_last_mile_mass_action.py:0
+msgid "Mass mark delivered complete"
+msgstr "Massmarkering som levererad klar"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_res_company__eh_log_last_mile_max_attempts
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_res_config_settings__eh_log_last_mile_max_attempts
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_res_config_settings_eh_log_last_mile
+msgid "Max Delivery Attempts"
+msgstr "Max. leveransförsök"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_delivery__return_reason__max_attempts
+msgid "Maximum Attempts Reached"
+msgstr "Maximalt antal försök har uppnåtts"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_res_company__eh_log_last_mile_max_attempts
+#: model:ir.model.fields,help:eh_log_last_mile.field_res_config_settings__eh_log_last_mile_max_attempts
+msgid ""
+"Maximum delivery attempts before a stop is auto-marked failed. Operators can"
+" still re-schedule a failed delivery from the form."
+msgstr ""
+"Maximalt antal leveransförsök innan ett stopp automatiskt markeras som "
+"misslyckat. Operatörer kan fortfarande omschemalägga en misslyckad leverans "
+"från formuläret."
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__message_has_error
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__message_has_error
+msgid "Message Delivery error"
+msgstr "Leveransfel för meddelanden"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__message_ids
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__message_ids
+msgid "Messages"
+msgstr "Meddelanden"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_search_full
+msgid "Multiple Attempts"
+msgstr "Flera försök"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__my_activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Tidsgräns för mina aktiviteter"
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_delivery.py:0
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_wave.py:0
+msgid "New"
+msgstr "Ny"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__activity_calendar_event_id
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "Nästa aktivitetshändelse i kalendern"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Nästa tidsgräns för en aktivitet"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__activity_summary
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__activity_summary
+msgid "Next Activity Summary"
+msgstr "Nästa aktivitetssammanfattning"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__activity_type_id
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__activity_type_id
+msgid "Next Activity Type"
+msgstr "Nästa aktivitetstyp"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_delivery__cod_collection_method__none
+msgid "Not Applicable"
+msgstr "Ej tillämplig"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_attempt__notes
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__notes
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__notes
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_attempt_form
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_form
+msgid "Notes"
+msgstr "Anteckningar"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__message_needaction_counter
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Antal åtgärder"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__message_has_error_counter
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__message_has_error_counter
+msgid "Number of errors"
+msgstr "Antal fel"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_delivery__message_needaction_counter
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_wave__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Antal meddelanden som kräver åtgärder"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_delivery__message_has_error_counter
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_wave__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Antal meddelanden med leveransfel"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_delivery__package_count
+msgid ""
+"Number of physical pieces. Affects load planning and is reconciled with the "
+"warehouse pick on dispatch."
+msgstr ""
+"Antal fysiska kollin. Påverkar lastplaneringen och stäms av mot "
+"lagerplockningen vid utleverans."
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_search_full
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search_full
+msgid "Open"
+msgstr "Öppna"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_attempt__outcome__other
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_delivery__return_reason__other
+msgid "Other"
+msgstr "Övriga"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_delivery__state__out_for_delivery
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_search_full
+msgid "Out for Delivery"
+msgstr "Under leverans"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_attempt__outcome
+msgid "Outcome"
+msgstr "Utfall"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__package_count
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+msgid "Packages"
+msgstr "Paket"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__pending_count
+msgid "Pending"
+msgstr "Avvaktande"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_res_config_settings_eh_log_last_mile
+msgid ""
+"Per-company maximum delivery attempts before a stop is auto-marked failed."
+msgstr ""
+"Maximalt antal leveransförsök per företag innan ett stopp automatiskt "
+"markeras som misslyckat."
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__photo_image
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+msgid "Photo"
+msgstr "Foto"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+msgid "Pkgs"
+msgstr "Kollin"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_form
+msgid "Plan"
+msgstr "Planera"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__rating_ids
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__rating_ids
+msgid "Ratings"
+msgstr "Omdömen"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__recipient_name
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_mass_mark_delivered__recipient_name
+msgid "Recipient Name"
+msgstr "Mottagarens namn"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__recipient_role
+msgid "Recipient Role"
+msgstr "Mottagarens roll"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__name
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__name
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+msgid "Reference"
+msgstr "Referens"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_attempt__outcome__refused
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_delivery__return_reason__refused
+msgid "Refused"
+msgstr "Nekad"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+msgid "Reschedule"
+msgstr "Boka om"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__activity_user_id
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__activity_user_id
+msgid "Responsible User"
+msgstr "Ansvarig användare"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+msgid "Return"
+msgstr "Returnera"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__return_reason
+msgid "Return Reason"
+msgstr "Returorsak"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__return_to_sender
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+msgid "Return to Sender"
+msgstr "Retur till avsändare"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_delivery__state__returned
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_search_full
+msgid "Returned"
+msgstr "Returnerad"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__message_has_sms_error
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Leveransfel för SMS"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__sale_order_id
+msgid "Sale Order"
+msgstr "Kundorder"
+
+#. module: eh_log_last_mile
+#: model:ir.model,name:eh_log_last_mile.model_sale_order
+msgid "Sales Order"
+msgstr "Försäljningsorder"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_delivery__state__scheduled
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_search_full
+msgid "Scheduled"
+msgstr "Planerad"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__scheduled_date
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search_full
+msgid "Scheduled Date"
+msgstr "Schemalagt datum"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_search_full
+msgid "Search Deliveries"
+msgstr "Sök leveranser"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search_full
+msgid "Search Waves"
+msgstr "Sök vågor"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__sequence
+msgid "Sequence"
+msgstr "Sekvens"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_delivery__return_to_sender
+msgid ""
+"Set when a returned delivery should go back to the shipper rather than be "
+"re-attempted."
+msgstr ""
+"Anges när en returnerad leverans ska gå tillbaka till avsändaren i stället "
+"för att försökas igen."
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__signature_image
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+msgid "Signature"
+msgstr "Signatur"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_delivery__scheduled_window_start
+msgid ""
+"Start of the customer's promised delivery window. Out-of-window delivery "
+"counts against the SLA on the customer dashboard."
+msgstr ""
+"Början på det leveransfönster som utlovats kunden. Leverans utanför fönstret"
+" räknas mot SLA på kundens instrumentpanel."
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__state
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__state
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_search_full
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search_full
+msgid "State"
+msgstr "Status"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_delivery__activity_state
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_wave__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Status baserad på aktiviteter\n"
+"Försenade: Leveranstidpunkten har passerat\n"
+"Idag: Aktivitetsdatum är idag\n"
+"Kommande: Framtida aktiviteter."
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_delivery__sequence
+msgid ""
+"Stop order within the wave. The driver visits stops in sequence; the "
+"dispatcher reorders by drag-and-drop."
+msgstr ""
+"Ordningsföljd för stopp inom vågen. Föraren besöker stoppen i tur och "
+"ordning; dispatchern ändrar ordningen genom att dra och släppa."
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__delivery_count
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_form
+msgid "Stops"
+msgstr "Stopp"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+msgid "Stops ("
+msgstr "Stopp ("
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_res_config_settings_eh_log_last_mile
+msgid ""
+"System parameter mirror for fast lookup. Keeps the per-company limit and the"
+" system cap in sync."
+msgstr ""
+"Systemparameterspegel för snabb uppslagning. Håller gränsen per företag och "
+"systemtaket synkroniserade."
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_res_config_settings_eh_log_last_mile
+msgid "System-wide Cap"
+msgstr "Systemomfattande tak"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_res_config_settings__eh_log_last_mile_max_attempts_param
+msgid ""
+"System-wide cap mirrored as ir.config_parameter "
+"eh_log_last_mile.max_attempts so the action methods read it without a per-"
+"company lookup on every call."
+msgstr ""
+"Systemomfattande tak speglat som ir.config_parameter "
+"eh_log_last_mile.max_attempts så att åtgärdsmetoderna läser det utan en "
+"uppslagning per företag vid varje anrop."
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search_full
+msgid "This Week"
+msgstr "Den här veckan"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_form
+msgid "Timing"
+msgstr "Tidsinställning"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search_full
+msgid "Today"
+msgstr "Idag"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search_full
+msgid "Tomorrow"
+msgstr "Imorgon"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_delivery__activity_exception_decoration
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_wave__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Typ av undantagsaktivitet som har registrerats."
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__vehicle_id
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search_full
+msgid "Vehicle"
+msgstr "Fordon"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_attempt__outcome__vehicle_breakdown
+msgid "Vehicle Breakdown"
+msgstr "Fordonshaveri"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__wave_id
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_search_full
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_form
+msgid "Wave"
+msgstr "Våg"
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_wave.py:0
+msgid ""
+"Wave %(name)s cannot move from %(current)s to %(target)s. Allowed "
+"transitions from %(current)s: %(allowed)s."
+msgstr ""
+"Vågen %(name)s kan inte flyttas från %(current)s till %(target)s. Tillåtna "
+"övergångar från %(current)s: %(allowed)s."
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_pivot
+msgid "Wave Performance"
+msgstr "Vågprestanda"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+msgid "Wave and Schedule"
+msgstr "Våg och schema"
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_wave.py:0
+msgid "Wave has no scheduled deliveries."
+msgstr "Vågen har inga schemalagda leveranser."
+
+#. module: eh_log_last_mile
+#: model:ir.actions.act_window,name:eh_log_last_mile.action_eh_log_last_mile_wave
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_mass_dispatch__wave_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_calendar
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_list
+msgid "Waves"
+msgstr "Vågor"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_graph
+msgid "Waves by State"
+msgstr "Vågor efter status"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__website_message_ids
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__website_message_ids
+msgid "Website Messages"
+msgstr "Hemsidesmeddelanden"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_delivery__website_message_ids
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_wave__website_message_ids
+msgid "Website communication history"
+msgstr "Hemsidans kommunikationshistorik"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__weight_kg
+msgid "Weight (kg)"
+msgstr "Vikt (kg)"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_attempt_form
+msgid "What happened on this attempt..."
+msgstr "Vad hände vid det här försöket..."
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_sale_order__eh_log_last_mile_required
+msgid ""
+"When checked, the order is eligible for inclusion in a last-mile wave. The "
+"dispatcher creates the delivery record and assigns to a wave."
+msgstr ""
+"När kryssrutan är markerad är ordern kvalificerad för att inkluderas i en "
+"last mile-våg. Utsändaren skapar leveransposten och tilldelar den till en "
+"våg."
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+msgid "Window"
+msgstr "Fönster"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_search_full
+msgid "Window Day"
+msgstr "Fönsterdag"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__scheduled_window_end
+msgid "Window End"
+msgstr "Fönsterslut"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__scheduled_window_start
+msgid "Window Start"
+msgstr "Fönsterstart"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_search_full
+msgid "Window Today"
+msgstr "Fönster idag"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_search_full
+msgid "Window Tomorrow"
+msgstr "Fönster imorgon"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+msgid "Window end"
+msgstr "Fönsterslut"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+msgid "Window start"
+msgstr "Fönsterstart"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search
+msgid "With Outstanding COD"
+msgstr "Med utestående COD"
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_attempt.py:0
+msgid ""
+"[EHL-LM-ATT-001] Attempt entries are append-only. Only the notes field can "
+"be updated after capture; the following are immutable: %(fields)s."
+msgstr ""
+"[EHL-LM-ATT-001] Försöksposter är endast tillägg. Endast anteckningsfältet "
+"kan uppdateras efter registrering; följande är oföränderliga: %(fields)s."
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_delivery.py:0
+msgid ""
+"[EHL-LM-DEL-001] State changes on a delivery must go through the action "
+"buttons. Direct writes are rejected."
+msgstr ""
+"[EHL-LM-DEL-001] Statusändringar på en leverans måste ske via "
+"åtgärdsknapparna. Direkta skrivningar avvisas."
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_delivery.py:0
+msgid ""
+"[EHL-LM-DEL-002] Delivery %(name)s expects a COD collection of %(amount)s. "
+"Capture the collected amount before marking delivered."
+msgstr ""
+"[EHL-LM-DEL-002] Leverans %(name)s förväntar en COD-inkassering på "
+"%(amount)s. Registrera det inkasserade beloppet innan du markerar som "
+"levererad."
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_delivery.py:0
+msgid ""
+"[EHL-LM-DEL-003] COD collected %(collected)s exceeds expected %(expected)s "
+"on delivery %(name)s."
+msgstr ""
+"[EHL-LM-DEL-003] Inkasserad COD %(collected)s överstiger förväntat "
+"%(expected)s på leverans %(name)s."
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_wave.py:0
+msgid ""
+"[EHL-LM-WAVE-001] State changes on a wave must go through the action "
+"buttons. Direct writes are rejected."
+msgstr ""
+"[EHL-LM-WAVE-001] Statusändringar på en våg måste ske via åtgärdsknapparna. "
+"Direkta skrivningar avvisas."
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_wave.py:0
+msgid ""
+"[EHL-LM-WAVE-002] Wave %(name)s cannot be dispatched. Resolve:\n"
+"\n"
+"- %(list)s"
+msgstr ""
+"[EHL-LM-WAVE-002] Våg %(name)s kan inte skickas. Åtgärda:\n"
+"\n"
+"- %(list)s"
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_wave.py:0
+msgid ""
+"[EHL-LM-WAVE-003] Wave %(name)s has %(count)d pending deliveries. Resolve "
+"every stop (deliver, fail, or return) before completion."
+msgstr ""
+"[EHL-LM-WAVE-003] Våg %(name)s har %(count)d väntande leveranser. Åtgärda "
+"varje stopp (leverera, misslyckas eller returnera) före slutförande."
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_wave.py:0
+msgid ""
+"[EHL-LM-WAVE-004] Wave %(name)s cannot be closed while COD outstanding is "
+"%(amount)s. Settle the outstanding amount first."
+msgstr ""
+"[EHL-LM-WAVE-004] Våg %(name)s kan inte stängas medan utestående "
+"postförskott är %(amount)s. Reglera det utestående beloppet först."
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_kanban
+msgid "attempts"
+msgstr "försök"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+msgid "ePOD"
+msgstr ""
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+msgid "kg"
+msgstr ""
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_delivery.py:0
+msgid "recipient"
+msgstr "Mottagare"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_kanban
+msgid "stops"
+msgstr "Stopp"
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_wave.py:0
+msgid "wave_id"
+msgstr ""

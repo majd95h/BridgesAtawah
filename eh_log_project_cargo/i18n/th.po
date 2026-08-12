@@ -1,0 +1,1738 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* eh_log_project_cargo
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-01 04:34+0000\n"
+"PO-Revision-Date: 2026-07-01 04:34+0000\n"
+"Last-Translator: ERP Heritage <info@erpheritage.com.au>\n"
+"Language-Team: Thai\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_kanban
+msgid "<i class=\"fa fa-cube me-1\" title=\"Items\"/>"
+msgstr "<i class=\"fa fa-cube me-1\" title=\"รายการ\"/>"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid ""
+"<i class=\"fa fa-cube\" style=\"font-size:1.6rem;color:#D4A055;\" title=\"Project cargo\"/>\n"
+"                                    <span class=\"ms-2\" style=\"font-family:'DM Mono',ui-monospace,monospace;font-size:0.78rem;letter-spacing:0.18em;text-transform:uppercase;color:#E8C887;font-weight:600;\">Project cargo</span>"
+msgstr ""
+"<i class=\"fa fa-cube\" style=\"font-size:1.6rem;color:#D4A055;\" title=\"การขนส่งโครงการ\"/>\n"
+"                                    <span class=\"ms-2\" style=\"font-family:'DM Mono',ui-monospace,monospace;font-size:0.78rem;letter-spacing:0.18em;text-transform:uppercase;color:#E8C887;font-weight:600;\">การขนส่งโครงการ</span>"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_kanban
+msgid "<i class=\"fa fa-folder me-1\" title=\"Project\"/>"
+msgstr "<i class=\"fa fa-folder me-1\" title=\"โครงการ\"/>"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid "<i class=\"fa fa-warning\"/> Oversized"
+msgstr "<i class=\"fa fa-warning\"/> ขนาดใหญ่เกิน"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_permit_application_document
+msgid "<strong>Authority:</strong>"
+msgstr "<strong>หน่วยงาน:</strong>"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_lift_plan_document
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_method_statement_document
+msgid "<strong>Customer:</strong>"
+msgstr "<strong>ลูกค้า:</strong>"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_method_statement_document
+msgid "<strong>Destination:</strong>"
+msgstr "<strong>ปลายทาง:</strong>"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_permit_application_document
+msgid "<strong>Issuing Partner:</strong>"
+msgstr "<strong>พันธมิตรผู้ออก:</strong>"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_permit_application_document
+msgid "<strong>Job:</strong>"
+msgstr "<strong>ตำแหน่งงาน:</strong>"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_method_statement_document
+msgid "<strong>Origin:</strong>"
+msgstr "<strong>ต้นทาง:</strong>"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid ""
+"<strong>Oversized cargo present.</strong>\n"
+"                        Convoy planning, route survey, and permit register are required."
+msgstr ""
+"<strong>มีสินค้าขนาดใหญ่เกินมาตรฐาน</strong>\n"
+"                        จำเป็นต้องมีการวางแผนขบวน การสำรวจเส้นทาง และทะเบียนใบอนุญาต"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_method_statement_document
+msgid "<strong>Project:</strong>"
+msgstr "<strong>โปรเจ็กต์:</strong>"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_lift_plan_document
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_method_statement_document
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_permit_application_document
+msgid "<strong>Reference:</strong>"
+msgstr "<strong>อ้างอิง:</strong>"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_permit_application_document
+msgid "<strong>State:</strong>"
+msgstr "<strong>สถานะ:</strong>"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__message_needaction
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__message_needaction
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__message_needaction
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__message_needaction
+msgid "Action Needed"
+msgstr "จำเป็นต้องดำเนินการ"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_form
+msgid "Activate"
+msgstr "เปิดใช้งาน"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__active
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_permit__state__active
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_search_full
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_search_full
+msgid "Active"
+msgstr "เปิดใช้งาน"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__activity_ids
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__activity_ids
+msgid "Activities"
+msgstr "กิจกรรม"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__activity_exception_decoration
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "การตกแต่งข้อยกเว้นกิจกรรม"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__activity_state
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__activity_state
+msgid "Activity State"
+msgstr "สถานะกิจกรรม"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__activity_type_icon
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "ไอคอนประเภทกิจกรรม"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__actual_arrival
+msgid "Actual Arrival"
+msgstr "การมาถึงจริง"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__actual_departure
+msgid "Actual Departure"
+msgstr "การออกเดินทางจริง"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_permit__state__applied
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_search_full
+msgid "Applied"
+msgstr "นำไปใช้แล้ว"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__applied_at
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_permit_application_document
+msgid "Applied On"
+msgstr "นำไปใช้เมื่อ"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_lift_plan_document
+msgid "Arrival"
+msgstr "การมาถึง"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_convoy__state__arrived
+msgid "Arrived"
+msgstr "มาถึงแล้ว"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__message_attachment_count
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__message_attachment_count
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__message_attachment_count
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__message_attachment_count
+msgid "Attachment Count"
+msgstr "จำนวนสิ่งที่แนบมา"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_search_full
+msgid "Authority"
+msgstr "หน่วยงาน"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_item__is_oversized
+msgid ""
+"Auto-derived from dimensions vs the standard envelope. Drives downstream "
+"requirements (escort, permits, route survey)."
+msgstr ""
+"ได้มาอัตโนมัติจากขนาดเทียบกับขอบเขตมาตรฐาน กำหนดข้อกำหนดขั้นถัดไป "
+"(การคุ้มกัน ใบอนุญาต การสำรวจเส้นทาง)"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__axle_count
+msgid "Axle Lines"
+msgstr "รายการเพลา"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__cog_x_m
+msgid "COG Offset X (m)"
+msgstr "ออฟเซ็ต COG X (m)"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__cog_y_m
+msgid "COG Offset Y (m)"
+msgstr "ออฟเซ็ต COG Y (m)"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__cog_z_m
+msgid "COG Offset Z (m)"
+msgstr "ออฟเซ็ต COG Z (m)"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_convoy_form
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_form
+msgid "Cancel"
+msgstr "ยกเลิก"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_convoy__state__cancelled
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_job__state__cancelled
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_permit__state__cancelled
+msgid "Cancelled"
+msgstr "ยกเลิก"
+
+#. module: eh_log_project_cargo
+#: model:ir.actions.act_window,name:eh_log_project_cargo.action_eh_log_project_cargo_item
+msgid "Cargo Items"
+msgstr "รายการสินค้า"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_item_form
+msgid "Centre of Gravity"
+msgstr "จุดศูนย์ถ่วง"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_item__cog_x_m
+msgid "Centre of gravity offset along length axis from the geometric centre."
+msgstr "การเยื้องของจุดศูนย์ถ่วงตามแกนความยาวจากจุดศูนย์กลางเชิงเรขาคณิต"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__is_chosen_route
+msgid "Chosen Route"
+msgstr "เส้นทางที่เลือก"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_form
+msgid "Close"
+msgstr "ปิด"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_job__state__closed
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_permit__state__closed
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_search_full
+msgid "Closed"
+msgstr "ปิดแล้ว"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__code
+msgid "Code"
+msgstr "โค้ด"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__company_id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy_vehicle__company_id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__company_id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__company_id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__company_id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__company_id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__company_id
+msgid "Company"
+msgstr "บริษัท"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_job__state__completed
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_search_full
+msgid "Completed"
+msgstr "เสร็จสิ้น"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_job__has_oversized_item
+msgid ""
+"Computed: true when any item exceeds the configured oversize thresholds "
+"(length/width/height/weight). Triggers permit and route survey requirements."
+msgstr ""
+"คำนวณ: true เมื่อมีรายการใดเกินเกณฑ์ขนาดใหญ่เกินที่กำหนดไว้ "
+"(ความยาว/ความกว้าง/ความสูง/น้ำหนัก) "
+"จะเรียกใช้ข้อกำหนดใบอนุญาตและการสำรวจเส้นทาง"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy_vehicle__convoy_id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__convoy_id
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_lift_plan_document
+msgid "Convoy"
+msgstr "ขบวนรถ"
+
+#. module: eh_log_project_cargo
+#: model:ir.model,name:eh_log_project_cargo.model_eh_log_project_cargo_convoy_vehicle
+msgid "Convoy Vehicle Assignment"
+msgstr "การกำหนดยานพาหนะขบวน"
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_job.py:0
+#: model:ir.actions.act_window,name:eh_log_project_cargo.action_eh_log_project_cargo_convoy
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__convoy_count
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__convoy_ids
+#: model:ir.ui.menu,name:eh_log_project_cargo.menu_eh_log_project_cargo_convoys
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_lift_plan_document
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_convoy_calendar
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid "Convoys"
+msgstr "ขบวน"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__cost_amount
+msgid "Cost"
+msgstr "ต้นทุน"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_lift_plan_document
+msgid "Crane"
+msgstr "เครน"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_equipment_form
+msgid "Crane Specifics"
+msgstr "รายละเอียดเฉพาะของเครน"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_equipment__equipment_type__crane_crawler
+msgid "Crawler Crane"
+msgstr "เครนตีนตะขาบ"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__create_uid
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy_vehicle__create_uid
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__create_uid
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__create_uid
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__create_uid
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__create_uid
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__create_uid
+msgid "Created by"
+msgstr "สร้างโดย"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__create_date
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy_vehicle__create_date
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__create_date
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__create_date
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__create_date
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__create_date
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__create_date
+msgid "Created on"
+msgstr "สร้างเมื่อ"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__currency_id
+msgid "Currency"
+msgstr "สกุลเงิน"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__customer_partner_id
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_search_full
+msgid "Customer"
+msgstr "ลูกค้า"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__customer_reference
+msgid "Customer Reference"
+msgstr "อ้างอิงลูกค้า"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_permit__authority__customs
+msgid "Customs"
+msgstr "ศุลกากร"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__days_until_expiry
+msgid "Days Until Expiry"
+msgstr "จำนวนวันจนกว่าจะหมดอายุ"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_convoy_kanban
+msgid "Dep:"
+msgstr "ออก:"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_lift_plan_document
+msgid "Departure"
+msgstr "การออกงาน"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__name
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_method_statement_document
+msgid "Description"
+msgstr "คำอธิบาย"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__destination_partner_id
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid "Destination"
+msgstr "ปลายทาง"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_item_form
+msgid "Dimensions"
+msgstr "มิติ"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__display_name
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy_vehicle__display_name
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__display_name
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__display_name
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__display_name
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__display_name
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__display_name
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_sale_order__display_name
+msgid "Display Name"
+msgstr "แสดงชื่อ"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__distance_km
+msgid "Distance (km)"
+msgstr "ระยะทาง (km)"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_job__state__draft
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_permit__state__draft
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_search_full
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_search_full
+msgid "Draft"
+msgstr "ร่าง"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy_vehicle__driver_partner_id
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_lift_plan_document
+msgid "Driver"
+msgstr "คนขับ"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_permit__authority__environmental
+msgid "Environmental"
+msgstr "สิ่งแวดล้อม"
+
+#. module: eh_log_project_cargo
+#: model:ir.actions.act_window,name:eh_log_project_cargo.action_eh_log_project_cargo_equipment
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy_vehicle__equipment_id
+#: model:ir.ui.menu,name:eh_log_project_cargo.menu_eh_log_project_cargo_equipment
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_lift_plan_document
+msgid "Equipment"
+msgstr "อุปกรณ์"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.constraint,message:eh_log_project_cargo.constraint_eh_log_project_cargo_equipment_equipment_code_unique
+msgid "Equipment code must be unique per company."
+msgstr "รหัสอุปกรณ์ต้องไม่ซ้ำกันในแต่ละบริษัท"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_lift_plan_document
+msgid "Escort"
+msgstr "การคุ้มกัน"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_equipment__equipment_type__escort
+msgid "Escort Vehicle"
+msgstr "ยานพาหนะคุ้มกัน"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__estimated_duration_h
+msgid "Estimated Duration (h)"
+msgstr "ระยะเวลาโดยประมาณ (ชม.)"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_job__state__executing
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_search_full
+msgid "Executing"
+msgstr "กำลังดำเนินการ"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_search_full
+msgid "Expired"
+msgstr "หมดอายุ"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_search_full
+msgid "Expiring within 7 days"
+msgstr "หมดอายุภายใน 7 วัน"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__message_follower_ids
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__message_follower_ids
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__message_follower_ids
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__message_follower_ids
+msgid "Followers"
+msgstr "ผู้ติดตาม"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__message_partner_ids
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__message_partner_ids
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__message_partner_ids
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "ผู้ติดตาม (พาร์ทเนอร์)"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_job__activity_type_icon
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_permit__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "ไอคอนแบบฟอนต์ที่ยอดเยี่ยมเช่น fa-tasks"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_equipment__rated_capacity_t
+msgid ""
+"For cranes: lift capacity at the manufacturer's reference radius. For "
+"trailers: payload."
+msgstr ""
+"สำหรับเครน: ความสามารถในการยกที่รัศมีอ้างอิงของผู้ผลิต สำหรับรถพ่วง: "
+"น้ำหนักบรรทุก"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_job__method_statement
+msgid ""
+"Free-form method statement that prints on the Method Statement PDF. "
+"Operators write this once the survey and the lift plan are agreed."
+msgstr ""
+"คำชี้แจงวิธีการแบบอิสระที่พิมพ์ลงบน Method Statement PDF "
+"ผู้ปฏิบัติงานเขียนสิ่งนี้เมื่อการสำรวจและแผนการยกได้รับการตกลงแล้ว"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_item__lift_points_notes
+msgid ""
+"Free-text description of designated lift points or cradle / saddle "
+"requirements. The lift contractor's calc package consumes the canonical "
+"structured form; this is the forwarder's working note."
+msgstr ""
+"คำอธิบายแบบข้อความอิสระของจุดยกที่กำหนดหรือข้อกำหนดเปล / อาน "
+"แพ็กเกจการคำนวณของผู้รับเหมายกใช้รูปแบบมีโครงสร้างมาตรฐาน "
+"นี่คือบันทึกการทำงานของผู้ส่งต่อสินค้า"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__hazards
+msgid "Free-text description of hazards encountered."
+msgstr "คำอธิบายแบบข้อความอิสระของอันตรายที่พบ"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_equipment__equipment_type__crane_gantry
+msgid "Gantry Crane"
+msgstr "เครนแบบแกนทรี"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_method_statement_document
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_permit_application_document
+msgid "H (m)"
+msgstr "สูง (m)"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__has_escort_vehicle
+msgid "Has Escort Vehicle"
+msgstr "มียานพาหนะคุ้มกัน"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__has_lifting_equipment
+msgid "Has Lifting Equipment"
+msgstr "มีอุปกรณ์ยก"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__has_message
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__has_message
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__has_message
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__has_message
+msgid "Has Message"
+msgstr "มีข้อความ"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__has_oversized_item
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_search_full
+msgid "Has Oversized Item"
+msgstr "มีสิ่งของขนาดใหญ่เกิน"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__hazards
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_route_survey_form
+msgid "Hazards"
+msgstr "อันตราย"
+
+#. module: eh_log_project_cargo
+#: model:ir.model,name:eh_log_project_cargo.model_eh_log_project_cargo_equipment
+msgid "Heavy-Lift Equipment"
+msgstr "อุปกรณ์ยกของหนัก"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__height_m
+msgid "Height (m)"
+msgstr "ความสูง (m)"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__home_depot
+msgid "Home Depot"
+msgstr ""
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_equipment__spmt_modules_available
+msgid "How many modules can be coupled in this configuration."
+msgstr "สามารถเชื่อมต่อโมดูลได้กี่โมดูลในการกำหนดค่านี้"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy_vehicle__id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_sale_order__id
+msgid "ID"
+msgstr "ไอดี"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__activity_exception_icon
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__activity_exception_icon
+msgid "Icon"
+msgstr "ไอคอน"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_job__activity_exception_icon
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_permit__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "ไอคอนเพื่อระบุการยกเว้นกิจกรรม"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_convoy__message_needaction
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_equipment__message_needaction
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_job__message_needaction
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_permit__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "ถ้าเลือก ข้อความใหม่จะต้องการความสนใจจากคุณ"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_convoy__message_has_error
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_convoy__message_has_sms_error
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_equipment__message_has_error
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_equipment__message_has_sms_error
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_job__message_has_error
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_job__message_has_sms_error
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_permit__message_has_error
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_permit__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "ถ้าเลือก ข้อความบางข้อความมีข้อผิดพลาดในการส่ง"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_convoy__state__in_transit
+msgid "In Transit"
+msgstr "อยู่ระหว่างการขนส่ง"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_item__transport_orientation__inverted
+msgid "Inverted"
+msgstr "สลับแล้ว"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__message_is_follower
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__message_is_follower
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__message_is_follower
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__message_is_follower
+msgid "Is Follower"
+msgstr "เป็นผู้ติดตาม"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_permit__state__issued
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_search_full
+msgid "Issued"
+msgstr "เผยแพร่แล้ว"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__issued_at
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_permit_application_document
+msgid "Issued On"
+msgstr "ออกเมื่อ"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__authority
+msgid "Issuing Authority"
+msgstr "หน่วยงานผู้ออก"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__issuing_partner_id
+msgid "Issuing Partner"
+msgstr "พันธมิตรผู้ออก"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_permit_application_document
+msgid "Item"
+msgstr "รายการ"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__item_count
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__item_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_method_statement_document
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid "Items"
+msgstr "รายการ"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__item_ids
+msgid "Items Carried"
+msgstr "รายการที่ขนส่ง"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__job_id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__job_id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__job_id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__job_id
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_search_full
+msgid "Job"
+msgstr "งาน"
+
+#. module: eh_log_project_cargo
+#: model:ir.ui.menu,name:eh_log_project_cargo.menu_eh_log_project_cargo_jobs
+msgid "Jobs"
+msgstr "งาน"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_method_statement_document
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_permit_application_document
+msgid "L (m)"
+msgstr ""
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__write_uid
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy_vehicle__write_uid
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__write_uid
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__write_uid
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__write_uid
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__write_uid
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__write_uid
+msgid "Last Updated by"
+msgstr "อัปเดตครั้งล่าสุดโดย"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__write_date
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy_vehicle__write_date
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__write_date
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__write_date
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__write_date
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__write_date
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__write_date
+msgid "Last Updated on"
+msgstr "อัปเดตครั้งล่าสุดเมื่อ"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_convoy_vehicle__role__escort_lead
+msgid "Lead Escort"
+msgstr "ขบวนนำหน้า"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__length_m
+msgid "Length (m)"
+msgstr "ความยาว (m)"
+
+#. module: eh_log_project_cargo
+#: model:ir.actions.report,name:eh_log_project_cargo.action_report_lift_plan
+msgid "Lift Plan"
+msgstr "แผนการยก"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__lift_points_notes
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_item_form
+msgid "Lift Points"
+msgstr "จุดยก"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid "Lift Study"
+msgstr "การศึกษาการยก"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__lift_study_notes
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_lift_plan_document
+msgid "Lift Study Notes"
+msgstr "หมายเหตุการศึกษาการยก"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_convoy_vehicle__role__crane
+msgid "Lifting Crane"
+msgstr "เครนยก"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_equipment__equipment_type__trailer_lowbed
+msgid "Lowbed Trailer"
+msgstr "รถพ่วงพื้นเตี้ย"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__max_axle_load_t
+msgid ""
+"Lowest bridge axle-load rating encountered. Constrains the convoy weight per"
+" axle line."
+msgstr ""
+"ค่าพิกัดน้ำหนักเพลาของสะพานที่ต่ำที่สุดที่พบ จำกัดน้ำหนักขบวนต่อแนวเพลา"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__min_overhead_clearance_m
+msgid ""
+"Lowest overhead clearance encountered on the route. Driving constraint for "
+"tall cargo; the lift study checks against the cargo's transport height plus "
+"the trailer deck height."
+msgstr ""
+"ระยะปลอดภัยเหนือศีรษะที่ต่ำที่สุดที่พบบนเส้นทาง "
+"เป็นข้อจำกัดในการขับขี่สำหรับสินค้าสูง "
+"การศึกษาการยกจะตรวจสอบเทียบกับความสูงในการขนส่งของสินค้าบวกกับความสูงของพื้นรถพ่วง"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_form
+msgid "Mark Applied"
+msgstr "ทำเครื่องหมายว่าใช้แล้ว"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_convoy_form
+msgid "Mark Arrived"
+msgstr "ทำเครื่องหมายว่ามาถึงแล้ว"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid "Mark Completed"
+msgstr "ทำเครื่องหมายว่าเสร็จสมบูรณ์"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_convoy_form
+msgid "Mark In Transit"
+msgstr "ทำเครื่องหมายว่าอยู่ระหว่างขนส่ง"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_form
+msgid "Mark Issued"
+msgstr "ทำเครื่องหมายว่าออกแล้ว"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid "Mark Planned"
+msgstr "ทำเครื่องหมายว่าวางแผนแล้ว"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_form
+msgid "Mark Rejected"
+msgstr "ทำเครื่องหมายว่าปฏิเสธ"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid "Mark Surveyed"
+msgstr "ทำเครื่องหมายว่าตรวจสอบแล้ว"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__max_boom_length_m
+msgid "Max Boom Length (m)"
+msgstr "ความยาวบูมสูงสุด (m)"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__max_boom_radius_m
+msgid "Max Boom Radius (m)"
+msgstr "รัศมีบูมสูงสุด (m)"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__max_axle_load_t
+msgid "Max Bridge Axle Load (t)"
+msgstr "น้ำหนักเพลาสูงสุดบนสะพาน (t)"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__message_has_error
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__message_has_error
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__message_has_error
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__message_has_error
+msgid "Message Delivery error"
+msgstr "เกิดข้อผิดพลาดในการส่งข้อความ"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__message_ids
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__message_ids
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__message_ids
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__message_ids
+msgid "Messages"
+msgstr "ข้อความ"
+
+#. module: eh_log_project_cargo
+#: model:ir.actions.report,name:eh_log_project_cargo.action_report_method_statement
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__method_statement
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid "Method Statement"
+msgstr "เอกสารแสดงวิธีการทำงาน"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__min_overhead_clearance_m
+msgid "Min Overhead Clearance (m)"
+msgstr "ระยะห่างเหนือศีรษะขั้นต่ำ (m)"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__min_swing_radius_m
+msgid "Min Swing Radius (m)"
+msgstr "รัศมีการหมุนขั้นต่ำ (m)"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_equipment__equipment_type__crane_mobile
+msgid "Mobile Crane"
+msgstr "เครนเคลื่อนที่"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_equipment__equipment_type__trailer_modular
+msgid "Modular Trailer"
+msgstr "รถพ่วงแบบโมดูลาร์"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_permit_application_document
+msgid "Move Particulars"
+msgstr "รายละเอียดรายการบัญชี"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__my_activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "วันครบกำหนดกิจกรรมของฉัน"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__name
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__name
+msgid "Name"
+msgstr "ชื่อ"
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_convoy.py:0
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_job.py:0
+msgid "New"
+msgstr "ใหม่"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__activity_calendar_event_id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "ปฏิทินอีเวนต์กิจกรรมถัดไป"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "วันครบกำหนดกิจกรรมถัดไป"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__activity_summary
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__activity_summary
+msgid "Next Activity Summary"
+msgstr "สรุปกิจกรรมถัดไป"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__activity_type_id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__activity_type_id
+msgid "Next Activity Type"
+msgstr "ประเภทกิจกรรมถัดไป"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__next_inspection_date
+msgid "Next Inspection"
+msgstr "การตรวจสอบครั้งถัดไป"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__night_only
+msgid "Night Move Only"
+msgstr "เคลื่อนย้ายกลางคืนเท่านั้น"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__notes
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy_vehicle__notes
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__notes
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_permit_application_document
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_convoy_form
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_form
+msgid "Notes"
+msgstr "โน้ต"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__message_needaction_counter
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__message_needaction_counter
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__message_needaction_counter
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__message_needaction_counter
+msgid "Number of Actions"
+msgstr "จํานวนการดําเนินการ"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_equipment__spmt_axle_lines
+msgid "Number of axle lines per SPMT module."
+msgstr "จำนวนแนวเพลาต่อโมดูล SPMT"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__message_has_error_counter
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__message_has_error_counter
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__message_has_error_counter
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__message_has_error_counter
+msgid "Number of errors"
+msgstr "จํานวนข้อผิดพลาด"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_convoy__message_needaction_counter
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_equipment__message_needaction_counter
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_job__message_needaction_counter
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_permit__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "จำนวนข้อความที่ต้องดำเนินการ"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_convoy__message_has_error_counter
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_equipment__message_has_error_counter
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_job__message_has_error_counter
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_permit__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "จํานวนข้อความที่มีข้อผิดพลาดในการส่ง"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_kanban
+msgid "OOG"
+msgstr ""
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_item__transport_orientation__on_side
+msgid "On Side"
+msgstr "ด้านข้าง"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__origin_partner_id
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid "Origin"
+msgstr "จุดเริ่ม"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_equipment__equipment_type__other
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_permit__authority__other
+msgid "Other"
+msgstr "อื่น ๆ"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__is_oversized
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_method_statement_document
+msgid "Oversized"
+msgstr "ขนาดใหญ่เกินมาตรฐาน"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__owner_partner_id
+msgid "Owner"
+msgstr "เจ้าของ"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__packing_notes
+msgid "Packing / Protection Notes"
+msgstr "หมายเหตุการบรรจุ / การป้องกัน"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_item_form
+msgid "Packing Notes"
+msgstr "หมายเหตุการบรรจุ"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_equipment__owner_partner_id
+msgid ""
+"Partner that owns the equipment. Internal fleet uses the company partner; "
+"rented kit references the rental company so cost reconciliation has the "
+"right vendor."
+msgstr ""
+"พาร์ทเนอร์ที่เป็นเจ้าของอุปกรณ์ ยานพาหนะภายในองค์กรใช้พาร์ทเนอร์ของบริษัท "
+"ส่วนอุปกรณ์ที่เช่ามาจะอ้างอิงบริษัทผู้ให้เช่า "
+"เพื่อให้การกระทบยอดต้นทุนมีผู้ขายที่ถูกต้อง"
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_permit.py:0
+msgid "Permit %(name)s cannot move from %(from)s to %(to)s."
+msgstr "ใบอนุญาต %(name)s ไม่สามารถย้ายจาก %(from)s ไปยัง %(to)s ได้"
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_permit.py:0
+msgid "Permit %(name)s expires on %(date)s"
+msgstr "ใบอนุญาต %(name)s หมดอายุในวันที่ %(date)s"
+
+#. module: eh_log_project_cargo
+#: model:ir.actions.report,name:eh_log_project_cargo.action_report_permit_application
+msgid "Permit Application"
+msgstr "การขอใบอนุญาต"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__permit_reference
+msgid "Permit Reference"
+msgstr "หมายเลขอ้างอิงใบอนุญาต"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_calendar
+msgid "Permit Validity"
+msgstr "ความถูกต้องของใบอนุญาต"
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_job.py:0
+#: model:ir.actions.act_window,name:eh_log_project_cargo.action_eh_log_project_cargo_permit
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__permit_count
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__permit_ids
+#: model:ir.ui.menu,name:eh_log_project_cargo.menu_eh_log_project_cargo_permits
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid "Permits"
+msgstr "ใบอนุญาต"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_convoy__state__planned
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_job__state__planned
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_search_full
+msgid "Planned"
+msgstr "วางแผน"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_permit__authority__police
+msgid "Police Escort"
+msgstr "การคุ้มกันของตำรวจ"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_permit__authority__port
+msgid "Port Authority"
+msgstr "การท่าเรือ"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_convoy_vehicle__role__primary
+msgid "Primary Hauler"
+msgstr "ผู้ขนส่งหลัก"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_equipment__equipment_type__prime_mover
+msgid "Prime Mover"
+msgstr "รถหัวลาก"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid "Project"
+msgstr "โปรเจกต์"
+
+#. module: eh_log_project_cargo
+#: model:ir.ui.menu,name:eh_log_project_cargo.menu_eh_log_project_cargo_config_root
+#: model:ir.ui.menu,name:eh_log_project_cargo.menu_eh_log_project_cargo_root
+msgid "Project Cargo"
+msgstr "สินค้าโครงการ"
+
+#. module: eh_log_project_cargo
+#: model:ir.model,name:eh_log_project_cargo.model_eh_log_project_cargo_convoy
+msgid "Project Cargo Convoy"
+msgstr "ขบวนสินค้าโครงการ"
+
+#. module: eh_log_project_cargo
+#: model:ir.model,name:eh_log_project_cargo.model_eh_log_project_cargo_item
+msgid "Project Cargo Item"
+msgstr "รายการสินค้าโครงการ"
+
+#. module: eh_log_project_cargo
+#: model:ir.model,name:eh_log_project_cargo.model_eh_log_project_cargo_job
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid "Project Cargo Job"
+msgstr "งานสินค้าโครงการ"
+
+#. module: eh_log_project_cargo
+#: model:ir.actions.act_window,name:eh_log_project_cargo.action_eh_log_project_cargo_job
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_sale_order__eh_log_project_cargo_job_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_calendar
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_sale_order_form_project_cargo
+msgid "Project Cargo Jobs"
+msgstr "งานสินค้าโครงการ"
+
+#. module: eh_log_project_cargo
+#: model:ir.model,name:eh_log_project_cargo.model_eh_log_project_cargo_permit
+msgid "Project Cargo Permit"
+msgstr "ใบอนุญาตสินค้าโครงการ"
+
+#. module: eh_log_project_cargo
+#: model:ir.model,name:eh_log_project_cargo.model_eh_log_project_cargo_route_survey
+msgid "Project Cargo Route Survey"
+msgstr "การสำรวจเส้นทางสินค้าโครงการ"
+
+#. module: eh_log_project_cargo
+#: model:ir.actions.server,name:eh_log_project_cargo.cron_alert_expiring_permits_ir_actions_server
+msgid "Project Cargo: Alert Expiring Permits"
+msgstr "สินค้าโครงการ: แจ้งเตือนใบอนุญาตที่กำลังหมดอายุ"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__project_name
+msgid "Project Name"
+msgstr "ชื่อโปรเจ็กต์"
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_job.py:0
+msgid "Project cargo job %(name)s cannot move from %(from)s to %(to)s."
+msgstr "งานสินค้าโครงการ %(name)s ไม่สามารถย้ายจาก %(from)s ไปยัง %(to)s ได้"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_method_statement_document
+msgid "Qty"
+msgstr "จำนวน"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__quantity
+msgid "Quantity"
+msgstr "ปริมาณ"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_equipment__equipment_type__ramp
+msgid "Ramp / Loadbed"
+msgstr "ทางลาด / แท่นบรรทุก"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__rated_capacity_t
+msgid "Rated Capacity (t)"
+msgstr "ความจุที่กำหนด (t)"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__rating_ids
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__rating_ids
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__rating_ids
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__rating_ids
+msgid "Ratings"
+msgstr "การให้คะแนน"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__name
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__name
+msgid "Reference"
+msgstr "การอ้างอิง"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_permit__state__rejected
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_search_full
+msgid "Rejected"
+msgstr "ปฏิเสธแล้ว"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid "Reset to Draft"
+msgstr "รีเซ็ตเป็นฉบับร่าง"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__activity_user_id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__activity_user_id
+msgid "Responsible User"
+msgstr "ผู้ใช้ที่รับผิดชอบ"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_equipment__equipment_type__rigging
+msgid "Rigging Accessory"
+msgstr "อุปกรณ์เสริมริกกิ้ง"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_permit__authority__road
+msgid "Road Authority"
+msgstr "หน่วยงานถนน"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy_vehicle__role
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_lift_plan_document
+msgid "Role"
+msgstr "บทบาท"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__name
+msgid "Route Name"
+msgstr "ชื่อเส้นทาง"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__route_survey_id
+msgid "Route Survey"
+msgstr "การสำรวจเส้นทาง"
+
+#. module: eh_log_project_cargo
+#: model:ir.actions.act_window,name:eh_log_project_cargo.action_eh_log_project_cargo_route_survey
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__route_survey_ids
+#: model:ir.ui.menu,name:eh_log_project_cargo.menu_eh_log_project_cargo_route_surveys
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid "Route Surveys"
+msgstr "การสำรวจเส้นทาง"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid "Route and Schedule"
+msgstr "เส้นทางและกำหนดการ"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__message_has_sms_error
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__message_has_sms_error
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__message_has_sms_error
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "ข้อผิดพลาดในการส่ง SMS"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_equipment__equipment_type__spmt
+msgid "SPMT (Self-Propelled Modular)"
+msgstr "SPMT (โมดูลาร์ขับเคลื่อนด้วยตัวเอง)"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__spmt_axle_lines
+msgid "SPMT Axle Lines"
+msgstr "แถวเพลา SPMT"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__spmt_modules_available
+msgid "SPMT Modules Available"
+msgstr "โมดูล SPMT ที่พร้อมใช้งาน"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__sale_order_id
+msgid "Sale Order"
+msgstr "คำสั่งขาย"
+
+#. module: eh_log_project_cargo
+#: model:ir.model,name:eh_log_project_cargo.model_sale_order
+msgid "Sales Order"
+msgstr "คำสั่งขาย"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__scheduled_arrival
+msgid "Scheduled Arrival"
+msgstr "การมาถึงตามกำหนด"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__scheduled_departure
+msgid "Scheduled Departure"
+msgstr "การออกเดินทางตามกำหนด"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_search_full
+msgid "Search Jobs"
+msgstr "ค้นหางาน"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_search_full
+msgid "Search Permits"
+msgstr "ค้นหาใบอนุญาต"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_convoy_vehicle__role__secondary
+msgid "Secondary Hauler"
+msgstr "ผู้ขนส่งสำรอง"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__self_weight_t
+msgid "Self Weight (t)"
+msgstr "น้ำหนักตัวเอง (t)"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy_vehicle__sequence
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__sequence
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__sequence
+msgid "Sequence"
+msgstr "ลำดับ"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__night_only
+msgid ""
+"Set when the route is restricted to night hours by the road authority. "
+"Drives permit selection and convoy scheduling."
+msgstr ""
+"ตั้งค่าเมื่อเส้นทางถูกจำกัดให้ใช้ได้เฉพาะช่วงกลางคืนโดยหน่วยงานถนน "
+"กำหนดการเลือกใบอนุญาตและการจัดตารางขบวนรถ"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid "Start Execution"
+msgstr "เริ่มการดำเนินการ"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__state
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__state
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__state
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_search_full
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_search_full
+msgid "State"
+msgstr "รัฐ"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_method_statement_document
+msgid "Statement"
+msgstr "รายการเดินบัญชีธนาคาร"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_job__activity_state
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_permit__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"สถานะตามกิจกรรม\n"
+"เกินกำหนด: วันที่ครบกำหนดผ่านไปแล้ว\n"
+"วันนี้: วันที่จัดกิจกรรมคือวันนี้\n"
+"วางแผน: กิจกรรมในอนาคต"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_equipment__next_inspection_date
+msgid ""
+"Statutory inspection due date. Equipment with a past due-date is blocked "
+"from new convoy assignments."
+msgstr ""
+"วันครบกำหนดการตรวจสอบตามกฎหมาย "
+"อุปกรณ์ที่เลยวันครบกำหนดจะถูกบล็อกจากการมอบหมายขบวนใหม่"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_convoy_vehicle__role__support
+msgid "Support"
+msgstr "สนับสนุน"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_job__state__surveyed
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_search_full
+msgid "Surveyed"
+msgstr "สำรวจแล้ว"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__surveyed_at
+msgid "Surveyed On"
+msgstr "สำรวจเมื่อ"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__surveyor_partner_id
+msgid "Surveyor"
+msgstr "ผู้สำรวจ"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__target_end_date
+msgid "Target End"
+msgstr "สิ้นสุดเป้าหมาย"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__target_start_date
+msgid "Target Start"
+msgstr "เริ่มต้นเป้าหมาย"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_search_full
+msgid "Target Start Month"
+msgstr "เดือนเริ่มต้นเป้าหมาย"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid "Target end"
+msgstr "สิ้นสุดเป้าหมาย"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid "Target start"
+msgstr "เริ่มต้นเป้าหมาย"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_equipment__equipment_type__crane_telescopic
+msgid "Telescopic Crane"
+msgstr "เครนแบบยืดหด"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__is_chosen_route
+msgid ""
+"Tick to mark this survey as the route the convoy will follow. Only one "
+"survey per job may be the chosen route."
+msgstr ""
+"ทำเครื่องหมายเพื่อระบุการสำรวจนี้เป็นเส้นทางที่ขบวนรถจะใช้ "
+"แต่ละงานสามารถเลือกการสำรวจเป็นเส้นทางได้เพียงรายการเดียว"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__min_swing_radius_m
+msgid ""
+"Tightest swing radius encountered. Drives the choice of trailer (modular vs "
+"lowbed) and limits articulation."
+msgstr ""
+"รัศมีวงเลี้ยวที่แคบที่สุดที่พบ ใช้กำหนดการเลือกรถพ่วง "
+"(แบบโมดูลาร์หรือแบบพื้นต่ำ) และจำกัดการหักเลี้ยว"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_equipment_form
+msgid "Trailer / SPMT Specifics"
+msgstr "รายละเอียดรถพ่วง / SPMT"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_convoy_vehicle__role__escort_trail
+msgid "Trailing Escort"
+msgstr "รถนำขบวนท้าย"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__transport_orientation
+msgid "Transport Orientation"
+msgstr "ทิศทางการขนส่ง"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__equipment_type
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_lift_plan_document
+msgid "Type"
+msgstr "ประเภท"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_job__activity_exception_decoration
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_permit__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "ประเภทกิจกรรมข้อยกเว้นบนบันทึก"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_kanban
+msgid "Until"
+msgstr "ถึง"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_item__transport_orientation__upright
+msgid "Upright"
+msgstr "ตั้งตรง"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_permit__authority__utility
+msgid "Utility (power/telecom)"
+msgstr "สาธารณูปโภค (ไฟฟ้า/โทรคมนาคม)"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__valid_from
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_permit_application_document
+msgid "Valid From"
+msgstr "มีผลตั้งแต่"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__valid_until
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_permit_application_document
+msgid "Valid Until"
+msgstr "ใช้ได้จนถึง"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_permit_application_document
+msgid "Validity"
+msgstr "อายุการใช้งาน"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_lift_plan_document
+msgid "Vehicle Assignments"
+msgstr "การมอบหมายยานพาหนะ"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__vehicle_count
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__vehicle_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_lift_plan_document
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_convoy_form
+msgid "Vehicles"
+msgstr "ยานพาหนะ"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_method_statement_document
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_permit_application_document
+msgid "W (m)"
+msgstr "กว้าง (m)"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__waypoints
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_route_survey_form
+msgid "Waypoints / Notes"
+msgstr "จุดแวะ / บันทึก"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__website_message_ids
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__website_message_ids
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__website_message_ids
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__website_message_ids
+msgid "Website Messages"
+msgstr "ข้อความเว็บไซต์"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_convoy__website_message_ids
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_equipment__website_message_ids
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_job__website_message_ids
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_permit__website_message_ids
+msgid "Website communication history"
+msgstr "ประวัติการสื่อสารของเว็บไซต์"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_method_statement_document
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_permit_application_document
+msgid "Weight (t)"
+msgstr "น้ำหนัก (ตัน)"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__weight_t
+msgid "Weight per Piece (t)"
+msgstr "น้ำหนักต่อชิ้น (ตัน)"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__width_m
+msgid "Width (m)"
+msgstr "ความกว้าง (m)"
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_equipment.py:0
+msgid "[EHL-PCG-001] Equipment %(code)s rated capacity must be positive."
+msgstr "[EHL-PCG-001] ความจุที่กำหนดของอุปกรณ์ %(code)s ต้องเป็นค่าบวก"
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_job.py:0
+msgid ""
+"[EHL-PCG-002] Job %(name)s cannot move to Surveyed without at least one "
+"route survey."
+msgstr ""
+"[EHL-PCG-002] งาน %(name)s "
+"ไม่สามารถเปลี่ยนเป็นสถานะสำรวจแล้วได้หากไม่มีการสำรวจเส้นทางอย่างน้อยหนึ่งครั้ง"
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_job.py:0
+msgid ""
+"[EHL-PCG-003] Job %(name)s cannot move to Planned without at least one "
+"convoy."
+msgstr ""
+"[EHL-PCG-003] งาน %(name)s "
+"ไม่สามารถเปลี่ยนเป็นสถานะวางแผนแล้วได้หากไม่มีขบวนอย่างน้อยหนึ่งขบวน"
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_job.py:0
+msgid "[EHL-PCG-004] Convoy %(name)s has no vehicle assignments."
+msgstr "[EHL-PCG-004] ขบวน %(name)s ไม่มีการมอบหมายยานพาหนะ"
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_job.py:0
+msgid ""
+"[EHL-PCG-005] Job %(name)s has permits not in issued / active state: "
+"%(permits)s"
+msgstr ""
+"[EHL-PCG-005] งาน %(name)s มีใบอนุญาตที่ไม่อยู่ในสถานะออกแล้ว / ใช้งานอยู่: "
+"%(permits)s"
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_job.py:0
+msgid ""
+"[EHL-PCG-006] Project-cargo job state must change via the action buttons."
+msgstr ""
+"[EHL-PCG-006] ต้องเปลี่ยนสถานะงานขนส่งสินค้าโครงการผ่านปุ่มการดำเนินการ"
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_item.py:0
+msgid "[EHL-PCG-007] Item %(name)s %(label)s cannot be negative."
+msgstr "[EHL-PCG-007] %(label)s ของรายการ %(name)s ต้องไม่เป็นค่าลบ"
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_convoy.py:0
+msgid ""
+"[EHL-PCG-008] Convoy %(name)s scheduled arrival is before scheduled "
+"departure."
+msgstr ""
+"[EHL-PCG-008] เวลามาถึงตามกำหนดของขบวน %(name)s "
+"อยู่ก่อนเวลาออกเดินทางตามกำหนด"
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_convoy.py:0
+msgid "[EHL-PCG-009] Convoy %(name)s has no vehicles."
+msgstr "[EHL-PCG-009] ขบวน %(name)s ไม่มียานพาหนะ"
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_convoy.py:0
+msgid ""
+"[EHL-PCG-010] Equipment %(code)s is overdue for statutory inspection (was "
+"%(date)s); it cannot be assigned to a convoy until the inspection date is "
+"updated."
+msgstr ""
+"[EHL-PCG-010] อุปกรณ์ %(code)s เกินกำหนดการตรวจสอบตามกฎหมาย (คือ %(date)s); "
+"ไม่สามารถมอบหมายให้กับขบวนได้จนกว่าจะมีการอัปเดตวันที่ตรวจสอบ"
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_permit.py:0
+msgid ""
+"[EHL-PCG-011] Permit %(name)s requires a valid-until date before it can be "
+"marked issued."
+msgstr ""
+"[EHL-PCG-011] ใบอนุญาต %(name)s "
+"ต้องระบุวันที่มีผลถึงก่อนจึงจะทำเครื่องหมายว่าออกแล้วได้"
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_permit.py:0
+msgid "[EHL-PCG-012] Permit state must change via the action buttons."
+msgstr "[EHL-PCG-012] ต้องเปลี่ยนสถานะใบอนุญาตผ่านปุ่มการดำเนินการ"
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_route_survey.py:0
+msgid ""
+"[EHL-PCG-013] Job %(name)s already has a chosen route survey; untick it "
+"first."
+msgstr ""
+"[EHL-PCG-013] งาน %(name)s มีการสำรวจเส้นทางที่เลือกไว้แล้ว; "
+"กรุณายกเลิกการเลือกก่อน"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_kanban
+msgid "convoys /"
+msgstr "ขบวน /"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_kanban
+msgid "d"
+msgstr ""
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_kanban
+msgid "items"
+msgstr "รายการ"
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_job.py:0
+msgid "job_id"
+msgstr ""
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_kanban
+msgid "permits"
+msgstr "ใบอนุญาต"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_convoy_kanban
+msgid "veh."
+msgstr "ยานพาหนะ"

@@ -1,0 +1,1421 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* eh_log_last_mile
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-01 04:34+0000\n"
+"PO-Revision-Date: 2026-07-01 04:34+0000\n"
+"Last-Translator: ERP Heritage <info@erpheritage.com.au>\n"
+"Language-Team: Turkish\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/wizards/eh_log_last_mile_mass_action.py:0
+msgid "%(count)d wave(s) dispatched."
+msgstr "%(count)d dalga sevk edildi."
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_delivery.py:0
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_wave.py:0
+msgid "(none)"
+msgstr "(yok)"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_kanban
+msgid "<i class=\"fa fa-cube me-1\" title=\"Packages\"/>"
+msgstr "<i class=\"fa fa-cube me-1\" title=\"Paketler\"/>"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_kanban
+msgid "<i class=\"fa fa-id-badge me-1\" title=\"Driver\"/>"
+msgstr "<i class=\"fa fa-id-badge me-1\" title=\"Sürücü\"/>"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_kanban
+msgid "<i class=\"fa fa-truck me-1\" title=\"Vehicle\"/>"
+msgstr "<i class=\"fa fa-truck me-1\" title=\"Araç\"/>"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+msgid ""
+"<i class=\"fa fa-truck\" style=\"font-size:1.6rem;color:#D4A055;\" title=\"Last mile delivery\"/>\n"
+"                                        <span class=\"ms-2\" style=\"font-family:'DM Mono',ui-monospace,monospace;font-size:0.78rem;letter-spacing:0.18em;text-transform:uppercase;color:#E8C887;font-weight:600;\">Last mile</span>"
+msgstr ""
+"<i class=\"fa fa-truck\" style=\"font-size:1.6rem;color:#D4A055;\" title=\"Son kilometre teslimatı\"/>\n"
+"                                        <span class=\"ms-2\" style=\"font-family:'DM Mono',ui-monospace,monospace;font-size:0.78rem;letter-spacing:0.18em;text-transform:uppercase;color:#E8C887;font-weight:600;\">Son kilometre</span>"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+msgid "<strong>Date:</strong>"
+msgstr "<strong>Tarih:</strong>"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+msgid "<strong>Driver:</strong>"
+msgstr "<strong>Sürücü:</strong>"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+msgid ""
+"<strong>Failed delivery.</strong>\n"
+"                            Either reschedule for another attempt or return to sender."
+msgstr ""
+"<strong>Teslimat başarısız.</strong>\n"
+"                            Başka bir deneme için yeniden planlayın veya göndericiye iade edin."
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+msgid "<strong>Vehicle:</strong>"
+msgstr "<strong>Araç:</strong>"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+msgid "<strong>Wave:</strong>"
+msgstr "<strong>Dalga:</strong>"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__message_needaction
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__message_needaction
+msgid "Action Needed"
+msgstr "Aksiyon Gerekiyor"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__activity_ids
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__activity_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_last_mile_delivery_activity
+msgid "Activities"
+msgstr "Aktiviteler"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__activity_exception_decoration
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Etkinlik İstisna Dekorasyonu"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__activity_state
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__activity_state
+msgid "Activity State"
+msgstr "Aktivite Durumu"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__activity_type_icon
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Aktivite Türü İmgesi"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+msgid "Address"
+msgstr "Adres"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_attempt__outcome__address_incorrect
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_delivery__return_reason__address_incorrect
+msgid "Address Incorrect"
+msgstr "Adres Yanlış"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+msgid "Amount"
+msgstr "Tutar"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__message_attachment_count
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__message_attachment_count
+msgid "Attachment Count"
+msgstr "Ek Sayısı"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_attempt_form
+msgid "Attempt"
+msgstr "Deneme"
+
+#. module: eh_log_last_mile
+#: model:ir.actions.act_window,name:eh_log_last_mile.action_eh_log_last_mile_attempt
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__attempt_count
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__attempt_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_attempt_list
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+msgid "Attempts"
+msgstr "Deneme"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_delivery__cod_collection_method__transfer
+msgid "Bank Transfer"
+msgstr "Banka Transferi"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_kanban
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_form
+msgid "COD"
+msgstr ""
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__cod_collected_amount
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__cod_collected
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+msgid "COD Collected"
+msgstr "COD Tahsil Edildi"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__cod_amount
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__cod_expected
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+msgid "COD Expected"
+msgstr "Beklenen COD"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__cod_outstanding
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search_full
+msgid "COD Outstanding"
+msgstr "Ödenmemiş COD"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_search_full
+msgid "COD Required"
+msgstr "COD Gerekli"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+msgid "COD amount"
+msgstr "COD Tutarı"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_kanban
+msgid "COD outstanding:"
+msgstr "Ödenmemiş COD:"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_mass_dispatch_form
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_mass_mark_delivered_form
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_form
+msgid "Cancel"
+msgstr "İptal"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_delivery__state__cancelled
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_wave__state__cancelled
+msgid "Cancelled"
+msgstr "İptal Edildi"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_delivery__cod_collected_amount
+msgid ""
+"Captured at delivery confirmation. Driven by the Delivered action; cannot "
+"exceed cod_amount."
+msgstr ""
+"Teslimat onayında yakalanır. Delivered eylemi tarafından yönetilir; "
+"cod_amount değerini aşamaz."
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_delivery__cod_collection_method__card
+msgid "Card"
+msgstr "Kart"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+msgid "Cargo"
+msgstr "Kargo"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__cargo_description
+msgid "Cargo Description"
+msgstr "Kargo Açıklaması"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_delivery__cod_collection_method__cash
+msgid "Cash"
+msgstr "Kasa"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_delivery__cod_amount
+msgid "Cash to collect on delivery. Zero for non-COD stops."
+msgstr "Teslimatta tahsil edilecek nakit. COD olmayan duraklar için sıfır."
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_form
+msgid "Close (cash up)"
+msgstr "Kapat (kasa sayımı)"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_wave__state__closed
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search_full
+msgid "Closed"
+msgstr "Kapanmış"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__cod_collection_method
+msgid "Collection Method"
+msgstr "Tahsilat Yöntemi"
+
+#. module: eh_log_last_mile
+#: model:ir.model,name:eh_log_last_mile.model_res_company
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__company_ids
+msgid "Companies"
+msgstr "Şirketler"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_attempt__company_id
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__company_id
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__company_id
+msgid "Company"
+msgstr "Firma"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_form
+msgid "Complete"
+msgstr "Tamamlandı"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__completed_at
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_wave__state__completed
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search_full
+msgid "Completed"
+msgstr "Tamamlandı"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__completion_pct
+msgid "Completion (%)"
+msgstr "Tamamlanma (%)"
+
+#. module: eh_log_last_mile
+#: model:ir.model,name:eh_log_last_mile.model_res_config_settings
+msgid "Config Settings"
+msgstr "Yapılandırma Ayarları"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_form
+msgid "Counters"
+msgstr "Sayaçlar"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_attempt__create_uid
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__create_uid
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_mass_dispatch__create_uid
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_mass_mark_delivered__create_uid
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__create_uid
+msgid "Created by"
+msgstr "Tarafından oluşturuldu"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_attempt__create_date
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__create_date
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_mass_dispatch__create_date
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_mass_mark_delivered__create_date
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__create_date
+msgid "Created on"
+msgstr "Oluşturuldu"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__currency_id
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__currency_id
+msgid "Currency"
+msgstr "Kur"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__customer_id
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_search_full
+msgid "Customer"
+msgstr "Müşteri"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_attempt__outcome__customer_not_home
+msgid "Customer Not Home"
+msgstr "Müşteri evde değil"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_delivery__return_reason__recall
+msgid "Customer Recall"
+msgstr "Müşteri geri çağırması"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__customer_reference
+msgid "Customer Reference"
+msgstr "Müşteri Referansı"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_delivery__return_reason__damaged
+msgid "Damaged"
+msgstr "Hasarlı"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_attempt__outcome__damaged
+msgid "Damaged in Transit"
+msgstr "Nakliye Sırasında Hasar Gördü"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_delivery__delivery_partner_id
+msgid ""
+"Defaults to the customer's address; override for a ship-to-third-party "
+"scenario."
+msgstr ""
+"Varsayılan olarak müşterinin adresi; üçüncü tarafa gönderim senaryosu için "
+"geçersiz kılın."
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__delivered_count
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_attempt__outcome__delivered
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_delivery__state__delivered
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_search_full
+msgid "Delivered"
+msgstr "Teslim Edilen"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__delivered_at
+msgid "Delivered At"
+msgstr "Teslim tarihi"
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_delivery.py:0
+msgid "Delivered to %s"
+msgstr "%s adresine teslim edildi"
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_wave.py:0
+#: model:ir.actions.act_window,name:eh_log_last_mile.action_eh_log_last_mile_delivery
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_mass_mark_delivered__delivery_ids
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__delivery_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_calendar
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_list
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_form
+msgid "Deliveries"
+msgstr "Teslimatlar"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_graph
+msgid "Deliveries by State"
+msgstr "Duruma göre teslimatlar"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_attempt__delivery_id
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+msgid "Delivery"
+msgstr "Teslimat"
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_delivery.py:0
+msgid ""
+"Delivery %(name)s cannot move from %(current)s to %(target)s. Allowed "
+"transitions from %(current)s: %(allowed)s."
+msgstr ""
+"%(name)s teslimatı %(current)s durumundan %(target)s durumuna geçemez. "
+"%(current)s durumundan izin verilen geçişler: %(allowed)s."
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__delivery_partner_id
+msgid "Delivery Address"
+msgstr "Teslim Adresi"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_pivot
+msgid "Delivery Analysis"
+msgstr "Teslimat analizi"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_attempt_form
+msgid "Delivery Attempt"
+msgstr "Teslimat girişimi"
+
+#. module: eh_log_last_mile
+#: model:ir.ui.menu,name:eh_log_last_mile.menu_eh_log_last_mile_attempts
+msgid "Delivery Attempts"
+msgstr "Teslimat girişimleri"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_delivery__wave_id
+msgid ""
+"Delivery wave this drop belongs to. The wave groups deliveries by driver / "
+"vehicle / planned date so dispatch is one click."
+msgstr ""
+"Bu bırakmanın ait olduğu teslimat dalgası. Dalga, teslimatları sürücü / araç"
+" / planlanan tarihe göre gruplandırır, böylece sevkiyat tek tıklamayla "
+"yapılır."
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__departed_at
+msgid "Departed"
+msgstr "Ayrıldı"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_form
+msgid "Dispatch"
+msgstr "Sevk"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_mass_dispatch_form
+msgid "Dispatch All"
+msgstr "Tümünü Sevk Et"
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/wizards/eh_log_last_mile_mass_action.py:0
+msgid "Dispatch complete"
+msgstr "Sevkiyat tamamlandı"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_wave__state__dispatched
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search_full
+msgid "Dispatched"
+msgstr "Sevk Edildi"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_attempt__display_name
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__display_name
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_mass_dispatch__display_name
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_mass_mark_delivered__display_name
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__display_name
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_res_company__display_name
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_sale_order__display_name
+msgid "Display Name"
+msgstr "İsim Göster"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_wave__state__draft
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search_full
+msgid "Draft"
+msgstr "Taslak"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__driver_id
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search_full
+msgid "Driver"
+msgstr "Sürücü"
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_wave.py:0
+msgid "Driver %(driver)s has an expired license (expired %(date)s)."
+msgstr ""
+"Sürücü %(driver)s süresi dolmuş bir ehliyete sahip (%(date)s tarihinde "
+"doldu)."
+
+#. module: eh_log_last_mile
+#: model:ir.actions.report,name:eh_log_last_mile.action_report_eh_log_last_mile_manifest
+msgid "Driver Manifest"
+msgstr "Sürücü Manifestosu"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+msgid "Driver Signature"
+msgstr "Sürücü İmzası"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+msgid ""
+"Driver acknowledges receipt of the deliveries listed above and undertakes to"
+" remit any COD amounts collected at end-of-shift cash-up."
+msgstr ""
+"Sürücü, yukarıda listelenen teslimatları teslim aldığını kabul eder ve "
+"tahsil edilen COD tutarlarını vardiya sonu kasa sayımında teslim etmeyi "
+"taahhüt eder."
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_delivery__scheduled_window_end
+msgid "End of the customer's promised delivery window."
+msgstr "Müşteriye vaat edilen teslimat aralığının sonu."
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+msgid "End-of-Shift Cash-Up"
+msgstr "Vardiya Sonu Kasa Sayımı"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__failed_count
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_delivery__state__failed
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_search_full
+msgid "Failed"
+msgstr "Başarısız"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__message_follower_ids
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__message_follower_ids
+msgid "Followers"
+msgstr "Takipçiler"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__message_partner_ids
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Takipçiler (İş ortakları)"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_delivery__activity_type_icon
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_wave__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Yazı tipi harika simgesi ör. fa-görevler"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_attempt__gps_latitude
+msgid "GPS Latitude"
+msgstr "GPS Enlemi"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_attempt__gps_longitude
+msgid "GPS Longitude"
+msgstr "GPS Boylamı"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_attempt_form
+msgid "Geotag"
+msgstr "Coğrafi Etiket"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search
+msgid "Group by Date"
+msgstr "Tarihe Göre Grupla"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search
+msgid "Group by Driver"
+msgstr "Sürücüye Göre Grupla"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_attempt__happened_at
+msgid "Happened At"
+msgstr "Gerçekleşme Zamanı"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__has_message
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__has_message
+msgid "Has Message"
+msgstr "Mesaj Var"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_attempt__id
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__id
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_mass_dispatch__id
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_mass_mark_delivered__id
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__id
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_res_company__id
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_res_config_settings__id
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_sale_order__id
+msgid "ID"
+msgstr "İD"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__activity_exception_icon
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__activity_exception_icon
+msgid "Icon"
+msgstr "Simge"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_delivery__activity_exception_icon
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_wave__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "İstisnai bir etkinliği belirtmek için kullanılan simge."
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_delivery__message_needaction
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_wave__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "İşaretliyse, yeni mesajlar dikkatinize sunulacak."
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_delivery__message_has_error
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_delivery__message_has_sms_error
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_wave__message_has_error
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_wave__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "İşaretliyse, bazı mesajlar gönderi hatası içermektedir."
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_wave__state__in_progress
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_form
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search_full
+msgid "In Progress"
+msgstr "İşlemde"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__message_is_follower
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__message_is_follower
+msgid "Is Follower"
+msgstr "Takipçi mi"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+msgid "Item"
+msgstr "Öğe"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_sale_order__eh_log_last_mile_required
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_res_config_settings_eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_sale_order_form_eh_log_last_mile
+msgid "Last Mile"
+msgstr "Son kilometre"
+
+#. module: eh_log_last_mile
+#: model:ir.model,name:eh_log_last_mile.model_eh_log_last_mile_attempt
+msgid "Last Mile Attempt"
+msgstr "Son Adım Denemesi"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_sale_order__eh_log_last_mile_delivery_count
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_sale_order__eh_log_last_mile_delivery_ids
+#: model:ir.ui.menu,name:eh_log_last_mile.menu_eh_log_last_mile_deliveries
+msgid "Last Mile Deliveries"
+msgstr "Son Adım Teslimatları"
+
+#. module: eh_log_last_mile
+#: model:ir.model,name:eh_log_last_mile.model_eh_log_last_mile_delivery
+msgid "Last Mile Delivery"
+msgstr "Son Adım Teslimatı"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_res_config_settings__eh_log_last_mile_max_attempts_param
+msgid "Last Mile Max Attempts (system param)"
+msgstr "Maks. Son Adım Denemesi (sistem parametresi)"
+
+#. module: eh_log_last_mile
+#: model:ir.model,name:eh_log_last_mile.model_eh_log_last_mile_wave
+msgid "Last Mile Wave"
+msgstr "Son Adım Dalgası"
+
+#. module: eh_log_last_mile
+#: model:ir.ui.menu,name:eh_log_last_mile.menu_eh_log_last_mile_waves
+msgid "Last Mile Waves"
+msgstr "Son Adım Dalgaları"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_attempt__write_uid
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__write_uid
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_mass_dispatch__write_uid
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_mass_mark_delivered__write_uid
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__write_uid
+msgid "Last Updated by"
+msgstr "Son Güncelleyen"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_attempt__write_date
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__write_date
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_mass_dispatch__write_date
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_mass_mark_delivered__write_date
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__write_date
+msgid "Last Updated on"
+msgstr "Son Güncelleme"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_mass_mark_delivered_form
+msgid "Mark All Delivered"
+msgstr "Tümünü Teslim Edildi Olarak İşaretle"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+msgid "Mark Delivered"
+msgstr "Teslim Edildi Olarak İşaretle"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+msgid "Mark Failed Attempt"
+msgstr "Başarısız Deneme Olarak İşaretle"
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/wizards/eh_log_last_mile_mass_action.py:0
+msgid "Marked %(moved)d delivered. Skipped %(skipped)d (COD or wrong state)."
+msgstr ""
+"%(moved)d teslim edildi olarak işaretlendi. %(skipped)d atlandı (kapıda "
+"ödeme veya yanlış durum)."
+
+#. module: eh_log_last_mile
+#: model:ir.actions.act_window,name:eh_log_last_mile.action_eh_log_last_mile_mass_dispatch
+msgid "Mass Dispatch"
+msgstr "Toplu Sevkiyat"
+
+#. module: eh_log_last_mile
+#: model:ir.model,name:eh_log_last_mile.model_eh_log_last_mile_mass_dispatch
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_mass_dispatch_form
+msgid "Mass Dispatch Waves"
+msgstr "Toplu Sevkiyat Dalgaları"
+
+#. module: eh_log_last_mile
+#: model:ir.actions.act_window,name:eh_log_last_mile.action_eh_log_last_mile_mass_mark_delivered
+#: model:ir.model,name:eh_log_last_mile.model_eh_log_last_mile_mass_mark_delivered
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_mass_mark_delivered_form
+msgid "Mass Mark Delivered"
+msgstr "Toplu Teslim Edildi Olarak İşaretle"
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/wizards/eh_log_last_mile_mass_action.py:0
+msgid "Mass mark delivered complete"
+msgstr "Toplu teslim edildi işaretleme tamamlandı"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_res_company__eh_log_last_mile_max_attempts
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_res_config_settings__eh_log_last_mile_max_attempts
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_res_config_settings_eh_log_last_mile
+msgid "Max Delivery Attempts"
+msgstr "Maks. teslimat denemesi"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_delivery__return_reason__max_attempts
+msgid "Maximum Attempts Reached"
+msgstr "Maksimum deneme sayısına ulaşıldı"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_res_company__eh_log_last_mile_max_attempts
+#: model:ir.model.fields,help:eh_log_last_mile.field_res_config_settings__eh_log_last_mile_max_attempts
+msgid ""
+"Maximum delivery attempts before a stop is auto-marked failed. Operators can"
+" still re-schedule a failed delivery from the form."
+msgstr ""
+"Bir durak otomatik olarak başarısız işaretlenmeden önceki en fazla teslimat "
+"denemesi. Operatörler başarısız bir teslimatı yine de formdan yeniden "
+"planlayabilir."
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__message_has_error
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__message_has_error
+msgid "Message Delivery error"
+msgstr "Mesaj Teslim hatası"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__message_ids
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__message_ids
+msgid "Messages"
+msgstr "Mesajlar"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_search_full
+msgid "Multiple Attempts"
+msgstr "Birden Fazla Deneme"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__my_activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Aktivite Son Tarihim"
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_delivery.py:0
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_wave.py:0
+msgid "New"
+msgstr "Yeni"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__activity_calendar_event_id
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "Sonraki Aktivite Takvimi Etkinliği"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Sonraki Aktivite Son Tarihi"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__activity_summary
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__activity_summary
+msgid "Next Activity Summary"
+msgstr "Sonraki Aktivite Özeti"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__activity_type_id
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__activity_type_id
+msgid "Next Activity Type"
+msgstr "Sonraki Aktivitie Türü"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_delivery__cod_collection_method__none
+msgid "Not Applicable"
+msgstr "Uygulanamaz"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_attempt__notes
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__notes
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__notes
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_attempt_form
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_form
+msgid "Notes"
+msgstr "Notlar"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__message_needaction_counter
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Aksiyon Sayısı"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__message_has_error_counter
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__message_has_error_counter
+msgid "Number of errors"
+msgstr "Hata adedi"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_delivery__message_needaction_counter
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_wave__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "İşlem gerektiren mesaj sayısı"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_delivery__message_has_error_counter
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_wave__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Teslimat hatası olan mesaj adedi"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_delivery__package_count
+msgid ""
+"Number of physical pieces. Affects load planning and is reconciled with the "
+"warehouse pick on dispatch."
+msgstr ""
+"Fiziksel parça sayısı. Yükleme planlamasını etkiler ve sevkiyatta depo "
+"toplama işlemiyle mutabakatı yapılır."
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_search_full
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search_full
+msgid "Open"
+msgstr "Açık"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_attempt__outcome__other
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_delivery__return_reason__other
+msgid "Other"
+msgstr "Diğer"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_delivery__state__out_for_delivery
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_search_full
+msgid "Out for Delivery"
+msgstr "Teslimata Çıktı"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_attempt__outcome
+msgid "Outcome"
+msgstr "Sonuç"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__package_count
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+msgid "Packages"
+msgstr "Paketler"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__pending_count
+msgid "Pending"
+msgstr "Beklemede"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_res_config_settings_eh_log_last_mile
+msgid ""
+"Per-company maximum delivery attempts before a stop is auto-marked failed."
+msgstr ""
+"Bir durağın otomatik olarak başarısız işaretlenmesinden önce şirket bazında "
+"en fazla teslimat denemesi sayısı."
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__photo_image
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+msgid "Photo"
+msgstr "Fotoğraf"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+msgid "Pkgs"
+msgstr "Koliler"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_form
+msgid "Plan"
+msgstr "Planla"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__rating_ids
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__rating_ids
+msgid "Ratings"
+msgstr "Değerlendirmeler"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__recipient_name
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_mass_mark_delivered__recipient_name
+msgid "Recipient Name"
+msgstr "Alıcı Adı"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__recipient_role
+msgid "Recipient Role"
+msgstr "Alıcı rolü"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__name
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__name
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+msgid "Reference"
+msgstr "Referans"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_attempt__outcome__refused
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_delivery__return_reason__refused
+msgid "Refused"
+msgstr "Reddedildi"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+msgid "Reschedule"
+msgstr "Yeniden planla"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__activity_user_id
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__activity_user_id
+msgid "Responsible User"
+msgstr "Sorumlu Kullanıcı"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+msgid "Return"
+msgstr "İade"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__return_reason
+msgid "Return Reason"
+msgstr "İade Nedeni"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__return_to_sender
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+msgid "Return to Sender"
+msgstr "Gönderene İade"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_delivery__state__returned
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_search_full
+msgid "Returned"
+msgstr "İade"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__message_has_sms_error
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "SMS İleti hatası"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__sale_order_id
+msgid "Sale Order"
+msgstr "Satış Siparişi"
+
+#. module: eh_log_last_mile
+#: model:ir.model,name:eh_log_last_mile.model_sale_order
+msgid "Sales Order"
+msgstr "Satış Siparişi"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_delivery__state__scheduled
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_search_full
+msgid "Scheduled"
+msgstr "Planlandı"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__scheduled_date
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search_full
+msgid "Scheduled Date"
+msgstr "Planlanan Tarih"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_search_full
+msgid "Search Deliveries"
+msgstr "Teslimatları ara"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search_full
+msgid "Search Waves"
+msgstr "Dalgaları Ara"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__sequence
+msgid "Sequence"
+msgstr "Sıralama"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_delivery__return_to_sender
+msgid ""
+"Set when a returned delivery should go back to the shipper rather than be "
+"re-attempted."
+msgstr ""
+"İade edilen bir teslimatın yeniden denenmek yerine gönderene geri gitmesi "
+"gerektiğinde ayarlanır."
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__signature_image
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+msgid "Signature"
+msgstr "İmza"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_delivery__scheduled_window_start
+msgid ""
+"Start of the customer's promised delivery window. Out-of-window delivery "
+"counts against the SLA on the customer dashboard."
+msgstr ""
+"Müşteriye vaat edilen teslimat penceresinin başlangıcı. Pencere dışı "
+"teslimat, müşteri panosunda SLA aleyhine sayılır."
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__state
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__state
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_search_full
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search_full
+msgid "State"
+msgstr "İl/Eyalet"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_delivery__activity_state
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_wave__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Aktivitelere göre durum \n"
+"Gecikmiş\\: Son tarih geçmiş\n"
+"Bugün\\: Aktivite tarihi bugün\n"
+"Planlanmış\\: Gelecek Aktiviteler."
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_delivery__sequence
+msgid ""
+"Stop order within the wave. The driver visits stops in sequence; the "
+"dispatcher reorders by drag-and-drop."
+msgstr ""
+"Dalga içindeki durak sırası. Sürücü durakları sırayla ziyaret eder; "
+"sevkiyatçı sürükle bırak ile yeniden sıralar."
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__delivery_count
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_form
+msgid "Stops"
+msgstr "Duraklar"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+msgid "Stops ("
+msgstr "Duraklar ("
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_res_config_settings_eh_log_last_mile
+msgid ""
+"System parameter mirror for fast lookup. Keeps the per-company limit and the"
+" system cap in sync."
+msgstr ""
+"Hızlı arama için sistem parametresi yansıması. Şirket başına sınır ile "
+"sistem üst sınırını senkronize tutar."
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_res_config_settings_eh_log_last_mile
+msgid "System-wide Cap"
+msgstr "Sistem Geneli Üst Sınır"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_res_config_settings__eh_log_last_mile_max_attempts_param
+msgid ""
+"System-wide cap mirrored as ir.config_parameter "
+"eh_log_last_mile.max_attempts so the action methods read it without a per-"
+"company lookup on every call."
+msgstr ""
+"Sistem geneli üst sınır, ir.config_parameter eh_log_last_mile.max_attempts "
+"olarak yansıtılır; böylece eylem yöntemleri her çağrıda şirket başına arama "
+"yapmadan bunu okur."
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search_full
+msgid "This Week"
+msgstr "Bu Hafta"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_form
+msgid "Timing"
+msgstr "Vardiya"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search_full
+msgid "Today"
+msgstr "Bugün"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search_full
+msgid "Tomorrow"
+msgstr "Yarın"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_delivery__activity_exception_decoration
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_wave__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Kayıtlardaki istisna etkinliğinin türü."
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__vehicle_id
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search_full
+msgid "Vehicle"
+msgstr "Araç"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_attempt__outcome__vehicle_breakdown
+msgid "Vehicle Breakdown"
+msgstr "Araç Arızası"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__wave_id
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_search_full
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_form
+msgid "Wave"
+msgstr "Grup"
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_wave.py:0
+msgid ""
+"Wave %(name)s cannot move from %(current)s to %(target)s. Allowed "
+"transitions from %(current)s: %(allowed)s."
+msgstr ""
+"Dalga %(name)s, %(current)s durumundan %(target)s durumuna geçemez. "
+"%(current)s durumundan izin verilen geçişler: %(allowed)s."
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_pivot
+msgid "Wave Performance"
+msgstr "Dalga Performansı"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+msgid "Wave and Schedule"
+msgstr "Dalga ve Zamanlama"
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_wave.py:0
+msgid "Wave has no scheduled deliveries."
+msgstr "Dalganın planlanmış teslimatı yok."
+
+#. module: eh_log_last_mile
+#: model:ir.actions.act_window,name:eh_log_last_mile.action_eh_log_last_mile_wave
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_mass_dispatch__wave_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_calendar
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_list
+msgid "Waves"
+msgstr "Gruplar"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_graph
+msgid "Waves by State"
+msgstr "Duruma Göre Dalgalar"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__website_message_ids
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__website_message_ids
+msgid "Website Messages"
+msgstr "Websitesi Mesajları"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_delivery__website_message_ids
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_wave__website_message_ids
+msgid "Website communication history"
+msgstr "Websitesi iletişim geçmişi"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__weight_kg
+msgid "Weight (kg)"
+msgstr "Ağırlık (kg)"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_attempt_form
+msgid "What happened on this attempt..."
+msgstr "Bu denemede ne oldu..."
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_sale_order__eh_log_last_mile_required
+msgid ""
+"When checked, the order is eligible for inclusion in a last-mile wave. The "
+"dispatcher creates the delivery record and assigns to a wave."
+msgstr ""
+"İşaretlendiğinde, sipariş bir son mil dalgasına dahil edilmeye uygun hale "
+"gelir. Sevkiyatçı teslimat kaydını oluşturur ve bir dalgaya atar."
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+msgid "Window"
+msgstr "Pencere"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_search_full
+msgid "Window Day"
+msgstr "Pencere günü"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__scheduled_window_end
+msgid "Window End"
+msgstr "Pencere bitişi"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__scheduled_window_start
+msgid "Window Start"
+msgstr "Pencere başlangıcı"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_search_full
+msgid "Window Today"
+msgstr "Bugünkü pencere"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_search_full
+msgid "Window Tomorrow"
+msgstr "Yarınki pencere"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+msgid "Window end"
+msgstr "Pencere bitişi"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+msgid "Window start"
+msgstr "Pencere başlangıcı"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search
+msgid "With Outstanding COD"
+msgstr "Ödenmemiş COD ile"
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_attempt.py:0
+msgid ""
+"[EHL-LM-ATT-001] Attempt entries are append-only. Only the notes field can "
+"be updated after capture; the following are immutable: %(fields)s."
+msgstr ""
+"[EHL-LM-ATT-001] Deneme girişleri yalnızca eklenebilir. Kayıttan sonra "
+"yalnızca notlar alanı güncellenebilir; şunlar değiştirilemez: %(fields)s."
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_delivery.py:0
+msgid ""
+"[EHL-LM-DEL-001] State changes on a delivery must go through the action "
+"buttons. Direct writes are rejected."
+msgstr ""
+"[EHL-LM-DEL-001] Bir teslimattaki durum değişiklikleri işlem düğmeleri "
+"üzerinden yapılmalıdır. Doğrudan yazmalar reddedilir."
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_delivery.py:0
+msgid ""
+"[EHL-LM-DEL-002] Delivery %(name)s expects a COD collection of %(amount)s. "
+"Capture the collected amount before marking delivered."
+msgstr ""
+"[EHL-LM-DEL-002] %(name)s teslimatı, %(amount)s tutarında bir COD tahsilatı "
+"bekliyor. Teslim edildi olarak işaretlemeden önce tahsil edilen tutarı "
+"girin."
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_delivery.py:0
+msgid ""
+"[EHL-LM-DEL-003] COD collected %(collected)s exceeds expected %(expected)s "
+"on delivery %(name)s."
+msgstr ""
+"[EHL-LM-DEL-003] %(name)s teslimatında tahsil edilen COD %(collected)s, "
+"beklenen %(expected)s tutarını aşıyor."
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_wave.py:0
+msgid ""
+"[EHL-LM-WAVE-001] State changes on a wave must go through the action "
+"buttons. Direct writes are rejected."
+msgstr ""
+"[EHL-LM-WAVE-001] Bir dalgadaki durum değişiklikleri işlem düğmeleri "
+"üzerinden yapılmalıdır. Doğrudan yazmalar reddedilir."
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_wave.py:0
+msgid ""
+"[EHL-LM-WAVE-002] Wave %(name)s cannot be dispatched. Resolve:\n"
+"\n"
+"- %(list)s"
+msgstr ""
+"[EHL-LM-WAVE-002] %(name)s dalgası gönderilemez. Çözün:\n"
+"\n"
+"- %(list)s"
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_wave.py:0
+msgid ""
+"[EHL-LM-WAVE-003] Wave %(name)s has %(count)d pending deliveries. Resolve "
+"every stop (deliver, fail, or return) before completion."
+msgstr ""
+"[EHL-LM-WAVE-003] %(name)s dalgasında %(count)d bekleyen teslimat var. "
+"Tamamlamadan önce her durağı (teslim et, başarısız veya iade et) çözün."
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_wave.py:0
+msgid ""
+"[EHL-LM-WAVE-004] Wave %(name)s cannot be closed while COD outstanding is "
+"%(amount)s. Settle the outstanding amount first."
+msgstr ""
+"[EHL-LM-WAVE-004] Kapıda ödeme bakiyesi %(amount)s iken %(name)s dalgası "
+"kapatılamaz. Önce bekleyen tutarı ödeyin."
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_kanban
+msgid "attempts"
+msgstr "denemeler"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+msgid "ePOD"
+msgstr ""
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+msgid "kg"
+msgstr ""
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_delivery.py:0
+msgid "recipient"
+msgstr "Alıcı"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_kanban
+msgid "stops"
+msgstr "Duraklar"
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_wave.py:0
+msgid "wave_id"
+msgstr ""

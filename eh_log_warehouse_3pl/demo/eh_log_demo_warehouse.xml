@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- Warehouse facilities -->
+
+        <record id="demo_facility_dxb_dwc" model="eh.log.warehouse.facility">
+            <field name="name">Dubai South Logistics City - Hub A</field>
+            <field name="code">DXB_DWC_A</field>
+            <field name="customs_status">free_zone</field>
+            <field name="total_pallet_capacity">12000</field>
+        </record>
+
+        <record id="demo_facility_jed_jip" model="eh.log.warehouse.facility">
+            <field name="name">Jeddah Industrial Park - Hub B</field>
+            <field name="code">JED_JIP_B</field>
+            <field name="customs_status">bonded</field>
+            <field name="total_pallet_capacity">8500</field>
+        </record>
+
+        <record id="demo_facility_doh_oeq" model="eh.log.warehouse.facility">
+            <field name="name">Doha Economic Zone - Hub C</field>
+            <field name="code">DOH_OEQ_C</field>
+            <field name="customs_status">domestic</field>
+            <field name="total_pallet_capacity">6000</field>
+        </record>
+
+        <!-- Rate cards -->
+
+        <record id="demo_rate_card_default" model="eh.log.warehouse.rate.card">
+            <field name="name">Standard Rate Card 2026</field>
+            <field name="code">RC2026</field>
+        </record>
+
+        <!-- Clients -->
+
+        <record id="demo_wh_client_alpha" model="eh.log.warehouse.client">
+            <field name="name">Alpha Trading LLC</field>
+            <field name="code">ALPHA</field>
+            <field name="partner_id" ref="eh_log_base.demo_partner_alpha_trading"/>
+            <field name="rate_card_id" ref="demo_rate_card_default"/>
+            <field name="storage_charging_basis">snapshot_average</field>
+            <field name="billing_day">1</field>
+            <field name="facility_ids" eval="[(6, 0, [ref('demo_facility_dxb_dwc')])]"/>
+        </record>
+
+        <record id="demo_wh_client_palm" model="eh.log.warehouse.client">
+            <field name="name">Palm Retail Group</field>
+            <field name="code">PALM</field>
+            <field name="partner_id" ref="eh_log_base.demo_partner_palm_retail"/>
+            <field name="rate_card_id" ref="demo_rate_card_default"/>
+            <field name="storage_charging_basis">snapshot_average</field>
+            <field name="billing_day">1</field>
+            <field name="facility_ids" eval="[(6, 0, [ref('demo_facility_doh_oeq')])]"/>
+        </record>
+
+        <record id="demo_wh_client_jeddah" model="eh.log.warehouse.client">
+            <field name="name">Jeddah Apparel House</field>
+            <field name="code">JAH</field>
+            <field name="partner_id" ref="eh_log_base.demo_partner_jeddah_apparel"/>
+            <field name="rate_card_id" ref="demo_rate_card_default"/>
+            <field name="storage_charging_basis">snapshot_average</field>
+            <field name="billing_day">1</field>
+            <field name="facility_ids" eval="[(6, 0, [ref('demo_facility_jed_jip')])]"/>
+        </record>
+
+        <record id="demo_wh_client_arabian_food" model="eh.log.warehouse.client">
+            <field name="name">Arabian Food Distribution</field>
+            <field name="code">AFD</field>
+            <field name="partner_id" ref="eh_log_base.demo_partner_arabian_food"/>
+            <field name="rate_card_id" ref="demo_rate_card_default"/>
+            <field name="storage_charging_basis">snapshot_average</field>
+            <field name="billing_day">1</field>
+            <field name="facility_ids" eval="[(6, 0, [ref('demo_facility_dxb_dwc')])]"/>
+        </record>
+
+        <!-- Receipts (open) -->
+
+        <record id="demo_receipt_001" model="eh.log.warehouse.receipt">
+            <field name="client_id" ref="demo_wh_client_alpha"/>
+            <field name="facility_id" ref="demo_facility_dxb_dwc"/>
+            <field name="supplier_id" ref="eh_log_base.demo_partner_china_exports"/>
+            <field name="supplier_reference">YANG-PO-2026-0042</field>
+            <field name="expected_date" eval="DateTime.today().strftime('%Y-%m-%d')"/>
+            <field name="pallet_count">22</field>
+        </record>
+
+        <record id="demo_receipt_002" model="eh.log.warehouse.receipt">
+            <field name="client_id" ref="demo_wh_client_alpha"/>
+            <field name="facility_id" ref="demo_facility_dxb_dwc"/>
+            <field name="supplier_id" ref="eh_log_base.demo_partner_us_electronics"/>
+            <field name="supplier_reference">PAC-PO-2026-115</field>
+            <field name="expected_date" eval="(DateTime.today() + relativedelta(days=2)).strftime('%Y-%m-%d')"/>
+            <field name="pallet_count">9</field>
+        </record>
+
+        <record id="demo_receipt_003" model="eh.log.warehouse.receipt">
+            <field name="client_id" ref="demo_wh_client_palm"/>
+            <field name="facility_id" ref="demo_facility_doh_oeq"/>
+            <field name="supplier_id" ref="eh_log_base.demo_partner_china_exports"/>
+            <field name="supplier_reference">PALM-PO-2026-263</field>
+            <field name="expected_date" eval="(DateTime.today() + relativedelta(days=1)).strftime('%Y-%m-%d')"/>
+            <field name="pallet_count">36</field>
+        </record>
+
+        <record id="demo_receipt_004" model="eh.log.warehouse.receipt">
+            <field name="client_id" ref="demo_wh_client_jeddah"/>
+            <field name="facility_id" ref="demo_facility_jed_jip"/>
+            <field name="supplier_id" ref="eh_log_base.demo_partner_india_textiles"/>
+            <field name="supplier_reference">JAH-PO-2026-0612</field>
+            <field name="expected_date" eval="DateTime.today().strftime('%Y-%m-%d')"/>
+            <field name="pallet_count">120</field>
+        </record>
+
+        <record id="demo_receipt_005" model="eh.log.warehouse.receipt">
+            <field name="client_id" ref="demo_wh_client_arabian_food"/>
+            <field name="facility_id" ref="demo_facility_dxb_dwc"/>
+            <field name="supplier_id" ref="eh_log_base.demo_partner_us_electronics"/>
+            <field name="supplier_reference">AFD-COLD-2026-0205</field>
+            <field name="expected_date" eval="(DateTime.today() - relativedelta(days=1)).strftime('%Y-%m-%d')"/>
+            <field name="pallet_count">28</field>
+        </record>
+
+        <!-- Picks (planned/picking) -->
+
+        <record id="demo_pick_001" model="eh.log.warehouse.pick">
+            <field name="client_id" ref="demo_wh_client_alpha"/>
+            <field name="facility_id" ref="demo_facility_dxb_dwc"/>
+            <field name="customer_id" ref="eh_log_base.demo_partner_falcon_industries"/>
+            <field name="customer_reference">ALPHA-OUT-2026-001</field>
+            <field name="planned_date" eval="DateTime.today().strftime('%Y-%m-%d')"/>
+            <field name="pallet_count">5</field>
+        </record>
+
+        <record id="demo_pick_002" model="eh.log.warehouse.pick">
+            <field name="client_id" ref="demo_wh_client_alpha"/>
+            <field name="facility_id" ref="demo_facility_dxb_dwc"/>
+            <field name="customer_id" ref="eh_log_base.demo_partner_oasis_consumer"/>
+            <field name="customer_reference">ALPHA-OUT-2026-002</field>
+            <field name="planned_date" eval="(DateTime.today() + relativedelta(days=1)).strftime('%Y-%m-%d')"/>
+            <field name="pallet_count">8</field>
+        </record>
+
+        <record id="demo_pick_003" model="eh.log.warehouse.pick">
+            <field name="client_id" ref="demo_wh_client_palm"/>
+            <field name="facility_id" ref="demo_facility_doh_oeq"/>
+            <field name="customer_id" ref="eh_log_base.demo_partner_palm_retail"/>
+            <field name="customer_reference">PALM-OUT-2026-101</field>
+            <field name="planned_date" eval="DateTime.today().strftime('%Y-%m-%d')"/>
+            <field name="pallet_count">12</field>
+        </record>
+
+        <record id="demo_pick_004" model="eh.log.warehouse.pick">
+            <field name="client_id" ref="demo_wh_client_jeddah"/>
+            <field name="facility_id" ref="demo_facility_jed_jip"/>
+            <field name="customer_id" ref="eh_log_base.demo_partner_riyadh_proj"/>
+            <field name="customer_reference">JAH-OUT-2026-301</field>
+            <field name="planned_date" eval="DateTime.today().strftime('%Y-%m-%d')"/>
+            <field name="pallet_count">18</field>
+        </record>
+
+        <record id="demo_pick_005" model="eh.log.warehouse.pick">
+            <field name="client_id" ref="demo_wh_client_arabian_food"/>
+            <field name="facility_id" ref="demo_facility_dxb_dwc"/>
+            <field name="customer_id" ref="eh_log_base.demo_partner_arabian_food"/>
+            <field name="customer_reference">AFD-OUT-2026-401</field>
+            <field name="planned_date" eval="(DateTime.today() + relativedelta(days=1)).strftime('%Y-%m-%d')"/>
+            <field name="pallet_count">14</field>
+        </record>
+
+    </data>
+</odoo>

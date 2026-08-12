@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_eh_log_carrier_booking_search_full" model="ir.ui.view">
+        <field name="name">eh.log.carrier.booking.search.full</field>
+        <field name="model">eh.log.carrier.booking</field>
+        <field name="arch" type="xml">
+            <search string="Search Bookings">
+                <field name="name"/>
+                <field name="carrier_profile_id"/>
+                <field name="freight_job_id"/>
+                <field name="carrier_booking_reference"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+
+                <separator/>
+                <filter name="filter_state_requested" string="Requested" domain="[('state', '=', 'requested')]"/>
+                <filter name="filter_state_accepted" string="Accepted" domain="[('state', '=', 'accepted')]"/>
+                <filter name="filter_state_confirmed" string="Confirmed" domain="[('state', '=', 'confirmed')]"/>
+                <filter name="filter_state_active" string="Active"
+                        domain="[('state', 'in', ('requested', 'accepted', 'confirmed'))]"/>
+
+                <separator/>
+                <filter name="filter_today" string="Created Today"
+                        domain="[('create_date', '&gt;=', context_today().strftime('%Y-%m-%d 00:00:00'))]"/>
+
+                <separator/>
+                <group>
+                    <filter name="group_by_state" string="State" context="{'group_by': 'state'}"/>
+                    <filter name="group_by_carrier" string="Carrier" context="{'group_by': 'carrier_profile_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+</odoo>

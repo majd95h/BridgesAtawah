@@ -1,0 +1,1217 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* eh_log_track_trace
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-01 04:34+0000\n"
+"PO-Revision-Date: 2026-07-01 04:34+0000\n"
+"Last-Translator: ERP Heritage <info@erpheritage.com.au>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.res_config_settings_view_form_track
+msgid "32+ random hex characters"
+msgstr "32 文字以上のランダムな 16 進文字"
+
+#. module: eh_log_track_trace
+#: model:mail.template,body_html:eh_log_track_trace.email_template_track_event_milestone
+msgid ""
+"<div class=\"eh-track-mail\">\n"
+"                    <p>A new milestone was recorded for your shipment.</p>\n"
+"                    <p>\n"
+"                        <strong>\n"
+"                            <t t-out=\"object.event_code_id.name or ''\"/>\n"
+"                        </strong>\n"
+"                    </p>\n"
+"                    <p t-if=\"object.description\">\n"
+"                        <t t-out=\"object.description\"/>\n"
+"                    </p>\n"
+"                    <p t-if=\"object.location\">\n"
+"                        Location:\n"
+"                        <t t-out=\"object.location\"/>\n"
+"                    </p>\n"
+"                    <p>\n"
+"                        Recorded at:\n"
+"                        <t t-out=\"object.occurred_at and object.occurred_at.strftime('%Y-%m-%d %H:%M') or ''\"/>\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
+msgstr ""
+"<div class=\"eh-track-mail\">\n"
+"                    <p>お客様の貨物に新しいマイルストーンが記録されました。</p>\n"
+"                    <p>\n"
+"                        <strong>\n"
+"                            <t t-out=\"object.event_code_id.name or ''\"/>\n"
+"                        </strong>\n"
+"                    </p>\n"
+"                    <p t-if=\"object.description\">\n"
+"                        <t t-out=\"object.description\"/>\n"
+"                    </p>\n"
+"                    <p t-if=\"object.location\">\n"
+"                        場所:\n"
+"                        <t t-out=\"object.location\"/>\n"
+"                    </p>\n"
+"                    <p>\n"
+"                        記録日時:\n"
+"                        <t t-out=\"object.occurred_at and object.occurred_at.strftime('%Y-%m-%d %H:%M') or ''\"/>\n"
+"                    </p>\n"
+"                </div>"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_kanban
+msgid "<i class=\"fa fa-map-marker me-1\" title=\"Location\"/>"
+msgstr "<i class=\"fa fa-map-marker me-1\" title=\"場所\"/>"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_freight_job_form_track
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_last_mile_delivery_form_track
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_transport_trip_form_track
+msgid "<span class=\"o_stat_text\">Public Page</span>"
+msgstr "<span class=\"o_stat_text\">公開ページ</span>"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.public_track_page
+msgid "<span> · </span>"
+msgstr ""
+
+#. module: eh_log_track_trace
+#: model:ir.model.constraint,message:eh_log_track_trace.constraint_eh_log_track_webhook_mapping_carrier_code_unique
+msgid "A carrier event code may only map once per endpoint."
+msgstr "配送業者のイベントコードは、エンドポイントごとに一度しかマッピングできません。"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields.selection,name:eh_log_track_trace.selection__eh_log_track_event__source__api
+msgid "API"
+msgstr ""
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event_code__active
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_subscription__active
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__active
+msgid "Active"
+msgstr "有効"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_arrived
+msgid "Arrived at Destination"
+msgstr "目的地に到着"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_at_delivery
+msgid "At Delivery"
+msgstr "配達時"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_at_pickup
+msgid "At Pickup"
+msgstr "集荷時"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_cancelled
+msgid "Cancelled"
+msgstr "キャンセル済"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__carrier_name
+msgid "Carrier"
+msgstr "配送業者"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_mapping__carrier_code
+msgid "Carrier Event Code"
+msgstr "運送業者イベントコード"
+
+#. module: eh_log_track_trace
+#: model:ir.model,name:eh_log_track_trace.model_eh_log_track_webhook_mapping
+msgid "Carrier Event Code Mapping"
+msgstr "運送業者イベントコードマッピング"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_freight_job__tracking_reference
+msgid "Carrier Tracking Reference"
+msgstr "運送業者追跡参照番号"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields.selection,name:eh_log_track_trace.selection__eh_log_track_event__source__webhook
+msgid "Carrier Webhook"
+msgstr "運送業者 Webhook"
+
+#. module: eh_log_track_trace
+#: model:ir.model,name:eh_log_track_trace.model_eh_log_track_webhook_endpoint
+msgid "Carrier Webhook Endpoint"
+msgstr "運送業者 Webhook エンドポイント"
+
+#. module: eh_log_track_trace
+#: model:ir.actions.act_window,name:eh_log_track_trace.action_eh_log_track_webhook_endpoint
+#: model:ir.ui.menu,name:eh_log_track_trace.menu_eh_log_track_webhooks
+msgid "Carrier Webhooks"
+msgstr "運送業者 Webhook"
+
+#. module: eh_log_track_trace
+#: model:ir.model.constraint,message:eh_log_track_trace.constraint_eh_log_track_webhook_endpoint_carrier_name_unique
+msgid "Carrier name must be unique per company."
+msgstr "運送業者名は会社ごとに一意である必要があります。"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__category
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event_code__category
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_search
+msgid "Category"
+msgstr "カテゴリー"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_subscription__channel
+msgid "Channel"
+msgstr "チャネル"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_closed
+msgid "Closed"
+msgstr "クローズ済"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event__category
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event_code__category
+msgid ""
+"Coarse grouping used to colour-code the timeline and to let subscriptions "
+"opt into a whole class of events."
+msgstr "タイムラインを色分けし、サブスクリプションがイベントのクラス全体に参加できるようにするための大まかなグループ化。"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__code
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event_code__code
+msgid "Code"
+msgstr "コード"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__mapping_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_webhook_endpoint_form
+msgid "Code Mapping"
+msgstr "コードマッピング"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__company_id
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_subscription__company_id
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__company_id
+msgid "Company"
+msgstr "会社"
+
+#. module: eh_log_track_trace
+#: model:ir.model,name:eh_log_track_trace.model_res_config_settings
+msgid "Config Settings"
+msgstr "構成設定"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_freight_job__track_event_count
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_last_mile_delivery__track_event_count
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_last_mile_wave__track_event_count
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_trackable__track_event_count
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_transport_trip__track_event_count
+msgid "Count of normalized tracking events on the public log."
+msgstr "パブリックログ上の正規化されたトラッキングイベントの数。"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__create_uid
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event_code__create_uid
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_subscription__create_uid
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__create_uid
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_mapping__create_uid
+msgid "Created by"
+msgstr "作成者"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__create_date
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event_code__create_date
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_subscription__create_date
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__create_date
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_mapping__create_date
+msgid "Created on"
+msgstr "作成日"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__secret_key
+msgid "Credentials Key"
+msgstr "認証情報キー"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event_code__name
+msgid "Customer-facing label rendered on the public timeline."
+msgstr "公開タイムラインに表示される顧客向けラベル。"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_customs_cleared
+msgid "Customs Cleared"
+msgstr "通関済み"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_customs_hold
+msgid "Customs Hold"
+msgstr "税関保留"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_customs_cleared
+msgid "Customs cleared."
+msgstr "通関済み。"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event_code__default_description
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_code_form
+msgid "Default Description"
+msgstr "デフォルト説明"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_delivered
+msgid "Delivered"
+msgstr "配送済"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields.selection,name:eh_log_track_trace.selection__eh_log_track_event_code__category__delivery
+msgid "Delivery"
+msgstr "配送"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_delivery_failed
+msgid "Delivery Failed"
+msgstr "配信失敗"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_delivery_failed
+msgid "Delivery attempt failed."
+msgstr "配送試行に失敗しました。"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__description
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_form
+msgid "Description"
+msgstr "説明"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields.selection,name:eh_log_track_trace.selection__eh_log_track_event_code__category__destination
+msgid "Destination"
+msgstr "配送先"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_dispatched
+msgid "Dispatched"
+msgstr "発送済"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_freight_job__display_name
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_last_mile_delivery__display_name
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_last_mile_wave__display_name
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__display_name
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event_code__display_name
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_subscription__display_name
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_trackable__display_name
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__display_name
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_mapping__display_name
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_transport_trip__display_name
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr "表示名"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_webhook_endpoint__reference_path
+msgid ""
+"Dotted JSON path to the carrier's shipment reference. The reference matches "
+"against the source record's tracking_reference field."
+msgstr ""
+"運送業者の出荷参照へのドット付き JSON パス。この参照はソースレコードの tracking_reference フィールドと照合されます。"
+
+#. module: eh_log_track_trace
+#: model:ir.model.constraint,message:eh_log_track_trace.constraint_eh_log_track_subscription_subscription_unique
+msgid "Duplicate subscription for the same partner, record, and channel."
+msgstr "同じ取引先、レコード、チャネルに対して重複したサブスクリプションです。"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.res_config_settings_view_form_track
+msgid "ERP Heritage Track and Trace"
+msgstr ""
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields.selection,name:eh_log_track_trace.selection__eh_log_track_subscription__channel__email
+msgid "Email"
+msgstr "メール"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_subscription__channel
+msgid ""
+"Email queues an outbound mail per matching event. Portal-only suppresses "
+"outbound mail; the partner sees events on the public page only."
+msgstr ""
+"「メール」は一致するイベントごとに送信メールをキューに登録します。「ポータルのみ」は送信メールを抑制し、取引先は公開ページでのみイベントを確認できます。"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_mapping__endpoint_id
+msgid "Endpoint"
+msgstr "エンドポイント"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/models/eh_log_track_event.py:0
+msgid "Event"
+msgstr "イベント"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__event_code_id
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_search
+msgid "Event Code"
+msgstr "イベントコード"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__event_code_path
+msgid "Event Code JSON Path"
+msgstr "イベントコードの JSON パス"
+
+#. module: eh_log_track_trace
+#: model:ir.actions.act_window,name:eh_log_track_trace.action_eh_log_track_event_code
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_subscription__event_code_ids
+#: model:ir.ui.menu,name:eh_log_track_trace.menu_eh_log_track_event_codes
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_subscription_form
+msgid "Event Codes"
+msgstr "イベントコード"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_graph
+msgid "Events by Code"
+msgstr "コード別イベント"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_exception
+#: model:ir.model.fields.selection,name:eh_log_track_trace.selection__eh_log_track_event_code__category__exception
+msgid "Exception"
+msgstr "例外"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_search
+msgid "Exceptions"
+msgstr "例外"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_last_mile_delivery__tracking_reference
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_transport_trip__tracking_reference
+msgid "External Tracking Reference"
+msgstr "外部追跡参照"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_last_mile_wave__tracking_reference
+msgid "External Wave Reference"
+msgstr "外部ウェーブ参照"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_freight_job__tracking_reference
+msgid ""
+"External reference the carrier uses on inbound webhooks to identify this "
+"job. Populated when the booking comes back from the carrier with their "
+"reference."
+msgstr "この案件を識別するために運送業者が受信 webhook で使用する外部参照。予約が運送業者の参照とともに返ってきたときに入力されます。"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event__location
+msgid ""
+"Free-text location string from the source. The public page renders it under "
+"the event description."
+msgstr "ソースからの自由記述の場所文字列。公開ページではイベントの説明の下に表示されます。"
+
+#. module: eh_log_track_trace
+#: model:ir.model,name:eh_log_track_trace.model_eh_log_freight_job
+msgid "Freight Forwarding Job"
+msgstr "貨物輸送ジョブ"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_freight_job__track_url
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_last_mile_delivery__track_url
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_last_mile_wave__track_url
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_trackable__track_url
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_transport_trip__track_url
+msgid ""
+"Full URL for the customer-facing tracking page. Built from the configured "
+"public base URL and the tracking token."
+msgstr "顧客向けトラッキングページの完全な URL。設定された公開ベース URL とトラッキングトークンから構築されます。"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_webhook_endpoint__signature_header
+msgid ""
+"HTTP header carrying the HMAC-SHA256 hex digest the carrier signs the "
+"request body with."
+msgstr "運送業者がリクエストボディの署名に使用する HMAC-SHA256 の16進ダイジェストを運ぶ HTTP ヘッダー。"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.res_config_settings_view_form_track
+msgid "Hostname customers see in tracking URLs."
+msgstr "追跡 URL で顧客に表示されるホスト名。"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_res_config_settings__eh_log_track_public_base_url
+msgid ""
+"Hostname customers see in tracking URLs. Falls back to the system base URL "
+"if blank."
+msgstr "追跡 URL で顧客に表示されるホスト名。空欄の場合はシステムのベース URL にフォールバックします。"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_freight_job__id
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_last_mile_delivery__id
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_last_mile_wave__id
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__id
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event_code__id
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_subscription__id
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_trackable__id
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__id
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_mapping__id
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_transport_trip__id
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_res_config_settings__id
+msgid "ID"
+msgstr ""
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event_code__icon_name
+msgid "Icon Name"
+msgstr "アイコン名"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_subscription__event_code_ids
+msgid ""
+"If empty, all milestone events on the record trigger a notification. If "
+"populated, only events matching one of the listed codes trigger."
+msgstr ""
+"空の場合、レコード上のすべてのマイルストーンイベントが通知をトリガーします。入力されている場合は、リストされたコードのいずれかに一致するイベントのみがトリガーされます。"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event__is_milestone
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event_code__is_milestone
+msgid ""
+"If set, raising this event triggers notifications on all matching "
+"subscriptions. Non-milestone events still appear on the timeline but do not "
+"page customers."
+msgstr ""
+"設定されている場合、このイベントを発生させると、一致するすべてのサブスクリプションで通知がトリガーされます。マイルストーン以外のイベントもタイムラインには表示されますが、顧客には通知されません。"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields.selection,name:eh_log_track_trace.selection__eh_log_track_event__source__import
+msgid "Import"
+msgstr "インポート"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_in_transit
+msgid "In Transit"
+msgstr "移動中"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields.selection,name:eh_log_track_trace.selection__eh_log_track_event__source__internal
+msgid "Internal"
+msgstr "内部"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_webhook_endpoint_form
+msgid "JSON Field Paths"
+msgstr "JSON フィールドパス"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event_code__name
+msgid "Label"
+msgstr "ラベル"
+
+#. module: eh_log_track_trace
+#: model:ir.model,name:eh_log_track_trace.model_eh_log_last_mile_delivery
+msgid "Last Mile Delivery"
+msgstr "ラストマイル配送"
+
+#. module: eh_log_track_trace
+#: model:ir.model,name:eh_log_track_trace.model_eh_log_last_mile_wave
+msgid "Last Mile Wave"
+msgstr "ラストマイルウェーブ"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__write_uid
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event_code__write_uid
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_subscription__write_uid
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__write_uid
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_mapping__write_uid
+msgid "Last Updated by"
+msgstr "最終更新者"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__write_date
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event_code__write_date
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_subscription__write_date
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__write_date
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_mapping__write_date
+msgid "Last Updated on"
+msgstr "最終更新日"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__location
+msgid "Location"
+msgstr "ロケーション"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__location_path
+msgid "Location JSON Path"
+msgstr "ロケーションの JSON パス"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_webhook_endpoint__secret_key
+msgid ""
+"Lookup key passed to the credentials helper to fetch the shared secret. "
+"Resolves through env var, encrypted ir.config_parameter, then default."
+msgstr ""
+"共有シークレットを取得するために認証情報ヘルパーに渡される検索キー。環境変数、暗号化された "
+"ir.config_parameter、次にデフォルトの順に解決されます。"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_webhook_endpoint__carrier_name
+msgid ""
+"Lower-case carrier identifier appearing in the inbound URL: "
+"/track/event/<carrier_name>. No spaces."
+msgstr "受信 URL に表示される小文字の運送業者識別子: /track/event/<carrier_name>。スペースなし。"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_kanban
+msgid "M"
+msgstr ""
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__is_milestone
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event_code__is_milestone
+msgid "Milestone"
+msgstr "マイルストン"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_search
+msgid "Milestones"
+msgstr "マイルストン"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event__notes
+msgid ""
+"Mutable free-text annotation. Distinct from the event description: the "
+"description is shown publicly; notes are internal."
+msgstr "変更可能な自由テキストの注釈です。イベントの説明とは異なります。説明は公開されますが、メモは内部用です。"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__name
+msgid "Name"
+msgstr "名称"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.public_track_not_found
+msgid "No shipment matched the tracking link. Check the link and try again."
+msgstr "追跡リンクに一致する出荷はありませんでした。リンクを確認して再度お試しください。"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.public_track_page
+msgid "No tracking events yet. Check back shortly."
+msgstr "追跡イベントはまだありません。しばらくしてから再度ご確認ください。"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_mapping__event_code_id
+msgid "Normalized Event"
+msgstr "正規化イベント"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__occurred_at
+msgid "Occurred At"
+msgstr "発生日時"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__occurred_at_path
+msgid "Occurred-At JSON Path"
+msgstr "Occurred-At JSON パス"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_webhook_endpoint__mapping_ids
+msgid ""
+"One row per carrier-supplied event code, mapping it to a normalized "
+"eh.log.track.event.code. Inbound events with no mapping are ignored after a "
+"warning is logged."
+msgstr ""
+"運送業者が提供する各イベントコードに1行を割り当て、正規化された eh.log.track.event.code "
+"にマッピングします。マッピングのない受信イベントは警告を記録した後に無視されます。"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event__description
+msgid ""
+"One-line description rendered on the public timeline. Falls back to the "
+"event code default if the source passes nothing."
+msgstr "公開タイムラインに表示される1行の説明。ソースが何も渡さない場合はイベントコードの既定値にフォールバックします。"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__notes
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_form
+msgid "Operator Notes"
+msgstr "オペレーターメモ"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_webhook_endpoint__name
+msgid "Operator-facing name used in logs and the audit trail."
+msgstr "ログと監査証跡で使用されるオペレーター向けの名前。"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_webhook_endpoint__location_path
+msgid "Optional. Leave blank if the carrier omits location."
+msgstr "任意。運送業者が位置情報を省略する場合は空欄のままにします。"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields.selection,name:eh_log_track_trace.selection__eh_log_track_event_code__category__origin
+msgid "Origin"
+msgstr "参照元"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_out_for_delivery
+msgid "Out for Delivery"
+msgstr "配達中"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_out_for_delivery
+msgid "Out for last-mile delivery."
+msgstr "ラストマイル配達中です。"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_res_config_settings__eh_log_track_token_salt
+msgid ""
+"Per-database salt used to derive non-enumerable public tracking tokens. "
+"Rotate to invalidate outstanding tracking links."
+msgstr ""
+"列挙不可能な公開トラッキングトークンを導出するために使用される、データベースごとの "
+"salt。ローテーションすると未処理のトラッキングリンクが無効になります。"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.res_config_settings_view_form_track
+msgid ""
+"Per-database salt used to derive non-enumerable tracking tokens. Rotating it"
+" invalidates outstanding links."
+msgstr ""
+"列挙不可能なトラッキングトークンを導出するために使用される、データベースごとの salt。これをローテーションすると未処理のリンクが無効になります。"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_picked_up
+msgid "Picked Up"
+msgstr "集荷済み"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields.selection,name:eh_log_track_trace.selection__eh_log_track_subscription__channel__portal
+msgid "Portal Only"
+msgstr "ポータルのみ"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.res_config_settings_view_form_track
+msgid "Public Base URL"
+msgstr "パブリックベース URL"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.res_config_settings_view_form_track
+msgid "Public Tracking Page"
+msgstr "公開追跡ページ"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_freight_job__track_url
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_last_mile_delivery__track_url
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_last_mile_wave__track_url
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_trackable__track_url
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_transport_trip__track_url
+msgid "Public Tracking URL"
+msgstr "公開追跡 URL"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__raw_payload
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_form
+msgid "Raw Payload"
+msgstr "生のペイロード"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__reference_path
+msgid "Reference JSON Path"
+msgstr "参照JSONパス"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_returned
+msgid "Returned"
+msgstr "返却済"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event_code__sequence
+msgid "Sequence"
+msgstr "シーケンス"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_booked
+msgid "Shipment Booked"
+msgstr "出荷予約済み"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.public_track_not_found
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.public_track_page
+msgid "Shipment Tracking"
+msgstr "出荷追跡"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_arrived
+msgid "Shipment arrived at destination."
+msgstr "出荷が目的地に到着しました。"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_cancelled
+msgid "Shipment cancelled."
+msgstr "出荷がキャンセルされました。"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_picked_up
+msgid "Shipment collected from origin."
+msgstr "出荷が発送元で集荷されました。"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_booked
+msgid "Shipment confirmed and booked."
+msgstr "出荷が確認され、予約されました。"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_delivered
+msgid "Shipment delivered."
+msgstr "出荷が配達されました。"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_exception
+msgid "Shipment exception reported."
+msgstr "出荷例外が報告されました。"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_closed
+msgid "Shipment file closed."
+msgstr "出荷ファイルがクローズされました。"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_customs_hold
+msgid "Shipment held at customs pending clearance."
+msgstr "出荷は通関待ちで税関に留め置かれています。"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_in_transit
+msgid "Shipment in transit."
+msgstr "出荷は輸送中です。"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_returned
+msgid "Shipment returned to sender."
+msgstr "出荷が送り主に返送されました。"
+
+#. module: eh_log_track_trace
+#: model:mail.template,subject:eh_log_track_trace.email_template_track_event_milestone
+msgid "Shipment update: {{ object.event_code_id.name }}"
+msgstr "出荷の更新: {{ object.event_code_id.name }}"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__signature_header
+msgid "Signature Header"
+msgstr "署名ヘッダー"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__source
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_search
+msgid "Source"
+msgstr "流入元"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__res_id
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_subscription__res_id
+msgid "Source ID"
+msgstr "ソース ID"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__res_model
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_subscription__res_model
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_search
+msgid "Source Model"
+msgstr "ソースモデル"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event__code
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event_code__code
+msgid ""
+"Stable, machine-readable identifier. Subscriptions and carrier mappings "
+"reference this value, never the label."
+msgstr "安定した機械可読の識別子。サブスクリプションと運送業者のマッピングはこの値を参照し、ラベルは決して参照しません。"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_freight_job__tracking_token
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_last_mile_delivery__tracking_token
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_last_mile_wave__tracking_token
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_trackable__tracking_token
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_transport_trip__tracking_token
+msgid ""
+"Stable, non-enumerable token used in the public tracking URL. Derived from "
+"the record id and the per-database salt. Safe to share with customers."
+msgstr ""
+"公開追跡 URL で使用される安定した列挙不可能なトークン。レコード id とデータベースごとのソルトから導出されます。顧客と安全に共有できます。"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_subscription__partner_id
+msgid "Subscriber"
+msgstr "サブスク会員"
+
+#. module: eh_log_track_trace
+#: model:ir.actions.act_window,name:eh_log_track_trace.action_eh_log_track_subscription
+#: model:ir.ui.menu,name:eh_log_track_trace.menu_eh_log_track_subscriptions
+msgid "Subscriptions"
+msgstr "サブスクリプション"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event_code__icon_name
+msgid ""
+"Symbol-name only (no path or colour). The public template maps the name to "
+"the SVG sprite asset; this keeps the code master decoupled from the "
+"renderer."
+msgstr ""
+"シンボル名のみ（パスや色なし）。パブリックテンプレートが名前を SVG "
+"スプライトアセットにマッピングします。これにより、コードマスターがレンダラーから分離されます。"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__target_model
+msgid "Target Model"
+msgstr "対象モデル"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event__res_model
+msgid ""
+"Technical name of the trackable model the event belongs to. Combined with "
+"res_id this points back to the source record without needing a foreign key "
+"per model."
+msgstr ""
+"イベントが属する追跡可能なモデルの技術名。res_id と組み合わせることで、モデルごとに外部キーを必要とせずにソースレコードを指し示します。"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event__raw_payload
+msgid ""
+"The unmodified payload (JSON, XML, etc.) from the carrier webhook. Internal-"
+"source events leave this blank. Used for forensics when a customer disputes "
+"a timeline entry."
+msgstr ""
+"運送業者の webhook からの未加工のペイロード（JSON、XML "
+"など）。内部ソースのイベントではこれは空白のままになります。顧客がタイムラインエントリに異議を唱えた際のフォレンジック調査に使用されます。"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.res_config_settings_view_form_track
+msgid "Token Salt"
+msgstr "トークンソルト"
+
+#. module: eh_log_track_trace
+#: model:ir.ui.menu,name:eh_log_track_trace.menu_eh_log_track_config_root
+#: model:ir.ui.menu,name:eh_log_track_trace.menu_eh_log_track_root
+msgid "Track and Trace"
+msgstr "追跡とトレース"
+
+#. module: eh_log_track_trace
+#: model:ir.actions.act_window,name:eh_log_track_trace.action_eh_log_track_trace_settings
+msgid "Track and Trace Settings"
+msgstr "追跡とトレースの設定"
+
+#. module: eh_log_track_trace
+#: model:ir.model,name:eh_log_track_trace.model_eh_log_track_trackable
+msgid "Trackable Record Mixin"
+msgstr "追跡可能レコード Mixin"
+
+#. module: eh_log_track_trace
+#: model:ir.model,name:eh_log_track_trace.model_eh_log_track_event
+msgid "Tracking Event"
+msgstr "追跡イベント"
+
+#. module: eh_log_track_trace
+#: model:ir.model,name:eh_log_track_trace.model_eh_log_track_event_code
+msgid "Tracking Event Code"
+msgstr "追跡イベントコード"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/models/eh_log_track_trackable.py:0
+#: model:ir.actions.act_window,name:eh_log_track_trace.action_eh_log_track_event
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_freight_job__track_event_count
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_last_mile_delivery__track_event_count
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_last_mile_wave__track_event_count
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_trackable__track_event_count
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_transport_trip__track_event_count
+#: model:ir.ui.menu,name:eh_log_track_trace.menu_eh_log_track_events
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_freight_job_form_track
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_last_mile_delivery_form_track
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_calendar
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_pivot
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_transport_trip_form_track
+msgid "Tracking Events"
+msgstr "追跡イベント"
+
+#. module: eh_log_track_trace
+#: model:ir.model,name:eh_log_track_trace.model_eh_log_track_subscription
+msgid "Tracking Notification Subscription"
+msgstr "追跡通知の購読"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_res_config_settings__eh_log_track_public_base_url
+msgid "Tracking Public Base URL"
+msgstr "追跡用パブリックベース URL"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_freight_job__tracking_token
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_last_mile_delivery__tracking_token
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_last_mile_wave__tracking_token
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_trackable__tracking_token
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_transport_trip__tracking_token
+msgid "Tracking Token"
+msgstr "追跡トークン"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_res_config_settings__eh_log_track_token_salt
+msgid "Tracking Token Salt"
+msgstr "追跡トークンのソルト"
+
+#. module: eh_log_track_trace
+#: model:ir.model.constraint,message:eh_log_track_trace.constraint_eh_log_track_event_code_code_unique
+msgid "Tracking event code must be unique."
+msgstr "追跡イベントコードは一意である必要があります。"
+
+#. module: eh_log_track_trace
+#: model:mail.template,name:eh_log_track_trace.email_template_track_event_milestone
+msgid "Tracking: Milestone Notification"
+msgstr "追跡：マイルストーン通知"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields.selection,name:eh_log_track_trace.selection__eh_log_track_event_code__category__transit
+msgid "Transit"
+msgstr "移動中"
+
+#. module: eh_log_track_trace
+#: model:ir.model,name:eh_log_track_trace.model_eh_log_transport_trip
+msgid "Transport Trip"
+msgstr "輸送トリップ"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/models/eh_log_track_subscription.py:0
+msgid "Unknown"
+msgstr "不明"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event_code__default_description
+msgid ""
+"Used as the timeline description when the event source does not supply a "
+"per-event description."
+msgstr "イベントソースがイベントごとの説明を提供しない場合に、タイムラインの説明として使用されます。"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_at_delivery
+msgid "Vehicle at delivery location."
+msgstr "車両は配送場所にあります。"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_at_pickup
+msgid "Vehicle at pickup location."
+msgstr "車両は集荷場所にあります。"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_dispatched
+msgid "Vehicle dispatched from origin."
+msgstr "車両が出発地から発送されました。"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_webhook_mapping__carrier_code
+msgid "Verbatim event code as the carrier emits it."
+msgstr "運送業者が発行するそのままのイベントコード。"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_wave_completed
+msgid "Wave Completed"
+msgstr "ウェーブ完了"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_wave_dispatched
+msgid "Wave Dispatched"
+msgstr "ウェーブ発送済み"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_wave_in_progress
+msgid "Wave In Progress"
+msgstr "ウェーブ進行中"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_wave_completed
+msgid "Wave completed."
+msgstr "ウェーブが完了しました。"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_wave_dispatched
+msgid "Wave dispatched."
+msgstr "ウェーブが発送されました。"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_wave_in_progress
+msgid "Wave in progress."
+msgstr "ウェーブが進行中です。"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_search
+msgid "Webhook Source"
+msgstr "Webhook ソース"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event__source
+msgid ""
+"Where the event originated. The raw inbound body of a webhook event is kept "
+"on the raw_payload field."
+msgstr "イベントの発生元。webhook イベントの生の受信ボディは raw_payload フィールドに保持されます。"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_webhook_endpoint__target_model
+msgid ""
+"Which trackable model the webhook posts events against. Most carrier "
+"integrations target freight jobs; last-mile carriers target deliveries."
+msgstr ""
+"webhook がイベントを送信する追跡可能なモデル。ほとんどの運送業者統合は貨物ジョブを対象とし、ラストマイル運送業者は配送を対象とします。"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/models/eh_log_track_trackable.py:0
+msgid "[EHL-TRK-001] Unknown tracking event code %(code)s."
+msgstr "[EHL-TRK-001] 不明な追跡イベントコード %(code)s です。"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/models/eh_log_track_event_code.py:0
+msgid ""
+"[EHL-TRK-002] Seeded tracking event code %(code)s cannot be renamed; create "
+"a new code instead."
+msgstr ""
+"[EHL-TRK-002] シードされた追跡イベントコード %(code)s の名前は変更できません。代わりに新しいコードを作成してください。"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/models/eh_log_track_event_code.py:0
+msgid ""
+"[EHL-TRK-003] Seeded tracking event code %(code)s cannot be deleted; archive"
+" it instead."
+msgstr "[EHL-TRK-003] シードされた追跡イベントコード %(code)s は削除できません。代わりにアーカイブしてください。"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/models/eh_log_track_event.py:0
+msgid ""
+"[EHL-TRK-004] Tracking events must be created through log_track_event() on "
+"the source record, not by direct ORM write."
+msgstr ""
+"[EHL-TRK-004] 追跡イベントは、直接の ORM 書き込みではなく、ソースレコード上の log_track_event() "
+"を介して作成する必要があります。"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/models/eh_log_track_event.py:0
+msgid ""
+"[EHL-TRK-005] Tracking event field(s) %(fields)s are immutable after "
+"creation. Add a new event instead."
+msgstr ""
+"[EHL-TRK-005] 追跡イベントフィールド %(fields)s は作成後に変更できません。代わりに新しいイベントを追加してください。"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/models/eh_log_track_event.py:0
+msgid ""
+"[EHL-TRK-006] Tracking events are append-only and cannot be deleted; archive"
+" the source record instead."
+msgstr "[EHL-TRK-006] 追跡イベントは追加専用であり、削除できません。代わりにソースレコードをアーカイブしてください。"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/models/eh_log_track_subscription.py:0
+msgid "[EHL-TRK-007] Subscription source model %(model)s does not exist."
+msgstr "[EHL-TRK-007] サブスクリプションのソースモデル %(model)s が存在しません。"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/models/eh_log_track_subscription.py:0
+msgid ""
+"[EHL-TRK-008] Source model %(model)s is not trackable; it must inherit "
+"eh.log.track.trackable to be subscribed to."
+msgstr ""
+"[EHL-TRK-008] ソースモデル %(model)s は追跡できません。サブスクライブするには eh.log.track.trackable "
+"を継承する必要があります。"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/models/eh_log_track_webhook_endpoint.py:0
+msgid ""
+"[EHL-TRK-009] Carrier name %(name)s must be alphanumeric or underscore only."
+msgstr "[EHL-TRK-009] 運送業者名 %(name)s は英数字またはアンダースコアのみである必要があります。"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/models/eh_log_track_webhook_endpoint.py:0
+msgid "[EHL-TRK-010] Carrier name %(name)s must be lower-case."
+msgstr "[EHL-TRK-010] 運送業者名 %(name)s は小文字である必要があります。"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/controllers/carrier_webhook.py:0
+msgid "accepted"
+msgstr "受諾済"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/controllers/carrier_webhook.py:0
+msgid "bad signature"
+msgstr "無効な署名"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.res_config_settings_view_form_track
+msgid "https://track.example.com"
+msgstr ""
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/controllers/carrier_webhook.py:0
+msgid "ignored"
+msgstr "無視されました"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/controllers/carrier_webhook.py:0
+msgid "malformed JSON"
+msgstr "不正な形式の JSON"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/controllers/carrier_webhook.py:0
+msgid "misconfigured"
+msgstr "設定が正しくありません"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/controllers/carrier_webhook.py:0
+msgid "missing required field"
+msgstr "必須フィールドがありません"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/controllers/carrier_webhook.py:0
+msgid "missing signature"
+msgstr "署名がありません"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/models/eh_log_track_trackable.py:0
+msgid "res_model"
+msgstr ""
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/controllers/carrier_webhook.py:0
+msgid "unknown carrier"
+msgstr "不明な運送業者"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/controllers/carrier_webhook.py:0
+msgid "unknown reference"
+msgstr "不明な参照"

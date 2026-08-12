@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_eh_log_ship_disbursement_account_list" model="ir.ui.view">
+        <field name="name">eh.log.ship.disbursement.account.list</field>
+        <field name="model">eh.log.ship.disbursement.account</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="port_call_id"/>
+                <field name="vessel_id"/>
+                <field name="principal_partner_id"/>
+                <field name="estimate_total"/>
+                <field name="actual_total"/>
+                <field name="variance"/>
+                <field name="state" widget="badge"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_eh_log_ship_disbursement_account_form" model="ir.ui.view">
+        <field name="name">eh.log.ship.disbursement.account.form</field>
+        <field name="model">eh.log.ship.disbursement.account</field>
+        <field name="arch" type="xml">
+            <form string="Disbursement Account">
+                <header>
+                    <button name="action_issue_proforma" string="Issue Proforma" type="object" class="btn-primary" invisible="state != 'draft'" groups="eh_log_base.group_eh_log_user"/>
+                    <button name="action_record_actuals" string="Record Actuals" type="object" class="btn-primary" invisible="state != 'proforma'" groups="eh_log_base.group_eh_log_user"/>
+                    <button name="action_post" string="Post to Sale Order" type="object" class="btn-primary" invisible="state != 'actual'" groups="eh_log_base.group_eh_log_manager"/>
+                    <button name="action_mark_settled" string="Mark Settled" type="object" class="btn-secondary" invisible="state != 'posted'" groups="eh_log_base.group_eh_log_manager"/>
+                    <button name="action_cancel" string="Cancel" type="object" class="btn-secondary" invisible="state in ('settled', 'cancelled')" groups="eh_log_base.group_eh_log_manager"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,proforma,actual,posted,settled"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1><field name="name"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="port_call_id" options="{'no_create': True}"/>
+                            <field name="vessel_id" readonly="1"/>
+                            <field name="principal_partner_id"/>
+                            <field name="currency_id"/>
+                        </group>
+                        <group>
+                            <field name="estimate_total" readonly="1"/>
+                            <field name="actual_total" readonly="1"/>
+                            <field name="variance" readonly="1"/>
+                            <field name="sale_order_id" readonly="1"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Lines" name="lines">
+                            <field name="line_ids">
+                                <list editable="bottom">
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="is_estimate"/>
+                                    <field name="description"/>
+                                    <field name="husbandry_service_id"/>
+                                    <field name="charge_code_id"/>
+                                    <field name="amount"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_eh_log_ship_disbursement_account" model="ir.actions.act_window">
+        <field name="name">Disbursement Accounts</field>
+        <field name="res_model">eh.log.ship.disbursement.account</field>
+        <field name="view_mode">list,form</field>
+        <field name="views" eval="[(False, 'list'), (False, 'form')]"/>
+    </record>
+
+</odoo>

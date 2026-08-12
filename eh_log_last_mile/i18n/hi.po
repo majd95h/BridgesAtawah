@@ -1,0 +1,1416 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* eh_log_last_mile
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-01 04:34+0000\n"
+"PO-Revision-Date: 2026-07-01 04:34+0000\n"
+"Last-Translator: ERP Heritage <info@erpheritage.com.au>\n"
+"Language-Team: Hindi\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/wizards/eh_log_last_mile_mass_action.py:0
+msgid "%(count)d wave(s) dispatched."
+msgstr "%(count)d वेव भेजी गईं।"
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_delivery.py:0
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_wave.py:0
+msgid "(none)"
+msgstr "(कोई नहीं)"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_kanban
+msgid "<i class=\"fa fa-cube me-1\" title=\"Packages\"/>"
+msgstr "<i class=\"fa fa-cube me-1\" title=\"पैकेज\"/>"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_kanban
+msgid "<i class=\"fa fa-id-badge me-1\" title=\"Driver\"/>"
+msgstr "<i class=\"fa fa-id-badge me-1\" title=\"ड्राइवर\"/>"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_kanban
+msgid "<i class=\"fa fa-truck me-1\" title=\"Vehicle\"/>"
+msgstr "<i class=\"fa fa-truck me-1\" title=\"वाहन\"/>"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+msgid ""
+"<i class=\"fa fa-truck\" style=\"font-size:1.6rem;color:#D4A055;\" title=\"Last mile delivery\"/>\n"
+"                                        <span class=\"ms-2\" style=\"font-family:'DM Mono',ui-monospace,monospace;font-size:0.78rem;letter-spacing:0.18em;text-transform:uppercase;color:#E8C887;font-weight:600;\">Last mile</span>"
+msgstr ""
+"<i class=\"fa fa-truck\" style=\"font-size:1.6rem;color:#D4A055;\" title=\"लास्ट माइल डिलीवरी\"/>\n"
+"                                        <span class=\"ms-2\" style=\"font-family:'DM Mono',ui-monospace,monospace;font-size:0.78rem;letter-spacing:0.18em;text-transform:uppercase;color:#E8C887;font-weight:600;\">लास्ट माइल</span>"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+msgid "<strong>Date:</strong>"
+msgstr "<strong>दिनांक:</strong>"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+msgid "<strong>Driver:</strong>"
+msgstr "<strong>चालक:</strong>"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+msgid ""
+"<strong>Failed delivery.</strong>\n"
+"                            Either reschedule for another attempt or return to sender."
+msgstr ""
+"<strong>डिलीवरी विफल।</strong>\n"
+"                            या तो दूसरे प्रयास के लिए पुनर्निर्धारित करें या प्रेषक को वापस भेजें।"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+msgid "<strong>Vehicle:</strong>"
+msgstr "<strong>वाहन:</strong>"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+msgid "<strong>Wave:</strong>"
+msgstr "<strong>वेव:</strong>"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__message_needaction
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__message_needaction
+msgid "Action Needed"
+msgstr "कार्रवाई की ज़रूरत है"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__activity_ids
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__activity_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_last_mile_delivery_activity
+msgid "Activities"
+msgstr "गतिविधियाँ"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__activity_exception_decoration
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "ऐक्टिविटी एक्सेप्शन डेकोरेशन"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__activity_state
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__activity_state
+msgid "Activity State"
+msgstr "ऐक्टिविटी स्टेट"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__activity_type_icon
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "ऐक्टिविटी टाइप आइकॉन"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+msgid "Address"
+msgstr "पता"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_attempt__outcome__address_incorrect
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_delivery__return_reason__address_incorrect
+msgid "Address Incorrect"
+msgstr "पता गलत है"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+msgid "Amount"
+msgstr "रकम"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__message_attachment_count
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__message_attachment_count
+msgid "Attachment Count"
+msgstr "अटैचमेंट की संख्या"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_attempt_form
+msgid "Attempt"
+msgstr "प्रयास"
+
+#. module: eh_log_last_mile
+#: model:ir.actions.act_window,name:eh_log_last_mile.action_eh_log_last_mile_attempt
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__attempt_count
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__attempt_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_attempt_list
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+msgid "Attempts"
+msgstr "प्रयास"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_delivery__cod_collection_method__transfer
+msgid "Bank Transfer"
+msgstr "बैंक ट्रांसफ़र"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_kanban
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_form
+msgid "COD"
+msgstr ""
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__cod_collected_amount
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__cod_collected
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+msgid "COD Collected"
+msgstr "COD वसूल किया गया"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__cod_amount
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__cod_expected
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+msgid "COD Expected"
+msgstr "अपेक्षित COD"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__cod_outstanding
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search_full
+msgid "COD Outstanding"
+msgstr "बकाया COD"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_search_full
+msgid "COD Required"
+msgstr "COD आवश्यक"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+msgid "COD amount"
+msgstr "COD राशि"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_kanban
+msgid "COD outstanding:"
+msgstr "बकाया COD:"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_mass_dispatch_form
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_mass_mark_delivered_form
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_form
+msgid "Cancel"
+msgstr "रद्द"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_delivery__state__cancelled
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_wave__state__cancelled
+msgid "Cancelled"
+msgstr "रद्द किया गया"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_delivery__cod_collected_amount
+msgid ""
+"Captured at delivery confirmation. Driven by the Delivered action; cannot "
+"exceed cod_amount."
+msgstr ""
+"डिलीवरी पुष्टिकरण पर कैप्चर किया गया। Delivered एक्शन द्वारा संचालित; "
+"cod_amount से अधिक नहीं हो सकता।"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_delivery__cod_collection_method__card
+msgid "Card"
+msgstr "कार्ड"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+msgid "Cargo"
+msgstr "कार्गो"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__cargo_description
+msgid "Cargo Description"
+msgstr "कार्गो विवरण"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_delivery__cod_collection_method__cash
+msgid "Cash"
+msgstr "कैश"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_delivery__cod_amount
+msgid "Cash to collect on delivery. Zero for non-COD stops."
+msgstr "डिलीवरी पर वसूल की जाने वाली नकदी। गैर-COD स्टॉप के लिए शून्य।"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_form
+msgid "Close (cash up)"
+msgstr "बंद करें (कैश अप)"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_wave__state__closed
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search_full
+msgid "Closed"
+msgstr "बंद"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__cod_collection_method
+msgid "Collection Method"
+msgstr "संग्रहण विधि"
+
+#. module: eh_log_last_mile
+#: model:ir.model,name:eh_log_last_mile.model_res_company
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__company_ids
+msgid "Companies"
+msgstr "कंपनियां"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_attempt__company_id
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__company_id
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__company_id
+msgid "Company"
+msgstr "कंपनी"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_form
+msgid "Complete"
+msgstr "पूर्ण करें"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__completed_at
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_wave__state__completed
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search_full
+msgid "Completed"
+msgstr "पूरा हुआ"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__completion_pct
+msgid "Completion (%)"
+msgstr "पूर्णता (%)"
+
+#. module: eh_log_last_mile
+#: model:ir.model,name:eh_log_last_mile.model_res_config_settings
+msgid "Config Settings"
+msgstr "कॉन्फ़िगरेशन सेटिंग"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_form
+msgid "Counters"
+msgstr "काउंटर"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_attempt__create_uid
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__create_uid
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_mass_dispatch__create_uid
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_mass_mark_delivered__create_uid
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__create_uid
+msgid "Created by"
+msgstr "इन्होंने बनाया"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_attempt__create_date
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__create_date
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_mass_dispatch__create_date
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_mass_mark_delivered__create_date
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__create_date
+msgid "Created on"
+msgstr "इस तारीख को बनाया गया"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__currency_id
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__currency_id
+msgid "Currency"
+msgstr "करेंसी"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__customer_id
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_search_full
+msgid "Customer"
+msgstr "साथी"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_attempt__outcome__customer_not_home
+msgid "Customer Not Home"
+msgstr "ग्राहक घर पर नहीं"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_delivery__return_reason__recall
+msgid "Customer Recall"
+msgstr "ग्राहक रिकॉल"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__customer_reference
+msgid "Customer Reference"
+msgstr "कस्टमर रेफ़रंस"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_delivery__return_reason__damaged
+msgid "Damaged"
+msgstr "क्षतिग्रस्त"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_attempt__outcome__damaged
+msgid "Damaged in Transit"
+msgstr "पारगमन में क्षतिग्रस्त"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_delivery__delivery_partner_id
+msgid ""
+"Defaults to the customer's address; override for a ship-to-third-party "
+"scenario."
+msgstr ""
+"डिफ़ॉल्ट रूप से ग्राहक का पता; तृतीय-पक्ष को शिप करने की स्थिति के लिए "
+"ओवरराइड करें।"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__delivered_count
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_attempt__outcome__delivered
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_delivery__state__delivered
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_search_full
+msgid "Delivered"
+msgstr "वितरित"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__delivered_at
+msgid "Delivered At"
+msgstr "वितरित समय"
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_delivery.py:0
+msgid "Delivered to %s"
+msgstr "%s को वितरित"
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_wave.py:0
+#: model:ir.actions.act_window,name:eh_log_last_mile.action_eh_log_last_mile_delivery
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_mass_mark_delivered__delivery_ids
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__delivery_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_calendar
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_list
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_form
+msgid "Deliveries"
+msgstr "वितरण"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_graph
+msgid "Deliveries by State"
+msgstr "स्थिति के अनुसार डिलीवरी"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_attempt__delivery_id
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+msgid "Delivery"
+msgstr "डिलीवरी"
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_delivery.py:0
+msgid ""
+"Delivery %(name)s cannot move from %(current)s to %(target)s. Allowed "
+"transitions from %(current)s: %(allowed)s."
+msgstr ""
+"डिलीवरी %(name)s को %(current)s से %(target)s में नहीं ले जाया जा सकता। "
+"%(current)s से अनुमत परिवर्तन: %(allowed)s."
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__delivery_partner_id
+msgid "Delivery Address"
+msgstr "डिलीवरी का पता"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_pivot
+msgid "Delivery Analysis"
+msgstr "डिलीवरी विश्लेषण"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_attempt_form
+msgid "Delivery Attempt"
+msgstr "डिलीवरी प्रयास"
+
+#. module: eh_log_last_mile
+#: model:ir.ui.menu,name:eh_log_last_mile.menu_eh_log_last_mile_attempts
+msgid "Delivery Attempts"
+msgstr "डिलीवरी प्रयास"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_delivery__wave_id
+msgid ""
+"Delivery wave this drop belongs to. The wave groups deliveries by driver / "
+"vehicle / planned date so dispatch is one click."
+msgstr ""
+"यह ड्रॉप जिस डिलीवरी वेव से संबंधित है। वेव डिलीवरी को ड्राइवर / वाहन / "
+"नियोजित तिथि के अनुसार समूहित करती है ताकि डिस्पैच एक क्लिक में हो सके।"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__departed_at
+msgid "Departed"
+msgstr "प्रस्थान किया"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_form
+msgid "Dispatch"
+msgstr "डिस्पैच करें"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_mass_dispatch_form
+msgid "Dispatch All"
+msgstr "सभी प्रेषित करें"
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/wizards/eh_log_last_mile_mass_action.py:0
+msgid "Dispatch complete"
+msgstr "प्रेषण पूर्ण"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_wave__state__dispatched
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search_full
+msgid "Dispatched"
+msgstr "प्रेषित"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_attempt__display_name
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__display_name
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_mass_dispatch__display_name
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_mass_mark_delivered__display_name
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__display_name
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_res_company__display_name
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_sale_order__display_name
+msgid "Display Name"
+msgstr "डिस्प्ले का नाम"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_wave__state__draft
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search_full
+msgid "Draft"
+msgstr "मसौदा"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__driver_id
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search_full
+msgid "Driver"
+msgstr "ड्राइवर"
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_wave.py:0
+msgid "Driver %(driver)s has an expired license (expired %(date)s)."
+msgstr "चालक %(driver)s का लाइसेंस समाप्त हो गया है (समाप्ति %(date)s)।"
+
+#. module: eh_log_last_mile
+#: model:ir.actions.report,name:eh_log_last_mile.action_report_eh_log_last_mile_manifest
+msgid "Driver Manifest"
+msgstr "चालक मैनिफेस्ट"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+msgid "Driver Signature"
+msgstr "चालक हस्ताक्षर"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+msgid ""
+"Driver acknowledges receipt of the deliveries listed above and undertakes to"
+" remit any COD amounts collected at end-of-shift cash-up."
+msgstr ""
+"चालक ऊपर सूचीबद्ध डिलीवरी की प्राप्ति स्वीकार करता है और शिफ्ट के अंत में "
+"नकद-गणना के समय एकत्र की गई किसी भी COD राशि को जमा करने का वचन देता है।"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_delivery__scheduled_window_end
+msgid "End of the customer's promised delivery window."
+msgstr "ग्राहक को वादा की गई डिलीवरी विंडो की समाप्ति।"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+msgid "End-of-Shift Cash-Up"
+msgstr "शिफ्ट-समाप्ति नकद मिलान"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__failed_count
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_delivery__state__failed
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_search_full
+msgid "Failed"
+msgstr "असफल"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__message_follower_ids
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__message_follower_ids
+msgid "Followers"
+msgstr "फ़ॉलोवर"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__message_partner_ids
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "फ़ॉलोवर (पार्टनर)"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_delivery__activity_type_icon
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_wave__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "फॉन्ट के बेहतरीन आइकॉन जैसे, फा-टॉस्क"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_attempt__gps_latitude
+msgid "GPS Latitude"
+msgstr "GPS अक्षांश"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_attempt__gps_longitude
+msgid "GPS Longitude"
+msgstr "GPS देशांतर"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_attempt_form
+msgid "Geotag"
+msgstr "जियोटैग"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search
+msgid "Group by Date"
+msgstr "तिथि के अनुसार समूहित करें"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search
+msgid "Group by Driver"
+msgstr "चालक के अनुसार समूहित करें"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_attempt__happened_at
+msgid "Happened At"
+msgstr "घटित हुआ"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__has_message
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__has_message
+msgid "Has Message"
+msgstr "मैसेज है"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_attempt__id
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__id
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_mass_dispatch__id
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_mass_mark_delivered__id
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__id
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_res_company__id
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_res_config_settings__id
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_sale_order__id
+msgid "ID"
+msgstr "आईडी"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__activity_exception_icon
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__activity_exception_icon
+msgid "Icon"
+msgstr "आइकॉन"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_delivery__activity_exception_icon
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_wave__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "एक छोटा निशान जो बताता है कि कुछ अलग या असामान्य हुआ है।"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_delivery__message_needaction
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_wave__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "अगर यह बॉक्स चेक है, तो नए मैसेज देखने ज़रूरी हैं।"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_delivery__message_has_error
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_delivery__message_has_sms_error
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_wave__message_has_error
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_wave__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "अगर बॉक्स पर टिक है, तो कुछ मैसेज भेजने में गलती हुई है।"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_wave__state__in_progress
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_form
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search_full
+msgid "In Progress"
+msgstr "काम जारी है"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__message_is_follower
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__message_is_follower
+msgid "Is Follower"
+msgstr "फ़ॉलोवर है"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+msgid "Item"
+msgstr "मद"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_sale_order__eh_log_last_mile_required
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_res_config_settings_eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_sale_order_form_eh_log_last_mile
+msgid "Last Mile"
+msgstr "लास्ट माइल"
+
+#. module: eh_log_last_mile
+#: model:ir.model,name:eh_log_last_mile.model_eh_log_last_mile_attempt
+msgid "Last Mile Attempt"
+msgstr "अंतिम मील प्रयास"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_sale_order__eh_log_last_mile_delivery_count
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_sale_order__eh_log_last_mile_delivery_ids
+#: model:ir.ui.menu,name:eh_log_last_mile.menu_eh_log_last_mile_deliveries
+msgid "Last Mile Deliveries"
+msgstr "अंतिम मील डिलीवरी"
+
+#. module: eh_log_last_mile
+#: model:ir.model,name:eh_log_last_mile.model_eh_log_last_mile_delivery
+msgid "Last Mile Delivery"
+msgstr "अंतिम मील डिलीवरी"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_res_config_settings__eh_log_last_mile_max_attempts_param
+msgid "Last Mile Max Attempts (system param)"
+msgstr "अंतिम मील अधिकतम प्रयास (सिस्टम पैरामीटर)"
+
+#. module: eh_log_last_mile
+#: model:ir.model,name:eh_log_last_mile.model_eh_log_last_mile_wave
+msgid "Last Mile Wave"
+msgstr "अंतिम मील वेव"
+
+#. module: eh_log_last_mile
+#: model:ir.ui.menu,name:eh_log_last_mile.menu_eh_log_last_mile_waves
+msgid "Last Mile Waves"
+msgstr "अंतिम मील वेव्स"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_attempt__write_uid
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__write_uid
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_mass_dispatch__write_uid
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_mass_mark_delivered__write_uid
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__write_uid
+msgid "Last Updated by"
+msgstr "इन्होंने आखिरी बार अपडेट किया"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_attempt__write_date
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__write_date
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_mass_dispatch__write_date
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_mass_mark_delivered__write_date
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__write_date
+msgid "Last Updated on"
+msgstr "आखिरी बार अपडेट हुआ"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_mass_mark_delivered_form
+msgid "Mark All Delivered"
+msgstr "सभी को वितरित के रूप में चिह्नित करें"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+msgid "Mark Delivered"
+msgstr "वितरित के रूप में चिह्नित करें"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+msgid "Mark Failed Attempt"
+msgstr "असफल प्रयास के रूप में चिह्नित करें"
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/wizards/eh_log_last_mile_mass_action.py:0
+msgid "Marked %(moved)d delivered. Skipped %(skipped)d (COD or wrong state)."
+msgstr ""
+"%(moved)d को वितरित के रूप में चिह्नित किया गया। %(skipped)d को छोड़ा गया "
+"(COD या गलत स्थिति)।"
+
+#. module: eh_log_last_mile
+#: model:ir.actions.act_window,name:eh_log_last_mile.action_eh_log_last_mile_mass_dispatch
+msgid "Mass Dispatch"
+msgstr "सामूहिक प्रेषण"
+
+#. module: eh_log_last_mile
+#: model:ir.model,name:eh_log_last_mile.model_eh_log_last_mile_mass_dispatch
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_mass_dispatch_form
+msgid "Mass Dispatch Waves"
+msgstr "सामूहिक प्रेषण तरंगें"
+
+#. module: eh_log_last_mile
+#: model:ir.actions.act_window,name:eh_log_last_mile.action_eh_log_last_mile_mass_mark_delivered
+#: model:ir.model,name:eh_log_last_mile.model_eh_log_last_mile_mass_mark_delivered
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_mass_mark_delivered_form
+msgid "Mass Mark Delivered"
+msgstr "सामूहिक रूप से वितरित चिह्नित करें"
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/wizards/eh_log_last_mile_mass_action.py:0
+msgid "Mass mark delivered complete"
+msgstr "सामूहिक वितरित चिह्नन पूर्ण"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_res_company__eh_log_last_mile_max_attempts
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_res_config_settings__eh_log_last_mile_max_attempts
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_res_config_settings_eh_log_last_mile
+msgid "Max Delivery Attempts"
+msgstr "अधिकतम डिलीवरी प्रयास"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_delivery__return_reason__max_attempts
+msgid "Maximum Attempts Reached"
+msgstr "अधिकतम प्रयास सीमा तक पहुँच गए"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_res_company__eh_log_last_mile_max_attempts
+#: model:ir.model.fields,help:eh_log_last_mile.field_res_config_settings__eh_log_last_mile_max_attempts
+msgid ""
+"Maximum delivery attempts before a stop is auto-marked failed. Operators can"
+" still re-schedule a failed delivery from the form."
+msgstr ""
+"किसी स्टॉप को स्वतः विफल चिह्नित करने से पहले अधिकतम वितरण प्रयास। ऑपरेटर "
+"अभी भी फ़ॉर्म से विफल वितरण को फिर से शेड्यूल कर सकते हैं।"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__message_has_error
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__message_has_error
+msgid "Message Delivery error"
+msgstr "मैसेज डिलीवरी में गड़बड़ी"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__message_ids
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__message_ids
+msgid "Messages"
+msgstr "संदेश"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_search_full
+msgid "Multiple Attempts"
+msgstr "एकाधिक प्रयास"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__my_activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "मेरी गतिविधि की डेडलाइन"
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_delivery.py:0
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_wave.py:0
+msgid "New"
+msgstr "नया"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__activity_calendar_event_id
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "अगली गतिविधि कैलेंडर इवेंट"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "अगली गतिविधि की डेडलाइन"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__activity_summary
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__activity_summary
+msgid "Next Activity Summary"
+msgstr "अगली गतिविधी की जानकारी"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__activity_type_id
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__activity_type_id
+msgid "Next Activity Type"
+msgstr "अगली गतिविधि का प्रकार"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_delivery__cod_collection_method__none
+msgid "Not Applicable"
+msgstr "लागू नहीं"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_attempt__notes
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__notes
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__notes
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_attempt_form
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_form
+msgid "Notes"
+msgstr "नोट्स"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__message_needaction_counter
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__message_needaction_counter
+msgid "Number of Actions"
+msgstr "ऐक्शन की संख्या"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__message_has_error_counter
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__message_has_error_counter
+msgid "Number of errors"
+msgstr "गड़बड़ी की संख्या"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_delivery__message_needaction_counter
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_wave__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "ऐसे मैसेज की संख्या जिनपर कार्रवाई की ज़रूरत है"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_delivery__message_has_error_counter
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_wave__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "डिलीवरी में गड़बड़ी वाले मैसेज की संख्या"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_delivery__package_count
+msgid ""
+"Number of physical pieces. Affects load planning and is reconciled with the "
+"warehouse pick on dispatch."
+msgstr ""
+"भौतिक टुकड़ों की संख्या। लोड योजना को प्रभावित करती है और प्रेषण पर वेयरहाउस"
+" पिक के साथ मिलान की जाती है।"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_search_full
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search_full
+msgid "Open"
+msgstr "ओपन"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_attempt__outcome__other
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_delivery__return_reason__other
+msgid "Other"
+msgstr "अन्य"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_delivery__state__out_for_delivery
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_search_full
+msgid "Out for Delivery"
+msgstr "डिलीवरी के लिए निकला"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_attempt__outcome
+msgid "Outcome"
+msgstr "परिणाम"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__package_count
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+msgid "Packages"
+msgstr "पैकेज"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__pending_count
+msgid "Pending"
+msgstr "पेडिंग"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_res_config_settings_eh_log_last_mile
+msgid ""
+"Per-company maximum delivery attempts before a stop is auto-marked failed."
+msgstr ""
+"किसी स्टॉप को स्वचालित रूप से विफल चिह्नित करने से पहले प्रति कंपनी अधिकतम "
+"डिलीवरी प्रयास।"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__photo_image
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+msgid "Photo"
+msgstr "फ़ोटो"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+msgid "Pkgs"
+msgstr "पैकेज"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_form
+msgid "Plan"
+msgstr "प्लान"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__rating_ids
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__rating_ids
+msgid "Ratings"
+msgstr "रेटिंग"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__recipient_name
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_mass_mark_delivered__recipient_name
+msgid "Recipient Name"
+msgstr "प्राप्तकर्ता का नाम"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__recipient_role
+msgid "Recipient Role"
+msgstr "प्राप्तकर्ता भूमिका"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__name
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__name
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+msgid "Reference"
+msgstr "रेफ़रंस"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_attempt__outcome__refused
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_delivery__return_reason__refused
+msgid "Refused"
+msgstr "मना कर दिया"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+msgid "Reschedule"
+msgstr "फिर से शेड्यूल करें"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__activity_user_id
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__activity_user_id
+msgid "Responsible User"
+msgstr "जिम्मेदार उपयोगकर्ता"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+msgid "Return"
+msgstr "रिटर्न"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__return_reason
+msgid "Return Reason"
+msgstr "वापसी का कारण"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__return_to_sender
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+msgid "Return to Sender"
+msgstr "प्रेषक को वापस"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_delivery__state__returned
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_search_full
+msgid "Returned"
+msgstr "लौटाया गया"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__message_has_sms_error
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "एसएमएस डिलीवरी में गड़बड़ी"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__sale_order_id
+msgid "Sale Order"
+msgstr "सेल ऑर्डर"
+
+#. module: eh_log_last_mile
+#: model:ir.model,name:eh_log_last_mile.model_sale_order
+msgid "Sales Order"
+msgstr "सेल्स ऑर्डर"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_delivery__state__scheduled
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_search_full
+msgid "Scheduled"
+msgstr "निर्धारित"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__scheduled_date
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search_full
+msgid "Scheduled Date"
+msgstr "अनुसूचित तिथि"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_search_full
+msgid "Search Deliveries"
+msgstr "डिलीवरी खोजें"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search_full
+msgid "Search Waves"
+msgstr "वेव्स खोजें"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__sequence
+msgid "Sequence"
+msgstr "सीक्वेंस"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_delivery__return_to_sender
+msgid ""
+"Set when a returned delivery should go back to the shipper rather than be "
+"re-attempted."
+msgstr ""
+"जब लौटाई गई डिलीवरी को फिर से प्रयास करने के बजाय शिपर को वापस भेजा जाना "
+"चाहिए तब सेट किया जाता है।"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__signature_image
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+msgid "Signature"
+msgstr "हस्ताक्षर"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_delivery__scheduled_window_start
+msgid ""
+"Start of the customer's promised delivery window. Out-of-window delivery "
+"counts against the SLA on the customer dashboard."
+msgstr ""
+"ग्राहक को वादा किए गए डिलीवरी विंडो की शुरुआत। विंडो के बाहर डिलीवरी ग्राहक "
+"डैशबोर्ड पर SLA के विरुद्ध गिनी जाती है।"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__state
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__state
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_search_full
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search_full
+msgid "State"
+msgstr "राज्य"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_delivery__activity_state
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_wave__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"ऐक्टिविटी के हिसाब से स्टेटस\n"
+"ओवरड्यू: जिस काम की आखिरी तारीख निकल गई हो\n"
+"टुडे: जो काम आज करना है\n"
+"प्लान्ड: जो काम भविष्य में करने हैं।"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_delivery__sequence
+msgid ""
+"Stop order within the wave. The driver visits stops in sequence; the "
+"dispatcher reorders by drag-and-drop."
+msgstr ""
+"वेव के भीतर स्टॉप का क्रम। ड्राइवर स्टॉप को क्रम में जाता है; डिस्पैचर "
+"ड्रैग-एंड-ड्रॉप से क्रम बदलता है।"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__delivery_count
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_form
+msgid "Stops"
+msgstr "पड़ाव"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+msgid "Stops ("
+msgstr "पड़ाव ("
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_res_config_settings_eh_log_last_mile
+msgid ""
+"System parameter mirror for fast lookup. Keeps the per-company limit and the"
+" system cap in sync."
+msgstr ""
+"तेज़ लुकअप के लिए सिस्टम पैरामीटर मिरर। प्रति-कंपनी सीमा और सिस्टम कैप को "
+"सिंक में रखता है।"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_res_config_settings_eh_log_last_mile
+msgid "System-wide Cap"
+msgstr "सिस्टम-व्यापी सीमा"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_res_config_settings__eh_log_last_mile_max_attempts_param
+msgid ""
+"System-wide cap mirrored as ir.config_parameter "
+"eh_log_last_mile.max_attempts so the action methods read it without a per-"
+"company lookup on every call."
+msgstr ""
+"सिस्टम-व्यापी सीमा को ir.config_parameter eh_log_last_mile.max_attempts के "
+"रूप में मिरर किया गया है ताकि एक्शन विधियाँ प्रत्येक कॉल पर प्रति-कंपनी "
+"लुकअप के बिना इसे पढ़ सकें।"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search_full
+msgid "This Week"
+msgstr "इस सप्ताह"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_form
+msgid "Timing"
+msgstr "समय-निर्धारण"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search_full
+msgid "Today"
+msgstr "आज"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search_full
+msgid "Tomorrow"
+msgstr "कल"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_delivery__activity_exception_decoration
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_wave__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "रिकॉर्ड में जो अलग तरह की गतिविधि हुई है, वह किस तरह की है।"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__vehicle_id
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search_full
+msgid "Vehicle"
+msgstr "व्हीकल"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields.selection,name:eh_log_last_mile.selection__eh_log_last_mile_attempt__outcome__vehicle_breakdown
+msgid "Vehicle Breakdown"
+msgstr "वाहन खराबी"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__wave_id
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_search_full
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_form
+msgid "Wave"
+msgstr "वेव"
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_wave.py:0
+msgid ""
+"Wave %(name)s cannot move from %(current)s to %(target)s. Allowed "
+"transitions from %(current)s: %(allowed)s."
+msgstr ""
+"वेव %(name)s %(current)s से %(target)s में नहीं जा सकती। %(current)s से "
+"अनुमत परिवर्तन: %(allowed)s।"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_pivot
+msgid "Wave Performance"
+msgstr "वेव प्रदर्शन"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+msgid "Wave and Schedule"
+msgstr "वेव और शेड्यूल"
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_wave.py:0
+msgid "Wave has no scheduled deliveries."
+msgstr "वेव में कोई अनुसूचित डिलीवरी नहीं है।"
+
+#. module: eh_log_last_mile
+#: model:ir.actions.act_window,name:eh_log_last_mile.action_eh_log_last_mile_wave
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_mass_dispatch__wave_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_calendar
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_list
+msgid "Waves"
+msgstr "वेव"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_graph
+msgid "Waves by State"
+msgstr "स्थिति के अनुसार वेव"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__website_message_ids
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_wave__website_message_ids
+msgid "Website Messages"
+msgstr "वेबसाइट मैसेज"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_delivery__website_message_ids
+#: model:ir.model.fields,help:eh_log_last_mile.field_eh_log_last_mile_wave__website_message_ids
+msgid "Website communication history"
+msgstr "वेबसाइट कम्यूनिकेशन हिस्ट्री"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__weight_kg
+msgid "Weight (kg)"
+msgstr "वजन (किलोग्राम)"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_attempt_form
+msgid "What happened on this attempt..."
+msgstr "इस प्रयास में क्या हुआ..."
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,help:eh_log_last_mile.field_sale_order__eh_log_last_mile_required
+msgid ""
+"When checked, the order is eligible for inclusion in a last-mile wave. The "
+"dispatcher creates the delivery record and assigns to a wave."
+msgstr ""
+"चेक किए जाने पर, ऑर्डर लास्ट-माइल वेव में शामिल किए जाने के योग्य होता है। "
+"डिस्पैचर डिलीवरी रिकॉर्ड बनाता है और उसे किसी वेव को असाइन करता है।"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.report_wave_manifest_document
+msgid "Window"
+msgstr "विंडो"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_search_full
+msgid "Window Day"
+msgstr "विंडो दिन"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__scheduled_window_end
+msgid "Window End"
+msgstr "विंडो समाप्ति"
+
+#. module: eh_log_last_mile
+#: model:ir.model.fields,field_description:eh_log_last_mile.field_eh_log_last_mile_delivery__scheduled_window_start
+msgid "Window Start"
+msgstr "विंडो प्रारंभ"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_search_full
+msgid "Window Today"
+msgstr "आज की विंडो"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_search_full
+msgid "Window Tomorrow"
+msgstr "कल की विंडो"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+msgid "Window end"
+msgstr "विंडो समाप्ति"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+msgid "Window start"
+msgstr "विंडो प्रारंभ"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_search
+msgid "With Outstanding COD"
+msgstr "बकाया COD के साथ"
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_attempt.py:0
+msgid ""
+"[EHL-LM-ATT-001] Attempt entries are append-only. Only the notes field can "
+"be updated after capture; the following are immutable: %(fields)s."
+msgstr ""
+"[EHL-LM-ATT-001] प्रयास प्रविष्टियां केवल-जोड़ने योग्य हैं। कैप्चर के बाद "
+"केवल नोट्स फ़ील्ड को अपडेट किया जा सकता है; निम्नलिखित अपरिवर्तनीय हैं: "
+"%(fields)s।"
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_delivery.py:0
+msgid ""
+"[EHL-LM-DEL-001] State changes on a delivery must go through the action "
+"buttons. Direct writes are rejected."
+msgstr ""
+"[EHL-LM-DEL-001] डिलीवरी पर स्थिति परिवर्तन एक्शन बटन के माध्यम से किए जाने "
+"चाहिए। प्रत्यक्ष राइट अस्वीकृत किए जाते हैं।"
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_delivery.py:0
+msgid ""
+"[EHL-LM-DEL-002] Delivery %(name)s expects a COD collection of %(amount)s. "
+"Capture the collected amount before marking delivered."
+msgstr ""
+"[EHL-LM-DEL-002] डिलीवरी %(name)s में %(amount)s का COD संग्रह अपेक्षित है। "
+"डिलीवर के रूप में चिह्नित करने से पहले संग्रहित राशि दर्ज करें।"
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_delivery.py:0
+msgid ""
+"[EHL-LM-DEL-003] COD collected %(collected)s exceeds expected %(expected)s "
+"on delivery %(name)s."
+msgstr ""
+"[EHL-LM-DEL-003] डिलीवरी %(name)s पर संग्रहित COD %(collected)s अपेक्षित "
+"%(expected)s से अधिक है।"
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_wave.py:0
+msgid ""
+"[EHL-LM-WAVE-001] State changes on a wave must go through the action "
+"buttons. Direct writes are rejected."
+msgstr ""
+"[EHL-LM-WAVE-001] वेव पर स्थिति परिवर्तन एक्शन बटन के माध्यम से किए जाने "
+"चाहिए। प्रत्यक्ष राइट अस्वीकृत किए जाते हैं।"
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_wave.py:0
+msgid ""
+"[EHL-LM-WAVE-002] Wave %(name)s cannot be dispatched. Resolve:\n"
+"\n"
+"- %(list)s"
+msgstr ""
+"[EHL-LM-WAVE-002] वेव %(name)s को डिस्पैच नहीं किया जा सकता। हल करें:\n"
+"\n"
+"- %(list)s"
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_wave.py:0
+msgid ""
+"[EHL-LM-WAVE-003] Wave %(name)s has %(count)d pending deliveries. Resolve "
+"every stop (deliver, fail, or return) before completion."
+msgstr ""
+"[EHL-LM-WAVE-003] वेव %(name)s में %(count)d लंबित डिलीवरी हैं। पूर्ण करने "
+"से पहले प्रत्येक स्टॉप (डिलीवर, विफल, या वापसी) को हल करें।"
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_wave.py:0
+msgid ""
+"[EHL-LM-WAVE-004] Wave %(name)s cannot be closed while COD outstanding is "
+"%(amount)s. Settle the outstanding amount first."
+msgstr ""
+"[EHL-LM-WAVE-004] जब तक COD बकाया %(amount)s है, वेव %(name)s को बंद नहीं "
+"किया जा सकता। पहले बकाया राशि का निपटान करें।"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_kanban
+msgid "attempts"
+msgstr "प्रयास"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+msgid "ePOD"
+msgstr ""
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_delivery_form
+msgid "kg"
+msgstr ""
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_delivery.py:0
+msgid "recipient"
+msgstr "प्राप्तकर्ता"
+
+#. module: eh_log_last_mile
+#: model_terms:ir.ui.view,arch_db:eh_log_last_mile.view_eh_log_last_mile_wave_kanban
+msgid "stops"
+msgstr "स्टॉप"
+
+#. module: eh_log_last_mile
+#. odoo-python
+#: code:addons/eh_log_last_mile/models/eh_log_last_mile_wave.py:0
+msgid "wave_id"
+msgstr ""

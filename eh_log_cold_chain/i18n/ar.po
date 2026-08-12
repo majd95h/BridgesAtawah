@@ -1,0 +1,1313 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* eh_log_cold_chain
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-01 04:33+0000\n"
+"PO-Revision-Date: 2026-07-01 04:33+0000\n"
+"Last-Translator: ERP Heritage <info@erpheritage.com.au>\n"
+"Language-Team: Arabic\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_cold_chain_deviation.py:0
+#: code:addons/eh_log_cold_chain/models/eh_log_cold_chain_run.py:0
+msgid "(none)"
+msgstr "(لا شيء)"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid ""
+"<span class=\"eh_pdf_status_badge eh_pdf_status_danger\">NON-"
+"COMPLIANT</span>"
+msgstr ""
+"<span class=\"eh_pdf_status_badge eh_pdf_status_danger\">غير متوافق</span>"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "<span class=\"eh_pdf_status_badge eh_pdf_status_ok\">COMPLIANT</span>"
+msgstr "<span class=\"eh_pdf_status_badge eh_pdf_status_ok\">متوافق</span>"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "<strong>Job:</strong>"
+msgstr "<strong>الوظيفة:</strong>"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "<strong>Profile:</strong>"
+msgstr "<strong>الملف التعريفي:</strong>"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "<strong>Run:</strong>"
+msgstr "<strong>التشغيل:</strong>"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "<strong>State:</strong>"
+msgstr "<strong>الحالة:</strong>"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_reading__source__api
+msgid "API"
+msgstr "الواجهة البرمجية للتطبيق"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_deviation__deviation_kind__high
+msgid "Above Maximum"
+msgstr "أعلى من الحد الأقصى"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_deviation_form
+msgid "Acknowledge"
+msgstr "إقرار"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_deviation__state__acknowledged
+msgid "Acknowledged"
+msgstr "معترف به"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__acknowledged_at
+msgid "Acknowledged At"
+msgstr "تاريخ الإقرار"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__acknowledged_by_id
+msgid "Acknowledged By"
+msgstr "تم الإقرار بواسطة"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__message_needaction
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__message_needaction
+msgid "Action Needed"
+msgstr "إجراء مطلوب"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_run_form
+msgid "Activate"
+msgstr "تفعيل"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_profile__active
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_run__state__active
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_run_search
+msgid "Active"
+msgstr "نشط"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__activity_ids
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__activity_exception_decoration
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "زخرفة استثناء النشاط"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__activity_state
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__activity_type_icon
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "أيقونة نوع النشاط"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_run_form
+msgid "Aggregates"
+msgstr "التجميعات"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_profile__alert_window_minutes
+msgid "Alert Window (minutes)"
+msgstr "نافذة التنبيه (بالدقائق)"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_deviation__cause__ambient_extreme
+msgid "Ambient Conditions"
+msgstr "الظروف المحيطة"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__message_attachment_count
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_deviation_form
+msgid "Audit"
+msgstr "تدقيق"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Authorised Signatory"
+msgstr "المُفوَّض بالتوقيع"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__avg_temperature
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Avg Recorded (degC)"
+msgstr "المتوسط المسجل (degC)"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_deviation__deviation_kind__low
+msgid "Below Minimum"
+msgstr "أقل من الحد الأدنى"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_reading__is_breach
+msgid "Breach"
+msgstr "انتهاك"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_run_search
+msgid "Breached"
+msgstr "تم الإخلال به"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_run__state__breached
+msgid "Breached (Cargo Impacting)"
+msgstr "تم الإخلال به (يؤثر على الشحنة)"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_reading__source__ingest
+msgid "Bulk Ingest"
+msgstr "استيعاب مجمّع"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_profile_form
+msgid "Cadence and Alerts"
+msgstr "التواتر والتنبيهات"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_run_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_run__state__cancelled
+msgid "Cancelled"
+msgstr "تم الإلغاء"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_reading__captured_at
+msgid "Captured At"
+msgstr "تاريخ الالتقاط"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Cargo Impact"
+msgstr "تأثير على الشحنة"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__cargo_impacting
+msgid "Cargo Impacting"
+msgstr "يؤثر على الشحنة"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_profile__category
+msgid "Category"
+msgstr "الفئة"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__cause
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Cause"
+msgstr "السبب"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_deviation_form
+msgid "Cause and Resolution"
+msgstr "السبب والحل"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_profile__category__chilled
+msgid "Chilled (-2 to 8 degC)"
+msgstr "مبرَّد (-2 إلى 8 درجة مئوية)"
+
+#. module: eh_log_cold_chain
+#: model:eh.log.cold.chain.profile,name:eh_log_cold_chain.profile_chilled
+msgid "Chilled -2 to 8 degC"
+msgstr "مبرَّد -2 إلى 8 درجة مئوية"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_profile__code
+msgid "Code"
+msgstr "رمز"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_freight_job_form_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_sale_order_form_eh_log_cold_chain
+msgid "Cold Chain"
+msgstr "سلسلة التبريد"
+
+#. module: eh_log_cold_chain
+#: model:ir.actions.report,name:eh_log_cold_chain.action_report_eh_log_cold_chain_compliance
+msgid "Cold Chain Compliance Certificate"
+msgstr "شهادة الامتثال لسلسلة التبريد"
+
+#. module: eh_log_cold_chain
+#: model:ir.model,name:eh_log_cold_chain.model_eh_log_cold_chain_deviation
+msgid "Cold Chain Deviation"
+msgstr "انحراف سلسلة التبريد"
+
+#. module: eh_log_cold_chain
+#: model:ir.actions.act_window,name:eh_log_cold_chain.action_eh_log_cold_chain_deviation
+#: model:ir.ui.menu,name:eh_log_cold_chain.menu_eh_log_cold_chain_deviations
+msgid "Cold Chain Deviations"
+msgstr "انحرافات سلسلة التبريد"
+
+#. module: eh_log_cold_chain
+#: model:ir.model,name:eh_log_cold_chain.model_eh_log_cold_chain_run
+msgid "Cold Chain Monitoring Run"
+msgstr "دورة مراقبة سلسلة التبريد"
+
+#. module: eh_log_cold_chain
+#: model:ir.model,name:eh_log_cold_chain.model_eh_log_cold_chain_profile
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_sale_order__eh_log_cold_chain_profile_id
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_profile_form
+msgid "Cold Chain Profile"
+msgstr "ملف سلسلة التبريد"
+
+#. module: eh_log_cold_chain
+#: model:ir.actions.act_window,name:eh_log_cold_chain.action_eh_log_cold_chain_profile
+#: model:ir.ui.menu,name:eh_log_cold_chain.menu_eh_log_cold_chain_profiles
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_profile_list
+msgid "Cold Chain Profiles"
+msgstr "ملفات سلسلة التبريد"
+
+#. module: eh_log_cold_chain
+#: model:ir.model,name:eh_log_cold_chain.model_eh_log_cold_chain_reading
+msgid "Cold Chain Reading"
+msgstr "قراءة سلسلة التبريد"
+
+#. module: eh_log_cold_chain
+#: model:ir.actions.act_window,name:eh_log_cold_chain.action_eh_log_cold_chain_reading
+msgid "Cold Chain Readings"
+msgstr "قراءات سلسلة التبريد"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_sale_order__eh_log_cold_chain_required
+msgid "Cold Chain Required"
+msgstr "سلسلة التبريد مطلوبة"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_run_form
+msgid "Cold Chain Run"
+msgstr "دورة سلسلة التبريد"
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_freight_job.py:0
+#: model:ir.actions.act_window,name:eh_log_cold_chain.action_eh_log_cold_chain_run
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_freight_job__cold_chain_run_count
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_freight_job__cold_chain_run_ids
+#: model:ir.ui.menu,name:eh_log_cold_chain.menu_eh_log_cold_chain_runs
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_run_list
+msgid "Cold Chain Runs"
+msgstr "دورات سلسلة التبريد"
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_freight_job.py:0
+msgid ""
+"Cold chain monitoring required on the source order but no profile selected. "
+"Create the cold chain run manually under the Cold Chain tab."
+msgstr ""
+"مراقبة سلسلة التبريد مطلوبة على الطلب المصدر لكن لم يتم اختيار أي ملف. أنشئ "
+"دورة سلسلة التبريد يدويًا ضمن علامة التبويب Cold Chain."
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_cold_chain_run.py:0
+msgid ""
+"Cold chain run %(name)s cannot move from %(current)s to %(target)s. Allowed "
+"transitions from %(current)s: %(allowed)s."
+msgstr ""
+"لا يمكن نقل دورة سلسلة التبريد %(name)s من %(current)s إلى %(target)s. "
+"التحولات المسموح بها من %(current)s: %(allowed)s."
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_cold_chain_run.py:0
+msgid "Cold chain run %(name)s moved to %(state)s."
+msgstr "تم نقل دورة سلسلة التبريد %(name)s إلى %(state)s."
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__company_ids
+msgid "Companies"
+msgstr "الشركات"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__company_id
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_reading__company_id
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_run_form
+msgid "Complete"
+msgstr "مكتمل"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__completed_at
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_run__state__completed
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Completed"
+msgstr "مكتملة"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Compliance"
+msgstr "الامتثال"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__is_compliant
+msgid "Compliant"
+msgstr "متوافق"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_profile__category__controlled_room
+msgid "Controlled Room (15 to 25 degC)"
+msgstr "غرفة مضبوطة (15 إلى 25 degC)"
+
+#. module: eh_log_cold_chain
+#: model:eh.log.cold.chain.profile,name:eh_log_cold_chain.profile_controlled_room
+msgid "Controlled Room 15 to 25 degC"
+msgstr "غرفة مضبوطة 15 إلى 25 degC"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__create_uid
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_profile__create_uid
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_reading__create_uid
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__create_date
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_profile__create_date
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_reading__create_date
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_profile__category__custom
+msgid "Custom"
+msgstr "مُخصص"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_reading__source__portal
+msgid "Customer Portal"
+msgstr "بوابة العميل"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_profile__category__deep_frozen
+msgid "Deep Frozen (-45 degC and below)"
+msgstr "مجمد بعمق (-45 درجة مئوية وأقل)"
+
+#. module: eh_log_cold_chain
+#: model:eh.log.cold.chain.profile,name:eh_log_cold_chain.profile_deep_frozen
+msgid "Deep Frozen -45 degC and below"
+msgstr "مجمد بعمق -45 درجة مئوية وأقل"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_sale_order__eh_log_cold_chain_profile_id
+msgid ""
+"Default profile applied to the spawned monitoring run. The operator can "
+"change it on the run before activation."
+msgstr ""
+"الملف الشخصي الافتراضي المُطبَّق على عملية المراقبة المُنشأة. يمكن للمشغّل "
+"تغييره في العملية قبل التنشيط."
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_profile__description
+msgid "Description"
+msgstr "الوصف"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_deviation_form
+msgid "Deviation"
+msgstr "الانحراف"
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_cold_chain_deviation.py:0
+msgid ""
+"Deviation %(name)s cannot move from %(current)s to %(target)s. Allowed "
+"transitions: %(allowed)s."
+msgstr ""
+"لا يمكن نقل الانحراف %(name)s من %(current)s إلى %(target)s. الانتقالات "
+"المسموح بها: %(allowed)s."
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_cold_chain_deviation.py:0
+msgid ""
+"Deviation flagged as cargo-impacting by %(user)s. The run's compliance "
+"verdict is now non-compliant."
+msgstr ""
+"تم وضع علامة على الانحراف بأنه مؤثر على البضائع بواسطة %(user)s. أصبح حكم "
+"الامتثال للرحلة الآن غير متوافق."
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_cold_chain_run.py:0
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__deviation_count
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__deviation_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_deviation_list
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_run_form
+msgid "Deviations"
+msgstr "الانحرافات"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__display_name
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_profile__display_name
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_reading__display_name
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__display_name
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_freight_job__display_name
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_sale_order__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_deviation__cause__door_open
+msgid "Door Open Too Long"
+msgstr "الباب مفتوح لمدة طويلة جداً"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_run__state__draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_profile__category__dry_ice
+msgid "Dry Ice"
+msgstr "ثلج جاف"
+
+#. module: eh_log_cold_chain
+#: model:eh.log.cold.chain.profile,name:eh_log_cold_chain.profile_dry_ice
+msgid "Dry Ice (around -78 degC)"
+msgstr "ثلج جاف (حوالي -78 درجة مئوية)"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__duration_minutes
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Duration (min)"
+msgstr "المدة (بالدقائق)"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__ended_at
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Ended"
+msgstr "انتهى"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_deviation__cause__equipment_failure
+msgid "Equipment Failure"
+msgstr "فشل المعدات"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_profile__excursion_grace_minutes
+msgid "Excursion Grace (minutes)"
+msgstr "مهلة التجاوز (بالدقائق)"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_profile__sampling_cadence_minutes
+msgid ""
+"Expected interval between readings. Used by the gap detector to flag missing"
+" data."
+msgstr ""
+"الفاصل الزمني المتوقع بين القراءات. يستخدمه كاشف الفجوات للإشارة إلى "
+"البيانات المفقودة."
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__message_follower_ids
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__message_follower_ids
+msgid "Followers"
+msgstr "المتابعين"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__message_partner_ids
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعين (الشركاء)"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_deviation__activity_type_icon
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_run__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "أيقونة من Font awesome مثال: fa-tasks"
+
+#. module: eh_log_cold_chain
+#: model:ir.model,name:eh_log_cold_chain.model_eh_log_freight_job
+msgid "Freight Forwarding Job"
+msgstr "مهمة الشحن والتخليص"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__freight_job_id
+msgid "Freight Job"
+msgstr "مهمة الشحن"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_profile__category__frozen
+msgid "Frozen (-18 degC and below)"
+msgstr "مجمّد (-18 درجة مئوية وأقل)"
+
+#. module: eh_log_cold_chain
+#: model:eh.log.cold.chain.profile,name:eh_log_cold_chain.profile_frozen
+msgid "Frozen -18 degC and below"
+msgstr "مجمّد -18 درجة مئوية وأقل"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_run_search
+msgid "Group by Profile"
+msgstr "تجميع حسب الملف التعريفي"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_run_search
+msgid "Group by State"
+msgstr "تجميع حسب الحالة"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__has_message
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__has_message
+msgid "Has Message"
+msgstr "يحتوي على رسالة"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_profile_form
+msgid "Humidity"
+msgstr "الرطوبة"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_reading__humidity
+msgid "Humidity (%)"
+msgstr "الرطوبة (%)"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__id
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_profile__id
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_reading__id
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__id
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_freight_job__id
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_sale_order__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__activity_exception_icon
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__activity_exception_icon
+msgid "Icon"
+msgstr "الأيقونة"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_deviation__activity_exception_icon
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_run__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "الأيقونة للإشارة إلى النشاط المستثنى."
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_deviation__message_needaction
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_run__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "إذا كان محددًا، فهناك رسائل جديدة عليك رؤيتها."
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_deviation__message_has_error
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_deviation__message_has_sms_error
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_run__message_has_error
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_run__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا كان محددًا، فقد حدث خطأ في تسليم بعض الرسائل."
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__message_is_follower
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__deviation_kind
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Kind"
+msgstr "النوع"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__write_uid
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_profile__write_uid
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_reading__write_uid
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__write_date
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_profile__write_date
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_reading__write_date
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_run_form
+msgid "Linkage"
+msgstr "الربط"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_deviation__cause__loading_unloading
+msgid "Loading or Unloading"
+msgstr "التحميل أو التفريغ"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_deviation__cause__logger_calibration
+msgid "Logger Calibration Drift"
+msgstr "انحراف معايرة المسجّل"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_profile__temperature_min
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_run__profile_temperature_min
+msgid ""
+"Lower threshold. Readings below this trigger a deviation after the alert "
+"window elapses."
+msgstr ""
+"الحد الأدنى. القراءات الأقل من هذا الحد تُطلق انحرافًا بعد انقضاء نافذة "
+"التنبيه."
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_deviation_form
+msgid "Magnitude"
+msgstr "الحجم"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_reading__source__manual
+msgid "Manual Entry"
+msgstr "الإدخال اليدوي"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_deviation_form
+msgid "Mark Cargo Impacting"
+msgstr "وضع علامة مؤثر على الشحنة"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_profile__humidity_max
+msgid "Max Humidity (%)"
+msgstr "أقصى رطوبة (%)"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Max Recorded"
+msgstr "أقصى قيمة مسجَّلة"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__max_temperature
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Max Recorded (degC)"
+msgstr "أقصى قيمة مسجَّلة (degC)"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_profile__temperature_max
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__profile_temperature_max
+msgid "Max Temperature (degC)"
+msgstr "أقصى درجة حرارة (degC)"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__max_temperature
+msgid "Maximum Recorded (degC)"
+msgstr "أقصى قيمة مسجَّلة (degC)"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__message_has_error
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسائل"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__message_ids
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Metric"
+msgstr "متري"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_profile__humidity_min
+msgid "Min Humidity (%)"
+msgstr "الحد الأدنى للرطوبة (%)"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Min Recorded"
+msgstr "الحد الأدنى المسجل"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__min_temperature
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Min Recorded (degC)"
+msgstr "الحد الأدنى المسجل (degC)"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_profile__temperature_min
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__profile_temperature_min
+msgid "Min Temperature (degC)"
+msgstr "الحد الأدنى لدرجة الحرارة (degC)"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__min_temperature
+msgid "Minimum Recorded (degC)"
+msgstr "الحد الأدنى المسجل (degC)"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_profile__alert_window_minutes
+msgid ""
+"Minimum continuous duration that a threshold must be breached before a "
+"deviation is raised. Buffers transient spikes (e.g. door open during gate-"
+"in)."
+msgstr ""
+"الحد الأدنى للمدة المستمرة التي يجب أن تُتجاوز فيها العتبة قبل إثارة انحراف."
+" يخفف الارتفاعات العابرة (مثل فتح الباب أثناء الدخول من البوابة)."
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_profile__monitor_humidity
+msgid "Monitor Humidity"
+msgstr "مراقبة الرطوبة"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__my_activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "الموعد النهائي لنشاطاتي"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_profile__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_cold_chain_run.py:0
+msgid "New"
+msgstr "جديد"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__activity_calendar_event_id
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "الفعالية التالية في تقويم الأنشطة"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__activity_summary
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__activity_type_id
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "No"
+msgstr "لا"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__notes
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_run_form
+msgid "Notes"
+msgstr "الملاحظات"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__message_needaction_counter
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__message_has_error_counter
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الأخطاء"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_deviation__message_needaction_counter
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_run__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "عدد الرسائل التي تتطلب اتخاذ إجراء"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_deviation__message_has_error_counter
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_run__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل الحادث بها خطأ في التسليم"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_deviation__state__open
+msgid "Open"
+msgstr "فتح"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__open_deviation_count
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_run_form
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_run_search
+msgid "Open Deviations"
+msgstr "الانحرافات المفتوحة"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_deviation__cause__operator_error
+msgid "Operator Error"
+msgstr "خطأ المشغّل"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_reading__sensor_reference
+msgid ""
+"Optional identifier for the source sensor or logger. Useful when multiple "
+"sensors feed into the same run."
+msgstr ""
+"معرّف اختياري لجهاز الاستشعار أو المسجّل المصدر. مفيد عندما تغذّي عدة أجهزة "
+"استشعار نفس التشغيل."
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_deviation__cause__other
+msgid "Other"
+msgstr "غير ذلك"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_profile__category__pharma
+msgid "Pharma (2 to 8 degC)"
+msgstr "أدوية (2 إلى 8 درجة مئوية)"
+
+#. module: eh_log_cold_chain
+#: model:eh.log.cold.chain.profile,name:eh_log_cold_chain.profile_pharma_2_8
+msgid "Pharma 2 to 8 degC"
+msgstr "أدوية 2 إلى 8 درجة مئوية"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__profile_id
+msgid "Profile"
+msgstr "الملف التعريفي"
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_cold_chain_profile.py:0
+msgid ""
+"Profile %(name)s has humidity min %(min).1f%% >= max %(max).1f%% but "
+"humidity monitoring is enabled."
+msgstr ""
+"الملف الشخصي %(name)s لديه حد أدنى للرطوبة %(min).1f%% >= الحد الأقصى "
+"%(max).1f%% لكن مراقبة الرطوبة مُفعَّلة."
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_cold_chain_profile.py:0
+msgid ""
+"Profile %(name)s has min temperature %(min).2f >= max %(max).2f. The min "
+"must be strictly less than the max."
+msgstr ""
+"الملف الشخصي %(name)s لديه حد أدنى لدرجة الحرارة %(min).2f >= الحد الأقصى "
+"%(max).2f. يجب أن يكون الحد الأدنى أقل تمامًا من الحد الأقصى."
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Profile Range"
+msgstr "نطاق الملف الشخصي"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_run_form
+msgid "Profile Thresholds"
+msgstr "عتبات الملف الشخصي"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.constraint,message:eh_log_cold_chain.constraint_eh_log_cold_chain_profile_code_unique
+msgid "Profile code must be unique."
+msgstr "يجب أن يكون رمز الملف الشخصي فريدًا."
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__rating_ids
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__rating_ids
+msgid "Ratings"
+msgstr "التقييمات"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_reading_form
+msgid "Reading"
+msgstr "قراءة"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Reading Summary"
+msgstr "ملخص القراءة"
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_cold_chain_run.py:0
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__reading_count
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__reading_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_reading_list
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_run_form
+msgid "Readings"
+msgstr "القراءات"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__name
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__name
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Reference"
+msgstr "الرقم المرجعي"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__resolution_notes
+msgid "Resolution Notes"
+msgstr "ملاحظات الحل"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_deviation_form
+msgid "Resolve"
+msgstr "حل"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_deviation__state__resolved
+msgid "Resolved"
+msgstr "تم حلها"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__resolved_at
+msgid "Resolved At"
+msgstr "تم الحل في"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__resolved_by_id
+msgid "Resolved By"
+msgstr "تم الحل بواسطة"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__activity_user_id
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__run_id
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_reading__run_id
+msgid "Run"
+msgstr "تشغيل"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__message_has_sms_error
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل النصية القصيرة"
+
+#. module: eh_log_cold_chain
+#: model:ir.model,name:eh_log_cold_chain.model_sale_order
+msgid "Sales Order"
+msgstr "أمر البيع"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Sample Count"
+msgstr "عدد العينات"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_profile__sampling_cadence_minutes
+msgid "Sampling Cadence (minutes)"
+msgstr "وتيرة أخذ العينات (بالدقائق)"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_reading__sensor_reference
+msgid "Sensor Reference"
+msgstr "مرجع المستشعر"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_reading__source
+msgid "Source"
+msgstr "المصدر"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_profile__code
+msgid "Stable identifier (PHARMA-2-8, FROZEN-18, AMB-15-25, ...)."
+msgstr "معرّف ثابت (PHARMA-2-8, FROZEN-18, AMB-15-25, ...)."
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__started_at
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__started_at
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Started"
+msgstr "بدأ"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__state
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__state
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "State"
+msgstr "الحالة"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_deviation__activity_state
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_run__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"الأنشطة المعتمدة على الحالة\n"
+"المتأخرة: تاريخ الاستحقاق مر\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"المخطط: الأنشطة المستقبلية."
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_reading__source__telematics
+msgid "Telematics Stream"
+msgstr "بث التتبع عن بُعد"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_profile_form
+msgid "Temperature"
+msgstr "درجة الحرارة"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_reading__temperature
+msgid "Temperature (degC)"
+msgstr "درجة الحرارة (degC)"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid ""
+"This certificate is issued under the responsibility of the operator named "
+"above based on the recorded data above. The compliance verdict reflects the "
+"absence (COMPLIANT) or presence (NON-COMPLIANT) of cargo-impacting "
+"deviations."
+msgstr ""
+"تصدر هذه الشهادة تحت مسؤولية المشغّل المذكور أعلاه بناءً على البيانات "
+"المسجلة أعلاه. يعكس حكم الامتثال غياب (COMPLIANT) أو وجود (NON-COMPLIANT) "
+"انحرافات مؤثرة على الشحنة."
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_profile__excursion_grace_minutes
+msgid ""
+"Time after a deviation closes before the run returns to nominal status. "
+"Allows readings to fully stabilise."
+msgstr ""
+"المدة التي تلي إغلاق الانحراف قبل عودة عملية التشغيل إلى الحالة الاسمية. "
+"تتيح للقراءات أن تستقر بالكامل."
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_deviation__cause__transit_delay
+msgid "Transit Delay"
+msgstr "تأخير العبور"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_run__is_compliant
+msgid ""
+"True when no cargo-impacting deviation has been recorded and at least one "
+"reading has been ingested. Drives the compliance certificate verdict."
+msgstr ""
+"صحيح عندما لا يُسجَّل أي انحراف مؤثّر على الشحنة ويتم استيعاب قراءة واحدة "
+"على الأقل. يحدّد نتيجة شهادة الامتثال."
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_reading__is_breach
+msgid ""
+"True when this individual reading is outside the run's profile thresholds. "
+"The deviation detector aggregates sustained breaches across continuous time "
+"windows."
+msgstr ""
+"صحيح عندما تكون هذه القراءة الفردية خارج عتبات ملف تعريف التشغيل. يقوم كاشف "
+"الانحراف بتجميع الانتهاكات المستمرة عبر نوافذ زمنية متصلة."
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_deviation__activity_exception_decoration
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_run__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع النشاط المستثنى في السجل."
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_profile__temperature_max
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_run__profile_temperature_max
+msgid ""
+"Upper threshold. Readings above this trigger a deviation after the alert "
+"window elapses."
+msgstr ""
+"الحد الأعلى. القراءات التي تتجاوز هذا الحد تطلق انحرافًا بعد انقضاء نافذة "
+"التنبيه."
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Value"
+msgstr "القيمة"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Verdict"
+msgstr "الحكم"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_deviation_form
+msgid "Void (False Alarm)"
+msgstr "إلغاء (إنذار كاذب)"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_deviation__state__voided
+msgid "Voided (False Alarm)"
+msgstr "مُلغى (إنذار كاذب)"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__website_message_ids
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع الإلكتروني"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_deviation__website_message_ids
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_run__website_message_ids
+msgid "Website communication history"
+msgstr "سجل تواصل الموقع الإلكتروني"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_profile__monitor_humidity
+msgid ""
+"When True, readings must include humidity and the thresholds above are "
+"enforced."
+msgstr ""
+"عندما تكون القيمة True، يجب أن تتضمن القراءات الرطوبة ويتم فرض الحدود أعلاه."
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_deviation__cargo_impacting
+msgid ""
+"When True, the deviation is judged to have impacted the cargo's integrity. "
+"This drives the run's compliance verdict and the certificate's verdict line."
+msgstr ""
+"عندما تكون القيمة True، يُحكم بأن الانحراف قد أثّر على سلامة البضائع. وهذا "
+"يحدد حكم الامتثال للتشغيل وسطر الحكم في الشهادة."
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_sale_order__eh_log_cold_chain_required
+msgid ""
+"When checked, the freight job spawned from this order auto-creates a cold "
+"chain monitoring run."
+msgstr ""
+"عند التحديد، تنشئ مهمة الشحن المتولّدة من هذا الطلب تشغيل مراقبة سلسلة "
+"التبريد تلقائيًا."
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_deviation_form
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_run_form
+msgid "Window"
+msgstr "نافذة"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "YES"
+msgstr "نعم"
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_cold_chain_run.py:0
+msgid ""
+"[EHL-COLD-CHAIN-001] State changes on a cold chain run must go through the "
+"action buttons. Direct writes are rejected."
+msgstr ""
+"[EHL-COLD-CHAIN-001] يجب أن تتم تغييرات الحالة على تشغيل سلسلة التبريد عبر "
+"أزرار الإجراءات. تُرفض الكتابة المباشرة."
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_cold_chain_run.py:0
+msgid ""
+"[EHL-COLD-CHAIN-002] Cold chain run %(name)s is in state %(state)s. Readings"
+" can only be ingested while the run is active."
+msgstr ""
+"[EHL-COLD-CHAIN-002] تشغيل سلسلة التبريد %(name)s في الحالة %(state)s. لا "
+"يمكن استيعاب القراءات إلا أثناء نشاط التشغيل."
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_cold_chain_deviation.py:0
+msgid ""
+"[EHL-COLD-CHAIN-DEV-001] State changes on a cold chain deviation must go "
+"through the action buttons. Direct writes are rejected."
+msgstr ""
+"[EHL-COLD-CHAIN-DEV-001] يجب أن تتم تغييرات الحالة على انحراف سلسلة التبريد "
+"عبر أزرار الإجراءات. تُرفض الكتابة المباشرة."
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_cold_chain_deviation.py:0
+msgid ""
+"[EHL-COLD-CHAIN-DEV-002] Deviation %(name)s cannot be resolved without a "
+"cause classification."
+msgstr ""
+"[EHL-COLD-CHAIN-DEV-002] لا يمكن حل الانحراف %(name)s بدون تصنيف السبب."
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_cold_chain_deviation.py:0
+msgid ""
+"[EHL-COLD-CHAIN-DEV-003] Voiding deviation %(name)s requires a justification"
+" in the resolution notes."
+msgstr ""
+"[EHL-COLD-CHAIN-DEV-003] يتطلب إبطال الانحراف %(name)s تبريرًا في ملاحظات "
+"الحل."
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_cold_chain_reading.py:0
+msgid ""
+"[EHL-COLD-CHAIN-READING-001] Cold chain readings are append-only. The "
+"following fields cannot be edited after capture: %(fields)s."
+msgstr ""
+"[EHL-COLD-CHAIN-READING-001] قراءات سلسلة التبريد قابلة للإلحاق فقط. لا يمكن"
+" تعديل الحقول التالية بعد التسجيل: %(fields)s."
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_freight_job.py:0
+msgid "freight_job_id"
+msgstr ""
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "open"
+msgstr "فتح"
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_cold_chain_run.py:0
+msgid "run_id"
+msgstr ""
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "total,"
+msgstr "الإجمالي،"

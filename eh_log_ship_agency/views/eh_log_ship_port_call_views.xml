@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_eh_log_ship_port_call_list" model="ir.ui.view">
+        <field name="name">eh.log.ship.port.call.list</field>
+        <field name="model">eh.log.ship.port.call</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="vessel_id"/>
+                <field name="port_partner_id"/>
+                <field name="berth_id"/>
+                <field name="eta_at"/>
+                <field name="state" widget="badge"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_eh_log_ship_port_call_form" model="ir.ui.view">
+        <field name="name">eh.log.ship.port.call.form</field>
+        <field name="model">eh.log.ship.port.call</field>
+        <field name="arch" type="xml">
+            <form string="Port Call">
+                <header>
+                    <button name="action_mark_arrived" string="Mark Arrived" type="object" class="btn-primary" invisible="state != 'expected'" groups="eh_log_base.group_eh_log_user"/>
+                    <button name="action_tender_nor" string="Tender NOR" type="object" class="btn-secondary" invisible="state not in ('arrived', 'berthed')" groups="eh_log_base.group_eh_log_user"/>
+                    <button name="action_assign_berth" string="Mark Berthed" type="object" class="btn-primary" invisible="state != 'arrived'" groups="eh_log_base.group_eh_log_user"/>
+                    <button name="action_start_working" string="Start Working" type="object" class="btn-primary" invisible="state != 'berthed'" groups="eh_log_base.group_eh_log_user"/>
+                    <button name="action_mark_sailed" string="Mark Sailed" type="object" class="btn-primary" invisible="state not in ('berthed', 'working', 'arrived')" groups="eh_log_base.group_eh_log_user"/>
+                    <button name="action_close" string="Close" type="object" class="btn-secondary" invisible="state != 'sailed'" groups="eh_log_base.group_eh_log_manager"/>
+                    <button name="action_cancel" string="Cancel" type="object" class="btn-secondary" invisible="state in ('closed', 'cancelled')" groups="eh_log_base.group_eh_log_manager"/>
+                    <field name="state" widget="statusbar" statusbar_visible="expected,arrived,berthed,working,sailed,closed"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_sof"
+                                type="object"
+                                class="oe_stat_button"
+                                icon="fa-list-ol">
+                            <field name="sof_event_count" widget="statinfo" string="SOF Events"/>
+                        </button>
+                        <button name="action_open_disbursement"
+                                type="object"
+                                class="oe_stat_button"
+                                icon="fa-money">
+                            <span class="o_stat_text">Disbursement</span>
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1><field name="name"/></h1>
+                    </div>
+
+                    <!-- Snapshot hero -->
+                    <div class="o_eh_log_snapshot mb-3" style="background:linear-gradient(135deg,#0E1E2B 0%,#1A2C3D 100%);color:#FBF8F2;border-radius:14px;padding:22px 26px;border:1px solid #A07A3F;box-shadow:0 6px 18px rgba(14,30,43,0.08);">
+                        <div class="d-flex align-items-center justify-content-between mb-3" style="gap:18px;">
+                            <div style="flex:1;min-width:0;">
+                                <div style="font-family:'DM Mono',ui-monospace,monospace;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:#E8C887;margin-bottom:4px;">Vessel</div>
+                                <div style="font-size:1.05rem;font-weight:600;color:#FBF8F2;line-height:1.25;">
+                                    <field name="vessel_id" readonly="1" options="{'no_open': True}" nolabel="1" placeholder="—"/>
+                                </div>
+                                <div style="font-size:0.85rem;color:rgba(251,248,242,0.7);">
+                                    Voyage <field name="voyage_reference" readonly="1" nolabel="1" placeholder="—"/>
+                                </div>
+                            </div>
+                            <div style="text-align:center;flex-shrink:0;">
+                                <div style="display:inline-block;padding:10px 20px;background:rgba(212,160,85,0.12);border:1px solid rgba(212,160,85,0.4);border-radius:999px;">
+                                    <i class="fa fa-anchor" style="font-size:1.6rem;color:#D4A055;" title="Port call"/>
+                                    <span class="ms-2" style="font-family:'DM Mono',ui-monospace,monospace;font-size:0.78rem;letter-spacing:0.18em;text-transform:uppercase;color:#E8C887;font-weight:600;">Port&#160;call</span>
+                                </div>
+                            </div>
+                            <div style="flex:1;min-width:0;text-align:right;">
+                                <div style="font-family:'DM Mono',ui-monospace,monospace;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:#E8C887;margin-bottom:4px;">Port</div>
+                                <div style="font-size:1.05rem;font-weight:600;color:#FBF8F2;line-height:1.25;">
+                                    <field name="port_partner_id" readonly="1" options="{'no_open': True}" nolabel="1" placeholder="—"/>
+                                </div>
+                                <div style="font-size:0.85rem;color:rgba(251,248,242,0.7);">
+                                    <field name="berth_id" readonly="1" options="{'no_open': True}" nolabel="1" placeholder="—"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="display:table;width:100%;border-collapse:separate;border-spacing:10px 0;border-top:1px solid rgba(212,160,85,0.18);padding-top:14px;">
+                            <div style="display:table-cell;width:33%;vertical-align:top;background:rgba(255,255,255,0.04);border-radius:8px;padding:10px 14px;">
+                                <div style="font-family:'DM Mono',ui-monospace,monospace;font-size:0.66rem;letter-spacing:0.18em;text-transform:uppercase;color:#E8C887;">Principal</div>
+                                <div style="margin-top:4px;font-size:0.95rem;font-weight:600;color:#FBF8F2;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">
+                                    <field name="principal_partner_id" readonly="1" options="{'no_open': True}" nolabel="1" placeholder="—"/>
+                                </div>
+                            </div>
+                            <div style="display:table-cell;width:33%;vertical-align:top;background:rgba(255,255,255,0.04);border-radius:8px;padding:10px 14px;">
+                                <div style="font-family:'DM Mono',ui-monospace,monospace;font-size:0.66rem;letter-spacing:0.18em;text-transform:uppercase;color:#E8C887;">ETA</div>
+                                <div style="margin-top:4px;font-size:0.95rem;font-weight:600;color:#FBF8F2;">
+                                    <field name="eta_at" readonly="1" nolabel="1" placeholder="—"/>
+                                </div>
+                            </div>
+                            <div style="display:table-cell;width:33%;vertical-align:top;background:rgba(255,255,255,0.04);border-radius:8px;padding:10px 14px;">
+                                <div style="font-family:'DM Mono',ui-monospace,monospace;font-size:0.66rem;letter-spacing:0.18em;text-transform:uppercase;color:#E8C887;">NOR tendered</div>
+                                <div style="margin-top:4px;font-size:0.95rem;font-weight:600;color:#FBF8F2;">
+                                    <field name="nor_tendered_at" readonly="1" nolabel="1" placeholder="—"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /snapshot -->
+
+                    <group>
+                        <group string="Vessel and Voyage">
+                            <field name="vessel_id" options="{'no_create': True}"/>
+                            <field name="voyage_reference"/>
+                            <field name="principal_partner_id"/>
+                        </group>
+                        <group string="Port and Berth">
+                            <field name="port_partner_id"/>
+                            <field name="berth_id" options="{'no_create': True}"/>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                        </group>
+                    </group>
+                    <group string="Times">
+                        <group>
+                            <field name="eta_at"/>
+                            <field name="arrived_at" readonly="1"/>
+                            <field name="nor_tendered_at" readonly="1"/>
+                            <field name="berthed_at" readonly="1"/>
+                        </group>
+                        <group>
+                            <field name="working_at" readonly="1"/>
+                            <field name="sailed_at" readonly="1"/>
+                            <field name="closed_at" readonly="1"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Statement of Facts" name="sof">
+                            <field name="sof_event_ids">
+                                <list editable="bottom">
+                                    <field name="occurred_at"/>
+                                    <field name="description"/>
+                                    <field name="event_category"/>
+                                    <field name="counts_against_laytime"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_eh_log_ship_port_call" model="ir.actions.act_window">
+        <field name="name">Port Calls</field>
+        <field name="res_model">eh.log.ship.port.call</field>
+        <field name="view_mode">list,form</field>
+        <field name="views" eval="[(False, 'list'), (False, 'form')]"/>
+    </record>
+
+</odoo>

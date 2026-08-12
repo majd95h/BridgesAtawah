@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_eh_log_freight_job_form_carrier" model="ir.ui.view">
+        <field name="name">eh.log.freight.job.form.carrier</field>
+        <field name="model">eh.log.freight.job</field>
+        <field name="inherit_id" ref="eh_log_freight.view_eh_log_freight_job_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button name="action_open_rate_shop"
+                        type="object"
+                        class="oe_stat_button"
+                        icon="fa-search-dollar">
+                    <span class="o_stat_text">Rate Shop</span>
+                </button>
+                <button name="action_view_carrier_bookings"
+                        type="object"
+                        class="oe_stat_button"
+                        icon="fa-ship">
+                    <field string="Bookings" name="carrier_booking_count" widget="statinfo"/>
+                </button>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

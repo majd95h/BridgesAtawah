@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="0">
+    <data>
+
+        <record id="rule_eh_log_warehouse_facility_company" model="ir.rule">
+            <field name="name">eh.log.warehouse.facility: company isolation</field>
+            <field name="model_id" ref="model_eh_log_warehouse_facility"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+            <field name="global" eval="True"/>
+        </record>
+
+        <record id="rule_eh_log_warehouse_zone_company" model="ir.rule">
+            <field name="name">eh.log.warehouse.zone: company isolation</field>
+            <field name="model_id" ref="model_eh_log_warehouse_zone"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+            <field name="global" eval="True"/>
+        </record>
+
+        <record id="rule_eh_log_warehouse_location_company" model="ir.rule">
+            <field name="name">eh.log.warehouse.location: company isolation</field>
+            <field name="model_id" ref="model_eh_log_warehouse_location"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+            <field name="global" eval="True"/>
+        </record>
+
+        <record id="rule_eh_log_warehouse_client_company" model="ir.rule">
+            <field name="name">eh.log.warehouse.client: company isolation</field>
+            <field name="model_id" ref="model_eh_log_warehouse_client"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+            <field name="global" eval="True"/>
+        </record>
+
+        <record id="rule_eh_log_warehouse_rate_card_company" model="ir.rule">
+            <field name="name">eh.log.warehouse.rate.card: company isolation</field>
+            <field name="model_id" ref="model_eh_log_warehouse_rate_card"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+            <field name="global" eval="True"/>
+        </record>
+
+        <record id="rule_eh_log_warehouse_receipt_company" model="ir.rule">
+            <field name="name">eh.log.warehouse.receipt: company isolation</field>
+            <field name="model_id" ref="model_eh_log_warehouse_receipt"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+            <field name="global" eval="True"/>
+        </record>
+
+        <record id="rule_eh_log_warehouse_pick_company" model="ir.rule">
+            <field name="name">eh.log.warehouse.pick: company isolation</field>
+            <field name="model_id" ref="model_eh_log_warehouse_pick"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+            <field name="global" eval="True"/>
+        </record>
+
+        <record id="rule_eh_log_warehouse_movement_company" model="ir.rule">
+            <field name="name">eh.log.warehouse.movement: company isolation</field>
+            <field name="model_id" ref="model_eh_log_warehouse_movement"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+            <field name="global" eval="True"/>
+        </record>
+
+        <record id="rule_eh_log_warehouse_snapshot_company" model="ir.rule">
+            <field name="name">eh.log.warehouse.snapshot: company isolation</field>
+            <field name="model_id" ref="model_eh_log_warehouse_snapshot"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+            <field name="global" eval="True"/>
+        </record>
+
+        <record id="rule_eh_log_warehouse_billing_run_company" model="ir.rule">
+            <field name="name">eh.log.warehouse.billing.run: company isolation</field>
+            <field name="model_id" ref="model_eh_log_warehouse_billing_run"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+            <field name="global" eval="True"/>
+        </record>
+
+    </data>
+</odoo>

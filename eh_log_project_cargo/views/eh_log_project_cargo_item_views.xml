@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_eh_log_project_cargo_item_list" model="ir.ui.view">
+        <field name="name">eh.log.project.cargo.item.list</field>
+        <field name="model">eh.log.project.cargo.item</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="job_id"/>
+                <field name="name"/>
+                <field name="quantity"/>
+                <field name="length_m"/>
+                <field name="width_m"/>
+                <field name="height_m"/>
+                <field name="weight_t"/>
+                <field name="is_oversized"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_eh_log_project_cargo_item_form" model="ir.ui.view">
+        <field name="name">eh.log.project.cargo.item.form</field>
+        <field name="model">eh.log.project.cargo.item</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="job_id"/>
+                            <field name="sequence"/>
+                            <field name="name"/>
+                            <field name="quantity"/>
+                            <field name="transport_orientation"/>
+                            <field name="is_oversized" readonly="1"/>
+                        </group>
+                        <group string="Dimensions">
+                            <field name="length_m"/>
+                            <field name="width_m"/>
+                            <field name="height_m"/>
+                            <field name="weight_t"/>
+                        </group>
+                    </group>
+                    <group string="Centre of Gravity">
+                        <group>
+                            <field name="cog_x_m"/>
+                            <field name="cog_y_m"/>
+                            <field name="cog_z_m"/>
+                        </group>
+                    </group>
+                    <group string="Lift Points">
+                        <field name="lift_points_notes" nolabel="1"/>
+                    </group>
+                    <group string="Packing Notes">
+                        <field name="packing_notes" nolabel="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_eh_log_project_cargo_item" model="ir.actions.act_window">
+        <field name="name">Cargo Items</field>
+        <field name="res_model">eh.log.project.cargo.item</field>
+        <field name="view_mode">list,form</field>
+        <field name="views" eval="[(False, 'list'), (False, 'form')]"/>
+    </record>
+
+</odoo>

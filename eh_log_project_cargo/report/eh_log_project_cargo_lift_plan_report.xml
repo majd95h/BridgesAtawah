@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="action_report_lift_plan" model="ir.actions.report">
+        <field name="name">Lift Plan</field>
+        <field name="model">eh.log.project.cargo.job</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">eh_log_project_cargo.report_lift_plan_document</field>
+        <field name="report_file">eh_log_project_cargo.report_lift_plan_document</field>
+        <field name="binding_model_id" ref="model_eh_log_project_cargo_job"/>
+        <field name="binding_type">report</field>
+        <field name="paperformat_id" ref="eh_log_base.paperformat_eh_log_portrait"/>
+    </record>
+
+    <template id="report_lift_plan_document">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="job">
+                <t t-call="eh_log_base.eh_log_clean_layout">
+                    <t t-set="company" t-value="job.company_id"/>
+                    <t t-set="report_type" t-value="'pdf'"/>
+                    <t t-call="eh_log_base.eh_log_report_styles"/>
+                    <div class="page eh_pdf_page">
+                        <t t-call="eh_log_base.eh_log_report_header">
+                            <t t-set="title" t-value="'Lift Plan'"/>
+                            <t t-set="company" t-value="job.company_id"/>
+                        </t>
+
+                        <div class="eh_pdf_meta">
+                            <span><strong>Reference:</strong> <t t-out="job.name"/></span>
+                            <span><strong>Customer:</strong> <t t-out="job.customer_partner_id.display_name"/></span>
+                        </div>
+
+                        <h2 class="eh_pdf_subtitle">Convoys</h2>
+                        <table class="eh_pdf_table">
+                            <thead>
+                                <tr>
+                                    <th>Convoy</th>
+                                    <th>Departure</th>
+                                    <th>Arrival</th>
+                                    <th>Vehicles</th>
+                                    <th>Crane</th>
+                                    <th>Escort</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr t-foreach="job.convoy_ids" t-as="convoy">
+                                    <td><t t-out="convoy.name"/></td>
+                                    <td><t t-out="convoy.scheduled_departure and convoy.scheduled_departure.strftime('%Y-%m-%d %H:%M') or ''"/></td>
+                                    <td><t t-out="convoy.scheduled_arrival and convoy.scheduled_arrival.strftime('%Y-%m-%d %H:%M') or ''"/></td>
+                                    <td><t t-out="convoy.vehicle_count"/></td>
+                                    <td><t t-out="convoy.has_lifting_equipment and 'Yes' or 'No'"/></td>
+                                    <td><t t-out="convoy.has_escort_vehicle and 'Yes' or 'No'"/></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2 class="eh_pdf_subtitle">Vehicle Assignments</h2>
+                        <t t-foreach="job.convoy_ids" t-as="convoy">
+                            <h3 class="eh_pdf_subtitle">
+                                <t t-out="convoy.name"/>
+                            </h3>
+                            <table class="eh_pdf_table">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Equipment</th>
+                                        <th>Type</th>
+                                        <th>Role</th>
+                                        <th>Driver</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr t-foreach="convoy.vehicle_ids.sorted(lambda v: v.sequence)" t-as="vehicle">
+                                        <td><t t-out="vehicle.sequence"/></td>
+                                        <td><t t-out="vehicle.equipment_id.code"/> - <t t-out="vehicle.equipment_id.name"/></td>
+                                        <td><t t-out="vehicle.equipment_id.equipment_type"/></td>
+                                        <td><t t-out="vehicle.role"/></td>
+                                        <td><t t-out="vehicle.driver_partner_id.display_name or ''"/></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </t>
+
+                        <h2 class="eh_pdf_subtitle">Lift Study Notes</h2>
+                        <div t-out="job.lift_study_notes"/>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>

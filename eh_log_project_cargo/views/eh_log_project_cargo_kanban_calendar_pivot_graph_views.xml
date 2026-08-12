@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_eh_log_project_cargo_job_kanban" model="ir.ui.view">
+        <field name="name">eh.log.project.cargo.job.kanban</field>
+        <field name="model">eh.log.project.cargo.job</field>
+        <field name="arch" type="xml">
+            <kanban default_group_by="state" class="o_kanban_small_column">
+                <field name="name"/>
+                <field name="customer_partner_id"/>
+                <field name="project_name"/>
+                <field name="state"/>
+                <field name="item_count"/>
+                <field name="has_oversized_item"/>
+                <field name="convoy_count"/>
+                <field name="permit_count"/>
+                <templates>
+                    <t t-name="card">
+                        <div class="oe_kanban_global_click">
+                            <strong><field name="name"/></strong>
+                            <span t-if="record.has_oversized_item.raw_value" class="badge text-bg-warning float-end">OOG</span>
+                            <div class="text-muted small"><field name="customer_partner_id"/></div>
+                            <div t-if="record.project_name.raw_value"><i class="fa fa-folder me-1" title="Project"/><field name="project_name"/></div>
+                            <div class="o_kanban_record_bottom mt-2 small text-muted">
+                                <div class="oe_kanban_bottom_left">
+                                    <i class="fa fa-cube me-1" title="Items"/><field name="item_count"/> items
+                                </div>
+                                <div class="oe_kanban_bottom_right">
+                                    <field name="convoy_count"/> convoys / <field name="permit_count"/> permits
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="view_eh_log_project_cargo_job_calendar" model="ir.ui.view">
+        <field name="name">eh.log.project.cargo.job.calendar</field>
+        <field name="model">eh.log.project.cargo.job</field>
+        <field name="arch" type="xml">
+            <calendar string="Project Cargo Jobs"
+                      date_start="target_start_date"
+                      date_stop="target_end_date"
+                      color="state"
+                      mode="month">
+                <field name="name"/>
+                <field name="customer_partner_id"/>
+                <field name="project_name"/>
+            </calendar>
+        </field>
+    </record>
+
+    <record id="view_eh_log_project_cargo_permit_kanban" model="ir.ui.view">
+        <field name="name">eh.log.project.cargo.permit.kanban</field>
+        <field name="model">eh.log.project.cargo.permit</field>
+        <field name="arch" type="xml">
+            <kanban default_group_by="state" class="o_kanban_small_column">
+                <field name="name"/>
+                <field name="job_id"/>
+                <field name="authority"/>
+                <field name="valid_until"/>
+                <field name="days_until_expiry"/>
+                <field name="state"/>
+                <templates>
+                    <t t-name="card">
+                        <div class="oe_kanban_global_click">
+                            <strong><field name="name"/></strong>
+                            <div class="text-muted small"><field name="job_id"/></div>
+                            <div><span class="badge text-bg-info"><field name="authority"/></span></div>
+                            <div class="o_kanban_record_bottom mt-2 small">
+                                <div class="oe_kanban_bottom_left">Until <field name="valid_until" widget="date"/></div>
+                                <div class="oe_kanban_bottom_right">
+                                    <span t-att-class="record.days_until_expiry.raw_value &lt; 7 and 'badge text-bg-danger' or 'badge text-bg-success'">
+                                        <field name="days_until_expiry"/> d
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="view_eh_log_project_cargo_permit_calendar" model="ir.ui.view">
+        <field name="name">eh.log.project.cargo.permit.calendar</field>
+        <field name="model">eh.log.project.cargo.permit</field>
+        <field name="arch" type="xml">
+            <calendar string="Permit Validity"
+                      date_start="valid_from"
+                      date_stop="valid_until"
+                      color="state"
+                      mode="month">
+                <field name="name"/>
+                <field name="job_id"/>
+                <field name="authority"/>
+            </calendar>
+        </field>
+    </record>
+
+    <record id="view_eh_log_project_cargo_convoy_kanban" model="ir.ui.view">
+        <field name="name">eh.log.project.cargo.convoy.kanban</field>
+        <field name="model">eh.log.project.cargo.convoy</field>
+        <field name="arch" type="xml">
+            <kanban default_group_by="state" class="o_kanban_small_column">
+                <field name="name"/>
+                <field name="job_id"/>
+                <field name="scheduled_departure"/>
+                <field name="vehicle_count"/>
+                <field name="state"/>
+                <templates>
+                    <t t-name="card">
+                        <div class="oe_kanban_global_click">
+                            <strong><field name="name"/></strong>
+                            <div class="text-muted small"><field name="job_id"/></div>
+                            <div class="o_kanban_record_bottom mt-2 small text-muted">
+                                <div class="oe_kanban_bottom_left">
+                                    Dep: <field name="scheduled_departure" widget="date"/>
+                                </div>
+                                <div class="oe_kanban_bottom_right">
+                                    <field name="vehicle_count"/> veh.
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="view_eh_log_project_cargo_convoy_calendar" model="ir.ui.view">
+        <field name="name">eh.log.project.cargo.convoy.calendar</field>
+        <field name="model">eh.log.project.cargo.convoy</field>
+        <field name="arch" type="xml">
+            <calendar string="Convoys"
+                      date_start="scheduled_departure"
+                      date_stop="scheduled_arrival"
+                      color="state"
+                      mode="week">
+                <field name="name"/>
+                <field name="job_id"/>
+            </calendar>
+        </field>
+    </record>
+
+</odoo>

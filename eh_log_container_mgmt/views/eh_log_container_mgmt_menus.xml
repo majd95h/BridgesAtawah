@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <menuitem id="menu_eh_log_container_mgmt_movements"
+                  name="Container Movements"
+                  parent="eh_log_base.menu_eh_log_operations"
+                  sequence="100"
+                  action="action_eh_log_container_mgmt_movement"
+                  groups="eh_log_base.group_eh_log_user"/>
+
+        <menuitem id="menu_eh_log_container_mgmt_work_orders"
+                  name="Container M&amp;R"
+                  parent="eh_log_base.menu_eh_log_operations"
+                  sequence="110"
+                  action="action_eh_log_container_mgmt_work_order"
+                  groups="eh_log_base.group_eh_log_user"/>
+
+        <menuitem id="menu_eh_log_container_mgmt_lease_contracts"
+                  name="Lease Contracts"
+                  parent="eh_log_base.menu_eh_log_operations"
+                  sequence="120"
+                  action="action_eh_log_container_mgmt_lease_contract"
+                  groups="eh_log_base.group_eh_log_user"/>
+
+        <menuitem id="menu_eh_log_container_mgmt_depots"
+                  name="Container Depots"
+                  parent="eh_log_base.menu_eh_log_master_data"
+                  sequence="230"
+                  action="action_eh_log_container_mgmt_depot"
+                  groups="eh_log_base.group_eh_log_manager"/>
+
+    </data>
+</odoo>

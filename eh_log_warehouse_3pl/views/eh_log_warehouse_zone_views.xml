@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_eh_log_warehouse_zone_list" model="ir.ui.view">
+        <field name="name">eh.log.warehouse.zone.list</field>
+        <field name="model">eh.log.warehouse.zone</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="facility_id"/>
+                <field name="code"/>
+                <field name="name"/>
+                <field name="purpose"/>
+                <field name="location_count"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_eh_log_warehouse_zone_form" model="ir.ui.view">
+        <field name="name">eh.log.warehouse.zone.form</field>
+        <field name="model">eh.log.warehouse.zone</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_locations"
+                                type="object"
+                                class="oe_stat_button"
+                                icon="fa-cubes">
+                            <field name="location_count" widget="statinfo" string="Locations"/>
+                        </button>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="facility_id"/>
+                            <field name="code"/>
+                            <field name="name"/>
+                        </group>
+                        <group>
+                            <field name="purpose"/>
+                            <field name="active" widget="boolean_toggle"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Locations" name="locations">
+                            <field name="location_ids">
+                                <list editable="bottom">
+                                    <field name="code"/>
+                                    <field name="name"/>
+                                    <field name="pallet_capacity"/>
+                                    <field name="pallets_on_hand"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_eh_log_warehouse_zone" model="ir.actions.act_window">
+        <field name="name">Zones</field>
+        <field name="res_model">eh.log.warehouse.zone</field>
+        <field name="view_mode">list,form</field>
+        <field name="views" eval="[(False, 'list'), (False, 'form')]"/>
+    </record>
+
+</odoo>

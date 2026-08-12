@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_eh_log_ship_port_call_kanban" model="ir.ui.view">
+        <field name="name">eh.log.ship.port.call.kanban</field>
+        <field name="model">eh.log.ship.port.call</field>
+        <field name="arch" type="xml">
+            <kanban default_group_by="state" class="o_kanban_small_column">
+                <field name="name"/>
+                <field name="vessel_id"/>
+                <field name="port_partner_id"/>
+                <field name="berth_id"/>
+                <field name="eta_at"/>
+                <field name="state"/>
+                <field name="sof_event_count"/>
+                <templates>
+                    <t t-name="card">
+                        <div class="oe_kanban_global_click">
+                            <strong><field name="name"/></strong>
+                            <div class="text-muted small"><field name="vessel_id"/></div>
+                            <div><i class="fa fa-anchor me-1" title="Port"/><field name="port_partner_id"/></div>
+                            <div t-if="record.berth_id.raw_value" class="small text-muted">
+                                Berth <field name="berth_id"/>
+                            </div>
+                            <div class="o_kanban_record_bottom mt-2 small text-muted">
+                                <div class="oe_kanban_bottom_left">ETA: <field name="eta_at" widget="date"/></div>
+                                <div class="oe_kanban_bottom_right"><field name="sof_event_count"/> SOF</div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="view_eh_log_ship_port_call_calendar" model="ir.ui.view">
+        <field name="name">eh.log.ship.port.call.calendar</field>
+        <field name="model">eh.log.ship.port.call</field>
+        <field name="arch" type="xml">
+            <calendar string="Port Calls" date_start="eta_at" date_stop="sailed_at" color="state" mode="month">
+                <field name="name"/>
+                <field name="vessel_id"/>
+                <field name="port_partner_id"/>
+            </calendar>
+        </field>
+    </record>
+
+    <record id="view_eh_log_ship_port_call_pivot" model="ir.ui.view">
+        <field name="name">eh.log.ship.port.call.pivot</field>
+        <field name="model">eh.log.ship.port.call</field>
+        <field name="arch" type="xml">
+            <pivot string="Port Call Volume" sample="1">
+                <field name="port_partner_id" type="row"/>
+                <field name="state" type="col"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="view_eh_log_ship_disbursement_account_kanban" model="ir.ui.view">
+        <field name="name">eh.log.ship.disbursement.account.kanban</field>
+        <field name="model">eh.log.ship.disbursement.account</field>
+        <field name="arch" type="xml">
+            <kanban default_group_by="state" class="o_kanban_small_column">
+                <field name="name"/>
+                <field name="vessel_id"/>
+                <field name="principal_partner_id"/>
+                <field name="estimate_total"/>
+                <field name="actual_total"/>
+                <field name="variance"/>
+                <field name="currency_id"/>
+                <field name="state"/>
+                <templates>
+                    <t t-name="card">
+                        <div class="oe_kanban_global_click">
+                            <strong><field name="name"/></strong>
+                            <div class="text-muted small"><field name="vessel_id"/></div>
+                            <div><field name="principal_partner_id"/></div>
+                            <div class="o_kanban_record_bottom mt-2">
+                                <div class="oe_kanban_bottom_left small text-muted">
+                                    Est: <field name="estimate_total" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                                </div>
+                                <div class="oe_kanban_bottom_right">
+                                    <span t-att-class="record.variance.raw_value > 0 and 'badge text-bg-warning' or 'badge text-bg-success'">
+                                        Var <field name="variance" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="view_eh_log_ship_disbursement_account_pivot" model="ir.ui.view">
+        <field name="name">eh.log.ship.disbursement.account.pivot</field>
+        <field name="model">eh.log.ship.disbursement.account</field>
+        <field name="arch" type="xml">
+            <pivot string="DA Variance Analysis" sample="1">
+                <field name="principal_partner_id" type="row"/>
+                <field name="state" type="col"/>
+                <field name="estimate_total" type="measure"/>
+                <field name="actual_total" type="measure"/>
+                <field name="variance" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="view_eh_log_ship_disbursement_account_graph" model="ir.ui.view">
+        <field name="name">eh.log.ship.disbursement.account.graph</field>
+        <field name="model">eh.log.ship.disbursement.account</field>
+        <field name="arch" type="xml">
+            <graph string="DA Totals" sample="1" type="bar">
+                <field name="principal_partner_id"/>
+                <field name="actual_total" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
+</odoo>

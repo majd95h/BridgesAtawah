@@ -1,0 +1,2041 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* eh_log_warehouse_3pl
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-01 04:34+0000\n"
+"PO-Revision-Date: 2026-07-01 04:34+0000\n"
+"Last-Translator: ERP Heritage <info@erpheritage.com.au>\n"
+"Language-Team: Thai\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_billing_run.py:0
+msgid "%(service)s (%(period_start)s to %(period_end)s)"
+msgstr "%(service)s (%(period_start)s ถึง %(period_end)s)"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model,name:eh_log_warehouse_3pl.model_eh_log_warehouse_client
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__client_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__client_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__client_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__client_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_snapshot__client_id
+msgid "3PL Client"
+msgstr "ลูกค้า 3PL"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.actions.act_window,name:eh_log_warehouse_3pl.action_eh_log_warehouse_client
+#: model:ir.ui.menu,name:eh_log_warehouse_3pl.menu_eh_log_warehouse_clients
+msgid "3PL Clients"
+msgstr "ลูกค้า 3PL"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model,name:eh_log_warehouse_3pl.model_eh_log_warehouse_rate_card
+msgid "3PL Rate Card"
+msgstr "ตารางอัตราค่าบริการ 3PL"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model,name:eh_log_warehouse_3pl.model_eh_log_warehouse_rate_line
+msgid "3PL Rate Line"
+msgstr "รายการอัตรา 3PL"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_grn_document
+msgid "<strong>Arrived:</strong>"
+msgstr "<strong>มาถึง:</strong>"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_grn_document
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_pick_list_document
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_storage_statement_document
+msgid "<strong>Client:</strong>"
+msgstr "<strong>ลูกค้า:</strong>"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_pick_list_document
+msgid "<strong>Customer:</strong>"
+msgstr "<strong>ลูกค้า:</strong>"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_grn_document
+msgid "<strong>Expected:</strong>"
+msgstr "<strong>คาดว่า:</strong>"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_grn_document
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_pick_list_document
+msgid "<strong>Facility:</strong>"
+msgstr "<strong>สถานที่:</strong>"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_storage_statement_document
+msgid "<strong>Period:</strong>"
+msgstr "<strong>ช่วงเวลา:</strong>"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_pick_list_document
+msgid "<strong>Planned:</strong>"
+msgstr "<strong>ที่วางแผนไว้:</strong>"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_storage_statement_document
+msgid "<strong>Rate Card:</strong>"
+msgstr "<strong>ตารางอัตราค่าบริการ:</strong>"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_grn_document
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_pick_list_document
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_storage_statement_document
+msgid "<strong>Reference:</strong>"
+msgstr "<strong>อ้างอิง:</strong>"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_grn_document
+msgid "<strong>Supplier:</strong>"
+msgstr "<strong>ผู้จัดจำหน่าย:</strong>"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_storage_statement_document
+msgid "<strong>Total</strong>"
+msgstr "<strong>ทั้งหมด</strong>"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__message_needaction
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__message_needaction
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__message_needaction
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__message_needaction
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__message_needaction
+msgid "Action Needed"
+msgstr "จำเป็นต้องดำเนินการ"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__active
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__active
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_location__active
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_card__active
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_zone__active
+msgid "Active"
+msgstr "เปิดใช้งาน"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_client__rate_card_id
+msgid ""
+"Active rate card. Changing the rate card affects bills raised after the "
+"change date; historic snapshots and movements stay linked to the rate card "
+"in force at that time through the billing line audit."
+msgstr ""
+"การ์ดอัตราที่ใช้งานอยู่ "
+"การเปลี่ยนการ์ดอัตราจะส่งผลต่อบิลที่ออกหลังวันที่เปลี่ยนแปลง "
+"สแนปช็อตและการเคลื่อนไหวในอดีตจะยังคงเชื่อมโยงกับการ์ดอัตราที่มีผลบังคับใช้ในขณะนั้นผ่านการตรวจสอบบรรทัดการเรียกเก็บเงิน"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__activity_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__activity_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__activity_ids
+msgid "Activities"
+msgstr "กิจกรรม"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__activity_exception_decoration
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__activity_exception_decoration
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "การตกแต่งข้อยกเว้นกิจกรรม"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__activity_state
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__activity_state
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__activity_state
+msgid "Activity State"
+msgstr "สถานะกิจกรรม"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__activity_type_icon
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__activity_type_icon
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "ไอคอนประเภทกิจกรรม"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__address_id
+msgid "Address"
+msgstr "ที่อยู่"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_movement__movement_type__adjustment_in
+msgid "Adjustment In"
+msgstr "การปรับเข้า"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_movement__movement_type__adjustment_out
+msgid "Adjustment Out"
+msgstr "การปรับออก"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_client_form
+msgid "Allowed Facilities"
+msgstr "สถานที่ที่อนุญาต"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_receipt__state__arrived
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search_full
+msgid "Arrived"
+msgstr "มาถึงแล้ว"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__arrived_at
+msgid "Arrived At"
+msgstr "มาถึงเมื่อ"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__message_attachment_count
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__message_attachment_count
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__message_attachment_count
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__message_attachment_count
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__message_attachment_count
+msgid "Attachment Count"
+msgstr "จำนวนสิ่งที่แนบมา"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_client__storage_charging_basis__snapshot_average
+msgid "Average of Daily Snapshots"
+msgstr "ค่าเฉลี่ยของสแนปช็อตรายวัน"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_billing_run_pivot
+msgid "Billing Analysis"
+msgstr "การวิเคราะห์การเรียกเก็บเงิน"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__billing_day
+msgid "Billing Day"
+msgstr "วันเรียกเก็บเงิน"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_line__run_id
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_billing_run_form
+msgid "Billing Run"
+msgstr "รอบการเรียกเก็บเงิน"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.actions.act_window,name:eh_log_warehouse_3pl.action_eh_log_warehouse_billing_run
+#: model:ir.ui.menu,name:eh_log_warehouse_3pl.menu_eh_log_warehouse_billing_runs
+msgid "Billing Runs"
+msgstr "รอบการเรียกเก็บเงิน"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_client__partner_id
+msgid ""
+"Billing and shipping partner. The monthly billing run raises a sale order "
+"against this partner."
+msgstr ""
+"พันธมิตรด้านการเรียกเก็บเงินและการจัดส่ง "
+"รอบการเรียกเก็บเงินรายเดือนจะสร้างใบสั่งขายสำหรับพันธมิตรรายนี้"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_billing_run_graph
+msgid "Billing by Client"
+msgstr "การเรียกเก็บเงินตามลูกค้า"
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_billing_run.py:0
+msgid "Billing run %(name)s cannot move from %(from)s to %(to)s."
+msgstr ""
+"รอบการเรียกเก็บเงิน %(name)s ไม่สามารถเปลี่ยนจาก %(from)s เป็น %(to)s ได้"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_facility__customs_status__bonded
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_zone__purpose__bonded
+msgid "Bonded"
+msgstr "อยู่ในเขตทัณฑ์บน"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_billing_run_form
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_form
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_form
+msgid "Cancel"
+msgstr "ยกเลิก"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_billing_run__state__cancelled
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_pick__state__cancelled
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_receipt__state__cancelled
+msgid "Cancelled"
+msgstr "ยกเลิก"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_storage_statement_document
+msgid "Charges"
+msgstr "ค่าธรรมเนียม"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_pick_list_document
+msgid "Checker"
+msgstr "ผู้ตรวจสอบ"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_billing_run_search_full
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_search_full
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search_full
+msgid "Client"
+msgstr "ลูกค้า"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.constraint,message:eh_log_warehouse_3pl.constraint_eh_log_warehouse_client_client_code_unique
+msgid "Client code must be unique per company."
+msgstr "รหัสไคลเอนต์ต้องไม่ซ้ำกันในแต่ละบริษัท"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_form
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_form
+msgid "Close"
+msgstr "ปิด"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_pick__state__closed
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_receipt__state__closed
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_search_full
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search_full
+msgid "Closed"
+msgstr "ปิดแล้ว"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__closed_at
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__closed_at
+msgid "Closed At"
+msgstr "ปิดเมื่อ"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__code
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__code
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_location__code
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_card__code
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_zone__code
+msgid "Code"
+msgstr "โค้ด"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_line__company_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__company_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__company_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__company_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_location__company_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__company_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__company_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick_line__company_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_card__company_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_line__company_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__company_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt_line__company_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_snapshot__company_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_zone__company_id
+msgid "Company"
+msgstr "บริษัท"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_form
+msgid "Complete Putaway"
+msgstr "ทำการจัดเก็บให้เสร็จสมบูรณ์"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_location__full_code
+msgid ""
+"Composite location reference of facility code, zone code, and location code "
+"joined by slashes. Printed on labels and pick lists."
+msgstr ""
+"การอ้างอิงตำแหน่งแบบรวมของรหัสสถานที่ รหัสโซน และรหัสตำแหน่ง "
+"เชื่อมด้วยเครื่องหมายทับ พิมพ์บนฉลากและรายการหยิบสินค้า"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_billing_run_form
+msgid "Compute Charges"
+msgstr "คำนวณค่าธรรมเนียม"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_billing_run__state__computed
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_billing_run_search_full
+msgid "Computed"
+msgstr "คำนวณแล้ว"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_line__create_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__create_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__create_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__create_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_location__create_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__create_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__create_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick_line__create_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_card__create_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_line__create_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__create_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt_line__create_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_snapshot__create_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_zone__create_uid
+msgid "Created by"
+msgstr "สร้างโดย"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_line__create_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__create_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__create_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__create_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_location__create_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__create_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__create_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick_line__create_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_card__create_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_line__create_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__create_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt_line__create_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_snapshot__create_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_zone__create_date
+msgid "Created on"
+msgstr "สร้างเมื่อ"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_line__currency_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__currency_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__currency_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_card__currency_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_line__currency_id
+msgid "Currency"
+msgstr "สกุลเงิน"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_search_full
+msgid "Customer"
+msgstr "ลูกค้า"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__customer_reference
+msgid "Customer Reference"
+msgstr "อ้างอิงลูกค้า"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__customs_status
+msgid "Customs Status"
+msgstr "สถานะศุลกากร"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__expected_date
+msgid ""
+"Date the receipt is expected to arrive. Drives the dock scheduling list view"
+" and the late-arrival alerts."
+msgstr ""
+"วันที่ที่คาดว่าจะได้รับสินค้า "
+"ขับเคลื่อนมุมมองรายการการจัดตารางท่าเทียบและการแจ้งเตือนการมาถึงล่าช้า"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_client__billing_day
+msgid ""
+"Day of the month the periodic billing run targets. The run cron checks this "
+"field; clients on different days let billing load be spread across the "
+"month."
+msgstr ""
+"วันของเดือนที่รอบการออกบิลตามงวดกำหนดเป้าหมาย งาน cron "
+"ของรอบจะตรวจสอบฟิลด์นี้ "
+"การจัดลูกค้าไว้ในวันที่ต่างกันช่วยกระจายภาระการออกบิลตลอดทั้งเดือน"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt_line__destination_location_id
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_grn_document
+msgid "Destination"
+msgstr "ปลายทาง"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__destination_location_id
+msgid "Destination Location"
+msgstr "ตำแหน่งปลายทาง"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_line__display_name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__display_name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__display_name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__display_name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_location__display_name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__display_name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__display_name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick_line__display_name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_card__display_name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_line__display_name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__display_name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt_line__display_name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_snapshot__display_name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_zone__display_name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_sale_order__display_name
+msgid "Display Name"
+msgstr "แสดงชื่อ"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_facility__customs_status__domestic
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_zone__purpose__domestic
+msgid "Domestic"
+msgstr "ภายในประเทศ"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_billing_run__state__draft
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_billing_run_search_full
+msgid "Draft"
+msgstr "ร่าง"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_grn_document
+msgid "Driver"
+msgstr "คนขับ"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_location__purpose
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_zone__purpose
+msgid ""
+"Drives movement validation. Bonded zones require a customs declaration on "
+"inbound; free zones require a domestic-customs entry on outbound to a non-"
+"free destination."
+msgstr ""
+"ควบคุมการตรวจสอบการเคลื่อนย้าย เขตทัณฑ์บนต้องมีใบขนสินค้าขาเข้า; "
+"เขตปลอดอากรต้องมีรายการศุลกากรภายในประเทศเมื่อขาออกไปยังปลายทางที่ไม่ใช่เขตปลอดอากร"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.constraint,message:eh_log_warehouse_3pl.constraint_eh_log_warehouse_rate_line_rate_line_unique
+msgid "Duplicate rate line for the same service and product."
+msgstr "บรรทัดอัตราซ้ำสำหรับบริการและผลิตภัณฑ์เดียวกัน"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.constraint,message:eh_log_warehouse_3pl.constraint_eh_log_warehouse_snapshot_snapshot_unique
+msgid "Duplicate snapshot for the same date / client / location."
+msgstr "สแนปช็อตซ้ำสำหรับวันที่ / ลูกค้า / ตำแหน่งเดียวกัน"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_receipt__state__expected
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search_full
+msgid "Expected"
+msgstr "คาดหวัง"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__expected_date
+msgid "Expected Date"
+msgstr "วันที่คาดหวัง"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search_full
+msgid "Expected Day"
+msgstr "วันที่คาดหวัง"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search_full
+msgid "Expected Today"
+msgstr "คาดว่าวันนี้"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_grn_document
+msgid "Expiry"
+msgstr "การหมดอายุ"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt_line__expiry_date
+msgid "Expiry Date"
+msgstr "วันหมดอายุ"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.actions.act_window,name:eh_log_warehouse_3pl.action_eh_log_warehouse_facility
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__facility_ids
+#: model:ir.ui.menu,name:eh_log_warehouse_3pl.menu_eh_log_warehouse_facilities
+msgid "Facilities"
+msgstr "สถานที่"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_client__facility_ids
+msgid ""
+"Facilities the client may store in. Receipts and picks are restricted to "
+"this set."
+msgstr ""
+"สถานที่ที่ลูกค้าสามารถจัดเก็บได้ "
+"การรับสินค้าและการหยิบสินค้าจำกัดอยู่ในชุดนี้"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_location__facility_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__facility_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__facility_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__facility_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_snapshot__facility_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_zone__facility_id
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_search_full
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search_full
+msgid "Facility"
+msgstr "สถานที่"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.constraint,message:eh_log_warehouse_3pl.constraint_eh_log_warehouse_facility_facility_code_unique
+msgid "Facility code must be unique per company."
+msgstr "รหัสสถานที่ต้องไม่ซ้ำกันในแต่ละบริษัท"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_client__storage_charging_basis__snapshot_first_of_month
+msgid "First-of-Month Snapshot"
+msgstr "สแนปช็อตต้นเดือน"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__message_follower_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__message_follower_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__message_follower_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__message_follower_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__message_follower_ids
+msgid "Followers"
+msgstr "ผู้ติดตาม"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__message_partner_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__message_partner_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__message_partner_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__message_partner_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "ผู้ติดตาม (พาร์ทเนอร์)"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__activity_type_icon
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__activity_type_icon
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "ไอคอนแบบฟอนต์ที่ยอดเยี่ยมเช่น fa-tasks"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_facility__customs_status__free_zone
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_zone__purpose__free
+msgid "Free Zone"
+msgstr "เขตปลอดอากร"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__freight_job_id
+msgid "Freight Job"
+msgstr "งานขนส่งสินค้า"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_location__full_code
+msgid "Full Code"
+msgstr "รหัสเต็ม"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__sale_order_id
+msgid "Generated Sale Order"
+msgstr "ใบสั่งขายที่สร้างขึ้น"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.actions.report,name:eh_log_warehouse_3pl.action_report_eh_log_warehouse_grn
+msgid "Goods Receipt Note"
+msgstr "ใบรับสินค้า"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_billing_line__service_type__handling_in
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_rate_line__service_type__handling_in
+msgid "Handling In (per pallet)"
+msgstr "การจัดการขาเข้า (ต่อพาเลท)"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_billing_line__service_type__handling_out
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_rate_line__service_type__handling_out
+msgid "Handling Out (per pallet)"
+msgstr "การจัดการขาออก (ต่อพาเลท)"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__has_message
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__has_message
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__has_message
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__has_message
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__has_message
+msgid "Has Message"
+msgstr "มีข้อความ"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_client__storage_charging_basis
+msgid ""
+"How storage charges are derived from the snapshot history. Average is the "
+"industry default; peak is a punitive option used for surge-pricing "
+"contracts."
+msgstr ""
+"วิธีคำนวณค่าจัดเก็บจากประวัติสแนปช็อต ค่าเฉลี่ยเป็นค่าเริ่มต้นในอุตสาหกรรม; "
+"ค่าสูงสุดเป็นตัวเลือกเชิงลงโทษที่ใช้กับสัญญาการกำหนดราคาช่วงพีค"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_line__id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_location__id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick_line__id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_card__id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_line__id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt_line__id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_snapshot__id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_zone__id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_sale_order__id
+msgid "ID"
+msgstr "ไอดี"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__activity_exception_icon
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__activity_exception_icon
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__activity_exception_icon
+msgid "Icon"
+msgstr "ไอคอน"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__activity_exception_icon
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__activity_exception_icon
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "ไอคอนเพื่อระบุการยกเว้นกิจกรรม"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__message_needaction
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_client__message_needaction
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__message_needaction
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__message_needaction
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "ถ้าเลือก ข้อความใหม่จะต้องการความสนใจจากคุณ"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__message_has_error
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__message_has_sms_error
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_client__message_has_error
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_client__message_has_sms_error
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__message_has_error
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__message_has_sms_error
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__message_has_error
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__message_has_sms_error
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__message_has_error
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "ถ้าเลือก ข้อความบางข้อความมีข้อผิดพลาดในการส่ง"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_location__inbound_movement_ids
+msgid "Inbound Movements"
+msgstr "การเคลื่อนไหวขาเข้า"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_receipt__state__inspecting
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search_full
+msgid "Inspecting"
+msgstr "กำลังตรวจสอบ"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_movement__movement_type__transfer
+msgid "Internal Transfer"
+msgstr "โอนย้ายภายใน"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__message_is_follower
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__message_is_follower
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__message_is_follower
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__message_is_follower
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__message_is_follower
+msgid "Is Follower"
+msgstr "เป็นผู้ติดตาม"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_line__write_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__write_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__write_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__write_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_location__write_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__write_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__write_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick_line__write_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_card__write_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_line__write_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__write_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt_line__write_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_snapshot__write_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_zone__write_uid
+msgid "Last Updated by"
+msgstr "อัปเดตครั้งล่าสุดโดย"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_line__write_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__write_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__write_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__write_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_location__write_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__write_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__write_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick_line__write_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_card__write_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_line__write_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__write_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt_line__write_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_snapshot__write_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_zone__write_date
+msgid "Last Updated on"
+msgstr "อัปเดตครั้งล่าสุดเมื่อ"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__line_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__line_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_card__line_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__line_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_grn_document
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_pick_list_document
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_billing_run_form
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_form
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_rate_card_form
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_form
+msgid "Lines"
+msgstr "รายการ"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__freight_job_id
+msgid ""
+"Linked freight job when the receipt is the destination of an inbound "
+"shipment. Optional; standalone receipts for direct supplier deliveries leave"
+" it empty."
+msgstr ""
+"งานขนส่งที่เชื่อมโยงเมื่อการรับสินค้าเป็นปลายทางของการจัดส่งขาเข้า ไม่บังคับ"
+" การรับสินค้าแบบเดี่ยวสำหรับการจัดส่งตรงจากซัพพลายเออร์จะเว้นว่างไว้"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_location__pallets_on_hand
+msgid ""
+"Live pallet count derived from the movement log. Authoritative for put-away "
+"decisions; storage billing uses the daily snapshot instead."
+msgstr ""
+"จำนวนพาเลทแบบเรียลไทม์ที่ได้จากบันทึกการเคลื่อนย้าย "
+"ใช้เป็นข้อมูลอ้างอิงหลักสำหรับการตัดสินใจจัดเก็บ "
+"ส่วนการเรียกเก็บค่าจัดเก็บจะใช้สแนปช็อตรายวันแทน"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_snapshot__location_id
+msgid "Location"
+msgstr "สถานที่"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.constraint,message:eh_log_warehouse_3pl.constraint_eh_log_warehouse_location_location_code_unique
+msgid "Location code must be unique per zone."
+msgstr "รหัสตำแหน่งต้องไม่ซ้ำกันในแต่ละโซน"
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_zone.py:0
+#: model:ir.actions.act_window,name:eh_log_warehouse_3pl.action_eh_log_warehouse_location
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__location_count
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_zone__location_count
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_zone__location_ids
+#: model:ir.ui.menu,name:eh_log_warehouse_3pl.menu_eh_log_warehouse_locations
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_zone_form
+msgid "Locations"
+msgstr "ตำแหน่ง"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_grn_document
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_pick_list_document
+msgid "Lot"
+msgstr "ล็อต"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__lot_reference
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick_line__lot_reference
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt_line__lot_reference
+msgid "Lot / Batch"
+msgstr "ล็อต / แบตช์"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_form
+msgid "Mark Arrived"
+msgstr "ทำเครื่องหมายว่ามาถึงแล้ว"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_form
+msgid "Mark Packed"
+msgstr "ทำเครื่องหมายว่าบรรจุแล้ว"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_form
+msgid "Mark Shipped"
+msgstr "ทำเครื่องหมายว่าจัดส่งแล้ว"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__message_has_error
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__message_has_error
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__message_has_error
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__message_has_error
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__message_has_error
+msgid "Message Delivery error"
+msgstr "เกิดข้อผิดพลาดในการส่งข้อความ"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__message_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__message_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__message_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__message_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__message_ids
+msgid "Messages"
+msgstr "ข้อความ"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_line__minimum_quantity
+msgid "Minimum Units"
+msgstr "จำนวนหน่วยขั้นต่ำ"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_line__minimum_quantity
+msgid ""
+"Minimum billable quantity for the period. If actual consumption is lower, "
+"the engine bills the minimum."
+msgstr ""
+"ปริมาณขั้นต่ำที่เรียกเก็บเงินได้สำหรับรอบนี้ หากการใช้งานจริงต่ำกว่า "
+"เอนจินจะเรียกเก็บตามค่าขั้นต่ำ"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_billing_line__service_type__monthly_minimum
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_rate_line__service_type__monthly_minimum
+msgid "Monthly Minimum Charge"
+msgstr "ค่าธรรมเนียมขั้นต่ำรายเดือน"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.actions.act_window,name:eh_log_warehouse_3pl.action_eh_log_warehouse_movement
+#: model:ir.ui.menu,name:eh_log_warehouse_3pl.menu_eh_log_warehouse_movements
+msgid "Movements"
+msgstr "การเคลื่อนย้าย"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__my_activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__my_activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "วันครบกำหนดกิจกรรมของฉัน"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_location__name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_card__name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_zone__name
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_grn_document
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_pick_list_document
+msgid "Name"
+msgstr "ชื่อ"
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_billing_run.py:0
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_pick.py:0
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_receipt.py:0
+msgid "New"
+msgstr "ใหม่"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__activity_calendar_event_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__activity_calendar_event_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "ปฏิทินอีเวนต์กิจกรรมถัดไป"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "วันครบกำหนดกิจกรรมถัดไป"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__activity_summary
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__activity_summary
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__activity_summary
+msgid "Next Activity Summary"
+msgstr "สรุปกิจกรรมถัดไป"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__activity_type_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__activity_type_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__activity_type_id
+msgid "Next Activity Type"
+msgstr "ประเภทกิจกรรมถัดไป"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__message_needaction_counter
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__message_needaction_counter
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__message_needaction_counter
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__message_needaction_counter
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__message_needaction_counter
+msgid "Number of Actions"
+msgstr "จํานวนการดําเนินการ"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__message_has_error_counter
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__message_has_error_counter
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__message_has_error_counter
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__message_has_error_counter
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__message_has_error_counter
+msgid "Number of errors"
+msgstr "จํานวนข้อผิดพลาด"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__message_needaction_counter
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_client__message_needaction_counter
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__message_needaction_counter
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__message_needaction_counter
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "จำนวนข้อความที่ต้องดำเนินการ"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__message_has_error_counter
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_client__message_has_error_counter
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__message_has_error_counter
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__message_has_error_counter
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "จํานวนข้อความที่มีข้อผิดพลาดในการส่ง"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__occurred_at
+msgid "Occurred At"
+msgstr "เกิดขึ้นเมื่อ"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_search_full
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search_full
+msgid "Open"
+msgstr "เปิด"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__notes
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_movement_form
+msgid "Operator Notes"
+msgstr "บันทึกของผู้ปฏิบัติงาน"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__total_pallet_capacity
+msgid ""
+"Operator-supplied design capacity. Reported as a utilisation percentage on "
+"the dashboard but does not block put-away above the threshold; over-capacity"
+" is a valid temporary state during a peak."
+msgstr ""
+"ความจุตามการออกแบบที่ผู้ปฏิบัติงานกำหนด "
+"รายงานเป็นเปอร์เซ็นต์การใช้งานบนแดชบอร์ด แต่ไม่บล็อกการจัดเก็บเกินเกณฑ์ "
+"การเกินความจุเป็นสถานะชั่วคราวที่ยอมรับได้ในช่วงพีค"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_line__product_id
+msgid ""
+"Optional. Constrain this line to a specific product. If empty, the line "
+"applies to any product. The billing engine prefers product-specific lines."
+msgstr ""
+"ไม่บังคับ จำกัดบรรทัดนี้ให้เป็นผลิตภัณฑ์ที่ระบุ หากว่างเปล่า "
+"บรรทัดจะใช้กับผลิตภัณฑ์ใดก็ได้ "
+"เครื่องมือออกใบเรียกเก็บเงินจะเลือกใช้บรรทัดที่ระบุผลิตภัณฑ์เป็นลำดับแรก"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_location__outbound_movement_ids
+msgid "Outbound Movements"
+msgstr "การเคลื่อนไหวขาออก"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_pick__state__packed
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_search_full
+msgid "Packed"
+msgstr "บรรจุแล้ว"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__total_pallet_capacity
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_location__pallet_capacity
+msgid "Pallet Capacity"
+msgstr "ความจุพาเลท"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__pallet_count
+msgid ""
+"Pallet count for storage billing. The snapshot table records this per day "
+"for storage charge computation."
+msgstr ""
+"จำนวนพาเลทสำหรับการเรียกเก็บค่าจัดเก็บ "
+"ตารางสแนปช็อตจะบันทึกค่านี้รายวันเพื่อคำนวณค่าจัดเก็บ"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__pallet_count
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__pallet_count
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick_line__pallet_count
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__pallet_count
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt_line__pallet_count
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_grn_document
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_pick_list_document
+msgid "Pallets"
+msgstr "พาเลท"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_location__pallets_on_hand
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_snapshot__pallets_on_hand
+msgid "Pallets On Hand"
+msgstr "พาเลทคงเหลือ"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_form
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_form
+msgid "Parties"
+msgstr "คู่สัญญา"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__partner_id
+msgid "Partner"
+msgstr "พาร์ทเนอร์"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__address_id
+msgid ""
+"Partner record carrying the street, city, country, and geo coordinates. "
+"Reused on receipts and picks to render the facility address on documents."
+msgstr ""
+"ระเบียนพาร์ทเนอร์ที่บรรจุถนน เมือง ประเทศ และพิกัดทางภูมิศาสตร์ "
+"ถูกนำมาใช้ซ้ำในการรับสินค้าและการหยิบสินค้าเพื่อแสดงที่อยู่ของสถานที่บนเอกสาร"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_client__storage_charging_basis__snapshot_peak
+msgid "Peak of Daily Snapshots"
+msgstr "จุดสูงสุดของสแนปช็อตรายวัน"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_location__pallet_capacity
+msgid ""
+"Per-bin pallet ceiling. Put-away above this triggers a warning but does not "
+"block; over-capacity is a valid transient state."
+msgstr ""
+"เพดานพาเลทต่อบิน การจัดเก็บเกินกว่านี้จะแสดงคำเตือนแต่ไม่บล็อก "
+"การเกินความจุเป็นสถานะชั่วคราวที่ถูกต้อง"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__period_end
+msgid "Period End"
+msgstr "สิ้นงวด"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_billing_run_search_full
+msgid "Period Month"
+msgstr "เดือนของงวด"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__period_start
+msgid "Period Start"
+msgstr "เริ่มต้นงวด"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick_line__pick_id
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_movement__movement_type__pick
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_form
+msgid "Pick"
+msgstr "การรับสินค้า"
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_pick.py:0
+msgid ""
+"Pick %(name)s cannot move from %(from)s to %(to)s. Allowed: %(allowed)s."
+msgstr ""
+"การหยิบ %(name)s ไม่สามารถย้ายจาก %(from)s ไปยัง %(to)s ได้ อนุญาต: "
+"%(allowed)s."
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_pick_list_document
+msgid "Pick Confirmation"
+msgstr "การยืนยันการหยิบ"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_billing_line__service_type__pick_line
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_rate_line__service_type__pick_line
+msgid "Pick Line"
+msgstr "รายการหยิบ"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__pick_line_count
+msgid "Pick Lines"
+msgstr "รายการหยิบ"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.actions.report,name:eh_log_warehouse_3pl.action_report_eh_log_warehouse_pick_list
+msgid "Pick List"
+msgstr "รายการหยิบสินค้า"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_pivot
+msgid "Pick Volume"
+msgstr "ปริมาณการหยิบ"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_pick_list_document
+msgid "Picked"
+msgstr "รับสินค้าแล้ว"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_pick_list_document
+msgid "Picker"
+msgstr "ผู้หยิบสินค้า"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_pick__state__picking
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_search_full
+msgid "Picking"
+msgstr "การรับ"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__picking_started_at
+msgid "Picking Started At"
+msgstr "เริ่มหยิบสินค้าเมื่อ"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.actions.act_window,name:eh_log_warehouse_3pl.action_eh_log_warehouse_pick
+#: model:ir.ui.menu,name:eh_log_warehouse_3pl.menu_eh_log_warehouse_picks
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_calendar
+msgid "Picks"
+msgstr "การหยิบสินค้า"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_pick__state__planned
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_search_full
+msgid "Planned"
+msgstr "วางแผน"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__planned_date
+msgid "Planned Date"
+msgstr "วันที่ตามแผน"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_search_full
+msgid "Planned Today"
+msgstr "วางแผนวันนี้"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_billing_run_form
+msgid "Post to Sale Order"
+msgstr "ลงบัญชีไปยังใบสั่งขาย"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_billing_run__state__posted
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_billing_run_search_full
+msgid "Posted"
+msgstr "โพสต์"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__product_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick_line__product_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt_line__product_id
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_grn_document
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_pick_list_document
+msgid "Product"
+msgstr "สินค้า"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_line__product_id
+msgid "Product Override"
+msgstr "การแทนที่ผลิตภัณฑ์"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_location__purpose
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_zone__purpose
+msgid "Purpose"
+msgstr "เสนอ"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_receipt__state__putaway
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search_full
+msgid "Putaway"
+msgstr "การจัดเก็บ"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__putaway_at
+msgid "Putaway At"
+msgstr "จัดเก็บที่"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_line__quantity
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__quantity
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick_line__quantity
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt_line__quantity
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_grn_document
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_pick_list_document
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_storage_statement_document
+msgid "Quantity"
+msgstr "ปริมาณ"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_zone__purpose__quarantine
+msgid "Quarantine"
+msgstr "การกักกัน"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__rate_card_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__rate_card_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_line__rate_card_id
+msgid "Rate Card"
+msgstr "ตารางอัตรา"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.actions.act_window,name:eh_log_warehouse_3pl.action_eh_log_warehouse_rate_card
+#: model:ir.ui.menu,name:eh_log_warehouse_3pl.menu_eh_log_warehouse_rate_cards
+msgid "Rate Cards"
+msgstr "ตารางอัตรา"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.constraint,message:eh_log_warehouse_3pl.constraint_eh_log_warehouse_rate_card_rate_card_code_unique
+msgid "Rate card code must be unique per company."
+msgstr "รหัสตารางอัตราต้องไม่ซ้ำกันในแต่ละบริษัท"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__rate_card_id
+msgid ""
+"Rate card snapshotted onto the run. Defaults to the client's current card; "
+"can be overridden for replays."
+msgstr ""
+"ตารางอัตราที่ถูกบันทึกเป็นสแนปช็อตในการรัน "
+"ค่าเริ่มต้นคือตารางปัจจุบันของลูกค้า; สามารถแทนที่ได้สำหรับการเล่นซ้ำ"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__rating_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__rating_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__rating_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__rating_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__rating_ids
+msgid "Ratings"
+msgstr "การให้คะแนน"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt_line__receipt_id
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_movement__movement_type__receipt
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_form
+msgid "Receipt"
+msgstr "ใบเสร็จ"
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_receipt.py:0
+msgid ""
+"Receipt %(name)s cannot move from %(from)s to %(to)s. Allowed: %(allowed)s."
+msgstr ""
+"ใบรับสินค้า %(name)s ไม่สามารถเปลี่ยนจาก %(from)s เป็น %(to)s ได้ ที่อนุญาต:"
+" %(allowed)s"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_grn_document
+msgid "Receipt Confirmation"
+msgstr "การยืนยันการรับสินค้า"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_pivot
+msgid "Receipt Volume"
+msgstr "ปริมาณการรับสินค้า"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.actions.act_window,name:eh_log_warehouse_3pl.action_eh_log_warehouse_receipt
+#: model:ir.ui.menu,name:eh_log_warehouse_3pl.menu_eh_log_warehouse_receipts
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_calendar
+msgid "Receipts"
+msgstr "ใบเสร็จ"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_graph
+msgid "Receipts by State"
+msgstr "ใบรับสินค้าตามสถานะ"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_grn_document
+msgid "Receiver"
+msgstr "ผู้รับ"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__name
+msgid "Reference"
+msgstr "การอ้างอิง"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_billing_run_form
+msgid "Reset to Draft"
+msgstr "รีเซ็ตเป็นฉบับร่าง"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__activity_user_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__activity_user_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__activity_user_id
+msgid "Responsible User"
+msgstr "ผู้ใช้ที่รับผิดชอบ"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_grn_document
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_pick_list_document
+msgid "Role"
+msgstr "บทบาท"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__message_has_sms_error
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__message_has_sms_error
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__message_has_sms_error
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__message_has_sms_error
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "ข้อผิดพลาดในการส่ง SMS"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__sale_order_id
+msgid "Sale Order"
+msgstr "คำสั่งขาย"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model,name:eh_log_warehouse_3pl.model_sale_order
+msgid "Sales Order"
+msgstr "คำสั่งขาย"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_form
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_form
+msgid "Schedule"
+msgstr "กำหนดเวลา"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_billing_run_search_full
+msgid "Search Billing Runs"
+msgstr "ค้นหารอบการเรียกเก็บเงิน"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_search_full
+msgid "Search Picks"
+msgstr "ค้นหาการหยิบสินค้า"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search_full
+msgid "Search Receipts"
+msgstr "ค้นหาใบเสร็จ"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick_line__sequence
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt_line__sequence
+msgid "Sequence"
+msgstr "ลำดับ"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_line__service_type
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_line__service_type
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_storage_statement_document
+msgid "Service"
+msgstr "บริการ"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__customer_id
+msgid "Ship-To Customer"
+msgstr "ลูกค้าผู้รับสินค้า"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_pick__state__shipped
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_search_full
+msgid "Shipped"
+msgstr "จัดส่งแล้ว"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__shipped_at
+msgid "Shipped At"
+msgstr "จัดส่งเมื่อ"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__code
+msgid ""
+"Short code prefixed onto location codes. Limit eight characters so the "
+"composite location reference fits a label sticker."
+msgstr ""
+"รหัสแบบสั้นที่นำหน้ารหัสตำแหน่ง "
+"จำกัดไว้ที่แปดอักขระเพื่อให้การอ้างอิงตำแหน่งแบบผสมพอดีกับสติกเกอร์ฉลาก"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_grn_document
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_pick_list_document
+msgid "Signature"
+msgstr "ลายเซ็น"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_snapshot__snapshot_date
+msgid "Snapshot Date"
+msgstr "วันที่สแนปช็อต"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.actions.act_window,name:eh_log_warehouse_3pl.action_eh_log_warehouse_snapshot
+#: model:ir.ui.menu,name:eh_log_warehouse_3pl.menu_eh_log_warehouse_snapshots
+msgid "Snapshots"
+msgstr "สแนปช็อต"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick_line__source_location_id
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_pick_list_document
+msgid "Source"
+msgstr "แหล่งที่มา"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__source_location_id
+msgid "Source Location"
+msgstr "ตำแหน่งแหล่งที่มา"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__pick_id
+msgid "Source Pick"
+msgstr "ใบหยิบสินค้าต้นทาง"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__receipt_id
+msgid "Source Receipt"
+msgstr "ใบรับสินค้าต้นทาง"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_sale_order__eh_log_warehouse_billing_run_id
+msgid ""
+"Source billing run if this order was generated by the monthly warehouse "
+"billing engine."
+msgstr ""
+"รอบการวางบิลต้นทางหากคำสั่งนี้ถูกสร้างโดยเอนจินการวางบิลคลังสินค้ารายเดือน"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__sale_order_id
+msgid ""
+"Source sale order if the pick was spawned from a warehouse 3PL service line;"
+" standalone picks leave this empty."
+msgstr ""
+"คำสั่งขายต้นทางหากใบหยิบสินค้าถูกสร้างจากรายการบริการ 3PL ของคลังสินค้า "
+"ใบหยิบสินค้าแบบเดี่ยวจะเว้นว่างไว้"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_zone__purpose__staging
+msgid "Staging"
+msgstr "สเตจจิ้ง"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_form
+msgid "Start Inspection"
+msgstr "เริ่มการตรวจสอบ"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_form
+msgid "Start Picking"
+msgstr "เริ่มการหยิบสินค้า"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__state
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__state
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__state
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_billing_run_search_full
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_search_full
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search_full
+msgid "State"
+msgstr "รัฐ"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__activity_state
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__activity_state
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"สถานะตามกิจกรรม\n"
+"เกินกำหนด: วันที่ครบกำหนดผ่านไปแล้ว\n"
+"วันนี้: วันที่จัดกิจกรรมคือวันนี้\n"
+"วางแผน: กิจกรรมในอนาคต"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__storage_charging_basis
+msgid "Storage Basis"
+msgstr "เกณฑ์การจัดเก็บ"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.actions.report,name:eh_log_warehouse_3pl.action_report_eh_log_warehouse_storage_statement
+msgid "Storage Statement"
+msgstr "รายการเดินบัญชีการจัดเก็บ"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_billing_line__service_type__storage_pallet_day
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_rate_line__service_type__storage_pallet_day
+msgid "Storage per Pallet per Day"
+msgstr "ค่าจัดเก็บต่อพาเลทต่อวัน"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_line__subtotal
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_storage_statement_document
+msgid "Subtotal"
+msgstr "ยอดรวมย่อย"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__supplier_id
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search_full
+msgid "Supplier"
+msgstr "ซัพพลายเออร์"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__supplier_reference
+msgid "Supplier Reference"
+msgstr "อ้างอิงผู้จัดจำหน่าย"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__supplier_id
+msgid ""
+"Supplier who shipped the goods. The receipt reconciles this party against "
+"the PO when the freight job is linked."
+msgstr ""
+"ผู้จัดจำหน่ายที่จัดส่งสินค้า ใบรับสินค้าจะกระทบยอดฝ่ายนี้กับ PO "
+"เมื่องานขนส่งถูกเชื่อมโยง"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search_full
+msgid "This Week"
+msgstr "สัปดาห์นี้"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__total
+msgid "Total"
+msgstr "รวม"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_facility__customs_status__transit
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_zone__purpose__transit
+msgid "Transit"
+msgstr "การขนส่ง"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__movement_type
+msgid "Type"
+msgstr "ประเภท"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__activity_exception_decoration
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__activity_exception_decoration
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "ประเภทกิจกรรมข้อยกเว้นบนบันทึก"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_line__unit_price
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_line__unit_price
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_storage_statement_document
+msgid "Unit Price"
+msgstr "ราคาต่อหน่วย"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_billing_line__service_type__vas_kit
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_rate_line__service_type__vas_kit
+msgid "Value-Added Services - Kit"
+msgstr "บริการเสริมมูลค่า - ชุด"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_billing_line__service_type__vas_label
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_rate_line__service_type__vas_label
+msgid "Value-Added Services - Label"
+msgstr "บริการเสริมมูลค่า - ฉลาก"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_billing_line__service_type__vas_scan
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_rate_line__service_type__vas_scan
+msgid "Value-Added Services - Scan"
+msgstr "บริการเสริมมูลค่า - สแกน"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.ui.menu,name:eh_log_warehouse_3pl.menu_eh_log_warehouse_config_root
+#: model:ir.ui.menu,name:eh_log_warehouse_3pl.menu_eh_log_warehouse_root
+msgid "Warehouse 3PL"
+msgstr "คลังสินค้า 3PL"
+
+#. module: eh_log_warehouse_3pl
+#: model:product.template,name:eh_log_warehouse_3pl.product_warehouse_billing_product_template
+msgid "Warehouse 3PL Service"
+msgstr "บริการคลังสินค้า 3PL"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model,name:eh_log_warehouse_3pl.model_eh_log_warehouse_billing_line
+msgid "Warehouse Billing Line"
+msgstr "รายการเรียกเก็บเงินคลังสินค้า"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model,name:eh_log_warehouse_3pl.model_eh_log_warehouse_billing_run
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_sale_order__eh_log_warehouse_billing_run_id
+msgid "Warehouse Billing Run"
+msgstr "การประมวลผลเรียกเก็บเงินคลังสินค้า"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model,name:eh_log_warehouse_3pl.model_eh_log_warehouse_facility
+msgid "Warehouse Facility"
+msgstr "สถานที่คลังสินค้า"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model,name:eh_log_warehouse_3pl.model_eh_log_warehouse_location
+msgid "Warehouse Location"
+msgstr "ตำแหน่งคลังสินค้า"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model,name:eh_log_warehouse_3pl.model_eh_log_warehouse_movement
+msgid "Warehouse Movement"
+msgstr "การเคลื่อนย้ายคลังสินค้า"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model,name:eh_log_warehouse_3pl.model_eh_log_warehouse_snapshot
+msgid "Warehouse On-Hand Snapshot"
+msgstr "สแนปช็อตสินค้าคงเหลือในคลัง"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model,name:eh_log_warehouse_3pl.model_eh_log_warehouse_pick
+msgid "Warehouse Pick"
+msgstr "การหยิบสินค้าคลัง"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model,name:eh_log_warehouse_3pl.model_eh_log_warehouse_pick_line
+msgid "Warehouse Pick Line"
+msgstr "รายการหยิบสินค้าคลัง"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model,name:eh_log_warehouse_3pl.model_eh_log_warehouse_receipt
+msgid "Warehouse Receipt"
+msgstr "การรับสินค้าเข้าคลัง"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model,name:eh_log_warehouse_3pl.model_eh_log_warehouse_receipt_line
+msgid "Warehouse Receipt Line"
+msgstr "รายการรับสินค้าเข้าคลัง"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model,name:eh_log_warehouse_3pl.model_eh_log_warehouse_zone
+msgid "Warehouse Zone"
+msgstr "โซนคลังสินค้า"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.actions.server,name:eh_log_warehouse_3pl.cron_capture_daily_snapshot_ir_actions_server
+msgid "Warehouse: Capture Daily On-Hand Snapshot"
+msgstr "คลังสินค้า: บันทึกสแนปช็อตสินค้าคงเหลือประจำวัน"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.actions.server,name:eh_log_warehouse_3pl.cron_run_monthly_billing_ir_actions_server
+msgid "Warehouse: Run Monthly Billing"
+msgstr "คลังสินค้า: ประมวลผลการเรียกเก็บเงินรายเดือน"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__website_message_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__website_message_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__website_message_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__website_message_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__website_message_ids
+msgid "Website Messages"
+msgstr "ข้อความเว็บไซต์"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__website_message_ids
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_client__website_message_ids
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__website_message_ids
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__website_message_ids
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__website_message_ids
+msgid "Website communication history"
+msgstr "ประวัติการสื่อสารของเว็บไซต์"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_pick_line__source_location_id
+msgid ""
+"Where this line is picked from. Required before the picking action runs; "
+"planning may use a soon-to-be-resolved location."
+msgstr ""
+"บรรทัดนี้หยิบจากที่ใด จำเป็นก่อนที่การหยิบสินค้าจะทำงาน "
+"การวางแผนอาจใช้ตำแหน่งที่จะถูกกำหนดในไม่ช้า"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt_line__destination_location_id
+msgid ""
+"Where this line will be put away. Required before the put-away action runs; "
+"until then, leaving it blank is allowed so the receipt can be created from "
+"the supplier ASN before the storage plan is finalised."
+msgstr ""
+"บรรทัดนี้จะถูกจัดเก็บที่ใด จำเป็นก่อนที่การจัดเก็บจะทำงาน จนถึงตอนนั้น "
+"อนุญาตให้เว้นว่างไว้ได้เพื่อให้สามารถสร้างการรับสินค้าจาก ASN "
+"ของซัพพลายเออร์ก่อนที่แผนการจัดเก็บจะเสร็จสมบูรณ์"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_location__zone_id
+msgid "Zone"
+msgstr "โซน"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.constraint,message:eh_log_warehouse_3pl.constraint_eh_log_warehouse_zone_zone_code_unique
+msgid "Zone code must be unique per facility."
+msgstr "รหัสโซนต้องไม่ซ้ำกันในแต่ละสถานที่"
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_facility.py:0
+#: model:ir.actions.act_window,name:eh_log_warehouse_3pl.action_eh_log_warehouse_zone
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__zone_count
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__zone_ids
+#: model:ir.ui.menu,name:eh_log_warehouse_3pl.menu_eh_log_warehouse_zones
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_facility_form
+msgid "Zones"
+msgstr "โซน"
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_facility.py:0
+msgid ""
+"[EHL-WHS-001] Facility code %(code)s must be alphanumeric or underscore "
+"only."
+msgstr ""
+"[EHL-WHS-001] รหัสสถานที่ %(code)s "
+"ต้องเป็นตัวอักษรและตัวเลขหรือขีดล่างเท่านั้น"
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_zone.py:0
+msgid ""
+"[EHL-WHS-002] Zone code %(code)s must be alphanumeric or underscore only."
+msgstr ""
+"[EHL-WHS-002] รหัสโซน %(code)s ต้องเป็นตัวอักษรและตัวเลขหรือขีดล่างเท่านั้น"
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_location.py:0
+msgid ""
+"[EHL-WHS-003] Location code %(code)s must be alphanumeric or underscore "
+"only."
+msgstr ""
+"[EHL-WHS-003] รหัสตำแหน่ง %(code)s "
+"ต้องเป็นตัวอักษรและตัวเลขหรือขีดล่างเท่านั้น"
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_client.py:0
+msgid ""
+"[EHL-WHS-004] Billing day %(day)s must be between 1 and 28 so the cron fires"
+" every month."
+msgstr ""
+"[EHL-WHS-004] วันเรียกเก็บเงิน %(day)s ต้องอยู่ระหว่าง 1 ถึง 28 เพื่อให้ "
+"cron ทำงานทุกเดือน"
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_client.py:0
+msgid ""
+"[EHL-WHS-005] Facility %(facility)s is not in client %(client)s's allowed "
+"facilities list."
+msgstr ""
+"[EHL-WHS-005] สถานที่ %(facility)s ไม่อยู่ในรายการสถานที่ที่อนุญาตของลูกค้า "
+"%(client)s"
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_rate_card.py:0
+msgid "[EHL-WHS-006] Rate line unit price cannot be negative."
+msgstr "[EHL-WHS-006] ราคาต่อหน่วยของรายการอัตราต้องไม่เป็นค่าลบ"
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_pick.py:0
+msgid ""
+"[EHL-WHS-007] Pick state must be changed via the action buttons, not by "
+"direct write."
+msgstr ""
+"[EHL-WHS-007] ต้องเปลี่ยนสถานะการหยิบสินค้าผ่านปุ่มดำเนินการ "
+"ไม่ใช่การเขียนโดยตรง"
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_receipt.py:0
+msgid ""
+"[EHL-WHS-007] Receipt state must be changed via the action buttons, not by "
+"direct write."
+msgstr ""
+"[EHL-WHS-007] ต้องเปลี่ยนสถานะการรับสินค้าผ่านปุ่มดำเนินการ "
+"ไม่ใช่การเขียนโดยตรง"
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_receipt.py:0
+msgid "[EHL-WHS-008] Receipt %(name)s is %(state)s; lines are read-only."
+msgstr ""
+"[EHL-WHS-008] การรับสินค้า %(name)s อยู่ในสถานะ %(state)s "
+"รายการเป็นแบบอ่านอย่างเดียว"
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_pick.py:0
+msgid "[EHL-WHS-009] Pick %(name)s is %(state)s; lines are read-only."
+msgstr ""
+"[EHL-WHS-009] การหยิบสินค้า %(name)s อยู่ในสถานะ %(state)s "
+"รายการเป็นแบบอ่านอย่างเดียว"
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_receipt.py:0
+msgid ""
+"[EHL-WHS-010] Receipt %(name)s has no lines; add lines before completing "
+"put-away."
+msgstr ""
+"[EHL-WHS-010] การรับสินค้า %(name)s ไม่มีรายการ "
+"กรุณาเพิ่มรายการก่อนดำเนินการจัดเก็บให้เสร็จสมบูรณ์"
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_receipt.py:0
+msgid ""
+"[EHL-WHS-011] Receipt line for product %(product)s has no destination "
+"location."
+msgstr ""
+"[EHL-WHS-011] รายการรับสินค้าสำหรับผลิตภัณฑ์ %(product)s ไม่มีตำแหน่งปลายทาง"
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_pick.py:0
+msgid "[EHL-WHS-012] Pick %(name)s has no lines."
+msgstr "[EHL-WHS-012] การหยิบสินค้า %(name)s ไม่มีรายการ"
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_pick.py:0
+msgid "[EHL-WHS-013] Pick line for %(product)s has no source location."
+msgstr "[EHL-WHS-013] รายการหยิบสินค้าสำหรับ %(product)s ไม่มีตำแหน่งต้นทาง"
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_movement.py:0
+msgid ""
+"[EHL-WHS-014] Warehouse movements must be created through receipt put-away, "
+"pick picking, transfer wizard, or adjustment workflow."
+msgstr ""
+"[EHL-WHS-014] "
+"การเคลื่อนย้ายในคลังสินค้าต้องสร้างผ่านการจัดเก็บเมื่อรับสินค้า "
+"การหยิบสินค้า ตัวช่วยการโอนย้าย หรือเวิร์กโฟลว์การปรับปรุง"
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_movement.py:0
+msgid ""
+"[EHL-WHS-015] Movement field(s) %(fields)s are immutable after creation. "
+"Post a reversing adjustment instead."
+msgstr ""
+"[EHL-WHS-015] ฟิลด์การเคลื่อนย้าย %(fields)s ไม่สามารถแก้ไขได้หลังจากสร้าง "
+"กรุณาลงบัญชีการปรับปรุงแบบกลับรายการแทน"
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_movement.py:0
+msgid ""
+"[EHL-WHS-016] Warehouse movements are append-only and cannot be deleted."
+msgstr ""
+"[EHL-WHS-016] "
+"การเคลื่อนย้ายในคลังสินค้าเป็นแบบเพิ่มต่อท้ายเท่านั้นและไม่สามารถลบได้"
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_snapshot.py:0
+msgid ""
+"[EHL-WHS-017] Snapshots are created by the daily cron or the explicit "
+"rebuild action; direct ORM creates are blocked."
+msgstr ""
+"[EHL-WHS-017] สแนปช็อตถูกสร้างโดย cron รายวันหรือการดำเนินการสร้างใหม่โดยตรง"
+" การสร้างผ่าน ORM โดยตรงจะถูกบล็อก"
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_snapshot.py:0
+msgid "[EHL-WHS-018] Snapshots are immutable."
+msgstr "[EHL-WHS-018] สแนปช็อตไม่สามารถแก้ไขได้"
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_snapshot.py:0
+msgid ""
+"[EHL-WHS-019] Snapshots are append-only; use the rebuild action for back-"
+"fill."
+msgstr ""
+"[EHL-WHS-019] สแนปช็อตเป็นแบบเพิ่มต่อท้ายเท่านั้น "
+"กรุณาใช้การดำเนินการสร้างใหม่สำหรับการเติมข้อมูลย้อนหลัง"
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_billing_run.py:0
+msgid ""
+"[EHL-WHS-020] Billing run period start %(start)s is after period end "
+"%(end)s."
+msgstr ""
+"[EHL-WHS-020] วันเริ่มต้นรอบการเรียกเก็บเงิน %(start)s อยู่หลังวันสิ้นสุดรอบ"
+" %(end)s"
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_billing_run.py:0
+msgid "[EHL-WHS-021] Billing run %(name)s has no computed lines."
+msgstr "[EHL-WHS-021] รอบการเรียกเก็บเงิน %(name)s ไม่มีรายการที่คำนวณแล้ว"
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_billing_run.py:0
+msgid "[EHL-WHS-022] Billing run state must change via the action buttons."
+msgstr "[EHL-WHS-022] ต้องเปลี่ยนสถานะรอบการเรียกเก็บเงินผ่านปุ่มดำเนินการ"
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_billing_run.py:0
+msgid ""
+"[EHL-WHS-023] Billing lines are created by the compute action; direct ORM "
+"creates are blocked."
+msgstr ""
+"[EHL-WHS-023] รายการเรียกเก็บเงินถูกสร้างโดยการดำเนินการคำนวณ การสร้างผ่าน "
+"ORM โดยตรงจะถูกบล็อก"
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_billing_run.py:0
+msgid ""
+"[EHL-WHS-024] Billing lines can only be cleared by re-running the compute "
+"action."
+msgstr ""
+"[EHL-WHS-024] "
+"รายการเรียกเก็บเงินสามารถล้างได้เฉพาะโดยการเรียกใช้การดำเนินการคำนวณอีกครั้ง"
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_facility.py:0
+msgid "facility_id"
+msgstr ""
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_kanban
+msgid "lines /"
+msgstr "บรรทัด /"
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_pick.py:0
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_receipt.py:0
+msgid "none"
+msgstr "ไม่มี"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_kanban
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_kanban
+msgid "pal."
+msgstr ""
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_zone.py:0
+msgid "zone_id"
+msgstr ""

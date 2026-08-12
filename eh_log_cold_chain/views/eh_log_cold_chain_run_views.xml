@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="view_eh_log_cold_chain_run_list" model="ir.ui.view">
+            <field name="name">eh.log.cold.chain.run.list</field>
+            <field name="model">eh.log.cold.chain.run</field>
+            <field name="arch" type="xml">
+                <list string="Cold Chain Runs" decoration-info="state in ('draft', 'active')" decoration-success="state == 'completed' and is_compliant" decoration-warning="state == 'completed' and not is_compliant" decoration-danger="state == 'breached'" decoration-muted="state == 'cancelled'">
+                    <field name="name"/>
+                    <field name="state"/>
+                    <field name="freight_job_id"/>
+                    <field name="profile_id"/>
+                    <field name="reading_count" optional="show"/>
+                    <field name="open_deviation_count" optional="show"/>
+                    <field name="min_temperature" optional="show"/>
+                    <field name="max_temperature" optional="show"/>
+                    <field name="is_compliant" optional="show"/>
+                    <field name="started_at" optional="show"/>
+                    <field name="completed_at" optional="show"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="view_eh_log_cold_chain_run_form" model="ir.ui.view">
+            <field name="name">eh.log.cold.chain.run.form</field>
+            <field name="model">eh.log.cold.chain.run</field>
+            <field name="arch" type="xml">
+                <form string="Cold Chain Run">
+                    <header>
+                        <button name="action_activate" string="Activate" type="object" class="btn-primary" invisible="state != 'draft'" groups="eh_log_base.group_eh_log_user"/>
+                        <button name="action_complete" string="Complete" type="object" class="btn-primary" invisible="state != 'active'" groups="eh_log_base.group_eh_log_user"/>
+                        <button name="action_cancel" string="Cancel" type="object" class="btn-secondary" invisible="state in ('completed', 'breached', 'cancelled')" groups="eh_log_base.group_eh_log_manager"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,active,completed"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="action_view_readings" type="object" class="oe_stat_button" icon="fa-line-chart">
+                                <field name="reading_count" widget="statinfo" string="Readings"/>
+                            </button>
+                            <button name="action_view_deviations" type="object" class="oe_stat_button" icon="fa-warning">
+                                <field name="open_deviation_count" widget="statinfo" string="Open Deviations"/>
+                            </button>
+                        </div>
+                        <div class="oe_title">
+                            <label for="name"/>
+                            <h1><field name="name"/></h1>
+                        </div>
+                        <group>
+                            <group string="Linkage">
+                                <field name="freight_job_id" options="{'no_create': True}"/>
+                                <field name="profile_id" options="{'no_create': True}"/>
+                                <field name="company_id" groups="base.group_multi_company"/>
+                            </group>
+                            <group string="Window">
+                                <field name="started_at" readonly="1"/>
+                                <field name="completed_at" readonly="1"/>
+                            </group>
+                        </group>
+                        <group string="Profile Thresholds">
+                            <group>
+                                <field name="profile_temperature_min" readonly="1"/>
+                                <field name="profile_temperature_max" readonly="1"/>
+                            </group>
+                            <group>
+                                <field name="is_compliant" readonly="1" widget="boolean_toggle"/>
+                            </group>
+                        </group>
+                        <group string="Aggregates">
+                            <group>
+                                <field name="min_temperature" readonly="1"/>
+                                <field name="max_temperature" readonly="1"/>
+                                <field name="avg_temperature" readonly="1"/>
+                            </group>
+                            <group>
+                                <field name="reading_count" readonly="1"/>
+                                <field name="deviation_count" readonly="1"/>
+                                <field name="open_deviation_count" readonly="1"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Readings">
+                                <field name="reading_ids">
+                                    <list>
+                                        <field name="captured_at"/>
+                                        <field name="temperature"/>
+                                        <field name="humidity"/>
+                                        <field name="source"/>
+                                        <field name="sensor_reference"/>
+                                        <field name="is_breach"/>
+                                    </list>
+                                </field>
+                            </page>
+                            <page string="Deviations">
+                                <field name="deviation_ids">
+                                    <list decoration-warning="state == 'open'" decoration-info="state == 'acknowledged'" decoration-success="state == 'resolved'" decoration-muted="state == 'voided'">
+                                        <field name="name"/>
+                                        <field name="state"/>
+                                        <field name="deviation_kind"/>
+                                        <field name="started_at"/>
+                                        <field name="ended_at"/>
+                                        <field name="duration_minutes"/>
+                                        <field name="min_temperature"/>
+                                        <field name="max_temperature"/>
+                                        <field name="cargo_impacting"/>
+                                        <field name="cause"/>
+                                    </list>
+                                </field>
+                            </page>
+                            <page string="Notes">
+                                <field name="notes"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <chatter/>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_eh_log_cold_chain_run_search" model="ir.ui.view">
+            <field name="name">eh.log.cold.chain.run.search</field>
+            <field name="model">eh.log.cold.chain.run</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="freight_job_id"/>
+                    <field name="profile_id"/>
+                    <separator/>
+                    <filter string="Active" name="filter_active" domain="[('state', '=', 'active')]"/>
+                    <filter string="Breached" name="filter_breached" domain="[('state', '=', 'breached')]"/>
+                    <filter string="Open Deviations" name="filter_open_dev" domain="[('open_deviation_count', '>', 0)]"/>
+                    <filter string="Group by State" name="group_state" context="{'group_by': 'state'}"/>
+                    <filter string="Group by Profile" name="group_profile" context="{'group_by': 'profile_id'}"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_eh_log_cold_chain_run" model="ir.actions.act_window">
+            <field name="name">Cold Chain Runs</field>
+            <field name="res_model">eh.log.cold.chain.run</field>
+            <field name="view_mode">list,form</field>
+            <field name="search_view_id" ref="view_eh_log_cold_chain_run_search"/>
+        </record>
+
+    </data>
+</odoo>

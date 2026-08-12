@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <menuitem id="menu_eh_log_customs_declarations"
+                  name="Customs Declarations"
+                  parent="eh_log_base.menu_eh_log_operations"
+                  sequence="50"
+                  action="action_eh_log_customs_declaration"
+                  groups="eh_log_base.group_eh_log_user"/>
+
+        <menuitem id="menu_eh_log_customs_deferment_accounts"
+                  name="Deferment Accounts"
+                  parent="eh_log_base.menu_eh_log_operations"
+                  sequence="55"
+                  action="action_eh_log_customs_deferment_account"
+                  groups="eh_log_base.group_eh_log_user"/>
+
+        <menuitem id="menu_eh_log_customs_declaration_types"
+                  name="Declaration Types"
+                  parent="eh_log_base.menu_eh_log_master_data"
+                  sequence="60"
+                  action="action_eh_log_customs_declaration_type"
+                  groups="eh_log_base.group_eh_log_manager"/>
+
+        <menuitem id="menu_eh_log_customs_hs_codes"
+                  name="HS Codes"
+                  parent="eh_log_base.menu_eh_log_master_data"
+                  sequence="70"
+                  action="action_eh_log_customs_hs_code"
+                  groups="eh_log_base.group_eh_log_manager"/>
+
+    </data>
+</odoo>

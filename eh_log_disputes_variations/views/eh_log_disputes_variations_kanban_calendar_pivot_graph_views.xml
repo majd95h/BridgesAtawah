@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_eh_log_dispute_kanban" model="ir.ui.view">
+        <field name="name">eh.log.dispute.kanban</field>
+        <field name="model">eh.log.dispute</field>
+        <field name="arch" type="xml">
+            <kanban default_group_by="state" class="o_kanban_small_column">
+                <field name="name"/>
+                <field name="subject"/>
+                <field name="customer_id"/>
+                <field name="category_id"/>
+                <field name="claimed_amount"/>
+                <field name="exposure"/>
+                <field name="currency_id"/>
+                <field name="is_overdue"/>
+                <field name="state"/>
+                <field name="sla_target_date"/>
+                <templates>
+                    <t t-name="card">
+                        <div class="oe_kanban_global_click">
+                            <div class="o_kanban_record_top">
+                                <strong><field name="name"/></strong>
+                                <span t-if="record.is_overdue.raw_value" class="badge text-bg-danger float-end">Overdue</span>
+                            </div>
+                            <div><field name="subject"/></div>
+                            <div class="text-muted small"><field name="customer_id"/> · <field name="category_id"/></div>
+                            <div class="o_kanban_record_bottom mt-2">
+                                <div class="oe_kanban_bottom_left small">
+                                    SLA: <field name="sla_target_date" widget="date"/>
+                                </div>
+                                <div class="oe_kanban_bottom_right">
+                                    <span class="badge text-bg-info">
+                                        <field name="exposure" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="view_eh_log_dispute_calendar" model="ir.ui.view">
+        <field name="name">eh.log.dispute.calendar</field>
+        <field name="model">eh.log.dispute</field>
+        <field name="arch" type="xml">
+            <calendar string="Disputes by SLA"
+                      date_start="sla_target_date"
+                      color="state"
+                      mode="month">
+                <field name="name"/>
+                <field name="customer_id"/>
+                <field name="exposure"/>
+            </calendar>
+        </field>
+    </record>
+
+    <record id="view_eh_log_dispute_pivot" model="ir.ui.view">
+        <field name="name">eh.log.dispute.pivot</field>
+        <field name="model">eh.log.dispute</field>
+        <field name="arch" type="xml">
+            <pivot string="Dispute Exposure" sample="1">
+                <field name="customer_id" type="row"/>
+                <field name="category_id" type="col"/>
+                <field name="claimed_amount" type="measure"/>
+                <field name="offered_amount" type="measure"/>
+                <field name="settled_amount" type="measure"/>
+                <field name="exposure" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="view_eh_log_dispute_graph" model="ir.ui.view">
+        <field name="name">eh.log.dispute.graph</field>
+        <field name="model">eh.log.dispute</field>
+        <field name="arch" type="xml">
+            <graph string="Open Exposure" sample="1" type="bar">
+                <field name="category_id"/>
+                <field name="exposure" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="view_eh_log_variation_kanban" model="ir.ui.view">
+        <field name="name">eh.log.variation.kanban</field>
+        <field name="model">eh.log.variation</field>
+        <field name="arch" type="xml">
+            <kanban default_group_by="state" class="o_kanban_small_column">
+                <field name="name"/>
+                <field name="subject"/>
+                <field name="customer_id"/>
+                <field name="net_amount"/>
+                <field name="currency_id"/>
+                <field name="state"/>
+                <templates>
+                    <t t-name="card">
+                        <div class="oe_kanban_global_click">
+                            <strong><field name="name"/></strong>
+                            <div><field name="subject"/></div>
+                            <div class="text-muted small"><field name="customer_id"/></div>
+                            <div class="o_kanban_record_bottom mt-2">
+                                <div class="oe_kanban_bottom_right">
+                                    <span t-att-class="record.net_amount.raw_value &gt;= 0 and 'badge text-bg-success' or 'badge text-bg-warning'">
+                                        <field name="net_amount" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="view_eh_log_variation_pivot" model="ir.ui.view">
+        <field name="name">eh.log.variation.pivot</field>
+        <field name="model">eh.log.variation</field>
+        <field name="arch" type="xml">
+            <pivot string="Variation Net Impact" sample="1">
+                <field name="customer_id" type="row"/>
+                <field name="state" type="col"/>
+                <field name="net_amount" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+
+</odoo>

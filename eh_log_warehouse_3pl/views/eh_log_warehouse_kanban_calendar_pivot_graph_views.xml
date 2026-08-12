@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_eh_log_warehouse_receipt_kanban" model="ir.ui.view">
+        <field name="name">eh.log.warehouse.receipt.kanban</field>
+        <field name="model">eh.log.warehouse.receipt</field>
+        <field name="arch" type="xml">
+            <kanban default_group_by="state" class="o_kanban_small_column">
+                <field name="name"/>
+                <field name="client_id"/>
+                <field name="facility_id"/>
+                <field name="supplier_id"/>
+                <field name="expected_date"/>
+                <field name="pallet_count"/>
+                <field name="state"/>
+                <templates>
+                    <t t-name="card">
+                        <div class="oe_kanban_global_click">
+                            <strong><field name="name"/></strong>
+                            <div class="text-muted small"><field name="client_id"/></div>
+                            <div><field name="supplier_id"/></div>
+                            <div class="o_kanban_record_bottom mt-2 small text-muted">
+                                <div class="oe_kanban_bottom_left">
+                                    <field name="expected_date" widget="date"/>
+                                </div>
+                                <div class="oe_kanban_bottom_right">
+                                    <field name="pallet_count"/> pal.
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="view_eh_log_warehouse_receipt_calendar" model="ir.ui.view">
+        <field name="name">eh.log.warehouse.receipt.calendar</field>
+        <field name="model">eh.log.warehouse.receipt</field>
+        <field name="arch" type="xml">
+            <calendar string="Receipts" date_start="expected_date" color="state" mode="week">
+                <field name="name"/>
+                <field name="client_id"/>
+                <field name="pallet_count"/>
+            </calendar>
+        </field>
+    </record>
+
+    <record id="view_eh_log_warehouse_receipt_pivot" model="ir.ui.view">
+        <field name="name">eh.log.warehouse.receipt.pivot</field>
+        <field name="model">eh.log.warehouse.receipt</field>
+        <field name="arch" type="xml">
+            <pivot string="Receipt Volume" sample="1">
+                <field name="client_id" type="row"/>
+                <field name="state" type="col"/>
+                <field name="pallet_count" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="view_eh_log_warehouse_receipt_graph" model="ir.ui.view">
+        <field name="name">eh.log.warehouse.receipt.graph</field>
+        <field name="model">eh.log.warehouse.receipt</field>
+        <field name="arch" type="xml">
+            <graph string="Receipts by State" sample="1" type="bar">
+                <field name="state"/>
+                <field name="pallet_count" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="view_eh_log_warehouse_pick_kanban" model="ir.ui.view">
+        <field name="name">eh.log.warehouse.pick.kanban</field>
+        <field name="model">eh.log.warehouse.pick</field>
+        <field name="arch" type="xml">
+            <kanban default_group_by="state" class="o_kanban_small_column">
+                <field name="name"/>
+                <field name="client_id"/>
+                <field name="customer_id"/>
+                <field name="planned_date"/>
+                <field name="pallet_count"/>
+                <field name="pick_line_count"/>
+                <field name="state"/>
+                <templates>
+                    <t t-name="card">
+                        <div class="oe_kanban_global_click">
+                            <strong><field name="name"/></strong>
+                            <div class="text-muted small"><field name="customer_id"/></div>
+                            <div class="o_kanban_record_bottom mt-2 small text-muted">
+                                <div class="oe_kanban_bottom_left">
+                                    <field name="planned_date" widget="date"/>
+                                </div>
+                                <div class="oe_kanban_bottom_right">
+                                    <field name="pick_line_count"/> lines / <field name="pallet_count"/> pal.
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="view_eh_log_warehouse_pick_calendar" model="ir.ui.view">
+        <field name="name">eh.log.warehouse.pick.calendar</field>
+        <field name="model">eh.log.warehouse.pick</field>
+        <field name="arch" type="xml">
+            <calendar string="Picks" date_start="planned_date" color="state" mode="week">
+                <field name="name"/>
+                <field name="customer_id"/>
+                <field name="pallet_count"/>
+            </calendar>
+        </field>
+    </record>
+
+    <record id="view_eh_log_warehouse_pick_pivot" model="ir.ui.view">
+        <field name="name">eh.log.warehouse.pick.pivot</field>
+        <field name="model">eh.log.warehouse.pick</field>
+        <field name="arch" type="xml">
+            <pivot string="Pick Volume" sample="1">
+                <field name="client_id" type="row"/>
+                <field name="state" type="col"/>
+                <field name="pallet_count" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="view_eh_log_warehouse_billing_run_pivot" model="ir.ui.view">
+        <field name="name">eh.log.warehouse.billing.run.pivot</field>
+        <field name="model">eh.log.warehouse.billing.run</field>
+        <field name="arch" type="xml">
+            <pivot string="Billing Analysis" sample="1">
+                <field name="client_id" type="row"/>
+                <field name="state" type="col"/>
+                <field name="total" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="view_eh_log_warehouse_billing_run_graph" model="ir.ui.view">
+        <field name="name">eh.log.warehouse.billing.run.graph</field>
+        <field name="model">eh.log.warehouse.billing.run</field>
+        <field name="arch" type="xml">
+            <graph string="Billing by Client" sample="1" type="bar">
+                <field name="client_id"/>
+                <field name="total" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
+</odoo>

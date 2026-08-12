@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <menuitem id="menu_eh_log_project_cargo_root"
+              name="Project Cargo"
+              parent="eh_log_base.menu_eh_log_operations"
+              sequence="80"/>
+
+    <menuitem id="menu_eh_log_project_cargo_jobs"
+              name="Jobs"
+              parent="menu_eh_log_project_cargo_root"
+              action="action_eh_log_project_cargo_job"
+              sequence="10"/>
+
+    <menuitem id="menu_eh_log_project_cargo_convoys"
+              name="Convoys"
+              parent="menu_eh_log_project_cargo_root"
+              action="action_eh_log_project_cargo_convoy"
+              sequence="20"/>
+
+    <menuitem id="menu_eh_log_project_cargo_permits"
+              name="Permits"
+              parent="menu_eh_log_project_cargo_root"
+              action="action_eh_log_project_cargo_permit"
+              sequence="30"/>
+
+    <menuitem id="menu_eh_log_project_cargo_route_surveys"
+              name="Route Surveys"
+              parent="menu_eh_log_project_cargo_root"
+              action="action_eh_log_project_cargo_route_survey"
+              sequence="40"/>
+
+    <menuitem id="menu_eh_log_project_cargo_config_root"
+              name="Project Cargo"
+              parent="eh_log_base.menu_eh_log_configuration"
+              sequence="80"/>
+
+    <menuitem id="menu_eh_log_project_cargo_equipment"
+              name="Equipment"
+              parent="menu_eh_log_project_cargo_config_root"
+              action="action_eh_log_project_cargo_equipment"
+              sequence="10"/>
+
+</odoo>

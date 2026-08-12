@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_eh_log_project_cargo_job_search_full" model="ir.ui.view">
+        <field name="name">eh.log.project.cargo.job.search.full</field>
+        <field name="model">eh.log.project.cargo.job</field>
+        <field name="arch" type="xml">
+            <search string="Search Jobs">
+                <field name="name"/>
+                <field name="customer_partner_id"/>
+                <field name="project_name"/>
+                <field name="customer_reference"/>
+                <field name="origin_partner_id"/>
+                <field name="destination_partner_id"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+
+                <separator/>
+                <filter name="filter_state_draft" string="Draft" domain="[('state', '=', 'draft')]"/>
+                <filter name="filter_state_surveyed" string="Surveyed" domain="[('state', '=', 'surveyed')]"/>
+                <filter name="filter_state_planned" string="Planned" domain="[('state', '=', 'planned')]"/>
+                <filter name="filter_state_executing" string="Executing" domain="[('state', '=', 'executing')]"/>
+                <filter name="filter_state_completed" string="Completed" domain="[('state', '=', 'completed')]"/>
+                <filter name="filter_state_closed" string="Closed" domain="[('state', '=', 'closed')]"/>
+                <filter name="filter_state_active" string="Active"
+                        domain="[('state', 'not in', ('closed', 'cancelled'))]"/>
+
+                <separator/>
+                <filter name="filter_oversized" string="Has Oversized Item"
+                        domain="[('has_oversized_item', '=', True)]"/>
+
+                <separator/>
+                <group>
+                    <filter name="group_by_state" string="State" context="{'group_by': 'state'}"/>
+                    <filter name="group_by_customer" string="Customer" context="{'group_by': 'customer_partner_id'}"/>
+                    <filter name="group_by_target_start_month" string="Target Start Month"
+                            context="{'group_by': 'target_start_date:month'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="view_eh_log_project_cargo_permit_search_full" model="ir.ui.view">
+        <field name="name">eh.log.project.cargo.permit.search.full</field>
+        <field name="model">eh.log.project.cargo.permit</field>
+        <field name="arch" type="xml">
+            <search string="Search Permits">
+                <field name="name"/>
+                <field name="permit_reference"/>
+                <field name="job_id"/>
+                <field name="convoy_id"/>
+                <field name="issuing_partner_id"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+
+                <separator/>
+                <filter name="filter_state_draft" string="Draft" domain="[('state', '=', 'draft')]"/>
+                <filter name="filter_state_applied" string="Applied" domain="[('state', '=', 'applied')]"/>
+                <filter name="filter_state_issued" string="Issued" domain="[('state', '=', 'issued')]"/>
+                <filter name="filter_state_active" string="Active" domain="[('state', '=', 'active')]"/>
+                <filter name="filter_state_rejected" string="Rejected" domain="[('state', '=', 'rejected')]"/>
+
+                <separator/>
+                <filter name="filter_expiring_7d" string="Expiring within 7 days"
+                        domain="[('valid_until', '!=', False),
+                                  ('valid_until', '&lt;=', (context_today() + relativedelta(days=7)).strftime('%Y-%m-%d')),
+                                  ('valid_until', '&gt;=', context_today().strftime('%Y-%m-%d'))]"/>
+                <filter name="filter_expired" string="Expired"
+                        domain="[('valid_until', '!=', False),
+                                  ('valid_until', '&lt;', context_today().strftime('%Y-%m-%d'))]"/>
+
+                <separator/>
+                <group>
+                    <filter name="group_by_state" string="State" context="{'group_by': 'state'}"/>
+                    <filter name="group_by_authority" string="Authority" context="{'group_by': 'authority'}"/>
+                    <filter name="group_by_job" string="Job" context="{'group_by': 'job_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+</odoo>

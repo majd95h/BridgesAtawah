@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="action_report_dispute_notice" model="ir.actions.report">
+        <field name="name">Dispute Notice</field>
+        <field name="model">eh.log.dispute</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">eh_log_disputes_variations.report_dispute_notice_document</field>
+        <field name="report_file">eh_log_disputes_variations.report_dispute_notice_document</field>
+        <field name="binding_model_id" ref="model_eh_log_dispute"/>
+        <field name="binding_type">report</field>
+        <field name="paperformat_id" ref="eh_log_base.paperformat_eh_log_portrait"/>
+    </record>
+
+    <template id="report_dispute_notice_document">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="dispute">
+                <t t-call="eh_log_base.eh_log_clean_layout">
+                    <t t-set="company" t-value="dispute.company_id"/>
+                    <t t-set="report_type" t-value="'pdf'"/>
+                    <t t-call="eh_log_base.eh_log_report_styles"/>
+                    <div class="page eh_pdf_page">
+                        <t t-call="eh_log_base.eh_log_report_header">
+                            <t t-set="title" t-value="'Dispute Notice'"/>
+                            <t t-set="company" t-value="dispute.company_id"/>
+                        </t>
+
+                        <div class="eh_pdf_meta">
+                            <span><strong>Reference:</strong> <t t-out="dispute.name"/></span>
+                            <span><strong>Customer:</strong> <t t-out="dispute.customer_id.display_name"/></span>
+                            <span><strong>Category:</strong> <t t-out="dispute.category_id.name"/></span>
+                            <span><strong>Subject:</strong> <t t-out="dispute.subject"/></span>
+                            <span><strong>Source:</strong> <t t-out="dispute.source_display"/></span>
+                            <span><strong>State:</strong> <t t-out="dispute.state"/></span>
+                            <span><strong>SLA Target:</strong> <t t-out="dispute.sla_target_date and dispute.sla_target_date.strftime('%Y-%m-%d') or ''"/></span>
+                        </div>
+
+                        <h2 class="eh_pdf_subtitle">Description</h2>
+                        <p t-out="dispute.description or ''"/>
+
+                        <h2 class="eh_pdf_subtitle">Financials</h2>
+                        <table class="eh_pdf_table">
+                            <thead>
+                                <tr>
+                                    <th>Item</th>
+                                    <th class="text-end">Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Claimed</td>
+                                    <td class="text-end"><t t-out="'{:.2f}'.format(dispute.claimed_amount)"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Offered</td>
+                                    <td class="text-end"><t t-out="'{:.2f}'.format(dispute.offered_amount)"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Settled</td>
+                                    <td class="text-end"><t t-out="'{:.2f}'.format(dispute.settled_amount)"/></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2 class="eh_pdf_subtitle">Event Log</h2>
+                        <table class="eh_pdf_table">
+                            <thead>
+                                <tr>
+                                    <th>Time</th>
+                                    <th>Type</th>
+                                    <th>Summary</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr t-foreach="dispute.event_ids.sorted(lambda e: e.occurred_at)" t-as="event">
+                                    <td><t t-out="event.occurred_at and event.occurred_at.strftime('%Y-%m-%d %H:%M') or ''"/></td>
+                                    <td><t t-out="event.event_type"/></td>
+                                    <td><t t-out="event.summary"/></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>

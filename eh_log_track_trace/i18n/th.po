@@ -1,0 +1,1261 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* eh_log_track_trace
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-01 04:34+0000\n"
+"PO-Revision-Date: 2026-07-01 04:34+0000\n"
+"Last-Translator: ERP Heritage <info@erpheritage.com.au>\n"
+"Language-Team: Thai\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.res_config_settings_view_form_track
+msgid "32+ random hex characters"
+msgstr "อักขระฐานสิบหกแบบสุ่ม 32 ตัวขึ้นไป"
+
+#. module: eh_log_track_trace
+#: model:mail.template,body_html:eh_log_track_trace.email_template_track_event_milestone
+msgid ""
+"<div class=\"eh-track-mail\">\n"
+"                    <p>A new milestone was recorded for your shipment.</p>\n"
+"                    <p>\n"
+"                        <strong>\n"
+"                            <t t-out=\"object.event_code_id.name or ''\"/>\n"
+"                        </strong>\n"
+"                    </p>\n"
+"                    <p t-if=\"object.description\">\n"
+"                        <t t-out=\"object.description\"/>\n"
+"                    </p>\n"
+"                    <p t-if=\"object.location\">\n"
+"                        Location:\n"
+"                        <t t-out=\"object.location\"/>\n"
+"                    </p>\n"
+"                    <p>\n"
+"                        Recorded at:\n"
+"                        <t t-out=\"object.occurred_at and object.occurred_at.strftime('%Y-%m-%d %H:%M') or ''\"/>\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
+msgstr ""
+"<div class=\"eh-track-mail\">\n"
+"                    <p>มีการบันทึกเหตุการณ์สำคัญใหม่สำหรับการจัดส่งของคุณ</p>\n"
+"                    <p>\n"
+"                        <strong>\n"
+"                            <t t-out=\"object.event_code_id.name or ''\"/>\n"
+"                        </strong>\n"
+"                    </p>\n"
+"                    <p t-if=\"object.description\">\n"
+"                        <t t-out=\"object.description\"/>\n"
+"                    </p>\n"
+"                    <p t-if=\"object.location\">\n"
+"                        สถานที่:\n"
+"                        <t t-out=\"object.location\"/>\n"
+"                    </p>\n"
+"                    <p>\n"
+"                        บันทึกเมื่อ:\n"
+"                        <t t-out=\"object.occurred_at and object.occurred_at.strftime('%Y-%m-%d %H:%M') or ''\"/>\n"
+"                    </p>\n"
+"                </div>"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_kanban
+msgid "<i class=\"fa fa-map-marker me-1\" title=\"Location\"/>"
+msgstr "<i class=\"fa fa-map-marker me-1\" title=\"ตำแหน่ง\"/>"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_freight_job_form_track
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_last_mile_delivery_form_track
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_transport_trip_form_track
+msgid "<span class=\"o_stat_text\">Public Page</span>"
+msgstr "<span class=\"o_stat_text\">หน้าสาธารณะ</span>"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.public_track_page
+msgid "<span> · </span>"
+msgstr ""
+
+#. module: eh_log_track_trace
+#: model:ir.model.constraint,message:eh_log_track_trace.constraint_eh_log_track_webhook_mapping_carrier_code_unique
+msgid "A carrier event code may only map once per endpoint."
+msgstr "รหัสเหตุการณ์ของผู้ขนส่งสามารถแมปได้เพียงครั้งเดียวต่อหนึ่ง endpoint"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields.selection,name:eh_log_track_trace.selection__eh_log_track_event__source__api
+msgid "API"
+msgstr ""
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event_code__active
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_subscription__active
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__active
+msgid "Active"
+msgstr "เปิดใช้งาน"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_arrived
+msgid "Arrived at Destination"
+msgstr "ถึงจุดหมายปลายทางแล้ว"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_at_delivery
+msgid "At Delivery"
+msgstr "เมื่อจัดส่ง"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_at_pickup
+msgid "At Pickup"
+msgstr "เมื่อรับสินค้า"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_cancelled
+msgid "Cancelled"
+msgstr "ยกเลิก"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__carrier_name
+msgid "Carrier"
+msgstr "ผู้ให้บริการ"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_mapping__carrier_code
+msgid "Carrier Event Code"
+msgstr "รหัสเหตุการณ์ผู้ขนส่ง"
+
+#. module: eh_log_track_trace
+#: model:ir.model,name:eh_log_track_trace.model_eh_log_track_webhook_mapping
+msgid "Carrier Event Code Mapping"
+msgstr "การจับคู่รหัสเหตุการณ์ผู้ขนส่ง"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_freight_job__tracking_reference
+msgid "Carrier Tracking Reference"
+msgstr "หมายเลขอ้างอิงการติดตามผู้ขนส่ง"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields.selection,name:eh_log_track_trace.selection__eh_log_track_event__source__webhook
+msgid "Carrier Webhook"
+msgstr "Webhook ผู้ขนส่ง"
+
+#. module: eh_log_track_trace
+#: model:ir.model,name:eh_log_track_trace.model_eh_log_track_webhook_endpoint
+msgid "Carrier Webhook Endpoint"
+msgstr "เอนด์พอยต์ Webhook ผู้ขนส่ง"
+
+#. module: eh_log_track_trace
+#: model:ir.actions.act_window,name:eh_log_track_trace.action_eh_log_track_webhook_endpoint
+#: model:ir.ui.menu,name:eh_log_track_trace.menu_eh_log_track_webhooks
+msgid "Carrier Webhooks"
+msgstr "Webhook ผู้ขนส่ง"
+
+#. module: eh_log_track_trace
+#: model:ir.model.constraint,message:eh_log_track_trace.constraint_eh_log_track_webhook_endpoint_carrier_name_unique
+msgid "Carrier name must be unique per company."
+msgstr "ชื่อผู้ขนส่งต้องไม่ซ้ำกันในแต่ละบริษัท"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__category
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event_code__category
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_search
+msgid "Category"
+msgstr "หมวดหมู่"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_subscription__channel
+msgid "Channel"
+msgstr "ช่อง"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_closed
+msgid "Closed"
+msgstr "ปิดแล้ว"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event__category
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event_code__category
+msgid ""
+"Coarse grouping used to colour-code the timeline and to let subscriptions "
+"opt into a whole class of events."
+msgstr ""
+"การจัดกลุ่มแบบหยาบที่ใช้ระบุสีไทม์ไลน์และให้การสมัครสมาชิกเลือกเข้าร่วมกิจกรรมทั้งประเภท"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__code
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event_code__code
+msgid "Code"
+msgstr "โค้ด"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__mapping_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_webhook_endpoint_form
+msgid "Code Mapping"
+msgstr "การแมปโค้ด"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__company_id
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_subscription__company_id
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__company_id
+msgid "Company"
+msgstr "บริษัท"
+
+#. module: eh_log_track_trace
+#: model:ir.model,name:eh_log_track_trace.model_res_config_settings
+msgid "Config Settings"
+msgstr "ตั้งค่าการกำหนดค่า"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_freight_job__track_event_count
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_last_mile_delivery__track_event_count
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_last_mile_wave__track_event_count
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_trackable__track_event_count
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_transport_trip__track_event_count
+msgid "Count of normalized tracking events on the public log."
+msgstr "จำนวนเหตุการณ์การติดตามที่ถูกทำให้เป็นมาตรฐานบนบันทึกสาธารณะ"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__create_uid
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event_code__create_uid
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_subscription__create_uid
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__create_uid
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_mapping__create_uid
+msgid "Created by"
+msgstr "สร้างโดย"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__create_date
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event_code__create_date
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_subscription__create_date
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__create_date
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_mapping__create_date
+msgid "Created on"
+msgstr "สร้างเมื่อ"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__secret_key
+msgid "Credentials Key"
+msgstr "คีย์ข้อมูลรับรอง"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event_code__name
+msgid "Customer-facing label rendered on the public timeline."
+msgstr "ป้ายกำกับที่แสดงต่อลูกค้าซึ่งปรากฏบนไทม์ไลน์สาธารณะ"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_customs_cleared
+msgid "Customs Cleared"
+msgstr "ผ่านพิธีการศุลกากรแล้ว"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_customs_hold
+msgid "Customs Hold"
+msgstr "การกักโดยศุลกากร"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_customs_cleared
+msgid "Customs cleared."
+msgstr "ผ่านพิธีการศุลกากรแล้ว"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event_code__default_description
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_code_form
+msgid "Default Description"
+msgstr "คำอธิบายเริ่มต้น"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_delivered
+msgid "Delivered"
+msgstr "จัดส่งแล้ว"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields.selection,name:eh_log_track_trace.selection__eh_log_track_event_code__category__delivery
+msgid "Delivery"
+msgstr "การจัดส่ง"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_delivery_failed
+msgid "Delivery Failed"
+msgstr "การส่งล้มเหลว"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_delivery_failed
+msgid "Delivery attempt failed."
+msgstr "ความพยายามในการจัดส่งล้มเหลว"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__description
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_form
+msgid "Description"
+msgstr "คำอธิบาย"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields.selection,name:eh_log_track_trace.selection__eh_log_track_event_code__category__destination
+msgid "Destination"
+msgstr "ปลายทาง"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_dispatched
+msgid "Dispatched"
+msgstr "ถูกจัดส่งแล้ว"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_freight_job__display_name
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_last_mile_delivery__display_name
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_last_mile_wave__display_name
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__display_name
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event_code__display_name
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_subscription__display_name
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_trackable__display_name
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__display_name
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_mapping__display_name
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_transport_trip__display_name
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr "แสดงชื่อ"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_webhook_endpoint__reference_path
+msgid ""
+"Dotted JSON path to the carrier's shipment reference. The reference matches "
+"against the source record's tracking_reference field."
+msgstr ""
+"เส้นทาง JSON แบบจุดไปยังเลขอ้างอิงการจัดส่งของผู้ขนส่ง "
+"เลขอ้างอิงจะจับคู่กับฟิลด์ tracking_reference ของเรคคอร์ดต้นทาง"
+
+#. module: eh_log_track_trace
+#: model:ir.model.constraint,message:eh_log_track_trace.constraint_eh_log_track_subscription_subscription_unique
+msgid "Duplicate subscription for the same partner, record, and channel."
+msgstr "การสมัครสมาชิกซ้ำสำหรับพาร์ทเนอร์ ระเบียน และช่องทางเดียวกัน"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.res_config_settings_view_form_track
+msgid "ERP Heritage Track and Trace"
+msgstr ""
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields.selection,name:eh_log_track_trace.selection__eh_log_track_subscription__channel__email
+msgid "Email"
+msgstr "อีเมล"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_subscription__channel
+msgid ""
+"Email queues an outbound mail per matching event. Portal-only suppresses "
+"outbound mail; the partner sees events on the public page only."
+msgstr ""
+"อีเมลจะจัดคิวเมลขาออกหนึ่งฉบับต่อเหตุการณ์ที่ตรงกัน "
+"พอร์ทัลเท่านั้นจะระงับเมลขาออก คู่ค้าจะเห็นเหตุการณ์บนหน้าสาธารณะเท่านั้น"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_mapping__endpoint_id
+msgid "Endpoint"
+msgstr ""
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/models/eh_log_track_event.py:0
+msgid "Event"
+msgstr "อีเวนต์"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__event_code_id
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_search
+msgid "Event Code"
+msgstr "รหัสเหตุการณ์"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__event_code_path
+msgid "Event Code JSON Path"
+msgstr "เส้นทาง JSON ของรหัสเหตุการณ์"
+
+#. module: eh_log_track_trace
+#: model:ir.actions.act_window,name:eh_log_track_trace.action_eh_log_track_event_code
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_subscription__event_code_ids
+#: model:ir.ui.menu,name:eh_log_track_trace.menu_eh_log_track_event_codes
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_subscription_form
+msgid "Event Codes"
+msgstr "รหัสเหตุการณ์"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_graph
+msgid "Events by Code"
+msgstr "เหตุการณ์ตามรหัส"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_exception
+#: model:ir.model.fields.selection,name:eh_log_track_trace.selection__eh_log_track_event_code__category__exception
+msgid "Exception"
+msgstr "ข้อยกเว้น"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_search
+msgid "Exceptions"
+msgstr "ข้อยกเว้น"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_last_mile_delivery__tracking_reference
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_transport_trip__tracking_reference
+msgid "External Tracking Reference"
+msgstr "การอ้างอิงการติดตามภายนอก"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_last_mile_wave__tracking_reference
+msgid "External Wave Reference"
+msgstr "การอ้างอิงเวฟภายนอก"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_freight_job__tracking_reference
+msgid ""
+"External reference the carrier uses on inbound webhooks to identify this "
+"job. Populated when the booking comes back from the carrier with their "
+"reference."
+msgstr ""
+"การอ้างอิงภายนอกที่ผู้ขนส่งใช้บน webhook ขาเข้าเพื่อระบุงานนี้ "
+"จะถูกกรอกเมื่อการจองกลับมาจากผู้ขนส่งพร้อมการอ้างอิงของพวกเขา"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event__location
+msgid ""
+"Free-text location string from the source. The public page renders it under "
+"the event description."
+msgstr ""
+"สตริงตำแหน่งแบบข้อความอิสระจากแหล่งที่มา "
+"หน้าสาธารณะจะแสดงไว้ใต้คำอธิบายกิจกรรม"
+
+#. module: eh_log_track_trace
+#: model:ir.model,name:eh_log_track_trace.model_eh_log_freight_job
+msgid "Freight Forwarding Job"
+msgstr "งานรับจัดการขนส่งสินค้า"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_freight_job__track_url
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_last_mile_delivery__track_url
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_last_mile_wave__track_url
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_trackable__track_url
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_transport_trip__track_url
+msgid ""
+"Full URL for the customer-facing tracking page. Built from the configured "
+"public base URL and the tracking token."
+msgstr ""
+"URL แบบเต็มสำหรับหน้าติดตามที่แสดงต่อลูกค้า สร้างจาก URL "
+"ฐานสาธารณะที่กำหนดค่าไว้และโทเค็นการติดตาม"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_webhook_endpoint__signature_header
+msgid ""
+"HTTP header carrying the HMAC-SHA256 hex digest the carrier signs the "
+"request body with."
+msgstr ""
+"ส่วนหัว HTTP ที่นำพาไดเจสต์เลขฐานสิบหก HMAC-SHA256 "
+"ที่ผู้ขนส่งใช้ลงนามเนื้อหาคำขอ"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.res_config_settings_view_form_track
+msgid "Hostname customers see in tracking URLs."
+msgstr "ชื่อโฮสต์ที่ลูกค้าเห็นใน URL การติดตาม"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_res_config_settings__eh_log_track_public_base_url
+msgid ""
+"Hostname customers see in tracking URLs. Falls back to the system base URL "
+"if blank."
+msgstr ""
+"ชื่อโฮสต์ที่ลูกค้าเห็นใน URL การติดตาม หากเว้นว่างจะย้อนกลับไปใช้ base URL "
+"ของระบบ"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_freight_job__id
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_last_mile_delivery__id
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_last_mile_wave__id
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__id
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event_code__id
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_subscription__id
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_trackable__id
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__id
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_mapping__id
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_transport_trip__id
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_res_config_settings__id
+msgid "ID"
+msgstr "ไอดี"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event_code__icon_name
+msgid "Icon Name"
+msgstr "ชื่อไอคอน"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_subscription__event_code_ids
+msgid ""
+"If empty, all milestone events on the record trigger a notification. If "
+"populated, only events matching one of the listed codes trigger."
+msgstr ""
+"หากว่างเปล่า เหตุการณ์หลักหมายทั้งหมดในระเบียนจะทริกเกอร์การแจ้งเตือน "
+"หากมีข้อมูล "
+"เฉพาะเหตุการณ์ที่ตรงกับรหัสรายการใดรายการหนึ่งเท่านั้นที่จะทริกเกอร์"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event__is_milestone
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event_code__is_milestone
+msgid ""
+"If set, raising this event triggers notifications on all matching "
+"subscriptions. Non-milestone events still appear on the timeline but do not "
+"page customers."
+msgstr ""
+"หากตั้งค่าไว้ "
+"การทริกเกอร์เหตุการณ์นี้จะส่งการแจ้งเตือนไปยังการสมัครสมาชิกที่ตรงกันทั้งหมด"
+" เหตุการณ์ที่ไม่ใช่หลักหมายยังคงปรากฏบนไทม์ไลน์แต่จะไม่แจ้งเตือนลูกค้า"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields.selection,name:eh_log_track_trace.selection__eh_log_track_event__source__import
+msgid "Import"
+msgstr "นำเข้า"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_in_transit
+msgid "In Transit"
+msgstr "อยู่ระหว่างการขนส่ง"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields.selection,name:eh_log_track_trace.selection__eh_log_track_event__source__internal
+msgid "Internal"
+msgstr "ภายใน"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_webhook_endpoint_form
+msgid "JSON Field Paths"
+msgstr "เส้นทางฟิลด์ JSON"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event_code__name
+msgid "Label"
+msgstr "ป้าย"
+
+#. module: eh_log_track_trace
+#: model:ir.model,name:eh_log_track_trace.model_eh_log_last_mile_delivery
+msgid "Last Mile Delivery"
+msgstr "การจัดส่งระยะสุดท้าย"
+
+#. module: eh_log_track_trace
+#: model:ir.model,name:eh_log_track_trace.model_eh_log_last_mile_wave
+msgid "Last Mile Wave"
+msgstr "เวฟระยะสุดท้าย"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__write_uid
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event_code__write_uid
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_subscription__write_uid
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__write_uid
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_mapping__write_uid
+msgid "Last Updated by"
+msgstr "อัปเดตครั้งล่าสุดโดย"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__write_date
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event_code__write_date
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_subscription__write_date
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__write_date
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_mapping__write_date
+msgid "Last Updated on"
+msgstr "อัปเดตครั้งล่าสุดเมื่อ"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__location
+msgid "Location"
+msgstr "สถานที่"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__location_path
+msgid "Location JSON Path"
+msgstr "เส้นทาง JSON ของตำแหน่ง"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_webhook_endpoint__secret_key
+msgid ""
+"Lookup key passed to the credentials helper to fetch the shared secret. "
+"Resolves through env var, encrypted ir.config_parameter, then default."
+msgstr ""
+"คีย์ค้นหาที่ส่งไปยังตัวช่วยข้อมูลรับรองเพื่อดึงความลับที่ใช้ร่วมกัน "
+"แก้ไขผ่าน env var, ir.config_parameter ที่เข้ารหัส แล้วจึงเป็นค่าเริ่มต้น"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_webhook_endpoint__carrier_name
+msgid ""
+"Lower-case carrier identifier appearing in the inbound URL: "
+"/track/event/<carrier_name>. No spaces."
+msgstr ""
+"ตัวระบุผู้ขนส่งเป็นตัวพิมพ์เล็กที่ปรากฏใน URL ขาเข้า: "
+"/track/event/<carrier_name> ไม่มีช่องว่าง"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_kanban
+msgid "M"
+msgstr ""
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__is_milestone
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event_code__is_milestone
+msgid "Milestone"
+msgstr "ไมล์สโตน"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_search
+msgid "Milestones"
+msgstr "ไมล์สโตน"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event__notes
+msgid ""
+"Mutable free-text annotation. Distinct from the event description: the "
+"description is shown publicly; notes are internal."
+msgstr ""
+"คำอธิบายประกอบข้อความอิสระที่แก้ไขได้ แตกต่างจากคำอธิบายของเหตุการณ์: "
+"คำอธิบายจะแสดงต่อสาธารณะ ส่วนบันทึกเป็นข้อมูลภายใน"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__name
+msgid "Name"
+msgstr "ชื่อ"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.public_track_not_found
+msgid "No shipment matched the tracking link. Check the link and try again."
+msgstr "ไม่มีการจัดส่งที่ตรงกับลิงก์ติดตาม ตรวจสอบลิงก์แล้วลองอีกครั้ง"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.public_track_page
+msgid "No tracking events yet. Check back shortly."
+msgstr "ยังไม่มีเหตุการณ์ติดตาม กลับมาตรวจสอบอีกครั้งในไม่ช้า"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_mapping__event_code_id
+msgid "Normalized Event"
+msgstr "เหตุการณ์ที่ทำให้เป็นมาตรฐานแล้ว"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__occurred_at
+msgid "Occurred At"
+msgstr "เกิดขึ้นเมื่อ"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__occurred_at_path
+msgid "Occurred-At JSON Path"
+msgstr "เส้นทาง JSON Occurred-At"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_webhook_endpoint__mapping_ids
+msgid ""
+"One row per carrier-supplied event code, mapping it to a normalized "
+"eh.log.track.event.code. Inbound events with no mapping are ignored after a "
+"warning is logged."
+msgstr ""
+"หนึ่งแถวต่อรหัสเหตุการณ์ที่ผู้ขนส่งจัดหา โดยแมปไปยัง eh.log.track.event.code"
+" ที่ปรับให้เป็นมาตรฐาน "
+"เหตุการณ์ขาเข้าที่ไม่มีการแมปจะถูกละเว้นหลังจากบันทึกคำเตือน"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event__description
+msgid ""
+"One-line description rendered on the public timeline. Falls back to the "
+"event code default if the source passes nothing."
+msgstr ""
+"คำอธิบายบรรทัดเดียวที่แสดงบนไทม์ไลน์สาธารณะ "
+"จะย้อนกลับไปใช้ค่าเริ่มต้นของรหัสเหตุการณ์หากแหล่งที่มาไม่ส่งค่าใดเลย"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__notes
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_form
+msgid "Operator Notes"
+msgstr "บันทึกของผู้ปฏิบัติงาน"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_webhook_endpoint__name
+msgid "Operator-facing name used in logs and the audit trail."
+msgstr "ชื่อที่ผู้ปฏิบัติงานเห็นซึ่งใช้ในบันทึกและร่องรอยการตรวจสอบ"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_webhook_endpoint__location_path
+msgid "Optional. Leave blank if the carrier omits location."
+msgstr "ไม่บังคับ ปล่อยว่างไว้หากผู้ขนส่งไม่ระบุตำแหน่งที่ตั้ง"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields.selection,name:eh_log_track_trace.selection__eh_log_track_event_code__category__origin
+msgid "Origin"
+msgstr "จุดเริ่ม"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_out_for_delivery
+msgid "Out for Delivery"
+msgstr "กำลังนำส่ง"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_out_for_delivery
+msgid "Out for last-mile delivery."
+msgstr "กำลังนำส่งช่วงสุดท้าย"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_res_config_settings__eh_log_track_token_salt
+msgid ""
+"Per-database salt used to derive non-enumerable public tracking tokens. "
+"Rotate to invalidate outstanding tracking links."
+msgstr ""
+"salt ต่อฐานข้อมูลที่ใช้ในการสร้างโทเค็นติดตามสาธารณะที่ไม่สามารถแจกแจงได้ "
+"หมุนเวียนเพื่อทำให้ลิงก์ติดตามที่ยังใช้งานอยู่เป็นโมฆะ"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.res_config_settings_view_form_track
+msgid ""
+"Per-database salt used to derive non-enumerable tracking tokens. Rotating it"
+" invalidates outstanding links."
+msgstr ""
+"salt ต่อฐานข้อมูลที่ใช้ในการสร้างโทเค็นติดตามที่ไม่สามารถแจกแจงได้ "
+"การหมุนเวียนจะทำให้ลิงก์ที่ยังใช้งานอยู่เป็นโมฆะ"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_picked_up
+msgid "Picked Up"
+msgstr "รับของแล้ว"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields.selection,name:eh_log_track_trace.selection__eh_log_track_subscription__channel__portal
+msgid "Portal Only"
+msgstr "พอร์ทัลเท่านั้น"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.res_config_settings_view_form_track
+msgid "Public Base URL"
+msgstr "URL ฐานสาธารณะ"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.res_config_settings_view_form_track
+msgid "Public Tracking Page"
+msgstr "หน้าติดตามสาธารณะ"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_freight_job__track_url
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_last_mile_delivery__track_url
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_last_mile_wave__track_url
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_trackable__track_url
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_transport_trip__track_url
+msgid "Public Tracking URL"
+msgstr "URL ติดตามสาธารณะ"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__raw_payload
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_form
+msgid "Raw Payload"
+msgstr "เพย์โหลดดิบ"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__reference_path
+msgid "Reference JSON Path"
+msgstr "เส้นทาง JSON อ้างอิง"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_returned
+msgid "Returned"
+msgstr "ส่งคืนแล้ว"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event_code__sequence
+msgid "Sequence"
+msgstr "ลำดับ"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_booked
+msgid "Shipment Booked"
+msgstr "จองการจัดส่งแล้ว"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.public_track_not_found
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.public_track_page
+msgid "Shipment Tracking"
+msgstr "การติดตามการจัดส่ง"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_arrived
+msgid "Shipment arrived at destination."
+msgstr "การจัดส่งมาถึงปลายทางแล้ว"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_cancelled
+msgid "Shipment cancelled."
+msgstr "ยกเลิกการจัดส่งแล้ว"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_picked_up
+msgid "Shipment collected from origin."
+msgstr "รับพัสดุจากต้นทางแล้ว"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_booked
+msgid "Shipment confirmed and booked."
+msgstr "ยืนยันและจองการจัดส่งแล้ว"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_delivered
+msgid "Shipment delivered."
+msgstr "จัดส่งแล้ว"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_exception
+msgid "Shipment exception reported."
+msgstr "รายงานข้อยกเว้นการจัดส่งแล้ว"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_closed
+msgid "Shipment file closed."
+msgstr "ปิดแฟ้มการจัดส่งแล้ว"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_customs_hold
+msgid "Shipment held at customs pending clearance."
+msgstr "การจัดส่งถูกกักไว้ที่ศุลกากรระหว่างรอการตรวจปล่อย"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_in_transit
+msgid "Shipment in transit."
+msgstr "การจัดส่งอยู่ระหว่างขนส่ง"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_returned
+msgid "Shipment returned to sender."
+msgstr "ส่งคืนพัสดุให้ผู้ส่งแล้ว"
+
+#. module: eh_log_track_trace
+#: model:mail.template,subject:eh_log_track_trace.email_template_track_event_milestone
+msgid "Shipment update: {{ object.event_code_id.name }}"
+msgstr "อัปเดตการจัดส่ง: {{ object.event_code_id.name }}"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__signature_header
+msgid "Signature Header"
+msgstr "ส่วนหัวของลายเซ็น"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__source
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_search
+msgid "Source"
+msgstr "แหล่งที่มา"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__res_id
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_subscription__res_id
+msgid "Source ID"
+msgstr "ID ต้นทาง"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__res_model
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_subscription__res_model
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_search
+msgid "Source Model"
+msgstr "โมเดลต้นทาง"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event__code
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event_code__code
+msgid ""
+"Stable, machine-readable identifier. Subscriptions and carrier mappings "
+"reference this value, never the label."
+msgstr ""
+"ตัวระบุที่เสถียรและอ่านได้ด้วยเครื่อง "
+"การสมัครสมาชิกและการแมปผู้ขนส่งอ้างอิงค่านี้ ไม่เคยอ้างอิงป้ายกำกับ"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_freight_job__tracking_token
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_last_mile_delivery__tracking_token
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_last_mile_wave__tracking_token
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_trackable__tracking_token
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_transport_trip__tracking_token
+msgid ""
+"Stable, non-enumerable token used in the public tracking URL. Derived from "
+"the record id and the per-database salt. Safe to share with customers."
+msgstr ""
+"โทเค็นที่เสถียรและไม่สามารถแจกแจงได้ซึ่งใช้ใน URL ติดตามสาธารณะ ได้มาจาก id "
+"ของเรกคอร์ดและ salt ต่อฐานข้อมูล ปลอดภัยที่จะแบ่งปันกับลูกค้า"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_subscription__partner_id
+msgid "Subscriber"
+msgstr "ผู้สมัครสมาชิก"
+
+#. module: eh_log_track_trace
+#: model:ir.actions.act_window,name:eh_log_track_trace.action_eh_log_track_subscription
+#: model:ir.ui.menu,name:eh_log_track_trace.menu_eh_log_track_subscriptions
+msgid "Subscriptions"
+msgstr "การสมัครสมาชิก"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event_code__icon_name
+msgid ""
+"Symbol-name only (no path or colour). The public template maps the name to "
+"the SVG sprite asset; this keeps the code master decoupled from the "
+"renderer."
+msgstr ""
+"เฉพาะชื่อสัญลักษณ์เท่านั้น (ไม่มีเส้นทางหรือสี) "
+"เทมเพลตสาธารณะจะจับคู่ชื่อกับแอสเซต SVG sprite "
+"ซึ่งช่วยให้มาสเตอร์โค้ดแยกจากตัวเรนเดอร์"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__target_model
+msgid "Target Model"
+msgstr "โมเดลเป้าหมาย"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event__res_model
+msgid ""
+"Technical name of the trackable model the event belongs to. Combined with "
+"res_id this points back to the source record without needing a foreign key "
+"per model."
+msgstr ""
+"ชื่อทางเทคนิคของโมเดลที่ติดตามได้ซึ่งเหตุการณ์นี้สังกัดอยู่ เมื่อรวมกับ "
+"res_id จะชี้กลับไปยังเรกคอร์ดต้นทางโดยไม่ต้องมี foreign key ต่อโมเดล"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event__raw_payload
+msgid ""
+"The unmodified payload (JSON, XML, etc.) from the carrier webhook. Internal-"
+"source events leave this blank. Used for forensics when a customer disputes "
+"a timeline entry."
+msgstr ""
+"เพย์โหลดที่ไม่ได้แก้ไข (JSON, XML ฯลฯ) จาก webhook ของผู้ขนส่ง "
+"เหตุการณ์จากแหล่งภายในจะเว้นว่างไว้ "
+"ใช้สำหรับการตรวจสอบทางนิติวิทยาศาสตร์เมื่อลูกค้าโต้แย้งรายการในไทม์ไลน์"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.res_config_settings_view_form_track
+msgid "Token Salt"
+msgstr "Salt โทเคน"
+
+#. module: eh_log_track_trace
+#: model:ir.ui.menu,name:eh_log_track_trace.menu_eh_log_track_config_root
+#: model:ir.ui.menu,name:eh_log_track_trace.menu_eh_log_track_root
+msgid "Track and Trace"
+msgstr "การติดตามและตรวจสอบ"
+
+#. module: eh_log_track_trace
+#: model:ir.actions.act_window,name:eh_log_track_trace.action_eh_log_track_trace_settings
+msgid "Track and Trace Settings"
+msgstr "การตั้งค่าการติดตามและตรวจสอบ"
+
+#. module: eh_log_track_trace
+#: model:ir.model,name:eh_log_track_trace.model_eh_log_track_trackable
+msgid "Trackable Record Mixin"
+msgstr ""
+
+#. module: eh_log_track_trace
+#: model:ir.model,name:eh_log_track_trace.model_eh_log_track_event
+msgid "Tracking Event"
+msgstr "เหตุการณ์การติดตาม"
+
+#. module: eh_log_track_trace
+#: model:ir.model,name:eh_log_track_trace.model_eh_log_track_event_code
+msgid "Tracking Event Code"
+msgstr "รหัสเหตุการณ์การติดตาม"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/models/eh_log_track_trackable.py:0
+#: model:ir.actions.act_window,name:eh_log_track_trace.action_eh_log_track_event
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_freight_job__track_event_count
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_last_mile_delivery__track_event_count
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_last_mile_wave__track_event_count
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_trackable__track_event_count
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_transport_trip__track_event_count
+#: model:ir.ui.menu,name:eh_log_track_trace.menu_eh_log_track_events
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_freight_job_form_track
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_last_mile_delivery_form_track
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_calendar
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_pivot
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_transport_trip_form_track
+msgid "Tracking Events"
+msgstr "เหตุการณ์การติดตาม"
+
+#. module: eh_log_track_trace
+#: model:ir.model,name:eh_log_track_trace.model_eh_log_track_subscription
+msgid "Tracking Notification Subscription"
+msgstr "การสมัครรับการแจ้งเตือนการติดตาม"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_res_config_settings__eh_log_track_public_base_url
+msgid "Tracking Public Base URL"
+msgstr "URL ฐานสาธารณะสำหรับการติดตาม"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_freight_job__tracking_token
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_last_mile_delivery__tracking_token
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_last_mile_wave__tracking_token
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_trackable__tracking_token
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_transport_trip__tracking_token
+msgid "Tracking Token"
+msgstr "โทเค็นการติดตาม"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_res_config_settings__eh_log_track_token_salt
+msgid "Tracking Token Salt"
+msgstr "ซอลต์ของโทเค็นการติดตาม"
+
+#. module: eh_log_track_trace
+#: model:ir.model.constraint,message:eh_log_track_trace.constraint_eh_log_track_event_code_code_unique
+msgid "Tracking event code must be unique."
+msgstr "รหัสเหตุการณ์การติดตามต้องไม่ซ้ำกัน"
+
+#. module: eh_log_track_trace
+#: model:mail.template,name:eh_log_track_trace.email_template_track_event_milestone
+msgid "Tracking: Milestone Notification"
+msgstr "การติดตาม: การแจ้งเตือนจุดสำคัญ"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields.selection,name:eh_log_track_trace.selection__eh_log_track_event_code__category__transit
+msgid "Transit"
+msgstr "การขนส่ง"
+
+#. module: eh_log_track_trace
+#: model:ir.model,name:eh_log_track_trace.model_eh_log_transport_trip
+msgid "Transport Trip"
+msgstr "เที่ยวการขนส่ง"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/models/eh_log_track_subscription.py:0
+msgid "Unknown"
+msgstr "ไม่ทราบ"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event_code__default_description
+msgid ""
+"Used as the timeline description when the event source does not supply a "
+"per-event description."
+msgstr ""
+"ใช้เป็นคำอธิบายของไทม์ไลน์เมื่อแหล่งเหตุการณ์ไม่ได้ระบุคำอธิบายต่อเหตุการณ์"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_at_delivery
+msgid "Vehicle at delivery location."
+msgstr "ยานพาหนะอยู่ที่จุดจัดส่ง"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_at_pickup
+msgid "Vehicle at pickup location."
+msgstr "ยานพาหนะอยู่ที่จุดรับสินค้า"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_dispatched
+msgid "Vehicle dispatched from origin."
+msgstr "ยานพาหนะถูกส่งออกจากต้นทางแล้ว"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_webhook_mapping__carrier_code
+msgid "Verbatim event code as the carrier emits it."
+msgstr "รหัสเหตุการณ์ตามตัวอักษรตามที่ผู้ขนส่งส่งออกมา"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_wave_completed
+msgid "Wave Completed"
+msgstr "เวฟเสร็จสมบูรณ์"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_wave_dispatched
+msgid "Wave Dispatched"
+msgstr "เวฟถูกส่งออกแล้ว"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_wave_in_progress
+msgid "Wave In Progress"
+msgstr "เวฟกำลังดำเนินการ"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_wave_completed
+msgid "Wave completed."
+msgstr "เวฟเสร็จสมบูรณ์แล้ว"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_wave_dispatched
+msgid "Wave dispatched."
+msgstr "เวฟถูกส่งออกแล้ว"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_wave_in_progress
+msgid "Wave in progress."
+msgstr "เวฟกำลังดำเนินการ"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_search
+msgid "Webhook Source"
+msgstr "แหล่งที่มา Webhook"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event__source
+msgid ""
+"Where the event originated. The raw inbound body of a webhook event is kept "
+"on the raw_payload field."
+msgstr ""
+"เหตุการณ์มาจากที่ใด เนื้อหาขาเข้าดิบของเหตุการณ์ webhook จะถูกเก็บไว้ในฟิลด์"
+" raw_payload"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_webhook_endpoint__target_model
+msgid ""
+"Which trackable model the webhook posts events against. Most carrier "
+"integrations target freight jobs; last-mile carriers target deliveries."
+msgstr ""
+"webhook โพสต์เหตุการณ์ต่อโมเดลที่ติดตามได้ใด "
+"การผสานรวมผู้ขนส่งส่วนใหญ่มุ่งเป้าไปที่งานขนส่งสินค้า; "
+"ผู้ขนส่งช่วงสุดท้ายมุ่งเป้าไปที่การจัดส่ง"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/models/eh_log_track_trackable.py:0
+msgid "[EHL-TRK-001] Unknown tracking event code %(code)s."
+msgstr "[EHL-TRK-001] รหัสเหตุการณ์ติดตาม %(code)s ไม่รู้จัก"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/models/eh_log_track_event_code.py:0
+msgid ""
+"[EHL-TRK-002] Seeded tracking event code %(code)s cannot be renamed; create "
+"a new code instead."
+msgstr ""
+"[EHL-TRK-002] ไม่สามารถเปลี่ยนชื่อรหัสเหตุการณ์ติดตามที่ตั้งไว้ล่วงหน้า "
+"%(code)s ได้; กรุณาสร้างรหัสใหม่แทน"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/models/eh_log_track_event_code.py:0
+msgid ""
+"[EHL-TRK-003] Seeded tracking event code %(code)s cannot be deleted; archive"
+" it instead."
+msgstr ""
+"[EHL-TRK-003] ไม่สามารถลบรหัสเหตุการณ์ติดตามที่ตั้งไว้ล่วงหน้า %(code)s ได้;"
+" กรุณาเก็บถาวรแทน"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/models/eh_log_track_event.py:0
+msgid ""
+"[EHL-TRK-004] Tracking events must be created through log_track_event() on "
+"the source record, not by direct ORM write."
+msgstr ""
+"[EHL-TRK-004] ต้องสร้างเหตุการณ์ติดตามผ่าน log_track_event() "
+"บนเรกคอร์ดต้นทาง ไม่ใช่โดยการเขียน ORM โดยตรง"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/models/eh_log_track_event.py:0
+msgid ""
+"[EHL-TRK-005] Tracking event field(s) %(fields)s are immutable after "
+"creation. Add a new event instead."
+msgstr ""
+"[EHL-TRK-005] ฟิลด์เหตุการณ์ติดตาม %(fields)s ไม่สามารถแก้ไขได้หลังจากสร้าง "
+"กรุณาเพิ่มเหตุการณ์ใหม่แทน"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/models/eh_log_track_event.py:0
+msgid ""
+"[EHL-TRK-006] Tracking events are append-only and cannot be deleted; archive"
+" the source record instead."
+msgstr ""
+"[EHL-TRK-006] เหตุการณ์ติดตามเพิ่มได้อย่างเดียวและไม่สามารถลบได้; "
+"กรุณาเก็บถาวรเรกคอร์ดต้นทางแทน"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/models/eh_log_track_subscription.py:0
+msgid "[EHL-TRK-007] Subscription source model %(model)s does not exist."
+msgstr "[EHL-TRK-007] ไม่มีโมเดลต้นทางการสมัครสมาชิก %(model)s"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/models/eh_log_track_subscription.py:0
+msgid ""
+"[EHL-TRK-008] Source model %(model)s is not trackable; it must inherit "
+"eh.log.track.trackable to be subscribed to."
+msgstr ""
+"[EHL-TRK-008] โมเดลต้นทาง %(model)s ไม่สามารถติดตามได้ ต้องสืบทอด "
+"eh.log.track.trackable จึงจะสมัครรับข้อมูลได้"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/models/eh_log_track_webhook_endpoint.py:0
+msgid ""
+"[EHL-TRK-009] Carrier name %(name)s must be alphanumeric or underscore only."
+msgstr ""
+"[EHL-TRK-009] ชื่อผู้ขนส่ง %(name)s "
+"ต้องเป็นตัวอักษรและตัวเลขหรือขีดล่างเท่านั้น"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/models/eh_log_track_webhook_endpoint.py:0
+msgid "[EHL-TRK-010] Carrier name %(name)s must be lower-case."
+msgstr "[EHL-TRK-010] ชื่อผู้ขนส่ง %(name)s ต้องเป็นตัวพิมพ์เล็ก"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/controllers/carrier_webhook.py:0
+msgid "accepted"
+msgstr "ยอมรับแล้ว"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/controllers/carrier_webhook.py:0
+msgid "bad signature"
+msgstr "ลายเซ็นไม่ถูกต้อง"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.res_config_settings_view_form_track
+msgid "https://track.example.com"
+msgstr ""
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/controllers/carrier_webhook.py:0
+msgid "ignored"
+msgstr "ถูกละเว้น"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/controllers/carrier_webhook.py:0
+msgid "malformed JSON"
+msgstr "JSON ที่มีรูปแบบไม่ถูกต้อง"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/controllers/carrier_webhook.py:0
+msgid "misconfigured"
+msgstr "กำหนดค่าไม่ถูกต้อง"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/controllers/carrier_webhook.py:0
+msgid "missing required field"
+msgstr "ไม่มีฟิลด์ที่จำเป็น"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/controllers/carrier_webhook.py:0
+msgid "missing signature"
+msgstr "ไม่มีลายเซ็น"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/models/eh_log_track_trackable.py:0
+msgid "res_model"
+msgstr ""
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/controllers/carrier_webhook.py:0
+msgid "unknown carrier"
+msgstr "ผู้ขนส่งที่ไม่ทราบ"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/controllers/carrier_webhook.py:0
+msgid "unknown reference"
+msgstr "การอ้างอิงที่ไม่ทราบ"

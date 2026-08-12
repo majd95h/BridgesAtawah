@@ -1,0 +1,1434 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* eh_log_dangerous_goods
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-01 04:33+0000\n"
+"PO-Revision-Date: 2026-07-01 04:33+0000\n"
+"Last-Translator: ERP Heritage <info@erpheritage.com.au>\n"
+"Language-Team: Spanish\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n != 0 && n % 1000000 == 0) ? 1 : 2);\n"
+
+#. module: eh_log_dangerous_goods
+#. odoo-python
+#: code:addons/eh_log_dangerous_goods/models/eh_log_dg_declaration.py:0
+msgid "(none)"
+msgstr "(ninguno)"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_class__primary_class__1
+msgid "1 Explosives"
+msgstr "1 Explosivos"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_class__primary_class__2
+msgid "2 Gases"
+msgstr "2 gases"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_class__primary_class__3
+msgid "3 Flammable Liquids"
+msgstr "3 Liquidos inflamables"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_class__primary_class__4
+msgid "4 Flammable Solids and Self-Reactive"
+msgstr "4 Sólidos inflamables y sustancias autorreactivas"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_class__primary_class__5
+msgid "5 Oxidising Substances and Organic Peroxides"
+msgstr "5 Sustancias comburentes y peróxidos orgánicos"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_class__primary_class__6
+msgid "6 Toxic and Infectious Substances"
+msgstr "6 Sustancias tóxicas e infecciosas"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_class__primary_class__7
+msgid "7 Radioactive Material"
+msgstr "7 Material radiactivo"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_class__primary_class__8
+msgid "8 Corrosive Substances"
+msgstr "8 Sustancias corrosivas"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_class__primary_class__9
+msgid "9 Miscellaneous Dangerous Substances"
+msgstr "9 Sustancias peligrosas diversas"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid ""
+"<span class=\"eh_pdf_status_badge eh_pdf_status_warn\">MARINE "
+"POLLUTANT</span>"
+msgstr ""
+"<span class=\"eh_pdf_status_badge eh_pdf_status_warn\">CONTAMINANTE "
+"MARINO</span>"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid "<strong>Mode:</strong>"
+msgstr "<strong>Modo:</strong>"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid "<strong>Reference:</strong>"
+msgstr "<strong>Referencia:</strong>"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_declaration_form
+msgid "<strong>Segregation incompatibilities detected.</strong>"
+msgstr "<strong>Se detectaron incompatibilidades de segregación.</strong>"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid "<strong>State:</strong>"
+msgstr "<strong>Estado:</strong>"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_un_number__adr_special_provisions
+msgid "ADR Special Provisions"
+msgstr "Disposiciones especiales ADR"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.un.number,proper_shipping_name:eh_log_dangerous_goods.un_1090
+msgid "Acetone"
+msgstr "Acetona"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__message_needaction
+msgid "Action Needed"
+msgstr "Acción requerida"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_class__active
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_un_number__active
+msgid "Active"
+msgstr "Activo"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__activity_ids
+msgid "Activities"
+msgstr "Actividades"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Decoración de Actividad de Excepción"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__activity_state
+msgid "Activity State"
+msgstr "Estado de la actividad"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Icono de tipo de actividad"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.un.number,proper_shipping_name:eh_log_dangerous_goods.un_1950
+msgid "Aerosols"
+msgstr "Aerosoles"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_declaration__mode__air
+msgid "Air (IATA DGR)"
+msgstr "Aéreo (IATA DGR)"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_un_number_form
+msgid "Air Transport (IATA)"
+msgstr "Transporte aéreo (IATA)"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,help:eh_log_dangerous_goods.field_eh_log_dg_declaration__flight_number
+msgid "Air only."
+msgstr "Solo aéreo."
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__message_attachment_count
+msgid "Attachment Count"
+msgstr "Número de archivos adjuntos"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_declaration_form
+msgid "Audit"
+msgstr "Auditoría"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid "Authorised Signatory"
+msgstr "Firmante autorizado"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_declaration_form
+msgid "Back to Draft"
+msgstr "Volver a borrador"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.un.number,proper_shipping_name:eh_log_dangerous_goods.un_2794
+msgid "Batteries, wet, filled with acid"
+msgstr "Baterías, húmedas, rellenas de ácido"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.un.number,proper_shipping_name:eh_log_dangerous_goods.un_3373
+msgid "Biological substance, Category B"
+msgstr "Sustancia biológica, categoría B"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_declaration_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_declaration__state__cancelled
+msgid "Cancelled"
+msgstr "Cancelado"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid "Class"
+msgstr "Clase"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_class__code
+msgid "Class Code"
+msgstr "Código de clase"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,help:eh_log_dangerous_goods.field_eh_log_dg_class__incompatible_class_ids
+msgid ""
+"Classes that cannot share a transport unit with this class without specific "
+"segregation. Drives the segregation detector on the declaration."
+msgstr ""
+"Clases que no pueden compartir una unidad de transporte con esta clase sin "
+"una segregación específica. Impulsa el detector de segregación en la "
+"declaración."
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_un_number_form
+msgid "Classification"
+msgstr "Clasificación"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__company_ids
+msgid "Companies"
+msgstr "Compañías"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__company_id
+msgid "Company"
+msgstr "Compañía"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_declaration__segregation_status__ok
+msgid "Compatible"
+msgstr ""
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,help:eh_log_dangerous_goods.field_eh_log_dg_declaration__segregation_status
+msgid ""
+"Computed from the lines' primary classes versus each class's incompatibility"
+" list."
+msgstr ""
+"Calculado a partir de las clases principales de las líneas frente a la lista"
+" de incompatibilidad de cada clase."
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__consignee_id
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid "Consignee"
+msgstr "Consignatario"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.class,placard_description:eh_log_dangerous_goods.dg_class_8
+msgid "Corrosive"
+msgstr "Corrosivo"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.class,name:eh_log_dangerous_goods.dg_class_8
+msgid "Corrosive Substance"
+msgstr "Sustancia corrosiva"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_class__create_uid
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__create_uid
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration_line__create_uid
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_un_number__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_class__create_date
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__create_date
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration_line__create_date
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_un_number__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_freight_job_form_dg
+msgid "DG"
+msgstr ""
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_declaration_form
+msgid "DG Declaration"
+msgstr "Declaración de mercancías peligrosas"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model,name:eh_log_dangerous_goods.model_eh_log_dg_declaration_line
+msgid "DG Declaration Line"
+msgstr "Línea de declaración de mercancías peligrosas"
+
+#. module: eh_log_dangerous_goods
+#. odoo-python
+#: code:addons/eh_log_dangerous_goods/models/eh_log_freight_job.py:0
+#: model:ir.actions.act_window,name:eh_log_dangerous_goods.action_eh_log_dg_declaration
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_freight_job__dg_declaration_count
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_freight_job__dg_declaration_ids
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_sale_order__eh_log_dg_declaration_count
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_sale_order__eh_log_dg_declaration_ids
+#: model:ir.ui.menu,name:eh_log_dangerous_goods.menu_eh_log_dg_declarations
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_declaration_list
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_sale_order_form_eh_log_dg
+msgid "DG Declarations"
+msgstr "Declaraciones de mercancías peligrosas"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.ui.menu,name:eh_log_dangerous_goods.menu_eh_log_dg_classes
+msgid "DG Hazard Classes"
+msgstr "Clases de peligro DG"
+
+#. module: eh_log_dangerous_goods
+#. odoo-python
+#: code:addons/eh_log_dangerous_goods/models/eh_log_dg_declaration.py:0
+msgid ""
+"DG declaration %(name)s cannot be marked ready. Resolve:\n"
+"\n"
+"- %(list)s"
+msgstr ""
+"La declaración de mercancías peligrosas %(name)s no puede marcarse como lista. Resuelva:\n"
+"\n"
+"- %(list)s"
+
+#. module: eh_log_dangerous_goods
+#. odoo-python
+#: code:addons/eh_log_dangerous_goods/models/eh_log_dg_declaration.py:0
+msgid ""
+"DG declaration %(name)s cannot move from %(current)s to %(target)s. Allowed "
+"transitions from %(current)s: %(allowed)s."
+msgstr ""
+"La declaración de mercancías peligrosas %(name)s no puede pasar de "
+"%(current)s a %(target)s. Transiciones permitidas desde %(current)s: "
+"%(allowed)s."
+
+#. module: eh_log_dangerous_goods
+#. odoo-python
+#: code:addons/eh_log_dangerous_goods/models/eh_log_dg_declaration.py:0
+msgid "DG declaration %(name)s moved to %(state)s."
+msgstr "La declaración de mercancías peligrosas %(name)s pasó a %(state)s."
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_sale_order__eh_log_dg_required
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_sale_order_form_eh_log_dg
+msgid "Dangerous Goods"
+msgstr "Materiales peligrosos"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model,name:eh_log_dangerous_goods.model_eh_log_dg_declaration
+msgid "Dangerous Goods Declaration"
+msgstr "Declaración de mercancías peligrosas"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model,name:eh_log_dangerous_goods.model_eh_log_dg_class
+msgid "Dangerous Goods Hazard Class"
+msgstr "Clase de peligro de mercancías peligrosas"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.class,name:eh_log_dangerous_goods.dg_class_4_3
+#: model:eh.log.dg.class,placard_description:eh_log_dangerous_goods.dg_class_4_3
+msgid "Dangerous When Wet"
+msgstr "Peligroso al mojarse"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration_line__declaration_id
+msgid "Declaration"
+msgstr "Declaración"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_class__description
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_un_number__description
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_class_form
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_un_number_form
+msgid "Description"
+msgstr "Descripción"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid "Discharge"
+msgstr "Liberación"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_class__display_name
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__display_name
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration_line__display_name
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_un_number__display_name
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_freight_job__display_name
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_sale_order__display_name
+msgid "Display Name"
+msgstr "Nombre para mostrar"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_declaration__state__draft
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid "EmS"
+msgstr ""
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_un_number__ems_code
+msgid "EmS Code"
+msgstr "Código EmS"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid "Emergency (24h)"
+msgstr "Emergencia (24h)"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_declaration_form
+msgid "Emergency Contact (24-hour)"
+msgstr "Contacto de emergencia (24 horas)"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__emergency_contact_name
+msgid "Emergency Contact (24h)"
+msgstr "Contacto de emergencia (24h)"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__emergency_contact_phone
+msgid "Emergency Phone (24h)"
+msgstr "Teléfono de emergencia (24h)"
+
+#. module: eh_log_dangerous_goods
+#. odoo-python
+#: code:addons/eh_log_dangerous_goods/models/eh_log_dg_declaration.py:0
+msgid "Emergency contact phone is required."
+msgstr "El teléfono del contacto de emergencia es obligatorio."
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.un.number,proper_shipping_name:eh_log_dangerous_goods.un_3082
+msgid "Environmentally hazardous substance, liquid, n.o.s."
+msgstr "Sustancia peligrosa para el medio ambiente, líquida, n.e.p."
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.un.number,proper_shipping_name:eh_log_dangerous_goods.un_3077
+msgid "Environmentally hazardous substance, solid, n.o.s."
+msgstr "Sustancia peligrosa para el medio ambiente, sólida, n.e.p."
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.un.number,proper_shipping_name:eh_log_dangerous_goods.un_1170
+msgid "Ethanol or Ethyl alcohol"
+msgstr "Etanol o alcohol etílico"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.class,placard_description:eh_log_dangerous_goods.dg_class_1
+msgid "Explosive"
+msgstr "Explosivo"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.class,name:eh_log_dangerous_goods.dg_class_1
+msgid "Explosives"
+msgstr "Explosivos"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid "Field"
+msgstr "Campo"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.class,name:eh_log_dangerous_goods.dg_class_2_1
+#: model:eh.log.dg.class,placard_description:eh_log_dangerous_goods.dg_class_2_1
+msgid "Flammable Gas"
+msgstr "Gas inflamable"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.class,name:eh_log_dangerous_goods.dg_class_3
+#: model:eh.log.dg.class,placard_description:eh_log_dangerous_goods.dg_class_3
+msgid "Flammable Liquid"
+msgstr "Líquido inflamable"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.class,name:eh_log_dangerous_goods.dg_class_4_1
+#: model:eh.log.dg.class,placard_description:eh_log_dangerous_goods.dg_class_4_1
+msgid "Flammable Solid"
+msgstr "Sólido inflamable"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_un_number__flashpoint_celsius
+msgid "Flashpoint (degC)"
+msgstr "Punto de inflamación (°C)"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__flight_number
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid "Flight"
+msgstr "Vuelo"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidores (Contactos)"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,help:eh_log_dangerous_goods.field_eh_log_dg_declaration__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Icono de Font Awesome p. ej. fa-tasks"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_un_number__iata_cargo_aircraft_forbidden
+msgid "Forbidden on Cargo Aircraft"
+msgstr "Prohibido en aeronaves de carga"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_un_number__iata_passenger_aircraft_forbidden
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_un_number_search
+msgid "Forbidden on Passenger Aircraft"
+msgstr "Prohibido en aeronaves de pasajeros"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,help:eh_log_dangerous_goods.field_eh_log_dg_un_number__un_number
+msgid "Format: UN followed by 4 digits, e.g. UN1090."
+msgstr "Formato: UN seguido de 4 dígitos, p. ej. UN1090."
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,help:eh_log_dangerous_goods.field_eh_log_dg_declaration_line__packaging_description
+msgid "Free-form packaging description, e.g. '20 fibreboard boxes, 1 L each'."
+msgstr ""
+"Descripción libre del embalaje, p. ej. '20 cajas de cartón compacto, 1 L "
+"cada una'."
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model,name:eh_log_dangerous_goods.model_eh_log_freight_job
+msgid "Freight Forwarding Job"
+msgstr "Trabajo de agenciamiento de carga"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__freight_job_id
+msgid "Freight Job"
+msgstr "Trabajo de flete"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_un_number_search
+msgid "Group by Class"
+msgstr "Agrupar por clase"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_declaration_search
+msgid "Group by Mode"
+msgstr "Agrupar por modo"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_un_number_search
+msgid "Group by Packing Group"
+msgstr "Agrupar por grupo de embalaje"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_declaration_search
+msgid "Group by State"
+msgstr "Agrupar por estado"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__has_message
+msgid "Has Message"
+msgstr "Tiene un mensaje"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_class_form
+msgid "Hazard Class"
+msgstr "Clase de peligro"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.actions.act_window,name:eh_log_dangerous_goods.action_eh_log_dg_class
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_class_list
+msgid "Hazard Classes"
+msgstr "Clases de peligro"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.constraint,message:eh_log_dangerous_goods.constraint_eh_log_dg_class_code_unique
+msgid "Hazard class code must be unique."
+msgstr "El código de la clase de peligro debe ser único."
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.un.number,proper_shipping_name:eh_log_dangerous_goods.un_1965
+msgid "Hydrocarbon gas mixture, liquefied (LPG)"
+msgstr "Mezcla de gases de hidrocarburos, licuada (LPG)"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.un.number,proper_shipping_name:eh_log_dangerous_goods.un_1789
+msgid "Hydrochloric acid"
+msgstr "Ácido clorhídrico"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_un_number__packing_group__i
+msgid "I (High danger)"
+msgstr "I (Peligro alto)"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid ""
+"I hereby declare that the contents of this consignment are fully and "
+"accurately described above by the proper shipping name, and are classified, "
+"packaged, marked and labelled, and are in all respects in proper condition "
+"for transport according to applicable international and national "
+"governmental regulations."
+msgstr ""
+"Por la presente declaro que el contenido de este envío está descrito arriba "
+"de manera completa y exacta mediante la denominación de transporte "
+"apropiada, y está clasificado, embalado, marcado y etiquetado, y se "
+"encuentra en todos los aspectos en condiciones adecuadas para el transporte "
+"de conformidad con las normativas gubernamentales internacionales y "
+"nacionales aplicables."
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_un_number__iata_special_provisions
+msgid "IATA Special Provisions"
+msgstr "Disposiciones especiales IATA"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_class__id
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__id
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration_line__id
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_un_number__id
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_freight_job__id
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_sale_order__id
+msgid "ID"
+msgstr "Identificador"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_un_number__packing_group__ii
+msgid "II (Medium danger)"
+msgstr "II (Peligro medio)"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_un_number__packing_group__iii
+msgid "III (Low danger)"
+msgstr "III (Peligro bajo)"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,help:eh_log_dangerous_goods.field_eh_log_dg_un_number__ems_code
+msgid "IMDG Emergency Schedule code (e.g. F-E, S-V)."
+msgstr "Código del programa de emergencia IMDG (por ej. F-E, S-V)."
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_un_number__imdg_special_provisions
+msgid "IMDG Special Provisions"
+msgstr "Disposiciones especiales IMDG"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__activity_exception_icon
+msgid "Icon"
+msgstr "Icono"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,help:eh_log_dangerous_goods.field_eh_log_dg_declaration__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Icono para indicar una actividad de excepción."
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,help:eh_log_dangerous_goods.field_eh_log_dg_declaration__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Si está marcada, hay nuevos mensajes que requieren su atención."
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,help:eh_log_dangerous_goods.field_eh_log_dg_declaration__message_has_error
+#: model:ir.model.fields,help:eh_log_dangerous_goods.field_eh_log_dg_declaration__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Si está marcada, algunos mensajes tienen error de envío."
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_declaration__segregation_status__warning
+msgid "Incompatibilities Detected"
+msgstr "Incompatibilidades detectadas"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_class__incompatible_class_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_class_form
+msgid "Incompatible Classes"
+msgstr "Clases incompatibles"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.class,name:eh_log_dangerous_goods.dg_class_6_2
+#: model:eh.log.dg.class,placard_description:eh_log_dangerous_goods.dg_class_6_2
+msgid "Infectious Substance"
+msgstr "Sustancia infecciosa"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.un.number,proper_shipping_name:eh_log_dangerous_goods.un_2814
+msgid "Infectious substance, affecting humans"
+msgstr "Sustancia infecciosa que afecta a los seres humanos"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__message_is_follower
+msgid "Is Follower"
+msgstr "Es un seguidor"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_declaration_form
+msgid "Issue"
+msgstr "Problema"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_declaration__state__issued
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_declaration_search
+msgid "Issued"
+msgstr "Emitido"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__issued_at
+msgid "Issued At"
+msgstr "Emitido el"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__issued_by_id
+msgid "Issued By"
+msgstr "Emitido por"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid "Issued by"
+msgstr "Emitido por"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_declaration_line__net_quantity_uom__l
+msgid "L"
+msgstr ""
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_declaration_form
+msgid "Lane"
+msgstr "Ruta"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_class__write_uid
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__write_uid
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration_line__write_uid
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_un_number__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_class__write_date
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__write_date
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration_line__write_date
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_un_number__write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: eh_log_dangerous_goods
+#. odoo-python
+#: code:addons/eh_log_dangerous_goods/models/eh_log_dg_declaration.py:0
+msgid "Line %(seq)s has no packaging description."
+msgstr "La línea %(seq)s no tiene descripción de embalaje."
+
+#. module: eh_log_dangerous_goods
+#. odoo-python
+#: code:addons/eh_log_dangerous_goods/models/eh_log_dg_declaration.py:0
+msgid "Line %(seq)s has zero net quantity."
+msgstr "La línea %(seq)s tiene una cantidad neta de cero."
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__line_count
+msgid "Lines"
+msgstr "Líneas"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.un.number,proper_shipping_name:eh_log_dangerous_goods.un_3480
+msgid "Lithium ion batteries"
+msgstr "Baterías de iones de litio"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.un.number,proper_shipping_name:eh_log_dangerous_goods.un_3481
+msgid "Lithium ion batteries contained in equipment"
+msgstr "Baterías de iones de litio contenidas en equipos"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid "Loading"
+msgstr "Cargando"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration_line__marine_pollutant
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_un_number__marine_pollutant
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_declaration_search
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_un_number_search
+msgid "Marine Pollutant"
+msgstr "Contaminante marino"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__has_marine_pollutant
+msgid "Marine Pollutant on Board"
+msgstr "Contaminante marino a bordo"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_declaration_form
+msgid "Mark Ready"
+msgstr "Marcar como listo"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__message_has_error
+msgid "Message Delivery error"
+msgstr "Error de envío de mensaje"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__message_ids
+msgid "Messages"
+msgstr "Mensajes"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.class,placard_description:eh_log_dangerous_goods.dg_class_9
+msgid "Miscellaneous"
+msgstr "Varios"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.class,name:eh_log_dangerous_goods.dg_class_9
+msgid "Miscellaneous Dangerous Substance"
+msgstr "Sustancia peligrosa diversa"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__mode
+msgid "Mode"
+msgstr "Modo"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_declaration_form
+msgid "Mode and Linkage"
+msgstr "Modo y vinculación"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_declaration__mode__multimodal
+msgid "Multimodal"
+msgstr ""
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Fecha límite de mi actividad"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_class__name
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid "Name"
+msgstr "Nombre"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration_line__net_quantity
+msgid "Net Quantity"
+msgstr "Cantidad neta"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid "Net per Pkg"
+msgstr "Neto por paquete"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,help:eh_log_dangerous_goods.field_eh_log_dg_declaration_line__net_quantity
+msgid ""
+"Net quantity per package. Multiplied by package count to derive the gross "
+"quantity printed on the declaration."
+msgstr ""
+"Cantidad neta por paquete. Se multiplica por el número de paquetes para "
+"obtener la cantidad bruta impresa en la declaración."
+
+#. module: eh_log_dangerous_goods
+#. odoo-python
+#: code:addons/eh_log_dangerous_goods/models/eh_log_dg_declaration.py:0
+msgid "New"
+msgstr "Nuevo"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "Siguiente evento en el calendario de actividades."
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Fecha límite de la siguiente actividad"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__activity_summary
+msgid "Next Activity Summary"
+msgstr "Resumen de la siguiente actividad"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__activity_type_id
+msgid "Next Activity Type"
+msgstr "Tipo de la siguiente actividad"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.un.number,proper_shipping_name:eh_log_dangerous_goods.un_1977
+msgid "Nitrogen, refrigerated liquid"
+msgstr "Nitrógeno, líquido refrigerado"
+
+#. module: eh_log_dangerous_goods
+#. odoo-python
+#: code:addons/eh_log_dangerous_goods/models/eh_log_dg_declaration.py:0
+msgid "No UN lines on the declaration."
+msgstr "No hay líneas UN en la declaración."
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.class,placard_description:eh_log_dangerous_goods.dg_class_2_2
+msgid "Non-flammable Gas"
+msgstr "Gas no inflamable"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.class,name:eh_log_dangerous_goods.dg_class_2_2
+msgid "Non-flammable, Non-toxic Gas"
+msgstr "Gas no inflamable y no tóxico"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_declaration__segregation_status__not_assessed
+msgid "Not Assessed"
+msgstr "No evaluado"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_un_number__packing_group__none
+msgid "Not applicable"
+msgstr "No aplicable"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__notes
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration_line__notes
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_declaration_form
+msgid "Notes"
+msgstr "Notas"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__notify_party_id
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid "Notify Party"
+msgstr "Parte a notificar"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Número de acciones"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__message_has_error_counter
+msgid "Number of errors"
+msgstr "Número de errores"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,help:eh_log_dangerous_goods.field_eh_log_dg_declaration__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Número de mensajes que requieren una acción"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,help:eh_log_dangerous_goods.field_eh_log_dg_declaration__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Número de mensajes con error de envío"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_declaration_search
+msgid "Open"
+msgstr "Abierto"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.class,name:eh_log_dangerous_goods.dg_class_5_2
+#: model:eh.log.dg.class,placard_description:eh_log_dangerous_goods.dg_class_5_2
+msgid "Organic Peroxide"
+msgstr "Peróxido orgánico"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.class,placard_description:eh_log_dangerous_goods.dg_class_5_1
+msgid "Oxidiser"
+msgstr "Oxidante"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.class,name:eh_log_dangerous_goods.dg_class_5_1
+msgid "Oxidising Substance"
+msgstr "Sustancia oxidante"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid "PG"
+msgstr ""
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration_line__package_count
+msgid "Packages"
+msgstr "Paquetes"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration_line__packaging_description
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid "Packaging"
+msgstr "Empaquetado"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration_line__packing_group
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_un_number__packing_group
+msgid "Packing Group"
+msgstr "Grupo de embalaje"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.un.number,proper_shipping_name:eh_log_dangerous_goods.un_1263
+msgid "Paint or Paint related material"
+msgstr "Pintura o material relacionado con la pintura"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_declaration_form
+msgid "Parties"
+msgstr "Partes"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.un.number,proper_shipping_name:eh_log_dangerous_goods.un_1203
+msgid "Petrol or Gasoline"
+msgstr "Gasolina"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid "Phone"
+msgstr "Teléfono"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid "Pkgs"
+msgstr "Bultos"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_class__placard_description
+msgid "Placard Description"
+msgstr "Descripción del cartel"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.class,placard_description:eh_log_dangerous_goods.dg_class_2_3
+msgid "Poison Gas"
+msgstr "Gas venenoso"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__pod_name
+msgid "Port or Airport of Discharge"
+msgstr "Puerto o aeropuerto de descarga"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__pol_name
+msgid "Port or Airport of Loading"
+msgstr "Puerto o aeropuerto de carga"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_class__primary_class
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration_line__primary_class
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_un_number__primary_class_id
+msgid "Primary Class"
+msgstr "Clase principal"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_un_number__proper_shipping_name
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid "Proper Shipping Name"
+msgstr "Nombre de expedición correcto"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.class,placard_description:eh_log_dangerous_goods.dg_class_7
+msgid "Radioactive"
+msgstr "Radiactivo"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.class,name:eh_log_dangerous_goods.dg_class_7
+msgid "Radioactive Material"
+msgstr "Material radiactivo"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_declaration__mode__rail
+msgid "Rail (RID)"
+msgstr "Ferrocarril (RID)"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__rating_ids
+msgid "Ratings"
+msgstr "Calificaciones"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_declaration__state__ready
+msgid "Ready"
+msgstr "Listo"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__name
+msgid "Reference"
+msgstr "Referencia"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,help:eh_log_dangerous_goods.field_eh_log_dg_declaration_line__marine_pollutant
+#: model:ir.model.fields,help:eh_log_dangerous_goods.field_eh_log_dg_un_number__marine_pollutant
+msgid "Required IMDG flag for substances harmful to marine life."
+msgstr ""
+"Indicador IMDG obligatorio para sustancias nocivas para la vida marina."
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,help:eh_log_dangerous_goods.field_eh_log_dg_un_number__flashpoint_celsius
+msgid "Required for class 3 entries on IATA DGR and IMDG."
+msgstr "Requerido para las entradas de clase 3 en IATA DGR e IMDG."
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,help:eh_log_dangerous_goods.field_eh_log_dg_declaration_line__technical_name
+msgid ""
+"Required when the proper shipping name is generic (e.g. 'Flammable liquid "
+"n.o.s.'). The technical name appears in parentheses on the printed "
+"declaration."
+msgstr ""
+"Requerido cuando la designación oficial de transporte es genérica (p. ej., "
+"'Flammable liquid n.o.s.'). El nombre técnico aparece entre paréntesis en la"
+" declaración impresa."
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__activity_user_id
+msgid "Responsible User"
+msgstr "Usuario responsable"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_declaration__mode__road
+msgid "Road (ADR)"
+msgstr "Carretera (ADR)"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid "Role"
+msgstr "Rol"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Error de envío del SMS"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__sale_order_id
+msgid "Sale Order"
+msgstr "Pedido de venta"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model,name:eh_log_dangerous_goods.model_sale_order
+msgid "Sales Order"
+msgstr "Pedido de venta"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_declaration__mode__sea
+msgid "Sea (IMDG)"
+msgstr "Marítimo (IMDG)"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,help:eh_log_dangerous_goods.field_eh_log_dg_declaration__vessel_name
+#: model:ir.model.fields,help:eh_log_dangerous_goods.field_eh_log_dg_declaration__voyage_number
+msgid "Sea only."
+msgstr "Solo marítimo."
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__segregation_status
+msgid "Segregation"
+msgstr "Segregación"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid "Segregation Notice"
+msgstr "Aviso de segregación"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__segregation_summary
+msgid "Segregation Summary"
+msgstr "Resumen de segregación"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration_line__sequence
+msgid "Sequence"
+msgstr "Secuencia"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__shipper_id
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid "Shipper"
+msgstr "Remitente"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.actions.report,name:eh_log_dangerous_goods.action_report_eh_log_dg_declaration
+msgid "Shipper's Declaration for Dangerous Goods"
+msgstr "Declaración del remitente para mercancías peligrosas"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,help:eh_log_dangerous_goods.field_eh_log_dg_class__placard_description
+msgid "Short text printed on the orange placard."
+msgstr "Texto breve impreso en la placa naranja."
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_un_number_form
+msgid "Special Provisions"
+msgstr "Disposiciones especiales"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.class,name:eh_log_dangerous_goods.dg_class_4_2
+#: model:eh.log.dg.class,placard_description:eh_log_dangerous_goods.dg_class_4_2
+msgid "Spontaneously Combustible"
+msgstr "Combustible espontáneo"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__state
+msgid "State"
+msgstr "Estado"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,help:eh_log_dangerous_goods.field_eh_log_dg_declaration__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Estado basado en actividades\n"
+"Vencida: la fecha límite ya ha pasado\n"
+"Hoy: la fecha límite es hoy\n"
+"Planificada: actividades futuras."
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_class__stowage_notes
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_class_form
+msgid "Stowage Notes"
+msgstr "Notas de estiba"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_un_number__subsidiary_class_ids
+msgid "Subsidiary Risks"
+msgstr "Riesgos de la filial"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.un.number,proper_shipping_name:eh_log_dangerous_goods.un_1830
+msgid "Sulphuric acid"
+msgstr "Ácido sulfúrico"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration_line__technical_name
+msgid "Technical Name"
+msgstr "Nombre técnico"
+
+#. module: eh_log_dangerous_goods
+#. odoo-python
+#: code:addons/eh_log_dangerous_goods/models/eh_log_freight_job.py:0
+msgid "To be set"
+msgstr "Por definir"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid "Total"
+msgstr ""
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration_line__total_quantity
+msgid "Total Quantity"
+msgstr "Cantidad total"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.class,placard_description:eh_log_dangerous_goods.dg_class_6_1
+msgid "Toxic"
+msgstr "Tóxico"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.class,name:eh_log_dangerous_goods.dg_class_2_3
+msgid "Toxic Gas"
+msgstr "Gas tóxico"
+
+#. module: eh_log_dangerous_goods
+#: model:eh.log.dg.class,name:eh_log_dangerous_goods.dg_class_6_1
+msgid "Toxic Substance"
+msgstr "Sustancia tóxica"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,help:eh_log_dangerous_goods.field_eh_log_dg_declaration__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Tipo de actividad de excepción en el registro."
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid "UN"
+msgstr "No remunerada"
+
+#. module: eh_log_dangerous_goods
+#. odoo-python
+#: code:addons/eh_log_dangerous_goods/models/eh_log_dg_declaration.py:0
+msgid ""
+"UN %(un)s (%(name)s) is forbidden on both passenger and cargo aircraft per "
+"IATA DGR. It cannot appear on an air declaration."
+msgstr ""
+"El UN %(un)s (%(name)s) está prohibido tanto en aeronaves de pasajeros como "
+"de carga según la IATA DGR. No puede figurar en una declaración aérea."
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model,name:eh_log_dangerous_goods.model_eh_log_dg_un_number
+msgid "UN Dangerous Goods Number"
+msgstr "Número UN de mercancías peligrosas"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__line_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_declaration_form
+msgid "UN Lines"
+msgstr "Líneas UN"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration_line__un_number_id
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_un_number__un_number
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_un_number_form
+msgid "UN Number"
+msgstr "Número UN"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.actions.act_window,name:eh_log_dangerous_goods.action_eh_log_dg_un_number
+#: model:ir.ui.menu,name:eh_log_dangerous_goods.menu_eh_log_dg_un_numbers
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_un_number_list
+msgid "UN Numbers"
+msgstr "Números UN"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,help:eh_log_dangerous_goods.field_eh_log_dg_class__code
+#: model:ir.model.fields,help:eh_log_dangerous_goods.field_eh_log_dg_declaration_line__primary_class
+msgid "UN hazard class code, e.g. '1', '1.1', '2.1', '4.3'."
+msgstr "Código de clase de peligro UN, p. ej. '1', '1.1', '2.1', '4.3'."
+
+#. module: eh_log_dangerous_goods
+#. odoo-python
+#: code:addons/eh_log_dangerous_goods/models/eh_log_dg_un_number.py:0
+msgid ""
+"UN number %(un)s does not match the required format. Use 'UN' followed by 4 "
+"digits, e.g. UN1090."
+msgstr ""
+"El número UN %(un)s no coincide con el formato requerido. Use 'UN' seguido "
+"de 4 dígitos, p. ej. UN1090."
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.constraint,message:eh_log_dangerous_goods.constraint_eh_log_dg_un_number_un_number_unique
+msgid "UN number must be unique."
+msgstr "El número UN debe ser único."
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_un_number_form
+msgid "UN1090"
+msgstr ""
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration_line__net_quantity_uom
+msgid "UoM"
+msgstr "UdM"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid "Value"
+msgstr "Valor"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_declaration_form
+msgid "Verdict"
+msgstr "Veredicto"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__vessel_name
+msgid "Vessel"
+msgstr "Buque"
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid "Vessel / Voyage"
+msgstr "Buque / Travesía"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__voyage_number
+msgid "Voyage"
+msgstr "Travesía"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,field_description:eh_log_dangerous_goods.field_eh_log_dg_declaration__website_message_ids
+msgid "Website Messages"
+msgstr "Mensajes del sitio web"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,help:eh_log_dangerous_goods.field_eh_log_dg_declaration__website_message_ids
+msgid "Website communication history"
+msgstr "Historial de comunicación del sitio web"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields,help:eh_log_dangerous_goods.field_sale_order__eh_log_dg_required
+msgid ""
+"When checked, the freight job spawned from this order auto-creates a "
+"Dangerous Goods declaration."
+msgstr ""
+"Cuando está marcado, el trabajo de flete generado a partir de este pedido "
+"crea automáticamente una declaración de mercancías peligrosas."
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.view_eh_log_dg_declaration_search
+msgid "With Incompatibilities"
+msgstr "Con incompatibilidades"
+
+#. module: eh_log_dangerous_goods
+#. odoo-python
+#: code:addons/eh_log_dangerous_goods/models/eh_log_dg_declaration.py:0
+msgid ""
+"[EHL-DG-DECL-001] State changes on a DG declaration must go through the "
+"action buttons. Direct writes are rejected."
+msgstr ""
+"[EHL-DG-DECL-001] Los cambios de estado en una declaración de DG deben "
+"realizarse mediante los botones de acción. Las escrituras directas se "
+"rechazan."
+
+#. module: eh_log_dangerous_goods
+#. odoo-python
+#: code:addons/eh_log_dangerous_goods/models/eh_log_freight_job.py:0
+msgid "freight_job_id"
+msgstr ""
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_declaration_line__net_quantity_uom__g
+msgid "g"
+msgstr ""
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_declaration_line__net_quantity_uom__kg
+msgid "kg"
+msgstr ""
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_declaration_line__net_quantity_uom__ml
+msgid "mL"
+msgstr ""
+
+#. module: eh_log_dangerous_goods
+#: model_terms:ir.ui.view,arch_db:eh_log_dangerous_goods.report_dg_declaration_document
+msgid "on"
+msgstr "el"
+
+#. module: eh_log_dangerous_goods
+#: model:ir.model.fields.selection,name:eh_log_dangerous_goods.selection__eh_log_dg_declaration_line__net_quantity_uom__pcs
+msgid "pieces"
+msgstr "Piezas"

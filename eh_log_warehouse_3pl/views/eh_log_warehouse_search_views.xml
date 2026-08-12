@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_eh_log_warehouse_receipt_search_full" model="ir.ui.view">
+        <field name="name">eh.log.warehouse.receipt.search.full</field>
+        <field name="model">eh.log.warehouse.receipt</field>
+        <field name="arch" type="xml">
+            <search string="Search Receipts">
+                <field name="name"/>
+                <field name="client_id"/>
+                <field name="facility_id"/>
+                <field name="supplier_id"/>
+                <field name="supplier_reference"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+
+                <separator/>
+                <filter name="filter_state_expected" string="Expected" domain="[('state', '=', 'expected')]"/>
+                <filter name="filter_state_arrived" string="Arrived" domain="[('state', '=', 'arrived')]"/>
+                <filter name="filter_state_inspecting" string="Inspecting" domain="[('state', '=', 'inspecting')]"/>
+                <filter name="filter_state_putaway" string="Putaway" domain="[('state', '=', 'putaway')]"/>
+                <filter name="filter_state_closed" string="Closed" domain="[('state', '=', 'closed')]"/>
+                <filter name="filter_state_open" string="Open"
+                        domain="[('state', 'in', ('expected', 'arrived', 'inspecting', 'putaway'))]"/>
+
+                <separator/>
+                <filter name="filter_today" string="Expected Today"
+                        domain="[('expected_date', '=', context_today().strftime('%Y-%m-%d'))]"/>
+                <filter name="filter_this_week" string="This Week"
+                        domain="[('expected_date', '&gt;=', (context_today() - relativedelta(days=context_today().weekday())).strftime('%Y-%m-%d')),
+                                  ('expected_date', '&lt;=', (context_today() + relativedelta(days=6 - context_today().weekday())).strftime('%Y-%m-%d'))]"/>
+
+                <separator/>
+                <group>
+                    <filter name="group_by_state" string="State" context="{'group_by': 'state'}"/>
+                    <filter name="group_by_client" string="Client" context="{'group_by': 'client_id'}"/>
+                    <filter name="group_by_facility" string="Facility" context="{'group_by': 'facility_id'}"/>
+                    <filter name="group_by_supplier" string="Supplier" context="{'group_by': 'supplier_id'}"/>
+                    <filter name="group_by_expected_day" string="Expected Day"
+                            context="{'group_by': 'expected_date'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="view_eh_log_warehouse_pick_search_full" model="ir.ui.view">
+        <field name="name">eh.log.warehouse.pick.search.full</field>
+        <field name="model">eh.log.warehouse.pick</field>
+        <field name="arch" type="xml">
+            <search string="Search Picks">
+                <field name="name"/>
+                <field name="client_id"/>
+                <field name="facility_id"/>
+                <field name="customer_id"/>
+                <field name="customer_reference"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+
+                <separator/>
+                <filter name="filter_state_planned" string="Planned" domain="[('state', '=', 'planned')]"/>
+                <filter name="filter_state_picking" string="Picking" domain="[('state', '=', 'picking')]"/>
+                <filter name="filter_state_packed" string="Packed" domain="[('state', '=', 'packed')]"/>
+                <filter name="filter_state_shipped" string="Shipped" domain="[('state', '=', 'shipped')]"/>
+                <filter name="filter_state_closed" string="Closed" domain="[('state', '=', 'closed')]"/>
+                <filter name="filter_state_open" string="Open"
+                        domain="[('state', 'in', ('planned', 'picking', 'packed', 'shipped'))]"/>
+
+                <separator/>
+                <filter name="filter_today" string="Planned Today"
+                        domain="[('planned_date', '=', context_today().strftime('%Y-%m-%d'))]"/>
+
+                <separator/>
+                <group>
+                    <filter name="group_by_state" string="State" context="{'group_by': 'state'}"/>
+                    <filter name="group_by_client" string="Client" context="{'group_by': 'client_id'}"/>
+                    <filter name="group_by_facility" string="Facility" context="{'group_by': 'facility_id'}"/>
+                    <filter name="group_by_customer" string="Customer" context="{'group_by': 'customer_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="view_eh_log_warehouse_billing_run_search_full" model="ir.ui.view">
+        <field name="name">eh.log.warehouse.billing.run.search.full</field>
+        <field name="model">eh.log.warehouse.billing.run</field>
+        <field name="arch" type="xml">
+            <search string="Search Billing Runs">
+                <field name="name"/>
+                <field name="client_id"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+
+                <separator/>
+                <filter name="filter_state_draft" string="Draft" domain="[('state', '=', 'draft')]"/>
+                <filter name="filter_state_computed" string="Computed" domain="[('state', '=', 'computed')]"/>
+                <filter name="filter_state_posted" string="Posted" domain="[('state', '=', 'posted')]"/>
+
+                <separator/>
+                <group>
+                    <filter name="group_by_state" string="State" context="{'group_by': 'state'}"/>
+                    <filter name="group_by_client" string="Client" context="{'group_by': 'client_id'}"/>
+                    <filter name="group_by_period_month" string="Period Month"
+                            context="{'group_by': 'period_end:month'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+</odoo>

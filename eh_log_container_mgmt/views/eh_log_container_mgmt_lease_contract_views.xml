@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="view_eh_log_container_mgmt_lease_contract_list" model="ir.ui.view">
+            <field name="name">eh.log.container.mgmt.lease.contract.list</field>
+            <field name="model">eh.log.container.mgmt.lease.contract</field>
+            <field name="arch" type="xml">
+                <list string="Lease Contracts" decoration-info="state == 'draft'" decoration-success="state == 'active'" decoration-muted="state in ('expired', 'cancelled')">
+                    <field name="name"/>
+                    <field name="state"/>
+                    <field name="direction"/>
+                    <field name="partner_id"/>
+                    <field name="iso_type_id"/>
+                    <field name="fleet_count"/>
+                    <field name="daily_rate"/>
+                    <field name="starts_on"/>
+                    <field name="ends_on"/>
+                    <field name="days_total" optional="show"/>
+                    <field name="headline_value" optional="show"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="view_eh_log_container_mgmt_lease_contract_form" model="ir.ui.view">
+            <field name="name">eh.log.container.mgmt.lease.contract.form</field>
+            <field name="model">eh.log.container.mgmt.lease.contract</field>
+            <field name="arch" type="xml">
+                <form string="Lease Contract">
+                    <header>
+                        <button name="action_activate" string="Activate" type="object" class="btn-primary" invisible="state != 'draft'" groups="eh_log_base.group_eh_log_manager"/>
+                        <button name="action_expire" string="Expire" type="object" class="btn-secondary" invisible="state != 'active'" groups="eh_log_base.group_eh_log_manager"/>
+                        <button name="action_cancel" string="Cancel" type="object" class="btn-secondary" invisible="state in ('expired', 'cancelled')" groups="eh_log_base.group_eh_log_manager"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,active,expired"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name"/>
+                            <h1><field name="name"/></h1>
+                        </div>
+                        <group>
+                            <group string="Parties">
+                                <field name="direction"/>
+                                <field name="partner_id" options="{'no_create': True}"/>
+                                <field name="partner_reference"/>
+                                <field name="company_id" groups="base.group_multi_company"/>
+                            </group>
+                            <group string="Fleet">
+                                <field name="iso_type_id" options="{'no_create': True}"/>
+                                <field name="fleet_count"/>
+                                <field name="container_count" readonly="1"/>
+                            </group>
+                        </group>
+                        <group string="Term and Pricing">
+                            <group>
+                                <field name="starts_on"/>
+                                <field name="ends_on"/>
+                                <field name="days_total" readonly="1"/>
+                                <field name="free_days"/>
+                            </group>
+                            <group>
+                                <field name="daily_rate"/>
+                                <field name="currency_id" options="{'no_create': True}"/>
+                                <field name="headline_value" readonly="1"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Containers">
+                                <field name="container_ids" readonly="1">
+                                    <list create="false" edit="false">
+                                        <field name="container_number"/>
+                                        <field name="iso_type_id"/>
+                                        <field name="state"/>
+                                        <field name="current_depot_id"/>
+                                    </list>
+                                </field>
+                            </page>
+                            <page string="Notes">
+                                <field name="notes"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <chatter/>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_eh_log_container_mgmt_lease_contract" model="ir.actions.act_window">
+            <field name="name">Lease Contracts</field>
+            <field name="res_model">eh.log.container.mgmt.lease.contract</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+    </data>
+</odoo>

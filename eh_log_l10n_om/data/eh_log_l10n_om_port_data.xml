@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="port_omsoh" model="eh.log.l10n.om.port">
+            <field name="name">Sohar Port</field>
+            <field name="unlocode">OMSOH</field>
+            <field name="operator_name">SOHAR Port and Freezone</field>
+            <field name="container_terminal" eval="True"/>
+            <field name="bulk_terminal" eval="True"/>
+            <field name="petrochemical" eval="True"/>
+        </record>
+
+        <record id="port_omsll" model="eh.log.l10n.om.port">
+            <field name="name">Salalah Port</field>
+            <field name="unlocode">OMSLL</field>
+            <field name="operator_name">APM Terminals (Salalah)</field>
+            <field name="container_terminal" eval="True"/>
+            <field name="bulk_terminal" eval="True"/>
+        </record>
+
+        <record id="port_ommct" model="eh.log.l10n.om.port">
+            <field name="name">Sultan Qaboos Port (Muscat)</field>
+            <field name="unlocode">OMMCT</field>
+            <field name="operator_name">Asyad Group</field>
+            <field name="container_terminal" eval="False"/>
+        </record>
+
+        <record id="port_omduq" model="eh.log.l10n.om.port">
+            <field name="name">Port of Duqm</field>
+            <field name="unlocode">OMDUQ</field>
+            <field name="operator_name">Asyad Group / Port of Duqm Company</field>
+            <field name="container_terminal" eval="True"/>
+            <field name="bulk_terminal" eval="True"/>
+        </record>
+
+        <record id="port_omkhs" model="eh.log.l10n.om.port">
+            <field name="name">Khasab Port</field>
+            <field name="unlocode">OMKHS</field>
+            <field name="operator_name">Asyad Ports</field>
+        </record>
+
+    </data>
+</odoo>

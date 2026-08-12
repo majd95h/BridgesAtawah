@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="demo_dispute_001" model="eh.log.dispute">
+            <field name="subject">Damaged Goods - Container CMAU3456789</field>
+            <field name="res_model">sale.order</field>
+            <field name="res_id">1</field>
+            <field name="description">Three pallets of frozen goods damaged on arrival. Refrigeration log shows 3-hour gap.</field>
+            <field name="category_id" ref="eh_log_disputes_variations.category_cargo_damage"/>
+            <field name="customer_id" ref="eh_log_base.demo_partner_arabian_food"/>
+            <field name="opened_at" eval="(DateTime.now() - relativedelta(days=3)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="claimed_amount">8500</field>
+        </record>
+
+        <record id="demo_dispute_002" model="eh.log.dispute">
+            <field name="subject">Short Shipment vs Packing List</field>
+            <field name="res_model">sale.order</field>
+            <field name="res_id">1</field>
+            <field name="description">Packing list shows 36 pallets, only 32 received.</field>
+            <field name="category_id" ref="eh_log_disputes_variations.category_short_shipment"/>
+            <field name="customer_id" ref="eh_log_base.demo_partner_palm_retail"/>
+            <field name="opened_at" eval="(DateTime.now() - relativedelta(days=5)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="claimed_amount">12400</field>
+        </record>
+
+        <record id="demo_dispute_003" model="eh.log.dispute">
+            <field name="subject">Demurrage Dispute - 4 days at JEA</field>
+            <field name="res_model">sale.order</field>
+            <field name="res_id">1</field>
+            <field name="description">Customer disputes 4 days demurrage as port delay was carrier-caused per gate logs.</field>
+            <field name="category_id" ref="eh_log_disputes_variations.category_demurrage"/>
+            <field name="customer_id" ref="eh_log_base.demo_partner_alpha_trading"/>
+            <field name="opened_at" eval="(DateTime.now() - relativedelta(days=8)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="claimed_amount">2400</field>
+        </record>
+
+        <record id="demo_dispute_004" model="eh.log.dispute">
+            <field name="subject">Documentation Error - Wrong HS Code</field>
+            <field name="res_model">sale.order</field>
+            <field name="res_id">1</field>
+            <field name="description">Mirsal entry used wrong HS code; customs penalty applied.</field>
+            <field name="category_id" ref="eh_log_disputes_variations.category_documentation"/>
+            <field name="customer_id" ref="eh_log_base.demo_partner_falcon_industries"/>
+            <field name="opened_at" eval="(DateTime.now() - relativedelta(days=10)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="claimed_amount">1850</field>
+        </record>
+
+        <record id="demo_dispute_005" model="eh.log.dispute">
+            <field name="subject">Pricing Variance - Origin THC</field>
+            <field name="res_model">sale.order</field>
+            <field name="res_id">1</field>
+            <field name="description">Customer billed at quoted USD 320 but invoice shows 380.</field>
+            <field name="category_id" ref="eh_log_disputes_variations.category_pricing"/>
+            <field name="customer_id" ref="eh_log_base.demo_partner_jeddah_apparel"/>
+            <field name="opened_at" eval="(DateTime.now() - relativedelta(days=2)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="claimed_amount">600</field>
+        </record>
+
+    </data>
+</odoo>

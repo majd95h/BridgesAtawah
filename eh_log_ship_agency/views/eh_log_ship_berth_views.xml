@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_eh_log_ship_berth_list" model="ir.ui.view">
+        <field name="name">eh.log.ship.berth.list</field>
+        <field name="model">eh.log.ship.berth</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="port_partner_id"/>
+                <field name="code"/>
+                <field name="name"/>
+                <field name="depth_m"/>
+                <field name="max_loa_m"/>
+                <field name="customs_status"/>
+                <field name="active"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_eh_log_ship_berth_form" model="ir.ui.view">
+        <field name="name">eh.log.ship.berth.form</field>
+        <field name="model">eh.log.ship.berth</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="port_partner_id"/>
+                            <field name="code"/>
+                            <field name="name"/>
+                            <field name="terminal_operator_partner_id"/>
+                        </group>
+                        <group>
+                            <field name="depth_m"/>
+                            <field name="max_loa_m"/>
+                            <field name="customs_status"/>
+                            <field name="active" widget="boolean_toggle"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_eh_log_ship_berth" model="ir.actions.act_window">
+        <field name="name">Berths</field>
+        <field name="res_model">eh.log.ship.berth</field>
+        <field name="view_mode">list,form</field>
+        <field name="views" eval="[(False, 'list'), (False, 'form')]"/>
+    </record>
+
+</odoo>

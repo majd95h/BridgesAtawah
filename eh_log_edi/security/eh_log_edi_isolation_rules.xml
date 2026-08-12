@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="0">
+    <data>
+
+        <record id="rule_eh_log_edi_transport_company" model="ir.rule">
+            <field name="name">eh.log.edi.transport: company isolation</field>
+            <field name="model_id" ref="model_eh_log_edi_transport"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+            <field name="global" eval="True"/>
+        </record>
+
+        <record id="rule_eh_log_edi_partner_company" model="ir.rule">
+            <field name="name">eh.log.edi.partner: company isolation</field>
+            <field name="model_id" ref="model_eh_log_edi_partner"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+            <field name="global" eval="True"/>
+        </record>
+
+        <record id="rule_eh_log_edi_outbound_company" model="ir.rule">
+            <field name="name">eh.log.edi.outbound: company isolation</field>
+            <field name="model_id" ref="model_eh_log_edi_outbound"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+            <field name="global" eval="True"/>
+        </record>
+
+        <record id="rule_eh_log_edi_inbound_company" model="ir.rule">
+            <field name="name">eh.log.edi.inbound: company isolation</field>
+            <field name="model_id" ref="model_eh_log_edi_inbound"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+            <field name="global" eval="True"/>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_eh_log_project_cargo_job_list" model="ir.ui.view">
+        <field name="name">eh.log.project.cargo.job.list</field>
+        <field name="model">eh.log.project.cargo.job</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="customer_partner_id"/>
+                <field name="project_name"/>
+                <field name="origin_partner_id"/>
+                <field name="destination_partner_id"/>
+                <field name="item_count"/>
+                <field name="has_oversized_item"/>
+                <field name="state" widget="badge"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_eh_log_project_cargo_job_form" model="ir.ui.view">
+        <field name="name">eh.log.project.cargo.job.form</field>
+        <field name="model">eh.log.project.cargo.job</field>
+        <field name="arch" type="xml">
+            <form string="Project Cargo Job">
+                <header>
+                    <button name="action_mark_surveyed" string="Mark Surveyed" type="object" class="btn-primary" invisible="state != 'draft'" groups="eh_log_base.group_eh_log_user"/>
+                    <button name="action_mark_planned" string="Mark Planned" type="object" class="btn-primary" invisible="state != 'surveyed'" groups="eh_log_base.group_eh_log_user"/>
+                    <button name="action_start_execution" string="Start Execution" type="object" class="btn-primary" invisible="state != 'planned'" groups="eh_log_base.group_eh_log_manager"/>
+                    <button name="action_mark_completed" string="Mark Completed" type="object" class="btn-primary" invisible="state != 'executing'" groups="eh_log_base.group_eh_log_user"/>
+                    <button name="action_close" string="Close" type="object" class="btn-secondary" invisible="state != 'completed'" groups="eh_log_base.group_eh_log_manager"/>
+                    <button name="action_reset_to_draft" string="Reset to Draft" type="object" class="btn-secondary" invisible="state not in ('surveyed', 'planned')" groups="eh_log_base.group_eh_log_manager"/>
+                    <button name="action_cancel" string="Cancel" type="object" class="btn-secondary" invisible="state in ('closed', 'cancelled')" groups="eh_log_base.group_eh_log_manager"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,surveyed,planned,executing,completed,closed"/>
+                </header>
+                <sheet>
+                    <field name="has_oversized_item" invisible="1"/>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_convoys" type="object" class="oe_stat_button" icon="fa-truck">
+                            <field name="convoy_count" widget="statinfo" string="Convoys"/>
+                        </button>
+                        <button name="action_view_permits" type="object" class="oe_stat_button" icon="fa-id-badge">
+                            <field name="permit_count" widget="statinfo" string="Permits"/>
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1><field name="name"/></h1>
+                    </div>
+
+                    <!-- Snapshot hero -->
+                    <div class="o_eh_log_snapshot mb-3" style="background:linear-gradient(135deg,#0E1E2B 0%,#1A2C3D 100%);color:#FBF8F2;border-radius:14px;padding:22px 26px;border:1px solid #A07A3F;box-shadow:0 6px 18px rgba(14,30,43,0.08);">
+                        <div class="d-flex align-items-center justify-content-between mb-3" style="gap:18px;">
+                            <div style="flex:1;min-width:0;">
+                                <div style="font-family:'DM Mono',ui-monospace,monospace;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:#E8C887;margin-bottom:4px;">Origin</div>
+                                <div style="font-size:1.05rem;font-weight:600;color:#FBF8F2;line-height:1.25;">
+                                    <field name="origin_partner_id" readonly="1" options="{'no_open': True}" nolabel="1" placeholder="—"/>
+                                </div>
+                            </div>
+                            <div style="text-align:center;flex-shrink:0;">
+                                <div style="display:inline-block;padding:10px 20px;background:rgba(212,160,85,0.12);border:1px solid rgba(212,160,85,0.4);border-radius:999px;">
+                                    <i class="fa fa-cube" style="font-size:1.6rem;color:#D4A055;" title="Project cargo"/>
+                                    <span class="ms-2" style="font-family:'DM Mono',ui-monospace,monospace;font-size:0.78rem;letter-spacing:0.18em;text-transform:uppercase;color:#E8C887;font-weight:600;">Project&#160;cargo</span>
+                                </div>
+                                <div invisible="not has_oversized_item" style="margin-top:8px;font-family:'DM Mono',ui-monospace,monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:#FFA94D;font-weight:600;">
+                                    <i class="fa fa-warning"/> Oversized
+                                </div>
+                            </div>
+                            <div style="flex:1;min-width:0;text-align:right;">
+                                <div style="font-family:'DM Mono',ui-monospace,monospace;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:#E8C887;margin-bottom:4px;">Destination</div>
+                                <div style="font-size:1.05rem;font-weight:600;color:#FBF8F2;line-height:1.25;">
+                                    <field name="destination_partner_id" readonly="1" options="{'no_open': True}" nolabel="1" placeholder="—"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="display:table;width:100%;border-collapse:separate;border-spacing:10px 0;border-top:1px solid rgba(212,160,85,0.18);padding-top:14px;">
+                            <div style="display:table-cell;width:25%;vertical-align:top;background:rgba(255,255,255,0.04);border-radius:8px;padding:10px 14px;">
+                                <div style="font-family:'DM Mono',ui-monospace,monospace;font-size:0.66rem;letter-spacing:0.18em;text-transform:uppercase;color:#E8C887;">Customer</div>
+                                <div style="margin-top:4px;font-size:0.95rem;font-weight:600;color:#FBF8F2;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">
+                                    <field name="customer_partner_id" readonly="1" options="{'no_open': True}" nolabel="1"/>
+                                </div>
+                                <div style="font-size:0.78rem;color:rgba(251,248,242,0.6);">
+                                    <field name="customer_reference" readonly="1" nolabel="1" placeholder="—"/>
+                                </div>
+                            </div>
+                            <div style="display:table-cell;width:25%;vertical-align:top;background:rgba(255,255,255,0.04);border-radius:8px;padding:10px 14px;">
+                                <div style="font-family:'DM Mono',ui-monospace,monospace;font-size:0.66rem;letter-spacing:0.18em;text-transform:uppercase;color:#E8C887;">Project</div>
+                                <div style="margin-top:4px;font-size:0.95rem;font-weight:600;color:#FBF8F2;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">
+                                    <field name="project_name" readonly="1" nolabel="1" placeholder="—"/>
+                                </div>
+                            </div>
+                            <div style="display:table-cell;width:25%;vertical-align:top;background:rgba(255,255,255,0.04);border-radius:8px;padding:10px 14px;">
+                                <div style="font-family:'DM Mono',ui-monospace,monospace;font-size:0.66rem;letter-spacing:0.18em;text-transform:uppercase;color:#E8C887;">Target start</div>
+                                <div style="margin-top:4px;font-size:0.95rem;font-weight:600;color:#FBF8F2;">
+                                    <field name="target_start_date" readonly="1" nolabel="1" placeholder="—"/>
+                                </div>
+                            </div>
+                            <div style="display:table-cell;width:25%;vertical-align:top;background:rgba(255,255,255,0.04);border-radius:8px;padding:10px 14px;">
+                                <div style="font-family:'DM Mono',ui-monospace,monospace;font-size:0.66rem;letter-spacing:0.18em;text-transform:uppercase;color:#E8C887;">Target end</div>
+                                <div style="margin-top:4px;font-size:0.95rem;font-weight:600;color:#FBF8F2;">
+                                    <field name="target_end_date" readonly="1" nolabel="1" placeholder="—"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /snapshot -->
+
+                    <div invisible="not has_oversized_item" class="alert alert-warning" role="alert">
+                        <strong>Oversized cargo present.</strong>
+                        Convoy planning, route survey, and permit register are required.
+                    </div>
+                    <group>
+                        <group string="Customer">
+                            <field name="customer_partner_id"/>
+                            <field name="customer_reference"/>
+                            <field name="project_name"/>
+                            <field name="sale_order_id" options="{'no_create': True}"/>
+                        </group>
+                        <group string="Route and Schedule">
+                            <field name="origin_partner_id"/>
+                            <field name="destination_partner_id"/>
+                            <field name="target_start_date"/>
+                            <field name="target_end_date"/>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Items" name="items">
+                            <field name="item_ids">
+                                <list editable="bottom">
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="name"/>
+                                    <field name="quantity"/>
+                                    <field name="length_m"/>
+                                    <field name="width_m"/>
+                                    <field name="height_m"/>
+                                    <field name="weight_t"/>
+                                    <field name="is_oversized"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Route Surveys" name="route_surveys">
+                            <field name="route_survey_ids">
+                                <list editable="bottom">
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="name"/>
+                                    <field name="surveyor_partner_id"/>
+                                    <field name="surveyed_at"/>
+                                    <field name="distance_km"/>
+                                    <field name="min_overhead_clearance_m"/>
+                                    <field name="max_axle_load_t"/>
+                                    <field name="night_only"/>
+                                    <field name="is_chosen_route"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Method Statement" name="method_statement">
+                            <field name="method_statement" nolabel="1"/>
+                        </page>
+                        <page string="Lift Study" name="lift_study">
+                            <field name="lift_study_notes" nolabel="1"/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_eh_log_project_cargo_job" model="ir.actions.act_window">
+        <field name="name">Project Cargo Jobs</field>
+        <field name="res_model">eh.log.project.cargo.job</field>
+        <field name="view_mode">list,form</field>
+        <field name="views" eval="[(False, 'list'), (False, 'form')]"/>
+    </record>
+
+</odoo>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <!-- Deferment account -->
+
+        <record id="view_eh_log_customs_deferment_account_list" model="ir.ui.view">
+            <field name="name">eh.log.customs.deferment.account.list</field>
+            <field name="model">eh.log.customs.deferment.account</field>
+            <field name="arch" type="xml">
+                <list string="Deferment Accounts" decoration-warning="is_low">
+                    <field name="name"/>
+                    <field name="account_number"/>
+                    <field name="regulator_profile_id"/>
+                    <field name="currency_id" optional="hide" groups="base.group_multi_currency"/>
+                    <field name="current_balance"/>
+                    <field name="low_balance_threshold" optional="show"/>
+                    <field name="is_low"/>
+                    <field name="company_id" groups="base.group_multi_company"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="view_eh_log_customs_deferment_account_form" model="ir.ui.view">
+            <field name="name">eh.log.customs.deferment.account.form</field>
+            <field name="model">eh.log.customs.deferment.account</field>
+            <field name="arch" type="xml">
+                <form string="Deferment Account">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name"/>
+                            <h1><field name="name"/></h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="account_number"/>
+                                <field name="regulator_profile_id" options="{'no_create': True}"/>
+                                <field name="company_id" groups="base.group_multi_company"/>
+                                <field name="currency_id" options="{'no_create': True}"/>
+                                <field name="active" widget="boolean_toggle"/>
+                            </group>
+                            <group string="Balance">
+                                <field name="opening_balance"/>
+                                <field name="current_balance"/>
+                                <field name="low_balance_threshold"/>
+                                <field name="is_low"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Entries">
+                                <field name="entry_ids">
+                                    <list editable="bottom">
+                                        <field name="entry_date"/>
+                                        <field name="entry_kind"/>
+                                        <field name="amount"/>
+                                        <field name="currency_id" optional="hide" groups="base.group_multi_currency"/>
+                                        <field name="description"/>
+                                        <field name="declaration_id" options="{'no_create': True}"/>
+                                        <field name="state"/>
+                                    </list>
+                                </field>
+                            </page>
+                            <page string="Notes">
+                                <field name="notes"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <chatter/>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_eh_log_customs_deferment_account" model="ir.actions.act_window">
+            <field name="name">Deferment Accounts</field>
+            <field name="res_model">eh.log.customs.deferment.account</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+    </data>
+</odoo>

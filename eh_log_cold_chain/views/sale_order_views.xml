@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="view_sale_order_form_eh_log_cold_chain" model="ir.ui.view">
+            <field name="name">sale.order.form.inherit.eh.log.cold.chain</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="eh_log_quotation.view_sale_order_form_eh_log"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='eh_log_logistics']" position="inside">
+                    <group string="Cold Chain">
+                        <group>
+                            <field name="eh_log_cold_chain_required"/>
+                            <field name="eh_log_cold_chain_profile_id" options="{'no_create': True}" invisible="not eh_log_cold_chain_required" required="eh_log_cold_chain_required"/>
+                        </group>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

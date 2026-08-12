@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_eh_log_dispute_search_full" model="ir.ui.view">
+        <field name="name">eh.log.dispute.search.full</field>
+        <field name="model">eh.log.dispute</field>
+        <field name="arch" type="xml">
+            <search string="Search Disputes">
+                <field name="name"/>
+                <field name="subject"/>
+                <field name="customer_id"/>
+                <field name="category_id"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+
+                <separator/>
+                <filter name="filter_state_opened" string="Opened" domain="[('state', '=', 'opened')]"/>
+                <filter name="filter_state_investigating" string="Investigating" domain="[('state', '=', 'investigating')]"/>
+                <filter name="filter_state_offered" string="Offered" domain="[('state', '=', 'offered')]"/>
+                <filter name="filter_state_settled" string="Settled" domain="[('state', '=', 'settled')]"/>
+                <filter name="filter_state_escalated" string="Escalated" domain="[('state', '=', 'escalated')]"/>
+                <filter name="filter_state_open" string="Open"
+                        domain="[('state', 'not in', ('closed', 'cancelled', 'settled', 'written_off'))]"/>
+
+                <separator/>
+                <filter name="filter_high_exposure" string="Exposure 10k+"
+                        domain="[('exposure', '&gt;=', 10000)]"/>
+
+                <separator/>
+                <filter name="filter_today" string="Opened Today"
+                        domain="[('opened_at', '&gt;=', context_today().strftime('%Y-%m-%d 00:00:00'))]"/>
+                <filter name="filter_this_week" string="Opened This Week"
+                        domain="[('opened_at', '&gt;=', (context_today() - relativedelta(days=context_today().weekday())).strftime('%Y-%m-%d 00:00:00'))]"/>
+                <filter name="filter_this_month" string="Opened This Month"
+                        domain="[('opened_at', '&gt;=', context_today().strftime('%Y-%m-01 00:00:00'))]"/>
+
+                <separator/>
+                <group>
+                    <filter name="group_by_state" string="State" context="{'group_by': 'state'}"/>
+                    <filter name="group_by_category" string="Category" context="{'group_by': 'category_id'}"/>
+                    <filter name="group_by_customer" string="Customer" context="{'group_by': 'customer_id'}"/>
+                    <filter name="group_by_opened_month" string="Opened Month"
+                            context="{'group_by': 'opened_at:month'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="view_eh_log_variation_search_full" model="ir.ui.view">
+        <field name="name">eh.log.variation.search.full</field>
+        <field name="model">eh.log.variation</field>
+        <field name="arch" type="xml">
+            <search string="Search Variations">
+                <field name="name"/>
+                <field name="subject"/>
+                <field name="customer_id"/>
+                <field name="sale_order_id"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+
+                <separator/>
+                <filter name="filter_state_draft" string="Draft" domain="[('state', '=', 'draft')]"/>
+                <filter name="filter_state_submitted" string="Submitted" domain="[('state', '=', 'submitted')]"/>
+                <filter name="filter_state_approved" string="Approved" domain="[('state', '=', 'approved')]"/>
+                <filter name="filter_state_applied" string="Applied" domain="[('state', '=', 'applied')]"/>
+                <filter name="filter_state_open" string="Open"
+                        domain="[('state', 'not in', ('closed', 'cancelled'))]"/>
+
+                <separator/>
+                <filter name="filter_credit" string="Credit (negative net)"
+                        domain="[('net_amount', '&lt;', 0)]"/>
+                <filter name="filter_charge" string="Charge (positive net)"
+                        domain="[('net_amount', '&gt;', 0)]"/>
+
+                <separator/>
+                <group>
+                    <filter name="group_by_state" string="State" context="{'group_by': 'state'}"/>
+                    <filter name="group_by_customer" string="Customer" context="{'group_by': 'customer_id'}"/>
+                    <filter name="group_by_create_month" string="Created Month"
+                            context="{'group_by': 'create_date:month'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+</odoo>

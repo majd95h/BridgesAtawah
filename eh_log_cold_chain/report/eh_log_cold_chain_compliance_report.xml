@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="action_report_eh_log_cold_chain_compliance" model="ir.actions.report">
+        <field name="name">Cold Chain Compliance Certificate</field>
+        <field name="model">eh.log.cold.chain.run</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">eh_log_cold_chain.report_cold_chain_compliance_document</field>
+        <field name="report_file">eh_log_cold_chain.report_cold_chain_compliance_document</field>
+        <field name="binding_model_id" ref="model_eh_log_cold_chain_run"/>
+        <field name="binding_type">report</field>
+        <field name="paperformat_id" ref="eh_log_base.paperformat_eh_log_portrait"/>
+    </record>
+
+    <template id="report_cold_chain_compliance_document">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="run">
+                <t t-call="eh_log_base.eh_log_clean_layout">
+                    <t t-set="company" t-value="run.company_id"/>
+                    <t t-set="report_type" t-value="'pdf'"/>
+                    <t t-call="eh_log_base.eh_log_report_styles"/>
+                    <div class="page eh_pdf_page">
+                        <t t-call="eh_log_base.eh_log_report_header">
+                            <t t-set="title" t-value="'Cold Chain Compliance Certificate'"/>
+                            <t t-set="company" t-value="run.company_id"/>
+                        </t>
+
+                        <div class="eh_pdf_meta">
+                            <span><strong>Run:</strong> <t t-out="run.name"/></span>
+                            <span><strong>Job:</strong> <t t-out="run.freight_job_id.name"/></span>
+                            <span><strong>Profile:</strong> <t t-out="run.profile_id.display_name"/></span>
+                            <span><strong>State:</strong> <t t-out="dict(run._fields['state'].selection).get(run.state)"/></span>
+                        </div>
+
+                        <h2 class="eh_pdf_subtitle">Verdict</h2>
+                        <table class="eh_pdf_table">
+                            <thead>
+                                <tr>
+                                    <th>Metric</th>
+                                    <th>Value</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Compliance</td>
+                                    <td>
+                                        <t t-if="run.is_compliant">
+                                            <span class="eh_pdf_status_badge eh_pdf_status_ok">COMPLIANT</span>
+                                        </t>
+                                        <t t-else="">
+                                            <span class="eh_pdf_status_badge eh_pdf_status_danger">NON-COMPLIANT</span>
+                                        </t>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Started</td>
+                                    <td><t t-out="run.started_at and run.started_at.strftime('%Y-%m-%d %H:%M') or ''"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Completed</td>
+                                    <td><t t-out="run.completed_at and run.completed_at.strftime('%Y-%m-%d %H:%M') or ''"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Profile Range</td>
+                                    <td><t t-out="'{:g} to {:g} degC'.format(run.profile_temperature_min, run.profile_temperature_max)"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Readings</td>
+                                    <td><t t-out="run.reading_count"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Deviations</td>
+                                    <td><t t-out="run.deviation_count"/> total, <t t-out="run.open_deviation_count"/> open</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2 class="eh_pdf_subtitle">Reading Summary</h2>
+                        <table class="eh_pdf_table">
+                            <thead>
+                                <tr>
+                                    <th class="text-end">Min Recorded (degC)</th>
+                                    <th class="text-end">Max Recorded (degC)</th>
+                                    <th class="text-end">Avg Recorded (degC)</th>
+                                    <th class="text-end">Sample Count</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-end"><t t-out="'{:.2f}'.format(run.min_temperature)"/></td>
+                                    <td class="text-end"><t t-out="'{:.2f}'.format(run.max_temperature)"/></td>
+                                    <td class="text-end"><t t-out="'{:.2f}'.format(run.avg_temperature)"/></td>
+                                    <td class="text-end"><t t-out="run.reading_count"/></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <t t-if="run.deviation_ids">
+                            <h2 class="eh_pdf_subtitle">Deviations</h2>
+                            <table class="eh_pdf_table">
+                                <thead>
+                                    <tr>
+                                        <th>Reference</th>
+                                        <th>Kind</th>
+                                        <th>Started</th>
+                                        <th>Ended</th>
+                                        <th class="text-end">Duration (min)</th>
+                                        <th class="text-end">Min Recorded</th>
+                                        <th class="text-end">Max Recorded</th>
+                                        <th>Cargo Impact</th>
+                                        <th>Cause</th>
+                                        <th>State</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr t-foreach="run.deviation_ids" t-as="dev">
+                                        <td><t t-out="dev.name"/></td>
+                                        <td><t t-out="dict(dev._fields['deviation_kind'].selection).get(dev.deviation_kind)"/></td>
+                                        <td><t t-out="dev.started_at and dev.started_at.strftime('%Y-%m-%d %H:%M') or ''"/></td>
+                                        <td><t t-out="dev.ended_at and dev.ended_at.strftime('%Y-%m-%d %H:%M') or ''"/></td>
+                                        <td class="text-end"><t t-out="'{:.0f}'.format(dev.duration_minutes)"/></td>
+                                        <td class="text-end"><t t-out="'{:.2f}'.format(dev.min_temperature)"/></td>
+                                        <td class="text-end"><t t-out="'{:.2f}'.format(dev.max_temperature)"/></td>
+                                        <td>
+                                            <t t-if="dev.cargo_impacting">YES</t>
+                                            <t t-else="">No</t>
+                                        </td>
+                                        <td><t t-out="dict(dev._fields['cause'].selection).get(dev.cause) or ''"/></td>
+                                        <td><t t-out="dict(dev._fields['state'].selection).get(dev.state)"/></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </t>
+
+                        <div class="eh_pdf_signature_block">
+                            <p>This certificate is issued under the responsibility of the operator named above based on the recorded data above. The compliance verdict reflects the absence (COMPLIANT) or presence (NON-COMPLIANT) of cargo-impacting deviations.</p>
+                            <div class="eh_pdf_signature_line">Authorised Signatory</div>
+                        </div>
+
+                        <t t-call="eh_log_base.eh_log_report_footer"/>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_eh_log_project_cargo_convoy_list" model="ir.ui.view">
+        <field name="name">eh.log.project.cargo.convoy.list</field>
+        <field name="model">eh.log.project.cargo.convoy</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="job_id"/>
+                <field name="scheduled_departure"/>
+                <field name="scheduled_arrival"/>
+                <field name="vehicle_count"/>
+                <field name="has_lifting_equipment"/>
+                <field name="has_escort_vehicle"/>
+                <field name="state" widget="badge"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_eh_log_project_cargo_convoy_form" model="ir.ui.view">
+        <field name="name">eh.log.project.cargo.convoy.form</field>
+        <field name="model">eh.log.project.cargo.convoy</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_mark_in_transit" string="Mark In Transit" type="object" class="btn-primary" invisible="state != 'planned'" groups="eh_log_base.group_eh_log_user"/>
+                    <button name="action_mark_arrived" string="Mark Arrived" type="object" class="btn-primary" invisible="state != 'in_transit'" groups="eh_log_base.group_eh_log_user"/>
+                    <button name="action_cancel" string="Cancel" type="object" class="btn-secondary" invisible="state in ('arrived', 'cancelled')" groups="eh_log_base.group_eh_log_manager"/>
+                    <field name="state" widget="statusbar" statusbar_visible="planned,in_transit,arrived"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1><field name="name"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="job_id" options="{'no_create': True}"/>
+                            <field name="route_survey_id" options="{'no_create': True}"/>
+                            <field name="item_ids" widget="many2many_tags"/>
+                        </group>
+                        <group>
+                            <field name="scheduled_departure"/>
+                            <field name="scheduled_arrival"/>
+                            <field name="actual_departure" readonly="1"/>
+                            <field name="actual_arrival" readonly="1"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Vehicles" name="vehicles">
+                            <field name="vehicle_ids">
+                                <list editable="bottom">
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="equipment_id"/>
+                                    <field name="role"/>
+                                    <field name="driver_partner_id"/>
+                                    <field name="notes"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Notes" name="notes">
+                            <field name="notes" nolabel="1"/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_eh_log_project_cargo_convoy" model="ir.actions.act_window">
+        <field name="name">Convoys</field>
+        <field name="res_model">eh.log.project.cargo.convoy</field>
+        <field name="view_mode">list,form</field>
+        <field name="views" eval="[(False, 'list'), (False, 'form')]"/>
+    </record>
+
+</odoo>

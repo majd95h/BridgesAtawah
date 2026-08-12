@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_eh_log_customs_declaration_search_full" model="ir.ui.view">
+        <field name="name">eh.log.customs.declaration.search.full</field>
+        <field name="model">eh.log.customs.declaration</field>
+        <field name="arch" type="xml">
+            <search string="Search Declarations">
+                <field name="name"/>
+                <field name="customer_id"/>
+                <field name="declaration_type_id"/>
+                <field name="regulator_reference"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+
+                <separator/>
+                <filter name="filter_state_draft" string="Draft" domain="[('state', '=', 'draft')]"/>
+                <filter name="filter_state_submitted" string="Submitted" domain="[('state', '=', 'submitted')]"/>
+                <filter name="filter_state_queried" string="Queried" domain="[('state', '=', 'queried')]"/>
+                <filter name="filter_state_cleared" string="Cleared" domain="[('state', '=', 'cleared')]"/>
+                <filter name="filter_state_rejected" string="Rejected" domain="[('state', '=', 'rejected')]"/>
+                <filter name="filter_state_open" string="Open"
+                        domain="[('state', 'in', ('draft', 'ready', 'submitted', 'queried'))]"/>
+
+                <separator/>
+                <filter name="filter_my_declarations" string="My Declarations"
+                        domain="[('create_uid', '=', uid)]"/>
+                <filter name="filter_today" string="Created Today"
+                        domain="[('create_date', '&gt;=', context_today().strftime('%Y-%m-%d 00:00:00'))]"/>
+                <filter name="filter_this_month" string="This Month"
+                        domain="[('create_date', '&gt;=', context_today().strftime('%Y-%m-01 00:00:00'))]"/>
+
+                <separator/>
+                <group>
+                    <filter name="group_by_state" string="State" context="{'group_by': 'state'}"/>
+                    <filter name="group_by_type" string="Type" context="{'group_by': 'declaration_type_id'}"/>
+                    <filter name="group_by_customer" string="Customer" context="{'group_by': 'customer_id'}"/>
+                    <filter name="group_by_create_month" string="Created Month"
+                            context="{'group_by': 'create_date:month'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+</odoo>

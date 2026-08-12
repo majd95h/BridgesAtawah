@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_eh_log_transport_trip_search_full" model="ir.ui.view">
+        <field name="name">eh.log.transport.trip.search.full</field>
+        <field name="model">eh.log.transport.trip</field>
+        <field name="arch" type="xml">
+            <search string="Search Trips">
+                <field name="name"/>
+                <field name="customer_reference"/>
+                <field name="customer_id"/>
+                <field name="driver_id"/>
+                <field name="vehicle_id"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+
+                <separator/>
+                <filter name="filter_state_planned" string="Planned" domain="[('state', '=', 'planned')]"/>
+                <filter name="filter_state_dispatched" string="Dispatched" domain="[('state', '=', 'dispatched')]"/>
+                <filter name="filter_state_at_pickup" string="At Pickup" domain="[('state', '=', 'at_pickup')]"/>
+                <filter name="filter_state_in_transit" string="In Transit" domain="[('state', '=', 'in_transit')]"/>
+                <filter name="filter_state_at_delivery" string="At Delivery" domain="[('state', '=', 'at_delivery')]"/>
+                <filter name="filter_state_delivered" string="Delivered" domain="[('state', '=', 'delivered')]"/>
+                <filter name="filter_state_closed" string="Closed" domain="[('state', '=', 'closed')]"/>
+                <filter name="filter_state_open" string="Open"
+                        domain="[('state', 'not in', ('closed', 'cancelled'))]"/>
+
+                <separator/>
+                <filter name="filter_my_trips" string="My Trips"
+                        domain="[('create_uid', '=', uid)]"/>
+                <filter name="filter_pickup_today" string="Pickup Today"
+                        domain="[('pickup_planned_at', '&gt;=', context_today().strftime('%Y-%m-%d 00:00:00')),
+                                  ('pickup_planned_at', '&lt;=', context_today().strftime('%Y-%m-%d 23:59:59'))]"/>
+                <filter name="filter_delivery_today" string="Delivery Today"
+                        domain="[('delivery_planned_at', '&gt;=', context_today().strftime('%Y-%m-%d 00:00:00')),
+                                  ('delivery_planned_at', '&lt;=', context_today().strftime('%Y-%m-%d 23:59:59'))]"/>
+                <filter name="filter_this_week" string="This Week"
+                        domain="[('pickup_planned_at', '&gt;=', (context_today() - relativedelta(days=context_today().weekday())).strftime('%Y-%m-%d 00:00:00'))]"/>
+
+                <separator/>
+                <group>
+                    <filter name="group_by_state" string="State" context="{'group_by': 'state'}"/>
+                    <filter name="group_by_customer" string="Customer" context="{'group_by': 'customer_id'}"/>
+                    <filter name="group_by_driver" string="Driver" context="{'group_by': 'driver_id'}"/>
+                    <filter name="group_by_vehicle" string="Vehicle" context="{'group_by': 'vehicle_id'}"/>
+                    <filter name="group_by_pickup_day" string="Pickup Day"
+                            context="{'group_by': 'pickup_planned_at:day'}"/>
+                    <filter name="group_by_pickup_week" string="Pickup Week"
+                            context="{'group_by': 'pickup_planned_at:week'}"/>
+                    <filter name="group_by_pickup_month" string="Pickup Month"
+                            context="{'group_by': 'pickup_planned_at:month'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <menuitem id="menu_eh_log_carrier_root"
+              name="Carrier Portal"
+              parent="eh_log_base.menu_eh_log_operations"
+              sequence="65"/>
+
+    <menuitem id="menu_eh_log_carrier_rate_requests"
+              name="Rate Requests"
+              parent="menu_eh_log_carrier_root"
+              action="action_eh_log_carrier_rate_request"
+              sequence="10"/>
+
+    <menuitem id="menu_eh_log_carrier_bookings"
+              name="Bookings"
+              parent="menu_eh_log_carrier_root"
+              action="action_eh_log_carrier_booking"
+              sequence="20"/>
+
+    <menuitem id="menu_eh_log_carrier_config_root"
+              name="Carrier Portal"
+              parent="eh_log_base.menu_eh_log_configuration"
+              sequence="65"/>
+
+    <menuitem id="menu_eh_log_carrier_profiles"
+              name="Carriers"
+              parent="menu_eh_log_carrier_config_root"
+              action="action_eh_log_carrier_profile"
+              sequence="10"/>
+
+    <menuitem id="menu_eh_log_carrier_lanes"
+              name="Lanes"
+              parent="menu_eh_log_carrier_config_root"
+              action="action_eh_log_carrier_lane"
+              sequence="20"/>
+
+</odoo>

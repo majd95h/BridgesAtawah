@@ -1,0 +1,1307 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* eh_log_edi
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-01 04:33+0000\n"
+"PO-Revision-Date: 2026-07-01 04:33+0000\n"
+"Last-Translator: ERP Heritage <info@erpheritage.com.au>\n"
+"Language-Team: Vietnamese\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/wizards/eh_log_edi_mass_action.py:0
+msgid "%(count)d dead-letter message(s) re-queued."
+msgstr "Đã xếp lại hàng đợi %(count)d tin nhắn dead-letter."
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/wizards/eh_log_edi_mass_action.py:0
+msgid "%(count)d inbound message(s) reprocessed."
+msgstr "Đã xử lý lại %(count)d tin nhắn đến."
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_kanban
+msgid "<i class=\"fa fa-file me-1\" title=\"Payload File\"/>"
+msgstr "<i class=\"fa fa-file me-1\" title=\"Tệp payload\"/>"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_kanban
+msgid "<i class=\"fa fa-file me-1\" title=\"Raw File\"/>"
+msgstr "<i class=\"fa fa-file me-1\" title=\"Tệp thô\"/>"
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_transport.py:0
+msgid "<p>Auto-generated EDI message; the EDIFACT payload is attached.</p>"
+msgstr ""
+"<p>Thông báo EDI được tạo tự động; tải trọng EDIFACT được đính kèm.</p>"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_message_type__encoding__x12
+msgid "ANSI X12"
+msgstr ""
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_transport__protocol__as2
+msgid "AS2"
+msgstr ""
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__acked_at
+msgid "Acked At"
+msgstr "Xác nhận lúc"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_outbound__state__acked
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search_full
+msgid "Acknowledged"
+msgstr "Đã xác nhận"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__message_needaction
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__message_needaction
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__message_needaction
+msgid "Action Needed"
+msgstr "Tác vụ cần thiết"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_message_type__active
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__active
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__active
+msgid "Active"
+msgstr "Đang hoạt động"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__activity_ids
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__activity_ids
+msgid "Activities"
+msgstr "Hoạt động"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__activity_exception_decoration
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Hoạt động ngoại lệ"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__activity_state
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__activity_state
+msgid "Activity State"
+msgstr "Trạng thái hoạt động"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__activity_type_icon
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Biểu tượng loại hoạt động"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__message_attachment_count
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__message_attachment_count
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__message_attachment_count
+msgid "Attachment Count"
+msgstr "Số lượng tệp đính kèm"
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_transport.py:0
+msgid "Auto-generated EDI message from the ERP Heritage logistics suite."
+msgstr "Thông báo EDI được tạo tự động từ bộ công cụ logistics ERP Heritage."
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_message_type__direction__both
+msgid "Both"
+msgstr "Cả hai"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_mass_reprocess_form
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_form
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_mass_resume_form
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_outbound__state__cancelled
+msgid "Cancelled"
+msgstr "Đã hủy"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_form
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_form
+msgid "Close"
+msgstr "Đóng"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_inbound__state__closed
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_outbound__state__closed
+msgid "Closed"
+msgstr "Đã chốt"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_message_type__code
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__code
+msgid "Code"
+msgstr "Mã"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__company_id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__company_id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__company_id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__company_id
+msgid "Company"
+msgstr "Công ty"
+
+#. module: eh_log_edi
+#: model:ir.model,name:eh_log_edi.model_res_config_settings
+msgid "Config Settings"
+msgstr "Cài đặt cấu hình"
+
+#. module: eh_log_edi
+#: model:ir.model,name:eh_log_edi.model_res_partner
+msgid "Contact"
+msgstr "Liên hệ"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search_full
+msgid "Created Today"
+msgstr "Tạo hôm nay"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__create_uid
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound_mass_reprocess__create_uid
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_message_type__create_uid
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__create_uid
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound_mass_resume__create_uid
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__create_uid
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__create_uid
+msgid "Created by"
+msgstr "Được tạo bởi"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__create_date
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound_mass_reprocess__create_date
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_message_type__create_date
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__create_date
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound_mass_resume__create_date
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__create_date
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__create_date
+msgid "Created on"
+msgstr "Được tạo vào"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__credentials_key
+msgid "Credentials Key"
+msgstr "Khóa thông tin xác thực"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_outbound__max_retries
+msgid ""
+"Cron retry budget. Reached: row moves to dead_letter; operator must manually"
+" re-queue or cancel."
+msgstr ""
+"Ngân sách thử lại Cron. Khi đạt đến: hàng chuyển sang dead_letter; người vận"
+" hành phải xếp hàng lại hoặc hủy theo cách thủ công."
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_outbound__state__dead_letter
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search_full
+msgid "Dead Letter"
+msgstr ""
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound_mass_resume__outbound_ids
+msgid "Dead-letter Messages"
+msgstr "Tin nhắn Dead-letter"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__is_default
+msgid "Default for Partner"
+msgstr "Mặc định cho đối tác"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_message_type__description
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_message_type_form
+msgid "Description"
+msgstr "Mô tả"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_message_type__direction
+msgid "Direction"
+msgstr "Hướng"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__display_name
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound_mass_reprocess__display_name
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_message_type__display_name
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__display_name
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound_mass_resume__display_name
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__display_name
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__display_name
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_freight_job__display_name
+#: model:ir.model.fields,field_description:eh_log_edi.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:eh_log_edi.field_res_partner__display_name
+msgid "Display Name"
+msgstr "Tên hiển thị"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_outbound__state__draft
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search_full
+msgid "Draft"
+msgstr "Nháp"
+
+#. module: eh_log_edi
+#: model:ir.model.constraint,message:eh_log_edi.constraint_eh_log_edi_partner_partner_identifier_unique
+msgid "Duplicate partner identifier for the same partner."
+msgstr "Trùng định danh đối tác cho cùng một đối tác."
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_res_partner__eh_log_edi_partner_ids
+#: model:ir.model.fields,field_description:eh_log_edi.field_res_users__eh_log_edi_partner_ids
+msgid "EDI Configurations"
+msgstr "Cấu hình EDI"
+
+#. module: eh_log_edi
+#: model:ir.ui.menu,name:eh_log_edi.menu_eh_log_edi_config_root
+#: model:ir.ui.menu,name:eh_log_edi.menu_eh_log_edi_root
+msgid "EDI Hub"
+msgstr "Trung tâm EDI"
+
+#. module: eh_log_edi
+#: model:ir.model,name:eh_log_edi.model_eh_log_edi_inbound
+msgid "EDI Inbound Message"
+msgstr "Tin nhắn EDI đến"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_pivot
+msgid "EDI Inbound Volume"
+msgstr "Khối lượng EDI đến"
+
+#. module: eh_log_edi
+#: model:ir.model,name:eh_log_edi.model_eh_log_edi_message_type
+msgid "EDI Message Type"
+msgstr "Loại tin nhắn EDI"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_freight_job_form_edi
+msgid "EDI Out"
+msgstr "EDI đi"
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_freight_job.py:0
+msgid "EDI Outbound"
+msgstr "EDI đi"
+
+#. module: eh_log_edi
+#: model:ir.model,name:eh_log_edi.model_eh_log_edi_outbound
+msgid "EDI Outbound Message"
+msgstr "Tin nhắn EDI đi"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_freight_job__eh_log_edi_outbound_count
+msgid "EDI Outbound Messages"
+msgstr "Các tin nhắn EDI đi"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_pivot
+msgid "EDI Outbound Volume"
+msgstr "Khối lượng EDI đi"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_graph
+msgid "EDI Outbound by State"
+msgstr "EDI đi theo trạng thái"
+
+#. module: eh_log_edi
+#: model:ir.model,name:eh_log_edi.model_eh_log_edi_partner
+msgid "EDI Partner Configuration"
+msgstr "Cấu hình đối tác EDI"
+
+#. module: eh_log_edi
+#: model:ir.actions.act_window,name:eh_log_edi.action_eh_log_edi_partner
+#: model:ir.ui.menu,name:eh_log_edi.menu_eh_log_edi_partners
+msgid "EDI Partners"
+msgstr "Các đối tác EDI"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_res_config_settings__eh_log_edi_self_identifier
+msgid "EDI Self Identifier"
+msgstr "Mã định danh riêng EDI"
+
+#. module: eh_log_edi
+#: model:ir.model,name:eh_log_edi.model_eh_log_edi_transport
+msgid "EDI Transport"
+msgstr "Truyền tải EDI"
+
+#. module: eh_log_edi
+#: model:ir.actions.server,name:eh_log_edi.cron_dispatch_outbound_ir_actions_server
+msgid "EDI: Dispatch Outbound Queue"
+msgstr "EDI: Gửi hàng đợi đi"
+
+#. module: eh_log_edi
+#: model:ir.actions.server,name:eh_log_edi.cron_process_inbound_ir_actions_server
+msgid "EDI: Process Inbound Queue"
+msgstr "EDI: Xử lý hàng đợi đến"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.res_config_settings_view_form_edi
+msgid "ERP Heritage EDI Hub"
+msgstr "Trung tâm EDI ERP Heritage"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_message_type__encoding
+msgid "Encoding"
+msgstr "Mã hoá"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_transport_form
+msgid "Endpoint"
+msgstr ""
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_transport__protocol__file
+msgid "File Drop"
+msgstr "Thả tệp"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__raw_filename
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__payload_filename
+msgid "Filename"
+msgstr "Tên tập tin"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__filename_template
+msgid "Filename Template"
+msgstr "Mẫu tên tệp"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__message_follower_ids
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__message_follower_ids
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__message_follower_ids
+msgid "Followers"
+msgstr "Người theo dõi"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__message_partner_ids
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__message_partner_ids
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Người theo dõi (Đối tác)"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_inbound__activity_type_icon
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_outbound__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Font biểu tượng, ví dụ: fa-tasks"
+
+#. module: eh_log_edi
+#: model:ir.model,name:eh_log_edi.model_eh_log_freight_job
+msgid "Freight Forwarding Job"
+msgstr "Công việc giao nhận hàng hóa"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_partner__partner_identifier
+msgid ""
+"GLN, DUNS, EAN, or internal code carried in the EDI envelope as the "
+"recipient identifier."
+msgstr ""
+"Mã GLN, DUNS, EAN hoặc mã nội bộ được mang trong phong bì EDI làm mã định "
+"danh người nhận."
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.res_config_settings_view_form_edi
+msgid "GLN, DUNS, or internal code"
+msgstr "Mã GLN, DUNS hoặc mã nội bộ"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_transport__protocol__http
+msgid "HTTP"
+msgstr ""
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__has_message
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__has_message
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__has_message
+msgid "Has Message"
+msgstr "Có tin nhắn"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search_full
+msgid "Has Retries"
+msgstr "Có lần thử lại"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__host
+msgid "Host"
+msgstr "Người phụ trách cuộc gặp"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound_mass_reprocess__id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_message_type__id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound_mass_resume__id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_freight_job__id
+#: model:ir.model.fields,field_description:eh_log_edi.field_res_config_settings__id
+#: model:ir.model.fields,field_description:eh_log_edi.field_res_partner__id
+msgid "ID"
+msgstr ""
+
+#. module: eh_log_edi
+#: model:eh.log.edi.message.type,name:eh_log_edi.message_type_iftmin
+msgid "IFTMIN - Forwarding Instruction"
+msgstr "IFTMIN - Hướng dẫn giao nhận"
+
+#. module: eh_log_edi
+#: model:eh.log.edi.message.type,name:eh_log_edi.message_type_iftsta
+msgid "IFTSTA - International Multimodal Status Report"
+msgstr "IFTSTA - Báo cáo trạng thái vận tải đa phương thức quốc tế"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__activity_exception_icon
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__activity_exception_icon
+msgid "Icon"
+msgstr "Biểu tượng"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_inbound__activity_exception_icon
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_outbound__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Biểu tượng cho thấy một hoạt động ngoại lệ."
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_res_config_settings__eh_log_edi_self_identifier
+msgid ""
+"Identifier (GLN, DUNS, internal) inserted as the sender party on every "
+"outbound EDI envelope. Per-partner configurations may override this value."
+msgstr ""
+"Định danh (GLN, DUNS, nội bộ) được chèn làm bên gửi trong mọi phong bì EDI "
+"gửi đi. Cấu hình theo từng đối tác có thể ghi đè giá trị này."
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.res_config_settings_view_form_edi
+msgid ""
+"Identifier inserted as the sender party on every outbound EDI envelope."
+msgstr "Định danh được chèn làm bên gửi trong mọi phong bì EDI gửi đi."
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_outbound__transport_reference
+msgid ""
+"Identifier returned by the transport (SMTP message id, SFTP path, HTTP "
+"status). Useful for manual lookup."
+msgstr ""
+"Định danh do lớp truyền tải trả về (SMTP message id, đường dẫn SFTP, trạng "
+"thái HTTP). Hữu ích cho việc tra cứu thủ công."
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_partner__self_party_identifier_override
+msgid ""
+"Identifier the partner expects to see as the sender. Falls back to the "
+"company's eh_log_edi_self_identifier when blank."
+msgstr ""
+"Định danh mà đối tác mong đợi thấy với vai trò bên gửi. Quay về "
+"eh_log_edi_self_identifier của công ty khi để trống."
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.res_config_settings_view_form_edi
+msgid "Identity"
+msgstr "Định danh"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_inbound__message_needaction
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_outbound__message_needaction
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_partner__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Nếu chọn, bạn cần chú ý tới các tin nhắn mới."
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_inbound__message_has_error
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_inbound__message_has_sms_error
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_outbound__message_has_error
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_outbound__message_has_sms_error
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_partner__message_has_error
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_partner__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Nếu chọn, một số tin nhắn sẽ có lỗi gửi."
+
+#. module: eh_log_edi
+#: model:ir.actions.act_window,name:eh_log_edi.action_eh_log_edi_inbound
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_message_type__direction__in
+#: model:ir.ui.menu,name:eh_log_edi.menu_eh_log_edi_inbound
+msgid "Inbound"
+msgstr "Đến"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound_mass_reprocess__inbound_ids
+msgid "Inbound Messages"
+msgstr "Tin nhắn đến"
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_inbound.py:0
+msgid "Inbound message %(name)s cannot move from %(from)s to %(to)s."
+msgstr "Tin nhắn đến %(name)s không thể chuyển từ %(from)s sang %(to)s."
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__message_is_follower
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__message_is_follower
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__message_is_follower
+msgid "Is Follower"
+msgstr "Là người theo dõi"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_message_type__encoding__json
+msgid "JSON"
+msgstr ""
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_inbound__parsed_payload
+msgid ""
+"JSON serialisation of the parser output. Stored for operator review and "
+"replay."
+msgstr ""
+"Chuỗi hóa JSON của đầu ra bộ phân tích cú pháp. Được lưu trữ để người vận "
+"hành xem xét và phát lại."
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__error_message
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__error_message
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_form
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_form
+msgid "Last Error"
+msgstr "Lỗi cuối cùng"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__write_uid
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound_mass_reprocess__write_uid
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_message_type__write_uid
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__write_uid
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound_mass_resume__write_uid
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__write_uid
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__write_uid
+msgid "Last Updated by"
+msgstr "Cập nhật lần cuối bởi"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__write_date
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound_mass_reprocess__write_date
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_message_type__write_date
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__write_date
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound_mass_resume__write_date
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__write_date
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__write_date
+msgid "Last Updated on"
+msgstr "Cập nhật lần cuối vào"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_transport__credentials_key
+msgid "Lookup key for the credentials helper."
+msgstr "Khóa tra cứu cho trình trợ giúp thông tin xác thực."
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_form
+msgid "Mark Acked"
+msgstr "Đánh dấu đã xác nhận"
+
+#. module: eh_log_edi
+#: model:ir.actions.act_window,name:eh_log_edi.action_eh_log_edi_inbound_mass_reprocess
+msgid "Mass-reprocess"
+msgstr "Xử lý lại hàng loạt"
+
+#. module: eh_log_edi
+#: model:ir.model,name:eh_log_edi.model_eh_log_edi_inbound_mass_reprocess
+msgid "Mass-reprocess EDI Inbound"
+msgstr "Xử lý lại hàng loạt EDI đầu vào"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_mass_reprocess_form
+msgid "Mass-reprocess Inbound"
+msgstr "Xử lý lại hàng loạt đầu vào"
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/wizards/eh_log_edi_mass_action.py:0
+msgid "Mass-reprocess complete"
+msgstr "Xử lý lại hàng loạt hoàn tất"
+
+#. module: eh_log_edi
+#: model:ir.actions.act_window,name:eh_log_edi.action_eh_log_edi_outbound_mass_resume
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_mass_resume_form
+msgid "Mass-resume Dead-letter"
+msgstr "Tiếp tục hàng loạt dead-letter"
+
+#. module: eh_log_edi
+#: model:ir.model,name:eh_log_edi.model_eh_log_edi_outbound_mass_resume
+msgid "Mass-resume EDI Dead-letter"
+msgstr "Tiếp tục hàng loạt EDI dead-letter"
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/wizards/eh_log_edi_mass_action.py:0
+msgid "Mass-resume complete"
+msgstr "Tiếp tục hàng loạt hoàn tất"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__max_retries
+msgid "Max Retries"
+msgstr "Số lần thử lại tối đa"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__message_has_error
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__message_has_error
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__message_has_error
+msgid "Message Delivery error"
+msgstr "Lỗi gửi tin nhắn"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__message_type_id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__message_type_id
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_search_full
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search_full
+msgid "Message Type"
+msgstr "Kiểu tin nhắn"
+
+#. module: eh_log_edi
+#: model:ir.actions.act_window,name:eh_log_edi.action_eh_log_edi_message_type
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__message_type_ids
+#: model:ir.ui.menu,name:eh_log_edi.menu_eh_log_edi_message_types
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_partner_form
+msgid "Message Types"
+msgstr "Các loại tin nhắn"
+
+#. module: eh_log_edi
+#: model:ir.model.constraint,message:eh_log_edi.constraint_eh_log_edi_message_type_code_direction_unique
+msgid "Message type code/direction combination must be unique."
+msgstr "Tổ hợp mã/hướng của loại tin nhắn phải là duy nhất."
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_partner__message_type_ids
+msgid "Message types this configuration may dispatch / receive."
+msgstr "Các loại tin nhắn mà cấu hình này có thể gửi / nhận."
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__message_ids
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__message_ids
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__message_ids
+msgid "Messages"
+msgstr "Tin nhắn"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_transport__protocol__mock
+msgid "Mock (Tests)"
+msgstr "Mô phỏng (Kiểm thử)"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__my_activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Thời hạn hoạt động của tôi"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_message_type__name
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__name
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__name
+msgid "Name"
+msgstr "Tên"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_inbound__target_record_ref
+msgid ""
+"Name of the record affected by apply(). For IFTSTA, the freight job that "
+"received the new tracking event."
+msgstr ""
+"Tên của bản ghi bị ảnh hưởng bởi apply(). Đối với IFTSTA, đó là công việc "
+"vận chuyển đã nhận sự kiện theo dõi mới."
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_inbound.py:0
+#: code:addons/eh_log_edi/models/eh_log_edi_outbound.py:0
+msgid "New"
+msgstr "Mới"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__activity_calendar_event_id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "Sự kiện trên lịch cho hoạt động tiếp theo"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Thời hạn cho hoạt động tiếp theo"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__activity_summary
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__activity_summary
+msgid "Next Activity Summary"
+msgstr "Tóm tắt hoạt động tiếp theo"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__activity_type_id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__activity_type_id
+msgid "Next Activity Type"
+msgstr "Loại hoạt động tiếp theo"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__message_needaction_counter
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__message_needaction_counter
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Số lượng tác vụ"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__message_has_error_counter
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__message_has_error_counter
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__message_has_error_counter
+msgid "Number of errors"
+msgstr "Số lượng lỗi"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_inbound__message_needaction_counter
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_outbound__message_needaction_counter
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_partner__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Số tin nhắn cần xử lý"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_inbound__message_has_error_counter
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_outbound__message_has_error_counter
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_partner__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Số tin nhắn bị gửi lỗi"
+
+#. module: eh_log_edi
+#: model:ir.actions.act_window,name:eh_log_edi.action_eh_log_edi_outbound
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_message_type__direction__out
+#: model:ir.ui.menu,name:eh_log_edi.menu_eh_log_edi_outbound
+msgid "Outbound"
+msgstr "Đi"
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_outbound.py:0
+msgid "Outbound message %(name)s cannot move from %(from)s to %(to)s."
+msgstr "Tin nhắn đầu ra %(name)s không thể chuyển từ %(from)s sang %(to)s."
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_form
+msgid "Parse"
+msgstr "Phân tích"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_inbound__state__parsed
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_search_full
+msgid "Parsed"
+msgstr "Đã phân tích"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__parsed_at
+msgid "Parsed At"
+msgstr "Phân tích lúc"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__parsed_payload
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_form
+msgid "Parsed Payload"
+msgstr "Payload đã phân tích"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__partner_id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__partner_id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__partner_id
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_search_full
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search_full
+msgid "Partner"
+msgstr "Đối tác"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__partner_config_id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__partner_config_id
+msgid "Partner Configuration"
+msgstr "Cấu hình đối tác"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__partner_identifier
+msgid "Partner Identifier"
+msgstr "Mã định danh đối tác"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__payload
+msgid "Payload"
+msgstr ""
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_partner__is_default
+msgid ""
+"Pick this configuration when the dispatcher needs to send to the partner "
+"without an explicit configuration reference."
+msgstr ""
+"Chọn cấu hình này khi bộ điều phối cần gửi đến đối tác mà không có tham "
+"chiếu cấu hình rõ ràng."
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__port
+msgid "Port"
+msgstr "Cổng"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_form
+msgid "Process"
+msgstr "Xử lý"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_inbound__state__processed
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_search_full
+msgid "Processed"
+msgstr "Đã xử lý"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__processed_at
+msgid "Processed At"
+msgstr "Xử lý lúc"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__protocol
+msgid "Protocol"
+msgstr "Giao thức"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_form
+msgid "Queue"
+msgstr "Hàng đợi"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_freight_job_form_edi
+msgid "Queue IFTMIN"
+msgstr "Đưa IFTMIN vào hàng đợi"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_outbound__state__queued
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search_full
+msgid "Queued"
+msgstr "Đang đợi"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__rating_ids
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__rating_ids
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__rating_ids
+msgid "Ratings"
+msgstr "Đánh giá"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__raw_payload
+msgid "Raw Payload"
+msgstr "Tải trọng thô"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_form
+msgid "Re-queue"
+msgstr "Đưa lại vào hàng đợi"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_mass_resume_form
+msgid "Re-queue All"
+msgstr "Đưa lại tất cả vào hàng đợi"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_inbound__state__received
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_search_full
+msgid "Received"
+msgstr "Đã nhận"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__received_at
+msgid "Received At"
+msgstr "Nhận lúc"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_search_full
+msgid "Received Today"
+msgstr "Nhận hôm nay"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__name
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__name
+msgid "Reference"
+msgstr "Tham chiếu"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_inbound__state__rejected
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_outbound__state__rejected
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_search_full
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search_full
+msgid "Rejected"
+msgstr "Bị từ chối"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_mass_reprocess_form
+msgid "Reprocess All"
+msgstr "Xử lý lại tất cả"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__activity_user_id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__activity_user_id
+msgid "Responsible User"
+msgstr "Người phụ trách"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_form
+msgid "Resume"
+msgstr "Tiếp tục"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__retry_count
+msgid "Retries"
+msgstr "Số lần thử lại"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_kanban
+msgid "Retries:"
+msgstr "Số lần thử lại:"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_transport__protocol__sftp
+msgid "SFTP"
+msgstr ""
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__message_has_sms_error
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__message_has_sms_error
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Lỗi gửi SMS"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_transport__protocol__smtp
+msgid "SMTP"
+msgstr ""
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_search_full
+msgid "Search Inbound EDI"
+msgstr "Tìm kiếm EDI đến"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search_full
+msgid "Search Outbound EDI"
+msgstr "Tìm kiếm EDI đi"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.res_config_settings_view_form_edi
+msgid "Self Identifier"
+msgstr "Mã định danh riêng"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__self_party_identifier_override
+msgid "Self Identifier Override"
+msgstr "Ghi đè mã định danh riêng"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_form
+msgid "Send Now"
+msgstr "Gửi ngay"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_outbound__state__sent
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search_full
+msgid "Sent"
+msgstr "Đã gửi"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__sent_at
+msgid "Sent At"
+msgstr "Gửi lúc"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__signing_required
+msgid "Signing Required"
+msgstr "Yêu cầu ký"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__source_id
+msgid "Source ID"
+msgstr "ID nguồn"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__source_model
+msgid "Source Model"
+msgstr "Mô hình nguồn"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__state
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__state
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_search_full
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search_full
+msgid "State"
+msgstr "Trạng thái"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_inbound__activity_state
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_outbound__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Trạng thái dựa trên hoạt động\n"
+"Quá hạn: Hạn chót hạn đã qua\n"
+"Hôm nay: Hôm nay là ngày phải thực hiện\n"
+"Kế hoạch: Cần thực hiện trong tương lai."
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_partner__filename_template
+msgid ""
+"Substitutions: {message}, {date}, {sequence}, {partner_code}. Used to "
+"compose outbound filenames."
+msgstr ""
+"Thay thế: {message}, {date}, {sequence}, {partner_code}. Được dùng để tạo "
+"tên tệp gửi đi."
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__target_directory
+msgid "Target Directory"
+msgstr "Thư mục đích"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__target_email
+msgid "Target Email"
+msgstr "Email đích"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__target_record_ref
+msgid "Target Record"
+msgstr "Bản ghi mục tiêu"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__target_url
+msgid "Target URL"
+msgstr "URL mục tiêu"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__transport_id
+msgid "Transport"
+msgstr "Đi lại"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__transport_reference
+msgid "Transport Reference"
+msgstr "Tham chiếu vận tải"
+
+#. module: eh_log_edi
+#: model:ir.model.constraint,message:eh_log_edi.constraint_eh_log_edi_transport_transport_code_unique
+msgid "Transport code must be unique per company."
+msgstr "Mã vận tải phải là duy nhất cho mỗi công ty."
+
+#. module: eh_log_edi
+#: model:ir.actions.act_window,name:eh_log_edi.action_eh_log_edi_transport
+#: model:ir.ui.menu,name:eh_log_edi.menu_eh_log_edi_transports
+msgid "Transports"
+msgstr "Vận tải"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_inbound__activity_exception_decoration
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_outbound__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Loại hoạt động ngoại lệ trong bản ghi."
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_message_type__encoding__edifact
+msgid "UN/EDIFACT"
+msgstr ""
+
+#. module: eh_log_edi
+#: model:eh.log.edi.message.type,description:eh_log_edi.message_type_iftmin
+msgid ""
+"UN/EDIFACT D.96B forwarding instruction. Sent from forwarder to carrier or "
+"upstream agent to instruct handling of a shipment."
+msgstr ""
+"Chỉ dẫn giao nhận UN/EDIFACT D.96B. Được gửi từ đại lý giao nhận đến hãng "
+"vận chuyển hoặc đại lý cấp trên để chỉ dẫn việc xử lý lô hàng."
+
+#. module: eh_log_edi
+#: model:eh.log.edi.message.type,description:eh_log_edi.message_type_iftsta
+msgid ""
+"UN/EDIFACT D.96B status report. Received from carrier or upstream agent "
+"reporting on the progress of a shipment."
+msgstr ""
+"Báo cáo trạng thái UN/EDIFACT D.96B. Được nhận từ hãng vận chuyển hoặc đại "
+"lý cấp trên báo cáo về tiến độ của một lô hàng."
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__username
+msgid "Username"
+msgstr "Tên đăng nhập"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__website_message_ids
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__website_message_ids
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__website_message_ids
+msgid "Website Messages"
+msgstr "Thông báo trên trang web"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_inbound__website_message_ids
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_outbound__website_message_ids
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_partner__website_message_ids
+msgid "Website communication history"
+msgstr "Lịch sử trao đổi qua trang web"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_outbound__payload
+msgid ""
+"Wire bytes built by the translator. Stored once and re-used on retry so the "
+"partner sees identical content across attempts."
+msgstr ""
+"Các byte truyền được xây dựng bởi trình dịch. Được lưu trữ một lần và tái sử"
+" dụng khi thử lại để đối tác thấy nội dung giống hệt nhau qua các lần thử."
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_message_type__encoding__xml
+msgid "XML"
+msgstr ""
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_message_type.py:0
+msgid ""
+"[EHL-EDI-001] No translator registered for message type %(code)s direction "
+"%(direction)s. Install the module that provides the translator or untick "
+"Active."
+msgstr ""
+"[EHL-EDI-001] Không có bộ dịch nào được đăng ký cho loại tin nhắn %(code)s "
+"hướng %(direction)s. Hãy cài đặt mô-đun cung cấp bộ dịch hoặc bỏ chọn Hoạt "
+"động."
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_transport.py:0
+msgid ""
+"[EHL-EDI-002] Transport %(name)s requires host or target URL for protocol "
+"%(protocol)s."
+msgstr ""
+"[EHL-EDI-002] Kênh truyền %(name)s yêu cầu máy chủ hoặc URL đích cho giao "
+"thức %(protocol)s."
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_transport.py:0
+msgid "[EHL-EDI-003] Transport %(name)s requires a target email for SMTP."
+msgstr "[EHL-EDI-003] Kênh truyền %(name)s yêu cầu email đích cho SMTP."
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_transport.py:0
+msgid ""
+"[EHL-EDI-004] AS2 transport requires the optional pyas2 library; install it "
+"and provide a signing certificate before activating an AS2 transport."
+msgstr ""
+"[EHL-EDI-004] Kênh truyền AS2 yêu cầu thư viện tùy chọn pyas2; hãy cài đặt "
+"nó và cung cấp chứng chỉ ký trước khi kích hoạt kênh truyền AS2."
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_transport.py:0
+msgid "[EHL-EDI-005] Unsupported transport protocol %(protocol)s."
+msgstr "[EHL-EDI-005] Giao thức truyền %(protocol)s không được hỗ trợ."
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_transport.py:0
+msgid ""
+"[EHL-EDI-006] SFTP transport requires the optional paramiko library; pip "
+"install paramiko on the Odoo host before activating SFTP."
+msgstr ""
+"[EHL-EDI-006] Kênh truyền SFTP yêu cầu thư viện tùy chọn paramiko; hãy chạy "
+"pip install paramiko trên máy chủ Odoo trước khi kích hoạt SFTP."
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_transport.py:0
+msgid ""
+"[EHL-EDI-007] HTTP transport %(name)s rejected the payload with status "
+"%(status)s: %(body)s"
+msgstr ""
+"[EHL-EDI-007] Kênh truyền HTTP %(name)s đã từ chối tải trọng với trạng thái "
+"%(status)s: %(body)s"
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_partner.py:0
+msgid ""
+"[EHL-EDI-008] Only one default EDI configuration is allowed per partner."
+msgstr "[EHL-EDI-008] Mỗi đối tác chỉ được phép có một cấu hình EDI mặc định."
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_outbound.py:0
+msgid "[EHL-EDI-009] Outbound state must change via the action buttons."
+msgstr ""
+"[EHL-EDI-009] Trạng thái gửi đi phải được thay đổi thông qua các nút thao "
+"tác."
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_outbound.py:0
+msgid ""
+"[EHL-EDI-010] No outbound translator registered for message type %(code)s."
+msgstr ""
+"[EHL-EDI-010] Không có bộ dịch gửi đi nào được đăng ký cho loại tin nhắn "
+"%(code)s."
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_outbound.py:0
+msgid ""
+"[EHL-EDI-011] Source record %(model)s/%(id)s no longer exists; cannot build "
+"payload."
+msgstr ""
+"[EHL-EDI-011] Bản ghi nguồn %(model)s/%(id)s không còn tồn tại; không thể "
+"tạo tải trọng."
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_inbound.py:0
+msgid ""
+"[EHL-EDI-012] No inbound translator registered for message type %(code)s."
+msgstr ""
+"[EHL-EDI-012] Không có bộ dịch đến nào được đăng ký cho loại tin nhắn "
+"%(code)s."
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_inbound.py:0
+msgid "[EHL-EDI-013] No inbound translator for %(code)s."
+msgstr "[EHL-EDI-013] Không có bộ dịch đến cho %(code)s."
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_inbound.py:0
+msgid "[EHL-EDI-014] Inbound state must change via the action buttons."
+msgstr ""
+"[EHL-EDI-014] Trạng thái đến phải được thay đổi thông qua các nút thao tác."
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_freight_job.py:0
+msgid "source_model"
+msgstr ""

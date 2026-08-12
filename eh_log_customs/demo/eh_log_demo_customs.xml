@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="demo_customs_dec_001" model="eh.log.customs.declaration">
+            <field name="declaration_type_id" ref="eh_log_customs.dt_import"/>
+            <field name="customer_id" ref="eh_log_base.demo_partner_alpha_trading"/>
+            <field name="importer_id" ref="eh_log_base.demo_partner_alpha_trading"/>
+            <field name="exporter_id" ref="eh_log_base.demo_partner_china_exports"/>
+            <field name="declaration_date" eval="(DateTime.today() - relativedelta(days=12)).strftime('%Y-%m-%d')"/>
+            <field name="broker_reference">DXB-IMP-2026-0451</field>
+            <field name="customs_value">42500</field>
+        </record>
+
+        <record id="demo_customs_dec_002" model="eh.log.customs.declaration">
+            <field name="declaration_type_id" ref="eh_log_customs.dt_import"/>
+            <field name="customer_id" ref="eh_log_base.demo_partner_falcon_industries"/>
+            <field name="importer_id" ref="eh_log_base.demo_partner_falcon_industries"/>
+            <field name="exporter_id" ref="eh_log_base.demo_partner_germany_machinery"/>
+            <field name="declaration_date" eval="(DateTime.today() - relativedelta(days=8)).strftime('%Y-%m-%d')"/>
+            <field name="broker_reference">DXB-IMP-2026-0452</field>
+            <field name="customs_value">128000</field>
+        </record>
+
+        <record id="demo_customs_dec_003" model="eh.log.customs.declaration">
+            <field name="declaration_type_id" ref="eh_log_customs.dt_export"/>
+            <field name="customer_id" ref="eh_log_base.demo_partner_najd_petrochem"/>
+            <field name="exporter_id" ref="eh_log_base.demo_partner_najd_petrochem"/>
+            <field name="declaration_date" eval="(DateTime.today() - relativedelta(days=6)).strftime('%Y-%m-%d')"/>
+            <field name="broker_reference">JUB-EXP-2026-0123</field>
+            <field name="customs_value">385000</field>
+        </record>
+
+        <record id="demo_customs_dec_004" model="eh.log.customs.declaration">
+            <field name="declaration_type_id" ref="eh_log_customs.dt_import"/>
+            <field name="customer_id" ref="eh_log_base.demo_partner_palm_retail"/>
+            <field name="importer_id" ref="eh_log_base.demo_partner_palm_retail"/>
+            <field name="declaration_date" eval="(DateTime.today() - relativedelta(days=5)).strftime('%Y-%m-%d')"/>
+            <field name="broker_reference">DOH-IMP-2026-0089</field>
+            <field name="customs_value">88600</field>
+        </record>
+
+        <record id="demo_customs_dec_005" model="eh.log.customs.declaration">
+            <field name="declaration_type_id" ref="eh_log_customs.dt_import"/>
+            <field name="customer_id" ref="eh_log_base.demo_partner_pearl_pharma"/>
+            <field name="importer_id" ref="eh_log_base.demo_partner_pearl_pharma"/>
+            <field name="declaration_date" eval="(DateTime.today() - relativedelta(days=3)).strftime('%Y-%m-%d')"/>
+            <field name="broker_reference">BAH-IMP-2026-0042</field>
+            <field name="customs_value">61200</field>
+        </record>
+
+        <record id="demo_customs_dec_006" model="eh.log.customs.declaration">
+            <field name="declaration_type_id" ref="eh_log_customs.dt_import"/>
+            <field name="customer_id" ref="eh_log_base.demo_partner_arabian_food"/>
+            <field name="importer_id" ref="eh_log_base.demo_partner_arabian_food"/>
+            <field name="declaration_date" eval="(DateTime.today() - relativedelta(days=2)).strftime('%Y-%m-%d')"/>
+            <field name="broker_reference">SHJ-IMP-2026-0301</field>
+            <field name="customs_value">154000</field>
+        </record>
+
+        <record id="demo_customs_dec_007" model="eh.log.customs.declaration">
+            <field name="declaration_type_id" ref="eh_log_customs.dt_transit"/>
+            <field name="customer_id" ref="eh_log_base.demo_partner_oasis_consumer"/>
+            <field name="declaration_date" eval="(DateTime.today() - relativedelta(days=1)).strftime('%Y-%m-%d')"/>
+            <field name="broker_reference">DXB-TRN-2026-0017</field>
+            <field name="customs_value">52800</field>
+        </record>
+
+        <record id="demo_customs_dec_008" model="eh.log.customs.declaration">
+            <field name="declaration_type_id" ref="eh_log_customs.dt_import"/>
+            <field name="customer_id" ref="eh_log_base.demo_partner_jeddah_apparel"/>
+            <field name="importer_id" ref="eh_log_base.demo_partner_jeddah_apparel"/>
+            <field name="declaration_date" eval="DateTime.today().strftime('%Y-%m-%d')"/>
+            <field name="broker_reference">JED-IMP-2026-0708</field>
+            <field name="customs_value">76400</field>
+        </record>
+
+        <record id="demo_customs_dec_009" model="eh.log.customs.declaration">
+            <field name="declaration_type_id" ref="eh_log_customs.dt_import"/>
+            <field name="customer_id" ref="eh_log_base.demo_partner_muscat_marine"/>
+            <field name="importer_id" ref="eh_log_base.demo_partner_muscat_marine"/>
+            <field name="declaration_date" eval="DateTime.today().strftime('%Y-%m-%d')"/>
+            <field name="broker_reference">SOH-IMP-2026-0064</field>
+            <field name="customs_value">29900</field>
+        </record>
+
+        <record id="demo_customs_dec_010" model="eh.log.customs.declaration">
+            <field name="declaration_type_id" ref="eh_log_customs.dt_re_export"/>
+            <field name="customer_id" ref="eh_log_base.demo_partner_alpha_trading"/>
+            <field name="exporter_id" ref="eh_log_base.demo_partner_alpha_trading"/>
+            <field name="declaration_date" eval="DateTime.today().strftime('%Y-%m-%d')"/>
+            <field name="broker_reference">DXB-RXP-2026-0028</field>
+            <field name="customs_value">112500</field>
+        </record>
+
+    </data>
+</odoo>

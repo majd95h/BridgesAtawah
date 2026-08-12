@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="action_report_permit_application" model="ir.actions.report">
+        <field name="name">Permit Application</field>
+        <field name="model">eh.log.project.cargo.permit</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">eh_log_project_cargo.report_permit_application_document</field>
+        <field name="report_file">eh_log_project_cargo.report_permit_application_document</field>
+        <field name="binding_model_id" ref="model_eh_log_project_cargo_permit"/>
+        <field name="binding_type">report</field>
+        <field name="paperformat_id" ref="eh_log_base.paperformat_eh_log_portrait"/>
+    </record>
+
+    <template id="report_permit_application_document">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="permit">
+                <t t-call="eh_log_base.eh_log_clean_layout">
+                    <t t-set="company" t-value="permit.company_id"/>
+                    <t t-set="report_type" t-value="'pdf'"/>
+                    <t t-call="eh_log_base.eh_log_report_styles"/>
+                    <div class="page eh_pdf_page">
+                        <t t-call="eh_log_base.eh_log_report_header">
+                            <t t-set="title" t-value="'Permit Application'"/>
+                            <t t-set="company" t-value="permit.company_id"/>
+                        </t>
+
+                        <div class="eh_pdf_meta">
+                            <span><strong>Reference:</strong> <t t-out="permit.permit_reference or permit.name"/></span>
+                            <span><strong>Job:</strong> <t t-out="permit.job_id.name"/></span>
+                            <span><strong>Authority:</strong> <t t-out="permit.authority"/></span>
+                            <span><strong>Issuing Partner:</strong> <t t-out="permit.issuing_partner_id.display_name or ''"/></span>
+                            <span><strong>State:</strong> <t t-out="permit.state"/></span>
+                        </div>
+
+                        <h2 class="eh_pdf_subtitle">Move Particulars</h2>
+                        <table class="eh_pdf_table">
+                            <thead>
+                                <tr>
+                                    <th>Item</th>
+                                    <th class="text-end">L (m)</th>
+                                    <th class="text-end">W (m)</th>
+                                    <th class="text-end">H (m)</th>
+                                    <th class="text-end">Weight (t)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr t-foreach="permit.job_id.item_ids" t-as="item">
+                                    <td><t t-out="item.name"/></td>
+                                    <td class="text-end"><t t-out="'{:.2f}'.format(item.length_m)"/></td>
+                                    <td class="text-end"><t t-out="'{:.2f}'.format(item.width_m)"/></td>
+                                    <td class="text-end"><t t-out="'{:.2f}'.format(item.height_m)"/></td>
+                                    <td class="text-end"><t t-out="'{:.2f}'.format(item.weight_t)"/></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2 class="eh_pdf_subtitle">Validity</h2>
+                        <table class="eh_pdf_table">
+                            <thead>
+                                <tr>
+                                    <th>Applied On</th>
+                                    <th>Issued On</th>
+                                    <th>Valid From</th>
+                                    <th>Valid Until</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><t t-out="permit.applied_at and permit.applied_at.strftime('%Y-%m-%d') or ''"/></td>
+                                    <td><t t-out="permit.issued_at and permit.issued_at.strftime('%Y-%m-%d') or ''"/></td>
+                                    <td><t t-out="permit.valid_from and permit.valid_from.strftime('%Y-%m-%d') or ''"/></td>
+                                    <td><t t-out="permit.valid_until and permit.valid_until.strftime('%Y-%m-%d') or ''"/></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2 class="eh_pdf_subtitle">Notes</h2>
+                        <p t-out="permit.notes or ''"/>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>

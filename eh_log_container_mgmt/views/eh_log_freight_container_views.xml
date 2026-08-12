@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="view_eh_log_freight_container_form_mgmt" model="ir.ui.view">
+            <field name="name">eh.log.freight.container.form.inherit.mgmt</field>
+            <field name="model">eh.log.freight.container</field>
+            <field name="inherit_id" ref="eh_log_freight.view_eh_log_freight_container_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//sheet" position="inside">
+                    <notebook>
+                        <page string="Depot &amp; Lease">
+                            <group>
+                                <group>
+                                    <field name="current_depot_id" options="{'no_create': True}"/>
+                                    <field name="lease_contract_id" options="{'no_create': True}"/>
+                                    <field name="movement_count" readonly="1"/>
+                                </group>
+                            </group>
+                            <field name="movement_ids" readonly="1">
+                                <list create="false">
+                                    <field name="happened_at"/>
+                                    <field name="movement_kind"/>
+                                    <field name="depot_id"/>
+                                    <field name="counterparty_depot_id"/>
+                                    <field name="needs_repair"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="D&amp;D">
+                            <group>
+                                <group>
+                                    <field name="free_time_days"/>
+                                    <field name="dnd_rate_per_day"/>
+                                    <field name="currency_id" options="{'no_create': True}"/>
+                                </group>
+                                <group>
+                                    <field name="days_at_destination" readonly="1"/>
+                                    <field name="dnd_chargeable_days" readonly="1"/>
+                                    <field name="dnd_amount" readonly="1"/>
+                                </group>
+                            </group>
+                        </page>
+                    </notebook>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

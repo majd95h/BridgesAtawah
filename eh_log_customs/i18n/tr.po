@@ -1,0 +1,1448 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* eh_log_customs
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-01 04:33+0000\n"
+"PO-Revision-Date: 2026-07-01 04:33+0000\n"
+"Last-Translator: ERP Heritage <info@erpheritage.com.au>\n"
+"Language-Team: Turkish\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid "(none)"
+msgstr "(yok)"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid ""
+"<i class=\"fa fa-id-card-o\" style=\"font-size:1.6rem;color:#D4A055;\" "
+"title=\"Customs declaration\"/>"
+msgstr ""
+"<i class=\"fa fa-id-card-o\" style=\"font-size:1.6rem;color:#D4A055;\" "
+"title=\"Gümrük beyannamesi\"/>"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__account_number
+msgid "Account Number"
+msgstr "Hesap Numarası"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__account_number
+msgid "Account number issued by the customs authority."
+msgstr "Gümrük idaresi tarafından verilen hesap numarası."
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__message_needaction
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__message_needaction
+msgid "Action Needed"
+msgstr "Aksiyon Gerekiyor"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__active
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__active
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__active
+msgid "Active"
+msgstr "Etkin"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__activity_ids
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__activity_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_customs_declaration_activity
+msgid "Activities"
+msgstr "Aktiviteler"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__activity_exception_decoration
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Etkinlik İstisna Dekorasyonu"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__activity_state
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__activity_state
+msgid "Activity State"
+msgstr "Aktivite Durumu"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__activity_type_icon
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Aktivite Türü İmgesi"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__regulator_profile_id
+msgid ""
+"Adapter profile through which this declaration is submitted. Country packs "
+"ship default profiles; operators pick the right one per declaration."
+msgstr ""
+"Bu beyanın gönderildiği bağdaştırıcı profili. Ülke paketleri varsayılan "
+"profiller sağlar; operatörler her beyan için uygun olanı seçer."
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__amount
+msgid "Amount"
+msgstr "Tutar"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_61
+msgid "Apparel, knitted or crocheted"
+msgstr "Giyim eşyası, örme veya tığ işi"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_62
+msgid "Apparel, not knitted or crocheted"
+msgstr "Giyim, örgü veya tığ işi olmayan"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_73
+msgid "Articles of iron or steel"
+msgstr "Demir veya çelikten eşyalar"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration__state__assessed
+msgid "Assessed"
+msgstr "Değerlendirildi"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__assessed_at
+msgid "Assessed At"
+msgstr "Değerlendirme Zamanı"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__message_attachment_count
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__message_attachment_count
+msgid "Attachment Count"
+msgstr "Ek Sayısı"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_deferment_account_form
+msgid "Balance"
+msgstr "Bakiye"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_22
+msgid "Beverages, spirits, vinegar"
+msgstr "İçecekler, damıtılmış içkiler, sirke"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__broker_reference
+msgid "Broker Reference"
+msgstr "Aracı referansı"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__customs_value
+msgid ""
+"CIF value declared to customs. Duty and VAT are computed against this. "
+"Discrepancy between this and the supplier invoice is the #1 cause of "
+"regulator queries."
+msgstr ""
+"Gümrüğe beyan edilen CIF değeri. Gümrük vergisi ve VAT bu değer üzerinden "
+"hesaplanır. Bu değer ile tedarikçi faturası arasındaki tutarsızlık, "
+"düzenleyici kurum sorgularının bir numaralı nedenidir."
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Cancel"
+msgstr "İptal"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration__state__cancelled
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_deferment_entry__state__cancelled
+msgid "Cancelled"
+msgstr "İptal Edildi"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_hs_code__level__chapter
+msgid "Chapter (2 digits)"
+msgstr "Bölüm (2 basamak)"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_hs_code_search
+msgid "Chapters"
+msgstr "Bölümler"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__child_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_hs_code_form
+msgid "Children"
+msgstr "Alt"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration__state__cleared
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "Cleared"
+msgstr "Tahsil edildi"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__cleared_at
+msgid "Cleared At"
+msgstr "Tahsil edildiği tarih"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Close"
+msgstr "Kapat"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration__state__closed
+msgid "Closed"
+msgstr "Kapanmış"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__closed_at
+msgid "Closed At"
+msgstr "Kapatılma Zamanı"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__code
+msgid "Code"
+msgstr "Kod"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__company_ids
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__company_ids
+msgid "Companies"
+msgstr "Şirketler"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__company_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__company_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__company_id
+msgid "Company"
+msgstr "Firma"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__country_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__country_id
+msgid "Country"
+msgstr "Ülke"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__country_of_origin_id
+msgid "Country of Origin"
+msgstr "Menşei ülke"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "Created Month"
+msgstr "Oluşturulma Ayı"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "Created Today"
+msgstr "Bugün Oluşturuldu"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__create_uid
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__create_uid
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__create_uid
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__create_uid
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__create_uid
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__create_uid
+msgid "Created by"
+msgstr "Tarafından oluşturuldu"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__create_date
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__create_date
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__create_date
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__create_date
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__create_date
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__create_date
+msgid "Created on"
+msgstr "Oluşturuldu"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_deferment_entry__entry_kind__credit
+msgid "Credit (top-up)"
+msgstr "Alacak (yükleme)"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__currency_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__currency_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__currency_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__currency_id
+msgid "Currency"
+msgstr "Kur"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__current_balance
+msgid "Current Balance"
+msgstr "Mevcut Bakiye"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__customer_id
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "Customer"
+msgstr "Müşteri"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_pivot
+msgid "Customs Analysis"
+msgstr "Gümrük Analizi"
+
+#. module: eh_log_customs
+#: model:ir.model,name:eh_log_customs.model_eh_log_customs_declaration
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__declaration_id
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Customs Declaration"
+msgstr "Gümrük Beyannamesi"
+
+#. module: eh_log_customs
+#: model:ir.model,name:eh_log_customs.model_eh_log_customs_declaration_line
+msgid "Customs Declaration Line"
+msgstr "Gümrük Beyannamesi Satırı"
+
+#. module: eh_log_customs
+#: model:ir.model,name:eh_log_customs.model_eh_log_customs_declaration_type
+msgid "Customs Declaration Type"
+msgstr "Gümrük Beyannamesi Türü"
+
+#. module: eh_log_customs
+#: model:ir.actions.act_window,name:eh_log_customs.action_eh_log_customs_declaration
+#: model:ir.model.fields,field_description:eh_log_customs.field_sale_order__eh_log_customs_declaration_count
+#: model:ir.model.fields,field_description:eh_log_customs.field_sale_order__eh_log_customs_declaration_ids
+#: model:ir.ui.menu,name:eh_log_customs.menu_eh_log_customs_declarations
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_list
+msgid "Customs Declarations"
+msgstr "Gümrük Beyannameleri"
+
+#. module: eh_log_customs
+#: model:ir.model,name:eh_log_customs.model_eh_log_customs_deferment_account
+msgid "Customs Deferment Account"
+msgstr "Gümrük Erteleme Hesabı"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__customs_value
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__customs_value
+msgid "Customs Value"
+msgstr "Gümrük Değeri"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid ""
+"Customs declaration %(name)s cannot move from %(current)s to %(target)s. "
+"Allowed transitions from %(current)s: %(allowed)s."
+msgstr ""
+"%(name)s gümrük beyannamesi %(current)s durumundan %(target)s durumuna "
+"geçemez. %(current)s durumundan izin verilen geçişler: %(allowed)s."
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid "Customs declaration %(name)s moved to %(state)s."
+msgstr "%(name)s gümrük beyannamesi %(state)s durumuna taşındı."
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Customs value"
+msgstr "Gümrük değeri"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__regulator_reference
+msgid ""
+"Customs-issued declaration number returned at submission. Captured from the "
+"adapter response."
+msgstr ""
+"Gönderim sırasında döndürülen, gümrük tarafından verilen beyanname numarası."
+" Adaptör yanıtından alınır."
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_deferment_entry__entry_kind__debit
+msgid "Debit (duty payment or adjustment)"
+msgstr "Borç (gümrük vergisi ödemesi veya düzeltme)"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__declaration_id
+msgid "Declaration"
+msgstr "Beyanname"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid ""
+"Declaration %(name)s cannot be marked ready. Resolve the following before re-trying:\n"
+"\n"
+"- %(list)s"
+msgstr ""
+"%(name)s beyannamesi hazır olarak işaretlenemez. Yeniden denemeden önce aşağıdakileri çözün:\n"
+"\n"
+"- %(list)s"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__declaration_date
+msgid "Declaration Date"
+msgstr "Beyanname Tarihi"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__declaration_type_id
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_type_form
+msgid "Declaration Type"
+msgstr "Beyanname Türü"
+
+#. module: eh_log_customs
+#: model:ir.actions.act_window,name:eh_log_customs.action_eh_log_customs_declaration_type
+#: model:ir.ui.menu,name:eh_log_customs.menu_eh_log_customs_declaration_types
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_type_list
+msgid "Declaration Types"
+msgstr "Beyanname Türleri"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Declaration date"
+msgstr "Beyanname tarihi"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid ""
+"Declaration has no HS lines. Add at least one HS code with customs value "
+"before marking ready."
+msgstr ""
+"Beyannamede HS satırı yok. Hazır olarak işaretlemeden önce gümrük değeri "
+"olan en az bir HS kodu ekleyin."
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid ""
+"Declaration type %(type)s requires a deferment account but none is set on "
+"declaration %(name)s. Pick a deferment account."
+msgstr ""
+"%(type)s beyanname türü bir erteleme hesabı gerektirir ancak %(name)s "
+"beyannamesinde ayarlanmamış. Bir erteleme hesabı seçin."
+
+#. module: eh_log_customs
+#: model:ir.model.constraint,message:eh_log_customs.constraint_eh_log_customs_declaration_type_code_country_unique
+msgid "Declaration type code must be unique per country."
+msgstr "Beyanname türü kodu her ülke için benzersiz olmalıdır."
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_graph
+msgid "Declarations by State"
+msgstr "Duruma Göre Beyannameler"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_hs_code__duty_rate_pct
+msgid ""
+"Default ad valorem duty rate at this code. Can be overridden per declaration"
+" line."
+msgstr ""
+"Bu koddaki varsayılan ad valorem gümrük oranı. Beyanname satırı başına "
+"geçersiz kılınabilir."
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_hs_code__vat_rate_pct
+msgid ""
+"Default destination VAT rate. Country packs set this per national overlay."
+msgstr ""
+"Varsayılan varış VAT oranı. Ülke paketleri bunu ulusal katman başına "
+"ayarlar."
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__deferment_account_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__account_id
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_deferment_account_form
+msgid "Deferment Account"
+msgstr "Erteleme hesabı"
+
+#. module: eh_log_customs
+#: model:ir.model,name:eh_log_customs.model_eh_log_customs_deferment_entry
+msgid "Deferment Account Entry"
+msgstr "Erteleme hesabı kaydı"
+
+#. module: eh_log_customs
+#: model:ir.actions.act_window,name:eh_log_customs.action_eh_log_customs_deferment_account
+#: model:ir.ui.menu,name:eh_log_customs.menu_eh_log_customs_deferment_accounts
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_deferment_account_list
+msgid "Deferment Accounts"
+msgstr "Erteleme hesapları"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid ""
+"Deferment account %(account)s has balance %(balance)s, less than the "
+"declaration payable %(payable)s. Top up before submission."
+msgstr ""
+"Erteleme hesabı %(account)s bakiyesi %(balance)s olup, beyanname ödenecek "
+"tutarı %(payable)s tutarından azdır. Göndermeden önce yükleme yapın."
+
+#. module: eh_log_customs
+#: model:ir.model.constraint,message:eh_log_customs.constraint_eh_log_customs_deferment_account_account_number_per_co_dcd2e1b6
+msgid "Deferment account number must be unique per (regulator, company)."
+msgstr ""
+"Erteleme hesabı numarası her (regulator, company) için benzersiz olmalıdır."
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__description
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__description
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__description
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__name
+msgid "Description"
+msgstr "Açıklama"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__direction
+msgid "Direction"
+msgstr "Yön"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__display_name
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__display_name
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__display_name
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__display_name
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__display_name
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__display_name
+#: model:ir.model.fields,field_description:eh_log_customs.field_sale_order__display_name
+msgid "Display Name"
+msgstr "İsim Göster"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration__state__draft
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_deferment_entry__state__draft
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "Draft"
+msgstr "Taslak"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__duty_amount
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__duty_amount
+msgid "Duty"
+msgstr "Gümrük Vergisi"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Duty + VAT"
+msgstr "Gümrük Vergisi + VAT"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__duty_rate_pct
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__duty_rate_pct
+msgid "Duty Rate (%)"
+msgstr "Gümrük Vergisi Oranı (%)"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid "Duty and VAT for declaration %(name)s"
+msgstr "%(name)s beyannamesi için gümrük vergisi ve VAT"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_85
+msgid "Electrical machinery and equipment"
+msgstr "Elektrikli makine ve ekipman"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_hs_code__country_id
+msgid ""
+"Empty for WCO-level codes (chapter, heading, subheading). Country pack "
+"national overlays carry the country."
+msgstr ""
+"WCO düzeyindeki kodlar (fasıl, pozisyon, alt pozisyon) için boş bırakın. "
+"Ülke paketinin ulusal katmanları ülkeyi taşır."
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__entry_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_deferment_account_form
+msgid "Entries"
+msgstr "Kayıtlar"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__entry_date
+msgid "Entry Date"
+msgstr "Giriş Tarihi"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration_type__direction__export
+msgid "Export"
+msgstr "Dışa Aktar"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.declaration.type,name:eh_log_customs.dt_export
+msgid "Export Declaration"
+msgstr "İhracat Beyannamesi"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Exporter"
+msgstr "İhracatçı"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__exporter_id
+msgid "Exporter or Shipper"
+msgstr "İhracatçı veya Sevkiyatçı"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_03
+msgid "Fish, crustaceans, molluscs"
+msgstr "Balık, kabuklular, yumuşakçalar"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__message_follower_ids
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__message_follower_ids
+msgid "Followers"
+msgstr "Takipçiler"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__message_partner_ids
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Takipçiler (İş ortakları)"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__activity_type_icon
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Yazı tipi harika simgesi ör. fa-görevler"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_64
+msgid "Footwear, gaiters and similar"
+msgstr "Ayakkabılar, tozluklar ve benzerleri"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__freight_job_id
+msgid "Freight Job"
+msgstr "Navlun İşi"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_94
+msgid "Furniture, lamps, prefabricated buildings"
+msgstr "Mobilya, lambalar, prefabrik binalar"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_hs_code_search
+msgid "Group by Country"
+msgstr "Ülkeye Göre Grupla"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search
+msgid "Group by Regulator"
+msgstr "Düzenleyici kuruma göre grupla"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search
+msgid "Group by State"
+msgstr "Duruma göre grupla"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search
+msgid "Group by Type"
+msgstr "Türe göre grupla"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__hs_code_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__code
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_hs_code_form
+msgid "HS Code"
+msgstr "GTIP Kodu"
+
+#. module: eh_log_customs
+#: model:ir.actions.act_window,name:eh_log_customs.action_eh_log_customs_hs_code
+#: model:ir.ui.menu,name:eh_log_customs.menu_eh_log_customs_hs_codes
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_hs_code_list
+msgid "HS Codes"
+msgstr "HS Kodları"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__line_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "HS Lines"
+msgstr "HS Satırları"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_hs_code.py:0
+msgid ""
+"HS code %(code)s has invalid length %(length)d. Allowed lengths: 2 "
+"(chapter), 4 (heading), 6 (subheading), 8 or 10 (national)."
+msgstr ""
+"HS kodu %(code)s geçersiz uzunluğa sahip %(length)d. İzin verilen "
+"uzunluklar: 2 (fasıl), 4 (pozisyon), 6 (alt pozisyon), 8 veya 10 (ulusal)."
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_hs_code.py:0
+msgid ""
+"HS code %(code)s is not numeric. HS codes are all-digit, length 2 / 4 / 6 / "
+"8 / 10."
+msgstr ""
+"HS kodu %(code)s sayısal değil. HS kodları tamamen rakamlardan oluşur, "
+"uzunluk 2 / 4 / 6 / 8 / 10."
+
+#. module: eh_log_customs
+#: model:ir.model.constraint,message:eh_log_customs.constraint_eh_log_customs_hs_code_code_country_unique
+msgid "HS code must be unique per country (empty country = WCO scope)."
+msgstr "HS kodu her ülke için benzersiz olmalıdır (boş ülke = WCO kapsamı)."
+
+#. module: eh_log_customs
+#: model:ir.model,name:eh_log_customs.model_eh_log_customs_hs_code
+msgid "Harmonised System (HS) Code"
+msgstr "Armonize Sistem (HS) Kodu"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__has_message
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__has_message
+msgid "Has Message"
+msgstr "Mesaj Var"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_hs_code__level__heading
+msgid "Heading (4 digits)"
+msgstr "Başlık (4 hane)"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_hs_code_search
+msgid "Headings"
+msgstr "Başlıklar"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__id
+#: model:ir.model.fields,field_description:eh_log_customs.field_sale_order__id
+msgid "ID"
+msgstr "İD"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_type_form
+msgid "IMP"
+msgstr ""
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__activity_exception_icon
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__activity_exception_icon
+msgid "Icon"
+msgstr "Simge"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__activity_exception_icon
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "İstisnai bir etkinliği belirtmek için kullanılan simge."
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__message_needaction
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "İşaretliyse, yeni mesajlar dikkatinize sunulacak."
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__message_has_error
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__message_has_sms_error
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__message_has_error
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "İşaretliyse, bazı mesajlar gönderi hatası içermektedir."
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration_type__direction__import
+msgid "Import"
+msgstr "İçe Aktar"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__declaration_type_id
+msgid ""
+"Import / Export / Transit / Re-export / Temporary. Determines which fields "
+"are mandatory and which regulator endpoint the adapter posts to."
+msgstr ""
+"İthalat / İhracat / Transit / Yeniden ihracat / Geçici. Hangi alanların "
+"zorunlu olduğunu ve bağdaştırıcının hangi düzenleyici uç noktasına "
+"gönderdiğini belirler."
+
+#. module: eh_log_customs
+#: model:eh.log.customs.declaration.type,name:eh_log_customs.dt_import
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_type_form
+msgid "Import Declaration"
+msgstr "İthalat beyannamesi"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Importer"
+msgstr "İthalatçı"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__importer_id
+msgid "Importer or Consignee"
+msgstr "İthalatçı veya Alıcı"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__broker_reference
+msgid ""
+"Internal broker reference (your file number). Surfaces on the regulator "
+"submission and on customer invoices."
+msgstr ""
+"Dahili aracı referansı (dosya numaranız). Düzenleyiciye yapılan bildirimde "
+"ve müşteri faturalarında görünür."
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_72
+msgid "Iron and steel"
+msgstr "Demir ve çelik"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__message_is_follower
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__message_is_follower
+msgid "Is Follower"
+msgstr "Takipçi mi"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__entry_kind
+msgid "Kind"
+msgstr "Tür"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__write_uid
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__write_uid
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__write_uid
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__write_uid
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__write_uid
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__write_uid
+msgid "Last Updated by"
+msgstr "Son Güncelleyen"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__write_date
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__write_date
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__write_date
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__write_date
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__write_date
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__write_date
+msgid "Last Updated on"
+msgstr "Son Güncelleme"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__level
+msgid "Level"
+msgstr "Seviye"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid "Line %(seq)s has no HS code."
+msgstr "%(seq)s satırında HS kodu yok."
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid "Line %(seq)s has zero customs value."
+msgstr "%(seq)s satırının gümrük değeri sıfır."
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__line_count
+msgid "Lines"
+msgstr "Satırlar"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Linkage"
+msgstr "Bağlantı"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_01
+msgid "Live animals"
+msgstr "Canlı hayvanlar"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__is_low
+msgid "Low"
+msgstr "Düşük"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__low_balance_threshold
+msgid "Low Balance Threshold"
+msgstr "Düşük Bakiye Eşiği"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_84
+msgid "Machinery, mechanical appliances"
+msgstr "Makineler, mekanik cihazlar"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Mark Assessed"
+msgstr "Değerlendirildi Olarak İşaretle"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Mark Cleared"
+msgstr "Gümrükten Çekildi Olarak İşaretle"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Mark Queried"
+msgstr "Sorgulandı olarak işaretle"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Mark Ready"
+msgstr "Hazır olarak işaretle"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__message_has_error
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__message_has_error
+msgid "Message Delivery error"
+msgstr "Mesaj Teslim hatası"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__message_ids
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__message_ids
+msgid "Messages"
+msgstr "Mesajlar"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_27
+msgid "Mineral fuels, oils"
+msgstr "Mineral yakıtlar, yağlar"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__my_activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Aktivite Son Tarihim"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "My Declarations"
+msgstr "Beyannamelerim"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__name
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__name
+msgid "Name"
+msgstr "Adı"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_hs_code__level__national_10
+msgid "National (10 digits)"
+msgstr "Ulusal (10 hane)"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_hs_code__level__national_8
+msgid "National (8 digits)"
+msgstr "Ulusal (8 hane)"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid "New"
+msgstr "Yeni"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__activity_calendar_event_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "Sonraki Aktivite Takvimi Etkinliği"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Sonraki Aktivite Son Tarihi"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__activity_summary
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__activity_summary
+msgid "Next Activity Summary"
+msgstr "Sonraki Aktivite Özeti"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__activity_type_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__activity_type_id
+msgid "Next Activity Type"
+msgstr "Sonraki Aktivitie Türü"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid ""
+"No adapter is registered for provider '%(provider)s'. Install the country "
+"pack that owns this regulator. Currently registered: %(list)s."
+msgstr ""
+"'%(provider)s' sağlayıcısı için kayıtlı adaptör yok. Bu düzenleyiciye sahip "
+"olan ülke paketini yükleyin. Şu anda kayıtlı olanlar: %(list)s."
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__notes
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__notes
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__notes
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__notes
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__notes
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_deferment_account_form
+msgid "Notes"
+msgstr "Notlar"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__message_needaction_counter
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Aksiyon Sayısı"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__message_has_error_counter
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__message_has_error_counter
+msgid "Number of errors"
+msgstr "Hata adedi"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__message_needaction_counter
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "İşlem gerektiren mesaj sayısı"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__message_has_error_counter
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Teslimat hatası olan mesaj adedi"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_hs_code__code
+msgid ""
+"Numeric. 2 digits = chapter, 4 = heading, 6 = WCO subheading, 8 or 10 = "
+"national tariff line."
+msgstr ""
+"Sayısal. 2 hane = fasıl, 4 = pozisyon, 6 = WCO alt pozisyonu, 8 veya 10 = "
+"ulusal tarife satırı."
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "Open"
+msgstr "Açık"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__opening_balance
+msgid "Opening Balance"
+msgstr "Açılış Bakiyesi"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__name
+msgid ""
+"Operator-friendly label (e.g. 'Mirsal Deferment, Acme Logistics LLC, AED')."
+msgstr ""
+"Operatör dostu etiket (ör. 'Mirsal Deferment, Acme Logistics LLC, AED')."
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration_type__country_id
+msgid ""
+"Optional country scope. Empty means the type applies globally (used by the "
+"universal seed). Country packs set the country to scope their authority-"
+"specific variants."
+msgstr ""
+"İsteğe bağlı ülke kapsamı. Boş, türün küresel olarak geçerli olduğu anlamına"
+" gelir (evrensel seed tarafından kullanılır). Ülke paketleri, otoriteye özgü"
+" çeşitlerinin kapsamını belirlemek için ülkeyi ayarlar."
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration_type__direction__other
+msgid "Other"
+msgstr "Diğer"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration__state__paid
+msgid "Paid"
+msgstr "Ödendi"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__parent_id
+msgid "Parent"
+msgstr "Üst"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__parent_path
+msgid "Parent Path"
+msgstr "Üst Yol"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Parties"
+msgstr "Taraflar"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Pay (Debit Deferment)"
+msgstr "Öde (Borç Erteleme)"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_30
+msgid "Pharmaceutical products"
+msgstr "Farmasötik ürünler"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_39
+msgid "Plastics and articles thereof"
+msgstr "Plastikler ve mamulleri"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_deferment_entry__state__posted
+msgid "Posted"
+msgstr "Onaylanmış"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__posted_at
+msgid "Posted At"
+msgstr "İşlenme Zamanı"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__quantity
+msgid "Quantity"
+msgstr "Miktar"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "Queried"
+msgstr "Sorgulandı"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration__state__queried
+msgid "Queried by Customs"
+msgstr "Gümrük tarafından sorgulandı"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__rating_ids
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__rating_ids
+msgid "Ratings"
+msgstr "Değerlendirmeler"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration_type__direction__re_export
+msgid "Re-export"
+msgstr "Yeniden dışa aktar"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.declaration.type,name:eh_log_customs.dt_re_export
+msgid "Re-export Declaration"
+msgstr "Yeniden İhracat Beyannamesi"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration__state__ready
+msgid "Ready"
+msgstr "Hazır"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__name
+msgid "Reference"
+msgstr "Referans"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_kanban
+msgid "Reg ref:"
+msgstr "Kayıt ref.:"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__regulator_profile_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__regulator_profile_id
+msgid "Regulator Profile"
+msgstr "Düzenleyici kurum profili"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Regulator Ref:"
+msgstr "Düzenleyici kurum ref.:"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__regulator_reference
+msgid "Regulator Reference"
+msgstr "Düzenleyici kurum referansı"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid ""
+"Regulator profile is not set. Pick the regulator this declaration is filed "
+"with."
+msgstr ""
+"Düzenleyici kurum profili ayarlanmamış. Bu beyannamenin sunulduğu "
+"düzenleyici kurumu seçin."
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid "Regulator rejected submission. Code %(code)s: %(message)s"
+msgstr "Düzenleyici kurum gönderimi reddetti. Kod %(code)s: %(message)s"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration__state__rejected
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "Rejected"
+msgstr "Reddedildi"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__requires_deferment
+msgid "Requires Deferment Account"
+msgstr "Erteleme Hesabı Gerektirir"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__activity_user_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__activity_user_id
+msgid "Responsible User"
+msgstr "Sorumlu Kullanıcı"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_hs_code_form
+msgid "Routers, switches, and similar"
+msgstr "Yönlendiriciler, anahtarlar ve benzerleri"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__message_has_sms_error
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "SMS İleti hatası"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__sale_order_id
+msgid "Sale Order"
+msgstr "Satış Siparişi"
+
+#. module: eh_log_customs
+#: model:ir.model,name:eh_log_customs.model_sale_order
+msgid "Sales Order"
+msgstr "Satış Siparişi"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "Search Declarations"
+msgstr "Beyanları Ara"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__sequence
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__sequence
+msgid "Sequence"
+msgstr "Sıralama"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_entry__declaration_id
+msgid ""
+"Set when the entry is auto-posted by a declaration submission. Empty for "
+"manual top-ups and adjustments."
+msgstr ""
+"Giriş, bir beyan gönderimi tarafından otomatik olarak kaydedildiğinde "
+"ayarlanır. Manuel yüklemeler ve düzeltmeler için boştur."
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration_type__code
+msgid ""
+"Stable identifier (IMP, EXP, TRA, TRF, REX, TADM, ...). Country packs prefix"
+" their codes with an ISO country code (AE-IMP-LOCAL, SA-IMP-SABER, etc.) to "
+"namespace without colliding with the universal codes."
+msgstr ""
+"Sabit tanımlayıcı (IMP, EXP, TRA, TRF, REX, TADM, ...). Ülke paketleri, "
+"evrensel kodlarla çakışmadan bir ad alanı oluşturmak için kodlarının önüne "
+"bir ISO ülke kodu ekler (AE-IMP-LOCAL, SA-IMP-SABER vb.)."
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__state
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__state
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "State"
+msgstr "İl/Eyalet"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__activity_state
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Aktivitelere göre durum \n"
+"Gecikmiş\\: Son tarih geçmiş\n"
+"Bugün\\: Aktivite tarihi bugün\n"
+"Planlanmış\\: Gelecek Aktiviteler."
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_hs_code__level__subheading
+msgid "Subheading (6 digits)"
+msgstr "Alt başlık (6 basamak)"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_hs_code_search
+msgid "Subheadings"
+msgstr "Alt başlıklar"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid ""
+"Submission failed (status %(status)s). The declaration stays in 'ready'. Re-"
+"submit from the form or replay from the message log."
+msgstr ""
+"Gönderim başarısız oldu (durum %(status)s). Beyan 'ready' durumunda kalır. "
+"Formdan yeniden gönderin veya mesaj günlüğünden yeniden yürütün."
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Submit to Regulator"
+msgstr "Düzenleyici Kuruma Gönder"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration__state__submitted
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "Submitted"
+msgstr "Gönderildi"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__submitted_at
+msgid "Submitted At"
+msgstr "Gönderilme Zamanı"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__payable_amount
+msgid ""
+"Sum of duty plus VAT plus other charges. Drawn from the deferment account on"
+" assessment."
+msgstr ""
+"Gümrük vergisi artı VAT artı diğer masrafların toplamı. Değerlendirme "
+"sırasında erteleme hesabından çekilir."
+
+#. module: eh_log_customs
+#: model:eh.log.customs.declaration.type,name:eh_log_customs.dt_temporary
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration_type__direction__temporary
+msgid "Temporary Admission"
+msgstr "Geçici İthalat"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "This Month"
+msgstr "Bu Ay"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Timeline"
+msgstr "Çalışma çizelgesi"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__payable_amount
+msgid "Total Payable"
+msgstr "Toplam Borç"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Totals"
+msgstr "Toplamlar"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration_type__direction__transfer
+msgid "Transfer"
+msgstr "Aktarım"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.declaration.type,name:eh_log_customs.dt_transfer
+msgid "Transfer Declaration"
+msgstr "Transfer Beyanı"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration_type__direction__transit
+msgid "Transit"
+msgstr ""
+
+#. module: eh_log_customs
+#: model:eh.log.customs.declaration.type,name:eh_log_customs.dt_transit
+msgid "Transit Declaration"
+msgstr "Transit Beyannamesi"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "Type"
+msgstr "Tip"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Type and Authority"
+msgstr "Tür ve Yetkili Makam"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__activity_exception_decoration
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Kayıtlardaki istisna etkinliğinin türü."
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__unit_value
+msgid "Unit Value"
+msgstr "Birim Değeri"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__vat_amount
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__vat_amount
+msgid "VAT"
+msgstr "VKN/TCKN"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__vat_rate_pct
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__vat_rate_pct
+msgid "VAT Rate (%)"
+msgstr "VAT Oranı (%)"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_87
+msgid "Vehicles other than rail or tram"
+msgstr "Ray veya tramvay dışındaki araçlar"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__website_message_ids
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__website_message_ids
+msgid "Website Messages"
+msgstr "Websitesi Mesajları"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__website_message_ids
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__website_message_ids
+msgid "Website communication history"
+msgstr "Websitesi iletişim geçmişi"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration_type__requires_deferment
+msgid ""
+"When True, declarations of this type cannot move past submitted without a "
+"deferment account configured. Suitable for import declarations where duty "
+"must be paid before release."
+msgstr ""
+"True olduğunda, bu türdeki beyannameler yapılandırılmış bir erteleme hesabı "
+"olmadan gönderildi durumunun ötesine geçemez. Malın serbest bırakılmasından "
+"önce verginin ödenmesi gereken ithalat beyannameleri için uygundur."
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__low_balance_threshold
+msgid ""
+"When current balance drops below this value, a warning activity is raised to"
+" the account owner."
+msgstr ""
+"Mevcut bakiye bu değerin altına düştüğünde, hesap sahibine bir uyarı "
+"etkinliği oluşturulur."
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_44
+msgid "Wood and articles of wood"
+msgstr "Ahşap ve ahşap eşyalar"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid ""
+"[EHL-CUSTOMS-DECL-001] State changes on a customs declaration must go "
+"through the action buttons. Direct writes are rejected."
+msgstr ""
+"[EHL-CUSTOMS-DECL-001] Bir gümrük beyannamesindeki durum değişiklikleri "
+"işlem düğmeleri üzerinden yapılmalıdır. Doğrudan yazmalar reddedilir."

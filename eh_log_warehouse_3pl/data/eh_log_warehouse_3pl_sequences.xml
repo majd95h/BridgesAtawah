@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="1">
+    <data>
+
+        <record id="seq_eh_log_warehouse_receipt" model="ir.sequence">
+            <field name="name">Warehouse Receipt</field>
+            <field name="code">eh.log.warehouse.receipt</field>
+            <field name="prefix">WHR/%(year)s/</field>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <record id="seq_eh_log_warehouse_pick" model="ir.sequence">
+            <field name="name">Warehouse Pick</field>
+            <field name="code">eh.log.warehouse.pick</field>
+            <field name="prefix">WHP/%(year)s/</field>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <record id="seq_eh_log_warehouse_billing_run" model="ir.sequence">
+            <field name="name">Warehouse Billing Run</field>
+            <field name="code">eh.log.warehouse.billing.run</field>
+            <field name="prefix">WHB/%(year)s/</field>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <record id="product_warehouse_billing" model="product.product">
+            <field name="name">Warehouse 3PL Service</field>
+            <field name="type">service</field>
+            <field name="invoice_policy">order</field>
+            <field name="default_code">EH-WHS-3PL</field>
+            <field name="active">True</field>
+        </record>
+
+    </data>
+</odoo>

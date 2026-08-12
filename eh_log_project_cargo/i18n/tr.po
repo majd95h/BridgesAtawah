@@ -1,0 +1,1743 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* eh_log_project_cargo
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-01 04:34+0000\n"
+"PO-Revision-Date: 2026-07-01 04:34+0000\n"
+"Last-Translator: ERP Heritage <info@erpheritage.com.au>\n"
+"Language-Team: Turkish\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_kanban
+msgid "<i class=\"fa fa-cube me-1\" title=\"Items\"/>"
+msgstr "<i class=\"fa fa-cube me-1\" title=\"Öğeler\"/>"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid ""
+"<i class=\"fa fa-cube\" style=\"font-size:1.6rem;color:#D4A055;\" title=\"Project cargo\"/>\n"
+"                                    <span class=\"ms-2\" style=\"font-family:'DM Mono',ui-monospace,monospace;font-size:0.78rem;letter-spacing:0.18em;text-transform:uppercase;color:#E8C887;font-weight:600;\">Project cargo</span>"
+msgstr ""
+"<i class=\"fa fa-cube\" style=\"font-size:1.6rem;color:#D4A055;\" title=\"Proje kargosu\"/>\n"
+"                                    <span class=\"ms-2\" style=\"font-family:'DM Mono',ui-monospace,monospace;font-size:0.78rem;letter-spacing:0.18em;text-transform:uppercase;color:#E8C887;font-weight:600;\">Proje kargosu</span>"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_kanban
+msgid "<i class=\"fa fa-folder me-1\" title=\"Project\"/>"
+msgstr "<i class=\"fa fa-folder me-1\" title=\"Proje\"/>"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid "<i class=\"fa fa-warning\"/> Oversized"
+msgstr "<i class=\"fa fa-warning\"/> Büyük boyutlu"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_permit_application_document
+msgid "<strong>Authority:</strong>"
+msgstr "<strong>Kurum:</strong>"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_lift_plan_document
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_method_statement_document
+msgid "<strong>Customer:</strong>"
+msgstr "<strong>Müşteri:</strong>"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_method_statement_document
+msgid "<strong>Destination:</strong>"
+msgstr "<strong>Varış noktası:</strong>"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_permit_application_document
+msgid "<strong>Issuing Partner:</strong>"
+msgstr "<strong>Düzenleyen İş Ortağı:</strong>"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_permit_application_document
+msgid "<strong>Job:</strong>"
+msgstr "<strong>Pozisyon:</strong>"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_method_statement_document
+msgid "<strong>Origin:</strong>"
+msgstr "<strong>Köken:</strong>"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid ""
+"<strong>Oversized cargo present.</strong>\n"
+"                        Convoy planning, route survey, and permit register are required."
+msgstr ""
+"<strong>Gabari dışı yük mevcut.</strong>\n"
+"                        Konvoy planlaması, güzergâh etüdü ve izin kaydı gereklidir."
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_method_statement_document
+msgid "<strong>Project:</strong>"
+msgstr "<strong>Proje:</strong>"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_lift_plan_document
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_method_statement_document
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_permit_application_document
+msgid "<strong>Reference:</strong>"
+msgstr "<strong>Referans:</strong>"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_permit_application_document
+msgid "<strong>State:</strong>"
+msgstr "<strong>Durum:</strong>"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__message_needaction
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__message_needaction
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__message_needaction
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__message_needaction
+msgid "Action Needed"
+msgstr "Aksiyon Gerekiyor"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_form
+msgid "Activate"
+msgstr "Etkinleştir"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__active
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_permit__state__active
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_search_full
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_search_full
+msgid "Active"
+msgstr "Etkin"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__activity_ids
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__activity_ids
+msgid "Activities"
+msgstr "Aktiviteler"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__activity_exception_decoration
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Etkinlik İstisna Dekorasyonu"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__activity_state
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__activity_state
+msgid "Activity State"
+msgstr "Aktivite Durumu"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__activity_type_icon
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Aktivite Türü İmgesi"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__actual_arrival
+msgid "Actual Arrival"
+msgstr "Gerçekleşen Varış"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__actual_departure
+msgid "Actual Departure"
+msgstr "Gerçekleşen Kalkış"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_permit__state__applied
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_search_full
+msgid "Applied"
+msgstr "Uygulandı"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__applied_at
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_permit_application_document
+msgid "Applied On"
+msgstr "Uygulanan"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_lift_plan_document
+msgid "Arrival"
+msgstr "Varış"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_convoy__state__arrived
+msgid "Arrived"
+msgstr "Vardı"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__message_attachment_count
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__message_attachment_count
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__message_attachment_count
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__message_attachment_count
+msgid "Attachment Count"
+msgstr "Ek Sayısı"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_search_full
+msgid "Authority"
+msgstr "Yetkili Makam"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_item__is_oversized
+msgid ""
+"Auto-derived from dimensions vs the standard envelope. Drives downstream "
+"requirements (escort, permits, route survey)."
+msgstr ""
+"Standart gabariye karşı boyutlardan otomatik olarak türetilir. Sonraki "
+"gereksinimleri (refakat, izinler, güzergah etüdü) belirler."
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__axle_count
+msgid "Axle Lines"
+msgstr "Aks satırları"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__cog_x_m
+msgid "COG Offset X (m)"
+msgstr "COG Ofseti X (m)"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__cog_y_m
+msgid "COG Offset Y (m)"
+msgstr "COG Ofseti Y (m)"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__cog_z_m
+msgid "COG Offset Z (m)"
+msgstr "COG Ofseti Z (m)"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_convoy_form
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_form
+msgid "Cancel"
+msgstr "İptal"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_convoy__state__cancelled
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_job__state__cancelled
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_permit__state__cancelled
+msgid "Cancelled"
+msgstr "İptal Edildi"
+
+#. module: eh_log_project_cargo
+#: model:ir.actions.act_window,name:eh_log_project_cargo.action_eh_log_project_cargo_item
+msgid "Cargo Items"
+msgstr "Kargo Kalemleri"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_item_form
+msgid "Centre of Gravity"
+msgstr "Ağırlık Merkezi"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_item__cog_x_m
+msgid "Centre of gravity offset along length axis from the geometric centre."
+msgstr ""
+"Ağırlık merkezinin, geometrik merkezden uzunluk ekseni boyunca sapması."
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__is_chosen_route
+msgid "Chosen Route"
+msgstr "Seçilen Rota"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_form
+msgid "Close"
+msgstr "Kapat"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_job__state__closed
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_permit__state__closed
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_search_full
+msgid "Closed"
+msgstr "Kapanmış"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__code
+msgid "Code"
+msgstr "Kod"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__company_id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy_vehicle__company_id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__company_id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__company_id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__company_id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__company_id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__company_id
+msgid "Company"
+msgstr "Firma"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_job__state__completed
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_search_full
+msgid "Completed"
+msgstr "Tamamlandı"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_job__has_oversized_item
+msgid ""
+"Computed: true when any item exceeds the configured oversize thresholds "
+"(length/width/height/weight). Triggers permit and route survey requirements."
+msgstr ""
+"Hesaplanır: herhangi bir öğe yapılandırılan büyük boy eşiklerini "
+"(uzunluk/genişlik/yükseklik/ağırlık) aştığında true olur. İzin ve güzergâh "
+"etüdü gerekliliklerini tetikler."
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy_vehicle__convoy_id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__convoy_id
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_lift_plan_document
+msgid "Convoy"
+msgstr "Konvoy"
+
+#. module: eh_log_project_cargo
+#: model:ir.model,name:eh_log_project_cargo.model_eh_log_project_cargo_convoy_vehicle
+msgid "Convoy Vehicle Assignment"
+msgstr "Konvoy Araç Ataması"
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_job.py:0
+#: model:ir.actions.act_window,name:eh_log_project_cargo.action_eh_log_project_cargo_convoy
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__convoy_count
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__convoy_ids
+#: model:ir.ui.menu,name:eh_log_project_cargo.menu_eh_log_project_cargo_convoys
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_lift_plan_document
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_convoy_calendar
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid "Convoys"
+msgstr "Konvoylar"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__cost_amount
+msgid "Cost"
+msgstr "Maliyet"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_lift_plan_document
+msgid "Crane"
+msgstr "Vinç"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_equipment_form
+msgid "Crane Specifics"
+msgstr "Vinç Ayrıntıları"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_equipment__equipment_type__crane_crawler
+msgid "Crawler Crane"
+msgstr "Paletli Vinç"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__create_uid
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy_vehicle__create_uid
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__create_uid
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__create_uid
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__create_uid
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__create_uid
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__create_uid
+msgid "Created by"
+msgstr "Tarafından oluşturuldu"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__create_date
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy_vehicle__create_date
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__create_date
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__create_date
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__create_date
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__create_date
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__create_date
+msgid "Created on"
+msgstr "Oluşturuldu"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__currency_id
+msgid "Currency"
+msgstr "Kur"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__customer_partner_id
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_search_full
+msgid "Customer"
+msgstr "Müşteri"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__customer_reference
+msgid "Customer Reference"
+msgstr "Müşteri Referansı"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_permit__authority__customs
+msgid "Customs"
+msgstr "Gümrük"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__days_until_expiry
+msgid "Days Until Expiry"
+msgstr "Sona Ermeye Kalan Gün"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_convoy_kanban
+msgid "Dep:"
+msgstr "Kalkış:"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_lift_plan_document
+msgid "Departure"
+msgstr "Ayrılış"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__name
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_method_statement_document
+msgid "Description"
+msgstr "Açıklama"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__destination_partner_id
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid "Destination"
+msgstr "Varış Yeri"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_item_form
+msgid "Dimensions"
+msgstr "Boyutlar"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__display_name
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy_vehicle__display_name
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__display_name
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__display_name
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__display_name
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__display_name
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__display_name
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_sale_order__display_name
+msgid "Display Name"
+msgstr "İsim Göster"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__distance_km
+msgid "Distance (km)"
+msgstr "Mesafe (km)"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_job__state__draft
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_permit__state__draft
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_search_full
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_search_full
+msgid "Draft"
+msgstr "Taslak"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy_vehicle__driver_partner_id
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_lift_plan_document
+msgid "Driver"
+msgstr "Sürücü"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_permit__authority__environmental
+msgid "Environmental"
+msgstr "Çevresel"
+
+#. module: eh_log_project_cargo
+#: model:ir.actions.act_window,name:eh_log_project_cargo.action_eh_log_project_cargo_equipment
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy_vehicle__equipment_id
+#: model:ir.ui.menu,name:eh_log_project_cargo.menu_eh_log_project_cargo_equipment
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_lift_plan_document
+msgid "Equipment"
+msgstr "Ekipman"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.constraint,message:eh_log_project_cargo.constraint_eh_log_project_cargo_equipment_equipment_code_unique
+msgid "Equipment code must be unique per company."
+msgstr "Ekipman kodu her şirket için benzersiz olmalıdır."
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_lift_plan_document
+msgid "Escort"
+msgstr "Refakat"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_equipment__equipment_type__escort
+msgid "Escort Vehicle"
+msgstr "Refakat Aracı"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__estimated_duration_h
+msgid "Estimated Duration (h)"
+msgstr "Tahmini Süre (sa)"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_job__state__executing
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_search_full
+msgid "Executing"
+msgstr "Yürütülüyor"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_search_full
+msgid "Expired"
+msgstr "Süresi Doldu"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_search_full
+msgid "Expiring within 7 days"
+msgstr "7 gün içinde sona erecek"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__message_follower_ids
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__message_follower_ids
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__message_follower_ids
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__message_follower_ids
+msgid "Followers"
+msgstr "Takipçiler"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__message_partner_ids
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__message_partner_ids
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__message_partner_ids
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Takipçiler (İş ortakları)"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_job__activity_type_icon
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_permit__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Yazı tipi harika simgesi ör. fa-görevler"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_equipment__rated_capacity_t
+msgid ""
+"For cranes: lift capacity at the manufacturer's reference radius. For "
+"trailers: payload."
+msgstr ""
+"Vinçler için: üreticinin referans yarıçapındaki kaldırma kapasitesi. "
+"Römorklar için: yük kapasitesi."
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_job__method_statement
+msgid ""
+"Free-form method statement that prints on the Method Statement PDF. "
+"Operators write this once the survey and the lift plan are agreed."
+msgstr ""
+"Method Statement PDF üzerine yazdırılan serbest biçimli yöntem bildirimi. "
+"Operatörler bunu keşif ve kaldırma planı üzerinde anlaşıldıktan sonra yazar."
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_item__lift_points_notes
+msgid ""
+"Free-text description of designated lift points or cradle / saddle "
+"requirements. The lift contractor's calc package consumes the canonical "
+"structured form; this is the forwarder's working note."
+msgstr ""
+"Belirlenen kaldırma noktalarının veya beşik / eyer gereksinimlerinin serbest"
+" metin açıklaması. Kaldırma yüklenicisinin hesaplama paketi kanonik "
+"yapılandırılmış formu kullanır; bu, taşıyıcının çalışma notudur."
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__hazards
+msgid "Free-text description of hazards encountered."
+msgstr "Karşılaşılan tehlikelerin serbest metin açıklaması."
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_equipment__equipment_type__crane_gantry
+msgid "Gantry Crane"
+msgstr "Portal vinç"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_method_statement_document
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_permit_application_document
+msgid "H (m)"
+msgstr "Y (m)"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__has_escort_vehicle
+msgid "Has Escort Vehicle"
+msgstr "Refakat Aracı Var"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__has_lifting_equipment
+msgid "Has Lifting Equipment"
+msgstr "Kaldırma Ekipmanı Var"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__has_message
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__has_message
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__has_message
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__has_message
+msgid "Has Message"
+msgstr "Mesaj Var"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__has_oversized_item
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_search_full
+msgid "Has Oversized Item"
+msgstr "Büyük Boy Ürün Var"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__hazards
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_route_survey_form
+msgid "Hazards"
+msgstr "Tehlikeler"
+
+#. module: eh_log_project_cargo
+#: model:ir.model,name:eh_log_project_cargo.model_eh_log_project_cargo_equipment
+msgid "Heavy-Lift Equipment"
+msgstr "Ağır Kaldırma Ekipmanı"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__height_m
+msgid "Height (m)"
+msgstr "Yükseklik (m)"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__home_depot
+msgid "Home Depot"
+msgstr ""
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_equipment__spmt_modules_available
+msgid "How many modules can be coupled in this configuration."
+msgstr "Bu yapılandırmada kaç modülün birbirine bağlanabileceği."
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy_vehicle__id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_sale_order__id
+msgid "ID"
+msgstr "İD"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__activity_exception_icon
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__activity_exception_icon
+msgid "Icon"
+msgstr "Simge"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_job__activity_exception_icon
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_permit__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "İstisnai bir etkinliği belirtmek için kullanılan simge."
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_convoy__message_needaction
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_equipment__message_needaction
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_job__message_needaction
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_permit__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "İşaretliyse, yeni mesajlar dikkatinize sunulacak."
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_convoy__message_has_error
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_convoy__message_has_sms_error
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_equipment__message_has_error
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_equipment__message_has_sms_error
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_job__message_has_error
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_job__message_has_sms_error
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_permit__message_has_error
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_permit__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "İşaretliyse, bazı mesajlar gönderi hatası içermektedir."
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_convoy__state__in_transit
+msgid "In Transit"
+msgstr "Transit Halinde"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_item__transport_orientation__inverted
+msgid "Inverted"
+msgstr "Tersine Çevrilmiş"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__message_is_follower
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__message_is_follower
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__message_is_follower
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__message_is_follower
+msgid "Is Follower"
+msgstr "Takipçi mi"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_permit__state__issued
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_search_full
+msgid "Issued"
+msgstr "Yayınlandı"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__issued_at
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_permit_application_document
+msgid "Issued On"
+msgstr "Düzenlenme Tarihi"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__authority
+msgid "Issuing Authority"
+msgstr "Düzenleyen Makam"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__issuing_partner_id
+msgid "Issuing Partner"
+msgstr "Düzenleyen İş Ortağı"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_permit_application_document
+msgid "Item"
+msgstr "Öğe"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__item_count
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__item_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_method_statement_document
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid "Items"
+msgstr "Öğeler"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__item_ids
+msgid "Items Carried"
+msgstr "Taşınan Öğeler"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__job_id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__job_id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__job_id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__job_id
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_search_full
+msgid "Job"
+msgstr "İş"
+
+#. module: eh_log_project_cargo
+#: model:ir.ui.menu,name:eh_log_project_cargo.menu_eh_log_project_cargo_jobs
+msgid "Jobs"
+msgstr "İş"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_method_statement_document
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_permit_application_document
+msgid "L (m)"
+msgstr ""
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__write_uid
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy_vehicle__write_uid
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__write_uid
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__write_uid
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__write_uid
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__write_uid
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__write_uid
+msgid "Last Updated by"
+msgstr "Son Güncelleyen"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__write_date
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy_vehicle__write_date
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__write_date
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__write_date
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__write_date
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__write_date
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__write_date
+msgid "Last Updated on"
+msgstr "Son Güncelleme"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_convoy_vehicle__role__escort_lead
+msgid "Lead Escort"
+msgstr "Öncü Refakat"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__length_m
+msgid "Length (m)"
+msgstr "Uzunluk (m)"
+
+#. module: eh_log_project_cargo
+#: model:ir.actions.report,name:eh_log_project_cargo.action_report_lift_plan
+msgid "Lift Plan"
+msgstr "Kaldırma Planı"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__lift_points_notes
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_item_form
+msgid "Lift Points"
+msgstr "Kaldırma Noktaları"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid "Lift Study"
+msgstr "Kaldırma Etüdü"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__lift_study_notes
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_lift_plan_document
+msgid "Lift Study Notes"
+msgstr "Kaldırma Etüdü Notları"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_convoy_vehicle__role__crane
+msgid "Lifting Crane"
+msgstr "Kaldırma Vinci"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_equipment__equipment_type__trailer_lowbed
+msgid "Lowbed Trailer"
+msgstr "Alçak platform römork"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__max_axle_load_t
+msgid ""
+"Lowest bridge axle-load rating encountered. Constrains the convoy weight per"
+" axle line."
+msgstr ""
+"Karşılaşılan en düşük köprü aks yükü değeri. Aks hattı başına konvoy "
+"ağırlığını kısıtlar."
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__min_overhead_clearance_m
+msgid ""
+"Lowest overhead clearance encountered on the route. Driving constraint for "
+"tall cargo; the lift study checks against the cargo's transport height plus "
+"the trailer deck height."
+msgstr ""
+"Güzergahta karşılaşılan en düşük üst geçiş yüksekliği. Yüksek kargo için "
+"sürüş kısıtlaması; kaldırma etüdü bunu, kargonun taşıma yüksekliği artı "
+"römork platformu yüksekliğiyle karşılaştırarak kontrol eder."
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_form
+msgid "Mark Applied"
+msgstr "Uygulandı Olarak İşaretle"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_convoy_form
+msgid "Mark Arrived"
+msgstr "Ulaştı Olarak İşaretle"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid "Mark Completed"
+msgstr "Tamamlandı Olarak İşaretle"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_convoy_form
+msgid "Mark In Transit"
+msgstr "Taşınıyor Olarak İşaretle"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_form
+msgid "Mark Issued"
+msgstr "Düzenlendi Olarak İşaretle"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid "Mark Planned"
+msgstr "Planlandı Olarak İşaretle"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_form
+msgid "Mark Rejected"
+msgstr "Reddedildi olarak işaretle"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid "Mark Surveyed"
+msgstr "İncelendi olarak işaretle"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__max_boom_length_m
+msgid "Max Boom Length (m)"
+msgstr "Maks. bom uzunluğu (m)"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__max_boom_radius_m
+msgid "Max Boom Radius (m)"
+msgstr "Maks. bom yarıçapı (m)"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__max_axle_load_t
+msgid "Max Bridge Axle Load (t)"
+msgstr "Maks. köprü aks yükü (t)"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__message_has_error
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__message_has_error
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__message_has_error
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__message_has_error
+msgid "Message Delivery error"
+msgstr "Mesaj Teslim hatası"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__message_ids
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__message_ids
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__message_ids
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__message_ids
+msgid "Messages"
+msgstr "Mesajlar"
+
+#. module: eh_log_project_cargo
+#: model:ir.actions.report,name:eh_log_project_cargo.action_report_method_statement
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__method_statement
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid "Method Statement"
+msgstr "Yöntem Bildirimi"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__min_overhead_clearance_m
+msgid "Min Overhead Clearance (m)"
+msgstr "Min. Baş Üstü Açıklığı (m)"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__min_swing_radius_m
+msgid "Min Swing Radius (m)"
+msgstr "Min. Dönüş Yarıçapı (m)"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_equipment__equipment_type__crane_mobile
+msgid "Mobile Crane"
+msgstr "Mobil vinç"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_equipment__equipment_type__trailer_modular
+msgid "Modular Trailer"
+msgstr "Modüler Römork"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_permit_application_document
+msgid "Move Particulars"
+msgstr "Kayıt Ayrıntıları"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__my_activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Aktivite Son Tarihim"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__name
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__name
+msgid "Name"
+msgstr "Adı"
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_convoy.py:0
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_job.py:0
+msgid "New"
+msgstr "Yeni"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__activity_calendar_event_id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "Sonraki Aktivite Takvimi Etkinliği"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Sonraki Aktivite Son Tarihi"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__activity_summary
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__activity_summary
+msgid "Next Activity Summary"
+msgstr "Sonraki Aktivite Özeti"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__activity_type_id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__activity_type_id
+msgid "Next Activity Type"
+msgstr "Sonraki Aktivitie Türü"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__next_inspection_date
+msgid "Next Inspection"
+msgstr "Sonraki Denetim"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__night_only
+msgid "Night Move Only"
+msgstr "Yalnızca Gece Hareketi"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__notes
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy_vehicle__notes
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__notes
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_permit_application_document
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_convoy_form
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_form
+msgid "Notes"
+msgstr "Notlar"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__message_needaction_counter
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__message_needaction_counter
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__message_needaction_counter
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Aksiyon Sayısı"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_equipment__spmt_axle_lines
+msgid "Number of axle lines per SPMT module."
+msgstr "SPMT modülü başına aks hattı sayısı."
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__message_has_error_counter
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__message_has_error_counter
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__message_has_error_counter
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__message_has_error_counter
+msgid "Number of errors"
+msgstr "Hata adedi"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_convoy__message_needaction_counter
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_equipment__message_needaction_counter
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_job__message_needaction_counter
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_permit__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "İşlem gerektiren mesaj sayısı"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_convoy__message_has_error_counter
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_equipment__message_has_error_counter
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_job__message_has_error_counter
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_permit__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Teslimat hatası olan mesaj adedi"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_kanban
+msgid "OOG"
+msgstr ""
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_item__transport_orientation__on_side
+msgid "On Side"
+msgstr "Yanda"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__origin_partner_id
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid "Origin"
+msgstr "Kaynak"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_equipment__equipment_type__other
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_permit__authority__other
+msgid "Other"
+msgstr "Diğer"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__is_oversized
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_method_statement_document
+msgid "Oversized"
+msgstr "Aşırı boyutlu"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__owner_partner_id
+msgid "Owner"
+msgstr "Sahibi"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__packing_notes
+msgid "Packing / Protection Notes"
+msgstr "Paketleme / Koruma Notları"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_item_form
+msgid "Packing Notes"
+msgstr "Paketleme Notları"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_equipment__owner_partner_id
+msgid ""
+"Partner that owns the equipment. Internal fleet uses the company partner; "
+"rented kit references the rental company so cost reconciliation has the "
+"right vendor."
+msgstr ""
+"Ekipmanın sahibi olan iş ortağı. Şirket içi filo, şirket iş ortağını "
+"kullanır; kiralanan ekipman, maliyet mutabakatının doğru tedarikçiye sahip "
+"olması için kiralama şirketini referans alır."
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_permit.py:0
+msgid "Permit %(name)s cannot move from %(from)s to %(to)s."
+msgstr "%(name)s izni %(from)s durumundan %(to)s durumuna geçemez."
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_permit.py:0
+msgid "Permit %(name)s expires on %(date)s"
+msgstr "%(name)s izni %(date)s tarihinde sona eriyor"
+
+#. module: eh_log_project_cargo
+#: model:ir.actions.report,name:eh_log_project_cargo.action_report_permit_application
+msgid "Permit Application"
+msgstr "İzin Başvurusu"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__permit_reference
+msgid "Permit Reference"
+msgstr "İzin Referansı"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_calendar
+msgid "Permit Validity"
+msgstr "İzin Geçerliliği"
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_job.py:0
+#: model:ir.actions.act_window,name:eh_log_project_cargo.action_eh_log_project_cargo_permit
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__permit_count
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__permit_ids
+#: model:ir.ui.menu,name:eh_log_project_cargo.menu_eh_log_project_cargo_permits
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid "Permits"
+msgstr "İzinler"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_convoy__state__planned
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_job__state__planned
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_search_full
+msgid "Planned"
+msgstr "Planlanan"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_permit__authority__police
+msgid "Police Escort"
+msgstr "Polis Refakati"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_permit__authority__port
+msgid "Port Authority"
+msgstr "Liman idaresi"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_convoy_vehicle__role__primary
+msgid "Primary Hauler"
+msgstr "Birincil Nakliyeci"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_equipment__equipment_type__prime_mover
+msgid "Prime Mover"
+msgstr "Çekici"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid "Project"
+msgstr "Proje"
+
+#. module: eh_log_project_cargo
+#: model:ir.ui.menu,name:eh_log_project_cargo.menu_eh_log_project_cargo_config_root
+#: model:ir.ui.menu,name:eh_log_project_cargo.menu_eh_log_project_cargo_root
+msgid "Project Cargo"
+msgstr "Proje kargosu"
+
+#. module: eh_log_project_cargo
+#: model:ir.model,name:eh_log_project_cargo.model_eh_log_project_cargo_convoy
+msgid "Project Cargo Convoy"
+msgstr "Proje kargosu konvoyu"
+
+#. module: eh_log_project_cargo
+#: model:ir.model,name:eh_log_project_cargo.model_eh_log_project_cargo_item
+msgid "Project Cargo Item"
+msgstr "Proje kargosu kalemi"
+
+#. module: eh_log_project_cargo
+#: model:ir.model,name:eh_log_project_cargo.model_eh_log_project_cargo_job
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid "Project Cargo Job"
+msgstr "Proje kargosu işi"
+
+#. module: eh_log_project_cargo
+#: model:ir.actions.act_window,name:eh_log_project_cargo.action_eh_log_project_cargo_job
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_sale_order__eh_log_project_cargo_job_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_calendar
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_sale_order_form_project_cargo
+msgid "Project Cargo Jobs"
+msgstr "Proje kargosu işleri"
+
+#. module: eh_log_project_cargo
+#: model:ir.model,name:eh_log_project_cargo.model_eh_log_project_cargo_permit
+msgid "Project Cargo Permit"
+msgstr "Proje kargosu izni"
+
+#. module: eh_log_project_cargo
+#: model:ir.model,name:eh_log_project_cargo.model_eh_log_project_cargo_route_survey
+msgid "Project Cargo Route Survey"
+msgstr "Proje kargosu güzergah incelemesi"
+
+#. module: eh_log_project_cargo
+#: model:ir.actions.server,name:eh_log_project_cargo.cron_alert_expiring_permits_ir_actions_server
+msgid "Project Cargo: Alert Expiring Permits"
+msgstr "Proje kargosu: süresi dolan izinleri uyar"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__project_name
+msgid "Project Name"
+msgstr "Proje Adı"
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_job.py:0
+msgid "Project cargo job %(name)s cannot move from %(from)s to %(to)s."
+msgstr ""
+"Proje kargosu işi %(name)s, %(from)s durumundan %(to)s durumuna geçemez."
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_method_statement_document
+msgid "Qty"
+msgstr "Miktar"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__quantity
+msgid "Quantity"
+msgstr "Miktar"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_equipment__equipment_type__ramp
+msgid "Ramp / Loadbed"
+msgstr "Rampa / Yükleme Platformu"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__rated_capacity_t
+msgid "Rated Capacity (t)"
+msgstr "Anma Kapasitesi (t)"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__rating_ids
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__rating_ids
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__rating_ids
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__rating_ids
+msgid "Ratings"
+msgstr "Değerlendirmeler"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__name
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__name
+msgid "Reference"
+msgstr "Referans"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_permit__state__rejected
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_search_full
+msgid "Rejected"
+msgstr "Reddedildi"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid "Reset to Draft"
+msgstr "Taslağa Ayarla"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__activity_user_id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__activity_user_id
+msgid "Responsible User"
+msgstr "Sorumlu Kullanıcı"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_equipment__equipment_type__rigging
+msgid "Rigging Accessory"
+msgstr "Rigging Aksesuarı"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_permit__authority__road
+msgid "Road Authority"
+msgstr "Karayolu İdaresi"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy_vehicle__role
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_lift_plan_document
+msgid "Role"
+msgstr "Rol"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__name
+msgid "Route Name"
+msgstr "Rota adı"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__route_survey_id
+msgid "Route Survey"
+msgstr "Rota anketi"
+
+#. module: eh_log_project_cargo
+#: model:ir.actions.act_window,name:eh_log_project_cargo.action_eh_log_project_cargo_route_survey
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__route_survey_ids
+#: model:ir.ui.menu,name:eh_log_project_cargo.menu_eh_log_project_cargo_route_surveys
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid "Route Surveys"
+msgstr "Rota anketleri"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid "Route and Schedule"
+msgstr "Rota ve program"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__message_has_sms_error
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__message_has_sms_error
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__message_has_sms_error
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "SMS İleti hatası"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_equipment__equipment_type__spmt
+msgid "SPMT (Self-Propelled Modular)"
+msgstr "SPMT (kendinden hareketli modüler)"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__spmt_axle_lines
+msgid "SPMT Axle Lines"
+msgstr "SPMT Aks Hatları"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__spmt_modules_available
+msgid "SPMT Modules Available"
+msgstr "Kullanılabilir SPMT Modülleri"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__sale_order_id
+msgid "Sale Order"
+msgstr "Satış Siparişi"
+
+#. module: eh_log_project_cargo
+#: model:ir.model,name:eh_log_project_cargo.model_sale_order
+msgid "Sales Order"
+msgstr "Satış Siparişi"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__scheduled_arrival
+msgid "Scheduled Arrival"
+msgstr "Planlanan varış"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__scheduled_departure
+msgid "Scheduled Departure"
+msgstr "Planlanan kalkış"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_search_full
+msgid "Search Jobs"
+msgstr "İşleri ara"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_search_full
+msgid "Search Permits"
+msgstr "İzinleri ara"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_convoy_vehicle__role__secondary
+msgid "Secondary Hauler"
+msgstr "İkincil nakliyeci"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__self_weight_t
+msgid "Self Weight (t)"
+msgstr "Kendi ağırlığı (t)"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy_vehicle__sequence
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__sequence
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__sequence
+msgid "Sequence"
+msgstr "Sıralama"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__night_only
+msgid ""
+"Set when the route is restricted to night hours by the road authority. "
+"Drives permit selection and convoy scheduling."
+msgstr ""
+"Rota, yol otoritesi tarafından gece saatleriyle sınırlandırıldığında "
+"ayarlanır. İzin seçimini ve konvoy planlamasını yönlendirir."
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid "Start Execution"
+msgstr "Yürütmeyi Başlat"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__state
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__state
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__state
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_search_full
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_search_full
+msgid "State"
+msgstr "İl/Eyalet"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_method_statement_document
+msgid "Statement"
+msgstr "Hesap Ekstresi"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_job__activity_state
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_permit__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Aktivitelere göre durum \n"
+"Gecikmiş\\: Son tarih geçmiş\n"
+"Bugün\\: Aktivite tarihi bugün\n"
+"Planlanmış\\: Gelecek Aktiviteler."
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_equipment__next_inspection_date
+msgid ""
+"Statutory inspection due date. Equipment with a past due-date is blocked "
+"from new convoy assignments."
+msgstr ""
+"Yasal muayene son tarihi. Son tarihi geçmiş ekipman yeni konvoy "
+"atamalarından engellenir."
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_convoy_vehicle__role__support
+msgid "Support"
+msgstr "Destek"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_job__state__surveyed
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_search_full
+msgid "Surveyed"
+msgstr "Ekspertiz Yapıldı"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__surveyed_at
+msgid "Surveyed On"
+msgstr "Ekspertiz Tarihi"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__surveyor_partner_id
+msgid "Surveyor"
+msgstr "Eksper"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__target_end_date
+msgid "Target End"
+msgstr "Hedef Bitiş"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__target_start_date
+msgid "Target Start"
+msgstr "Hedef Başlangıç"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_search_full
+msgid "Target Start Month"
+msgstr "Hedef Başlangıç Ayı"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid "Target end"
+msgstr "Hedef bitiş"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid "Target start"
+msgstr "Hedef başlangıç"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_equipment__equipment_type__crane_telescopic
+msgid "Telescopic Crane"
+msgstr "Teleskopik Vinç"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__is_chosen_route
+msgid ""
+"Tick to mark this survey as the route the convoy will follow. Only one "
+"survey per job may be the chosen route."
+msgstr ""
+"Bu keşfi konvoyun izleyeceği güzergâh olarak işaretlemek için işaretleyin. "
+"Her iş için yalnızca bir keşif seçilen güzergâh olabilir."
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__min_swing_radius_m
+msgid ""
+"Tightest swing radius encountered. Drives the choice of trailer (modular vs "
+"lowbed) and limits articulation."
+msgstr ""
+"Karşılaşılan en dar dönüş yarıçapı. Römork seçimini (modüler veya alçak "
+"tabanlı) belirler ve mafsallanmayı sınırlar."
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_equipment_form
+msgid "Trailer / SPMT Specifics"
+msgstr "Römork / SPMT Özellikleri"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_convoy_vehicle__role__escort_trail
+msgid "Trailing Escort"
+msgstr "Arka Refakat"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__transport_orientation
+msgid "Transport Orientation"
+msgstr "Taşıma Yönü"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__equipment_type
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_lift_plan_document
+msgid "Type"
+msgstr "Tip"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_job__activity_exception_decoration
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_permit__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Kayıtlardaki istisna etkinliğinin türü."
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_kanban
+msgid "Until"
+msgstr "Bitiş"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_item__transport_orientation__upright
+msgid "Upright"
+msgstr "Dik"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_permit__authority__utility
+msgid "Utility (power/telecom)"
+msgstr "Kamu hizmeti (elektrik/telekom)"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__valid_from
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_permit_application_document
+msgid "Valid From"
+msgstr "Geçerlilik Tarihi"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__valid_until
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_permit_application_document
+msgid "Valid Until"
+msgstr "Geçerlilik Bitişi"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_permit_application_document
+msgid "Validity"
+msgstr "Geçerlilik"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_lift_plan_document
+msgid "Vehicle Assignments"
+msgstr "Araç Atamaları"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__vehicle_count
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__vehicle_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_lift_plan_document
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_convoy_form
+msgid "Vehicles"
+msgstr "Araçlar"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_method_statement_document
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_permit_application_document
+msgid "W (m)"
+msgstr "G (m)"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__waypoints
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_route_survey_form
+msgid "Waypoints / Notes"
+msgstr "Ara Noktalar / Notlar"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__website_message_ids
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__website_message_ids
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__website_message_ids
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__website_message_ids
+msgid "Website Messages"
+msgstr "Websitesi Mesajları"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_convoy__website_message_ids
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_equipment__website_message_ids
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_job__website_message_ids
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_permit__website_message_ids
+msgid "Website communication history"
+msgstr "Websitesi iletişim geçmişi"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_method_statement_document
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_permit_application_document
+msgid "Weight (t)"
+msgstr "Ağırlık (t)"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__weight_t
+msgid "Weight per Piece (t)"
+msgstr "Parça başına ağırlık (t)"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__width_m
+msgid "Width (m)"
+msgstr "Genişlik (m)"
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_equipment.py:0
+msgid "[EHL-PCG-001] Equipment %(code)s rated capacity must be positive."
+msgstr "[EHL-PCG-001] Ekipman %(code)s nominal kapasitesi pozitif olmalıdır."
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_job.py:0
+msgid ""
+"[EHL-PCG-002] Job %(name)s cannot move to Surveyed without at least one "
+"route survey."
+msgstr ""
+"[EHL-PCG-002] En az bir güzergâh incelemesi olmadan %(name)s işi Etüt Edildi"
+" durumuna geçemez."
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_job.py:0
+msgid ""
+"[EHL-PCG-003] Job %(name)s cannot move to Planned without at least one "
+"convoy."
+msgstr ""
+"[EHL-PCG-003] En az bir konvoy olmadan %(name)s işi Planlandı durumuna "
+"geçemez."
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_job.py:0
+msgid "[EHL-PCG-004] Convoy %(name)s has no vehicle assignments."
+msgstr "[EHL-PCG-004] Konvoy %(name)s için araç ataması yok."
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_job.py:0
+msgid ""
+"[EHL-PCG-005] Job %(name)s has permits not in issued / active state: "
+"%(permits)s"
+msgstr ""
+"[EHL-PCG-005] %(name)s işinde verildi / etkin durumunda olmayan izinler var:"
+" %(permits)s"
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_job.py:0
+msgid ""
+"[EHL-PCG-006] Project-cargo job state must change via the action buttons."
+msgstr ""
+"[EHL-PCG-006] Proje kargosu iş durumu, işlem düğmeleri aracılığıyla "
+"değiştirilmelidir."
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_item.py:0
+msgid "[EHL-PCG-007] Item %(name)s %(label)s cannot be negative."
+msgstr "[EHL-PCG-007] %(name)s öğesinin %(label)s değeri negatif olamaz."
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_convoy.py:0
+msgid ""
+"[EHL-PCG-008] Convoy %(name)s scheduled arrival is before scheduled "
+"departure."
+msgstr ""
+"[EHL-PCG-008] Konvoy %(name)s planlanan varış zamanı, planlanan kalkış "
+"zamanından öncedir."
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_convoy.py:0
+msgid "[EHL-PCG-009] Convoy %(name)s has no vehicles."
+msgstr "[EHL-PCG-009] Konvoy %(name)s için araç yok."
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_convoy.py:0
+msgid ""
+"[EHL-PCG-010] Equipment %(code)s is overdue for statutory inspection (was "
+"%(date)s); it cannot be assigned to a convoy until the inspection date is "
+"updated."
+msgstr ""
+"[EHL-PCG-010] Ekipman %(code)s yasal muayenesi gecikmiş durumda (tarihi "
+"%(date)s idi); muayene tarihi güncellenene kadar bir konvoya atanamaz."
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_permit.py:0
+msgid ""
+"[EHL-PCG-011] Permit %(name)s requires a valid-until date before it can be "
+"marked issued."
+msgstr ""
+"[EHL-PCG-011] İzin %(name)s, verildi olarak işaretlenebilmesi için bir "
+"geçerlilik bitiş tarihi gerektirir."
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_permit.py:0
+msgid "[EHL-PCG-012] Permit state must change via the action buttons."
+msgstr ""
+"[EHL-PCG-012] İzin durumu, işlem düğmeleri aracılığıyla değiştirilmelidir."
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_route_survey.py:0
+msgid ""
+"[EHL-PCG-013] Job %(name)s already has a chosen route survey; untick it "
+"first."
+msgstr ""
+"[EHL-PCG-013] %(name)s işinde zaten seçili bir güzergâh incelemesi var; önce"
+" işaretini kaldırın."
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_kanban
+msgid "convoys /"
+msgstr "konvoylar /"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_kanban
+msgid "d"
+msgstr ""
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_kanban
+msgid "items"
+msgstr "öğeler"
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_job.py:0
+msgid "job_id"
+msgstr ""
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_kanban
+msgid "permits"
+msgstr "İzinler"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_convoy_kanban
+msgid "veh."
+msgstr "Araç"

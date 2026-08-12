@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <menuitem id="menu_eh_log_cold_chain_runs"
+                  name="Cold Chain Runs"
+                  parent="eh_log_base.menu_eh_log_operations"
+                  sequence="80"
+                  action="action_eh_log_cold_chain_run"
+                  groups="eh_log_base.group_eh_log_user"/>
+
+        <menuitem id="menu_eh_log_cold_chain_deviations"
+                  name="Cold Chain Deviations"
+                  parent="eh_log_base.menu_eh_log_audit"
+                  sequence="20"
+                  action="action_eh_log_cold_chain_deviation"
+                  groups="eh_log_base.group_eh_log_user"/>
+
+        <menuitem id="menu_eh_log_cold_chain_profiles"
+                  name="Cold Chain Profiles"
+                  parent="eh_log_base.menu_eh_log_master_data"
+                  sequence="200"
+                  action="action_eh_log_cold_chain_profile"
+                  groups="eh_log_base.group_eh_log_manager"/>
+
+    </data>
+</odoo>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="action_report_eh_log_warehouse_storage_statement" model="ir.actions.report">
+        <field name="name">Storage Statement</field>
+        <field name="model">eh.log.warehouse.billing.run</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">eh_log_warehouse_3pl.report_warehouse_storage_statement_document</field>
+        <field name="report_file">eh_log_warehouse_3pl.report_warehouse_storage_statement_document</field>
+        <field name="binding_model_id" ref="model_eh_log_warehouse_billing_run"/>
+        <field name="binding_type">report</field>
+        <field name="paperformat_id" ref="eh_log_base.paperformat_eh_log_portrait"/>
+    </record>
+
+    <template id="report_warehouse_storage_statement_document">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="run">
+                <t t-call="eh_log_base.eh_log_clean_layout">
+                    <t t-set="company" t-value="run.company_id"/>
+                    <t t-set="report_type" t-value="'pdf'"/>
+                    <t t-call="eh_log_base.eh_log_report_styles"/>
+                    <div class="page eh_pdf_page">
+                        <t t-call="eh_log_base.eh_log_report_header">
+                            <t t-set="title" t-value="'Storage and Handling Statement'"/>
+                            <t t-set="company" t-value="run.company_id"/>
+                        </t>
+
+                        <div class="eh_pdf_meta">
+                            <span><strong>Reference:</strong> <t t-out="run.name"/></span>
+                            <span><strong>Client:</strong> <t t-out="run.client_id.display_name"/></span>
+                            <span><strong>Period:</strong> <t t-out="run.period_start and run.period_start.strftime('%Y-%m-%d') or ''"/> - <t t-out="run.period_end and run.period_end.strftime('%Y-%m-%d') or ''"/></span>
+                            <span><strong>Rate Card:</strong> <t t-out="run.rate_card_id.display_name"/></span>
+                        </div>
+
+                        <h2 class="eh_pdf_subtitle">Charges</h2>
+                        <table class="eh_pdf_table">
+                            <thead>
+                                <tr>
+                                    <th>Service</th>
+                                    <th class="text-end">Quantity</th>
+                                    <th class="text-end">Unit Price</th>
+                                    <th class="text-end">Subtotal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr t-foreach="run.line_ids" t-as="line">
+                                    <td>
+                                        <t t-out="dict(line.fields_get(['service_type'])['service_type']['selection']).get(line.service_type, line.service_type)"/>
+                                    </td>
+                                    <td class="text-end"><t t-out="'{:.2f}'.format(line.quantity)"/></td>
+                                    <td class="text-end"><t t-out="'{:.2f}'.format(line.unit_price)"/></td>
+                                    <td class="text-end"><t t-out="'{:.2f}'.format(line.subtotal)"/></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" class="text-end"><strong>Total</strong></td>
+                                    <td class="text-end"><strong><t t-out="'{:.2f}'.format(run.total)"/></strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_eh_log_track_event_kanban" model="ir.ui.view">
+        <field name="name">eh.log.track.event.kanban</field>
+        <field name="model">eh.log.track.event</field>
+        <field name="arch" type="xml">
+            <kanban default_group_by="category" class="o_kanban_small_column">
+                <field name="event_code_id"/>
+                <field name="category"/>
+                <field name="res_model"/>
+                <field name="res_id"/>
+                <field name="description"/>
+                <field name="location"/>
+                <field name="occurred_at"/>
+                <field name="is_milestone"/>
+                <templates>
+                    <t t-name="card">
+                        <div class="oe_kanban_global_click">
+                            <div class="o_kanban_record_top">
+                                <strong><field name="event_code_id"/></strong>
+                                <span t-if="record.is_milestone.raw_value" class="badge text-bg-info float-end">M</span>
+                            </div>
+                            <div class="text-muted small">
+                                <field name="res_model"/>:<field name="res_id"/>
+                            </div>
+                            <div t-if="record.description.raw_value" class="mt-1"><field name="description"/></div>
+                            <div t-if="record.location.raw_value" class="text-muted small"><i class="fa fa-map-marker me-1" title="Location"/><field name="location"/></div>
+                            <div class="text-muted small mt-1"><field name="occurred_at" widget="datetime"/></div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="view_eh_log_track_event_calendar" model="ir.ui.view">
+        <field name="name">eh.log.track.event.calendar</field>
+        <field name="model">eh.log.track.event</field>
+        <field name="arch" type="xml">
+            <calendar string="Tracking Events" date_start="occurred_at" color="category" mode="month">
+                <field name="event_code_id"/>
+                <field name="res_model"/>
+                <field name="description"/>
+            </calendar>
+        </field>
+    </record>
+
+    <record id="view_eh_log_track_event_pivot" model="ir.ui.view">
+        <field name="name">eh.log.track.event.pivot</field>
+        <field name="model">eh.log.track.event</field>
+        <field name="arch" type="xml">
+            <pivot string="Tracking Events" sample="1">
+                <field name="event_code_id" type="row"/>
+                <field name="category" type="col"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="view_eh_log_track_event_graph" model="ir.ui.view">
+        <field name="name">eh.log.track.event.graph</field>
+        <field name="model">eh.log.track.event</field>
+        <field name="arch" type="xml">
+            <graph string="Events by Code" sample="1" type="bar">
+                <field name="event_code_id"/>
+            </graph>
+        </field>
+    </record>
+
+</odoo>

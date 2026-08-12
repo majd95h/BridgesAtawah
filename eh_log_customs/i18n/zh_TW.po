@@ -1,0 +1,1394 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* eh_log_customs
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-01 04:33+0000\n"
+"PO-Revision-Date: 2026-07-01 04:33+0000\n"
+"Last-Translator: ERP Heritage <info@erpheritage.com.au>\n"
+"Language-Team: Chinese (Traditional)\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid "(none)"
+msgstr "(無)"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid ""
+"<i class=\"fa fa-id-card-o\" style=\"font-size:1.6rem;color:#D4A055;\" "
+"title=\"Customs declaration\"/>"
+msgstr ""
+"<i class=\"fa fa-id-card-o\" style=\"font-size:1.6rem;color:#D4A055;\" "
+"title=\"報關單\"/>"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__account_number
+msgid "Account Number"
+msgstr "帳戶號碼"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__account_number
+msgid "Account number issued by the customs authority."
+msgstr "由海關當局核發的帳號。"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__message_needaction
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__message_needaction
+msgid "Action Needed"
+msgstr "需要採取行動"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__active
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__active
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__active
+msgid "Active"
+msgstr "啟用"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__activity_ids
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__activity_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_customs_declaration_activity
+msgid "Activities"
+msgstr "活動"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__activity_exception_decoration
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "活動異常圖示"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__activity_state
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__activity_state
+msgid "Activity State"
+msgstr "活動狀態"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__activity_type_icon
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "活動類型圖示"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__regulator_profile_id
+msgid ""
+"Adapter profile through which this declaration is submitted. Country packs "
+"ship default profiles; operators pick the right one per declaration."
+msgstr "提交此申報所使用的介面卡設定檔。國家包提供預設設定檔；操作員為每份申報選擇合適的設定檔。"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__amount
+msgid "Amount"
+msgstr "金額"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_61
+msgid "Apparel, knitted or crocheted"
+msgstr "針織或鉤編的服裝"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_62
+msgid "Apparel, not knitted or crocheted"
+msgstr "服裝，非針織或鉤編"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_73
+msgid "Articles of iron or steel"
+msgstr "鋼鐵製品"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration__state__assessed
+msgid "Assessed"
+msgstr "已評估"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__assessed_at
+msgid "Assessed At"
+msgstr "評估於"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__message_attachment_count
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__message_attachment_count
+msgid "Attachment Count"
+msgstr "附件數目"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_deferment_account_form
+msgid "Balance"
+msgstr "餘額"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_22
+msgid "Beverages, spirits, vinegar"
+msgstr "飲料、烈酒、食醋"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__broker_reference
+msgid "Broker Reference"
+msgstr "經紀人參考號"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__customs_value
+msgid ""
+"CIF value declared to customs. Duty and VAT are computed against this. "
+"Discrepancy between this and the supplier invoice is the #1 cause of "
+"regulator queries."
+msgstr "向海關申報的 CIF 價值。關稅和 VAT 均以此計算。此值與供應商發票之間的差異是引發監管機構詢問的首要原因。"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Cancel"
+msgstr "取消"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration__state__cancelled
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_deferment_entry__state__cancelled
+msgid "Cancelled"
+msgstr "已取消"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_hs_code__level__chapter
+msgid "Chapter (2 digits)"
+msgstr "章節（2 位數字）"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_hs_code_search
+msgid "Chapters"
+msgstr "章節"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__child_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_hs_code_form
+msgid "Children"
+msgstr "下級"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration__state__cleared
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "Cleared"
+msgstr "已清算"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__cleared_at
+msgid "Cleared At"
+msgstr "清算時間"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Close"
+msgstr "關閉"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration__state__closed
+msgid "Closed"
+msgstr "已關閉"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__closed_at
+msgid "Closed At"
+msgstr "關閉時間"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__code
+msgid "Code"
+msgstr "程式碼"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__company_ids
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__company_ids
+msgid "Companies"
+msgstr "公司"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__company_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__company_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__company_id
+msgid "Company"
+msgstr "公司"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__country_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__country_id
+msgid "Country"
+msgstr "國家"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__country_of_origin_id
+msgid "Country of Origin"
+msgstr "原產國"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "Created Month"
+msgstr "建立月份"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "Created Today"
+msgstr "今日建立"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__create_uid
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__create_uid
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__create_uid
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__create_uid
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__create_uid
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__create_uid
+msgid "Created by"
+msgstr "建立人員"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__create_date
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__create_date
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__create_date
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__create_date
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__create_date
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__create_date
+msgid "Created on"
+msgstr "建立於"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_deferment_entry__entry_kind__credit
+msgid "Credit (top-up)"
+msgstr "貸方（儲值）"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__currency_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__currency_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__currency_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__currency_id
+msgid "Currency"
+msgstr "貨幣"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__current_balance
+msgid "Current Balance"
+msgstr "目前餘額"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__customer_id
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "Customer"
+msgstr "客戶"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_pivot
+msgid "Customs Analysis"
+msgstr "海關分析"
+
+#. module: eh_log_customs
+#: model:ir.model,name:eh_log_customs.model_eh_log_customs_declaration
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__declaration_id
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Customs Declaration"
+msgstr "報關單"
+
+#. module: eh_log_customs
+#: model:ir.model,name:eh_log_customs.model_eh_log_customs_declaration_line
+msgid "Customs Declaration Line"
+msgstr "報關單明細行"
+
+#. module: eh_log_customs
+#: model:ir.model,name:eh_log_customs.model_eh_log_customs_declaration_type
+msgid "Customs Declaration Type"
+msgstr "報關單類型"
+
+#. module: eh_log_customs
+#: model:ir.actions.act_window,name:eh_log_customs.action_eh_log_customs_declaration
+#: model:ir.model.fields,field_description:eh_log_customs.field_sale_order__eh_log_customs_declaration_count
+#: model:ir.model.fields,field_description:eh_log_customs.field_sale_order__eh_log_customs_declaration_ids
+#: model:ir.ui.menu,name:eh_log_customs.menu_eh_log_customs_declarations
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_list
+msgid "Customs Declarations"
+msgstr "報關單"
+
+#. module: eh_log_customs
+#: model:ir.model,name:eh_log_customs.model_eh_log_customs_deferment_account
+msgid "Customs Deferment Account"
+msgstr "海關緩繳帳戶"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__customs_value
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__customs_value
+msgid "Customs Value"
+msgstr "海關價值"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid ""
+"Customs declaration %(name)s cannot move from %(current)s to %(target)s. "
+"Allowed transitions from %(current)s: %(allowed)s."
+msgstr ""
+"報關單 %(name)s 無法從 %(current)s 轉到 %(target)s。從 %(current)s 允許的轉換：%(allowed)s。"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid "Customs declaration %(name)s moved to %(state)s."
+msgstr "報關單 %(name)s 已轉至 %(state)s。"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Customs value"
+msgstr "海關價值"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__regulator_reference
+msgid ""
+"Customs-issued declaration number returned at submission. Captured from the "
+"adapter response."
+msgstr "提交時返回的海關簽發申報編號。從適配器回應中擷取。"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_deferment_entry__entry_kind__debit
+msgid "Debit (duty payment or adjustment)"
+msgstr "借方（關稅付款或調整）"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__declaration_id
+msgid "Declaration"
+msgstr "申報"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid ""
+"Declaration %(name)s cannot be marked ready. Resolve the following before re-trying:\n"
+"\n"
+"- %(list)s"
+msgstr ""
+"申報 %(name)s 無法標記為就緒。請在重試前解決以下問題：\n"
+"\n"
+"- %(list)s"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__declaration_date
+msgid "Declaration Date"
+msgstr "申報日期"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__declaration_type_id
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_type_form
+msgid "Declaration Type"
+msgstr "申報類型"
+
+#. module: eh_log_customs
+#: model:ir.actions.act_window,name:eh_log_customs.action_eh_log_customs_declaration_type
+#: model:ir.ui.menu,name:eh_log_customs.menu_eh_log_customs_declaration_types
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_type_list
+msgid "Declaration Types"
+msgstr "申報類型"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Declaration date"
+msgstr "申報日期"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid ""
+"Declaration has no HS lines. Add at least one HS code with customs value "
+"before marking ready."
+msgstr "申報沒有 HS 明細。請在標記為就緒之前新增至少一個帶有海關價值的 HS 編碼。"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid ""
+"Declaration type %(type)s requires a deferment account but none is set on "
+"declaration %(name)s. Pick a deferment account."
+msgstr "申報類型 %(type)s 需要延期帳戶，但申報 %(name)s 上未設定任何帳戶。請選擇一個延期帳戶。"
+
+#. module: eh_log_customs
+#: model:ir.model.constraint,message:eh_log_customs.constraint_eh_log_customs_declaration_type_code_country_unique
+msgid "Declaration type code must be unique per country."
+msgstr "每個國家/地區的申報類型代碼必須唯一。"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_graph
+msgid "Declarations by State"
+msgstr "按狀態劃分的申報"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_hs_code__duty_rate_pct
+msgid ""
+"Default ad valorem duty rate at this code. Can be overridden per declaration"
+" line."
+msgstr "此代碼下的預設從價關稅稅率。可按申報行覆寫。"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_hs_code__vat_rate_pct
+msgid ""
+"Default destination VAT rate. Country packs set this per national overlay."
+msgstr "預設目的地 VAT 稅率。國家/地區包按國家疊加層設定此項。"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__deferment_account_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__account_id
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_deferment_account_form
+msgid "Deferment Account"
+msgstr "遞延帳戶"
+
+#. module: eh_log_customs
+#: model:ir.model,name:eh_log_customs.model_eh_log_customs_deferment_entry
+msgid "Deferment Account Entry"
+msgstr "遞延帳戶分錄"
+
+#. module: eh_log_customs
+#: model:ir.actions.act_window,name:eh_log_customs.action_eh_log_customs_deferment_account
+#: model:ir.ui.menu,name:eh_log_customs.menu_eh_log_customs_deferment_accounts
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_deferment_account_list
+msgid "Deferment Accounts"
+msgstr "遞延帳戶"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid ""
+"Deferment account %(account)s has balance %(balance)s, less than the "
+"declaration payable %(payable)s. Top up before submission."
+msgstr "遞延帳戶 %(account)s 的餘額為 %(balance)s，低於申報應付金額 %(payable)s。請在提交前儲值。"
+
+#. module: eh_log_customs
+#: model:ir.model.constraint,message:eh_log_customs.constraint_eh_log_customs_deferment_account_account_number_per_co_dcd2e1b6
+msgid "Deferment account number must be unique per (regulator, company)."
+msgstr "遞延帳戶號碼在每個 (regulator, company) 內必須唯一。"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__description
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__description
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__description
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__name
+msgid "Description"
+msgstr "說明"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__direction
+msgid "Direction"
+msgstr "方向"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__display_name
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__display_name
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__display_name
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__display_name
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__display_name
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__display_name
+#: model:ir.model.fields,field_description:eh_log_customs.field_sale_order__display_name
+msgid "Display Name"
+msgstr "顯示名稱"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration__state__draft
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_deferment_entry__state__draft
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "Draft"
+msgstr "草稿"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__duty_amount
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__duty_amount
+msgid "Duty"
+msgstr "關稅"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Duty + VAT"
+msgstr "關稅 + VAT"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__duty_rate_pct
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__duty_rate_pct
+msgid "Duty Rate (%)"
+msgstr "關稅稅率 (%)"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid "Duty and VAT for declaration %(name)s"
+msgstr "申報單 %(name)s 的關稅和 VAT"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_85
+msgid "Electrical machinery and equipment"
+msgstr "電氣機械和設備"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_hs_code__country_id
+msgid ""
+"Empty for WCO-level codes (chapter, heading, subheading). Country pack "
+"national overlays carry the country."
+msgstr "對於 WCO 層級的代碼（章、目、子目）留空。國家包的國家級疊加層攜帶國家資訊。"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__entry_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_deferment_account_form
+msgid "Entries"
+msgstr "分錄"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__entry_date
+msgid "Entry Date"
+msgstr "記項日期"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration_type__direction__export
+msgid "Export"
+msgstr "匯出"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.declaration.type,name:eh_log_customs.dt_export
+msgid "Export Declaration"
+msgstr "出口報關單"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Exporter"
+msgstr "出口商"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__exporter_id
+msgid "Exporter or Shipper"
+msgstr "出口商或發貨人"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_03
+msgid "Fish, crustaceans, molluscs"
+msgstr "魚類、甲殼類、軟體動物"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__message_follower_ids
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__message_follower_ids
+msgid "Followers"
+msgstr "關注人"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__message_partner_ids
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "關注人（業務夥伴）"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__activity_type_icon
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Font awesome 圖示，例如，fa-task"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_64
+msgid "Footwear, gaiters and similar"
+msgstr "鞋類、護腿及類似物品"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__freight_job_id
+msgid "Freight Job"
+msgstr "貨運任務"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_94
+msgid "Furniture, lamps, prefabricated buildings"
+msgstr "家具、燈具、預製建築"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_hs_code_search
+msgid "Group by Country"
+msgstr "按國家/地區分組"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search
+msgid "Group by Regulator"
+msgstr "依監管機構分組"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search
+msgid "Group by State"
+msgstr "依狀態分組"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search
+msgid "Group by Type"
+msgstr "依類型分組"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__hs_code_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__code
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_hs_code_form
+msgid "HS Code"
+msgstr "HS編碼"
+
+#. module: eh_log_customs
+#: model:ir.actions.act_window,name:eh_log_customs.action_eh_log_customs_hs_code
+#: model:ir.ui.menu,name:eh_log_customs.menu_eh_log_customs_hs_codes
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_hs_code_list
+msgid "HS Codes"
+msgstr "HS 編碼"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__line_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "HS Lines"
+msgstr "HS 明細"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_hs_code.py:0
+msgid ""
+"HS code %(code)s has invalid length %(length)d. Allowed lengths: 2 "
+"(chapter), 4 (heading), 6 (subheading), 8 or 10 (national)."
+msgstr "HS 編碼 %(code)s 的長度 %(length)d 無效。允許的長度：2（章）、4（品目）、6（子目）、8 或 10（國家級）。"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_hs_code.py:0
+msgid ""
+"HS code %(code)s is not numeric. HS codes are all-digit, length 2 / 4 / 6 / "
+"8 / 10."
+msgstr "HS 編碼 %(code)s 不是數字。HS 編碼全部為數字，長度為 2 / 4 / 6 / 8 / 10。"
+
+#. module: eh_log_customs
+#: model:ir.model.constraint,message:eh_log_customs.constraint_eh_log_customs_hs_code_code_country_unique
+msgid "HS code must be unique per country (empty country = WCO scope)."
+msgstr "HS 編碼在每個國家/地區內必須唯一（國家/地區為空 = WCO 範圍）。"
+
+#. module: eh_log_customs
+#: model:ir.model,name:eh_log_customs.model_eh_log_customs_hs_code
+msgid "Harmonised System (HS) Code"
+msgstr "協調制度（HS）代碼"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__has_message
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__has_message
+msgid "Has Message"
+msgstr "有訊息"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_hs_code__level__heading
+msgid "Heading (4 digits)"
+msgstr "標題（4 位數字）"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_hs_code_search
+msgid "Headings"
+msgstr "標題"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__id
+#: model:ir.model.fields,field_description:eh_log_customs.field_sale_order__id
+msgid "ID"
+msgstr "識別號"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_type_form
+msgid "IMP"
+msgstr ""
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__activity_exception_icon
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__activity_exception_icon
+msgid "Icon"
+msgstr "圖示"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__activity_exception_icon
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "用於指示異常活動的圖示。"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__message_needaction
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "勾選代表有新訊息需要您留意。"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__message_has_error
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__message_has_sms_error
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__message_has_error
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "勾選代表有訊息發生傳送錯誤。"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration_type__direction__import
+msgid "Import"
+msgstr "匯入"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__declaration_type_id
+msgid ""
+"Import / Export / Transit / Re-export / Temporary. Determines which fields "
+"are mandatory and which regulator endpoint the adapter posts to."
+msgstr "進口 / 出口 / 過境 / 復出口 / 臨時。決定哪些欄位是必填的，以及配接器向哪個監管機構端點提交。"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.declaration.type,name:eh_log_customs.dt_import
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_type_form
+msgid "Import Declaration"
+msgstr "進口申報單"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Importer"
+msgstr "進口商"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__importer_id
+msgid "Importer or Consignee"
+msgstr "進口商或收貨人"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__broker_reference
+msgid ""
+"Internal broker reference (your file number). Surfaces on the regulator "
+"submission and on customer invoices."
+msgstr "內部經紀人參考（您的檔案編號）。會顯示在監管機構提交內容和客戶發票上。"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_72
+msgid "Iron and steel"
+msgstr "鋼鐵"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__message_is_follower
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__message_is_follower
+msgid "Is Follower"
+msgstr "是關注人"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__entry_kind
+msgid "Kind"
+msgstr "類型"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__write_uid
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__write_uid
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__write_uid
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__write_uid
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__write_uid
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__write_uid
+msgid "Last Updated by"
+msgstr "最後更新者"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__write_date
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__write_date
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__write_date
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__write_date
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__write_date
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__write_date
+msgid "Last Updated on"
+msgstr "最後更新於"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__level
+msgid "Level"
+msgstr "層級"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid "Line %(seq)s has no HS code."
+msgstr "行 %(seq)s 沒有 HS 編碼。"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid "Line %(seq)s has zero customs value."
+msgstr "行 %(seq)s 的海關價值為零。"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__line_count
+msgid "Lines"
+msgstr "資料行"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Linkage"
+msgstr "連結"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_01
+msgid "Live animals"
+msgstr "活體動物"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__is_low
+msgid "Low"
+msgstr "低"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__low_balance_threshold
+msgid "Low Balance Threshold"
+msgstr "低餘額門檻"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_84
+msgid "Machinery, mechanical appliances"
+msgstr "機械及機械設備"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Mark Assessed"
+msgstr "標記為已評估"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Mark Cleared"
+msgstr "標記為已結關"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Mark Queried"
+msgstr "標記為已詢問"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Mark Ready"
+msgstr "標記為就緒"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__message_has_error
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__message_has_error
+msgid "Message Delivery error"
+msgstr "訊息遞送錯誤"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__message_ids
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__message_ids
+msgid "Messages"
+msgstr "訊息"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_27
+msgid "Mineral fuels, oils"
+msgstr "礦物燃料、油類"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__my_activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "我的活動截止時間"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "My Declarations"
+msgstr "我的申報"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__name
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__name
+msgid "Name"
+msgstr "名稱"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_hs_code__level__national_10
+msgid "National (10 digits)"
+msgstr "國內（10 位數字）"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_hs_code__level__national_8
+msgid "National (8 digits)"
+msgstr "國內（8 位數字）"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid "New"
+msgstr "新增"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__activity_calendar_event_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "下一個活動日曆事件"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "下一活動截止日期"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__activity_summary
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__activity_summary
+msgid "Next Activity Summary"
+msgstr "下一活動摘要"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__activity_type_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__activity_type_id
+msgid "Next Activity Type"
+msgstr "下一活動類型"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid ""
+"No adapter is registered for provider '%(provider)s'. Install the country "
+"pack that owns this regulator. Currently registered: %(list)s."
+msgstr "未為供應商 '%(provider)s' 註冊配接器。請安裝擁有此監管機構的國家/地區套件。目前已註冊：%(list)s。"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__notes
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__notes
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__notes
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__notes
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__notes
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_deferment_account_form
+msgid "Notes"
+msgstr "備註"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__message_needaction_counter
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__message_needaction_counter
+msgid "Number of Actions"
+msgstr "動作數量"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__message_has_error_counter
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__message_has_error_counter
+msgid "Number of errors"
+msgstr "錯誤數量"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__message_needaction_counter
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "需要採取行動的訊息數目"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__message_has_error_counter
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "有發送錯誤的郵件數量"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_hs_code__code
+msgid ""
+"Numeric. 2 digits = chapter, 4 = heading, 6 = WCO subheading, 8 or 10 = "
+"national tariff line."
+msgstr "數字。2 位 = 章，4 位 = 品目，6 位 = WCO 子目，8 或 10 位 = 國家關稅細目。"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "Open"
+msgstr "開啟"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__opening_balance
+msgid "Opening Balance"
+msgstr "期初餘額"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__name
+msgid ""
+"Operator-friendly label (e.g. 'Mirsal Deferment, Acme Logistics LLC, AED')."
+msgstr "便於操作員識別的標籤（例如 'Mirsal Deferment, Acme Logistics LLC, AED'）。"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration_type__country_id
+msgid ""
+"Optional country scope. Empty means the type applies globally (used by the "
+"universal seed). Country packs set the country to scope their authority-"
+"specific variants."
+msgstr "選用的國家/地區範圍。留空表示該類型全域適用（由通用種子使用）。國家/地區包設定國家以限定其特定於主管機關的變體範圍。"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration_type__direction__other
+msgid "Other"
+msgstr "其他"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration__state__paid
+msgid "Paid"
+msgstr "已付款"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__parent_id
+msgid "Parent"
+msgstr "上級"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__parent_path
+msgid "Parent Path"
+msgstr "上級路徑"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Parties"
+msgstr "各方"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Pay (Debit Deferment)"
+msgstr "支付（借記延期）"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_30
+msgid "Pharmaceutical products"
+msgstr "藥品"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_39
+msgid "Plastics and articles thereof"
+msgstr "塑膠及其製品"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_deferment_entry__state__posted
+msgid "Posted"
+msgstr "已過賬"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__posted_at
+msgid "Posted At"
+msgstr "過帳時間"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__quantity
+msgid "Quantity"
+msgstr "數量"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "Queried"
+msgstr "已查詢"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration__state__queried
+msgid "Queried by Customs"
+msgstr "海關已查詢"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__rating_ids
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__rating_ids
+msgid "Ratings"
+msgstr "評分"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration_type__direction__re_export
+msgid "Re-export"
+msgstr "重新匯出"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.declaration.type,name:eh_log_customs.dt_re_export
+msgid "Re-export Declaration"
+msgstr "重新出口報關單"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration__state__ready
+msgid "Ready"
+msgstr "準備好"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__name
+msgid "Reference"
+msgstr "編號"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_kanban
+msgid "Reg ref:"
+msgstr "登記編號："
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__regulator_profile_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__regulator_profile_id
+msgid "Regulator Profile"
+msgstr "監管機構設定檔"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Regulator Ref:"
+msgstr "監管機構參考號："
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__regulator_reference
+msgid "Regulator Reference"
+msgstr "監管機構參考號"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid ""
+"Regulator profile is not set. Pick the regulator this declaration is filed "
+"with."
+msgstr "尚未設定監管機構設定檔。請選擇此申報所提交的監管機構。"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid "Regulator rejected submission. Code %(code)s: %(message)s"
+msgstr "監管機構拒絕了提交。代碼 %(code)s：%(message)s"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration__state__rejected
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "Rejected"
+msgstr "已拒絕"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__requires_deferment
+msgid "Requires Deferment Account"
+msgstr "需要遞延帳戶"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__activity_user_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__activity_user_id
+msgid "Responsible User"
+msgstr "責任使用者"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_hs_code_form
+msgid "Routers, switches, and similar"
+msgstr "路由器、交換器及類似設備"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__message_has_sms_error
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "簡訊發送錯誤"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__sale_order_id
+msgid "Sale Order"
+msgstr "銷售訂單"
+
+#. module: eh_log_customs
+#: model:ir.model,name:eh_log_customs.model_sale_order
+msgid "Sales Order"
+msgstr "銷售訂單"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "Search Declarations"
+msgstr "搜尋申報"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__sequence
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__sequence
+msgid "Sequence"
+msgstr "序列號"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_entry__declaration_id
+msgid ""
+"Set when the entry is auto-posted by a declaration submission. Empty for "
+"manual top-ups and adjustments."
+msgstr "當分錄由申報提交自動過帳時設定。手動加值和調整為空。"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration_type__code
+msgid ""
+"Stable identifier (IMP, EXP, TRA, TRF, REX, TADM, ...). Country packs prefix"
+" their codes with an ISO country code (AE-IMP-LOCAL, SA-IMP-SABER, etc.) to "
+"namespace without colliding with the universal codes."
+msgstr ""
+"穩定的識別碼（IMP、EXP、TRA、TRF、REX、TADM、...）。國家/地區包在其代碼前加上 ISO 國家/地區代碼（AE-IMP-"
+"LOCAL、SA-IMP-SABER 等），以建立命名空間且不與通用代碼衝突。"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__state
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__state
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "State"
+msgstr "狀態"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__activity_state
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"根據活動的狀態 \n"
+" 逾期：已經超過截止日期 \n"
+" 現今：活動日期是當天 \n"
+" 計劃：未來活動。"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_hs_code__level__subheading
+msgid "Subheading (6 digits)"
+msgstr "子標題（6 位數字）"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_hs_code_search
+msgid "Subheadings"
+msgstr "子標題"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid ""
+"Submission failed (status %(status)s). The declaration stays in 'ready'. Re-"
+"submit from the form or replay from the message log."
+msgstr "提交失敗（狀態 %(status)s）。申報保持為 'ready'。請從表單重新提交或從訊息記錄中重播。"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Submit to Regulator"
+msgstr "提交至監管機構"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration__state__submitted
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "Submitted"
+msgstr "發送"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__submitted_at
+msgid "Submitted At"
+msgstr "提交時間"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__payable_amount
+msgid ""
+"Sum of duty plus VAT plus other charges. Drawn from the deferment account on"
+" assessment."
+msgstr "關稅加 VAT 加其他費用之和。評估時從延期帳戶中扣取。"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.declaration.type,name:eh_log_customs.dt_temporary
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration_type__direction__temporary
+msgid "Temporary Admission"
+msgstr "暫准進口"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "This Month"
+msgstr "本月"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Timeline"
+msgstr "時間軸"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__payable_amount
+msgid "Total Payable"
+msgstr "應付總計"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Totals"
+msgstr "合計"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration_type__direction__transfer
+msgid "Transfer"
+msgstr "轉移"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.declaration.type,name:eh_log_customs.dt_transfer
+msgid "Transfer Declaration"
+msgstr "轉移申報"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration_type__direction__transit
+msgid "Transit"
+msgstr "運送中"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.declaration.type,name:eh_log_customs.dt_transit
+msgid "Transit Declaration"
+msgstr "過境申報單"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "Type"
+msgstr "類型"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Type and Authority"
+msgstr "類型與主管機關"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__activity_exception_decoration
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "記錄的異常活動的類型。"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__unit_value
+msgid "Unit Value"
+msgstr "單位價值"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__vat_amount
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__vat_amount
+msgid "VAT"
+msgstr "增值稅"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__vat_rate_pct
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__vat_rate_pct
+msgid "VAT Rate (%)"
+msgstr "VAT 稅率 (%)"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_87
+msgid "Vehicles other than rail or tram"
+msgstr "鐵路或路面電車以外的車輛"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__website_message_ids
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__website_message_ids
+msgid "Website Messages"
+msgstr "網站資訊"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__website_message_ids
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__website_message_ids
+msgid "Website communication history"
+msgstr "網站溝通記錄"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration_type__requires_deferment
+msgid ""
+"When True, declarations of this type cannot move past submitted without a "
+"deferment account configured. Suitable for import declarations where duty "
+"must be paid before release."
+msgstr "為 True 時，此類型的申報在未設定延期繳稅帳戶前無法越過已提交狀態。適用於必須在放行前繳納稅款的進口申報。"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__low_balance_threshold
+msgid ""
+"When current balance drops below this value, a warning activity is raised to"
+" the account owner."
+msgstr "當目前餘額低於此值時，會向帳戶所有者發起一項警告活動。"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_44
+msgid "Wood and articles of wood"
+msgstr "木材及木製品"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid ""
+"[EHL-CUSTOMS-DECL-001] State changes on a customs declaration must go "
+"through the action buttons. Direct writes are rejected."
+msgstr "[EHL-CUSTOMS-DECL-001] 報關單的狀態變更必須透過操作按鈕進行。直接寫入將被拒絕。"

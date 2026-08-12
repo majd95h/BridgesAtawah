@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="demo_dg_dec_001" model="eh.log.dg.declaration">
+            <field name="mode">sea</field>
+            <field name="shipper_id" ref="eh_log_base.demo_partner_china_exports"/>
+            <field name="consignee_id" ref="eh_log_base.demo_partner_alpha_trading"/>
+            <field name="emergency_contact_name">Hans Schmidt (Demo)</field>
+            <field name="emergency_contact_phone">+49 40 123 4567</field>
+            <field name="pol_name">Shanghai (CNSHA)</field>
+            <field name="pod_name">Jebel Ali (AEJEA)</field>
+            <field name="vessel_name">MSC Isabella</field>
+            <field name="voyage_number">258W</field>
+        </record>
+
+        <record id="demo_dg_dec_002" model="eh.log.dg.declaration">
+            <field name="mode">air</field>
+            <field name="shipper_id" ref="eh_log_base.demo_partner_germany_machinery"/>
+            <field name="consignee_id" ref="eh_log_base.demo_partner_falcon_industries"/>
+            <field name="emergency_contact_name">Markus Weber (Demo)</field>
+            <field name="emergency_contact_phone">+49 69 555 8888</field>
+            <field name="pol_name">Frankfurt (FRA)</field>
+            <field name="pod_name">Dubai (DXB)</field>
+            <field name="flight_number">EK 47</field>
+        </record>
+
+        <record id="demo_dg_dec_003" model="eh.log.dg.declaration">
+            <field name="mode">sea</field>
+            <field name="shipper_id" ref="eh_log_base.demo_partner_najd_petrochem"/>
+            <field name="consignee_id" ref="eh_log_base.demo_partner_us_electronics"/>
+            <field name="emergency_contact_name">Saud Al Anazi (Demo)</field>
+            <field name="emergency_contact_phone">+966 13 555 0301</field>
+            <field name="pol_name">Jubail (SAJUB)</field>
+            <field name="pod_name">Houston (USHOU)</field>
+            <field name="vessel_name">Maersk Horizon</field>
+            <field name="voyage_number">114N</field>
+            <field name="has_marine_pollutant" eval="True"/>
+        </record>
+
+        <record id="demo_dg_dec_004" model="eh.log.dg.declaration">
+            <field name="mode">road</field>
+            <field name="shipper_id" ref="eh_log_base.demo_partner_alpha_trading"/>
+            <field name="consignee_id" ref="eh_log_base.demo_partner_oasis_consumer"/>
+            <field name="emergency_contact_name">Ahmed Al Mansouri (Demo)</field>
+            <field name="emergency_contact_phone">+971 50 100 0001</field>
+            <field name="pol_name">Dubai DIP-1</field>
+            <field name="pod_name">Kuwait City</field>
+        </record>
+
+    </data>
+</odoo>

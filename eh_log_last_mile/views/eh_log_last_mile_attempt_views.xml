@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="view_eh_log_last_mile_attempt_list" model="ir.ui.view">
+            <field name="name">eh.log.last.mile.attempt.list</field>
+            <field name="model">eh.log.last.mile.attempt</field>
+            <field name="arch" type="xml">
+                <list string="Attempts" create="false" delete="false">
+                    <field name="happened_at"/>
+                    <field name="delivery_id"/>
+                    <field name="outcome"/>
+                    <field name="notes"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="view_eh_log_last_mile_attempt_form" model="ir.ui.view">
+            <field name="name">eh.log.last.mile.attempt.form</field>
+            <field name="model">eh.log.last.mile.attempt</field>
+            <field name="arch" type="xml">
+                <form string="Delivery Attempt" create="false">
+                    <sheet>
+                        <group>
+                            <group string="Attempt">
+                                <field name="delivery_id"/>
+                                <field name="happened_at"/>
+                                <field name="outcome"/>
+                            </group>
+                            <group string="Geotag">
+                                <field name="gps_latitude"/>
+                                <field name="gps_longitude"/>
+                                <field name="company_id" groups="base.group_multi_company"/>
+                            </group>
+                        </group>
+                        <group string="Notes">
+                            <field name="notes" nolabel="1" placeholder="What happened on this attempt..."/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_eh_log_last_mile_attempt" model="ir.actions.act_window">
+            <field name="name">Attempts</field>
+            <field name="res_model">eh.log.last.mile.attempt</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+    </data>
+</odoo>

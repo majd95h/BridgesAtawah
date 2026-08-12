@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="view_eh_log_transport_trip_list" model="ir.ui.view">
+            <field name="name">eh.log.transport.trip.list</field>
+            <field name="model">eh.log.transport.trip</field>
+            <field name="arch" type="xml">
+                <list string="Trips" decoration-info="state in ('planned', 'dispatched')" decoration-warning="state in ('at_pickup', 'in_transit', 'at_delivery')" decoration-success="state in ('delivered', 'closed')" decoration-muted="state == 'cancelled'">
+                    <field name="name"/>
+                    <field name="state"/>
+                    <field name="customer_id"/>
+                    <field name="vehicle_id" optional="show"/>
+                    <field name="driver_id" optional="show"/>
+                    <field name="pickup_planned_at" optional="show"/>
+                    <field name="delivery_planned_at" optional="show"/>
+                    <field name="distance_km" optional="hide"/>
+                    <field name="company_id" groups="base.group_multi_company"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="view_eh_log_transport_trip_form" model="ir.ui.view">
+            <field name="name">eh.log.transport.trip.form</field>
+            <field name="model">eh.log.transport.trip</field>
+            <field name="arch" type="xml">
+                <form string="Trip">
+                    <header>
+                        <button name="action_dispatch" string="Dispatch" type="object" class="btn-primary" invisible="state != 'planned'" groups="eh_log_base.group_eh_log_user"/>
+                        <button name="action_set_at_pickup" string="At Pickup" type="object" class="btn-primary" invisible="state != 'dispatched'" groups="eh_log_base.group_eh_log_user"/>
+                        <button name="action_set_in_transit" string="In Transit" type="object" class="btn-primary" invisible="state != 'at_pickup'" groups="eh_log_base.group_eh_log_user"/>
+                        <button name="action_set_at_delivery" string="At Delivery" type="object" class="btn-primary" invisible="state != 'in_transit'" groups="eh_log_base.group_eh_log_user"/>
+                        <button name="action_set_delivered" string="Mark Delivered" type="object" class="btn-primary" invisible="state != 'at_delivery'" groups="eh_log_base.group_eh_log_user"/>
+                        <button name="action_close" string="Close" type="object" class="btn-primary" invisible="state != 'delivered'" groups="eh_log_base.group_eh_log_manager"/>
+                        <button name="action_cancel" string="Cancel" type="object" class="btn-secondary" invisible="state in ('closed', 'cancelled')" groups="eh_log_base.group_eh_log_manager"/>
+                        <field name="state" widget="statusbar" statusbar_visible="planned,dispatched,at_pickup,in_transit,at_delivery,delivered,closed"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="action_view_pods" type="object" class="oe_stat_button" icon="fa-signature">
+                                <field name="pod_count" widget="statinfo" string="ePOD"/>
+                            </button>
+                        </div>
+                        <div class="oe_title">
+                            <label for="name"/>
+                            <h1><field name="name"/></h1>
+                        </div>
+
+                        <!-- Snapshot hero -->
+                        <div class="o_eh_log_snapshot mb-3" style="background:linear-gradient(135deg,#0E1E2B 0%,#1A2C3D 100%);color:#FBF8F2;border-radius:14px;padding:22px 26px;border:1px solid #A07A3F;box-shadow:0 6px 18px rgba(14,30,43,0.08);">
+                            <div class="d-flex align-items-center justify-content-between mb-3" style="gap:18px;">
+                                <div style="flex:1;min-width:0;">
+                                    <div style="font-family:'DM Mono',ui-monospace,monospace;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:#E8C887;margin-bottom:4px;">Pickup</div>
+                                    <div style="font-size:1.05rem;font-weight:600;color:#FBF8F2;line-height:1.25;">
+                                        <field name="pickup_partner_id" readonly="1" options="{'no_open': True}" nolabel="1" placeholder="—"/>
+                                    </div>
+                                    <div style="font-size:0.85rem;color:rgba(251,248,242,0.7);">
+                                        <field name="pickup_location" readonly="1" nolabel="1" placeholder="—"/>
+                                    </div>
+                                </div>
+                                <div style="text-align:center;flex-shrink:0;">
+                                    <div style="display:inline-block;padding:10px 20px;background:rgba(212,160,85,0.12);border:1px solid rgba(212,160,85,0.4);border-radius:999px;">
+                                        <i class="fa fa-truck" style="font-size:1.6rem;color:#D4A055;" title="Road transport"/>
+                                        <span class="ms-2" style="font-family:'DM Mono',ui-monospace,monospace;font-size:0.78rem;letter-spacing:0.18em;text-transform:uppercase;color:#E8C887;font-weight:600;">
+                                            <field name="distance_km" readonly="1" nolabel="1" widget="float" digits="[6,0]"/> km
+                                        </span>
+                                    </div>
+                                </div>
+                                <div style="flex:1;min-width:0;text-align:right;">
+                                    <div style="font-family:'DM Mono',ui-monospace,monospace;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:#E8C887;margin-bottom:4px;">Delivery</div>
+                                    <div style="font-size:1.05rem;font-weight:600;color:#FBF8F2;line-height:1.25;">
+                                        <field name="delivery_partner_id" readonly="1" options="{'no_open': True}" nolabel="1" placeholder="—"/>
+                                    </div>
+                                    <div style="font-size:0.85rem;color:rgba(251,248,242,0.7);">
+                                        <field name="delivery_location" readonly="1" nolabel="1" placeholder="—"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="display:table;width:100%;border-collapse:separate;border-spacing:10px 0;border-top:1px solid rgba(212,160,85,0.18);padding-top:14px;">
+                                <div style="display:table-cell;width:25%;vertical-align:top;background:rgba(255,255,255,0.04);border-radius:8px;padding:10px 14px;">
+                                    <div style="font-family:'DM Mono',ui-monospace,monospace;font-size:0.66rem;letter-spacing:0.18em;text-transform:uppercase;color:#E8C887;">Customer</div>
+                                    <div style="margin-top:4px;font-size:0.95rem;font-weight:600;color:#FBF8F2;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">
+                                        <field name="customer_id" readonly="1" options="{'no_open': True}" nolabel="1"/>
+                                    </div>
+                                    <div style="font-size:0.78rem;color:rgba(251,248,242,0.6);">
+                                        <field name="customer_reference" readonly="1" nolabel="1" placeholder="—"/>
+                                    </div>
+                                </div>
+                                <div style="display:table-cell;width:25%;vertical-align:top;background:rgba(255,255,255,0.04);border-radius:8px;padding:10px 14px;">
+                                    <div style="font-family:'DM Mono',ui-monospace,monospace;font-size:0.66rem;letter-spacing:0.18em;text-transform:uppercase;color:#E8C887;">Driver</div>
+                                    <div style="margin-top:4px;font-size:0.95rem;font-weight:600;color:#FBF8F2;">
+                                        <field name="driver_id" readonly="1" options="{'no_open': True}" nolabel="1" placeholder="Unassigned"/>
+                                    </div>
+                                    <div style="font-size:0.78rem;color:rgba(251,248,242,0.6);">
+                                        <field name="vehicle_id" readonly="1" options="{'no_open': True}" nolabel="1" placeholder="—"/>
+                                    </div>
+                                </div>
+                                <div style="display:table-cell;width:25%;vertical-align:top;background:rgba(255,255,255,0.04);border-radius:8px;padding:10px 14px;">
+                                    <div style="font-family:'DM Mono',ui-monospace,monospace;font-size:0.66rem;letter-spacing:0.18em;text-transform:uppercase;color:#E8C887;">Pickup planned</div>
+                                    <div style="margin-top:4px;font-size:0.95rem;font-weight:600;color:#FBF8F2;">
+                                        <field name="pickup_planned_at" readonly="1" nolabel="1" placeholder="—"/>
+                                    </div>
+                                </div>
+                                <div style="display:table-cell;width:25%;vertical-align:top;background:rgba(255,255,255,0.04);border-radius:8px;padding:10px 14px;">
+                                    <div style="font-family:'DM Mono',ui-monospace,monospace;font-size:0.66rem;letter-spacing:0.18em;text-transform:uppercase;color:#E8C887;">Delivery planned</div>
+                                    <div style="margin-top:4px;font-size:0.95rem;font-weight:600;color:#FBF8F2;">
+                                        <field name="delivery_planned_at" readonly="1" nolabel="1" placeholder="—"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /snapshot -->
+
+                        <group>
+                            <group string="Customer and Linkage">
+                                <field name="customer_id" options="{'no_create': True}"/>
+                                <field name="customer_reference"/>
+                                <field name="sale_order_id" options="{'no_create': True}"/>
+                                <field name="freight_job_id" options="{'no_create': True}"/>
+                                <field name="company_id" groups="base.group_multi_company"/>
+                            </group>
+                            <group string="Resources">
+                                <field name="vehicle_id" options="{'no_create': True}"/>
+                                <field name="trailer_id" options="{'no_create': True}"/>
+                                <field name="driver_id" options="{'no_create': True}"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group string="Pickup">
+                                <field name="pickup_partner_id" options="{'no_create': True}"/>
+                                <field name="pickup_location"/>
+                                <field name="pickup_planned_at"/>
+                                <field name="pickup_actual_at"/>
+                            </group>
+                            <group string="Delivery">
+                                <field name="delivery_partner_id" options="{'no_create': True}"/>
+                                <field name="delivery_location"/>
+                                <field name="delivery_planned_at"/>
+                                <field name="delivery_actual_at"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group string="Cargo">
+                                <field name="cargo_description" colspan="2"/>
+                                <field name="package_count"/>
+                                <field name="gross_weight_kg"/>
+                                <field name="distance_km"/>
+                            </group>
+                            <group string="Demurrage and Detention">
+                                <field name="free_time_hours"/>
+                                <field name="demurrage_rate_per_hour"/>
+                                <field name="detention_hours" readonly="1"/>
+                                <field name="detention_amount" readonly="1"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="ePOD">
+                                <field name="pod_ids">
+                                    <list>
+                                        <field name="recipient_name"/>
+                                        <field name="recipient_role"/>
+                                        <field name="captured_at"/>
+                                        <field name="status"/>
+                                    </list>
+                                </field>
+                            </page>
+                            <page string="Notes">
+                                <field name="notes"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <chatter/>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_eh_log_transport_trip_kanban" model="ir.ui.view">
+            <field name="name">eh.log.transport.trip.kanban</field>
+            <field name="model">eh.log.transport.trip</field>
+            <field name="arch" type="xml">
+                <kanban default_group_by="state">
+                    <field name="name"/>
+                    <field name="state"/>
+                    <field name="customer_id"/>
+                    <field name="vehicle_id"/>
+                    <field name="driver_id"/>
+                    <templates>
+                        <t t-name="card">
+                            <div class="o_kanban_card_content">
+                                <div class="o_kanban_record_top">
+                                    <strong><field name="name"/></strong>
+                                </div>
+                                <div class="o_kanban_record_body">
+                                    <field name="customer_id"/>
+                                    <div>Vehicle: <field name="vehicle_id"/></div>
+                                    <div>Driver: <field name="driver_id"/></div>
+                                    <div>Pickup: <field name="pickup_planned_at"/></div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <record id="view_eh_log_transport_trip_search" model="ir.ui.view">
+            <field name="name">eh.log.transport.trip.search</field>
+            <field name="model">eh.log.transport.trip</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="customer_id"/>
+                    <field name="vehicle_id"/>
+                    <field name="driver_id"/>
+                    <field name="freight_job_id"/>
+                    <separator/>
+                    <filter string="Open" name="filter_open" domain="[('state', 'in', ('planned', 'dispatched', 'at_pickup', 'in_transit', 'at_delivery'))]"/>
+                    <filter string="Delivered" name="filter_delivered" domain="[('state', '=', 'delivered')]"/>
+                    <filter string="Closed" name="filter_closed" domain="[('state', '=', 'closed')]"/>
+                    <filter string="Group by State" name="group_state" context="{'group_by': 'state'}"/>
+                    <filter string="Group by Driver" name="group_driver" context="{'group_by': 'driver_id'}"/>
+                    <filter string="Group by Vehicle" name="group_vehicle" context="{'group_by': 'vehicle_id'}"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_eh_log_transport_trip" model="ir.actions.act_window">
+            <field name="name">Trips</field>
+            <field name="res_model">eh.log.transport.trip</field>
+            <field name="view_mode">kanban,list,form</field>
+            <field name="search_view_id" ref="view_eh_log_transport_trip_search"/>
+            <field name="context">{'search_default_filter_open': 1}</field>
+        </record>
+
+    </data>
+</odoo>

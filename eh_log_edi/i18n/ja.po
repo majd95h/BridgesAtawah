@@ -1,0 +1,1274 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* eh_log_edi
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-01 04:33+0000\n"
+"PO-Revision-Date: 2026-07-01 04:33+0000\n"
+"Last-Translator: ERP Heritage <info@erpheritage.com.au>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/wizards/eh_log_edi_mass_action.py:0
+msgid "%(count)d dead-letter message(s) re-queued."
+msgstr "%(count)d 件のデッドレターメッセージを再キューしました。"
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/wizards/eh_log_edi_mass_action.py:0
+msgid "%(count)d inbound message(s) reprocessed."
+msgstr "%(count)d 件の受信メッセージを再処理しました。"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_kanban
+msgid "<i class=\"fa fa-file me-1\" title=\"Payload File\"/>"
+msgstr "<i class=\"fa fa-file me-1\" title=\"ペイロードファイル\"/>"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_kanban
+msgid "<i class=\"fa fa-file me-1\" title=\"Raw File\"/>"
+msgstr "<i class=\"fa fa-file me-1\" title=\"生ファイル\"/>"
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_transport.py:0
+msgid "<p>Auto-generated EDI message; the EDIFACT payload is attached.</p>"
+msgstr "<p>自動生成された EDI メッセージ。EDIFACT ペイロードが添付されています。</p>"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_message_type__encoding__x12
+msgid "ANSI X12"
+msgstr ""
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_transport__protocol__as2
+msgid "AS2"
+msgstr ""
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__acked_at
+msgid "Acked At"
+msgstr "確認日時"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_outbound__state__acked
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search_full
+msgid "Acknowledged"
+msgstr "確認済"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__message_needaction
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__message_needaction
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__message_needaction
+msgid "Action Needed"
+msgstr "要アクション"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_message_type__active
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__active
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__active
+msgid "Active"
+msgstr "有効"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__activity_ids
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__activity_ids
+msgid "Activities"
+msgstr "活動"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__activity_exception_decoration
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "例外の活動を示す装飾"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__activity_state
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__activity_state
+msgid "Activity State"
+msgstr "活動ステータス"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__activity_type_icon
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "活動タイプアイコン"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__message_attachment_count
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__message_attachment_count
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__message_attachment_count
+msgid "Attachment Count"
+msgstr "添付数"
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_transport.py:0
+msgid "Auto-generated EDI message from the ERP Heritage logistics suite."
+msgstr "ERP Heritage 物流スイートから自動生成された EDI メッセージ。"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_message_type__direction__both
+msgid "Both"
+msgstr "両方"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_mass_reprocess_form
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_form
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_mass_resume_form
+msgid "Cancel"
+msgstr "キャンセル"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_outbound__state__cancelled
+msgid "Cancelled"
+msgstr "キャンセル済"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_form
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_form
+msgid "Close"
+msgstr "閉じる"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_inbound__state__closed
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_outbound__state__closed
+msgid "Closed"
+msgstr "クローズ済"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_message_type__code
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__code
+msgid "Code"
+msgstr "コード"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__company_id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__company_id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__company_id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__company_id
+msgid "Company"
+msgstr "会社"
+
+#. module: eh_log_edi
+#: model:ir.model,name:eh_log_edi.model_res_config_settings
+msgid "Config Settings"
+msgstr "構成設定"
+
+#. module: eh_log_edi
+#: model:ir.model,name:eh_log_edi.model_res_partner
+msgid "Contact"
+msgstr "連絡先"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search_full
+msgid "Created Today"
+msgstr "本日作成"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__create_uid
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound_mass_reprocess__create_uid
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_message_type__create_uid
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__create_uid
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound_mass_resume__create_uid
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__create_uid
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__create_uid
+msgid "Created by"
+msgstr "作成者"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__create_date
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound_mass_reprocess__create_date
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_message_type__create_date
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__create_date
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound_mass_resume__create_date
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__create_date
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__create_date
+msgid "Created on"
+msgstr "作成日"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__credentials_key
+msgid "Credentials Key"
+msgstr "認証情報キー"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_outbound__max_retries
+msgid ""
+"Cron retry budget. Reached: row moves to dead_letter; operator must manually"
+" re-queue or cancel."
+msgstr ""
+"Cron の再試行予算。上限到達時：行は dead_letter に移動します。オペレーターは手動で再キューまたはキャンセルする必要があります。"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_outbound__state__dead_letter
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search_full
+msgid "Dead Letter"
+msgstr "デッドレター"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound_mass_resume__outbound_ids
+msgid "Dead-letter Messages"
+msgstr "デッドレターメッセージ"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__is_default
+msgid "Default for Partner"
+msgstr "取引先の既定値"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_message_type__description
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_message_type_form
+msgid "Description"
+msgstr "説明"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_message_type__direction
+msgid "Direction"
+msgstr "方向"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__display_name
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound_mass_reprocess__display_name
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_message_type__display_name
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__display_name
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound_mass_resume__display_name
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__display_name
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__display_name
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_freight_job__display_name
+#: model:ir.model.fields,field_description:eh_log_edi.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:eh_log_edi.field_res_partner__display_name
+msgid "Display Name"
+msgstr "表示名"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_outbound__state__draft
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search_full
+msgid "Draft"
+msgstr "ドラフト"
+
+#. module: eh_log_edi
+#: model:ir.model.constraint,message:eh_log_edi.constraint_eh_log_edi_partner_partner_identifier_unique
+msgid "Duplicate partner identifier for the same partner."
+msgstr "同じ取引先に対して重複した取引先識別子です。"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_res_partner__eh_log_edi_partner_ids
+#: model:ir.model.fields,field_description:eh_log_edi.field_res_users__eh_log_edi_partner_ids
+msgid "EDI Configurations"
+msgstr "EDI 設定"
+
+#. module: eh_log_edi
+#: model:ir.ui.menu,name:eh_log_edi.menu_eh_log_edi_config_root
+#: model:ir.ui.menu,name:eh_log_edi.menu_eh_log_edi_root
+msgid "EDI Hub"
+msgstr "EDI ハブ"
+
+#. module: eh_log_edi
+#: model:ir.model,name:eh_log_edi.model_eh_log_edi_inbound
+msgid "EDI Inbound Message"
+msgstr "EDI 受信メッセージ"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_pivot
+msgid "EDI Inbound Volume"
+msgstr "EDI 受信ボリューム"
+
+#. module: eh_log_edi
+#: model:ir.model,name:eh_log_edi.model_eh_log_edi_message_type
+msgid "EDI Message Type"
+msgstr "EDI メッセージタイプ"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_freight_job_form_edi
+msgid "EDI Out"
+msgstr "EDI 送信"
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_freight_job.py:0
+msgid "EDI Outbound"
+msgstr "EDI 送信"
+
+#. module: eh_log_edi
+#: model:ir.model,name:eh_log_edi.model_eh_log_edi_outbound
+msgid "EDI Outbound Message"
+msgstr "EDI 送信メッセージ"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_freight_job__eh_log_edi_outbound_count
+msgid "EDI Outbound Messages"
+msgstr "EDI 送信メッセージ"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_pivot
+msgid "EDI Outbound Volume"
+msgstr "EDI 送信ボリューム"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_graph
+msgid "EDI Outbound by State"
+msgstr "状態別 EDI 送信"
+
+#. module: eh_log_edi
+#: model:ir.model,name:eh_log_edi.model_eh_log_edi_partner
+msgid "EDI Partner Configuration"
+msgstr "EDI パートナー設定"
+
+#. module: eh_log_edi
+#: model:ir.actions.act_window,name:eh_log_edi.action_eh_log_edi_partner
+#: model:ir.ui.menu,name:eh_log_edi.menu_eh_log_edi_partners
+msgid "EDI Partners"
+msgstr "EDI パートナー"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_res_config_settings__eh_log_edi_self_identifier
+msgid "EDI Self Identifier"
+msgstr "EDI 自己識別子"
+
+#. module: eh_log_edi
+#: model:ir.model,name:eh_log_edi.model_eh_log_edi_transport
+msgid "EDI Transport"
+msgstr "EDI トランスポート"
+
+#. module: eh_log_edi
+#: model:ir.actions.server,name:eh_log_edi.cron_dispatch_outbound_ir_actions_server
+msgid "EDI: Dispatch Outbound Queue"
+msgstr "EDI: 送信キューをディスパッチ"
+
+#. module: eh_log_edi
+#: model:ir.actions.server,name:eh_log_edi.cron_process_inbound_ir_actions_server
+msgid "EDI: Process Inbound Queue"
+msgstr "EDI: 受信キューを処理"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.res_config_settings_view_form_edi
+msgid "ERP Heritage EDI Hub"
+msgstr "ERP Heritage EDI ハブ"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_message_type__encoding
+msgid "Encoding"
+msgstr "エンコード"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_transport_form
+msgid "Endpoint"
+msgstr "エンドポイント"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_transport__protocol__file
+msgid "File Drop"
+msgstr "ファイルドロップ"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__raw_filename
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__payload_filename
+msgid "Filename"
+msgstr "ファイル名"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__filename_template
+msgid "Filename Template"
+msgstr "ファイル名テンプレート"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__message_follower_ids
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__message_follower_ids
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__message_follower_ids
+msgid "Followers"
+msgstr "フォロワー"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__message_partner_ids
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__message_partner_ids
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "フォロワー (取引先)"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_inbound__activity_type_icon
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_outbound__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Font awesomeのアイコン 例. fa-tasks"
+
+#. module: eh_log_edi
+#: model:ir.model,name:eh_log_edi.model_eh_log_freight_job
+msgid "Freight Forwarding Job"
+msgstr "貨物輸送ジョブ"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_partner__partner_identifier
+msgid ""
+"GLN, DUNS, EAN, or internal code carried in the EDI envelope as the "
+"recipient identifier."
+msgstr "受信者識別子として EDI エンベロープに含まれる GLN、DUNS、EAN、または内部コード。"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.res_config_settings_view_form_edi
+msgid "GLN, DUNS, or internal code"
+msgstr "GLN、DUNS、または内部コード"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_transport__protocol__http
+msgid "HTTP"
+msgstr ""
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__has_message
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__has_message
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__has_message
+msgid "Has Message"
+msgstr "メッセージあり"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search_full
+msgid "Has Retries"
+msgstr "再試行あり"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__host
+msgid "Host"
+msgstr "ホスト"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound_mass_reprocess__id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_message_type__id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound_mass_resume__id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_freight_job__id
+#: model:ir.model.fields,field_description:eh_log_edi.field_res_config_settings__id
+#: model:ir.model.fields,field_description:eh_log_edi.field_res_partner__id
+msgid "ID"
+msgstr ""
+
+#. module: eh_log_edi
+#: model:eh.log.edi.message.type,name:eh_log_edi.message_type_iftmin
+msgid "IFTMIN - Forwarding Instruction"
+msgstr "IFTMIN - 運送指示"
+
+#. module: eh_log_edi
+#: model:eh.log.edi.message.type,name:eh_log_edi.message_type_iftsta
+msgid "IFTSTA - International Multimodal Status Report"
+msgstr "IFTSTA - 国際複合輸送ステータスレポート"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__activity_exception_icon
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__activity_exception_icon
+msgid "Icon"
+msgstr "アイコン"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_inbound__activity_exception_icon
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_outbound__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "例外活動を示すアイコン"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_res_config_settings__eh_log_edi_self_identifier
+msgid ""
+"Identifier (GLN, DUNS, internal) inserted as the sender party on every "
+"outbound EDI envelope. Per-partner configurations may override this value."
+msgstr ""
+"各送信 EDI エンベロープに送信者として挿入される識別子（GLN、DUNS、内部）。取引先ごとの設定でこの値が上書きされる場合があります。"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.res_config_settings_view_form_edi
+msgid ""
+"Identifier inserted as the sender party on every outbound EDI envelope."
+msgstr "各送信 EDI エンベロープに送信者として挿入される識別子。"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_outbound__transport_reference
+msgid ""
+"Identifier returned by the transport (SMTP message id, SFTP path, HTTP "
+"status). Useful for manual lookup."
+msgstr "トランスポートから返される識別子（SMTP メッセージ id、SFTP パス、HTTP ステータス）。手動検索に役立ちます。"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_partner__self_party_identifier_override
+msgid ""
+"Identifier the partner expects to see as the sender. Falls back to the "
+"company's eh_log_edi_self_identifier when blank."
+msgstr "取引先が送信者として想定する識別子。空欄の場合は会社の eh_log_edi_self_identifier にフォールバックします。"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.res_config_settings_view_form_edi
+msgid "Identity"
+msgstr "識別"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_inbound__message_needaction
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_outbound__message_needaction
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_partner__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "チェックした場合は、新しいメッセージに注意が必要です。"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_inbound__message_has_error
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_inbound__message_has_sms_error
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_outbound__message_has_error
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_outbound__message_has_sms_error
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_partner__message_has_error
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_partner__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "有効にすると、一部のメッセージに配信エラーが発生します。"
+
+#. module: eh_log_edi
+#: model:ir.actions.act_window,name:eh_log_edi.action_eh_log_edi_inbound
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_message_type__direction__in
+#: model:ir.ui.menu,name:eh_log_edi.menu_eh_log_edi_inbound
+msgid "Inbound"
+msgstr "インバウンド"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound_mass_reprocess__inbound_ids
+msgid "Inbound Messages"
+msgstr "受信メッセージ"
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_inbound.py:0
+msgid "Inbound message %(name)s cannot move from %(from)s to %(to)s."
+msgstr "受信メッセージ %(name)s は %(from)s から %(to)s へ移動できません。"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__message_is_follower
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__message_is_follower
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__message_is_follower
+msgid "Is Follower"
+msgstr "フォロー中"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_message_type__encoding__json
+msgid "JSON"
+msgstr ""
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_inbound__parsed_payload
+msgid ""
+"JSON serialisation of the parser output. Stored for operator review and "
+"replay."
+msgstr "パーサー出力の JSON シリアライゼーション。オペレーターによるレビューと再生のために保存されます。"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__error_message
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__error_message
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_form
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_form
+msgid "Last Error"
+msgstr "最終エラー"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__write_uid
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound_mass_reprocess__write_uid
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_message_type__write_uid
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__write_uid
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound_mass_resume__write_uid
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__write_uid
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__write_uid
+msgid "Last Updated by"
+msgstr "最終更新者"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__write_date
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound_mass_reprocess__write_date
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_message_type__write_date
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__write_date
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound_mass_resume__write_date
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__write_date
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__write_date
+msgid "Last Updated on"
+msgstr "最終更新日"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_transport__credentials_key
+msgid "Lookup key for the credentials helper."
+msgstr "認証情報ヘルパーの検索キー。"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_form
+msgid "Mark Acked"
+msgstr "確認応答済みにする"
+
+#. module: eh_log_edi
+#: model:ir.actions.act_window,name:eh_log_edi.action_eh_log_edi_inbound_mass_reprocess
+msgid "Mass-reprocess"
+msgstr "一括再処理"
+
+#. module: eh_log_edi
+#: model:ir.model,name:eh_log_edi.model_eh_log_edi_inbound_mass_reprocess
+msgid "Mass-reprocess EDI Inbound"
+msgstr "EDI受信を一括再処理"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_mass_reprocess_form
+msgid "Mass-reprocess Inbound"
+msgstr "受信を一括再処理"
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/wizards/eh_log_edi_mass_action.py:0
+msgid "Mass-reprocess complete"
+msgstr "一括再処理が完了しました"
+
+#. module: eh_log_edi
+#: model:ir.actions.act_window,name:eh_log_edi.action_eh_log_edi_outbound_mass_resume
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_mass_resume_form
+msgid "Mass-resume Dead-letter"
+msgstr "デッドレターを一括再開"
+
+#. module: eh_log_edi
+#: model:ir.model,name:eh_log_edi.model_eh_log_edi_outbound_mass_resume
+msgid "Mass-resume EDI Dead-letter"
+msgstr "EDIデッドレターを一括再開"
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/wizards/eh_log_edi_mass_action.py:0
+msgid "Mass-resume complete"
+msgstr "一括再開が完了しました"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__max_retries
+msgid "Max Retries"
+msgstr "最大再試行回数"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__message_has_error
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__message_has_error
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__message_has_error
+msgid "Message Delivery error"
+msgstr "メッセージ配信エラー"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__message_type_id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__message_type_id
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_search_full
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search_full
+msgid "Message Type"
+msgstr "メッセージタイプ"
+
+#. module: eh_log_edi
+#: model:ir.actions.act_window,name:eh_log_edi.action_eh_log_edi_message_type
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__message_type_ids
+#: model:ir.ui.menu,name:eh_log_edi.menu_eh_log_edi_message_types
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_partner_form
+msgid "Message Types"
+msgstr "メッセージタイプ"
+
+#. module: eh_log_edi
+#: model:ir.model.constraint,message:eh_log_edi.constraint_eh_log_edi_message_type_code_direction_unique
+msgid "Message type code/direction combination must be unique."
+msgstr "メッセージタイプのコード/方向の組み合わせは一意である必要があります。"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_partner__message_type_ids
+msgid "Message types this configuration may dispatch / receive."
+msgstr "この構成が送信/受信できるメッセージタイプ。"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__message_ids
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__message_ids
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__message_ids
+msgid "Messages"
+msgstr "メッセージ"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_transport__protocol__mock
+msgid "Mock (Tests)"
+msgstr "モック（テスト）"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__my_activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "活動期限"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_message_type__name
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__name
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__name
+msgid "Name"
+msgstr "名称"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_inbound__target_record_ref
+msgid ""
+"Name of the record affected by apply(). For IFTSTA, the freight job that "
+"received the new tracking event."
+msgstr "apply() の影響を受けるレコードの名称。IFTSTA の場合、新しい追跡イベントを受け取った貨物ジョブ。"
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_inbound.py:0
+#: code:addons/eh_log_edi/models/eh_log_edi_outbound.py:0
+msgid "New"
+msgstr "新規"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__activity_calendar_event_id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "次の活動カレンダーイベント"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "次の活動期限"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__activity_summary
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__activity_summary
+msgid "Next Activity Summary"
+msgstr "次の活動概要"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__activity_type_id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__activity_type_id
+msgid "Next Activity Type"
+msgstr "次の活動タイプ"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__message_needaction_counter
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__message_needaction_counter
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__message_needaction_counter
+msgid "Number of Actions"
+msgstr "アクション数"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__message_has_error_counter
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__message_has_error_counter
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__message_has_error_counter
+msgid "Number of errors"
+msgstr "エラー数"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_inbound__message_needaction_counter
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_outbound__message_needaction_counter
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_partner__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "対応が必要なメッセージ数"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_inbound__message_has_error_counter
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_outbound__message_has_error_counter
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_partner__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "配信エラーが発生されたメッセージ数"
+
+#. module: eh_log_edi
+#: model:ir.actions.act_window,name:eh_log_edi.action_eh_log_edi_outbound
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_message_type__direction__out
+#: model:ir.ui.menu,name:eh_log_edi.menu_eh_log_edi_outbound
+msgid "Outbound"
+msgstr "アウトバウンド"
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_outbound.py:0
+msgid "Outbound message %(name)s cannot move from %(from)s to %(to)s."
+msgstr "送信メッセージ %(name)s は %(from)s から %(to)s へ移動できません。"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_form
+msgid "Parse"
+msgstr "解析"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_inbound__state__parsed
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_search_full
+msgid "Parsed"
+msgstr "解析済み"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__parsed_at
+msgid "Parsed At"
+msgstr "解析日時"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__parsed_payload
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_form
+msgid "Parsed Payload"
+msgstr "解析済みペイロード"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__partner_id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__partner_id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__partner_id
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_search_full
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search_full
+msgid "Partner"
+msgstr "取引先"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__partner_config_id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__partner_config_id
+msgid "Partner Configuration"
+msgstr "取引先の設定"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__partner_identifier
+msgid "Partner Identifier"
+msgstr "取引先識別子"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__payload
+msgid "Payload"
+msgstr "ペイロード"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_partner__is_default
+msgid ""
+"Pick this configuration when the dispatcher needs to send to the partner "
+"without an explicit configuration reference."
+msgstr "ディスパッチャーが明示的な設定参照なしでパートナーに送信する必要がある場合は、この設定を選択します。"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__port
+msgid "Port"
+msgstr "ポート"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_form
+msgid "Process"
+msgstr "処理"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_inbound__state__processed
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_search_full
+msgid "Processed"
+msgstr "実行済"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__processed_at
+msgid "Processed At"
+msgstr "処理日時"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__protocol
+msgid "Protocol"
+msgstr "プロトコル"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_form
+msgid "Queue"
+msgstr "キュー"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_freight_job_form_edi
+msgid "Queue IFTMIN"
+msgstr "IFTMIN をキューに追加"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_outbound__state__queued
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search_full
+msgid "Queued"
+msgstr "処理待ち"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__rating_ids
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__rating_ids
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__rating_ids
+msgid "Ratings"
+msgstr "評価"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__raw_payload
+msgid "Raw Payload"
+msgstr "生のペイロード"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_form
+msgid "Re-queue"
+msgstr "再キュー"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_mass_resume_form
+msgid "Re-queue All"
+msgstr "すべて再キュー"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_inbound__state__received
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_search_full
+msgid "Received"
+msgstr "入荷済"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__received_at
+msgid "Received At"
+msgstr "受領日時"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_search_full
+msgid "Received Today"
+msgstr "本日受領"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__name
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__name
+msgid "Reference"
+msgstr "参照"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_inbound__state__rejected
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_outbound__state__rejected
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_search_full
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search_full
+msgid "Rejected"
+msgstr "拒否済"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_mass_reprocess_form
+msgid "Reprocess All"
+msgstr "すべて再処理"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__activity_user_id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__activity_user_id
+msgid "Responsible User"
+msgstr "担当ユーザ"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_form
+msgid "Resume"
+msgstr "履歴書"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__retry_count
+msgid "Retries"
+msgstr "再試行回数"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_kanban
+msgid "Retries:"
+msgstr "再試行回数："
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_transport__protocol__sftp
+msgid "SFTP"
+msgstr ""
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__message_has_sms_error
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__message_has_sms_error
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "SMS配信エラー"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_transport__protocol__smtp
+msgid "SMTP"
+msgstr ""
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_search_full
+msgid "Search Inbound EDI"
+msgstr "受信 EDI を検索"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search_full
+msgid "Search Outbound EDI"
+msgstr "送信 EDI を検索"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.res_config_settings_view_form_edi
+msgid "Self Identifier"
+msgstr "自己識別子"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__self_party_identifier_override
+msgid "Self Identifier Override"
+msgstr "自己識別子の上書き"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_form
+msgid "Send Now"
+msgstr "今すぐ送信"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_outbound__state__sent
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search_full
+msgid "Sent"
+msgstr "送信日"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__sent_at
+msgid "Sent At"
+msgstr "送信日時"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__signing_required
+msgid "Signing Required"
+msgstr "署名が必要"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__source_id
+msgid "Source ID"
+msgstr "ソース ID"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__source_model
+msgid "Source Model"
+msgstr "ソースモデル"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__state
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__state
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_search_full
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search_full
+msgid "State"
+msgstr "ステータス"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_inbound__activity_state
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_outbound__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"活動に基づくステータス\n"
+"期限超過：期限日がすでに過ぎています\n"
+"今日: 活動日は今日です\n"
+"予定: 将来の活動。"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_partner__filename_template
+msgid ""
+"Substitutions: {message}, {date}, {sequence}, {partner_code}. Used to "
+"compose outbound filenames."
+msgstr "置換: {message}、{date}、{sequence}、{partner_code}。送信ファイル名の作成に使用されます。"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__target_directory
+msgid "Target Directory"
+msgstr "ターゲットディレクトリ"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__target_email
+msgid "Target Email"
+msgstr "ターゲットメール"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__target_record_ref
+msgid "Target Record"
+msgstr "ターゲットレコード"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__target_url
+msgid "Target URL"
+msgstr "リンク先URL"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__transport_id
+msgid "Transport"
+msgstr "輸送"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__transport_reference
+msgid "Transport Reference"
+msgstr "輸送参照番号"
+
+#. module: eh_log_edi
+#: model:ir.model.constraint,message:eh_log_edi.constraint_eh_log_edi_transport_transport_code_unique
+msgid "Transport code must be unique per company."
+msgstr "輸送コードは会社ごとに一意である必要があります。"
+
+#. module: eh_log_edi
+#: model:ir.actions.act_window,name:eh_log_edi.action_eh_log_edi_transport
+#: model:ir.ui.menu,name:eh_log_edi.menu_eh_log_edi_transports
+msgid "Transports"
+msgstr "輸送"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_inbound__activity_exception_decoration
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_outbound__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "記録上の例外活動の種類。"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_message_type__encoding__edifact
+msgid "UN/EDIFACT"
+msgstr ""
+
+#. module: eh_log_edi
+#: model:eh.log.edi.message.type,description:eh_log_edi.message_type_iftmin
+msgid ""
+"UN/EDIFACT D.96B forwarding instruction. Sent from forwarder to carrier or "
+"upstream agent to instruct handling of a shipment."
+msgstr "UN/EDIFACT D.96B 転送指示。荷物の取り扱いを指示するため、フォワーダーからキャリアまたは上流のエージェントへ送信されます。"
+
+#. module: eh_log_edi
+#: model:eh.log.edi.message.type,description:eh_log_edi.message_type_iftsta
+msgid ""
+"UN/EDIFACT D.96B status report. Received from carrier or upstream agent "
+"reporting on the progress of a shipment."
+msgstr "UN/EDIFACT D.96B ステータスレポート。荷物の進捗を報告するキャリアまたは上流のエージェントから受信されます。"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__username
+msgid "Username"
+msgstr "ユーザ名"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__website_message_ids
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__website_message_ids
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__website_message_ids
+msgid "Website Messages"
+msgstr "ウェブサイトメッセージ"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_inbound__website_message_ids
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_outbound__website_message_ids
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_partner__website_message_ids
+msgid "Website communication history"
+msgstr "ウェブサイト通信履歴"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_outbound__payload
+msgid ""
+"Wire bytes built by the translator. Stored once and re-used on retry so the "
+"partner sees identical content across attempts."
+msgstr ""
+"トランスレータによって構築されたワイヤバイト。一度保存され、再試行時に再利用されるため、パートナーはすべての試行で同一のコンテンツを見ます。"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_message_type__encoding__xml
+msgid "XML"
+msgstr ""
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_message_type.py:0
+msgid ""
+"[EHL-EDI-001] No translator registered for message type %(code)s direction "
+"%(direction)s. Install the module that provides the translator or untick "
+"Active."
+msgstr ""
+"[EHL-EDI-001] メッセージタイプ %(code)s 方向 %(direction)s "
+"に登録されたトランスレーターがありません。トランスレーターを提供するモジュールをインストールするか、「有効」のチェックを外してください。"
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_transport.py:0
+msgid ""
+"[EHL-EDI-002] Transport %(name)s requires host or target URL for protocol "
+"%(protocol)s."
+msgstr ""
+"[EHL-EDI-002] トランスポート %(name)s には、プロトコル %(protocol)s のホストまたはターゲット URL が必要です。"
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_transport.py:0
+msgid "[EHL-EDI-003] Transport %(name)s requires a target email for SMTP."
+msgstr "[EHL-EDI-003] トランスポート %(name)s には、SMTP のターゲットメールアドレスが必要です。"
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_transport.py:0
+msgid ""
+"[EHL-EDI-004] AS2 transport requires the optional pyas2 library; install it "
+"and provide a signing certificate before activating an AS2 transport."
+msgstr ""
+"[EHL-EDI-004] AS2 トランスポートにはオプションの pyas2 ライブラリが必要です。AS2 "
+"トランスポートを有効化する前に、インストールして署名証明書を用意してください。"
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_transport.py:0
+msgid "[EHL-EDI-005] Unsupported transport protocol %(protocol)s."
+msgstr "[EHL-EDI-005] サポートされていないトランスポートプロトコル %(protocol)s。"
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_transport.py:0
+msgid ""
+"[EHL-EDI-006] SFTP transport requires the optional paramiko library; pip "
+"install paramiko on the Odoo host before activating SFTP."
+msgstr ""
+"[EHL-EDI-006] SFTP トランスポートにはオプションの paramiko ライブラリが必要です。SFTP を有効化する前に、Odoo "
+"ホストで pip install paramiko を実行してください。"
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_transport.py:0
+msgid ""
+"[EHL-EDI-007] HTTP transport %(name)s rejected the payload with status "
+"%(status)s: %(body)s"
+msgstr ""
+"[EHL-EDI-007] HTTP トランスポート %(name)s がペイロードをステータス %(status)s で拒否しました: "
+"%(body)s"
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_partner.py:0
+msgid ""
+"[EHL-EDI-008] Only one default EDI configuration is allowed per partner."
+msgstr "[EHL-EDI-008] パートナーごとに許可されるデフォルトの EDI 構成は1つのみです。"
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_outbound.py:0
+msgid "[EHL-EDI-009] Outbound state must change via the action buttons."
+msgstr "[EHL-EDI-009] 送信状態はアクションボタンを介して変更する必要があります。"
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_outbound.py:0
+msgid ""
+"[EHL-EDI-010] No outbound translator registered for message type %(code)s."
+msgstr "[EHL-EDI-010] メッセージタイプ %(code)s に登録された送信トランスレーターがありません。"
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_outbound.py:0
+msgid ""
+"[EHL-EDI-011] Source record %(model)s/%(id)s no longer exists; cannot build "
+"payload."
+msgstr "[EHL-EDI-011] ソースレコード %(model)s/%(id)s は存在しなくなりました。ペイロードを作成できません。"
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_inbound.py:0
+msgid ""
+"[EHL-EDI-012] No inbound translator registered for message type %(code)s."
+msgstr "[EHL-EDI-012] メッセージタイプ %(code)s に登録された受信トランスレーターがありません。"
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_inbound.py:0
+msgid "[EHL-EDI-013] No inbound translator for %(code)s."
+msgstr "[EHL-EDI-013] %(code)s の受信トランスレーターがありません。"
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_inbound.py:0
+msgid "[EHL-EDI-014] Inbound state must change via the action buttons."
+msgstr "[EHL-EDI-014] 受信状態はアクションボタンを介して変更する必要があります。"
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_freight_job.py:0
+msgid "source_model"
+msgstr ""

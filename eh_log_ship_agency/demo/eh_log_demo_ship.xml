@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="demo_vessel_msc_isabella" model="eh.log.ship.vessel">
+            <field name="name">MSC Isabella</field>
+            <field name="imo_number">9839430</field>
+            <field name="call_sign">A8XB7</field>
+            <field name="mmsi">636019567</field>
+            <field name="flag_country_id" ref="base.lr"/>
+            <field name="vessel_type">container</field>
+            <field name="gross_tonnage">232618</field>
+            <field name="length_overall_m">399.9</field>
+            <field name="beam_m">61.5</field>
+            <field name="draft_m">16.5</field>
+        </record>
+
+        <record id="demo_vessel_ever_giant" model="eh.log.ship.vessel">
+            <field name="name">Ever Giant</field>
+            <field name="imo_number">9893890</field>
+            <field name="call_sign">BNCV2</field>
+            <field name="flag_country_id" ref="base.pa"/>
+            <field name="vessel_type">container</field>
+            <field name="gross_tonnage">236228</field>
+            <field name="length_overall_m">400.0</field>
+            <field name="beam_m">61.5</field>
+            <field name="draft_m">17.0</field>
+        </record>
+
+        <record id="demo_vessel_maersk_horizon" model="eh.log.ship.vessel">
+            <field name="name">Maersk Horizon</field>
+            <field name="imo_number">9778947</field>
+            <field name="call_sign">OUMA2</field>
+            <field name="flag_country_id" ref="base.dk"/>
+            <field name="vessel_type">container</field>
+            <field name="gross_tonnage">194849</field>
+            <field name="length_overall_m">399.0</field>
+            <field name="beam_m">59.0</field>
+            <field name="draft_m">16.0</field>
+        </record>
+
+        <!-- Berths -->
+
+        <record id="demo_berth_jea_t2_b1" model="eh.log.ship.berth">
+            <field name="name">Jebel Ali T2 - Berth 1</field>
+            <field name="code">JEA_T2_B1</field>
+            <field name="port_partner_id" ref="eh_log_base.demo_partner_port_jebelali"/>
+            <field name="max_loa_m">450</field>
+            <field name="depth_m">17</field>
+        </record>
+
+        <record id="demo_berth_kap_b1" model="eh.log.ship.berth">
+            <field name="name">King Abdullah Port - Berth 1</field>
+            <field name="code">KAP_B1</field>
+            <field name="port_partner_id" ref="eh_log_base.demo_partner_port_kingabdullah"/>
+            <field name="max_loa_m">400</field>
+            <field name="depth_m">18</field>
+        </record>
+
+        <!-- Port calls -->
+
+        <record id="demo_port_call_001" model="eh.log.ship.port.call">
+            <field name="vessel_id" ref="demo_vessel_msc_isabella"/>
+            <field name="voyage_reference">258W</field>
+            <field name="port_partner_id" ref="eh_log_base.demo_partner_port_jebelali"/>
+            <field name="berth_id" ref="demo_berth_jea_t2_b1"/>
+            <field name="principal_partner_id" ref="eh_log_base.demo_partner_carrier_msc"/>
+            <field name="eta_at" eval="(DateTime.now() + relativedelta(hours=18)).strftime('%Y-%m-%d %H:%M:%S')"/>
+        </record>
+
+        <record id="demo_port_call_002" model="eh.log.ship.port.call">
+            <field name="vessel_id" ref="demo_vessel_ever_giant"/>
+            <field name="voyage_reference">261E</field>
+            <field name="port_partner_id" ref="eh_log_base.demo_partner_port_jebelali"/>
+            <field name="principal_partner_id" ref="eh_log_base.demo_partner_carrier_msc"/>
+            <field name="eta_at" eval="(DateTime.now() + relativedelta(days=2)).strftime('%Y-%m-%d %H:%M:%S')"/>
+        </record>
+
+        <record id="demo_port_call_003" model="eh.log.ship.port.call">
+            <field name="vessel_id" ref="demo_vessel_maersk_horizon"/>
+            <field name="voyage_reference">114N</field>
+            <field name="port_partner_id" ref="eh_log_base.demo_partner_port_kingabdullah"/>
+            <field name="berth_id" ref="demo_berth_kap_b1"/>
+            <field name="principal_partner_id" ref="eh_log_base.demo_partner_carrier_maersk"/>
+            <field name="eta_at" eval="(DateTime.now() + relativedelta(days=3)).strftime('%Y-%m-%d %H:%M:%S')"/>
+        </record>
+
+        <record id="demo_port_call_004" model="eh.log.ship.port.call">
+            <field name="vessel_id" ref="demo_vessel_msc_isabella"/>
+            <field name="voyage_reference">259W</field>
+            <field name="port_partner_id" ref="eh_log_base.demo_partner_port_hamad"/>
+            <field name="principal_partner_id" ref="eh_log_base.demo_partner_carrier_msc"/>
+            <field name="eta_at" eval="(DateTime.now() + relativedelta(days=4)).strftime('%Y-%m-%d %H:%M:%S')"/>
+        </record>
+
+    </data>
+</odoo>

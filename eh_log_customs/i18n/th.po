@@ -1,0 +1,1446 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* eh_log_customs
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-01 04:33+0000\n"
+"PO-Revision-Date: 2026-07-01 04:33+0000\n"
+"Last-Translator: ERP Heritage <info@erpheritage.com.au>\n"
+"Language-Team: Thai\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid "(none)"
+msgstr "(ไม่มี)"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid ""
+"<i class=\"fa fa-id-card-o\" style=\"font-size:1.6rem;color:#D4A055;\" "
+"title=\"Customs declaration\"/>"
+msgstr ""
+"<i class=\"fa fa-id-card-o\" style=\"font-size:1.6rem;color:#D4A055;\" "
+"title=\"ใบขนสินค้าศุลกากร\"/>"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__account_number
+msgid "Account Number"
+msgstr "หมายเลขบัญชี"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__account_number
+msgid "Account number issued by the customs authority."
+msgstr "หมายเลขบัญชีที่ออกโดยหน่วยงานศุลกากร"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__message_needaction
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__message_needaction
+msgid "Action Needed"
+msgstr "จำเป็นต้องดำเนินการ"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__active
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__active
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__active
+msgid "Active"
+msgstr "เปิดใช้งาน"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__activity_ids
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__activity_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_customs_declaration_activity
+msgid "Activities"
+msgstr "กิจกรรม"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__activity_exception_decoration
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "การตกแต่งข้อยกเว้นกิจกรรม"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__activity_state
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__activity_state
+msgid "Activity State"
+msgstr "สถานะกิจกรรม"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__activity_type_icon
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "ไอคอนประเภทกิจกรรม"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__regulator_profile_id
+msgid ""
+"Adapter profile through which this declaration is submitted. Country packs "
+"ship default profiles; operators pick the right one per declaration."
+msgstr ""
+"โปรไฟล์อะแดปเตอร์ที่ใช้ส่งการประกาศนี้ "
+"ชุดข้อมูลประเทศจะมาพร้อมโปรไฟล์เริ่มต้น "
+"ผู้ปฏิบัติงานเลือกโปรไฟล์ที่เหมาะสมสำหรับแต่ละการประกาศ"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__amount
+msgid "Amount"
+msgstr "จำนวน"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_61
+msgid "Apparel, knitted or crocheted"
+msgstr "เสื้อผ้า ชนิดถักนิตหรือถักโครเชต์"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_62
+msgid "Apparel, not knitted or crocheted"
+msgstr "เครื่องนุ่งห่ม ไม่ใช่ผ้าถักหรือถักโครเชต์"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_73
+msgid "Articles of iron or steel"
+msgstr "ผลิตภัณฑ์จากเหล็กหรือเหล็กกล้า"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration__state__assessed
+msgid "Assessed"
+msgstr "ประเมินแล้ว"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__assessed_at
+msgid "Assessed At"
+msgstr "ประเมินเมื่อ"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__message_attachment_count
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__message_attachment_count
+msgid "Attachment Count"
+msgstr "จำนวนสิ่งที่แนบมา"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_deferment_account_form
+msgid "Balance"
+msgstr "ยอดคงเหลือ"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_22
+msgid "Beverages, spirits, vinegar"
+msgstr "เครื่องดื่ม สุรากลั่น น้ำส้มสายชู"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__broker_reference
+msgid "Broker Reference"
+msgstr "หมายเลขอ้างอิงโบรกเกอร์"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__customs_value
+msgid ""
+"CIF value declared to customs. Duty and VAT are computed against this. "
+"Discrepancy between this and the supplier invoice is the #1 cause of "
+"regulator queries."
+msgstr ""
+"มูลค่า CIF ที่แจ้งต่อศุลกากร อากรและ VAT คำนวณจากมูลค่านี้ "
+"ความคลาดเคลื่อนระหว่างมูลค่านี้กับใบแจ้งหนี้ของผู้จัดจำหน่ายเป็นสาเหตุอันดับหนึ่งของการสอบถามจากหน่วยงานกำกับดูแล"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Cancel"
+msgstr "ยกเลิก"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration__state__cancelled
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_deferment_entry__state__cancelled
+msgid "Cancelled"
+msgstr "ยกเลิก"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_hs_code__level__chapter
+msgid "Chapter (2 digits)"
+msgstr "บท (2 หลัก)"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_hs_code_search
+msgid "Chapters"
+msgstr "บท"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__child_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_hs_code_form
+msgid "Children"
+msgstr "เด็ก ๆ"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration__state__cleared
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "Cleared"
+msgstr "เคลียร์แล้ว"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__cleared_at
+msgid "Cleared At"
+msgstr "เคลียร์เมื่อ"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Close"
+msgstr "ปิด"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration__state__closed
+msgid "Closed"
+msgstr "ปิดแล้ว"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__closed_at
+msgid "Closed At"
+msgstr "ปิดเมื่อ"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__code
+msgid "Code"
+msgstr "โค้ด"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__company_ids
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__company_ids
+msgid "Companies"
+msgstr "บริษัท"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__company_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__company_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__company_id
+msgid "Company"
+msgstr "บริษัท"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__country_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__country_id
+msgid "Country"
+msgstr "ประเทศ"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__country_of_origin_id
+msgid "Country of Origin"
+msgstr "ประเทศต้นกำเนิด"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "Created Month"
+msgstr "เดือนที่สร้าง"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "Created Today"
+msgstr "สร้างวันนี้"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__create_uid
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__create_uid
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__create_uid
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__create_uid
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__create_uid
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__create_uid
+msgid "Created by"
+msgstr "สร้างโดย"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__create_date
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__create_date
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__create_date
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__create_date
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__create_date
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__create_date
+msgid "Created on"
+msgstr "สร้างเมื่อ"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_deferment_entry__entry_kind__credit
+msgid "Credit (top-up)"
+msgstr "เครดิต (เติมเงิน)"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__currency_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__currency_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__currency_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__currency_id
+msgid "Currency"
+msgstr "สกุลเงิน"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__current_balance
+msgid "Current Balance"
+msgstr "ยอดเงินปัจจุบัน"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__customer_id
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "Customer"
+msgstr "ลูกค้า"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_pivot
+msgid "Customs Analysis"
+msgstr "การวิเคราะห์ศุลกากร"
+
+#. module: eh_log_customs
+#: model:ir.model,name:eh_log_customs.model_eh_log_customs_declaration
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__declaration_id
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Customs Declaration"
+msgstr "ใบขนสินค้า"
+
+#. module: eh_log_customs
+#: model:ir.model,name:eh_log_customs.model_eh_log_customs_declaration_line
+msgid "Customs Declaration Line"
+msgstr "รายการใบขนสินค้า"
+
+#. module: eh_log_customs
+#: model:ir.model,name:eh_log_customs.model_eh_log_customs_declaration_type
+msgid "Customs Declaration Type"
+msgstr "ประเภทใบขนสินค้า"
+
+#. module: eh_log_customs
+#: model:ir.actions.act_window,name:eh_log_customs.action_eh_log_customs_declaration
+#: model:ir.model.fields,field_description:eh_log_customs.field_sale_order__eh_log_customs_declaration_count
+#: model:ir.model.fields,field_description:eh_log_customs.field_sale_order__eh_log_customs_declaration_ids
+#: model:ir.ui.menu,name:eh_log_customs.menu_eh_log_customs_declarations
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_list
+msgid "Customs Declarations"
+msgstr "ใบขนสินค้า"
+
+#. module: eh_log_customs
+#: model:ir.model,name:eh_log_customs.model_eh_log_customs_deferment_account
+msgid "Customs Deferment Account"
+msgstr "บัญชีผ่อนผันภาษีศุลกากร"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__customs_value
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__customs_value
+msgid "Customs Value"
+msgstr "มูลค่าศุลกากร"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid ""
+"Customs declaration %(name)s cannot move from %(current)s to %(target)s. "
+"Allowed transitions from %(current)s: %(allowed)s."
+msgstr ""
+"ใบขนสินค้า %(name)s ไม่สามารถเปลี่ยนจาก %(current)s ไปยัง %(target)s ได้ "
+"การเปลี่ยนสถานะที่อนุญาตจาก %(current)s: %(allowed)s"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid "Customs declaration %(name)s moved to %(state)s."
+msgstr "ใบขนสินค้า %(name)s ถูกเปลี่ยนไปยัง %(state)s แล้ว"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Customs value"
+msgstr "มูลค่าศุลกากร"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__regulator_reference
+msgid ""
+"Customs-issued declaration number returned at submission. Captured from the "
+"adapter response."
+msgstr ""
+"หมายเลขใบขนสินค้าที่ออกโดยศุลกากรและส่งกลับเมื่อยื่น "
+"เก็บมาจากการตอบกลับของอะแดปเตอร์"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_deferment_entry__entry_kind__debit
+msgid "Debit (duty payment or adjustment)"
+msgstr "เดบิต (การชำระอากรหรือการปรับปรุง)"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__declaration_id
+msgid "Declaration"
+msgstr "การสำแดง"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid ""
+"Declaration %(name)s cannot be marked ready. Resolve the following before re-trying:\n"
+"\n"
+"- %(list)s"
+msgstr ""
+"ไม่สามารถทำเครื่องหมายการสำแดง %(name)s ว่าพร้อมได้ โปรดแก้ไขรายการต่อไปนี้ก่อนลองใหม่:\n"
+"\n"
+"- %(list)s"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__declaration_date
+msgid "Declaration Date"
+msgstr "วันที่สำแดง"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__declaration_type_id
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_type_form
+msgid "Declaration Type"
+msgstr "ประเภทการสำแดง"
+
+#. module: eh_log_customs
+#: model:ir.actions.act_window,name:eh_log_customs.action_eh_log_customs_declaration_type
+#: model:ir.ui.menu,name:eh_log_customs.menu_eh_log_customs_declaration_types
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_type_list
+msgid "Declaration Types"
+msgstr "ประเภทการสำแดง"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Declaration date"
+msgstr "วันที่สำแดง"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid ""
+"Declaration has no HS lines. Add at least one HS code with customs value "
+"before marking ready."
+msgstr ""
+"การสำแดงไม่มีบรรทัด HS โปรดเพิ่มรหัส HS "
+"อย่างน้อยหนึ่งรายการพร้อมมูลค่าศุลกากรก่อนทำเครื่องหมายว่าพร้อม"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid ""
+"Declaration type %(type)s requires a deferment account but none is set on "
+"declaration %(name)s. Pick a deferment account."
+msgstr ""
+"ประเภทการสำแดง %(type)s ต้องมีบัญชีผ่อนผัน แต่ยังไม่ได้ตั้งค่าไว้ในการสำแดง "
+"%(name)s โปรดเลือกบัญชีผ่อนผัน"
+
+#. module: eh_log_customs
+#: model:ir.model.constraint,message:eh_log_customs.constraint_eh_log_customs_declaration_type_code_country_unique
+msgid "Declaration type code must be unique per country."
+msgstr "รหัสประเภทการสำแดงต้องไม่ซ้ำกันในแต่ละประเทศ"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_graph
+msgid "Declarations by State"
+msgstr "การสำแดงตามสถานะ"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_hs_code__duty_rate_pct
+msgid ""
+"Default ad valorem duty rate at this code. Can be overridden per declaration"
+" line."
+msgstr "อัตราอากรตามมูลค่าเริ่มต้นที่รหัสนี้ สามารถแทนที่ได้ต่อบรรทัดการสำแดง"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_hs_code__vat_rate_pct
+msgid ""
+"Default destination VAT rate. Country packs set this per national overlay."
+msgstr ""
+"อัตรา VAT ปลายทางเริ่มต้น แพ็กเกจประเทศจะกำหนดค่านี้ต่อเลเยอร์ซ้อนระดับชาติ"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__deferment_account_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__account_id
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_deferment_account_form
+msgid "Deferment Account"
+msgstr "บัญชีการเลื่อนชำระ"
+
+#. module: eh_log_customs
+#: model:ir.model,name:eh_log_customs.model_eh_log_customs_deferment_entry
+msgid "Deferment Account Entry"
+msgstr "รายการบัญชีการเลื่อนชำระ"
+
+#. module: eh_log_customs
+#: model:ir.actions.act_window,name:eh_log_customs.action_eh_log_customs_deferment_account
+#: model:ir.ui.menu,name:eh_log_customs.menu_eh_log_customs_deferment_accounts
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_deferment_account_list
+msgid "Deferment Accounts"
+msgstr "บัญชีการเลื่อนชำระ"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid ""
+"Deferment account %(account)s has balance %(balance)s, less than the "
+"declaration payable %(payable)s. Top up before submission."
+msgstr ""
+"บัญชีการเลื่อนชำระ %(account)s มียอดคงเหลือ %(balance)s "
+"ซึ่งน้อยกว่ายอดที่ต้องชำระตามการยื่น %(payable)s เติมเงินก่อนส่ง"
+
+#. module: eh_log_customs
+#: model:ir.model.constraint,message:eh_log_customs.constraint_eh_log_customs_deferment_account_account_number_per_co_dcd2e1b6
+msgid "Deferment account number must be unique per (regulator, company)."
+msgstr "หมายเลขบัญชีการเลื่อนชำระต้องไม่ซ้ำกันในแต่ละ (regulator, company)"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__description
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__description
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__description
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__name
+msgid "Description"
+msgstr "คำอธิบาย"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__direction
+msgid "Direction"
+msgstr "ทิศทาง"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__display_name
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__display_name
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__display_name
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__display_name
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__display_name
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__display_name
+#: model:ir.model.fields,field_description:eh_log_customs.field_sale_order__display_name
+msgid "Display Name"
+msgstr "แสดงชื่อ"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration__state__draft
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_deferment_entry__state__draft
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "Draft"
+msgstr "ร่าง"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__duty_amount
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__duty_amount
+msgid "Duty"
+msgstr "อากร"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Duty + VAT"
+msgstr "อากร + VAT"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__duty_rate_pct
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__duty_rate_pct
+msgid "Duty Rate (%)"
+msgstr "อัตราอากร (%)"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid "Duty and VAT for declaration %(name)s"
+msgstr "อากรและ VAT สำหรับการสำแดง %(name)s"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_85
+msgid "Electrical machinery and equipment"
+msgstr "เครื่องจักรและอุปกรณ์ไฟฟ้า"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_hs_code__country_id
+msgid ""
+"Empty for WCO-level codes (chapter, heading, subheading). Country pack "
+"national overlays carry the country."
+msgstr ""
+"เว้นว่างสำหรับรหัสระดับ WCO (บท, ประเภท, ประเภทย่อย) "
+"ชั้นซ้อนระดับประเทศของแพ็กประเทศจะระบุประเทศ"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__entry_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_deferment_account_form
+msgid "Entries"
+msgstr "รายการ"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__entry_date
+msgid "Entry Date"
+msgstr "วันที่บันทึกรายการ"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration_type__direction__export
+msgid "Export"
+msgstr "ส่งออก"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.declaration.type,name:eh_log_customs.dt_export
+msgid "Export Declaration"
+msgstr "ใบขนสินค้าขาออก"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Exporter"
+msgstr "ผู้ส่งออก"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__exporter_id
+msgid "Exporter or Shipper"
+msgstr "ผู้ส่งออกหรือผู้ส่งสินค้า"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_03
+msgid "Fish, crustaceans, molluscs"
+msgstr "ปลา สัตว์น้ำมีเปลือก หอย"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__message_follower_ids
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__message_follower_ids
+msgid "Followers"
+msgstr "ผู้ติดตาม"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__message_partner_ids
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "ผู้ติดตาม (พาร์ทเนอร์)"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__activity_type_icon
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "ไอคอนแบบฟอนต์ที่ยอดเยี่ยมเช่น fa-tasks"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_64
+msgid "Footwear, gaiters and similar"
+msgstr "รองเท้า สนับแข้ง และของที่คล้ายกัน"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__freight_job_id
+msgid "Freight Job"
+msgstr "งานขนส่งสินค้า"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_94
+msgid "Furniture, lamps, prefabricated buildings"
+msgstr "เฟอร์นิเจอร์ โคมไฟ อาคารสำเร็จรูป"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_hs_code_search
+msgid "Group by Country"
+msgstr "จัดกลุ่มตามประเทศ"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search
+msgid "Group by Regulator"
+msgstr "จัดกลุ่มตามหน่วยงานกำกับดูแล"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search
+msgid "Group by State"
+msgstr "จัดกลุ่มตามสถานะ"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search
+msgid "Group by Type"
+msgstr "จัดกลุ่มตามประเภท"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__hs_code_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__code
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_hs_code_form
+msgid "HS Code"
+msgstr "HS โค้ด"
+
+#. module: eh_log_customs
+#: model:ir.actions.act_window,name:eh_log_customs.action_eh_log_customs_hs_code
+#: model:ir.ui.menu,name:eh_log_customs.menu_eh_log_customs_hs_codes
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_hs_code_list
+msgid "HS Codes"
+msgstr "รหัส HS"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__line_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "HS Lines"
+msgstr "รายการ HS"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_hs_code.py:0
+msgid ""
+"HS code %(code)s has invalid length %(length)d. Allowed lengths: 2 "
+"(chapter), 4 (heading), 6 (subheading), 8 or 10 (national)."
+msgstr ""
+"รหัส HS %(code)s มีความยาว %(length)d ที่ไม่ถูกต้อง ความยาวที่อนุญาต: 2 "
+"(ตอน), 4 (ประเภท), 6 (ประเภทย่อย), 8 หรือ 10 (ระดับประเทศ)"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_hs_code.py:0
+msgid ""
+"HS code %(code)s is not numeric. HS codes are all-digit, length 2 / 4 / 6 / "
+"8 / 10."
+msgstr ""
+"รหัส HS %(code)s ไม่ใช่ตัวเลข รหัส HS เป็นตัวเลขทั้งหมด ความยาว 2 / 4 / 6 / "
+"8 / 10"
+
+#. module: eh_log_customs
+#: model:ir.model.constraint,message:eh_log_customs.constraint_eh_log_customs_hs_code_code_country_unique
+msgid "HS code must be unique per country (empty country = WCO scope)."
+msgstr "รหัส HS ต้องไม่ซ้ำกันในแต่ละประเทศ (ประเทศว่าง = ขอบเขต WCO)"
+
+#. module: eh_log_customs
+#: model:ir.model,name:eh_log_customs.model_eh_log_customs_hs_code
+msgid "Harmonised System (HS) Code"
+msgstr "รหัสระบบพิกัดศุลกากรฮาร์โมไนซ์ (HS)"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__has_message
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__has_message
+msgid "Has Message"
+msgstr "มีข้อความ"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_hs_code__level__heading
+msgid "Heading (4 digits)"
+msgstr "หัวข้อ (4 หลัก)"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_hs_code_search
+msgid "Headings"
+msgstr "หัวเรื่อง"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__id
+#: model:ir.model.fields,field_description:eh_log_customs.field_sale_order__id
+msgid "ID"
+msgstr "ไอดี"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_type_form
+msgid "IMP"
+msgstr ""
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__activity_exception_icon
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__activity_exception_icon
+msgid "Icon"
+msgstr "ไอคอน"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__activity_exception_icon
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "ไอคอนเพื่อระบุการยกเว้นกิจกรรม"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__message_needaction
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "ถ้าเลือก ข้อความใหม่จะต้องการความสนใจจากคุณ"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__message_has_error
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__message_has_sms_error
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__message_has_error
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "ถ้าเลือก ข้อความบางข้อความมีข้อผิดพลาดในการส่ง"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration_type__direction__import
+msgid "Import"
+msgstr "นำเข้า"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__declaration_type_id
+msgid ""
+"Import / Export / Transit / Re-export / Temporary. Determines which fields "
+"are mandatory and which regulator endpoint the adapter posts to."
+msgstr ""
+"นำเข้า / ส่งออก / ผ่านแดน / ส่งออกซ้ำ / ชั่วคราว "
+"กำหนดว่าฟิลด์ใดเป็นข้อมูลบังคับและอะแดปเตอร์จะส่งไปยัง endpoint "
+"ของหน่วยงานกำกับดูแลใด"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.declaration.type,name:eh_log_customs.dt_import
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_type_form
+msgid "Import Declaration"
+msgstr "ใบขนสินค้าขาเข้า"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Importer"
+msgstr "ผู้นำเข้า"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__importer_id
+msgid "Importer or Consignee"
+msgstr "ผู้นำเข้าหรือผู้รับตราส่ง"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__broker_reference
+msgid ""
+"Internal broker reference (your file number). Surfaces on the regulator "
+"submission and on customer invoices."
+msgstr ""
+"การอ้างอิงโบรกเกอร์ภายใน (หมายเลขแฟ้มของคุณ) "
+"แสดงบนการยื่นต่อหน่วยงานกำกับดูแลและบนใบแจ้งหนี้ลูกค้า"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_72
+msgid "Iron and steel"
+msgstr "เหล็กและเหล็กกล้า"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__message_is_follower
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__message_is_follower
+msgid "Is Follower"
+msgstr "เป็นผู้ติดตาม"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__entry_kind
+msgid "Kind"
+msgstr "ชนิด"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__write_uid
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__write_uid
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__write_uid
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__write_uid
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__write_uid
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__write_uid
+msgid "Last Updated by"
+msgstr "อัปเดตครั้งล่าสุดโดย"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__write_date
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__write_date
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__write_date
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__write_date
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__write_date
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__write_date
+msgid "Last Updated on"
+msgstr "อัปเดตครั้งล่าสุดเมื่อ"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__level
+msgid "Level"
+msgstr "ระดับ"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid "Line %(seq)s has no HS code."
+msgstr "บรรทัด %(seq)s ไม่มีรหัส HS"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid "Line %(seq)s has zero customs value."
+msgstr "บรรทัด %(seq)s มีมูลค่าศุลกากรเป็นศูนย์"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__line_count
+msgid "Lines"
+msgstr "รายการ"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Linkage"
+msgstr "การเชื่อมโยง"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_01
+msgid "Live animals"
+msgstr "สัตว์มีชีวิต"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__is_low
+msgid "Low"
+msgstr "ต่ำ"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__low_balance_threshold
+msgid "Low Balance Threshold"
+msgstr "เกณฑ์ยอดคงเหลือต่ำ"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_84
+msgid "Machinery, mechanical appliances"
+msgstr "เครื่องจักร อุปกรณ์เชิงกล"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Mark Assessed"
+msgstr "ทำเครื่องหมายว่าประเมินแล้ว"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Mark Cleared"
+msgstr "ทำเครื่องหมายว่าผ่านพิธีการแล้ว"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Mark Queried"
+msgstr "ทำเครื่องหมายว่าสอบถามแล้ว"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Mark Ready"
+msgstr "ทำเครื่องหมายว่าพร้อม"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__message_has_error
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__message_has_error
+msgid "Message Delivery error"
+msgstr "เกิดข้อผิดพลาดในการส่งข้อความ"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__message_ids
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__message_ids
+msgid "Messages"
+msgstr "ข้อความ"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_27
+msgid "Mineral fuels, oils"
+msgstr "เชื้อเพลิงแร่, น้ำมัน"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__my_activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "วันครบกำหนดกิจกรรมของฉัน"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "My Declarations"
+msgstr "การสำแดงของฉัน"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__name
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__name
+msgid "Name"
+msgstr "ชื่อ"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_hs_code__level__national_10
+msgid "National (10 digits)"
+msgstr "ในประเทศ (10 หลัก)"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_hs_code__level__national_8
+msgid "National (8 digits)"
+msgstr "ในประเทศ (8 หลัก)"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid "New"
+msgstr "ใหม่"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__activity_calendar_event_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "ปฏิทินอีเวนต์กิจกรรมถัดไป"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "วันครบกำหนดกิจกรรมถัดไป"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__activity_summary
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__activity_summary
+msgid "Next Activity Summary"
+msgstr "สรุปกิจกรรมถัดไป"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__activity_type_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__activity_type_id
+msgid "Next Activity Type"
+msgstr "ประเภทกิจกรรมถัดไป"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid ""
+"No adapter is registered for provider '%(provider)s'. Install the country "
+"pack that owns this regulator. Currently registered: %(list)s."
+msgstr ""
+"ยังไม่มีอะแดปเตอร์ที่ลงทะเบียนสำหรับผู้ให้บริการ '%(provider)s' "
+"โปรดติดตั้งแพ็กประเทศที่เป็นเจ้าของหน่วยงานกำกับดูแลนี้ "
+"ลงทะเบียนอยู่ในปัจจุบัน: %(list)s"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__notes
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__notes
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__notes
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__notes
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__notes
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_deferment_account_form
+msgid "Notes"
+msgstr "โน้ต"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__message_needaction_counter
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__message_needaction_counter
+msgid "Number of Actions"
+msgstr "จํานวนการดําเนินการ"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__message_has_error_counter
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__message_has_error_counter
+msgid "Number of errors"
+msgstr "จํานวนข้อผิดพลาด"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__message_needaction_counter
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "จำนวนข้อความที่ต้องดำเนินการ"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__message_has_error_counter
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "จํานวนข้อความที่มีข้อผิดพลาดในการส่ง"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_hs_code__code
+msgid ""
+"Numeric. 2 digits = chapter, 4 = heading, 6 = WCO subheading, 8 or 10 = "
+"national tariff line."
+msgstr ""
+"ตัวเลข 2 หลัก = ตอน, 4 = ประเภท, 6 = ประเภทย่อย WCO, 8 หรือ 10 = "
+"พิกัดอัตราภาษีระดับประเทศ"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "Open"
+msgstr "เปิด"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__opening_balance
+msgid "Opening Balance"
+msgstr "ยอดเงินเริ่มต้น"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__name
+msgid ""
+"Operator-friendly label (e.g. 'Mirsal Deferment, Acme Logistics LLC, AED')."
+msgstr ""
+"ป้ายกำกับที่เข้าใจง่ายสำหรับผู้ปฏิบัติงาน (เช่น 'Mirsal Deferment, Acme "
+"Logistics LLC, AED')"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration_type__country_id
+msgid ""
+"Optional country scope. Empty means the type applies globally (used by the "
+"universal seed). Country packs set the country to scope their authority-"
+"specific variants."
+msgstr ""
+"ขอบเขตประเทศเพิ่มเติม (ไม่บังคับ) ว่างหมายความว่าประเภทนี้ใช้ได้ทั่วโลก "
+"(ใช้โดย seed สากล) "
+"ชุดประเทศจะกำหนดประเทศเพื่อจำกัดขอบเขตของตัวแปรเฉพาะหน่วยงาน"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration_type__direction__other
+msgid "Other"
+msgstr "อื่น ๆ"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration__state__paid
+msgid "Paid"
+msgstr "ชำระแล้ว"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__parent_id
+msgid "Parent"
+msgstr "หลัก"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__parent_path
+msgid "Parent Path"
+msgstr "เส้นทางหลัก"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Parties"
+msgstr "คู่สัญญา"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Pay (Debit Deferment)"
+msgstr "ชำระเงิน (การเลื่อนการหักบัญชี)"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_30
+msgid "Pharmaceutical products"
+msgstr "ผลิตภัณฑ์เภสัชกรรม"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_39
+msgid "Plastics and articles thereof"
+msgstr "พลาสติกและของที่ทำด้วยพลาสติก"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_deferment_entry__state__posted
+msgid "Posted"
+msgstr "โพสต์"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__posted_at
+msgid "Posted At"
+msgstr "ลงบัญชีเมื่อ"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__quantity
+msgid "Quantity"
+msgstr "ปริมาณ"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "Queried"
+msgstr "สอบถามแล้ว"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration__state__queried
+msgid "Queried by Customs"
+msgstr "สอบถามโดยศุลกากร"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__rating_ids
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__rating_ids
+msgid "Ratings"
+msgstr "การให้คะแนน"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration_type__direction__re_export
+msgid "Re-export"
+msgstr "ส่งออกใหม่"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.declaration.type,name:eh_log_customs.dt_re_export
+msgid "Re-export Declaration"
+msgstr "ใบขนสินค้าส่งออกซ้ำ"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration__state__ready
+msgid "Ready"
+msgstr "พร้อม"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__name
+msgid "Reference"
+msgstr "การอ้างอิง"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_kanban
+msgid "Reg ref:"
+msgstr "อ้างอิงการลงทะเบียน:"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__regulator_profile_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__regulator_profile_id
+msgid "Regulator Profile"
+msgstr "โปรไฟล์หน่วยงานกำกับดูแล"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Regulator Ref:"
+msgstr "อ้างอิงหน่วยงานกำกับดูแล:"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__regulator_reference
+msgid "Regulator Reference"
+msgstr "การอ้างอิงหน่วยงานกำกับดูแล"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid ""
+"Regulator profile is not set. Pick the regulator this declaration is filed "
+"with."
+msgstr ""
+"ยังไม่ได้ตั้งค่าโปรไฟล์หน่วยงานกำกับดูแล "
+"เลือกหน่วยงานกำกับดูแลที่ยื่นคำประกาศนี้"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid "Regulator rejected submission. Code %(code)s: %(message)s"
+msgstr "หน่วยงานกำกับดูแลปฏิเสธการส่ง รหัส %(code)s: %(message)s"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration__state__rejected
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "Rejected"
+msgstr "ปฏิเสธแล้ว"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__requires_deferment
+msgid "Requires Deferment Account"
+msgstr "ต้องมีบัญชีเลื่อนชำระ"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__activity_user_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__activity_user_id
+msgid "Responsible User"
+msgstr "ผู้ใช้ที่รับผิดชอบ"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_hs_code_form
+msgid "Routers, switches, and similar"
+msgstr "เราเตอร์ สวิตช์ และอุปกรณ์ที่คล้ายกัน"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__message_has_sms_error
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "ข้อผิดพลาดในการส่ง SMS"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__sale_order_id
+msgid "Sale Order"
+msgstr "คำสั่งขาย"
+
+#. module: eh_log_customs
+#: model:ir.model,name:eh_log_customs.model_sale_order
+msgid "Sales Order"
+msgstr "คำสั่งขาย"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "Search Declarations"
+msgstr "ประกาศการค้นหา"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__sequence
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__sequence
+msgid "Sequence"
+msgstr "ลำดับ"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_entry__declaration_id
+msgid ""
+"Set when the entry is auto-posted by a declaration submission. Empty for "
+"manual top-ups and adjustments."
+msgstr ""
+"ตั้งค่าเมื่อรายการถูกลงบัญชีโดยอัตโนมัติจากการยื่นแบบแสดงรายการ "
+"ว่างสำหรับการเติมเงินและการปรับปรุงด้วยตนเอง"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration_type__code
+msgid ""
+"Stable identifier (IMP, EXP, TRA, TRF, REX, TADM, ...). Country packs prefix"
+" their codes with an ISO country code (AE-IMP-LOCAL, SA-IMP-SABER, etc.) to "
+"namespace without colliding with the universal codes."
+msgstr ""
+"ตัวระบุที่คงที่ (IMP, EXP, TRA, TRF, REX, TADM, ...) "
+"แพ็กประเทศจะเติมคำนำหน้ารหัสด้วยรหัสประเทศ ISO (AE-IMP-LOCAL, SA-IMP-SABER "
+"ฯลฯ) เพื่อสร้างเนมสเปซโดยไม่ชนกับรหัสสากล"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__state
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__state
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "State"
+msgstr "รัฐ"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__activity_state
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"สถานะตามกิจกรรม\n"
+"เกินกำหนด: วันที่ครบกำหนดผ่านไปแล้ว\n"
+"วันนี้: วันที่จัดกิจกรรมคือวันนี้\n"
+"วางแผน: กิจกรรมในอนาคต"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_hs_code__level__subheading
+msgid "Subheading (6 digits)"
+msgstr "หัวข้อย่อย (6 หลัก)"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_hs_code_search
+msgid "Subheadings"
+msgstr "หัวข้อย่อย"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid ""
+"Submission failed (status %(status)s). The declaration stays in 'ready'. Re-"
+"submit from the form or replay from the message log."
+msgstr ""
+"การส่งล้มเหลว (สถานะ %(status)s) การประกาศยังคงอยู่ใน 'ready' "
+"ส่งอีกครั้งจากฟอร์มหรือเล่นซ้ำจากบันทึกข้อความ"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Submit to Regulator"
+msgstr "ส่งไปยังหน่วยงานกำกับดูแล"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration__state__submitted
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "Submitted"
+msgstr "ส่งแล้ว"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__submitted_at
+msgid "Submitted At"
+msgstr "ส่งเมื่อ"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__payable_amount
+msgid ""
+"Sum of duty plus VAT plus other charges. Drawn from the deferment account on"
+" assessment."
+msgstr ""
+"ผลรวมของอากรบวก VAT บวกค่าใช้จ่ายอื่น หักจากบัญชีการผ่อนผันเมื่อประเมิน"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.declaration.type,name:eh_log_customs.dt_temporary
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration_type__direction__temporary
+msgid "Temporary Admission"
+msgstr "การนำเข้าชั่วคราว"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "This Month"
+msgstr "เดือนนี้"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Timeline"
+msgstr "ไทม์ไลน์"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__payable_amount
+msgid "Total Payable"
+msgstr "เจ้าหนี้รวม"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Totals"
+msgstr "ยอดรวม"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration_type__direction__transfer
+msgid "Transfer"
+msgstr "โอน"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.declaration.type,name:eh_log_customs.dt_transfer
+msgid "Transfer Declaration"
+msgstr "การประกาศการโอน"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration_type__direction__transit
+msgid "Transit"
+msgstr "การขนส่ง"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.declaration.type,name:eh_log_customs.dt_transit
+msgid "Transit Declaration"
+msgstr "ใบขนสินค้าผ่านแดน"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "Type"
+msgstr "ประเภท"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Type and Authority"
+msgstr "ประเภทและหน่วยงาน"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__activity_exception_decoration
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "ประเภทกิจกรรมข้อยกเว้นบนบันทึก"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__unit_value
+msgid "Unit Value"
+msgstr "มูลค่าต่อหน่วย"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__vat_amount
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__vat_amount
+msgid "VAT"
+msgstr "ภาษีมูลค่าเพิ่ม (VAT)"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__vat_rate_pct
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__vat_rate_pct
+msgid "VAT Rate (%)"
+msgstr "อัตรา VAT (%)"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_87
+msgid "Vehicles other than rail or tram"
+msgstr "ยานพาหนะอื่นนอกเหนือจากรถไฟหรือรถราง"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__website_message_ids
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__website_message_ids
+msgid "Website Messages"
+msgstr "ข้อความเว็บไซต์"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__website_message_ids
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__website_message_ids
+msgid "Website communication history"
+msgstr "ประวัติการสื่อสารของเว็บไซต์"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration_type__requires_deferment
+msgid ""
+"When True, declarations of this type cannot move past submitted without a "
+"deferment account configured. Suitable for import declarations where duty "
+"must be paid before release."
+msgstr ""
+"เมื่อเป็น True "
+"การสำแดงประเภทนี้ไม่สามารถผ่านสถานะยื่นแล้วได้หากไม่ได้ตั้งค่าบัญชีผ่อนผัน "
+"เหมาะสำหรับการสำแดงนำเข้าที่ต้องชำระอากรก่อนปล่อยสินค้า"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__low_balance_threshold
+msgid ""
+"When current balance drops below this value, a warning activity is raised to"
+" the account owner."
+msgstr ""
+"เมื่อยอดคงเหลือปัจจุบันต่ำกว่าค่านี้ "
+"ระบบจะสร้างกิจกรรมแจ้งเตือนไปยังเจ้าของบัญชี"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_44
+msgid "Wood and articles of wood"
+msgstr "ไม้และผลิตภัณฑ์จากไม้"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid ""
+"[EHL-CUSTOMS-DECL-001] State changes on a customs declaration must go "
+"through the action buttons. Direct writes are rejected."
+msgstr ""
+"[EHL-CUSTOMS-DECL-001] "
+"การเปลี่ยนสถานะของใบขนสินค้าต้องดำเนินการผ่านปุ่มการทำงาน "
+"การเขียนโดยตรงจะถูกปฏิเสธ"

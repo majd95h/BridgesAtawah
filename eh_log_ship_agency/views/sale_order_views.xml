@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_sale_order_form_ship_agency" model="ir.ui.view">
+        <field name="name">sale.order.form.eh_log_ship_agency</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='client_order_ref']" position="after">
+                <field name="eh_log_ship_disbursement_account_id"
+                       options="{'no_create': True}"
+                       readonly="1"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_eh_log_warehouse_pick_list" model="ir.ui.view">
+        <field name="name">eh.log.warehouse.pick.list</field>
+        <field name="model">eh.log.warehouse.pick</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="client_id"/>
+                <field name="facility_id"/>
+                <field name="customer_id"/>
+                <field name="planned_date"/>
+                <field name="pick_line_count"/>
+                <field name="pallet_count"/>
+                <field name="state" widget="badge"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_eh_log_warehouse_pick_form" model="ir.ui.view">
+        <field name="name">eh.log.warehouse.pick.form</field>
+        <field name="model">eh.log.warehouse.pick</field>
+        <field name="arch" type="xml">
+            <form string="Pick">
+                <header>
+                    <button name="action_start_picking" string="Start Picking" type="object" class="btn-primary" invisible="state != 'planned'" groups="eh_log_base.group_eh_log_user"/>
+                    <button name="action_mark_packed" string="Mark Packed" type="object" class="btn-primary" invisible="state != 'picking'" groups="eh_log_base.group_eh_log_user"/>
+                    <button name="action_mark_shipped" string="Mark Shipped" type="object" class="btn-primary" invisible="state != 'packed'" groups="eh_log_base.group_eh_log_user"/>
+                    <button name="action_close" string="Close" type="object" class="btn-secondary" invisible="state != 'shipped'" groups="eh_log_base.group_eh_log_manager"/>
+                    <button name="action_cancel" string="Cancel" type="object" class="btn-secondary" invisible="state in ('closed', 'cancelled')" groups="eh_log_base.group_eh_log_manager"/>
+                    <field name="state" widget="statusbar" statusbar_visible="planned,picking,packed,shipped,closed"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1><field name="name"/></h1>
+                    </div>
+                    <group>
+                        <group string="Parties">
+                            <field name="client_id" options="{'no_create': True}"/>
+                            <field name="facility_id" options="{'no_create': True}"/>
+                            <field name="customer_id"/>
+                            <field name="customer_reference"/>
+                            <field name="sale_order_id" options="{'no_create': True}"/>
+                        </group>
+                        <group string="Schedule">
+                            <field name="planned_date"/>
+                            <field name="picking_started_at" readonly="1"/>
+                            <field name="shipped_at" readonly="1"/>
+                            <field name="closed_at" readonly="1"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Lines" name="lines">
+                            <field name="line_ids">
+                                <list editable="bottom">
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="source_location_id"/>
+                                    <field name="product_id"/>
+                                    <field name="lot_reference"/>
+                                    <field name="quantity"/>
+                                    <field name="pallet_count"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_eh_log_warehouse_pick" model="ir.actions.act_window">
+        <field name="name">Picks</field>
+        <field name="res_model">eh.log.warehouse.pick</field>
+        <field name="view_mode">list,form</field>
+        <field name="views" eval="[(False, 'list'), (False, 'form')]"/>
+    </record>
+
+</odoo>

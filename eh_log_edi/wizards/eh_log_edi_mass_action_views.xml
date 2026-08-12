@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_eh_log_edi_outbound_mass_resume_form" model="ir.ui.view">
+        <field name="name">eh.log.edi.outbound.mass.resume.form</field>
+        <field name="model">eh.log.edi.outbound.mass.resume</field>
+        <field name="arch" type="xml">
+            <form string="Mass-resume Dead-letter">
+                <group>
+                    <field name="outbound_ids" widget="many2many_tags" readonly="1"/>
+                </group>
+                <footer>
+                    <button name="action_apply" type="object" string="Re-queue All" class="btn-primary"/>
+                    <button special="cancel" string="Cancel" class="btn-secondary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_eh_log_edi_outbound_mass_resume" model="ir.actions.act_window">
+        <field name="name">Mass-resume Dead-letter</field>
+        <field name="res_model">eh.log.edi.outbound.mass.resume</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="binding_model_id" ref="model_eh_log_edi_outbound"/>
+        <field name="binding_view_types">list</field>
+    </record>
+
+    <record id="view_eh_log_edi_inbound_mass_reprocess_form" model="ir.ui.view">
+        <field name="name">eh.log.edi.inbound.mass.reprocess.form</field>
+        <field name="model">eh.log.edi.inbound.mass.reprocess</field>
+        <field name="arch" type="xml">
+            <form string="Mass-reprocess Inbound">
+                <group>
+                    <field name="inbound_ids" widget="many2many_tags" readonly="1"/>
+                </group>
+                <footer>
+                    <button name="action_apply" type="object" string="Reprocess All" class="btn-primary"/>
+                    <button special="cancel" string="Cancel" class="btn-secondary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_eh_log_edi_inbound_mass_reprocess" model="ir.actions.act_window">
+        <field name="name">Mass-reprocess</field>
+        <field name="res_model">eh.log.edi.inbound.mass.reprocess</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="binding_model_id" ref="model_eh_log_edi_inbound"/>
+        <field name="binding_view_types">list</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_eh_log_last_mile_delivery_form_track" model="ir.ui.view">
+        <field name="name">eh.log.last.mile.delivery.form.track</field>
+        <field name="model">eh.log.last.mile.delivery</field>
+        <field name="inherit_id" ref="eh_log_last_mile.view_eh_log_last_mile_delivery_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('oe_title')]" position="before">
+                <div class="oe_button_box" name="button_box">
+                    <button name="action_view_track_events"
+                            type="object"
+                            class="oe_stat_button"
+                            icon="fa-list-alt">
+                        <field string="Tracking Events" name="track_event_count" widget="statinfo"/>
+                    </button>
+                    <button name="action_open_track_url"
+                            type="object"
+                            class="oe_stat_button"
+                            icon="fa-link">
+                        <span class="o_stat_text">Public Page</span>
+                    </button>
+                </div>
+            </xpath>
+            <xpath expr="//field[@name='customer_reference']" position="after">
+                <field name="tracking_reference"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

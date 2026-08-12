@@ -1,0 +1,1392 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* eh_log_container_mgmt
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-01 04:33+0000\n"
+"PO-Revision-Date: 2026-07-01 04:33+0000\n"
+"Last-Translator: ERP Heritage <info@erpheritage.com.au>\n"
+"Language-Team: Thai\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. module: eh_log_container_mgmt
+#. odoo-python
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_lease_contract.py:0
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_work_order.py:0
+msgid "(none)"
+msgstr "(ไม่มี)"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid ""
+"<br/>\n"
+"                                    <span class=\"eh_pdf_status_badge eh_pdf_status_warn\">REPAIR REQUIRED</span>"
+msgstr ""
+"<br/>\n"
+"                                    <span class=\"eh_pdf_status_badge eh_pdf_status_warn\">ต้องซ่อมแซม</span>"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "<strong>Container:</strong>"
+msgstr "<strong>ตู้คอนเทนเนอร์:</strong>"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "<strong>Movement:</strong>"
+msgstr "<strong>การเคลื่อนย้าย:</strong>"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "<strong>Reference:</strong>"
+msgstr "<strong>อ้างอิง:</strong>"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "<strong>When:</strong>"
+msgstr "<strong>เมื่อใด:</strong>"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__accepts_dangerous
+msgid "Accepts Dangerous Goods"
+msgstr "รับสินค้าอันตราย"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__accepts_reefer
+msgid "Accepts Reefer"
+msgstr "รับตู้ควบคุมอุณหภูมิ"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__accepts_tank
+msgid "Accepts Tank"
+msgstr "รับตู้แท็งก์"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_needaction
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_needaction
+msgid "Action Needed"
+msgstr "จำเป็นต้องดำเนินการ"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_lease_contract_form
+msgid "Activate"
+msgstr "เปิดใช้งาน"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__active
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_lease_contract__state__active
+msgid "Active"
+msgstr "เปิดใช้งาน"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_freight_container__lease_contract_id
+msgid ""
+"Active lease contract this container falls under. Used by per-container D&D "
+"and headline billing."
+msgstr ""
+"สัญญาเช่าที่ใช้งานอยู่ซึ่งตู้คอนเทนเนอร์นี้อยู่ภายใต้ ใช้โดยการคำนวณ D&D "
+"ต่อตู้และการเรียกเก็บเงินหลัก"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__activity_ids
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__activity_ids
+msgid "Activities"
+msgstr "กิจกรรม"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__activity_exception_decoration
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "การตกแต่งข้อยกเว้นกิจกรรม"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__activity_state
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__activity_state
+msgid "Activity State"
+msgstr "สถานะกิจกรรม"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__activity_type_icon
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "ไอคอนประเภทกิจกรรม"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__actual_amount
+msgid "Actual Amount"
+msgstr "จำนวนเงินจริง"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__actual_cost
+msgid "Actual Cost"
+msgstr "ต้นทุนจริง"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__actual_unit_cost
+msgid "Actual Unit Cost"
+msgstr "ต้นทุนต่อหน่วยจริง"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__address
+msgid "Address"
+msgstr "ที่อยู่"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_work_order_form
+msgid "Approve"
+msgstr "อนุมัติ"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order__state__approved
+msgid "Approved"
+msgstr "อนุมัติแล้ว"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__approved_at
+msgid "Approved At"
+msgstr "อนุมัติเมื่อ"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__approved_by_id
+msgid "Approved By"
+msgstr "อนุมัติโดย"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_attachment_count
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_attachment_count
+msgid "Attachment Count"
+msgstr "จำนวนสิ่งที่แนบมา"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_work_order_form
+msgid "Audit"
+msgstr "ตรวจสอบบัญชี"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_work_order_form
+msgid "Back to Draft"
+msgstr "กลับไปยังฉบับร่าง"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_lease_contract_form
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_work_order_form
+msgid "Cancel"
+msgstr "ยกเลิก"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_lease_contract__state__cancelled
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order__state__cancelled
+msgid "Cancelled"
+msgstr "ยกเลิก"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_depot_form
+msgid "Capacity"
+msgstr "ความจุ"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__capacity_teu
+msgid "Capacity (TEU)"
+msgstr "ความจุ (TEU)"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_freight_container__dnd_chargeable_days
+msgid "Chargeable days = max(0, days_at_destination - free_time_days)."
+msgstr "วันที่คิดค่าใช้จ่าย = max(0, days_at_destination - free_time_days)"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_work_order_form
+msgid "Close"
+msgstr "ปิด"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order__state__closed
+msgid "Closed"
+msgstr "ปิดแล้ว"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__code
+msgid "Code"
+msgstr "โค้ด"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__company_ids
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__company_ids
+msgid "Companies"
+msgstr "บริษัท"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__company_id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__company_id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__company_id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__company_id
+msgid "Company"
+msgstr "บริษัท"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order__state__completed
+msgid "Completed"
+msgstr "เสร็จสิ้น"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__completed_at
+msgid "Completed At"
+msgstr "เสร็จสมบูรณ์เมื่อ"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__condition_note
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "Condition Note"
+msgstr "หมายเหตุสภาพ"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__container_id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__container_id
+msgid "Container"
+msgstr "ตู้คอนเทนเนอร์"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_depot_form
+msgid "Container Depot"
+msgstr "ลานพักตู้คอนเทนเนอร์"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model,name:eh_log_container_mgmt.model_eh_log_container_mgmt_depot
+msgid "Container Depot or Yard"
+msgstr "ลานพักหรือลานเก็บตู้คอนเทนเนอร์"
+
+#. module: eh_log_container_mgmt
+#: model:ir.actions.act_window,name:eh_log_container_mgmt.action_eh_log_container_mgmt_depot
+#: model:ir.ui.menu,name:eh_log_container_mgmt.menu_eh_log_container_mgmt_depots
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_depot_list
+msgid "Container Depots"
+msgstr "ลานพักตู้คอนเทนเนอร์"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model,name:eh_log_container_mgmt.model_eh_log_container_mgmt_movement
+msgid "Container Gate Movement"
+msgstr "การเคลื่อนย้ายตู้คอนเทนเนอร์ที่ประตู"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model,name:eh_log_container_mgmt.model_eh_log_container_mgmt_lease_contract
+msgid "Container Lease Contract"
+msgstr "สัญญาเช่าตู้คอนเทนเนอร์"
+
+#. module: eh_log_container_mgmt
+#: model:ir.ui.menu,name:eh_log_container_mgmt.menu_eh_log_container_mgmt_work_orders
+msgid "Container M&R"
+msgstr "การซ่อมบำรุงตู้คอนเทนเนอร์ M&R"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model,name:eh_log_container_mgmt.model_eh_log_container_mgmt_work_order
+msgid "Container M&R Work Order"
+msgstr "ใบสั่งงาน M&R ตู้คอนเทนเนอร์"
+
+#. module: eh_log_container_mgmt
+#: model:ir.ui.menu,name:eh_log_container_mgmt.menu_eh_log_container_mgmt_movements
+msgid "Container Movements"
+msgstr "การเคลื่อนย้ายตู้คอนเทนเนอร์"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__container_number
+msgid "Container No."
+msgstr "หมายเลขตู้คอนเทนเนอร์"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "Container Number"
+msgstr "หมายเลขตู้คอนเทนเนอร์"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__iso_type_id
+msgid ""
+"Container type covered by this contract. Mixed-type fleet is modelled as "
+"multiple contracts."
+msgstr ""
+"ประเภทตู้คอนเทนเนอร์ที่ครอบคลุมโดยสัญญานี้ "
+"กองตู้แบบผสมประเภทจะถูกจำลองเป็นหลายสัญญา"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__container_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_lease_contract_form
+msgid "Containers"
+msgstr "คอนเทนเนอร์"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__container_count
+msgid "Containers Assigned"
+msgstr "ตู้คอนเทนเนอร์ที่กำหนดแล้ว"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__line_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_work_order_form
+msgid "Cost Lines"
+msgstr "รายการต้นทุนแฝง"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_work_order_form
+msgid "Costs"
+msgstr "ต้นทุน"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__partner_id
+msgid "Counterparty"
+msgstr "คู่สัญญา"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__counterparty_depot_id
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "Counterparty Depot"
+msgstr "คลังของคู่สัญญา"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__partner_reference
+msgid "Counterparty Reference"
+msgstr "การอ้างอิงของคู่สัญญา"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__country_id
+msgid "Country"
+msgstr "ประเทศ"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__create_uid
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__create_uid
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__create_uid
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__create_uid
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__create_uid
+msgid "Created by"
+msgstr "สร้างโดย"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__create_date
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__create_date
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__create_date
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__create_date
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__create_date
+msgid "Created on"
+msgstr "สร้างเมื่อ"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__currency_id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__currency_id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__currency_id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_freight_container__currency_id
+msgid "Currency"
+msgstr "สกุลเงิน"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_freight_container__current_depot_id
+msgid "Current Depot"
+msgstr "คลังปัจจุบัน"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_freight_container_form_mgmt
+msgid "D&D"
+msgstr ""
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_freight_container__dnd_amount
+msgid "D&D Amount"
+msgstr "จำนวนเงิน D&D"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_freight_container__dnd_chargeable_days
+msgid "D&D Chargeable Days"
+msgstr "จำนวนวันที่คิดค่า D&D"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_freight_container__dnd_rate_per_day
+msgid "D&D Rate (per day)"
+msgstr "อัตรา D&D (ต่อวัน)"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__daily_rate
+msgid "Daily Rate (per container)"
+msgstr "อัตรารายวัน (ต่อตู้คอนเทนเนอร์)"
+
+#. module: eh_log_container_mgmt
+#. odoo-python
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_movement.py:0
+msgid "Damage observed at gate."
+msgstr "พบความเสียหายที่ประตูตรวจ"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_freight_container__days_at_destination
+msgid "Days at Destination"
+msgstr "จำนวนวันที่ปลายทาง"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__free_days
+msgid ""
+"Days for which the daily rate is waived per container movement cycle. Useful"
+" for short-turn lease-out arrangements."
+msgstr ""
+"จำนวนวันที่ยกเว้นอัตรารายวันต่อรอบการเคลื่อนย้ายตู้คอนเทนเนอร์ "
+"มีประโยชน์สำหรับการให้เช่าระยะสั้น"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_freight_container__free_time_days
+msgid ""
+"Days included in the agreed price after gate-out before demurrage or "
+"detention starts to accrue. Defaults to 7 days; override per container for "
+"special arrangements."
+msgstr ""
+"จำนวนวันที่รวมอยู่ในราคาที่ตกลงกันหลังออกจากประตูก่อนที่ค่าเดมูเรจหรือค่ากักตู้จะเริ่มสะสม"
+" ค่าเริ่มต้นคือ 7 วัน สามารถแทนที่ค่าเป็นรายตู้สำหรับข้อตกลงพิเศษได้"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_freight_container__days_at_destination
+msgid ""
+"Days since destination gate-out, before destination gate-in. Used by the D&D"
+" calculation."
+msgstr ""
+"จำนวนวันนับตั้งแต่ออกจากประตูปลายทาง ก่อนเข้าประตูปลายทาง ใช้ในการคำนวณ D&D"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order_line__repair_kind__dent
+msgid "Dent / Bend"
+msgstr "รอยบุบ / งอ"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__depot_id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__depot_id
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "Depot"
+msgstr "คลังพัก"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_freight_container_form_mgmt
+msgid "Depot & Lease"
+msgstr "ลานพักตู้และการเช่า"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__depot_kind
+msgid "Depot Kind"
+msgstr "ประเภทลานพักตู้"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.constraint,message:eh_log_container_mgmt.constraint_eh_log_container_mgmt_depot_code_unique
+msgid "Depot code must be unique."
+msgstr "รหัสคลังต้องไม่ซ้ำกัน"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__description
+msgid "Description"
+msgstr "คำอธิบาย"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__direction
+msgid "Direction"
+msgstr "ทิศทาง"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__display_name
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__display_name
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__display_name
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__display_name
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__display_name
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_freight_container__display_name
+msgid "Display Name"
+msgstr "แสดงชื่อ"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order_line__repair_kind__door
+msgid "Door / Hinge"
+msgstr "ประตู / บานพับ"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_lease_contract__state__draft
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order__state__draft
+msgid "Draft"
+msgstr "ร่าง"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_depot__depot_kind__dry_port
+msgid "Dry Port"
+msgstr "ท่าเรือบก"
+
+#. module: eh_log_container_mgmt
+#: model:ir.actions.server,name:eh_log_container_mgmt.ir_cron_eh_log_container_mgmt_dnd_alert_ir_actions_server
+msgid "EH Logistics: container D&D free time alerts"
+msgstr "EH โลจิสติกส์: การแจ้งเตือนเวลาปลอดค่าใช้จ่าย D&D ของตู้คอนเทนเนอร์"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__ends_on
+msgid "Ends On"
+msgstr "สิ้นสุดเมื่อ"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "Equipment"
+msgstr "อุปกรณ์"
+
+#. module: eh_log_container_mgmt
+#: model:ir.actions.report,name:eh_log_container_mgmt.action_report_eh_log_container_mgmt_eir
+msgid "Equipment Interchange Receipt"
+msgstr "ใบรับมอบอุปกรณ์"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order__state__estimated
+msgid "Estimated"
+msgstr "ประมาณการ"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__estimated_amount
+msgid "Estimated Amount"
+msgstr "จำนวนเงินประมาณการ"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__estimated_at
+msgid "Estimated At"
+msgstr "ประมาณการเมื่อ"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__estimated_cost
+msgid "Estimated Cost"
+msgstr "ต้นทุนโดยประมาณ"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__estimated_unit_cost
+msgid "Estimated Unit Cost"
+msgstr "ต้นทุนต่อหน่วยโดยประมาณ"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_lease_contract_form
+msgid "Expire"
+msgstr "ทำให้หมดอายุ"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_lease_contract__state__expired
+msgid "Expired"
+msgstr "หมดอายุ"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__fault_description
+msgid "Fault Description"
+msgstr "คำอธิบายข้อบกพร่อง"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "Field"
+msgstr "ฟิลด์"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_lease_contract_form
+msgid "Fleet"
+msgstr "ระบบขนส่ง"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__fleet_count
+msgid "Fleet Count"
+msgstr "จำนวนกองยาน"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__headline_value
+msgid ""
+"Fleet count * daily rate * term days. Indicative headline only; actual "
+"billing reflects per-container free-day usage."
+msgstr ""
+"จำนวนกองยาน * อัตรารายวัน * จำนวนวันของระยะเวลา ตัวเลขหลักเชิงบ่งชี้เท่านั้น"
+" การเรียกเก็บเงินจริงสะท้อนการใช้วันฟรีต่อตู้คอนเทนเนอร์"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order_line__repair_kind__flooring
+msgid "Flooring"
+msgstr "วัสดุปูพื้น"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_follower_ids
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_follower_ids
+msgid "Followers"
+msgstr "ผู้ติดตาม"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_partner_ids
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "ผู้ติดตาม (พาร์ทเนอร์)"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__activity_type_icon
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "ไอคอนแบบฟอนต์ที่ยอดเยี่ยมเช่น fa-tasks"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__free_days
+msgid "Free Days (per container)"
+msgstr "วันฟรี (ต่อตู้คอนเทนเนอร์)"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_freight_container__free_time_days
+msgid "Free Time (days)"
+msgstr "เวลาฟรี (วัน)"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_depot__depot_kind__freezone_depot
+msgid "Free Zone Depot"
+msgstr "คลังเขตปลอดอากร"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__gate_hours
+msgid ""
+"Free-text description of gate operating hours, e.g. '24/7' or 'Sat-Thu "
+"06:00-22:00'. The dispatch board warns when scheduled movements fall outside"
+" these hours."
+msgstr ""
+"คำอธิบายแบบข้อความอิสระของเวลาทำการประตู เช่น '24/7' หรือ 'ส-พฤ 06:00-22:00'"
+" บอร์ดจัดส่งจะเตือนเมื่อการเคลื่อนย้ายตามกำหนดการอยู่นอกเวลาเหล่านี้"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model,name:eh_log_container_mgmt.model_eh_log_freight_container
+msgid "Freight Container or ULD"
+msgstr "ตู้คอนเทนเนอร์สินค้าหรือ ULD"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__gate_hours
+msgid "Gate Hours"
+msgstr "เวลาทำการของประตู"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_movement_form
+msgid "Gate Movement"
+msgstr "การเคลื่อนไหวที่ประตู"
+
+#. module: eh_log_container_mgmt
+#. odoo-python
+#: code:addons/eh_log_container_mgmt/models/eh_log_freight_container.py:0
+#: model:ir.actions.act_window,name:eh_log_container_mgmt.action_eh_log_container_mgmt_movement
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_freight_container__movement_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_movement_list
+msgid "Gate Movements"
+msgstr "การเคลื่อนไหวที่ประตู"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__gate_operator_name
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "Gate Operator"
+msgstr "ผู้ควบคุมประตู"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_movement_search
+msgid "Gate-In"
+msgstr "เข้าประตู"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_movement__movement_kind__gate_in
+msgid "Gate-In (received)"
+msgstr "เข้าประตู (รับแล้ว)"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_movement_search
+msgid "Gate-Out"
+msgstr "ออกประตู"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_movement__movement_kind__gate_out
+msgid "Gate-Out (released)"
+msgstr "ออกประตู (ปล่อยแล้ว)"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "Gross Weight (kg)"
+msgstr "น้ำหนักรวม (kg)"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_movement_search
+msgid "Group by Depot"
+msgstr "จัดกลุ่มตามศูนย์รถ"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_movement_search
+msgid "Group by Kind"
+msgstr "จัดกลุ่มตามชนิด"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__happened_at
+msgid "Happened At"
+msgstr "เกิดขึ้นเมื่อ"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__has_message
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__has_message
+msgid "Has Message"
+msgstr "มีข้อความ"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__headline_value
+msgid "Headline Value"
+msgstr "ค่าหลัก"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order_line__repair_kind__hole
+msgid "Hole / Puncture"
+msgstr "รู / รอยเจาะ"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_freight_container__id
+msgid "ID"
+msgstr "ไอดี"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__container_number
+msgid ""
+"ISO 6346 container number: 4 letters (owner code + category) + 6 digits "
+"(serial) + 1 check digit. Validated on save unless 'Manual Override' is set."
+msgstr ""
+"หมายเลขตู้คอนเทนเนอร์ ISO 6346: ตัวอักษร 4 ตัว (รหัสเจ้าของ + หมวดหมู่) + "
+"ตัวเลข 6 หลัก (ซีเรียล) + เลขตรวจสอบ 1 หลัก ตรวจสอบเมื่อบันทึก "
+"เว้นแต่ตั้งค่า 'การแทนที่ด้วยตนเอง'"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__iso_type_id
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "ISO Type"
+msgstr "ประเภท ISO"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__activity_exception_icon
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__activity_exception_icon
+msgid "Icon"
+msgstr "ไอคอน"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__activity_exception_icon
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "ไอคอนเพื่อระบุการยกเว้นกิจกรรม"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_depot_form
+msgid "Identity"
+msgstr "ตัวตน"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_needaction
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "ถ้าเลือก ข้อความใหม่จะต้องการความสนใจจากคุณ"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_has_error
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_has_sms_error
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_has_error
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "ถ้าเลือก ข้อความบางข้อความมีข้อผิดพลาดในการส่ง"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order__state__in_progress
+msgid "In Progress"
+msgstr "กำลังดำเนินการ"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__capacity_teu
+msgid ""
+"Indicative TEU capacity. Used by yard planning to raise warnings when "
+"occupancy approaches the limit."
+msgstr ""
+"ความจุ TEU โดยประมาณ "
+"ใช้ในการวางแผนลานเพื่อแจ้งเตือนเมื่อการใช้พื้นที่ใกล้ถึงขีดจำกัด"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_depot__depot_kind__inland_depot
+msgid "Inland Container Depot"
+msgstr "ลานตู้คอนเทนเนอร์ภายในประเทศ"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order_line__repair_kind__inspection
+msgid "Inspection / Survey"
+msgstr "การตรวจสอบ / การสำรวจ"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_is_follower
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_is_follower
+msgid "Is Follower"
+msgstr "เป็นผู้ติดตาม"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__movement_kind
+msgid "Kind"
+msgstr "ชนิด"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__write_uid
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__write_uid
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__write_uid
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__write_uid
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__write_uid
+msgid "Last Updated by"
+msgstr "อัปเดตครั้งล่าสุดโดย"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__write_date
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__write_date
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__write_date
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__write_date
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__write_date
+msgid "Last Updated on"
+msgstr "อัปเดตครั้งล่าสุดเมื่อ"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_freight_container__current_depot_id
+msgid ""
+"Last known depot. Updated automatically by gate movements; can be edited "
+"manually for corrections."
+msgstr ""
+"คลังสินค้าล่าสุดที่ทราบ อัปเดตโดยอัตโนมัติจากการเคลื่อนไหวของประตู "
+"สามารถแก้ไขด้วยตนเองเพื่อการแก้ไขได้"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_freight_container__lease_contract_id
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_lease_contract_form
+msgid "Lease Contract"
+msgstr "สัญญาเช่า"
+
+#. module: eh_log_container_mgmt
+#: model:ir.actions.act_window,name:eh_log_container_mgmt.action_eh_log_container_mgmt_lease_contract
+#: model:ir.ui.menu,name:eh_log_container_mgmt.menu_eh_log_container_mgmt_lease_contracts
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_lease_contract_list
+msgid "Lease Contracts"
+msgstr "สัญญาเช่า"
+
+#. module: eh_log_container_mgmt
+#. odoo-python
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_lease_contract.py:0
+msgid ""
+"Lease contract %(name)s cannot move from %(current)s to %(target)s. Allowed "
+"transitions from %(current)s: %(allowed)s."
+msgstr ""
+"สัญญาเช่า %(name)s ไม่สามารถเปลี่ยนจาก %(current)s เป็น %(target)s ได้ "
+"การเปลี่ยนที่อนุญาตจาก %(current)s: %(allowed)s"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_lease_contract__direction__lease_in
+msgid "Lease-In (vendor to us)"
+msgstr "การเช่าเข้า (จากผู้ขายมาที่เรา)"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_lease_contract__direction__lease_out
+msgid "Lease-Out (us to customer)"
+msgstr "การเช่าออก (จากเราไปที่ลูกค้า)"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_work_order_form
+msgid "M&R Work Order"
+msgstr "ใบสั่งงาน M&R"
+
+#. module: eh_log_container_mgmt
+#: model:ir.actions.act_window,name:eh_log_container_mgmt.action_eh_log_container_mgmt_work_order
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_work_order_list
+msgid "M&R Work Orders"
+msgstr "ใบสั่งงาน M&R"
+
+#. module: eh_log_container_mgmt
+#. odoo-python
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_work_order.py:0
+msgid ""
+"M&R work order %(name)s cannot move from %(current)s to %(target)s. Allowed "
+"transitions from %(current)s: %(allowed)s."
+msgstr ""
+"ใบสั่งงาน M&R %(name)s ไม่สามารถย้ายจาก %(current)s ไปยัง %(target)s ได้ "
+"การเปลี่ยนสถานะที่อนุญาตจาก %(current)s: %(allowed)s"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_work_order_form
+msgid "Mark Completed"
+msgstr "ทำเครื่องหมายว่าเสร็จสมบูรณ์"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_has_error
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_has_error
+msgid "Message Delivery error"
+msgstr "เกิดข้อผิดพลาดในการส่งข้อความ"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_ids
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_ids
+msgid "Messages"
+msgstr "ข้อความ"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__trigger_movement_id
+msgid ""
+"Movement (typically a damaged-on-arrival gate-in) that triggered the work "
+"order."
+msgstr ""
+"การเคลื่อนย้าย (โดยทั่วไปคือการเข้าประตูที่เสียหายเมื่อมาถึง) "
+"ที่ทำให้เกิดใบสั่งงาน"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_freight_container__movement_count
+msgid "Movements"
+msgstr "การเคลื่อนย้าย"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__my_activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "วันครบกำหนดกิจกรรมของฉัน"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__name
+msgid "Name"
+msgstr "ชื่อ"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__needs_repair
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_movement_search
+msgid "Needs Repair"
+msgstr "ต้องซ่อมแซม"
+
+#. module: eh_log_container_mgmt
+#. odoo-python
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_lease_contract.py:0
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_movement.py:0
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_work_order.py:0
+msgid "New"
+msgstr "ใหม่"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__activity_calendar_event_id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "ปฏิทินอีเวนต์กิจกรรมถัดไป"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "วันครบกำหนดกิจกรรมถัดไป"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__activity_summary
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__activity_summary
+msgid "Next Activity Summary"
+msgstr "สรุปกิจกรรมถัดไป"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__activity_type_id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__activity_type_id
+msgid "Next Activity Type"
+msgstr "ประเภทกิจกรรมถัดไป"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__notes
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__notes
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__notes
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_lease_contract_form
+msgid "Notes"
+msgstr "โน้ต"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_needaction_counter
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_needaction_counter
+msgid "Number of Actions"
+msgstr "จํานวนการดําเนินการ"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__fleet_count
+msgid ""
+"Number of containers covered. Used for headline pricing and reporting; per-"
+"container assignment lives on the container record (lease_contract_id)."
+msgstr ""
+"จำนวนตู้คอนเทนเนอร์ที่ครอบคลุม ใช้สำหรับการกำหนดราคาหลักและการรายงาน "
+"การกำหนดรายตู้อยู่ในระเบียนตู้คอนเทนเนอร์ (lease_contract_id)"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_has_error_counter
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_has_error_counter
+msgid "Number of errors"
+msgstr "จํานวนข้อผิดพลาด"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_needaction_counter
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "จำนวนข้อความที่ต้องดำเนินการ"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_has_error_counter
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "จํานวนข้อความที่มีข้อผิดพลาดในการส่ง"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__operator_id
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "Operator"
+msgstr "ผู้ปฏิบัติการ"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order_line__repair_kind__other
+msgid "Other"
+msgstr "อื่น ๆ"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order_line__repair_kind__paint
+msgid "Paint / Marking"
+msgstr "การพ่นสี / การทำเครื่องหมาย"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_lease_contract_form
+msgid "Parties"
+msgstr "คู่สัญญา"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_freight_container__dnd_rate_per_day
+msgid ""
+"Per-container per-day rate that applies after free time elapses. Lookup "
+"chain: container override, lease contract daily rate, configured default per"
+" ISO type."
+msgstr ""
+"อัตราต่อตู้คอนเทนเนอร์ต่อวันที่ใช้หลังจากเวลาปลอดค่าใช้จ่ายสิ้นสุดลง "
+"ลำดับการค้นหา: การแทนที่ระดับตู้คอนเทนเนอร์ อัตรารายวันตามสัญญาเช่า "
+"ค่าเริ่มต้นที่กำหนดไว้ต่อประเภท ISO"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__condition_note
+msgid ""
+"Photographs and damage notes captured at the gate. Drives the M&R work order"
+" if a repair is needed."
+msgstr ""
+"รูปภาพและบันทึกความเสียหายที่ถ่ายที่ประตู ขับเคลื่อนใบสั่งงาน M&R "
+"หากจำเป็นต้องซ่อม"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_depot__depot_kind__port_terminal
+msgid "Port Container Terminal"
+msgstr "ท่าเทียบเรือตู้คอนเทนเนอร์ของท่าเรือ"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__quantity
+msgid "Quantity"
+msgstr "ปริมาณ"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__rating_ids
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__rating_ids
+msgid "Ratings"
+msgstr "การให้คะแนน"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid ""
+"Received in apparent good order and condition except as noted above. The "
+"undersigned hereby acknowledges receipt of the equipment described in this "
+"Equipment Interchange Receipt."
+msgstr ""
+"ได้รับในสภาพและเงื่อนไขที่ดูเรียบร้อยดี ยกเว้นตามที่ระบุไว้ข้างต้น "
+"ผู้ลงนามด้านล่างขอรับทราบการรับมอบอุปกรณ์ที่ระบุไว้ใน Equipment Interchange "
+"Receipt ฉบับนี้"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "Receiving Party"
+msgstr "ฝ่ายผู้รับ"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order_line__repair_kind__reefer_unit
+msgid "Reefer Unit"
+msgstr "ชุดทำความเย็น"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__name
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__name
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__name
+msgid "Reference"
+msgstr "การอ้างอิง"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_movement__movement_kind__repair_in
+msgid "Repair In"
+msgstr "รับเข้าซ่อม"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__repair_kind
+msgid "Repair Kind"
+msgstr "ประเภทการซ่อม"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_movement__movement_kind__repair_out
+msgid "Repair Out"
+msgstr "ออกจากการซ่อม"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__repair_summary
+msgid "Repair Summary"
+msgstr "สรุปการซ่อม"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_depot__depot_kind__repair_yard
+msgid "Repair Yard"
+msgstr "ลานซ่อม"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__activity_user_id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__activity_user_id
+msgid "Responsible User"
+msgstr "ผู้ใช้ที่รับผิดชอบ"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_has_sms_error
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "ข้อผิดพลาดในการส่ง SMS"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "Seal"
+msgstr "ซีล"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__seal_number
+msgid "Seal Number"
+msgstr "หมายเลขซีล"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order_line__repair_kind__seal
+msgid "Seal Replacement"
+msgstr "การเปลี่ยนซีล"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__sequence
+msgid "Sequence"
+msgstr "ลำดับ"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__needs_repair
+msgid ""
+"Set at gate-in when the container is received with visible damage. Triggers "
+"a draft M&R work order on save."
+msgstr ""
+"ตั้งค่าที่จุดเข้า (gate-in) "
+"เมื่อได้รับตู้คอนเทนเนอร์ที่มีความเสียหายที่มองเห็นได้ จะสร้างใบสั่งงาน M&R "
+"แบบร่างเมื่อบันทึก"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__counterparty_depot_id
+msgid ""
+"Source depot on a transfer-in, destination depot on a transfer-out. Empty "
+"for gate-in / gate-out at a single depot."
+msgstr ""
+"คลังต้นทางเมื่อโอนเข้า คลังปลายทางเมื่อโอนออก "
+"เว้นว่างสำหรับการเข้า/ออกที่คลังเดียว"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__code
+msgid "Stable depot identifier (e.g. JEA-DP, KH-CMA, RAS-MMI)."
+msgstr "ตัวระบุคลังที่คงที่ (เช่น JEA-DP, KH-CMA, RAS-MMI)"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_work_order_form
+msgid "Start Repair"
+msgstr "เริ่มซ่อม"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__started_at
+msgid "Started At"
+msgstr "เริ่มเมื่อ"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__starts_on
+msgid "Starts On"
+msgstr "เริ่มในวันที่"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__state
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__state
+msgid "State"
+msgstr "รัฐ"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__activity_state
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"สถานะตามกิจกรรม\n"
+"เกินกำหนด: วันที่ครบกำหนดผ่านไปแล้ว\n"
+"วันนี้: วันที่จัดกิจกรรมคือวันนี้\n"
+"วางแผน: กิจกรรมในอนาคต"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_depot__depot_kind__storage_yard
+msgid "Storage Yard"
+msgstr "ลานจัดเก็บ"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_work_order_form
+msgid "Subject"
+msgstr "หัวเรื่อง"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_work_order_form
+msgid "Submit Estimate"
+msgstr "ส่งการประมาณการ"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_movement__movement_kind__survey
+msgid "Survey"
+msgstr "แบบสอบถาม"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__days_total
+msgid "Term (days)"
+msgstr "ระยะเวลา (วัน)"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_lease_contract_form
+msgid "Term and Pricing"
+msgstr "ระยะเวลาและการกำหนดราคา"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__operator_id
+msgid ""
+"The party operating the depot. Counterparty for movement and lift/handle "
+"billing."
+msgstr ""
+"ฝ่ายที่ดำเนินการลานพักตู้ "
+"คู่สัญญาสำหรับการเรียกเก็บเงินการเคลื่อนย้ายและการยก/จัดการ"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_movement__movement_kind__transfer_in
+msgid "Transfer In (depot to depot)"
+msgstr "โอนเข้า (คลังถึงคลัง)"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_movement__movement_kind__transfer_out
+msgid "Transfer Out (depot to depot)"
+msgstr "โอนออก (คลังถึงคลัง)"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__trigger_movement_id
+msgid "Trigger Movement"
+msgstr "การเคลื่อนไหวที่ทริกเกอร์"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__activity_exception_decoration
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "ประเภทกิจกรรมข้อยกเว้นบนบันทึก"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "Value"
+msgstr "ค่า"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__partner_id
+msgid "Vendor on lease-in, customer on lease-out."
+msgstr "ผู้ขายเมื่อ lease-in, ลูกค้าเมื่อ lease-out"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__website_message_ids
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__website_message_ids
+msgid "Website Messages"
+msgstr "ข้อความเว็บไซต์"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__website_message_ids
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__website_message_ids
+msgid "Website communication history"
+msgstr "ประวัติการสื่อสารของเว็บไซต์"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__work_order_id
+msgid "Work Order"
+msgstr "คำสั่งงาน"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model,name:eh_log_container_mgmt.model_eh_log_container_mgmt_work_order_line
+msgid "Work Order Cost Line"
+msgstr "บรรทัดต้นทุนใบสั่งงาน"
+
+#. module: eh_log_container_mgmt
+#. odoo-python
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_lease_contract.py:0
+msgid "[EHL-CTNR-LEASE-001] Contract %(name)s end date is before start date."
+msgstr ""
+"[EHL-CTNR-LEASE-001] วันที่สิ้นสุดของสัญญา %(name)s อยู่ก่อนวันที่เริ่มต้น"
+
+#. module: eh_log_container_mgmt
+#. odoo-python
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_lease_contract.py:0
+msgid ""
+"[EHL-CTNR-LEASE-002] State changes on a lease contract must go through the "
+"action buttons. Direct writes are rejected."
+msgstr ""
+"[EHL-CTNR-LEASE-002] "
+"การเปลี่ยนสถานะบนสัญญาเช่าต้องดำเนินการผ่านปุ่มการดำเนินการ "
+"การเขียนโดยตรงจะถูกปฏิเสธ"
+
+#. module: eh_log_container_mgmt
+#. odoo-python
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_movement.py:0
+msgid ""
+"[EHL-CTNR-MOV-001] Container movements are append-only. The following fields"
+" cannot be edited after capture: %(fields)s. Cancel the movement and create "
+"a corrected one if a fix is required."
+msgstr ""
+"[EHL-CTNR-MOV-001] การเคลื่อนย้ายตู้คอนเทนเนอร์เป็นแบบเพิ่มต่อได้เท่านั้น "
+"ฟิลด์ต่อไปนี้ไม่สามารถแก้ไขได้หลังจากบันทึกแล้ว: %(fields)s "
+"หากจำเป็นต้องแก้ไข ให้ยกเลิกการเคลื่อนย้ายและสร้างรายการที่แก้ไขแล้วขึ้นใหม่"
+
+#. module: eh_log_container_mgmt
+#. odoo-python
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_work_order.py:0
+msgid ""
+"[EHL-CTNR-WO-001] State changes on a work order must go through the action "
+"buttons. Direct writes are rejected."
+msgstr ""
+"[EHL-CTNR-WO-001] การเปลี่ยนสถานะของใบสั่งงานต้องดำเนินการผ่านปุ่มการทำงาน "
+"การเขียนโดยตรงจะถูกปฏิเสธ"
+
+#. module: eh_log_container_mgmt
+#. odoo-python
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_work_order.py:0
+msgid ""
+"[EHL-CTNR-WO-002] Work order %(name)s cannot move to Estimated without at "
+"least one cost line."
+msgstr ""
+"[EHL-CTNR-WO-002] ใบสั่งงาน %(name)s "
+"ไม่สามารถเปลี่ยนเป็นประเมินแล้วได้หากไม่มีบรรทัดต้นทุนอย่างน้อยหนึ่งรายการ"
+
+#. module: eh_log_container_mgmt
+#. odoo-python
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_work_order.py:0
+msgid "[EHL-CTNR-WO-003] Only logistics managers can approve M&R work orders."
+msgstr ""
+"[EHL-CTNR-WO-003] "
+"เฉพาะผู้จัดการฝ่ายโลจิสติกส์เท่านั้นที่สามารถอนุมัติใบสั่งงาน M&R ได้"
+
+#. module: eh_log_container_mgmt
+#. odoo-python
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_work_order.py:0
+msgid ""
+"[EHL-CTNR-WO-004] Cannot complete work order %(name)s: line '%(line)s' has "
+"zero actual cost. Capture actual costs before completion."
+msgstr ""
+"[EHL-CTNR-WO-004] ไม่สามารถทำใบสั่งงาน %(name)s ให้เสร็จได้: บรรทัด "
+"'%(line)s' มีต้นทุนจริงเป็นศูนย์ กรุณาบันทึกต้นทุนจริงก่อนทำให้เสร็จ"
+
+#. module: eh_log_container_mgmt
+#. odoo-python
+#: code:addons/eh_log_container_mgmt/models/eh_log_freight_container.py:0
+msgid "container_id"
+msgstr ""

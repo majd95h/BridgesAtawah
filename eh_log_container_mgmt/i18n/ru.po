@@ -1,0 +1,1399 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* eh_log_container_mgmt
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-01 04:33+0000\n"
+"PO-Revision-Date: 2026-07-01 04:33+0000\n"
+"Last-Translator: ERP Heritage <info@erpheritage.com.au>\n"
+"Language-Team: Russian\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#. module: eh_log_container_mgmt
+#. odoo-python
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_lease_contract.py:0
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_work_order.py:0
+msgid "(none)"
+msgstr "(нет)"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid ""
+"<br/>\n"
+"                                    <span class=\"eh_pdf_status_badge eh_pdf_status_warn\">REPAIR REQUIRED</span>"
+msgstr ""
+"<br/>\n"
+"                                    <span class=\"eh_pdf_status_badge eh_pdf_status_warn\">ТРЕБУЕТСЯ РЕМОНТ</span>"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "<strong>Container:</strong>"
+msgstr "<strong>Контейнер:</strong>"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "<strong>Movement:</strong>"
+msgstr "<strong>Движение:</strong>"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "<strong>Reference:</strong>"
+msgstr "<strong>Ссылка:</strong>"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "<strong>When:</strong>"
+msgstr "<strong>Когда:</strong>"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__accepts_dangerous
+msgid "Accepts Dangerous Goods"
+msgstr "Принимает опасные грузы"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__accepts_reefer
+msgid "Accepts Reefer"
+msgstr "Принимает рефрижераторы"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__accepts_tank
+msgid "Accepts Tank"
+msgstr "Принимает танк-контейнеры"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_needaction
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_needaction
+msgid "Action Needed"
+msgstr "Требуются действия"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_lease_contract_form
+msgid "Activate"
+msgstr "Активировать"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__active
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_lease_contract__state__active
+msgid "Active"
+msgstr "Активный"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_freight_container__lease_contract_id
+msgid ""
+"Active lease contract this container falls under. Used by per-container D&D "
+"and headline billing."
+msgstr ""
+"Активный договор аренды, к которому относится этот контейнер. Используется "
+"для расчёта D&D по контейнеру и основного выставления счетов."
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__activity_ids
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__activity_ids
+msgid "Activities"
+msgstr "Активность"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__activity_exception_decoration
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Оформление задачи-исключения"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__activity_state
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__activity_state
+msgid "Activity State"
+msgstr "Состояние активности"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__activity_type_icon
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Значок типа активности"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__actual_amount
+msgid "Actual Amount"
+msgstr "Фактическая сумма"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__actual_cost
+msgid "Actual Cost"
+msgstr "Фактическая стоимость"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__actual_unit_cost
+msgid "Actual Unit Cost"
+msgstr "Фактическая себестоимость единицы"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__address
+msgid "Address"
+msgstr "Адрес"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_work_order_form
+msgid "Approve"
+msgstr "Одобрить"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order__state__approved
+msgid "Approved"
+msgstr "Одобрено"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__approved_at
+msgid "Approved At"
+msgstr "Одобрено"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__approved_by_id
+msgid "Approved By"
+msgstr "Утверждено"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_attachment_count
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_attachment_count
+msgid "Attachment Count"
+msgstr "Количество вложений"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_work_order_form
+msgid "Audit"
+msgstr "Аудит"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_work_order_form
+msgid "Back to Draft"
+msgstr "Вернуть в черновик"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_lease_contract_form
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_work_order_form
+msgid "Cancel"
+msgstr "Отменить"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_lease_contract__state__cancelled
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order__state__cancelled
+msgid "Cancelled"
+msgstr "Отменен"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_depot_form
+msgid "Capacity"
+msgstr "Вместимость"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__capacity_teu
+msgid "Capacity (TEU)"
+msgstr "Вместимость (TEU)"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_freight_container__dnd_chargeable_days
+msgid "Chargeable days = max(0, days_at_destination - free_time_days)."
+msgstr "Расчётные дни = max(0, days_at_destination - free_time_days)."
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_work_order_form
+msgid "Close"
+msgstr "Закрыть"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order__state__closed
+msgid "Closed"
+msgstr "Закрыто"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__code
+msgid "Code"
+msgstr "Код"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__company_ids
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__company_ids
+msgid "Companies"
+msgstr "Компании"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__company_id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__company_id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__company_id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__company_id
+msgid "Company"
+msgstr "Компания"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order__state__completed
+msgid "Completed"
+msgstr "Завершено"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__completed_at
+msgid "Completed At"
+msgstr "Завершено в"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__condition_note
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "Condition Note"
+msgstr "Примечание о состоянии"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__container_id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__container_id
+msgid "Container"
+msgstr "Контейнер"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_depot_form
+msgid "Container Depot"
+msgstr "Контейнерное депо"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model,name:eh_log_container_mgmt.model_eh_log_container_mgmt_depot
+msgid "Container Depot or Yard"
+msgstr "Контейнерное депо или площадка"
+
+#. module: eh_log_container_mgmt
+#: model:ir.actions.act_window,name:eh_log_container_mgmt.action_eh_log_container_mgmt_depot
+#: model:ir.ui.menu,name:eh_log_container_mgmt.menu_eh_log_container_mgmt_depots
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_depot_list
+msgid "Container Depots"
+msgstr "Контейнерные депо"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model,name:eh_log_container_mgmt.model_eh_log_container_mgmt_movement
+msgid "Container Gate Movement"
+msgstr "Движение контейнера через ворота"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model,name:eh_log_container_mgmt.model_eh_log_container_mgmt_lease_contract
+msgid "Container Lease Contract"
+msgstr "Договор аренды контейнера"
+
+#. module: eh_log_container_mgmt
+#: model:ir.ui.menu,name:eh_log_container_mgmt.menu_eh_log_container_mgmt_work_orders
+msgid "Container M&R"
+msgstr "M&R контейнеров"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model,name:eh_log_container_mgmt.model_eh_log_container_mgmt_work_order
+msgid "Container M&R Work Order"
+msgstr "Заказ-наряд M&R контейнера"
+
+#. module: eh_log_container_mgmt
+#: model:ir.ui.menu,name:eh_log_container_mgmt.menu_eh_log_container_mgmt_movements
+msgid "Container Movements"
+msgstr "Перемещения контейнеров"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__container_number
+msgid "Container No."
+msgstr "№ контейнера"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "Container Number"
+msgstr "Номер контейнера"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__iso_type_id
+msgid ""
+"Container type covered by this contract. Mixed-type fleet is modelled as "
+"multiple contracts."
+msgstr ""
+"Тип контейнера, охватываемый этим договором. Парк смешанного типа "
+"моделируется как несколько договоров."
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__container_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_lease_contract_form
+msgid "Containers"
+msgstr "Контейнеры"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__container_count
+msgid "Containers Assigned"
+msgstr "Назначенные контейнеры"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__line_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_work_order_form
+msgid "Cost Lines"
+msgstr "Линии затрат"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_work_order_form
+msgid "Costs"
+msgstr "Расходы"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__partner_id
+msgid "Counterparty"
+msgstr "Контрагент"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__counterparty_depot_id
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "Counterparty Depot"
+msgstr "Депо контрагента"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__partner_reference
+msgid "Counterparty Reference"
+msgstr "Ссылка контрагента"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__country_id
+msgid "Country"
+msgstr "Страна"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__create_uid
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__create_uid
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__create_uid
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__create_uid
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__create_uid
+msgid "Created by"
+msgstr "Создано:"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__create_date
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__create_date
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__create_date
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__create_date
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__create_date
+msgid "Created on"
+msgstr "Дата создания:"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__currency_id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__currency_id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__currency_id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_freight_container__currency_id
+msgid "Currency"
+msgstr "Валюта"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_freight_container__current_depot_id
+msgid "Current Depot"
+msgstr "Текущий склад"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_freight_container_form_mgmt
+msgid "D&D"
+msgstr ""
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_freight_container__dnd_amount
+msgid "D&D Amount"
+msgstr "Сумма D&D"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_freight_container__dnd_chargeable_days
+msgid "D&D Chargeable Days"
+msgstr "Оплачиваемые дни D&D"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_freight_container__dnd_rate_per_day
+msgid "D&D Rate (per day)"
+msgstr "Ставка D&D (в день)"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__daily_rate
+msgid "Daily Rate (per container)"
+msgstr "Суточная ставка (за контейнер)"
+
+#. module: eh_log_container_mgmt
+#. odoo-python
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_movement.py:0
+msgid "Damage observed at gate."
+msgstr "Повреждение обнаружено на воротах."
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_freight_container__days_at_destination
+msgid "Days at Destination"
+msgstr "Дней в пункте назначения"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__free_days
+msgid ""
+"Days for which the daily rate is waived per container movement cycle. Useful"
+" for short-turn lease-out arrangements."
+msgstr ""
+"Количество дней, за которые дневная ставка не взимается за цикл перемещения "
+"контейнера. Полезно для краткосрочных договоров аренды."
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_freight_container__free_time_days
+msgid ""
+"Days included in the agreed price after gate-out before demurrage or "
+"detention starts to accrue. Defaults to 7 days; override per container for "
+"special arrangements."
+msgstr ""
+"Количество дней, включённых в согласованную цену после выезда из терминала, "
+"прежде чем начнёт начисляться демередж или детеншен. По умолчанию 7 дней; "
+"переопределите для каждого контейнера при особых договорённостях."
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_freight_container__days_at_destination
+msgid ""
+"Days since destination gate-out, before destination gate-in. Used by the D&D"
+" calculation."
+msgstr ""
+"Количество дней с момента выезда из терминала назначения до въезда в "
+"терминал назначения. Используется в расчёте D&D."
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order_line__repair_kind__dent
+msgid "Dent / Bend"
+msgstr "Вмятина / изгиб"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__depot_id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__depot_id
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "Depot"
+msgstr "Депо"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_freight_container_form_mgmt
+msgid "Depot & Lease"
+msgstr "Депо и аренда"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__depot_kind
+msgid "Depot Kind"
+msgstr "Тип депо"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.constraint,message:eh_log_container_mgmt.constraint_eh_log_container_mgmt_depot_code_unique
+msgid "Depot code must be unique."
+msgstr "Код депо должен быть уникальным."
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__description
+msgid "Description"
+msgstr "Описание"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__direction
+msgid "Direction"
+msgstr "Направление"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__display_name
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__display_name
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__display_name
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__display_name
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__display_name
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_freight_container__display_name
+msgid "Display Name"
+msgstr "Отображаемое имя"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order_line__repair_kind__door
+msgid "Door / Hinge"
+msgstr "Дверь / петля"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_lease_contract__state__draft
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order__state__draft
+msgid "Draft"
+msgstr "Черновик"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_depot__depot_kind__dry_port
+msgid "Dry Port"
+msgstr "Сухой порт"
+
+#. module: eh_log_container_mgmt
+#: model:ir.actions.server,name:eh_log_container_mgmt.ir_cron_eh_log_container_mgmt_dnd_alert_ir_actions_server
+msgid "EH Logistics: container D&D free time alerts"
+msgstr "EH Логистика: оповещения о свободном времени D&D для контейнеров"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__ends_on
+msgid "Ends On"
+msgstr "Завершается"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "Equipment"
+msgstr "Оборудование"
+
+#. module: eh_log_container_mgmt
+#: model:ir.actions.report,name:eh_log_container_mgmt.action_report_eh_log_container_mgmt_eir
+msgid "Equipment Interchange Receipt"
+msgstr "Акт передачи оборудования"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order__state__estimated
+msgid "Estimated"
+msgstr "Ориентировочно"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__estimated_amount
+msgid "Estimated Amount"
+msgstr "Оценочная сумма"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__estimated_at
+msgid "Estimated At"
+msgstr "Оценено в"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__estimated_cost
+msgid "Estimated Cost"
+msgstr "Оценочная стоимость"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__estimated_unit_cost
+msgid "Estimated Unit Cost"
+msgstr "Оценочная стоимость единицы"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_lease_contract_form
+msgid "Expire"
+msgstr "Аннулировать"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_lease_contract__state__expired
+msgid "Expired"
+msgstr "Истекший"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__fault_description
+msgid "Fault Description"
+msgstr "Описание неисправности"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "Field"
+msgstr "Поле"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_lease_contract_form
+msgid "Fleet"
+msgstr "Автопарк"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__fleet_count
+msgid "Fleet Count"
+msgstr "Количество автопарка"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__headline_value
+msgid ""
+"Fleet count * daily rate * term days. Indicative headline only; actual "
+"billing reflects per-container free-day usage."
+msgstr ""
+"Количество автопарка * дневная ставка * дни срока. Только ориентировочная "
+"сумма; фактический счёт отражает использование свободных дней по каждому "
+"контейнеру."
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order_line__repair_kind__flooring
+msgid "Flooring"
+msgstr "Напольные покрытия"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_follower_ids
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_follower_ids
+msgid "Followers"
+msgstr "Подписчики"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_partner_ids
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Подписчики"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__activity_type_icon
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Шрифт, отличный значок, например. к.-а.-задачи"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__free_days
+msgid "Free Days (per container)"
+msgstr "Свободные дни (на контейнер)"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_freight_container__free_time_days
+msgid "Free Time (days)"
+msgstr "Свободное время (дни)"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_depot__depot_kind__freezone_depot
+msgid "Free Zone Depot"
+msgstr "Склад свободной зоны"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__gate_hours
+msgid ""
+"Free-text description of gate operating hours, e.g. '24/7' or 'Sat-Thu "
+"06:00-22:00'. The dispatch board warns when scheduled movements fall outside"
+" these hours."
+msgstr ""
+"Произвольное текстовое описание часов работы ворот, например «24/7» или «сб-"
+"чт 06:00-22:00». Диспетчерская доска предупреждает, когда запланированные "
+"перемещения выходят за пределы этих часов."
+
+#. module: eh_log_container_mgmt
+#: model:ir.model,name:eh_log_container_mgmt.model_eh_log_freight_container
+msgid "Freight Container or ULD"
+msgstr "Грузовой контейнер или ULD"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__gate_hours
+msgid "Gate Hours"
+msgstr "Часы работы ворот"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_movement_form
+msgid "Gate Movement"
+msgstr "Движение через ворота"
+
+#. module: eh_log_container_mgmt
+#. odoo-python
+#: code:addons/eh_log_container_mgmt/models/eh_log_freight_container.py:0
+#: model:ir.actions.act_window,name:eh_log_container_mgmt.action_eh_log_container_mgmt_movement
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_freight_container__movement_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_movement_list
+msgid "Gate Movements"
+msgstr "Движения через ворота"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__gate_operator_name
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "Gate Operator"
+msgstr "Оператор ворот"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_movement_search
+msgid "Gate-In"
+msgstr "Въезд через ворота"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_movement__movement_kind__gate_in
+msgid "Gate-In (received)"
+msgstr "Въезд через ворота (получено)"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_movement_search
+msgid "Gate-Out"
+msgstr "Выезд через ворота"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_movement__movement_kind__gate_out
+msgid "Gate-Out (released)"
+msgstr "Выезд через ворота (выпущено)"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "Gross Weight (kg)"
+msgstr "Масса брутто (kg)"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_movement_search
+msgid "Group by Depot"
+msgstr "Группировать по депо"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_movement_search
+msgid "Group by Kind"
+msgstr "Группировать по виду"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__happened_at
+msgid "Happened At"
+msgstr "Произошло"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__has_message
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__has_message
+msgid "Has Message"
+msgstr "Есть сообщение"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__headline_value
+msgid "Headline Value"
+msgstr "Основное значение"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order_line__repair_kind__hole
+msgid "Hole / Puncture"
+msgstr "Отверстие / прокол"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_freight_container__id
+msgid "ID"
+msgstr "Номер"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__container_number
+msgid ""
+"ISO 6346 container number: 4 letters (owner code + category) + 6 digits "
+"(serial) + 1 check digit. Validated on save unless 'Manual Override' is set."
+msgstr ""
+"Номер контейнера ISO 6346: 4 буквы (код владельца + категория) + 6 цифр "
+"(серийный номер) + 1 контрольная цифра. Проверяется при сохранении, если не "
+"установлено «Ручное переопределение»."
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__iso_type_id
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "ISO Type"
+msgstr "Тип ISO"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__activity_exception_icon
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__activity_exception_icon
+msgid "Icon"
+msgstr "Иконка"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__activity_exception_icon
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Иконка, указывающая на задачу-исключение."
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_depot_form
+msgid "Identity"
+msgstr "Идентификация"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_needaction
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+"Если флажок установлен, значит, новые сообщения требуют вашего внимания."
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_has_error
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_has_sms_error
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_has_error
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Если отмечено, некоторые сообщения имеют ошибку доставки."
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order__state__in_progress
+msgid "In Progress"
+msgstr "В процессе"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__capacity_teu
+msgid ""
+"Indicative TEU capacity. Used by yard planning to raise warnings when "
+"occupancy approaches the limit."
+msgstr ""
+"Ориентировочная вместимость в TEU. Используется при планировании площадки "
+"для выдачи предупреждений при приближении заполненности к пределу."
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_depot__depot_kind__inland_depot
+msgid "Inland Container Depot"
+msgstr "Внутренний контейнерный терминал"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order_line__repair_kind__inspection
+msgid "Inspection / Survey"
+msgstr "Инспекция / Обследование"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_is_follower
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_is_follower
+msgid "Is Follower"
+msgstr "Является подписчиком"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__movement_kind
+msgid "Kind"
+msgstr "Вид"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__write_uid
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__write_uid
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__write_uid
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__write_uid
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__write_uid
+msgid "Last Updated by"
+msgstr "Последнее обновление:"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__write_date
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__write_date
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__write_date
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__write_date
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__write_date
+msgid "Last Updated on"
+msgstr "Дата последнего обновления:"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_freight_container__current_depot_id
+msgid ""
+"Last known depot. Updated automatically by gate movements; can be edited "
+"manually for corrections."
+msgstr ""
+"Последний известный склад. Обновляется автоматически по движениям через "
+"ворота; может быть отредактирован вручную для исправлений."
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_freight_container__lease_contract_id
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_lease_contract_form
+msgid "Lease Contract"
+msgstr "Договор аренды"
+
+#. module: eh_log_container_mgmt
+#: model:ir.actions.act_window,name:eh_log_container_mgmt.action_eh_log_container_mgmt_lease_contract
+#: model:ir.ui.menu,name:eh_log_container_mgmt.menu_eh_log_container_mgmt_lease_contracts
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_lease_contract_list
+msgid "Lease Contracts"
+msgstr "Договоры аренды"
+
+#. module: eh_log_container_mgmt
+#. odoo-python
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_lease_contract.py:0
+msgid ""
+"Lease contract %(name)s cannot move from %(current)s to %(target)s. Allowed "
+"transitions from %(current)s: %(allowed)s."
+msgstr ""
+"Договор аренды %(name)s не может перейти из %(current)s в %(target)s. "
+"Допустимые переходы из %(current)s: %(allowed)s."
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_lease_contract__direction__lease_in
+msgid "Lease-In (vendor to us)"
+msgstr "Аренда входящая (от поставщика к нам)"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_lease_contract__direction__lease_out
+msgid "Lease-Out (us to customer)"
+msgstr "Аренда исходящая (от нас к клиенту)"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_work_order_form
+msgid "M&R Work Order"
+msgstr "Заказ-наряд на ТОиР"
+
+#. module: eh_log_container_mgmt
+#: model:ir.actions.act_window,name:eh_log_container_mgmt.action_eh_log_container_mgmt_work_order
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_work_order_list
+msgid "M&R Work Orders"
+msgstr "Заказы-наряды на ТОиР"
+
+#. module: eh_log_container_mgmt
+#. odoo-python
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_work_order.py:0
+msgid ""
+"M&R work order %(name)s cannot move from %(current)s to %(target)s. Allowed "
+"transitions from %(current)s: %(allowed)s."
+msgstr ""
+"Заказ-наряд на ТОиР %(name)s не может перейти из %(current)s в %(target)s. "
+"Разрешённые переходы из %(current)s: %(allowed)s."
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_work_order_form
+msgid "Mark Completed"
+msgstr "Отметить как завершено"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_has_error
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_has_error
+msgid "Message Delivery error"
+msgstr "Ошибка доставки сообщения"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_ids
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_ids
+msgid "Messages"
+msgstr "Сообщения"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__trigger_movement_id
+msgid ""
+"Movement (typically a damaged-on-arrival gate-in) that triggered the work "
+"order."
+msgstr ""
+"Перемещение (обычно въезд через ворота с повреждением при прибытии), которое"
+" инициировало рабочий заказ."
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_freight_container__movement_count
+msgid "Movements"
+msgstr "Перемещения"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__my_activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Крайний срок моей активности"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__name
+msgid "Name"
+msgstr "Имя"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__needs_repair
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_movement_search
+msgid "Needs Repair"
+msgstr "Требуется ремонт"
+
+#. module: eh_log_container_mgmt
+#. odoo-python
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_lease_contract.py:0
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_movement.py:0
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_work_order.py:0
+msgid "New"
+msgstr "Новый"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__activity_calendar_event_id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "Следующее событие календаря активности"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Следующий срок мероприятия"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__activity_summary
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__activity_summary
+msgid "Next Activity Summary"
+msgstr "Резюме следующего действия"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__activity_type_id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__activity_type_id
+msgid "Next Activity Type"
+msgstr "Следующий Тип Мероприятия"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__notes
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__notes
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__notes
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_lease_contract_form
+msgid "Notes"
+msgstr "Заметки"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_needaction_counter
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Число действий"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__fleet_count
+msgid ""
+"Number of containers covered. Used for headline pricing and reporting; per-"
+"container assignment lives on the container record (lease_contract_id)."
+msgstr ""
+"Количество охваченных контейнеров. Используется для основного "
+"ценообразования и отчётности; назначение по каждому контейнеру хранится в "
+"записи контейнера (lease_contract_id)."
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_has_error_counter
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_has_error_counter
+msgid "Number of errors"
+msgstr "Число ошибок"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_needaction_counter
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Количество сообщений, требующих принятия мер"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_has_error_counter
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Количество недоставленных сообщений"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__operator_id
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "Operator"
+msgstr "Оператор"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order_line__repair_kind__other
+msgid "Other"
+msgstr "Другое"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order_line__repair_kind__paint
+msgid "Paint / Marking"
+msgstr "Окраска / маркировка"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_lease_contract_form
+msgid "Parties"
+msgstr "Стороны"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_freight_container__dnd_rate_per_day
+msgid ""
+"Per-container per-day rate that applies after free time elapses. Lookup "
+"chain: container override, lease contract daily rate, configured default per"
+" ISO type."
+msgstr ""
+"Суточная ставка за контейнер, применяемая после истечения бесплатного "
+"времени. Цепочка поиска: переопределение контейнера, суточная ставка "
+"договора аренды, настроенное значение по умолчанию для типа ISO."
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__condition_note
+msgid ""
+"Photographs and damage notes captured at the gate. Drives the M&R work order"
+" if a repair is needed."
+msgstr ""
+"Фотографии и заметки о повреждениях, сделанные на воротах. Инициируют наряд-"
+"заказ M&R, если требуется ремонт."
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_depot__depot_kind__port_terminal
+msgid "Port Container Terminal"
+msgstr "Портовый контейнерный терминал"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__quantity
+msgid "Quantity"
+msgstr "Количество"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__rating_ids
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__rating_ids
+msgid "Ratings"
+msgstr "Рейтинги"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid ""
+"Received in apparent good order and condition except as noted above. The "
+"undersigned hereby acknowledges receipt of the equipment described in this "
+"Equipment Interchange Receipt."
+msgstr ""
+"Получено в очевидно надлежащем порядке и состоянии, за исключением "
+"указанного выше. Нижеподписавшийся настоящим подтверждает получение "
+"оборудования, описанного в данном акте передачи оборудования (Equipment "
+"Interchange Receipt)."
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "Receiving Party"
+msgstr "Принимающая сторона"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order_line__repair_kind__reefer_unit
+msgid "Reefer Unit"
+msgstr "Рефрижераторная установка"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__name
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__name
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__name
+msgid "Reference"
+msgstr "Справка"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_movement__movement_kind__repair_in
+msgid "Repair In"
+msgstr "Приём в ремонт"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__repair_kind
+msgid "Repair Kind"
+msgstr "Вид ремонта"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_movement__movement_kind__repair_out
+msgid "Repair Out"
+msgstr "Выдача из ремонта"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__repair_summary
+msgid "Repair Summary"
+msgstr "Сводка по ремонту"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_depot__depot_kind__repair_yard
+msgid "Repair Yard"
+msgstr "Ремонтная площадка"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__activity_user_id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__activity_user_id
+msgid "Responsible User"
+msgstr "Ответственный пользователь"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_has_sms_error
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Ошибка доставки SMS"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "Seal"
+msgstr "Пломба"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__seal_number
+msgid "Seal Number"
+msgstr "Номер пломбы"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order_line__repair_kind__seal
+msgid "Seal Replacement"
+msgstr "Замена пломбы"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__sequence
+msgid "Sequence"
+msgstr "Последовательность"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__needs_repair
+msgid ""
+"Set at gate-in when the container is received with visible damage. Triggers "
+"a draft M&R work order on save."
+msgstr ""
+"Устанавливается при въезде (gate-in), когда контейнер получен с видимыми "
+"повреждениями. При сохранении создаёт черновой наряд-заказ M&R."
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__counterparty_depot_id
+msgid ""
+"Source depot on a transfer-in, destination depot on a transfer-out. Empty "
+"for gate-in / gate-out at a single depot."
+msgstr ""
+"Исходный склад при входящем перемещении, склад назначения при исходящем "
+"перемещении. Пусто для въезда/выезда на одном складе."
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__code
+msgid "Stable depot identifier (e.g. JEA-DP, KH-CMA, RAS-MMI)."
+msgstr "Стабильный идентификатор депо (например, JEA-DP, KH-CMA, RAS-MMI)."
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_work_order_form
+msgid "Start Repair"
+msgstr "Начать ремонт"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__started_at
+msgid "Started At"
+msgstr "Начато в"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__starts_on
+msgid "Starts On"
+msgstr "Начинается"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__state
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__state
+msgid "State"
+msgstr "Область"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__activity_state
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Статус, основанный на мероприятии\n"
+"Просроченная: Дата, уже прошла\n"
+"Сегодня: Дата мероприятия сегодня\n"
+"Запланировано: будущая деятельность."
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_depot__depot_kind__storage_yard
+msgid "Storage Yard"
+msgstr "Складская площадка"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_work_order_form
+msgid "Subject"
+msgstr "Тема"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_work_order_form
+msgid "Submit Estimate"
+msgstr "Отправить оценку"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_movement__movement_kind__survey
+msgid "Survey"
+msgstr "Опрос"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__days_total
+msgid "Term (days)"
+msgstr "Срок (дни)"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_lease_contract_form
+msgid "Term and Pricing"
+msgstr "Срок и ценообразование"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__operator_id
+msgid ""
+"The party operating the depot. Counterparty for movement and lift/handle "
+"billing."
+msgstr ""
+"Сторона, эксплуатирующая депо. Контрагент по расчётам за перемещение и "
+"подъём/обработку."
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_movement__movement_kind__transfer_in
+msgid "Transfer In (depot to depot)"
+msgstr "Перевод входящий (со склада на склад)"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_movement__movement_kind__transfer_out
+msgid "Transfer Out (depot to depot)"
+msgstr "Перевод исходящий (со склада на склад)"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__trigger_movement_id
+msgid "Trigger Movement"
+msgstr "Триггерное движение"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__activity_exception_decoration
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Тип задачи-исключения в записи."
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "Value"
+msgstr "Значение"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__partner_id
+msgid "Vendor on lease-in, customer on lease-out."
+msgstr "Поставщик при lease-in, клиент при lease-out."
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__website_message_ids
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__website_message_ids
+msgid "Website Messages"
+msgstr "Веб-сайт сообщения"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__website_message_ids
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__website_message_ids
+msgid "Website communication history"
+msgstr "История общений с сайта"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__work_order_id
+msgid "Work Order"
+msgstr "Заказ-наряд"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model,name:eh_log_container_mgmt.model_eh_log_container_mgmt_work_order_line
+msgid "Work Order Cost Line"
+msgstr "Строка затрат наряда на работу"
+
+#. module: eh_log_container_mgmt
+#. odoo-python
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_lease_contract.py:0
+msgid "[EHL-CTNR-LEASE-001] Contract %(name)s end date is before start date."
+msgstr ""
+"[EHL-CTNR-LEASE-001] Дата окончания договора %(name)s предшествует дате "
+"начала."
+
+#. module: eh_log_container_mgmt
+#. odoo-python
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_lease_contract.py:0
+msgid ""
+"[EHL-CTNR-LEASE-002] State changes on a lease contract must go through the "
+"action buttons. Direct writes are rejected."
+msgstr ""
+"[EHL-CTNR-LEASE-002] Изменения состояния договора аренды должны выполняться "
+"через кнопки действий. Прямая запись отклоняется."
+
+#. module: eh_log_container_mgmt
+#. odoo-python
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_movement.py:0
+msgid ""
+"[EHL-CTNR-MOV-001] Container movements are append-only. The following fields"
+" cannot be edited after capture: %(fields)s. Cancel the movement and create "
+"a corrected one if a fix is required."
+msgstr ""
+"[EHL-CTNR-MOV-001] Перемещения контейнеров доступны только для добавления. "
+"Следующие поля нельзя редактировать после фиксации: %(fields)s. Отмените "
+"перемещение и создайте исправленное, если требуется корректировка."
+
+#. module: eh_log_container_mgmt
+#. odoo-python
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_work_order.py:0
+msgid ""
+"[EHL-CTNR-WO-001] State changes on a work order must go through the action "
+"buttons. Direct writes are rejected."
+msgstr ""
+"[EHL-CTNR-WO-001] Изменения состояния наряда на работу должны выполняться "
+"через кнопки действий. Прямая запись отклоняется."
+
+#. module: eh_log_container_mgmt
+#. odoo-python
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_work_order.py:0
+msgid ""
+"[EHL-CTNR-WO-002] Work order %(name)s cannot move to Estimated without at "
+"least one cost line."
+msgstr ""
+"[EHL-CTNR-WO-002] Наряд на работу %(name)s не может перейти в состояние "
+"«Оценено» без хотя бы одной строки затрат."
+
+#. module: eh_log_container_mgmt
+#. odoo-python
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_work_order.py:0
+msgid "[EHL-CTNR-WO-003] Only logistics managers can approve M&R work orders."
+msgstr ""
+"[EHL-CTNR-WO-003] Утверждать наряды на работу M&R могут только менеджеры по "
+"логистике."
+
+#. module: eh_log_container_mgmt
+#. odoo-python
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_work_order.py:0
+msgid ""
+"[EHL-CTNR-WO-004] Cannot complete work order %(name)s: line '%(line)s' has "
+"zero actual cost. Capture actual costs before completion."
+msgstr ""
+"[EHL-CTNR-WO-004] Невозможно завершить наряд на работу %(name)s: строка "
+"'%(line)s' имеет нулевую фактическую стоимость. Зафиксируйте фактические "
+"затраты перед завершением."
+
+#. module: eh_log_container_mgmt
+#. odoo-python
+#: code:addons/eh_log_container_mgmt/models/eh_log_freight_container.py:0
+msgid "container_id"
+msgstr ""

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="view_eh_log_last_mile_delivery_list" model="ir.ui.view">
+            <field name="name">eh.log.last.mile.delivery.list</field>
+            <field name="model">eh.log.last.mile.delivery</field>
+            <field name="arch" type="xml">
+                <list string="Deliveries" decoration-info="state in ('scheduled', 'out_for_delivery')" decoration-success="state == 'delivered'" decoration-danger="state in ('failed', 'returned')" decoration-muted="state == 'cancelled'">
+                    <field name="name"/>
+                    <field name="state"/>
+                    <field name="wave_id"/>
+                    <field name="customer_id"/>
+                    <field name="delivery_partner_id" optional="show"/>
+                    <field name="scheduled_window_start"/>
+                    <field name="package_count"/>
+                    <field name="cod_amount" optional="show"/>
+                    <field name="cod_collected_amount" optional="show"/>
+                    <field name="attempt_count"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="view_eh_log_last_mile_delivery_form" model="ir.ui.view">
+            <field name="name">eh.log.last.mile.delivery.form</field>
+            <field name="model">eh.log.last.mile.delivery</field>
+            <field name="arch" type="xml">
+                <form string="Delivery">
+                    <header>
+                        <button name="action_set_out_for_delivery" string="Out for Delivery" type="object" class="btn-primary" invisible="state != 'scheduled'" groups="eh_log_base.group_eh_log_user"/>
+                        <button name="action_mark_delivered" string="Mark Delivered" type="object" class="btn-primary" invisible="state != 'out_for_delivery' or cod_amount" groups="eh_log_base.group_eh_log_user"/>
+                        <button name="action_mark_failed" string="Mark Failed Attempt" type="object" class="btn-secondary" invisible="state != 'out_for_delivery'" groups="eh_log_base.group_eh_log_user"/>
+                        <button name="action_return_to_sender" string="Return to Sender" type="object" class="btn-secondary" invisible="state != 'failed'" groups="eh_log_base.group_eh_log_manager"/>
+                        <button name="action_reschedule" string="Reschedule" type="object" class="btn-secondary" invisible="state != 'failed'" groups="eh_log_base.group_eh_log_user"/>
+                        <button name="action_cancel" string="Cancel" type="object" class="btn-secondary" invisible="state in ('delivered', 'returned', 'cancelled')" groups="eh_log_base.group_eh_log_manager"/>
+                        <field name="state" widget="statusbar" statusbar_visible="scheduled,out_for_delivery,delivered"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name"/>
+                            <h1><field name="name"/></h1>
+                        </div>
+
+                        <!-- Snapshot hero -->
+                        <div class="o_eh_log_snapshot mb-3" style="background:linear-gradient(135deg,#0E1E2B 0%,#1A2C3D 100%);color:#FBF8F2;border-radius:14px;padding:22px 26px;border:1px solid #A07A3F;box-shadow:0 6px 18px rgba(14,30,43,0.08);">
+                            <div class="d-flex align-items-center justify-content-between mb-3" style="gap:18px;">
+                                <div style="flex:1;min-width:0;">
+                                    <div style="font-family:'DM Mono',ui-monospace,monospace;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:#E8C887;margin-bottom:4px;">Customer</div>
+                                    <div style="font-size:1.05rem;font-weight:600;color:#FBF8F2;line-height:1.25;">
+                                        <field name="customer_id" readonly="1" options="{'no_open': True}" nolabel="1" placeholder="—"/>
+                                    </div>
+                                    <div style="font-size:0.85rem;color:rgba(251,248,242,0.7);">
+                                        <field name="customer_reference" readonly="1" nolabel="1" placeholder="—"/>
+                                    </div>
+                                </div>
+                                <div style="text-align:center;flex-shrink:0;">
+                                    <div style="display:inline-block;padding:10px 20px;background:rgba(212,160,85,0.12);border:1px solid rgba(212,160,85,0.4);border-radius:999px;">
+                                        <i class="fa fa-truck" style="font-size:1.6rem;color:#D4A055;" title="Last mile delivery"/>
+                                        <span class="ms-2" style="font-family:'DM Mono',ui-monospace,monospace;font-size:0.78rem;letter-spacing:0.18em;text-transform:uppercase;color:#E8C887;font-weight:600;">Last&#160;mile</span>
+                                    </div>
+                                </div>
+                                <div style="flex:1;min-width:0;text-align:right;">
+                                    <div style="font-family:'DM Mono',ui-monospace,monospace;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:#E8C887;margin-bottom:4px;">Wave</div>
+                                    <div style="font-size:1.05rem;font-weight:600;color:#FBF8F2;line-height:1.25;">
+                                        <field name="wave_id" readonly="1" options="{'no_open': True}" nolabel="1" placeholder="—"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="display:table;width:100%;border-collapse:separate;border-spacing:10px 0;border-top:1px solid rgba(212,160,85,0.18);padding-top:14px;">
+                                <div style="display:table-cell;width:25%;vertical-align:top;background:rgba(255,255,255,0.04);border-radius:8px;padding:10px 14px;">
+                                    <div style="font-family:'DM Mono',ui-monospace,monospace;font-size:0.66rem;letter-spacing:0.18em;text-transform:uppercase;color:#E8C887;">Window start</div>
+                                    <div style="margin-top:4px;font-size:0.95rem;font-weight:600;color:#FBF8F2;">
+                                        <field name="scheduled_window_start" readonly="1" nolabel="1" placeholder="—"/>
+                                    </div>
+                                </div>
+                                <div style="display:table-cell;width:25%;vertical-align:top;background:rgba(255,255,255,0.04);border-radius:8px;padding:10px 14px;">
+                                    <div style="font-family:'DM Mono',ui-monospace,monospace;font-size:0.66rem;letter-spacing:0.18em;text-transform:uppercase;color:#E8C887;">Window end</div>
+                                    <div style="margin-top:4px;font-size:0.95rem;font-weight:600;color:#FBF8F2;">
+                                        <field name="scheduled_window_end" readonly="1" nolabel="1" placeholder="—"/>
+                                    </div>
+                                </div>
+                                <div style="display:table-cell;width:25%;vertical-align:top;background:rgba(255,255,255,0.04);border-radius:8px;padding:10px 14px;">
+                                    <div style="font-family:'DM Mono',ui-monospace,monospace;font-size:0.66rem;letter-spacing:0.18em;text-transform:uppercase;color:#E8C887;">Packages</div>
+                                    <div style="margin-top:4px;font-size:1.0rem;font-weight:700;color:#FBF8F2;">
+                                        <field name="package_count" readonly="1" nolabel="1"/>
+                                    </div>
+                                    <div style="font-size:0.78rem;color:rgba(251,248,242,0.6);">
+                                        <field name="weight_kg" readonly="1" nolabel="1" widget="float" digits="[8,1]"/> kg
+                                    </div>
+                                </div>
+                                <div style="display:table-cell;width:25%;vertical-align:top;background:rgba(255,255,255,0.04);border-radius:8px;padding:10px 14px;">
+                                    <div style="font-family:'DM Mono',ui-monospace,monospace;font-size:0.66rem;letter-spacing:0.18em;text-transform:uppercase;color:#E8C887;">COD amount</div>
+                                    <div style="margin-top:4px;font-size:1.0rem;font-weight:700;color:#FBF8F2;">
+                                        <field name="cod_amount" readonly="1" nolabel="1" widget="monetary"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /snapshot -->
+
+                        <div invisible="state != 'failed'" class="alert alert-warning" role="alert">
+                            <strong>Failed delivery.</strong>
+                            Either reschedule for another attempt or return to sender.
+                        </div>
+                        <group>
+                            <group string="Customer">
+                                <field name="customer_id" options="{'no_create': True}"/>
+                                <field name="customer_reference"/>
+                                <field name="delivery_partner_id" options="{'no_create': True}"/>
+                                <field name="sale_order_id" options="{'no_create': True}"/>
+                            </group>
+                            <group string="Wave and Schedule">
+                                <field name="wave_id" options="{'no_create': True}"/>
+                                <field name="sequence"/>
+                                <field name="scheduled_window_start"/>
+                                <field name="scheduled_window_end"/>
+                                <field name="delivered_at" readonly="1"/>
+                            </group>
+                        </group>
+                        <group string="Cargo">
+                            <group>
+                                <field name="cargo_description"/>
+                                <field name="package_count"/>
+                                <field name="weight_kg"/>
+                            </group>
+                            <group string="COD">
+                                <field name="cod_amount"/>
+                                <field name="cod_collected_amount" readonly="1"/>
+                                <field name="cod_collection_method" readonly="1"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="ePOD" invisible="state != 'delivered'">
+                                <group>
+                                    <group>
+                                        <field name="recipient_name" readonly="1"/>
+                                        <field name="recipient_role" readonly="1"/>
+                                    </group>
+                                </group>
+                                <group string="Signature">
+                                    <field name="signature_image" widget="image" readonly="1"/>
+                                </group>
+                                <group string="Photo">
+                                    <field name="photo_image" widget="image" readonly="1"/>
+                                </group>
+                            </page>
+                            <page string="Attempts">
+                                <field name="attempt_ids">
+                                    <list create="false" delete="false">
+                                        <field name="happened_at"/>
+                                        <field name="outcome"/>
+                                        <field name="notes"/>
+                                    </list>
+                                </field>
+                            </page>
+                            <page string="Return" invisible="state != 'returned'">
+                                <group>
+                                    <field name="return_to_sender"/>
+                                    <field name="return_reason"/>
+                                </group>
+                            </page>
+                            <page string="Notes">
+                                <field name="notes"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <chatter/>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_last_mile_delivery_activity" model="ir.ui.view">
+            <field name="name">eh.log.last.mile.delivery.activity</field>
+            <field name="model">eh.log.last.mile.delivery</field>
+            <field name="arch" type="xml">
+                <activity string="Activities">
+                    <templates>
+                        <div t-name="activity-box">
+                            <field name="name" display="full"/>
+                        </div>
+                    </templates>
+                </activity>
+            </field>
+        </record>
+
+        <record id="action_eh_log_last_mile_delivery" model="ir.actions.act_window">
+            <field name="name">Deliveries</field>
+            <field name="res_model">eh.log.last.mile.delivery</field>
+            <field name="view_mode">list,activity,form</field>
+        </record>
+
+    </data>
+</odoo>

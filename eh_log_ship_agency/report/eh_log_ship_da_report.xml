@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="action_report_eh_log_ship_da" model="ir.actions.report">
+        <field name="name">Disbursement Account</field>
+        <field name="model">eh.log.ship.disbursement.account</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">eh_log_ship_agency.report_ship_da_document</field>
+        <field name="report_file">eh_log_ship_agency.report_ship_da_document</field>
+        <field name="binding_model_id" ref="model_eh_log_ship_disbursement_account"/>
+        <field name="binding_type">report</field>
+        <field name="paperformat_id" ref="eh_log_base.paperformat_eh_log_portrait"/>
+    </record>
+
+    <template id="report_ship_da_document">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="account">
+                <t t-call="eh_log_base.eh_log_clean_layout">
+                    <t t-set="company" t-value="account.company_id"/>
+                    <t t-set="report_type" t-value="'pdf'"/>
+                    <t t-call="eh_log_base.eh_log_report_styles"/>
+                    <div class="page eh_pdf_page">
+                        <t t-call="eh_log_base.eh_log_report_header">
+                            <t t-set="title" t-value="'Disbursement Account'"/>
+                            <t t-set="company" t-value="account.company_id"/>
+                        </t>
+
+                        <div class="eh_pdf_meta">
+                            <span><strong>Reference:</strong> <t t-out="account.name"/></span>
+                            <span><strong>Vessel:</strong> <t t-out="account.vessel_id.name"/></span>
+                            <span><strong>IMO:</strong> <t t-out="account.vessel_id.imo_number"/></span>
+                            <span><strong>Port Call:</strong> <t t-out="account.port_call_id.name"/></span>
+                            <span><strong>Principal:</strong> <t t-out="account.principal_partner_id.display_name"/></span>
+                            <span><strong>State:</strong> <t t-out="account.state"/></span>
+                        </div>
+
+                        <h2 class="eh_pdf_subtitle">Estimate</h2>
+                        <table class="eh_pdf_table">
+                            <thead>
+                                <tr>
+                                    <th>Description</th>
+                                    <th>Charge Code</th>
+                                    <th class="text-end">Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr t-foreach="account.line_ids.filtered(lambda l: l.is_estimate)" t-as="line">
+                                    <td><t t-out="line.description"/></td>
+                                    <td><t t-out="line.charge_code_id.name or ''"/></td>
+                                    <td class="text-end"><t t-out="'{:.2f}'.format(line.amount)"/></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="text-end"><strong>Estimate Total</strong></td>
+                                    <td class="text-end"><strong><t t-out="'{:.2f}'.format(account.estimate_total)"/></strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2 class="eh_pdf_subtitle">Actuals</h2>
+                        <table class="eh_pdf_table">
+                            <thead>
+                                <tr>
+                                    <th>Description</th>
+                                    <th>Charge Code</th>
+                                    <th class="text-end">Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr t-foreach="account.line_ids.filtered(lambda l: not l.is_estimate)" t-as="line">
+                                    <td><t t-out="line.description"/></td>
+                                    <td><t t-out="line.charge_code_id.name or ''"/></td>
+                                    <td class="text-end"><t t-out="'{:.2f}'.format(line.amount)"/></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="text-end"><strong>Actual Total</strong></td>
+                                    <td class="text-end"><strong><t t-out="'{:.2f}'.format(account.actual_total)"/></strong></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="text-end"><strong>Variance</strong></td>
+                                    <td class="text-end"><strong><t t-out="'{:.2f}'.format(account.variance)"/></strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>

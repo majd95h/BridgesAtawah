@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="action_report_eh_log_dg_declaration" model="ir.actions.report">
+        <field name="name">Shipper's Declaration for Dangerous Goods</field>
+        <field name="model">eh.log.dg.declaration</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">eh_log_dangerous_goods.report_dg_declaration_document</field>
+        <field name="report_file">eh_log_dangerous_goods.report_dg_declaration_document</field>
+        <field name="binding_model_id" ref="model_eh_log_dg_declaration"/>
+        <field name="binding_type">report</field>
+        <field name="paperformat_id" ref="eh_log_base.paperformat_eh_log_portrait"/>
+    </record>
+
+    <template id="report_dg_declaration_document">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="dgd">
+                <t t-call="eh_log_base.eh_log_clean_layout">
+                    <t t-set="company" t-value="dgd.company_id"/>
+                    <t t-set="report_type" t-value="'pdf'"/>
+                    <t t-call="eh_log_base.eh_log_report_styles"/>
+                    <div class="page eh_pdf_page">
+                        <t t-call="eh_log_base.eh_log_report_header">
+                            <t t-set="title" t-value="'Shippers Declaration for Dangerous Goods'"/>
+                            <t t-set="company" t-value="dgd.company_id"/>
+                        </t>
+
+                        <div class="eh_pdf_meta">
+                            <span><strong>Reference:</strong> <t t-out="dgd.name"/></span>
+                            <span><strong>Mode:</strong> <t t-out="dict(dgd._fields['mode'].selection).get(dgd.mode)"/></span>
+                            <span><strong>State:</strong> <t t-out="dict(dgd._fields['state'].selection).get(dgd.state)"/></span>
+                            <span t-if="dgd.has_marine_pollutant">
+                                <span class="eh_pdf_status_badge eh_pdf_status_warn">MARINE POLLUTANT</span>
+                            </span>
+                        </div>
+
+                        <h2 class="eh_pdf_subtitle">Parties</h2>
+                        <table class="eh_pdf_table">
+                            <thead>
+                                <tr>
+                                    <th>Role</th>
+                                    <th>Name</th>
+                                    <th>Phone</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Shipper</td>
+                                    <td><t t-out="dgd.shipper_id.display_name"/></td>
+                                    <td><t t-out="dgd.shipper_id.phone or ''"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Consignee</td>
+                                    <td><t t-out="dgd.consignee_id.display_name"/></td>
+                                    <td><t t-out="dgd.consignee_id.phone or ''"/></td>
+                                </tr>
+                                <tr t-if="dgd.notify_party_id">
+                                    <td>Notify Party</td>
+                                    <td><t t-out="dgd.notify_party_id.display_name"/></td>
+                                    <td><t t-out="dgd.notify_party_id.phone or ''"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Emergency (24h)</td>
+                                    <td><t t-out="dgd.emergency_contact_name"/></td>
+                                    <td><t t-out="dgd.emergency_contact_phone"/></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2 class="eh_pdf_subtitle">Lane</h2>
+                        <table class="eh_pdf_table">
+                            <thead>
+                                <tr>
+                                    <th>Field</th>
+                                    <th>Value</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Loading</td>
+                                    <td><t t-out="dgd.pol_name or ''"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Discharge</td>
+                                    <td><t t-out="dgd.pod_name or ''"/></td>
+                                </tr>
+                                <tr t-if="dgd.mode == 'sea'">
+                                    <td>Vessel / Voyage</td>
+                                    <td><t t-out="dgd.vessel_name or ''"/> / <t t-out="dgd.voyage_number or ''"/></td>
+                                </tr>
+                                <tr t-if="dgd.mode == 'air'">
+                                    <td>Flight</td>
+                                    <td><t t-out="dgd.flight_number or ''"/></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2 class="eh_pdf_subtitle">UN Lines</h2>
+                        <table class="eh_pdf_table">
+                            <thead>
+                                <tr>
+                                    <th>UN</th>
+                                    <th>Proper Shipping Name</th>
+                                    <th>Class</th>
+                                    <th>PG</th>
+                                    <th>Packaging</th>
+                                    <th class="text-end">Pkgs</th>
+                                    <th class="text-end">Net per Pkg</th>
+                                    <th class="text-end">Total</th>
+                                    <th>EmS</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr t-foreach="dgd.line_ids" t-as="line">
+                                    <td><t t-out="line.un_number_id.un_number"/></td>
+                                    <td>
+                                        <t t-out="line.un_number_id.proper_shipping_name"/>
+                                        <span t-if="line.technical_name"> (<t t-out="line.technical_name"/>)</span>
+                                    </td>
+                                    <td><t t-out="line.primary_class or ''"/></td>
+                                    <td><t t-out="line.packing_group or ''"/></td>
+                                    <td><t t-out="line.packaging_description"/></td>
+                                    <td class="text-end"><t t-out="line.package_count"/></td>
+                                    <td class="text-end"><t t-out="'{:.3f} {}'.format(line.net_quantity, line.net_quantity_uom)"/></td>
+                                    <td class="text-end"><t t-out="'{:.3f} {}'.format(line.total_quantity, line.net_quantity_uom)"/></td>
+                                    <td><t t-out="line.un_number_id.ems_code or ''"/></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <t t-if="dgd.segregation_status == 'warning'">
+                            <h2 class="eh_pdf_subtitle">Segregation Notice</h2>
+                            <div class="eh_pdf_summary_box">
+                                <div class="value">
+                                    <t t-out="dgd.segregation_summary"/>
+                                </div>
+                            </div>
+                        </t>
+
+                        <div class="eh_pdf_signature_block">
+                            <p>I hereby declare that the contents of this consignment are fully and accurately described above by the proper shipping name, and are classified, packaged, marked and labelled, and are in all respects in proper condition for transport according to applicable international and national governmental regulations.</p>
+                            <div class="eh_pdf_signature_line">Authorised Signatory</div>
+                            <p t-if="dgd.issued_by_id">Issued by <t t-out="dgd.issued_by_id.display_name"/> on <t t-out="dgd.issued_at and dgd.issued_at.strftime('%Y-%m-%d %H:%M') or ''"/>.</p>
+                        </div>
+
+                        <t t-call="eh_log_base.eh_log_report_footer"/>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>

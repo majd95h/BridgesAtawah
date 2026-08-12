@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="view_eh_log_dg_class_list" model="ir.ui.view">
+            <field name="name">eh.log.dg.class.list</field>
+            <field name="model">eh.log.dg.class</field>
+            <field name="arch" type="xml">
+                <list string="Hazard Classes">
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="primary_class"/>
+                    <field name="placard_description" optional="show"/>
+                    <field name="active" optional="hide"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="view_eh_log_dg_class_form" model="ir.ui.view">
+            <field name="name">eh.log.dg.class.form</field>
+            <field name="model">eh.log.dg.class</field>
+            <field name="arch" type="xml">
+                <form string="Hazard Class">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="code"/>
+                            <h1><field name="code"/></h1>
+                            <field name="name"/>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="primary_class"/>
+                                <field name="placard_description"/>
+                                <field name="active" widget="boolean_toggle"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Stowage Notes">
+                                <field name="stowage_notes"/>
+                            </page>
+                            <page string="Incompatible Classes">
+                                <field name="incompatible_class_ids" widget="many2many_tags"/>
+                            </page>
+                            <page string="Description">
+                                <field name="description"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_eh_log_dg_class" model="ir.actions.act_window">
+            <field name="name">Hazard Classes</field>
+            <field name="res_model">eh.log.dg.class</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+    </data>
+</odoo>

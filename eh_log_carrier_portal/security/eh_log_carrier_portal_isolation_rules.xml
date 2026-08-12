@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="0">
+    <data>
+
+        <record id="rule_eh_log_carrier_profile_company" model="ir.rule">
+            <field name="name">eh.log.carrier.profile: company isolation</field>
+            <field name="model_id" ref="model_eh_log_carrier_profile"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+            <field name="global" eval="True"/>
+        </record>
+
+        <record id="rule_eh_log_carrier_lane_company" model="ir.rule">
+            <field name="name">eh.log.carrier.lane: company isolation</field>
+            <field name="model_id" ref="model_eh_log_carrier_lane"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+            <field name="global" eval="True"/>
+        </record>
+
+        <record id="rule_eh_log_carrier_rate_request_company" model="ir.rule">
+            <field name="name">eh.log.carrier.rate.request: company isolation</field>
+            <field name="model_id" ref="model_eh_log_carrier_rate_request"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+            <field name="global" eval="True"/>
+        </record>
+
+        <record id="rule_eh_log_carrier_rate_quote_company" model="ir.rule">
+            <field name="name">eh.log.carrier.rate.quote: company isolation</field>
+            <field name="model_id" ref="model_eh_log_carrier_rate_quote"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+            <field name="global" eval="True"/>
+        </record>
+
+        <record id="rule_eh_log_carrier_booking_company" model="ir.rule">
+            <field name="name">eh.log.carrier.booking: company isolation</field>
+            <field name="model_id" ref="model_eh_log_carrier_booking"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+            <field name="global" eval="True"/>
+        </record>
+
+    </data>
+</odoo>

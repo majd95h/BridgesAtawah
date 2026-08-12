@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_eh_log_project_cargo_route_survey_list" model="ir.ui.view">
+        <field name="name">eh.log.project.cargo.route.survey.list</field>
+        <field name="model">eh.log.project.cargo.route.survey</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="job_id"/>
+                <field name="name"/>
+                <field name="surveyor_partner_id"/>
+                <field name="surveyed_at"/>
+                <field name="distance_km"/>
+                <field name="min_overhead_clearance_m"/>
+                <field name="max_axle_load_t"/>
+                <field name="night_only"/>
+                <field name="is_chosen_route"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_eh_log_project_cargo_route_survey_form" model="ir.ui.view">
+        <field name="name">eh.log.project.cargo.route.survey.form</field>
+        <field name="model">eh.log.project.cargo.route.survey</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="job_id" options="{'no_create': True}"/>
+                            <field name="name"/>
+                            <field name="surveyor_partner_id"/>
+                            <field name="surveyed_at"/>
+                            <field name="is_chosen_route"/>
+                        </group>
+                        <group>
+                            <field name="distance_km"/>
+                            <field name="estimated_duration_h"/>
+                            <field name="min_overhead_clearance_m"/>
+                            <field name="min_swing_radius_m"/>
+                            <field name="max_axle_load_t"/>
+                            <field name="night_only"/>
+                        </group>
+                    </group>
+                    <group string="Hazards">
+                        <field name="hazards" nolabel="1"/>
+                    </group>
+                    <group string="Waypoints / Notes">
+                        <field name="waypoints" nolabel="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_eh_log_project_cargo_route_survey" model="ir.actions.act_window">
+        <field name="name">Route Surveys</field>
+        <field name="res_model">eh.log.project.cargo.route.survey</field>
+        <field name="view_mode">list,form</field>
+        <field name="views" eval="[(False, 'list'), (False, 'form')]"/>
+    </record>
+
+</odoo>

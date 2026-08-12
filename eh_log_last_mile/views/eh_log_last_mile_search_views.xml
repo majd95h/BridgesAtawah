@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_eh_log_last_mile_wave_search_full" model="ir.ui.view">
+        <field name="name">eh.log.last.mile.wave.search.full</field>
+        <field name="model">eh.log.last.mile.wave</field>
+        <field name="arch" type="xml">
+            <search string="Search Waves">
+                <field name="name"/>
+                <field name="driver_id"/>
+                <field name="vehicle_id"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+
+                <separator/>
+                <filter name="filter_state_draft" string="Draft" domain="[('state', '=', 'draft')]"/>
+                <filter name="filter_state_dispatched" string="Dispatched" domain="[('state', '=', 'dispatched')]"/>
+                <filter name="filter_state_in_progress" string="In Progress" domain="[('state', '=', 'in_progress')]"/>
+                <filter name="filter_state_completed" string="Completed" domain="[('state', '=', 'completed')]"/>
+                <filter name="filter_state_closed" string="Closed" domain="[('state', '=', 'closed')]"/>
+                <filter name="filter_state_open" string="Open" domain="[('state', 'not in', ('closed', 'cancelled'))]"/>
+
+                <separator/>
+                <filter name="filter_today" string="Today"
+                        domain="[('scheduled_date', '=', context_today().strftime('%Y-%m-%d'))]"/>
+                <filter name="filter_tomorrow" string="Tomorrow"
+                        domain="[('scheduled_date', '=', (context_today() + relativedelta(days=1)).strftime('%Y-%m-%d'))]"/>
+                <filter name="filter_this_week" string="This Week"
+                        domain="[('scheduled_date', '&gt;=', (context_today() - relativedelta(days=context_today().weekday())).strftime('%Y-%m-%d')),
+                                  ('scheduled_date', '&lt;=', (context_today() + relativedelta(days=6 - context_today().weekday())).strftime('%Y-%m-%d'))]"/>
+
+                <separator/>
+                <filter name="filter_cod_outstanding" string="COD Outstanding"
+                        domain="[('cod_outstanding', '&gt;', 0)]"/>
+
+                <separator/>
+                <group>
+                    <filter name="group_by_state" string="State" context="{'group_by': 'state'}"/>
+                    <filter name="group_by_driver" string="Driver" context="{'group_by': 'driver_id'}"/>
+                    <filter name="group_by_vehicle" string="Vehicle" context="{'group_by': 'vehicle_id'}"/>
+                    <filter name="group_by_date" string="Scheduled Date" context="{'group_by': 'scheduled_date'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="view_eh_log_last_mile_delivery_search_full" model="ir.ui.view">
+        <field name="name">eh.log.last.mile.delivery.search.full</field>
+        <field name="model">eh.log.last.mile.delivery</field>
+        <field name="arch" type="xml">
+            <search string="Search Deliveries">
+                <field name="name"/>
+                <field name="customer_id"/>
+                <field name="customer_reference"/>
+                <field name="wave_id"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+
+                <separator/>
+                <filter name="filter_state_scheduled" string="Scheduled" domain="[('state', '=', 'scheduled')]"/>
+                <filter name="filter_state_out_for_delivery" string="Out for Delivery" domain="[('state', '=', 'out_for_delivery')]"/>
+                <filter name="filter_state_delivered" string="Delivered" domain="[('state', '=', 'delivered')]"/>
+                <filter name="filter_state_failed" string="Failed" domain="[('state', '=', 'failed')]"/>
+                <filter name="filter_state_returned" string="Returned" domain="[('state', '=', 'returned')]"/>
+                <filter name="filter_state_open" string="Open"
+                        domain="[('state', 'in', ('scheduled', 'out_for_delivery'))]"/>
+
+                <separator/>
+                <filter name="filter_cod_required" string="COD Required"
+                        domain="[('cod_amount', '&gt;', 0)]"/>
+                <filter name="filter_multi_attempts" string="Multiple Attempts"
+                        domain="[('attempt_count', '&gt;', 1)]"/>
+
+                <separator/>
+                <filter name="filter_window_today" string="Window Today"
+                        domain="[('scheduled_window_start', '&gt;=', context_today().strftime('%Y-%m-%d 00:00:00')),
+                                  ('scheduled_window_start', '&lt;=', context_today().strftime('%Y-%m-%d 23:59:59'))]"/>
+                <filter name="filter_window_tomorrow" string="Window Tomorrow"
+                        domain="[('scheduled_window_start', '&gt;=', (context_today() + relativedelta(days=1)).strftime('%Y-%m-%d 00:00:00')),
+                                  ('scheduled_window_start', '&lt;=', (context_today() + relativedelta(days=1)).strftime('%Y-%m-%d 23:59:59'))]"/>
+
+                <separator/>
+                <group>
+                    <filter name="group_by_state" string="State" context="{'group_by': 'state'}"/>
+                    <filter name="group_by_customer" string="Customer" context="{'group_by': 'customer_id'}"/>
+                    <filter name="group_by_wave" string="Wave" context="{'group_by': 'wave_id'}"/>
+                    <filter name="group_by_window_day" string="Window Day"
+                            context="{'group_by': 'scheduled_window_start:day'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+</odoo>

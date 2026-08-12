@@ -1,0 +1,1452 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* eh_log_customs
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-01 04:33+0000\n"
+"PO-Revision-Date: 2026-07-01 04:33+0000\n"
+"Last-Translator: ERP Heritage <info@erpheritage.com.au>\n"
+"Language-Team: Dutch\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid "(none)"
+msgstr "(geen)"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid ""
+"<i class=\"fa fa-id-card-o\" style=\"font-size:1.6rem;color:#D4A055;\" "
+"title=\"Customs declaration\"/>"
+msgstr ""
+"<i class=\"fa fa-id-card-o\" style=\"font-size:1.6rem;color:#D4A055;\" "
+"title=\"Douaneaangifte\"/>"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__account_number
+msgid "Account Number"
+msgstr "Rekeningnummer"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__account_number
+msgid "Account number issued by the customs authority."
+msgstr "Rekeningnummer uitgegeven door de douaneautoriteit."
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__message_needaction
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__message_needaction
+msgid "Action Needed"
+msgstr "Actie gevraagd"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__active
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__active
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__active
+msgid "Active"
+msgstr "Actief"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__activity_ids
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__activity_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_customs_declaration_activity
+msgid "Activities"
+msgstr "Activiteiten"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__activity_exception_decoration
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Activiteit uitzondering decoratie"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__activity_state
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__activity_state
+msgid "Activity State"
+msgstr "Activiteitsfase"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__activity_type_icon
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Activiteitstype icoon"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__regulator_profile_id
+msgid ""
+"Adapter profile through which this declaration is submitted. Country packs "
+"ship default profiles; operators pick the right one per declaration."
+msgstr ""
+"Adapterprofiel waarmee deze aangifte wordt ingediend. Landenpakketten "
+"leveren standaardprofielen; operators kiezen het juiste profiel per "
+"aangifte."
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__amount
+msgid "Amount"
+msgstr "Bedrag"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_61
+msgid "Apparel, knitted or crocheted"
+msgstr "Kleding, gebreid of gehaakt"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_62
+msgid "Apparel, not knitted or crocheted"
+msgstr "Kleding, niet gebreid of gehaakt"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_73
+msgid "Articles of iron or steel"
+msgstr "Artikelen van ijzer of staal"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration__state__assessed
+msgid "Assessed"
+msgstr "Beoordeeld"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__assessed_at
+msgid "Assessed At"
+msgstr "Beoordeeld op"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__message_attachment_count
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__message_attachment_count
+msgid "Attachment Count"
+msgstr "Aantal bijlagen"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_deferment_account_form
+msgid "Balance"
+msgstr "Saldo"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_22
+msgid "Beverages, spirits, vinegar"
+msgstr "Dranken, sterke drank, azijn"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__broker_reference
+msgid "Broker Reference"
+msgstr "Makelaarsreferentie"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__customs_value
+msgid ""
+"CIF value declared to customs. Duty and VAT are computed against this. "
+"Discrepancy between this and the supplier invoice is the #1 cause of "
+"regulator queries."
+msgstr ""
+"Aan de douane opgegeven CIF-waarde. Invoerrecht en VAT worden hierop "
+"berekend. Een verschil tussen deze waarde en de leveranciersfactuur is de "
+"belangrijkste oorzaak van vragen van toezichthouders."
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Cancel"
+msgstr "Annuleren"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration__state__cancelled
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_deferment_entry__state__cancelled
+msgid "Cancelled"
+msgstr "Geannuleerd"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_hs_code__level__chapter
+msgid "Chapter (2 digits)"
+msgstr "Hoofdstuk (2 cijfers)"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_hs_code_search
+msgid "Chapters"
+msgstr "Hoofdstukken"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__child_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_hs_code_form
+msgid "Children"
+msgstr "Onderliggende"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration__state__cleared
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "Cleared"
+msgstr "Gecleard"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__cleared_at
+msgid "Cleared At"
+msgstr "Gecleard op"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Close"
+msgstr "Sluiten"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration__state__closed
+msgid "Closed"
+msgstr "Gesloten"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__closed_at
+msgid "Closed At"
+msgstr "Gesloten op"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__code
+msgid "Code"
+msgstr ""
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__company_ids
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__company_ids
+msgid "Companies"
+msgstr "Bedrijven"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__company_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__company_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__company_id
+msgid "Company"
+msgstr "Bedrijf"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__country_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__country_id
+msgid "Country"
+msgstr "Land"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__country_of_origin_id
+msgid "Country of Origin"
+msgstr "Land van herkomst"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "Created Month"
+msgstr "Aangemaakt maand"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "Created Today"
+msgstr "Vandaag aangemaakt"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__create_uid
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__create_uid
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__create_uid
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__create_uid
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__create_uid
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__create_uid
+msgid "Created by"
+msgstr "Aangemaakt door"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__create_date
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__create_date
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__create_date
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__create_date
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__create_date
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__create_date
+msgid "Created on"
+msgstr "Aangemaakt op"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_deferment_entry__entry_kind__credit
+msgid "Credit (top-up)"
+msgstr "Credit (aanvulling)"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__currency_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__currency_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__currency_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__currency_id
+msgid "Currency"
+msgstr "Valuta"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__current_balance
+msgid "Current Balance"
+msgstr "Huidige saldo"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__customer_id
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "Customer"
+msgstr "Klant"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_pivot
+msgid "Customs Analysis"
+msgstr "Douaneanalyse"
+
+#. module: eh_log_customs
+#: model:ir.model,name:eh_log_customs.model_eh_log_customs_declaration
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__declaration_id
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Customs Declaration"
+msgstr "Douaneaangifte"
+
+#. module: eh_log_customs
+#: model:ir.model,name:eh_log_customs.model_eh_log_customs_declaration_line
+msgid "Customs Declaration Line"
+msgstr "Douaneaangifteregel"
+
+#. module: eh_log_customs
+#: model:ir.model,name:eh_log_customs.model_eh_log_customs_declaration_type
+msgid "Customs Declaration Type"
+msgstr "Douaneaangiftetype"
+
+#. module: eh_log_customs
+#: model:ir.actions.act_window,name:eh_log_customs.action_eh_log_customs_declaration
+#: model:ir.model.fields,field_description:eh_log_customs.field_sale_order__eh_log_customs_declaration_count
+#: model:ir.model.fields,field_description:eh_log_customs.field_sale_order__eh_log_customs_declaration_ids
+#: model:ir.ui.menu,name:eh_log_customs.menu_eh_log_customs_declarations
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_list
+msgid "Customs Declarations"
+msgstr "Douaneaangiften"
+
+#. module: eh_log_customs
+#: model:ir.model,name:eh_log_customs.model_eh_log_customs_deferment_account
+msgid "Customs Deferment Account"
+msgstr "Douane-uitstelrekening"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__customs_value
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__customs_value
+msgid "Customs Value"
+msgstr "Douanewaarde"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid ""
+"Customs declaration %(name)s cannot move from %(current)s to %(target)s. "
+"Allowed transitions from %(current)s: %(allowed)s."
+msgstr ""
+"Douaneaangifte %(name)s kan niet van %(current)s naar %(target)s gaan. "
+"Toegestane overgangen vanaf %(current)s: %(allowed)s."
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid "Customs declaration %(name)s moved to %(state)s."
+msgstr "Douaneaangifte %(name)s verplaatst naar %(state)s."
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Customs value"
+msgstr "Douanewaarde"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__regulator_reference
+msgid ""
+"Customs-issued declaration number returned at submission. Captured from the "
+"adapter response."
+msgstr ""
+"Door de douane uitgegeven aangiftenummer dat bij indiening wordt "
+"teruggegeven. Vastgelegd uit het adapterantwoord."
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_deferment_entry__entry_kind__debit
+msgid "Debit (duty payment or adjustment)"
+msgstr "Debet (betaling van rechten of correctie)"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__declaration_id
+msgid "Declaration"
+msgstr "Aangifte"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid ""
+"Declaration %(name)s cannot be marked ready. Resolve the following before re-trying:\n"
+"\n"
+"- %(list)s"
+msgstr ""
+"Aangifte %(name)s kan niet als gereed worden gemarkeerd. Los het volgende op voordat u het opnieuw probeert:\n"
+"\n"
+"- %(list)s"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__declaration_date
+msgid "Declaration Date"
+msgstr "Aangiftedatum"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__declaration_type_id
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_type_form
+msgid "Declaration Type"
+msgstr "Type verklaring"
+
+#. module: eh_log_customs
+#: model:ir.actions.act_window,name:eh_log_customs.action_eh_log_customs_declaration_type
+#: model:ir.ui.menu,name:eh_log_customs.menu_eh_log_customs_declaration_types
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_type_list
+msgid "Declaration Types"
+msgstr "Aangiftetypen"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Declaration date"
+msgstr "Aangiftedatum"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid ""
+"Declaration has no HS lines. Add at least one HS code with customs value "
+"before marking ready."
+msgstr ""
+"Aangifte heeft geen HS-regels. Voeg minimaal één HS-code met douanewaarde "
+"toe voordat u het als gereed markeert."
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid ""
+"Declaration type %(type)s requires a deferment account but none is set on "
+"declaration %(name)s. Pick a deferment account."
+msgstr ""
+"Aangiftetype %(type)s vereist een uitstelrekening, maar er is er geen "
+"ingesteld op aangifte %(name)s. Kies een uitstelrekening."
+
+#. module: eh_log_customs
+#: model:ir.model.constraint,message:eh_log_customs.constraint_eh_log_customs_declaration_type_code_country_unique
+msgid "Declaration type code must be unique per country."
+msgstr "De aangiftetypecode moet uniek zijn per land."
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_graph
+msgid "Declarations by State"
+msgstr "Aangiften per status"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_hs_code__duty_rate_pct
+msgid ""
+"Default ad valorem duty rate at this code. Can be overridden per declaration"
+" line."
+msgstr ""
+"Standaard ad-valoremrecht bij deze code. Kan per aangifteregel worden "
+"overschreven."
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_hs_code__vat_rate_pct
+msgid ""
+"Default destination VAT rate. Country packs set this per national overlay."
+msgstr ""
+"Standaard btw-tarief van bestemming. Landpakketten stellen dit in per "
+"nationale overlay."
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__deferment_account_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__account_id
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_deferment_account_form
+msgid "Deferment Account"
+msgstr "Uitstelrekening"
+
+#. module: eh_log_customs
+#: model:ir.model,name:eh_log_customs.model_eh_log_customs_deferment_entry
+msgid "Deferment Account Entry"
+msgstr "Uitstelrekeningboeking"
+
+#. module: eh_log_customs
+#: model:ir.actions.act_window,name:eh_log_customs.action_eh_log_customs_deferment_account
+#: model:ir.ui.menu,name:eh_log_customs.menu_eh_log_customs_deferment_accounts
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_deferment_account_list
+msgid "Deferment Accounts"
+msgstr "Uitstelrekeningen"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid ""
+"Deferment account %(account)s has balance %(balance)s, less than the "
+"declaration payable %(payable)s. Top up before submission."
+msgstr ""
+"Uitstelrekening %(account)s heeft saldo %(balance)s, minder dan het te "
+"betalen aangiftebedrag %(payable)s. Vul aan vóór indiening."
+
+#. module: eh_log_customs
+#: model:ir.model.constraint,message:eh_log_customs.constraint_eh_log_customs_deferment_account_account_number_per_co_dcd2e1b6
+msgid "Deferment account number must be unique per (regulator, company)."
+msgstr "Uitstelrekeningnummer moet uniek zijn per (regulator, company)."
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__description
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__description
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__description
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__name
+msgid "Description"
+msgstr "Omschrijving"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__direction
+msgid "Direction"
+msgstr "Richting"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__display_name
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__display_name
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__display_name
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__display_name
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__display_name
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__display_name
+#: model:ir.model.fields,field_description:eh_log_customs.field_sale_order__display_name
+msgid "Display Name"
+msgstr "Weergavenaam"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration__state__draft
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_deferment_entry__state__draft
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "Draft"
+msgstr "Concept"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__duty_amount
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__duty_amount
+msgid "Duty"
+msgstr "Invoerrecht"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Duty + VAT"
+msgstr "Invoerrecht + VAT"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__duty_rate_pct
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__duty_rate_pct
+msgid "Duty Rate (%)"
+msgstr "Invoerrechttarief (%)"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid "Duty and VAT for declaration %(name)s"
+msgstr "Invoerrecht en VAT voor aangifte %(name)s"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_85
+msgid "Electrical machinery and equipment"
+msgstr "Elektrische machines en apparatuur"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_hs_code__country_id
+msgid ""
+"Empty for WCO-level codes (chapter, heading, subheading). Country pack "
+"national overlays carry the country."
+msgstr ""
+"Leeg voor codes op WCO-niveau (hoofdstuk, post, onderverdeling). Nationale "
+"overlays van het landenpakket dragen het land."
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__entry_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_deferment_account_form
+msgid "Entries"
+msgstr "Boekingen"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__entry_date
+msgid "Entry Date"
+msgstr "Invoerdatum"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration_type__direction__export
+msgid "Export"
+msgstr "Exporteren"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.declaration.type,name:eh_log_customs.dt_export
+msgid "Export Declaration"
+msgstr "Exportaangifte"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Exporter"
+msgstr "Exporteur"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__exporter_id
+msgid "Exporter or Shipper"
+msgstr "Exporteur of verzender"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_03
+msgid "Fish, crustaceans, molluscs"
+msgstr "Vis, schaaldieren, weekdieren"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__message_follower_ids
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__message_follower_ids
+msgid "Followers"
+msgstr "Volgers"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__message_partner_ids
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Volgers (Partners)"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__activity_type_icon
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Font awesome icoon bijv. fa-tasks"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_64
+msgid "Footwear, gaiters and similar"
+msgstr "Schoeisel, beenkappen en dergelijke"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__freight_job_id
+msgid "Freight Job"
+msgstr "Vrachtopdracht"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_94
+msgid "Furniture, lamps, prefabricated buildings"
+msgstr "Meubels, lampen, geprefabriceerde gebouwen"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_hs_code_search
+msgid "Group by Country"
+msgstr "Groeperen op land"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search
+msgid "Group by Regulator"
+msgstr "Groeperen op toezichthouder"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search
+msgid "Group by State"
+msgstr "Groeperen op status"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search
+msgid "Group by Type"
+msgstr "Groeperen op type"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__hs_code_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__code
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_hs_code_form
+msgid "HS Code"
+msgstr "HS-code"
+
+#. module: eh_log_customs
+#: model:ir.actions.act_window,name:eh_log_customs.action_eh_log_customs_hs_code
+#: model:ir.ui.menu,name:eh_log_customs.menu_eh_log_customs_hs_codes
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_hs_code_list
+msgid "HS Codes"
+msgstr "HS-codes"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__line_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "HS Lines"
+msgstr "HS-regels"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_hs_code.py:0
+msgid ""
+"HS code %(code)s has invalid length %(length)d. Allowed lengths: 2 "
+"(chapter), 4 (heading), 6 (subheading), 8 or 10 (national)."
+msgstr ""
+"HS-code %(code)s heeft een ongeldige lengte %(length)d. Toegestane lengtes: "
+"2 (hoofdstuk), 4 (post), 6 (onderverdeling), 8 of 10 (nationaal)."
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_hs_code.py:0
+msgid ""
+"HS code %(code)s is not numeric. HS codes are all-digit, length 2 / 4 / 6 / "
+"8 / 10."
+msgstr ""
+"HS-code %(code)s is niet numeriek. HS-codes bestaan uitsluitend uit cijfers,"
+" lengte 2 / 4 / 6 / 8 / 10."
+
+#. module: eh_log_customs
+#: model:ir.model.constraint,message:eh_log_customs.constraint_eh_log_customs_hs_code_code_country_unique
+msgid "HS code must be unique per country (empty country = WCO scope)."
+msgstr "HS-code moet uniek zijn per land (leeg land = WCO-bereik)."
+
+#. module: eh_log_customs
+#: model:ir.model,name:eh_log_customs.model_eh_log_customs_hs_code
+msgid "Harmonised System (HS) Code"
+msgstr "Harmonised System (HS)-code"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__has_message
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__has_message
+msgid "Has Message"
+msgstr "Heeft bericht"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_hs_code__level__heading
+msgid "Heading (4 digits)"
+msgstr "Kop (4 cijfers)"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_hs_code_search
+msgid "Headings"
+msgstr "Hoofdtitels"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__id
+#: model:ir.model.fields,field_description:eh_log_customs.field_sale_order__id
+msgid "ID"
+msgstr ""
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_type_form
+msgid "IMP"
+msgstr ""
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__activity_exception_icon
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__activity_exception_icon
+msgid "Icon"
+msgstr "Icoon"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__activity_exception_icon
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Icoon om uitzondering op activiteit aan te geven."
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__message_needaction
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Indien aangevinkt vragen nieuwe berichten je aandacht."
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__message_has_error
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__message_has_sms_error
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__message_has_error
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Indien aangevinkt hebben sommige berichten een leveringsfout."
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration_type__direction__import
+msgid "Import"
+msgstr "Importeren"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__declaration_type_id
+msgid ""
+"Import / Export / Transit / Re-export / Temporary. Determines which fields "
+"are mandatory and which regulator endpoint the adapter posts to."
+msgstr ""
+"Import / Export / Transit / Wederuitvoer / Tijdelijk. Bepaalt welke velden "
+"verplicht zijn en naar welk regelgeversendpoint de adapter post."
+
+#. module: eh_log_customs
+#: model:eh.log.customs.declaration.type,name:eh_log_customs.dt_import
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_type_form
+msgid "Import Declaration"
+msgstr "Invoeraangifte"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Importer"
+msgstr "Importeur"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__importer_id
+msgid "Importer or Consignee"
+msgstr "Importeur of geadresseerde"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__broker_reference
+msgid ""
+"Internal broker reference (your file number). Surfaces on the regulator "
+"submission and on customer invoices."
+msgstr ""
+"Interne makelaarsreferentie (uw dossiernummer). Verschijnt op de indiening "
+"bij de toezichthouder en op klantfacturen."
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_72
+msgid "Iron and steel"
+msgstr "IJzer en staal"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__message_is_follower
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__message_is_follower
+msgid "Is Follower"
+msgstr "Is een volger"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__entry_kind
+msgid "Kind"
+msgstr "Soort"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__write_uid
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__write_uid
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__write_uid
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__write_uid
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__write_uid
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__write_uid
+msgid "Last Updated by"
+msgstr "Laatst bijgewerkt door"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__write_date
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__write_date
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__write_date
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__write_date
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__write_date
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__write_date
+msgid "Last Updated on"
+msgstr "Laatst bijgewerkt op"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__level
+msgid "Level"
+msgstr "Niveau"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid "Line %(seq)s has no HS code."
+msgstr "Regel %(seq)s heeft geen HS-code."
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid "Line %(seq)s has zero customs value."
+msgstr "Regel %(seq)s heeft een douanewaarde van nul."
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__line_count
+msgid "Lines"
+msgstr "Regels"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Linkage"
+msgstr "Koppeling"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_01
+msgid "Live animals"
+msgstr "Levende dieren"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__is_low
+msgid "Low"
+msgstr "Laag"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__low_balance_threshold
+msgid "Low Balance Threshold"
+msgstr "Drempel voor laag saldo"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_84
+msgid "Machinery, mechanical appliances"
+msgstr "Machines, mechanische toestellen"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Mark Assessed"
+msgstr "Markeren als beoordeeld"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Mark Cleared"
+msgstr "Markeren als vrijgegeven"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Mark Queried"
+msgstr "Markeren als opgevraagd"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Mark Ready"
+msgstr "Markeren als gereed"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__message_has_error
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__message_has_error
+msgid "Message Delivery error"
+msgstr "Bericht afleverfout"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__message_ids
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__message_ids
+msgid "Messages"
+msgstr "Berichten"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_27
+msgid "Mineral fuels, oils"
+msgstr "Minerale brandstoffen, oliën"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__my_activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Mijn activiteit deadline"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "My Declarations"
+msgstr "Mijn aangiften"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__name
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__name
+msgid "Name"
+msgstr "Naam"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_hs_code__level__national_10
+msgid "National (10 digits)"
+msgstr "Nationaal (10 cijfers)"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_hs_code__level__national_8
+msgid "National (8 digits)"
+msgstr "Nationaal (8 cijfers)"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid "New"
+msgstr "Nieuw"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__activity_calendar_event_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "Volgende activiteitenafspraak"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Volgende activiteit deadline"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__activity_summary
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__activity_summary
+msgid "Next Activity Summary"
+msgstr "Volgende activiteit overzicht"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__activity_type_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__activity_type_id
+msgid "Next Activity Type"
+msgstr "Volgende activiteit type"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid ""
+"No adapter is registered for provider '%(provider)s'. Install the country "
+"pack that owns this regulator. Currently registered: %(list)s."
+msgstr ""
+"Er is geen adapter geregistreerd voor provider '%(provider)s'. Installeer "
+"het landenpakket dat deze toezichthouder bezit. Momenteel geregistreerd: "
+"%(list)s."
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__notes
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__notes
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__notes
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__notes
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__notes
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_deferment_account_form
+msgid "Notes"
+msgstr "Notities"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__message_needaction_counter
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Aantal acties"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__message_has_error_counter
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__message_has_error_counter
+msgid "Number of errors"
+msgstr "Aantal fouten"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__message_needaction_counter
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Aantal berichten die actie vereisen"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__message_has_error_counter
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Aantal berichten met leveringsfout"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_hs_code__code
+msgid ""
+"Numeric. 2 digits = chapter, 4 = heading, 6 = WCO subheading, 8 or 10 = "
+"national tariff line."
+msgstr ""
+"Numeriek. 2 cijfers = hoofdstuk, 4 = post, 6 = WCO-onderverdeling, 8 of 10 ="
+" nationale tariefregel."
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "Open"
+msgstr "Openen"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__opening_balance
+msgid "Opening Balance"
+msgstr "Openingssaldo"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__name
+msgid ""
+"Operator-friendly label (e.g. 'Mirsal Deferment, Acme Logistics LLC, AED')."
+msgstr ""
+"Operatorvriendelijk label (bijv. 'Mirsal Deferment, Acme Logistics LLC, "
+"AED')."
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration_type__country_id
+msgid ""
+"Optional country scope. Empty means the type applies globally (used by the "
+"universal seed). Country packs set the country to scope their authority-"
+"specific variants."
+msgstr ""
+"Optionele landenscope. Leeg betekent dat het type wereldwijd van toepassing "
+"is (gebruikt door de universele seed). Landenpakketten stellen het land in "
+"om hun autoriteitsspecifieke varianten af te bakenen."
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration_type__direction__other
+msgid "Other"
+msgstr "Overige"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration__state__paid
+msgid "Paid"
+msgstr "Betaald"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__parent_id
+msgid "Parent"
+msgstr "Bovenliggend"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__parent_path
+msgid "Parent Path"
+msgstr "Bovenliggend pad"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Parties"
+msgstr "Partijen"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Pay (Debit Deferment)"
+msgstr "Betalen (debetuitstel)"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_30
+msgid "Pharmaceutical products"
+msgstr "Farmaceutische producten"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_39
+msgid "Plastics and articles thereof"
+msgstr "Kunststoffen en werken daarvan"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_deferment_entry__state__posted
+msgid "Posted"
+msgstr "Geboekt"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__posted_at
+msgid "Posted At"
+msgstr "Geboekt op"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__quantity
+msgid "Quantity"
+msgstr "Hoeveelheid"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "Queried"
+msgstr "Bevraagd"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration__state__queried
+msgid "Queried by Customs"
+msgstr "Bevraagd door de douane"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__rating_ids
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__rating_ids
+msgid "Ratings"
+msgstr "Beoordelingen"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration_type__direction__re_export
+msgid "Re-export"
+msgstr "Opnieuw exporteren"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.declaration.type,name:eh_log_customs.dt_re_export
+msgid "Re-export Declaration"
+msgstr "Wederuitvoeraangifte"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration__state__ready
+msgid "Ready"
+msgstr "Gereed"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__name
+msgid "Reference"
+msgstr "Referentie"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_kanban
+msgid "Reg ref:"
+msgstr "Reg.ref.:"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__regulator_profile_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__regulator_profile_id
+msgid "Regulator Profile"
+msgstr "Toezichthouderprofiel"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Regulator Ref:"
+msgstr "Toezichthouderref.:"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__regulator_reference
+msgid "Regulator Reference"
+msgstr "Toezichthouderreferentie"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid ""
+"Regulator profile is not set. Pick the regulator this declaration is filed "
+"with."
+msgstr ""
+"Toezichthouderprofiel is niet ingesteld. Kies de toezichthouder waarbij deze"
+" aangifte wordt ingediend."
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid "Regulator rejected submission. Code %(code)s: %(message)s"
+msgstr ""
+"Toezichthouder heeft de indiening afgewezen. Code %(code)s: %(message)s"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration__state__rejected
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "Rejected"
+msgstr "Afgewezen"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__requires_deferment
+msgid "Requires Deferment Account"
+msgstr "Vereist uitstelrekening"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__activity_user_id
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__activity_user_id
+msgid "Responsible User"
+msgstr "Verantwoordelijke gebruiker"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_hs_code_form
+msgid "Routers, switches, and similar"
+msgstr "Routers, switches en soortgelijke apparaten"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__message_has_sms_error
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "SMS fout bij versturen"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__sale_order_id
+msgid "Sale Order"
+msgstr "Verkooporder"
+
+#. module: eh_log_customs
+#: model:ir.model,name:eh_log_customs.model_sale_order
+msgid "Sales Order"
+msgstr "Verkooporder"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "Search Declarations"
+msgstr "Aangiftes zoeken"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__sequence
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_type__sequence
+msgid "Sequence"
+msgstr "Reeks"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_entry__declaration_id
+msgid ""
+"Set when the entry is auto-posted by a declaration submission. Empty for "
+"manual top-ups and adjustments."
+msgstr ""
+"Ingesteld wanneer de boeking automatisch wordt geboekt door een aangifte-"
+"indiening. Leeg voor handmatige aanvullingen en aanpassingen."
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration_type__code
+msgid ""
+"Stable identifier (IMP, EXP, TRA, TRF, REX, TADM, ...). Country packs prefix"
+" their codes with an ISO country code (AE-IMP-LOCAL, SA-IMP-SABER, etc.) to "
+"namespace without colliding with the universal codes."
+msgstr ""
+"Stabiele identificatie (IMP, EXP, TRA, TRF, REX, TADM, ...). Landpakketten "
+"laten hun codes voorafgaan door een ISO-landcode (AE-IMP-LOCAL, SA-IMP-"
+"SABER, enz.) om een naamruimte te creëren zonder te botsen met de universele"
+" codes."
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__state
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_entry__state
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "State"
+msgstr "Status"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__activity_state
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Status gebaseerd op activiteiten\n"
+"Te laat: Datum is al gepasseerd\n"
+"Vandaag: Datum van activiteit is vandaag\n"
+"Gepland: Toekomstige activiteiten."
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_hs_code__level__subheading
+msgid "Subheading (6 digits)"
+msgstr "Subkop (6 cijfers)"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_hs_code_search
+msgid "Subheadings"
+msgstr "Subkoppen"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid ""
+"Submission failed (status %(status)s). The declaration stays in 'ready'. Re-"
+"submit from the form or replay from the message log."
+msgstr ""
+"Indiening mislukt (status %(status)s). De aangifte blijft op 'ready' staan. "
+"Dien opnieuw in vanuit het formulier of speel opnieuw af vanuit het "
+"berichtenlogboek."
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Submit to Regulator"
+msgstr "Indienen bij toezichthouder"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration__state__submitted
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "Submitted"
+msgstr "Verstuurd"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__submitted_at
+msgid "Submitted At"
+msgstr "Ingediend op"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__payable_amount
+msgid ""
+"Sum of duty plus VAT plus other charges. Drawn from the deferment account on"
+" assessment."
+msgstr ""
+"Som van invoerrechten plus VAT plus overige kosten. Bij aanslag afgeboekt "
+"van de uitstelrekening."
+
+#. module: eh_log_customs
+#: model:eh.log.customs.declaration.type,name:eh_log_customs.dt_temporary
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration_type__direction__temporary
+msgid "Temporary Admission"
+msgstr "Tijdelijke invoer"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "This Month"
+msgstr "Deze maand"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Timeline"
+msgstr "Tijdlijn"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__payable_amount
+msgid "Total Payable"
+msgstr "Totaal te betalen"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Totals"
+msgstr "Totalen"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration_type__direction__transfer
+msgid "Transfer"
+msgstr "Verplaatsing"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.declaration.type,name:eh_log_customs.dt_transfer
+msgid "Transfer Declaration"
+msgstr "Overdrachtsverklaring"
+
+#. module: eh_log_customs
+#: model:ir.model.fields.selection,name:eh_log_customs.selection__eh_log_customs_declaration_type__direction__transit
+msgid "Transit"
+msgstr ""
+
+#. module: eh_log_customs
+#: model:eh.log.customs.declaration.type,name:eh_log_customs.dt_transit
+msgid "Transit Declaration"
+msgstr "Transitaangifte"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_search_full
+msgid "Type"
+msgstr "Soort"
+
+#. module: eh_log_customs
+#: model_terms:ir.ui.view,arch_db:eh_log_customs.view_eh_log_customs_declaration_form
+msgid "Type and Authority"
+msgstr "Type en autoriteit"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__activity_exception_decoration
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Type van de geregistreerde uitzonderingsactiviteit."
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__unit_value
+msgid "Unit Value"
+msgstr "Eenheidswaarde"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__vat_amount
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__vat_amount
+msgid "VAT"
+msgstr "Btw"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration_line__vat_rate_pct
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_hs_code__vat_rate_pct
+msgid "VAT Rate (%)"
+msgstr "VAT-tarief (%)"
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_87
+msgid "Vehicles other than rail or tram"
+msgstr "Andere voertuigen dan trein of tram"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_declaration__website_message_ids
+#: model:ir.model.fields,field_description:eh_log_customs.field_eh_log_customs_deferment_account__website_message_ids
+msgid "Website Messages"
+msgstr "Websiteberichten"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration__website_message_ids
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__website_message_ids
+msgid "Website communication history"
+msgstr "Website communicatie geschiedenis"
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_declaration_type__requires_deferment
+msgid ""
+"When True, declarations of this type cannot move past submitted without a "
+"deferment account configured. Suitable for import declarations where duty "
+"must be paid before release."
+msgstr ""
+"Bij True kunnen aangiften van dit type niet voorbij ingediend gaan zonder "
+"een geconfigureerd uitstelrekening. Geschikt voor invoeraangiften waarbij "
+"rechten vóór vrijgave moeten worden betaald."
+
+#. module: eh_log_customs
+#: model:ir.model.fields,help:eh_log_customs.field_eh_log_customs_deferment_account__low_balance_threshold
+msgid ""
+"When current balance drops below this value, a warning activity is raised to"
+" the account owner."
+msgstr ""
+"Wanneer het huidige saldo onder deze waarde daalt, wordt een "
+"waarschuwingsactiviteit aangemaakt voor de accounteigenaar."
+
+#. module: eh_log_customs
+#: model:eh.log.customs.hs.code,name:eh_log_customs.hs_ch_44
+msgid "Wood and articles of wood"
+msgstr "Hout en houtwaren"
+
+#. module: eh_log_customs
+#. odoo-python
+#: code:addons/eh_log_customs/models/eh_log_customs_declaration.py:0
+msgid ""
+"[EHL-CUSTOMS-DECL-001] State changes on a customs declaration must go "
+"through the action buttons. Direct writes are rejected."
+msgstr ""
+"[EHL-CUSTOMS-DECL-001] Statuswijzigingen op een douaneaangifte moeten via de"
+" actieknoppen verlopen. Directe schrijfbewerkingen worden geweigerd."

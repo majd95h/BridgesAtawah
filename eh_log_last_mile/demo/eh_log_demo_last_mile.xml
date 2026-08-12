@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- Waves -->
+
+        <record id="demo_wave_001" model="eh.log.last.mile.wave">
+            <field name="scheduled_date" eval="DateTime.today().strftime('%Y-%m-%d')"/>
+            <field name="driver_id" ref="eh_log_transport.demo_t_driver_ahmed"/>
+            <field name="vehicle_id" ref="eh_log_transport.demo_vehicle_truck_01"/>
+        </record>
+
+        <record id="demo_wave_002" model="eh.log.last.mile.wave">
+            <field name="scheduled_date" eval="DateTime.today().strftime('%Y-%m-%d')"/>
+            <field name="driver_id" ref="eh_log_transport.demo_t_driver_omar"/>
+            <field name="vehicle_id" ref="eh_log_transport.demo_vehicle_truck_02"/>
+        </record>
+
+        <record id="demo_wave_003" model="eh.log.last.mile.wave">
+            <field name="scheduled_date" eval="DateTime.today().strftime('%Y-%m-%d')"/>
+            <field name="driver_id" ref="eh_log_transport.demo_t_driver_yousef"/>
+            <field name="vehicle_id" ref="eh_log_transport.demo_vehicle_truck_03"/>
+        </record>
+
+        <record id="demo_wave_004" model="eh.log.last.mile.wave">
+            <field name="scheduled_date" eval="(DateTime.today() + relativedelta(days=1)).strftime('%Y-%m-%d')"/>
+            <field name="driver_id" ref="eh_log_transport.demo_t_driver_ahmed"/>
+            <field name="vehicle_id" ref="eh_log_transport.demo_vehicle_truck_01"/>
+        </record>
+
+        <!-- Deliveries -->
+
+        <record id="demo_delivery_001" model="eh.log.last.mile.delivery">
+            <field name="wave_id" ref="demo_wave_001"/>
+            <field name="customer_id" ref="eh_log_base.demo_partner_alpha_trading"/>
+            <field name="customer_reference">DXB-LM-001</field>
+            <field name="scheduled_window_start" eval="(DateTime.now() + relativedelta(hours=1)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="scheduled_window_end" eval="(DateTime.now() + relativedelta(hours=3)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="package_count">3</field>
+            <field name="weight_kg">45</field>
+            <field name="cargo_description">Laptop accessories, sealed boxes</field>
+        </record>
+
+        <record id="demo_delivery_002" model="eh.log.last.mile.delivery">
+            <field name="wave_id" ref="demo_wave_001"/>
+            <field name="customer_id" ref="eh_log_base.demo_partner_falcon_industries"/>
+            <field name="customer_reference">DXB-LM-002</field>
+            <field name="scheduled_window_start" eval="(DateTime.now() + relativedelta(hours=2)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="scheduled_window_end" eval="(DateTime.now() + relativedelta(hours=4)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="package_count">5</field>
+            <field name="weight_kg">88</field>
+            <field name="cod_amount">1200</field>
+            <field name="cargo_description">Industrial parts</field>
+        </record>
+
+        <record id="demo_delivery_003" model="eh.log.last.mile.delivery">
+            <field name="wave_id" ref="demo_wave_001"/>
+            <field name="customer_id" ref="eh_log_base.demo_partner_arabian_food"/>
+            <field name="customer_reference">DXB-LM-003</field>
+            <field name="scheduled_window_start" eval="(DateTime.now() + relativedelta(hours=3)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="scheduled_window_end" eval="(DateTime.now() + relativedelta(hours=5)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="package_count">8</field>
+            <field name="weight_kg">120</field>
+            <field name="cargo_description">Frozen retail packs</field>
+        </record>
+
+        <record id="demo_delivery_004" model="eh.log.last.mile.delivery">
+            <field name="wave_id" ref="demo_wave_002"/>
+            <field name="customer_id" ref="eh_log_base.demo_partner_palm_retail"/>
+            <field name="customer_reference">DOH-LM-004</field>
+            <field name="scheduled_window_start" eval="(DateTime.now() + relativedelta(hours=2)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="scheduled_window_end" eval="(DateTime.now() + relativedelta(hours=4)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="package_count">12</field>
+            <field name="weight_kg">95</field>
+            <field name="cod_amount">850</field>
+        </record>
+
+        <record id="demo_delivery_005" model="eh.log.last.mile.delivery">
+            <field name="wave_id" ref="demo_wave_002"/>
+            <field name="customer_id" ref="eh_log_base.demo_partner_pearl_pharma"/>
+            <field name="customer_reference">BAH-LM-005</field>
+            <field name="scheduled_window_start" eval="(DateTime.now() + relativedelta(hours=4)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="scheduled_window_end" eval="(DateTime.now() + relativedelta(hours=6)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="package_count">2</field>
+            <field name="weight_kg">15</field>
+            <field name="cargo_description">Pharma cold-chain</field>
+        </record>
+
+        <record id="demo_delivery_006" model="eh.log.last.mile.delivery">
+            <field name="wave_id" ref="demo_wave_002"/>
+            <field name="customer_id" ref="eh_log_base.demo_partner_oasis_consumer"/>
+            <field name="customer_reference">KW-LM-006</field>
+            <field name="scheduled_window_start" eval="(DateTime.now() + relativedelta(hours=5)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="scheduled_window_end" eval="(DateTime.now() + relativedelta(hours=7)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="package_count">22</field>
+            <field name="weight_kg">310</field>
+            <field name="cod_amount">3200</field>
+        </record>
+
+        <record id="demo_delivery_007" model="eh.log.last.mile.delivery">
+            <field name="wave_id" ref="demo_wave_003"/>
+            <field name="customer_id" ref="eh_log_base.demo_partner_jeddah_apparel"/>
+            <field name="customer_reference">JED-LM-007</field>
+            <field name="scheduled_window_start" eval="(DateTime.now() + relativedelta(hours=2)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="scheduled_window_end" eval="(DateTime.now() + relativedelta(hours=4)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="package_count">4</field>
+            <field name="weight_kg">62</field>
+        </record>
+
+        <record id="demo_delivery_008" model="eh.log.last.mile.delivery">
+            <field name="wave_id" ref="demo_wave_003"/>
+            <field name="customer_id" ref="eh_log_base.demo_partner_najd_petrochem"/>
+            <field name="customer_reference">JUB-LM-008</field>
+            <field name="scheduled_window_start" eval="(DateTime.now() + relativedelta(hours=4)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="scheduled_window_end" eval="(DateTime.now() + relativedelta(hours=6)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="package_count">6</field>
+            <field name="weight_kg">180</field>
+        </record>
+
+        <record id="demo_delivery_009" model="eh.log.last.mile.delivery">
+            <field name="wave_id" ref="demo_wave_003"/>
+            <field name="customer_id" ref="eh_log_base.demo_partner_muscat_marine"/>
+            <field name="customer_reference">SOH-LM-009</field>
+            <field name="scheduled_window_start" eval="(DateTime.now() + relativedelta(hours=5)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="scheduled_window_end" eval="(DateTime.now() + relativedelta(hours=7)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="package_count">3</field>
+            <field name="weight_kg">42</field>
+            <field name="cod_amount">650</field>
+        </record>
+
+        <record id="demo_delivery_010" model="eh.log.last.mile.delivery">
+            <field name="wave_id" ref="demo_wave_004"/>
+            <field name="customer_id" ref="eh_log_base.demo_partner_alpha_trading"/>
+            <field name="customer_reference">DXB-LM-010</field>
+            <field name="scheduled_window_start" eval="(DateTime.now() + relativedelta(days=1, hours=2)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="scheduled_window_end" eval="(DateTime.now() + relativedelta(days=1, hours=4)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="package_count">7</field>
+            <field name="weight_kg">95</field>
+        </record>
+
+        <record id="demo_delivery_011" model="eh.log.last.mile.delivery">
+            <field name="wave_id" ref="demo_wave_004"/>
+            <field name="customer_id" ref="eh_log_base.demo_partner_falcon_industries"/>
+            <field name="customer_reference">DXB-LM-011</field>
+            <field name="scheduled_window_start" eval="(DateTime.now() + relativedelta(days=1, hours=3)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="scheduled_window_end" eval="(DateTime.now() + relativedelta(days=1, hours=5)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="package_count">2</field>
+            <field name="weight_kg">28</field>
+            <field name="cod_amount">450</field>
+        </record>
+
+        <record id="demo_delivery_012" model="eh.log.last.mile.delivery">
+            <field name="wave_id" ref="demo_wave_004"/>
+            <field name="customer_id" ref="eh_log_base.demo_partner_arabian_food"/>
+            <field name="customer_reference">DXB-LM-012</field>
+            <field name="scheduled_window_start" eval="(DateTime.now() + relativedelta(days=1, hours=4)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="scheduled_window_end" eval="(DateTime.now() + relativedelta(days=1, hours=6)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="package_count">15</field>
+            <field name="weight_kg">220</field>
+        </record>
+
+    </data>
+</odoo>

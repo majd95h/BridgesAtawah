@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- Profiles only. Runs are linked to freight jobs which are
+             auto-spawned via sale.order.action_confirm in the freight
+             demo file - we can't easily reference them by xmlid here. -->
+
+        <record id="demo_cc_profile_pharma" model="eh.log.cold.chain.profile">
+            <field name="code">PHARMA_2_8</field>
+            <field name="name">Pharma 2-8 degC</field>
+            <field name="category">pharma</field>
+            <field name="temperature_min">2.0</field>
+            <field name="temperature_max">8.0</field>
+        </record>
+
+        <record id="demo_cc_profile_chilled" model="eh.log.cold.chain.profile">
+            <field name="code">CHILL_0_4</field>
+            <field name="name">Fresh Foods 0-4 degC</field>
+            <field name="category">chilled</field>
+            <field name="temperature_min">0.0</field>
+            <field name="temperature_max">4.0</field>
+        </record>
+
+        <record id="demo_cc_profile_frozen" model="eh.log.cold.chain.profile">
+            <field name="code">FROZEN_M18</field>
+            <field name="name">Frozen at minus 18</field>
+            <field name="category">frozen</field>
+            <field name="temperature_min">-25.0</field>
+            <field name="temperature_max">-18.0</field>
+        </record>
+
+    </data>
+</odoo>

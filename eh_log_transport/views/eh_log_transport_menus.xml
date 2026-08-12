@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <menuitem id="menu_eh_log_transport_trips"
+                  name="Trips"
+                  parent="eh_log_base.menu_eh_log_operations"
+                  sequence="60"
+                  action="action_eh_log_transport_trip"
+                  groups="eh_log_base.group_eh_log_user"/>
+
+        <menuitem id="menu_eh_log_transport_vehicles"
+                  name="Vehicles"
+                  parent="eh_log_base.menu_eh_log_master_data"
+                  sequence="80"
+                  action="action_eh_log_transport_vehicle"
+                  groups="eh_log_base.group_eh_log_manager"/>
+
+        <menuitem id="menu_eh_log_transport_drivers"
+                  name="Drivers"
+                  parent="eh_log_base.menu_eh_log_master_data"
+                  sequence="90"
+                  action="action_eh_log_transport_driver"
+                  groups="eh_log_base.group_eh_log_manager"/>
+
+    </data>
+</odoo>

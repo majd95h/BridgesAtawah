@@ -1,0 +1,1280 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* eh_log_track_trace
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-01 04:34+0000\n"
+"PO-Revision-Date: 2026-07-01 04:34+0000\n"
+"Last-Translator: ERP Heritage <info@erpheritage.com.au>\n"
+"Language-Team: Dutch\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.res_config_settings_view_form_track
+msgid "32+ random hex characters"
+msgstr "32+ willekeurige hex-tekens"
+
+#. module: eh_log_track_trace
+#: model:mail.template,body_html:eh_log_track_trace.email_template_track_event_milestone
+msgid ""
+"<div class=\"eh-track-mail\">\n"
+"                    <p>A new milestone was recorded for your shipment.</p>\n"
+"                    <p>\n"
+"                        <strong>\n"
+"                            <t t-out=\"object.event_code_id.name or ''\"/>\n"
+"                        </strong>\n"
+"                    </p>\n"
+"                    <p t-if=\"object.description\">\n"
+"                        <t t-out=\"object.description\"/>\n"
+"                    </p>\n"
+"                    <p t-if=\"object.location\">\n"
+"                        Location:\n"
+"                        <t t-out=\"object.location\"/>\n"
+"                    </p>\n"
+"                    <p>\n"
+"                        Recorded at:\n"
+"                        <t t-out=\"object.occurred_at and object.occurred_at.strftime('%Y-%m-%d %H:%M') or ''\"/>\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
+msgstr ""
+"<div class=\"eh-track-mail\">\n"
+"                    <p>Er is een nieuwe mijlpaal voor uw zending vastgelegd.</p>\n"
+"                    <p>\n"
+"                        <strong>\n"
+"                            <t t-out=\"object.event_code_id.name or ''\"/>\n"
+"                        </strong>\n"
+"                    </p>\n"
+"                    <p t-if=\"object.description\">\n"
+"                        <t t-out=\"object.description\"/>\n"
+"                    </p>\n"
+"                    <p t-if=\"object.location\">\n"
+"                        Locatie:\n"
+"                        <t t-out=\"object.location\"/>\n"
+"                    </p>\n"
+"                    <p>\n"
+"                        Vastgelegd op:\n"
+"                        <t t-out=\"object.occurred_at and object.occurred_at.strftime('%Y-%m-%d %H:%M') or ''\"/>\n"
+"                    </p>\n"
+"                </div>"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_kanban
+msgid "<i class=\"fa fa-map-marker me-1\" title=\"Location\"/>"
+msgstr "<i class=\"fa fa-map-marker me-1\" title=\"Locatie\"/>"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_freight_job_form_track
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_last_mile_delivery_form_track
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_transport_trip_form_track
+msgid "<span class=\"o_stat_text\">Public Page</span>"
+msgstr "<span class=\"o_stat_text\">Openbare pagina</span>"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.public_track_page
+msgid "<span> · </span>"
+msgstr ""
+
+#. module: eh_log_track_trace
+#: model:ir.model.constraint,message:eh_log_track_trace.constraint_eh_log_track_webhook_mapping_carrier_code_unique
+msgid "A carrier event code may only map once per endpoint."
+msgstr ""
+"Een vervoerdergebeurteniscode mag per eindpunt slechts één keer worden "
+"toegewezen."
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields.selection,name:eh_log_track_trace.selection__eh_log_track_event__source__api
+msgid "API"
+msgstr ""
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event_code__active
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_subscription__active
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__active
+msgid "Active"
+msgstr "Actief"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_arrived
+msgid "Arrived at Destination"
+msgstr "Aangekomen op bestemming"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_at_delivery
+msgid "At Delivery"
+msgstr "Bij levering"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_at_pickup
+msgid "At Pickup"
+msgstr "Bij ophalen"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_cancelled
+msgid "Cancelled"
+msgstr "Geannuleerd"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__carrier_name
+msgid "Carrier"
+msgstr "Vervoerder"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_mapping__carrier_code
+msgid "Carrier Event Code"
+msgstr "Vervoerdersgebeurteniscode"
+
+#. module: eh_log_track_trace
+#: model:ir.model,name:eh_log_track_trace.model_eh_log_track_webhook_mapping
+msgid "Carrier Event Code Mapping"
+msgstr "Toewijzing vervoerdersgebeurteniscode"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_freight_job__tracking_reference
+msgid "Carrier Tracking Reference"
+msgstr "Referentie vervoerderstracering"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields.selection,name:eh_log_track_trace.selection__eh_log_track_event__source__webhook
+msgid "Carrier Webhook"
+msgstr "Vervoerder-webhook"
+
+#. module: eh_log_track_trace
+#: model:ir.model,name:eh_log_track_trace.model_eh_log_track_webhook_endpoint
+msgid "Carrier Webhook Endpoint"
+msgstr "Vervoerder-webhook-endpoint"
+
+#. module: eh_log_track_trace
+#: model:ir.actions.act_window,name:eh_log_track_trace.action_eh_log_track_webhook_endpoint
+#: model:ir.ui.menu,name:eh_log_track_trace.menu_eh_log_track_webhooks
+msgid "Carrier Webhooks"
+msgstr "Vervoerder-webhooks"
+
+#. module: eh_log_track_trace
+#: model:ir.model.constraint,message:eh_log_track_trace.constraint_eh_log_track_webhook_endpoint_carrier_name_unique
+msgid "Carrier name must be unique per company."
+msgstr "De vervoerdersnaam moet uniek zijn per bedrijf."
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__category
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event_code__category
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_search
+msgid "Category"
+msgstr "Categorie"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_subscription__channel
+msgid "Channel"
+msgstr "Kanaal"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_closed
+msgid "Closed"
+msgstr "Gesloten"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event__category
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event_code__category
+msgid ""
+"Coarse grouping used to colour-code the timeline and to let subscriptions "
+"opt into a whole class of events."
+msgstr ""
+"Grove groepering die wordt gebruikt om de tijdlijn met kleuren te coderen en"
+" om abonnementen zich te laten aanmelden voor een hele klasse "
+"gebeurtenissen."
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__code
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event_code__code
+msgid "Code"
+msgstr ""
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__mapping_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_webhook_endpoint_form
+msgid "Code Mapping"
+msgstr "Codes koppelen"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__company_id
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_subscription__company_id
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__company_id
+msgid "Company"
+msgstr "Bedrijf"
+
+#. module: eh_log_track_trace
+#: model:ir.model,name:eh_log_track_trace.model_res_config_settings
+msgid "Config Settings"
+msgstr "Configuratie-instellingen"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_freight_job__track_event_count
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_last_mile_delivery__track_event_count
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_last_mile_wave__track_event_count
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_trackable__track_event_count
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_transport_trip__track_event_count
+msgid "Count of normalized tracking events on the public log."
+msgstr ""
+"Aantal genormaliseerde trackinggebeurtenissen in het openbare logboek."
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__create_uid
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event_code__create_uid
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_subscription__create_uid
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__create_uid
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_mapping__create_uid
+msgid "Created by"
+msgstr "Aangemaakt door"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__create_date
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event_code__create_date
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_subscription__create_date
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__create_date
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_mapping__create_date
+msgid "Created on"
+msgstr "Aangemaakt op"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__secret_key
+msgid "Credentials Key"
+msgstr "Referentiesleutel"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event_code__name
+msgid "Customer-facing label rendered on the public timeline."
+msgstr "Klantgerichte label weergegeven op de openbare tijdlijn."
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_customs_cleared
+msgid "Customs Cleared"
+msgstr "Ingeklaard"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_customs_hold
+msgid "Customs Hold"
+msgstr "Douaneblokkade"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_customs_cleared
+msgid "Customs cleared."
+msgstr "Ingeklaard."
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event_code__default_description
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_code_form
+msgid "Default Description"
+msgstr "Standaardomschrijving"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_delivered
+msgid "Delivered"
+msgstr "Geleverd"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields.selection,name:eh_log_track_trace.selection__eh_log_track_event_code__category__delivery
+msgid "Delivery"
+msgstr "Levering"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_delivery_failed
+msgid "Delivery Failed"
+msgstr "Afleveren mislukt"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_delivery_failed
+msgid "Delivery attempt failed."
+msgstr "Leveringspoging mislukt."
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__description
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_form
+msgid "Description"
+msgstr "Omschrijving"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields.selection,name:eh_log_track_trace.selection__eh_log_track_event_code__category__destination
+msgid "Destination"
+msgstr "Bestemming"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_dispatched
+msgid "Dispatched"
+msgstr "Verzonden"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_freight_job__display_name
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_last_mile_delivery__display_name
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_last_mile_wave__display_name
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__display_name
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event_code__display_name
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_subscription__display_name
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_trackable__display_name
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__display_name
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_mapping__display_name
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_transport_trip__display_name
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr "Weergavenaam"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_webhook_endpoint__reference_path
+msgid ""
+"Dotted JSON path to the carrier's shipment reference. The reference matches "
+"against the source record's tracking_reference field."
+msgstr ""
+"Gestippeld JSON-pad naar de zendingsreferentie van de vervoerder. De "
+"referentie wordt vergeleken met het tracking_reference-veld van het "
+"bronrecord."
+
+#. module: eh_log_track_trace
+#: model:ir.model.constraint,message:eh_log_track_trace.constraint_eh_log_track_subscription_subscription_unique
+msgid "Duplicate subscription for the same partner, record, and channel."
+msgstr "Dubbel abonnement voor dezelfde partner, record en kanaal."
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.res_config_settings_view_form_track
+msgid "ERP Heritage Track and Trace"
+msgstr ""
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields.selection,name:eh_log_track_trace.selection__eh_log_track_subscription__channel__email
+msgid "Email"
+msgstr "E-mail"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_subscription__channel
+msgid ""
+"Email queues an outbound mail per matching event. Portal-only suppresses "
+"outbound mail; the partner sees events on the public page only."
+msgstr ""
+"E-mail plaatst per overeenkomende gebeurtenis een uitgaande mail in de "
+"wachtrij. Alleen-portaal onderdrukt uitgaande mail; de partner ziet "
+"gebeurtenissen alleen op de openbare pagina."
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_mapping__endpoint_id
+msgid "Endpoint"
+msgstr ""
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/models/eh_log_track_event.py:0
+msgid "Event"
+msgstr "Evenement"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__event_code_id
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_search
+msgid "Event Code"
+msgstr "Gebeurteniscode"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__event_code_path
+msgid "Event Code JSON Path"
+msgstr "JSON-pad voor gebeurteniscode"
+
+#. module: eh_log_track_trace
+#: model:ir.actions.act_window,name:eh_log_track_trace.action_eh_log_track_event_code
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_subscription__event_code_ids
+#: model:ir.ui.menu,name:eh_log_track_trace.menu_eh_log_track_event_codes
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_subscription_form
+msgid "Event Codes"
+msgstr "Gebeurteniscodes"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_graph
+msgid "Events by Code"
+msgstr "Gebeurtenissen per code"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_exception
+#: model:ir.model.fields.selection,name:eh_log_track_trace.selection__eh_log_track_event_code__category__exception
+msgid "Exception"
+msgstr "Fout"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_search
+msgid "Exceptions"
+msgstr "Uitzonderingen"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_last_mile_delivery__tracking_reference
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_transport_trip__tracking_reference
+msgid "External Tracking Reference"
+msgstr "Externe trackingreferentie"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_last_mile_wave__tracking_reference
+msgid "External Wave Reference"
+msgstr "Externe wave-referentie"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_freight_job__tracking_reference
+msgid ""
+"External reference the carrier uses on inbound webhooks to identify this "
+"job. Populated when the booking comes back from the carrier with their "
+"reference."
+msgstr ""
+"Externe referentie die de vervoerder op inkomende webhooks gebruikt om deze "
+"opdracht te identificeren. Wordt ingevuld wanneer de boeking terugkomt van "
+"de vervoerder met hun referentie."
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event__location
+msgid ""
+"Free-text location string from the source. The public page renders it under "
+"the event description."
+msgstr ""
+"Vrije-tekstlocatiestring van de bron. De openbare pagina geeft deze weer "
+"onder de gebeurtenisbeschrijving."
+
+#. module: eh_log_track_trace
+#: model:ir.model,name:eh_log_track_trace.model_eh_log_freight_job
+msgid "Freight Forwarding Job"
+msgstr "Expeditieopdracht"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_freight_job__track_url
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_last_mile_delivery__track_url
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_last_mile_wave__track_url
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_trackable__track_url
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_transport_trip__track_url
+msgid ""
+"Full URL for the customer-facing tracking page. Built from the configured "
+"public base URL and the tracking token."
+msgstr ""
+"Volledige URL voor de klantgerichte trackingpagina. Opgebouwd uit de "
+"geconfigureerde openbare basis-URL en het trackingtoken."
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_webhook_endpoint__signature_header
+msgid ""
+"HTTP header carrying the HMAC-SHA256 hex digest the carrier signs the "
+"request body with."
+msgstr ""
+"HTTP-header die de HMAC-SHA256 hex-digest bevat waarmee de vervoerder de "
+"request-body ondertekent."
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.res_config_settings_view_form_track
+msgid "Hostname customers see in tracking URLs."
+msgstr "Hostnaam die klanten zien in tracking-URL's."
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_res_config_settings__eh_log_track_public_base_url
+msgid ""
+"Hostname customers see in tracking URLs. Falls back to the system base URL "
+"if blank."
+msgstr ""
+"Hostnaam die klanten zien in tracking-URL's. Valt terug op de basis-URL van "
+"het systeem indien leeg."
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_freight_job__id
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_last_mile_delivery__id
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_last_mile_wave__id
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__id
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event_code__id
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_subscription__id
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_trackable__id
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__id
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_mapping__id
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_transport_trip__id
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_res_config_settings__id
+msgid "ID"
+msgstr ""
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event_code__icon_name
+msgid "Icon Name"
+msgstr "Pictogramnaam"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_subscription__event_code_ids
+msgid ""
+"If empty, all milestone events on the record trigger a notification. If "
+"populated, only events matching one of the listed codes trigger."
+msgstr ""
+"Als het leeg is, activeren alle mijlpaalgebeurtenissen op het record een "
+"melding. Als het is ingevuld, activeren alleen gebeurtenissen die "
+"overeenkomen met een van de vermelde codes."
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event__is_milestone
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event_code__is_milestone
+msgid ""
+"If set, raising this event triggers notifications on all matching "
+"subscriptions. Non-milestone events still appear on the timeline but do not "
+"page customers."
+msgstr ""
+"Indien ingesteld, activeert het opwerpen van deze gebeurtenis meldingen op "
+"alle overeenkomende abonnementen. Niet-mijlpaalgebeurtenissen verschijnen "
+"nog steeds op de tijdlijn, maar waarschuwen klanten niet."
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields.selection,name:eh_log_track_trace.selection__eh_log_track_event__source__import
+msgid "Import"
+msgstr "Importeren"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_in_transit
+msgid "In Transit"
+msgstr "In transit"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields.selection,name:eh_log_track_trace.selection__eh_log_track_event__source__internal
+msgid "Internal"
+msgstr "Intern"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_webhook_endpoint_form
+msgid "JSON Field Paths"
+msgstr "JSON-veldpaden"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event_code__name
+msgid "Label"
+msgstr "Omschrijving"
+
+#. module: eh_log_track_trace
+#: model:ir.model,name:eh_log_track_trace.model_eh_log_last_mile_delivery
+msgid "Last Mile Delivery"
+msgstr "Last-mile-levering"
+
+#. module: eh_log_track_trace
+#: model:ir.model,name:eh_log_track_trace.model_eh_log_last_mile_wave
+msgid "Last Mile Wave"
+msgstr "Last-mile-golf"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__write_uid
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event_code__write_uid
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_subscription__write_uid
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__write_uid
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_mapping__write_uid
+msgid "Last Updated by"
+msgstr "Laatst bijgewerkt door"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__write_date
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event_code__write_date
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_subscription__write_date
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__write_date
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_mapping__write_date
+msgid "Last Updated on"
+msgstr "Laatst bijgewerkt op"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__location
+msgid "Location"
+msgstr "Locatie"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__location_path
+msgid "Location JSON Path"
+msgstr "JSON-pad locatie"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_webhook_endpoint__secret_key
+msgid ""
+"Lookup key passed to the credentials helper to fetch the shared secret. "
+"Resolves through env var, encrypted ir.config_parameter, then default."
+msgstr ""
+"Opzoeksleutel die aan de credentials-helper wordt doorgegeven om het "
+"gedeelde geheim op te halen. Wordt opgelost via omgevingsvariabele, "
+"versleutelde ir.config_parameter en vervolgens standaard."
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_webhook_endpoint__carrier_name
+msgid ""
+"Lower-case carrier identifier appearing in the inbound URL: "
+"/track/event/<carrier_name>. No spaces."
+msgstr ""
+"Vervoerdersidentificatie in kleine letters die in de inkomende URL "
+"verschijnt: /track/event/<carrier_name>. Geen spaties."
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_kanban
+msgid "M"
+msgstr ""
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__is_milestone
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event_code__is_milestone
+msgid "Milestone"
+msgstr "Mijlpaal"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_search
+msgid "Milestones"
+msgstr "Mijlpalen"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event__notes
+msgid ""
+"Mutable free-text annotation. Distinct from the event description: the "
+"description is shown publicly; notes are internal."
+msgstr ""
+"Wijzigbare vrije-tekstannotatie. Verschilt van de gebeurtenisbeschrijving: "
+"de beschrijving wordt openbaar getoond; notities zijn intern."
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__name
+msgid "Name"
+msgstr "Naam"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.public_track_not_found
+msgid "No shipment matched the tracking link. Check the link and try again."
+msgstr ""
+"Geen zending kwam overeen met de trackinglink. Controleer de link en probeer"
+" het opnieuw."
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.public_track_page
+msgid "No tracking events yet. Check back shortly."
+msgstr "Nog geen trackinggebeurtenissen. Kom binnenkort terug."
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_mapping__event_code_id
+msgid "Normalized Event"
+msgstr "Genormaliseerde gebeurtenis"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__occurred_at
+msgid "Occurred At"
+msgstr "Opgetreden op"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__occurred_at_path
+msgid "Occurred-At JSON Path"
+msgstr "Occurred-At JSON-pad"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_webhook_endpoint__mapping_ids
+msgid ""
+"One row per carrier-supplied event code, mapping it to a normalized "
+"eh.log.track.event.code. Inbound events with no mapping are ignored after a "
+"warning is logged."
+msgstr ""
+"Eén rij per door de vervoerder geleverde gebeurteniscode, die deze koppelt "
+"aan een genormaliseerde eh.log.track.event.code. Binnenkomende "
+"gebeurtenissen zonder koppeling worden genegeerd nadat een waarschuwing is "
+"gelogd."
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event__description
+msgid ""
+"One-line description rendered on the public timeline. Falls back to the "
+"event code default if the source passes nothing."
+msgstr ""
+"Beschrijving van één regel die op de openbare tijdlijn wordt weergegeven. "
+"Valt terug op de standaardwaarde van de gebeurteniscode als de bron niets "
+"doorgeeft."
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__notes
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_form
+msgid "Operator Notes"
+msgstr "Operatornotities"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_webhook_endpoint__name
+msgid "Operator-facing name used in logs and the audit trail."
+msgstr ""
+"Voor de operator zichtbare naam die in logs en het audittrail wordt "
+"gebruikt."
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_webhook_endpoint__location_path
+msgid "Optional. Leave blank if the carrier omits location."
+msgstr "Optioneel. Laat leeg als de vervoerder de locatie weglaat."
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields.selection,name:eh_log_track_trace.selection__eh_log_track_event_code__category__origin
+msgid "Origin"
+msgstr "Bron"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_out_for_delivery
+msgid "Out for Delivery"
+msgstr "Onderweg voor bezorging"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_out_for_delivery
+msgid "Out for last-mile delivery."
+msgstr "Onderweg voor last-mile bezorging."
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_res_config_settings__eh_log_track_token_salt
+msgid ""
+"Per-database salt used to derive non-enumerable public tracking tokens. "
+"Rotate to invalidate outstanding tracking links."
+msgstr ""
+"Salt per database die wordt gebruikt om niet-opsombare openbare "
+"trackingtokens af te leiden. Roteer om openstaande trackinglinks ongeldig te"
+" maken."
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.res_config_settings_view_form_track
+msgid ""
+"Per-database salt used to derive non-enumerable tracking tokens. Rotating it"
+" invalidates outstanding links."
+msgstr ""
+"Salt per database die wordt gebruikt om niet-opsombare trackingtokens af te "
+"leiden. Roteren maakt openstaande links ongeldig."
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_picked_up
+msgid "Picked Up"
+msgstr "Opgehaald"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields.selection,name:eh_log_track_trace.selection__eh_log_track_subscription__channel__portal
+msgid "Portal Only"
+msgstr "Alleen portaal"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.res_config_settings_view_form_track
+msgid "Public Base URL"
+msgstr "Openbare basis-URL"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.res_config_settings_view_form_track
+msgid "Public Tracking Page"
+msgstr "Openbare trackingpagina"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_freight_job__track_url
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_last_mile_delivery__track_url
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_last_mile_wave__track_url
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_trackable__track_url
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_transport_trip__track_url
+msgid "Public Tracking URL"
+msgstr "Openbare tracking-URL"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__raw_payload
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_form
+msgid "Raw Payload"
+msgstr "Ruwe payload"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__reference_path
+msgid "Reference JSON Path"
+msgstr "Referentie JSON-pad"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_returned
+msgid "Returned"
+msgstr "Geretourneerd"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event_code__sequence
+msgid "Sequence"
+msgstr "Reeks"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_booked
+msgid "Shipment Booked"
+msgstr "Zending geboekt"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.public_track_not_found
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.public_track_page
+msgid "Shipment Tracking"
+msgstr "Zendingtracering"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_arrived
+msgid "Shipment arrived at destination."
+msgstr "Zending is aangekomen op bestemming."
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_cancelled
+msgid "Shipment cancelled."
+msgstr "Zending geannuleerd."
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_picked_up
+msgid "Shipment collected from origin."
+msgstr "Zending opgehaald bij herkomst."
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_booked
+msgid "Shipment confirmed and booked."
+msgstr "Zending bevestigd en geboekt."
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_delivered
+msgid "Shipment delivered."
+msgstr "Zending afgeleverd."
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_exception
+msgid "Shipment exception reported."
+msgstr "Zendinguitzondering gemeld."
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_closed
+msgid "Shipment file closed."
+msgstr "Zendingdossier gesloten."
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_customs_hold
+msgid "Shipment held at customs pending clearance."
+msgstr "Zending vastgehouden bij de douane in afwachting van vrijgave."
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_in_transit
+msgid "Shipment in transit."
+msgstr "Zending onderweg."
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_returned
+msgid "Shipment returned to sender."
+msgstr "Zending teruggestuurd naar afzender."
+
+#. module: eh_log_track_trace
+#: model:mail.template,subject:eh_log_track_trace.email_template_track_event_milestone
+msgid "Shipment update: {{ object.event_code_id.name }}"
+msgstr "Zendingupdate: {{ object.event_code_id.name }}"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__signature_header
+msgid "Signature Header"
+msgstr "Handtekeningkop"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__source
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_search
+msgid "Source"
+msgstr "Bron"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__res_id
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_subscription__res_id
+msgid "Source ID"
+msgstr "Bron-ID"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__res_model
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_subscription__res_model
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_search
+msgid "Source Model"
+msgstr "Bronmodel"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event__code
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event_code__code
+msgid ""
+"Stable, machine-readable identifier. Subscriptions and carrier mappings "
+"reference this value, never the label."
+msgstr ""
+"Stabiele, machineleesbare identificatie. Abonnementen en "
+"vervoerderskoppelingen verwijzen naar deze waarde, nooit naar het label."
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_freight_job__tracking_token
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_last_mile_delivery__tracking_token
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_last_mile_wave__tracking_token
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_trackable__tracking_token
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_transport_trip__tracking_token
+msgid ""
+"Stable, non-enumerable token used in the public tracking URL. Derived from "
+"the record id and the per-database salt. Safe to share with customers."
+msgstr ""
+"Stabiel, niet-opsombaar token dat wordt gebruikt in de openbare tracking-"
+"URL. Afgeleid van de record-id en de per-database salt. Veilig om met "
+"klanten te delen."
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_subscription__partner_id
+msgid "Subscriber"
+msgstr "Inschrijver"
+
+#. module: eh_log_track_trace
+#: model:ir.actions.act_window,name:eh_log_track_trace.action_eh_log_track_subscription
+#: model:ir.ui.menu,name:eh_log_track_trace.menu_eh_log_track_subscriptions
+msgid "Subscriptions"
+msgstr "Abonnementen"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event_code__icon_name
+msgid ""
+"Symbol-name only (no path or colour). The public template maps the name to "
+"the SVG sprite asset; this keeps the code master decoupled from the "
+"renderer."
+msgstr ""
+"Alleen symboolnaam (geen pad of kleur). De openbare template koppelt de naam"
+" aan het SVG sprite-asset; dit houdt de codemaster losgekoppeld van de "
+"renderer."
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__target_model
+msgid "Target Model"
+msgstr "Doelmodel"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event__res_model
+msgid ""
+"Technical name of the trackable model the event belongs to. Combined with "
+"res_id this points back to the source record without needing a foreign key "
+"per model."
+msgstr ""
+"Technische naam van het traceerbare model waartoe de gebeurtenis behoort. In"
+" combinatie met res_id wijst dit terug naar het bronrecord zonder dat een "
+"foreign key per model nodig is."
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event__raw_payload
+msgid ""
+"The unmodified payload (JSON, XML, etc.) from the carrier webhook. Internal-"
+"source events leave this blank. Used for forensics when a customer disputes "
+"a timeline entry."
+msgstr ""
+"De ongewijzigde payload (JSON, XML, enz.) van de webhook van de vervoerder. "
+"Gebeurtenissen uit een interne bron laten dit leeg. Gebruikt voor forensisch"
+" onderzoek wanneer een klant een tijdlijnvermelding betwist."
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.res_config_settings_view_form_track
+msgid "Token Salt"
+msgstr "Token-salt"
+
+#. module: eh_log_track_trace
+#: model:ir.ui.menu,name:eh_log_track_trace.menu_eh_log_track_config_root
+#: model:ir.ui.menu,name:eh_log_track_trace.menu_eh_log_track_root
+msgid "Track and Trace"
+msgstr "Track and trace"
+
+#. module: eh_log_track_trace
+#: model:ir.actions.act_window,name:eh_log_track_trace.action_eh_log_track_trace_settings
+msgid "Track and Trace Settings"
+msgstr "Instellingen voor track and trace"
+
+#. module: eh_log_track_trace
+#: model:ir.model,name:eh_log_track_trace.model_eh_log_track_trackable
+msgid "Trackable Record Mixin"
+msgstr ""
+
+#. module: eh_log_track_trace
+#: model:ir.model,name:eh_log_track_trace.model_eh_log_track_event
+msgid "Tracking Event"
+msgstr "Trackinggebeurtenis"
+
+#. module: eh_log_track_trace
+#: model:ir.model,name:eh_log_track_trace.model_eh_log_track_event_code
+msgid "Tracking Event Code"
+msgstr "Trackinggebeurteniscode"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/models/eh_log_track_trackable.py:0
+#: model:ir.actions.act_window,name:eh_log_track_trace.action_eh_log_track_event
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_freight_job__track_event_count
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_last_mile_delivery__track_event_count
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_last_mile_wave__track_event_count
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_trackable__track_event_count
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_transport_trip__track_event_count
+#: model:ir.ui.menu,name:eh_log_track_trace.menu_eh_log_track_events
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_freight_job_form_track
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_last_mile_delivery_form_track
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_calendar
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_pivot
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_transport_trip_form_track
+msgid "Tracking Events"
+msgstr "Trackinggebeurtenissen"
+
+#. module: eh_log_track_trace
+#: model:ir.model,name:eh_log_track_trace.model_eh_log_track_subscription
+msgid "Tracking Notification Subscription"
+msgstr "Abonnement op trackingmeldingen"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_res_config_settings__eh_log_track_public_base_url
+msgid "Tracking Public Base URL"
+msgstr "Openbare basis-URL voor tracking"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_freight_job__tracking_token
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_last_mile_delivery__tracking_token
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_last_mile_wave__tracking_token
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_trackable__tracking_token
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_transport_trip__tracking_token
+msgid "Tracking Token"
+msgstr "Trackingtoken"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_res_config_settings__eh_log_track_token_salt
+msgid "Tracking Token Salt"
+msgstr "Salt van trackingtoken"
+
+#. module: eh_log_track_trace
+#: model:ir.model.constraint,message:eh_log_track_trace.constraint_eh_log_track_event_code_code_unique
+msgid "Tracking event code must be unique."
+msgstr "De trackinggebeurteniscode moet uniek zijn."
+
+#. module: eh_log_track_trace
+#: model:mail.template,name:eh_log_track_trace.email_template_track_event_milestone
+msgid "Tracking: Milestone Notification"
+msgstr "Tracking: melding voor mijlpaal"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields.selection,name:eh_log_track_trace.selection__eh_log_track_event_code__category__transit
+msgid "Transit"
+msgstr ""
+
+#. module: eh_log_track_trace
+#: model:ir.model,name:eh_log_track_trace.model_eh_log_transport_trip
+msgid "Transport Trip"
+msgstr "Transportrit"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/models/eh_log_track_subscription.py:0
+msgid "Unknown"
+msgstr "Onbekend"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event_code__default_description
+msgid ""
+"Used as the timeline description when the event source does not supply a "
+"per-event description."
+msgstr ""
+"Wordt gebruikt als tijdlijnbeschrijving wanneer de gebeurtenisbron geen "
+"beschrijving per gebeurtenis levert."
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_at_delivery
+msgid "Vehicle at delivery location."
+msgstr "Voertuig op afleverlocatie."
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_at_pickup
+msgid "Vehicle at pickup location."
+msgstr "Voertuig op ophaallocatie."
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_dispatched
+msgid "Vehicle dispatched from origin."
+msgstr "Voertuig verzonden vanaf herkomst."
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_webhook_mapping__carrier_code
+msgid "Verbatim event code as the carrier emits it."
+msgstr "Letterlijke gebeurteniscode zoals de vervoerder deze uitgeeft."
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_wave_completed
+msgid "Wave Completed"
+msgstr "Golf voltooid"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_wave_dispatched
+msgid "Wave Dispatched"
+msgstr "Golf verzonden"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_wave_in_progress
+msgid "Wave In Progress"
+msgstr "Golf in uitvoering"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_wave_completed
+msgid "Wave completed."
+msgstr "Golf voltooid."
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_wave_dispatched
+msgid "Wave dispatched."
+msgstr "Golf verzonden."
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_wave_in_progress
+msgid "Wave in progress."
+msgstr "Golf in uitvoering."
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_search
+msgid "Webhook Source"
+msgstr "Webhook-bron"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event__source
+msgid ""
+"Where the event originated. The raw inbound body of a webhook event is kept "
+"on the raw_payload field."
+msgstr ""
+"Waar de gebeurtenis vandaan komt. De ruwe inkomende body van een webhook-"
+"gebeurtenis wordt bewaard in het raw_payload-veld."
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_webhook_endpoint__target_model
+msgid ""
+"Which trackable model the webhook posts events against. Most carrier "
+"integrations target freight jobs; last-mile carriers target deliveries."
+msgstr ""
+"Tegen welk traceerbaar model de webhook gebeurtenissen plaatst. De meeste "
+"vervoerdersintegraties richten zich op vrachtopdrachten; last-mile-"
+"vervoerders richten zich op leveringen."
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/models/eh_log_track_trackable.py:0
+msgid "[EHL-TRK-001] Unknown tracking event code %(code)s."
+msgstr "[EHL-TRK-001] Onbekende trackinggebeurteniscode %(code)s."
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/models/eh_log_track_event_code.py:0
+msgid ""
+"[EHL-TRK-002] Seeded tracking event code %(code)s cannot be renamed; create "
+"a new code instead."
+msgstr ""
+"[EHL-TRK-002] Vooraf ingestelde trackinggebeurteniscode %(code)s kan niet "
+"worden hernoemd; maak in plaats daarvan een nieuwe code aan."
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/models/eh_log_track_event_code.py:0
+msgid ""
+"[EHL-TRK-003] Seeded tracking event code %(code)s cannot be deleted; archive"
+" it instead."
+msgstr ""
+"[EHL-TRK-003] Vooraf ingestelde trackinggebeurteniscode %(code)s kan niet "
+"worden verwijderd; archiveer deze in plaats daarvan."
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/models/eh_log_track_event.py:0
+msgid ""
+"[EHL-TRK-004] Tracking events must be created through log_track_event() on "
+"the source record, not by direct ORM write."
+msgstr ""
+"[EHL-TRK-004] Trackinggebeurtenissen moeten worden aangemaakt via "
+"log_track_event() op het bronrecord, niet door directe ORM-schrijfactie."
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/models/eh_log_track_event.py:0
+msgid ""
+"[EHL-TRK-005] Tracking event field(s) %(fields)s are immutable after "
+"creation. Add a new event instead."
+msgstr ""
+"[EHL-TRK-005] Trackinggebeurtenisveld(en) %(fields)s zijn na aanmaak "
+"onveranderlijk. Voeg in plaats daarvan een nieuwe gebeurtenis toe."
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/models/eh_log_track_event.py:0
+msgid ""
+"[EHL-TRK-006] Tracking events are append-only and cannot be deleted; archive"
+" the source record instead."
+msgstr ""
+"[EHL-TRK-006] Trackinggebeurtenissen kunnen alleen worden toegevoegd en niet"
+" worden verwijderd; archiveer in plaats daarvan het bronrecord."
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/models/eh_log_track_subscription.py:0
+msgid "[EHL-TRK-007] Subscription source model %(model)s does not exist."
+msgstr "[EHL-TRK-007] Abonnementsbronmodel %(model)s bestaat niet."
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/models/eh_log_track_subscription.py:0
+msgid ""
+"[EHL-TRK-008] Source model %(model)s is not trackable; it must inherit "
+"eh.log.track.trackable to be subscribed to."
+msgstr ""
+"[EHL-TRK-008] Bronmodel %(model)s is niet volgbaar; het moet "
+"eh.log.track.trackable overerven om erop te kunnen abonneren."
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/models/eh_log_track_webhook_endpoint.py:0
+msgid ""
+"[EHL-TRK-009] Carrier name %(name)s must be alphanumeric or underscore only."
+msgstr ""
+"[EHL-TRK-009] Vervoerdersnaam %(name)s mag alleen alfanumeriek of een "
+"liggend streepje bevatten."
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/models/eh_log_track_webhook_endpoint.py:0
+msgid "[EHL-TRK-010] Carrier name %(name)s must be lower-case."
+msgstr "[EHL-TRK-010] Vervoerdersnaam %(name)s moet in kleine letters zijn."
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/controllers/carrier_webhook.py:0
+msgid "accepted"
+msgstr "aanvaard"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/controllers/carrier_webhook.py:0
+msgid "bad signature"
+msgstr "ongeldige handtekening"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.res_config_settings_view_form_track
+msgid "https://track.example.com"
+msgstr ""
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/controllers/carrier_webhook.py:0
+msgid "ignored"
+msgstr "Genegeerd"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/controllers/carrier_webhook.py:0
+msgid "malformed JSON"
+msgstr "Ongeldige JSON"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/controllers/carrier_webhook.py:0
+msgid "misconfigured"
+msgstr "Verkeerd geconfigureerd"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/controllers/carrier_webhook.py:0
+msgid "missing required field"
+msgstr "Verplicht veld ontbreekt"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/controllers/carrier_webhook.py:0
+msgid "missing signature"
+msgstr "Handtekening ontbreekt"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/models/eh_log_track_trackable.py:0
+msgid "res_model"
+msgstr ""
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/controllers/carrier_webhook.py:0
+msgid "unknown carrier"
+msgstr "Onbekende vervoerder"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/controllers/carrier_webhook.py:0
+msgid "unknown reference"
+msgstr "Onbekende referentie"

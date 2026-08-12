@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="0">
+    <data>
+
+        <record id="rule_eh_log_project_cargo_equipment_company" model="ir.rule">
+            <field name="name">eh.log.project.cargo.equipment: company isolation</field>
+            <field name="model_id" ref="model_eh_log_project_cargo_equipment"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+            <field name="global" eval="True"/>
+        </record>
+
+        <record id="rule_eh_log_project_cargo_job_company" model="ir.rule">
+            <field name="name">eh.log.project.cargo.job: company isolation</field>
+            <field name="model_id" ref="model_eh_log_project_cargo_job"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+            <field name="global" eval="True"/>
+        </record>
+
+        <record id="rule_eh_log_project_cargo_item_company" model="ir.rule">
+            <field name="name">eh.log.project.cargo.item: company isolation</field>
+            <field name="model_id" ref="model_eh_log_project_cargo_item"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+            <field name="global" eval="True"/>
+        </record>
+
+        <record id="rule_eh_log_project_cargo_convoy_company" model="ir.rule">
+            <field name="name">eh.log.project.cargo.convoy: company isolation</field>
+            <field name="model_id" ref="model_eh_log_project_cargo_convoy"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+            <field name="global" eval="True"/>
+        </record>
+
+        <record id="rule_eh_log_project_cargo_permit_company" model="ir.rule">
+            <field name="name">eh.log.project.cargo.permit: company isolation</field>
+            <field name="model_id" ref="model_eh_log_project_cargo_permit"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+            <field name="global" eval="True"/>
+        </record>
+
+        <record id="rule_eh_log_project_cargo_route_survey_company" model="ir.rule">
+            <field name="name">eh.log.project.cargo.route.survey: company isolation</field>
+            <field name="model_id" ref="model_eh_log_project_cargo_route_survey"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+            <field name="global" eval="True"/>
+        </record>
+
+        <record id="rule_eh_log_project_cargo_convoy_vehicle_company" model="ir.rule">
+            <field name="name">eh.log.project.cargo.convoy.vehicle: company isolation</field>
+            <field name="model_id" ref="model_eh_log_project_cargo_convoy_vehicle"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+            <field name="global" eval="True"/>
+        </record>
+
+    </data>
+</odoo>

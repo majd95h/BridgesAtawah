@@ -1,0 +1,1269 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* eh_log_track_trace
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-01 04:34+0000\n"
+"PO-Revision-Date: 2026-07-01 04:34+0000\n"
+"Last-Translator: ERP Heritage <info@erpheritage.com.au>\n"
+"Language-Team: Swedish\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.res_config_settings_view_form_track
+msgid "32+ random hex characters"
+msgstr "32+ slumpmassiga hex-tecken"
+
+#. module: eh_log_track_trace
+#: model:mail.template,body_html:eh_log_track_trace.email_template_track_event_milestone
+msgid ""
+"<div class=\"eh-track-mail\">\n"
+"                    <p>A new milestone was recorded for your shipment.</p>\n"
+"                    <p>\n"
+"                        <strong>\n"
+"                            <t t-out=\"object.event_code_id.name or ''\"/>\n"
+"                        </strong>\n"
+"                    </p>\n"
+"                    <p t-if=\"object.description\">\n"
+"                        <t t-out=\"object.description\"/>\n"
+"                    </p>\n"
+"                    <p t-if=\"object.location\">\n"
+"                        Location:\n"
+"                        <t t-out=\"object.location\"/>\n"
+"                    </p>\n"
+"                    <p>\n"
+"                        Recorded at:\n"
+"                        <t t-out=\"object.occurred_at and object.occurred_at.strftime('%Y-%m-%d %H:%M') or ''\"/>\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
+msgstr ""
+"<div class=\"eh-track-mail\">\n"
+"                    <p>En ny milstolpe har registrerats för din sändning.</p>\n"
+"                    <p>\n"
+"                        <strong>\n"
+"                            <t t-out=\"object.event_code_id.name or ''\"/>\n"
+"                        </strong>\n"
+"                    </p>\n"
+"                    <p t-if=\"object.description\">\n"
+"                        <t t-out=\"object.description\"/>\n"
+"                    </p>\n"
+"                    <p t-if=\"object.location\">\n"
+"                        Plats:\n"
+"                        <t t-out=\"object.location\"/>\n"
+"                    </p>\n"
+"                    <p>\n"
+"                        Registrerad:\n"
+"                        <t t-out=\"object.occurred_at and object.occurred_at.strftime('%Y-%m-%d %H:%M') or ''\"/>\n"
+"                    </p>\n"
+"                </div>"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_kanban
+msgid "<i class=\"fa fa-map-marker me-1\" title=\"Location\"/>"
+msgstr "<i class=\"fa fa-map-marker me-1\" title=\"Plats\"/>"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_freight_job_form_track
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_last_mile_delivery_form_track
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_transport_trip_form_track
+msgid "<span class=\"o_stat_text\">Public Page</span>"
+msgstr "<span class=\"o_stat_text\">Offentlig sida</span>"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.public_track_page
+msgid "<span> · </span>"
+msgstr ""
+
+#. module: eh_log_track_trace
+#: model:ir.model.constraint,message:eh_log_track_trace.constraint_eh_log_track_webhook_mapping_carrier_code_unique
+msgid "A carrier event code may only map once per endpoint."
+msgstr "En transportörshändelsekod får bara mappas en gång per slutpunkt."
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields.selection,name:eh_log_track_trace.selection__eh_log_track_event__source__api
+msgid "API"
+msgstr ""
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event_code__active
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_subscription__active
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__active
+msgid "Active"
+msgstr "Aktiv"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_arrived
+msgid "Arrived at Destination"
+msgstr "Anlände till destinationen"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_at_delivery
+msgid "At Delivery"
+msgstr "Vid leverans"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_at_pickup
+msgid "At Pickup"
+msgstr "Vid upphämtning"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_cancelled
+msgid "Cancelled"
+msgstr "Avbruten"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__carrier_name
+msgid "Carrier"
+msgstr "Bärare"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_mapping__carrier_code
+msgid "Carrier Event Code"
+msgstr "Transportörens händelsekod"
+
+#. module: eh_log_track_trace
+#: model:ir.model,name:eh_log_track_trace.model_eh_log_track_webhook_mapping
+msgid "Carrier Event Code Mapping"
+msgstr "Mappning av transportörens händelsekoder"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_freight_job__tracking_reference
+msgid "Carrier Tracking Reference"
+msgstr "Referens för transportörsspårning"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields.selection,name:eh_log_track_trace.selection__eh_log_track_event__source__webhook
+msgid "Carrier Webhook"
+msgstr "Transportörens webhook"
+
+#. module: eh_log_track_trace
+#: model:ir.model,name:eh_log_track_trace.model_eh_log_track_webhook_endpoint
+msgid "Carrier Webhook Endpoint"
+msgstr "Transportörens webhook-endpoint"
+
+#. module: eh_log_track_trace
+#: model:ir.actions.act_window,name:eh_log_track_trace.action_eh_log_track_webhook_endpoint
+#: model:ir.ui.menu,name:eh_log_track_trace.menu_eh_log_track_webhooks
+msgid "Carrier Webhooks"
+msgstr "Transportörens webhooks"
+
+#. module: eh_log_track_trace
+#: model:ir.model.constraint,message:eh_log_track_trace.constraint_eh_log_track_webhook_endpoint_carrier_name_unique
+msgid "Carrier name must be unique per company."
+msgstr "Transportörsnamnet måste vara unikt per företag."
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__category
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event_code__category
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_search
+msgid "Category"
+msgstr "Kategori"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_subscription__channel
+msgid "Channel"
+msgstr "Kanal"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_closed
+msgid "Closed"
+msgstr "Stängd"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event__category
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event_code__category
+msgid ""
+"Coarse grouping used to colour-code the timeline and to let subscriptions "
+"opt into a whole class of events."
+msgstr ""
+"Grov gruppering som används för att färgkoda tidslinjen och låta "
+"prenumerationer ansluta sig till en hel klass av händelser."
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__code
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event_code__code
+msgid "Code"
+msgstr "Kod"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__mapping_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_webhook_endpoint_form
+msgid "Code Mapping"
+msgstr "Kartläggning av koder"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__company_id
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_subscription__company_id
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__company_id
+msgid "Company"
+msgstr "Företag"
+
+#. module: eh_log_track_trace
+#: model:ir.model,name:eh_log_track_trace.model_res_config_settings
+msgid "Config Settings"
+msgstr "Inställningar"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_freight_job__track_event_count
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_last_mile_delivery__track_event_count
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_last_mile_wave__track_event_count
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_trackable__track_event_count
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_transport_trip__track_event_count
+msgid "Count of normalized tracking events on the public log."
+msgstr "Antal normaliserade spårningshändelser i den offentliga loggen."
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__create_uid
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event_code__create_uid
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_subscription__create_uid
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__create_uid
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_mapping__create_uid
+msgid "Created by"
+msgstr "Skapad av"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__create_date
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event_code__create_date
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_subscription__create_date
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__create_date
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_mapping__create_date
+msgid "Created on"
+msgstr "Skapad den"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__secret_key
+msgid "Credentials Key"
+msgstr "Autentiseringsnyckel"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event_code__name
+msgid "Customer-facing label rendered on the public timeline."
+msgstr "Kundvänd etikett som visas på den offentliga tidslinjen."
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_customs_cleared
+msgid "Customs Cleared"
+msgstr "Tullklarerad"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_customs_hold
+msgid "Customs Hold"
+msgstr "Tullkvarhållning"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_customs_cleared
+msgid "Customs cleared."
+msgstr "Tullklarerad."
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event_code__default_description
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_code_form
+msgid "Default Description"
+msgstr "Standardbeskrivning"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_delivered
+msgid "Delivered"
+msgstr "Levererade"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields.selection,name:eh_log_track_trace.selection__eh_log_track_event_code__category__delivery
+msgid "Delivery"
+msgstr "Leverans"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_delivery_failed
+msgid "Delivery Failed"
+msgstr "Leverans misslyckades"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_delivery_failed
+msgid "Delivery attempt failed."
+msgstr "Leveransförsöket misslyckades."
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__description
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_form
+msgid "Description"
+msgstr "Beskrivning"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields.selection,name:eh_log_track_trace.selection__eh_log_track_event_code__category__destination
+msgid "Destination"
+msgstr "Mottagare"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_dispatched
+msgid "Dispatched"
+msgstr "Utlevererad"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_freight_job__display_name
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_last_mile_delivery__display_name
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_last_mile_wave__display_name
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__display_name
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event_code__display_name
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_subscription__display_name
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_trackable__display_name
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__display_name
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_mapping__display_name
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_transport_trip__display_name
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr "Visningsnamn"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_webhook_endpoint__reference_path
+msgid ""
+"Dotted JSON path to the carrier's shipment reference. The reference matches "
+"against the source record's tracking_reference field."
+msgstr ""
+"Punktnoterad JSON-sökväg till transportörens försändelsereferens. Referensen"
+" matchas mot källpostens tracking_reference-fält."
+
+#. module: eh_log_track_trace
+#: model:ir.model.constraint,message:eh_log_track_trace.constraint_eh_log_track_subscription_subscription_unique
+msgid "Duplicate subscription for the same partner, record, and channel."
+msgstr "Duplicerad prenumeration för samma partner, post och kanal."
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.res_config_settings_view_form_track
+msgid "ERP Heritage Track and Trace"
+msgstr ""
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields.selection,name:eh_log_track_trace.selection__eh_log_track_subscription__channel__email
+msgid "Email"
+msgstr "E-post"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_subscription__channel
+msgid ""
+"Email queues an outbound mail per matching event. Portal-only suppresses "
+"outbound mail; the partner sees events on the public page only."
+msgstr ""
+"E-post köar ett utgående mejl per matchande händelse. Endast portal "
+"undertrycker utgående mejl; partnern ser händelser endast på den publika "
+"sidan."
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_mapping__endpoint_id
+msgid "Endpoint"
+msgstr ""
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/models/eh_log_track_event.py:0
+msgid "Event"
+msgstr "Evenemang"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__event_code_id
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_search
+msgid "Event Code"
+msgstr "Händelsekod"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__event_code_path
+msgid "Event Code JSON Path"
+msgstr "JSON-sökväg för händelsekod"
+
+#. module: eh_log_track_trace
+#: model:ir.actions.act_window,name:eh_log_track_trace.action_eh_log_track_event_code
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_subscription__event_code_ids
+#: model:ir.ui.menu,name:eh_log_track_trace.menu_eh_log_track_event_codes
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_subscription_form
+msgid "Event Codes"
+msgstr "Händelsekoder"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_graph
+msgid "Events by Code"
+msgstr "Händelser efter kod"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_exception
+#: model:ir.model.fields.selection,name:eh_log_track_trace.selection__eh_log_track_event_code__category__exception
+msgid "Exception"
+msgstr "Undantag"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_search
+msgid "Exceptions"
+msgstr "Undantag"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_last_mile_delivery__tracking_reference
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_transport_trip__tracking_reference
+msgid "External Tracking Reference"
+msgstr "Extern spårningsreferens"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_last_mile_wave__tracking_reference
+msgid "External Wave Reference"
+msgstr "Extern vågreferens"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_freight_job__tracking_reference
+msgid ""
+"External reference the carrier uses on inbound webhooks to identify this "
+"job. Populated when the booking comes back from the carrier with their "
+"reference."
+msgstr ""
+"Extern referens som transportören använder i inkommande webhooks för att "
+"identifiera detta jobb. Fylls i när bokningen kommer tillbaka från "
+"transportören med deras referens."
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event__location
+msgid ""
+"Free-text location string from the source. The public page renders it under "
+"the event description."
+msgstr ""
+"Fritextplatssträng från källan. Den offentliga sidan visar den under "
+"evenemangsbeskrivningen."
+
+#. module: eh_log_track_trace
+#: model:ir.model,name:eh_log_track_trace.model_eh_log_freight_job
+msgid "Freight Forwarding Job"
+msgstr "Speditionsuppdrag"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_freight_job__track_url
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_last_mile_delivery__track_url
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_last_mile_wave__track_url
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_trackable__track_url
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_transport_trip__track_url
+msgid ""
+"Full URL for the customer-facing tracking page. Built from the configured "
+"public base URL and the tracking token."
+msgstr ""
+"Fullständig URL för den kundvända spårningssidan. Byggs från den "
+"konfigurerade offentliga bas-URL:en och spårningstoken."
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_webhook_endpoint__signature_header
+msgid ""
+"HTTP header carrying the HMAC-SHA256 hex digest the carrier signs the "
+"request body with."
+msgstr ""
+"HTTP-header som bär HMAC-SHA256 hex-sammandraget som transportören signerar "
+"begärans body med."
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.res_config_settings_view_form_track
+msgid "Hostname customers see in tracking URLs."
+msgstr "Värdnamn som kunder ser i spårnings-URL:er."
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_res_config_settings__eh_log_track_public_base_url
+msgid ""
+"Hostname customers see in tracking URLs. Falls back to the system base URL "
+"if blank."
+msgstr ""
+"Värdnamn som kunder ser i spårnings-URL:er. Faller tillbaka på systemets "
+"bas-URL om det är tomt."
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_freight_job__id
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_last_mile_delivery__id
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_last_mile_wave__id
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__id
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event_code__id
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_subscription__id
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_trackable__id
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__id
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_mapping__id
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_transport_trip__id
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_res_config_settings__id
+msgid "ID"
+msgstr ""
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event_code__icon_name
+msgid "Icon Name"
+msgstr "Ikonnamn"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_subscription__event_code_ids
+msgid ""
+"If empty, all milestone events on the record trigger a notification. If "
+"populated, only events matching one of the listed codes trigger."
+msgstr ""
+"Om tomt utlöser alla milstolpehändelser på posten en avisering. Om ifyllt "
+"utlöses endast händelser som matchar en av de listade koderna."
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event__is_milestone
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event_code__is_milestone
+msgid ""
+"If set, raising this event triggers notifications on all matching "
+"subscriptions. Non-milestone events still appear on the timeline but do not "
+"page customers."
+msgstr ""
+"Om angivet utlöser den här händelsen aviseringar på alla matchande "
+"prenumerationer. Händelser som inte är milstolpar visas fortfarande på "
+"tidslinjen men larmar inte kunder."
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields.selection,name:eh_log_track_trace.selection__eh_log_track_event__source__import
+msgid "Import"
+msgstr "Importera"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_in_transit
+msgid "In Transit"
+msgstr "I transit"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields.selection,name:eh_log_track_trace.selection__eh_log_track_event__source__internal
+msgid "Internal"
+msgstr "Intern"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_webhook_endpoint_form
+msgid "JSON Field Paths"
+msgstr "JSON-fältsökvägar"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event_code__name
+msgid "Label"
+msgstr "Beskrivning"
+
+#. module: eh_log_track_trace
+#: model:ir.model,name:eh_log_track_trace.model_eh_log_last_mile_delivery
+msgid "Last Mile Delivery"
+msgstr "Sista milen-leverans"
+
+#. module: eh_log_track_trace
+#: model:ir.model,name:eh_log_track_trace.model_eh_log_last_mile_wave
+msgid "Last Mile Wave"
+msgstr "Sista milen-våg"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__write_uid
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event_code__write_uid
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_subscription__write_uid
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__write_uid
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_mapping__write_uid
+msgid "Last Updated by"
+msgstr "Senast uppdaterad av"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__write_date
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event_code__write_date
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_subscription__write_date
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__write_date
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_mapping__write_date
+msgid "Last Updated on"
+msgstr "Senast uppdaterad den"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__location
+msgid "Location"
+msgstr "Plats"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__location_path
+msgid "Location JSON Path"
+msgstr "JSON-sökväg för plats"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_webhook_endpoint__secret_key
+msgid ""
+"Lookup key passed to the credentials helper to fetch the shared secret. "
+"Resolves through env var, encrypted ir.config_parameter, then default."
+msgstr ""
+"Sökningsnyckel som skickas till autentiseringshjälpen för att hämta den "
+"delade hemligheten. Löses via miljövariabel, krypterad ir.config_parameter "
+"och sedan standardvärde."
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_webhook_endpoint__carrier_name
+msgid ""
+"Lower-case carrier identifier appearing in the inbound URL: "
+"/track/event/<carrier_name>. No spaces."
+msgstr ""
+"Transportörsidentifierare med små bokstäver som visas i den inkommande "
+"URL:en: /track/event/<carrier_name>. Inga mellanslag."
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_kanban
+msgid "M"
+msgstr ""
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__is_milestone
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event_code__is_milestone
+msgid "Milestone"
+msgstr "Milstolpe"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_search
+msgid "Milestones"
+msgstr "Milstolpar"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event__notes
+msgid ""
+"Mutable free-text annotation. Distinct from the event description: the "
+"description is shown publicly; notes are internal."
+msgstr ""
+"Ändringsbar anteckning i fritext. Skiljer sig från händelsebeskrivningen: "
+"beskrivningen visas offentligt medan anteckningar är interna."
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__name
+msgid "Name"
+msgstr "Namn"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.public_track_not_found
+msgid "No shipment matched the tracking link. Check the link and try again."
+msgstr ""
+"Ingen försändelse matchade spårningslänken. Kontrollera länken och försök "
+"igen."
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.public_track_page
+msgid "No tracking events yet. Check back shortly."
+msgstr "Inga spårningshändelser ännu. Kom tillbaka snart."
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_mapping__event_code_id
+msgid "Normalized Event"
+msgstr "Normaliserad händelse"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__occurred_at
+msgid "Occurred At"
+msgstr "Inträffade"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__occurred_at_path
+msgid "Occurred-At JSON Path"
+msgstr "Occurred-At JSON-sökväg"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_webhook_endpoint__mapping_ids
+msgid ""
+"One row per carrier-supplied event code, mapping it to a normalized "
+"eh.log.track.event.code. Inbound events with no mapping are ignored after a "
+"warning is logged."
+msgstr ""
+"En rad per händelsekod som transportören tillhandahåller, som mappar den "
+"till en normaliserad eh.log.track.event.code. Inkommande händelser utan "
+"mappning ignoreras efter att en varning har loggats."
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event__description
+msgid ""
+"One-line description rendered on the public timeline. Falls back to the "
+"event code default if the source passes nothing."
+msgstr ""
+"Enkelradsbeskrivning som visas på den offentliga tidslinjen. Faller tillbaka"
+" på händelsekodens standardvärde om källan inte skickar något."
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__notes
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_form
+msgid "Operator Notes"
+msgstr "Operatörsanteckningar"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_webhook_endpoint__name
+msgid "Operator-facing name used in logs and the audit trail."
+msgstr "Operatörsvänligt namn som används i loggar och granskningsspåret."
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_webhook_endpoint__location_path
+msgid "Optional. Leave blank if the carrier omits location."
+msgstr "Valfritt. Lämna tomt om transportören utelämnar platsen."
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields.selection,name:eh_log_track_trace.selection__eh_log_track_event_code__category__origin
+msgid "Origin"
+msgstr "Ursprung"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_out_for_delivery
+msgid "Out for Delivery"
+msgstr "Under leverans"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_out_for_delivery
+msgid "Out for last-mile delivery."
+msgstr "Under leverans på sista milen."
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_res_config_settings__eh_log_track_token_salt
+msgid ""
+"Per-database salt used to derive non-enumerable public tracking tokens. "
+"Rotate to invalidate outstanding tracking links."
+msgstr ""
+"Salt per databas som används för att härleda icke-uppräkningsbara offentliga"
+" spårningstokens. Rotera för att ogiltigförklara utestående spårningslänkar."
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.res_config_settings_view_form_track
+msgid ""
+"Per-database salt used to derive non-enumerable tracking tokens. Rotating it"
+" invalidates outstanding links."
+msgstr ""
+"Salt per databas som används för att härleda icke-uppräkningsbara "
+"spårningstokens. Att rotera det ogiltigförklarar utestående länkar."
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_picked_up
+msgid "Picked Up"
+msgstr "Upphämtad"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields.selection,name:eh_log_track_trace.selection__eh_log_track_subscription__channel__portal
+msgid "Portal Only"
+msgstr "Endast portal"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.res_config_settings_view_form_track
+msgid "Public Base URL"
+msgstr "Offentlig bas-URL"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.res_config_settings_view_form_track
+msgid "Public Tracking Page"
+msgstr "Offentlig spårningssida"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_freight_job__track_url
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_last_mile_delivery__track_url
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_last_mile_wave__track_url
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_trackable__track_url
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_transport_trip__track_url
+msgid "Public Tracking URL"
+msgstr "Offentlig spårnings-URL"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__raw_payload
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_form
+msgid "Raw Payload"
+msgstr "Rå nyttolast"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__reference_path
+msgid "Reference JSON Path"
+msgstr "Referens-JSON-sökväg"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_returned
+msgid "Returned"
+msgstr "Returnerad"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event_code__sequence
+msgid "Sequence"
+msgstr "Sekvens"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_booked
+msgid "Shipment Booked"
+msgstr "Sändning bokad"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.public_track_not_found
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.public_track_page
+msgid "Shipment Tracking"
+msgstr "Fraktspårning"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_arrived
+msgid "Shipment arrived at destination."
+msgstr "Frakten har anlänt till destinationen."
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_cancelled
+msgid "Shipment cancelled."
+msgstr "Frakt avbruten."
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_picked_up
+msgid "Shipment collected from origin."
+msgstr "Frakten har hämtats vid ursprunget."
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_booked
+msgid "Shipment confirmed and booked."
+msgstr "Frakt bekräftad och bokad."
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_delivered
+msgid "Shipment delivered."
+msgstr "Frakt levererad."
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_exception
+msgid "Shipment exception reported."
+msgstr "Fraktavvikelse rapporterad."
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_closed
+msgid "Shipment file closed."
+msgstr "Fraktakt stängd."
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_customs_hold
+msgid "Shipment held at customs pending clearance."
+msgstr "Frakten hålls kvar i tullen i väntan på klarering."
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_in_transit
+msgid "Shipment in transit."
+msgstr "Frakt under transport."
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_returned
+msgid "Shipment returned to sender."
+msgstr "Frakt returnerad till avsändaren."
+
+#. module: eh_log_track_trace
+#: model:mail.template,subject:eh_log_track_trace.email_template_track_event_milestone
+msgid "Shipment update: {{ object.event_code_id.name }}"
+msgstr "Fraktuppdatering: {{ object.event_code_id.name }}"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__signature_header
+msgid "Signature Header"
+msgstr "Signaturrubrik"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__source
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_search
+msgid "Source"
+msgstr "Källa"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__res_id
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_subscription__res_id
+msgid "Source ID"
+msgstr "Käll-ID"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_event__res_model
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_subscription__res_model
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_search
+msgid "Source Model"
+msgstr "Källmodell"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event__code
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event_code__code
+msgid ""
+"Stable, machine-readable identifier. Subscriptions and carrier mappings "
+"reference this value, never the label."
+msgstr ""
+"Stabil, maskinläsbar identifierare. Prenumerationer och "
+"transportörsmappningar refererar till detta värde, aldrig till etiketten."
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_freight_job__tracking_token
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_last_mile_delivery__tracking_token
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_last_mile_wave__tracking_token
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_trackable__tracking_token
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_transport_trip__tracking_token
+msgid ""
+"Stable, non-enumerable token used in the public tracking URL. Derived from "
+"the record id and the per-database salt. Safe to share with customers."
+msgstr ""
+"Stabil, icke-uppräkningsbar token som används i den offentliga spårnings-"
+"URL:en. Härledd från post-id och per-databas-salt. Säker att dela med "
+"kunder."
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_subscription__partner_id
+msgid "Subscriber"
+msgstr "Prenumerant"
+
+#. module: eh_log_track_trace
+#: model:ir.actions.act_window,name:eh_log_track_trace.action_eh_log_track_subscription
+#: model:ir.ui.menu,name:eh_log_track_trace.menu_eh_log_track_subscriptions
+msgid "Subscriptions"
+msgstr "Prenumerationer"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event_code__icon_name
+msgid ""
+"Symbol-name only (no path or colour). The public template maps the name to "
+"the SVG sprite asset; this keeps the code master decoupled from the "
+"renderer."
+msgstr ""
+"Endast symbolnamn (ingen sökväg eller färg). Den offentliga mallen mappar "
+"namnet till SVG-spritetillgången; detta håller kodmastern frikopplad från "
+"renderaren."
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_webhook_endpoint__target_model
+msgid "Target Model"
+msgstr "Målmodell"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event__res_model
+msgid ""
+"Technical name of the trackable model the event belongs to. Combined with "
+"res_id this points back to the source record without needing a foreign key "
+"per model."
+msgstr ""
+"Tekniskt namn på den spårbara modell som händelsen tillhör. Kombinerat med "
+"res_id pekar detta tillbaka till källposten utan att behöva en främmande "
+"nyckel per modell."
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event__raw_payload
+msgid ""
+"The unmodified payload (JSON, XML, etc.) from the carrier webhook. Internal-"
+"source events leave this blank. Used for forensics when a customer disputes "
+"a timeline entry."
+msgstr ""
+"Den omodifierade nyttolasten (JSON, XML osv.) från transportörens webhook. "
+"Händelser från interna källor lämnar detta tomt. Används för forensik när en"
+" kund bestrider en tidslinjepost."
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.res_config_settings_view_form_track
+msgid "Token Salt"
+msgstr "Token-salt"
+
+#. module: eh_log_track_trace
+#: model:ir.ui.menu,name:eh_log_track_trace.menu_eh_log_track_config_root
+#: model:ir.ui.menu,name:eh_log_track_trace.menu_eh_log_track_root
+msgid "Track and Trace"
+msgstr "Spårning och sökning"
+
+#. module: eh_log_track_trace
+#: model:ir.actions.act_window,name:eh_log_track_trace.action_eh_log_track_trace_settings
+msgid "Track and Trace Settings"
+msgstr "Inställningar för spårning och sökning"
+
+#. module: eh_log_track_trace
+#: model:ir.model,name:eh_log_track_trace.model_eh_log_track_trackable
+msgid "Trackable Record Mixin"
+msgstr ""
+
+#. module: eh_log_track_trace
+#: model:ir.model,name:eh_log_track_trace.model_eh_log_track_event
+msgid "Tracking Event"
+msgstr "Spårningshändelse"
+
+#. module: eh_log_track_trace
+#: model:ir.model,name:eh_log_track_trace.model_eh_log_track_event_code
+msgid "Tracking Event Code"
+msgstr "Kod för spårningshändelse"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/models/eh_log_track_trackable.py:0
+#: model:ir.actions.act_window,name:eh_log_track_trace.action_eh_log_track_event
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_freight_job__track_event_count
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_last_mile_delivery__track_event_count
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_last_mile_wave__track_event_count
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_trackable__track_event_count
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_transport_trip__track_event_count
+#: model:ir.ui.menu,name:eh_log_track_trace.menu_eh_log_track_events
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_freight_job_form_track
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_last_mile_delivery_form_track
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_calendar
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_pivot
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_transport_trip_form_track
+msgid "Tracking Events"
+msgstr "Spårningshändelser"
+
+#. module: eh_log_track_trace
+#: model:ir.model,name:eh_log_track_trace.model_eh_log_track_subscription
+msgid "Tracking Notification Subscription"
+msgstr "Prenumeration på spårningsaviseringar"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_res_config_settings__eh_log_track_public_base_url
+msgid "Tracking Public Base URL"
+msgstr "Offentlig bas-URL för spårning"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_freight_job__tracking_token
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_last_mile_delivery__tracking_token
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_last_mile_wave__tracking_token
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_track_trackable__tracking_token
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_eh_log_transport_trip__tracking_token
+msgid "Tracking Token"
+msgstr "Spårningstoken"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,field_description:eh_log_track_trace.field_res_config_settings__eh_log_track_token_salt
+msgid "Tracking Token Salt"
+msgstr "Salt för spårningstoken"
+
+#. module: eh_log_track_trace
+#: model:ir.model.constraint,message:eh_log_track_trace.constraint_eh_log_track_event_code_code_unique
+msgid "Tracking event code must be unique."
+msgstr "Koden för spårningshändelsen måste vara unik."
+
+#. module: eh_log_track_trace
+#: model:mail.template,name:eh_log_track_trace.email_template_track_event_milestone
+msgid "Tracking: Milestone Notification"
+msgstr "Spårning: milstolpsavisering"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields.selection,name:eh_log_track_trace.selection__eh_log_track_event_code__category__transit
+msgid "Transit"
+msgstr ""
+
+#. module: eh_log_track_trace
+#: model:ir.model,name:eh_log_track_trace.model_eh_log_transport_trip
+msgid "Transport Trip"
+msgstr "Transportresa"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/models/eh_log_track_subscription.py:0
+msgid "Unknown"
+msgstr "Okänd"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event_code__default_description
+msgid ""
+"Used as the timeline description when the event source does not supply a "
+"per-event description."
+msgstr ""
+"Används som beskrivning för tidslinjen när händelsekällan inte "
+"tillhandahåller en beskrivning per händelse."
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_at_delivery
+msgid "Vehicle at delivery location."
+msgstr "Fordonet på leveransplatsen."
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_at_pickup
+msgid "Vehicle at pickup location."
+msgstr "Fordonet på upphämtningsplatsen."
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_dispatched
+msgid "Vehicle dispatched from origin."
+msgstr "Fordonet avsänt från ursprungsplatsen."
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_webhook_mapping__carrier_code
+msgid "Verbatim event code as the carrier emits it."
+msgstr "Ordagrann händelsekod som transportören sänder den."
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_wave_completed
+msgid "Wave Completed"
+msgstr "Våg slutförd"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_wave_dispatched
+msgid "Wave Dispatched"
+msgstr "Våg avsänd"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,name:eh_log_track_trace.event_code_wave_in_progress
+msgid "Wave In Progress"
+msgstr "Våg pågår"
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_wave_completed
+msgid "Wave completed."
+msgstr "Våg slutförd."
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_wave_dispatched
+msgid "Wave dispatched."
+msgstr "Våg avsänd."
+
+#. module: eh_log_track_trace
+#: model:eh.log.track.event.code,default_description:eh_log_track_trace.event_code_wave_in_progress
+msgid "Wave in progress."
+msgstr "Våg pågår."
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.view_eh_log_track_event_search
+msgid "Webhook Source"
+msgstr "Webhook-källa"
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_event__source
+msgid ""
+"Where the event originated. The raw inbound body of a webhook event is kept "
+"on the raw_payload field."
+msgstr ""
+"Var händelsen härrörde från. Den råa inkommande texten för en webhook-"
+"händelse behålls i fältet raw_payload."
+
+#. module: eh_log_track_trace
+#: model:ir.model.fields,help:eh_log_track_trace.field_eh_log_track_webhook_endpoint__target_model
+msgid ""
+"Which trackable model the webhook posts events against. Most carrier "
+"integrations target freight jobs; last-mile carriers target deliveries."
+msgstr ""
+"Mot vilken spårbar modell webhooken publicerar händelser. De flesta "
+"transportörsintegrationer riktar sig mot fraktuppdrag; sista milen-"
+"transportörer riktar sig mot leveranser."
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/models/eh_log_track_trackable.py:0
+msgid "[EHL-TRK-001] Unknown tracking event code %(code)s."
+msgstr "[EHL-TRK-001] Okänd spårningshändelsekod %(code)s."
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/models/eh_log_track_event_code.py:0
+msgid ""
+"[EHL-TRK-002] Seeded tracking event code %(code)s cannot be renamed; create "
+"a new code instead."
+msgstr ""
+"[EHL-TRK-002] Den fördefinierade spårningshändelsekoden %(code)s kan inte "
+"byta namn; skapa i stället en ny kod."
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/models/eh_log_track_event_code.py:0
+msgid ""
+"[EHL-TRK-003] Seeded tracking event code %(code)s cannot be deleted; archive"
+" it instead."
+msgstr ""
+"[EHL-TRK-003] Den fördefinierade spårningshändelsekoden %(code)s kan inte "
+"tas bort; arkivera den i stället."
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/models/eh_log_track_event.py:0
+msgid ""
+"[EHL-TRK-004] Tracking events must be created through log_track_event() on "
+"the source record, not by direct ORM write."
+msgstr ""
+"[EHL-TRK-004] Spårningshändelser måste skapas via log_track_event() på "
+"källposten, inte genom direkt ORM-skrivning."
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/models/eh_log_track_event.py:0
+msgid ""
+"[EHL-TRK-005] Tracking event field(s) %(fields)s are immutable after "
+"creation. Add a new event instead."
+msgstr ""
+"[EHL-TRK-005] Spårningshändelsefält %(fields)s är oföränderliga efter "
+"skapandet. Lägg i stället till en ny händelse."
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/models/eh_log_track_event.py:0
+msgid ""
+"[EHL-TRK-006] Tracking events are append-only and cannot be deleted; archive"
+" the source record instead."
+msgstr ""
+"[EHL-TRK-006] Spårningshändelser är endast tilläggsbara och kan inte tas "
+"bort; arkivera i stället källposten."
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/models/eh_log_track_subscription.py:0
+msgid "[EHL-TRK-007] Subscription source model %(model)s does not exist."
+msgstr "[EHL-TRK-007] Prenumerationens källmodell %(model)s finns inte."
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/models/eh_log_track_subscription.py:0
+msgid ""
+"[EHL-TRK-008] Source model %(model)s is not trackable; it must inherit "
+"eh.log.track.trackable to be subscribed to."
+msgstr ""
+"[EHL-TRK-008] Källmodellen %(model)s är inte spårbar; den måste ärva "
+"eh.log.track.trackable för att kunna prenumereras på."
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/models/eh_log_track_webhook_endpoint.py:0
+msgid ""
+"[EHL-TRK-009] Carrier name %(name)s must be alphanumeric or underscore only."
+msgstr ""
+"[EHL-TRK-009] Transportörnamnet %(name)s får endast vara alfanumeriskt eller"
+" understreck."
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/models/eh_log_track_webhook_endpoint.py:0
+msgid "[EHL-TRK-010] Carrier name %(name)s must be lower-case."
+msgstr "[EHL-TRK-010] Transportörnamnet %(name)s måste vara i gemener."
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/controllers/carrier_webhook.py:0
+msgid "accepted"
+msgstr "accepterad"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/controllers/carrier_webhook.py:0
+msgid "bad signature"
+msgstr "ogiltig signatur"
+
+#. module: eh_log_track_trace
+#: model_terms:ir.ui.view,arch_db:eh_log_track_trace.res_config_settings_view_form_track
+msgid "https://track.example.com"
+msgstr ""
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/controllers/carrier_webhook.py:0
+msgid "ignored"
+msgstr "Ignorerad"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/controllers/carrier_webhook.py:0
+msgid "malformed JSON"
+msgstr "Felaktigt JSON"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/controllers/carrier_webhook.py:0
+msgid "misconfigured"
+msgstr "Felkonfigurerad"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/controllers/carrier_webhook.py:0
+msgid "missing required field"
+msgstr "Obligatoriskt fält saknas"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/controllers/carrier_webhook.py:0
+msgid "missing signature"
+msgstr "Signatur saknas"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/models/eh_log_track_trackable.py:0
+msgid "res_model"
+msgstr ""
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/controllers/carrier_webhook.py:0
+msgid "unknown carrier"
+msgstr "Okänd transportör"
+
+#. module: eh_log_track_trace
+#. odoo-python
+#: code:addons/eh_log_track_trace/controllers/carrier_webhook.py:0
+msgid "unknown reference"
+msgstr "Okänd referens"

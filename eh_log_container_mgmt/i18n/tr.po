@@ -1,0 +1,1395 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* eh_log_container_mgmt
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-01 04:33+0000\n"
+"PO-Revision-Date: 2026-07-01 04:33+0000\n"
+"Last-Translator: ERP Heritage <info@erpheritage.com.au>\n"
+"Language-Team: Turkish\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#. module: eh_log_container_mgmt
+#. odoo-python
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_lease_contract.py:0
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_work_order.py:0
+msgid "(none)"
+msgstr "(yok)"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid ""
+"<br/>\n"
+"                                    <span class=\"eh_pdf_status_badge eh_pdf_status_warn\">REPAIR REQUIRED</span>"
+msgstr ""
+"<br/>\n"
+"                                    <span class=\"eh_pdf_status_badge eh_pdf_status_warn\">ONARIM GEREKLİ</span>"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "<strong>Container:</strong>"
+msgstr "<strong>Konteyner:</strong>"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "<strong>Movement:</strong>"
+msgstr "<strong>Hareket:</strong>"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "<strong>Reference:</strong>"
+msgstr "<strong>Referans:</strong>"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "<strong>When:</strong>"
+msgstr "<strong>Ne zaman:</strong>"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__accepts_dangerous
+msgid "Accepts Dangerous Goods"
+msgstr "Tehlikeli Madde Kabul Eder"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__accepts_reefer
+msgid "Accepts Reefer"
+msgstr "Soğutmalı Konteyner Kabul Eder"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__accepts_tank
+msgid "Accepts Tank"
+msgstr "Tank Konteyner Kabul Eder"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_needaction
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_needaction
+msgid "Action Needed"
+msgstr "Aksiyon Gerekiyor"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_lease_contract_form
+msgid "Activate"
+msgstr "Etkinleştir"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__active
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_lease_contract__state__active
+msgid "Active"
+msgstr "Etkin"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_freight_container__lease_contract_id
+msgid ""
+"Active lease contract this container falls under. Used by per-container D&D "
+"and headline billing."
+msgstr ""
+"Bu konteynerin tabi olduğu etkin kiralama sözleşmesi. Konteyner başına D&D "
+"hesaplaması ve ana faturalama tarafından kullanılır."
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__activity_ids
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__activity_ids
+msgid "Activities"
+msgstr "Aktiviteler"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__activity_exception_decoration
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Etkinlik İstisna Dekorasyonu"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__activity_state
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__activity_state
+msgid "Activity State"
+msgstr "Aktivite Durumu"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__activity_type_icon
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Aktivite Türü İmgesi"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__actual_amount
+msgid "Actual Amount"
+msgstr "Gerçekleşen Tutar"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__actual_cost
+msgid "Actual Cost"
+msgstr "Gerçekleşen Maliyet"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__actual_unit_cost
+msgid "Actual Unit Cost"
+msgstr "Gerçekleşen Birim Maliyet"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__address
+msgid "Address"
+msgstr "Adres"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_work_order_form
+msgid "Approve"
+msgstr "Onayla"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order__state__approved
+msgid "Approved"
+msgstr "Onaylanmış"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__approved_at
+msgid "Approved At"
+msgstr "Onaylanma Zamanı"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__approved_by_id
+msgid "Approved By"
+msgstr "Tarafından Onaylanan"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_attachment_count
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_attachment_count
+msgid "Attachment Count"
+msgstr "Ek Sayısı"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_work_order_form
+msgid "Audit"
+msgstr "Denetim"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_work_order_form
+msgid "Back to Draft"
+msgstr "Taslağa Geri Dön"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_lease_contract_form
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_work_order_form
+msgid "Cancel"
+msgstr "İptal"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_lease_contract__state__cancelled
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order__state__cancelled
+msgid "Cancelled"
+msgstr "İptal Edildi"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_depot_form
+msgid "Capacity"
+msgstr "Kapasite"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__capacity_teu
+msgid "Capacity (TEU)"
+msgstr "Kapasite (TEU)"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_freight_container__dnd_chargeable_days
+msgid "Chargeable days = max(0, days_at_destination - free_time_days)."
+msgstr ""
+"Ücretlendirilebilir günler = max(0, days_at_destination - free_time_days)."
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_work_order_form
+msgid "Close"
+msgstr "Kapat"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order__state__closed
+msgid "Closed"
+msgstr "Kapanmış"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__code
+msgid "Code"
+msgstr "Kod"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__company_ids
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__company_ids
+msgid "Companies"
+msgstr "Şirketler"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__company_id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__company_id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__company_id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__company_id
+msgid "Company"
+msgstr "Firma"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order__state__completed
+msgid "Completed"
+msgstr "Tamamlandı"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__completed_at
+msgid "Completed At"
+msgstr "Tamamlanma Zamanı"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__condition_note
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "Condition Note"
+msgstr "Durum Notu"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__container_id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__container_id
+msgid "Container"
+msgstr "Konteyner"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_depot_form
+msgid "Container Depot"
+msgstr "Konteyner Deposu"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model,name:eh_log_container_mgmt.model_eh_log_container_mgmt_depot
+msgid "Container Depot or Yard"
+msgstr "Konteyner Deposu veya Sahası"
+
+#. module: eh_log_container_mgmt
+#: model:ir.actions.act_window,name:eh_log_container_mgmt.action_eh_log_container_mgmt_depot
+#: model:ir.ui.menu,name:eh_log_container_mgmt.menu_eh_log_container_mgmt_depots
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_depot_list
+msgid "Container Depots"
+msgstr "Konteyner Depoları"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model,name:eh_log_container_mgmt.model_eh_log_container_mgmt_movement
+msgid "Container Gate Movement"
+msgstr "Konteyner Kapı Hareketi"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model,name:eh_log_container_mgmt.model_eh_log_container_mgmt_lease_contract
+msgid "Container Lease Contract"
+msgstr "Konteyner Kiralama Sözleşmesi"
+
+#. module: eh_log_container_mgmt
+#: model:ir.ui.menu,name:eh_log_container_mgmt.menu_eh_log_container_mgmt_work_orders
+msgid "Container M&R"
+msgstr "Konteyner M&R"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model,name:eh_log_container_mgmt.model_eh_log_container_mgmt_work_order
+msgid "Container M&R Work Order"
+msgstr "Konteyner M&R İş Emri"
+
+#. module: eh_log_container_mgmt
+#: model:ir.ui.menu,name:eh_log_container_mgmt.menu_eh_log_container_mgmt_movements
+msgid "Container Movements"
+msgstr "Konteyner Hareketleri"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__container_number
+msgid "Container No."
+msgstr "Konteyner No."
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "Container Number"
+msgstr "Konteyner Numarası"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__iso_type_id
+msgid ""
+"Container type covered by this contract. Mixed-type fleet is modelled as "
+"multiple contracts."
+msgstr ""
+"Bu sözleşme kapsamındaki konteyner tipi. Karma tipli filo, birden çok "
+"sözleşme olarak modellenir."
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__container_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_lease_contract_form
+msgid "Containers"
+msgstr "Konteynerler"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__container_count
+msgid "Containers Assigned"
+msgstr "Atanan Konteynerler"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__line_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_work_order_form
+msgid "Cost Lines"
+msgstr "Maliyet Satırları"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_work_order_form
+msgid "Costs"
+msgstr "Maliyetler"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__partner_id
+msgid "Counterparty"
+msgstr "Karşı Taraf"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__counterparty_depot_id
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "Counterparty Depot"
+msgstr "Karşı Taraf Deposu"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__partner_reference
+msgid "Counterparty Reference"
+msgstr "Karşı Taraf Referansı"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__country_id
+msgid "Country"
+msgstr "Ülke"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__create_uid
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__create_uid
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__create_uid
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__create_uid
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__create_uid
+msgid "Created by"
+msgstr "Tarafından oluşturuldu"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__create_date
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__create_date
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__create_date
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__create_date
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__create_date
+msgid "Created on"
+msgstr "Oluşturuldu"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__currency_id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__currency_id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__currency_id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_freight_container__currency_id
+msgid "Currency"
+msgstr "Kur"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_freight_container__current_depot_id
+msgid "Current Depot"
+msgstr "Mevcut Depo"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_freight_container_form_mgmt
+msgid "D&D"
+msgstr ""
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_freight_container__dnd_amount
+msgid "D&D Amount"
+msgstr "D&D Tutarı"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_freight_container__dnd_chargeable_days
+msgid "D&D Chargeable Days"
+msgstr "D&D Ücretlendirilebilir Günler"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_freight_container__dnd_rate_per_day
+msgid "D&D Rate (per day)"
+msgstr "D&D Oranı (günlük)"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__daily_rate
+msgid "Daily Rate (per container)"
+msgstr "Günlük Ücret (konteyner başına)"
+
+#. module: eh_log_container_mgmt
+#. odoo-python
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_movement.py:0
+msgid "Damage observed at gate."
+msgstr "Kapıda hasar gözlemlendi."
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_freight_container__days_at_destination
+msgid "Days at Destination"
+msgstr "Varış Yerindeki Gün Sayısı"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__free_days
+msgid ""
+"Days for which the daily rate is waived per container movement cycle. Useful"
+" for short-turn lease-out arrangements."
+msgstr ""
+"Konteyner hareket döngüsü başına günlük ücretin muaf tutulduğu gün sayısı. "
+"Kısa süreli kiralama düzenlemeleri için kullanışlıdır."
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_freight_container__free_time_days
+msgid ""
+"Days included in the agreed price after gate-out before demurrage or "
+"detention starts to accrue. Defaults to 7 days; override per container for "
+"special arrangements."
+msgstr ""
+"Sürastarya veya ardiye tahakkuk etmeye başlamadan önce, kapı çıkışından "
+"sonra anlaşılan fiyata dahil edilen gün sayısı. Varsayılan 7 gündür; özel "
+"düzenlemeler için konteyner bazında geçersiz kılın."
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_freight_container__days_at_destination
+msgid ""
+"Days since destination gate-out, before destination gate-in. Used by the D&D"
+" calculation."
+msgstr ""
+"Varış kapısı çıkışından bu yana, varış kapısı girişinden önceki gün sayısı. "
+"D&D hesaplamasında kullanılır."
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order_line__repair_kind__dent
+msgid "Dent / Bend"
+msgstr "Ezik / bükülme"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__depot_id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__depot_id
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "Depot"
+msgstr "Depo"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_freight_container_form_mgmt
+msgid "Depot & Lease"
+msgstr "Depo ve kiralama"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__depot_kind
+msgid "Depot Kind"
+msgstr "Depo türü"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.constraint,message:eh_log_container_mgmt.constraint_eh_log_container_mgmt_depot_code_unique
+msgid "Depot code must be unique."
+msgstr "Depo kodu benzersiz olmalıdır."
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__description
+msgid "Description"
+msgstr "Açıklama"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__direction
+msgid "Direction"
+msgstr "Yön"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__display_name
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__display_name
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__display_name
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__display_name
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__display_name
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_freight_container__display_name
+msgid "Display Name"
+msgstr "İsim Göster"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order_line__repair_kind__door
+msgid "Door / Hinge"
+msgstr "Kapı / Menteşe"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_lease_contract__state__draft
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order__state__draft
+msgid "Draft"
+msgstr "Taslak"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_depot__depot_kind__dry_port
+msgid "Dry Port"
+msgstr "Kuru liman"
+
+#. module: eh_log_container_mgmt
+#: model:ir.actions.server,name:eh_log_container_mgmt.ir_cron_eh_log_container_mgmt_dnd_alert_ir_actions_server
+msgid "EH Logistics: container D&D free time alerts"
+msgstr "EH Lojistik: konteyner D&D serbest süre uyarıları"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__ends_on
+msgid "Ends On"
+msgstr "Bitiş tarihi"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "Equipment"
+msgstr "Ekipman"
+
+#. module: eh_log_container_mgmt
+#: model:ir.actions.report,name:eh_log_container_mgmt.action_report_eh_log_container_mgmt_eir
+msgid "Equipment Interchange Receipt"
+msgstr "Ekipman Değişim Makbuzu"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order__state__estimated
+msgid "Estimated"
+msgstr "Tahmini"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__estimated_amount
+msgid "Estimated Amount"
+msgstr "Tahmini Tutar"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__estimated_at
+msgid "Estimated At"
+msgstr "Tahmin Zamanı"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__estimated_cost
+msgid "Estimated Cost"
+msgstr "Tahmini Maliyet"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__estimated_unit_cost
+msgid "Estimated Unit Cost"
+msgstr "Tahmini Birim Maliyeti"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_lease_contract_form
+msgid "Expire"
+msgstr "Süreyi doldur"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_lease_contract__state__expired
+msgid "Expired"
+msgstr "Süresi Doldu"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__fault_description
+msgid "Fault Description"
+msgstr "Arıza açıklaması"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "Field"
+msgstr "Alan"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_lease_contract_form
+msgid "Fleet"
+msgstr "Filo"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__fleet_count
+msgid "Fleet Count"
+msgstr "Filo Sayısı"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__headline_value
+msgid ""
+"Fleet count * daily rate * term days. Indicative headline only; actual "
+"billing reflects per-container free-day usage."
+msgstr ""
+"Filo sayısı * günlük ücret * dönem günü. Yalnızca gösterge niteliğinde bir "
+"değerdir; gerçek faturalama, konteyner başına serbest gün kullanımını "
+"yansıtır."
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order_line__repair_kind__flooring
+msgid "Flooring"
+msgstr "Zemin kaplaması"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_follower_ids
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_follower_ids
+msgid "Followers"
+msgstr "Takipçiler"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_partner_ids
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Takipçiler (İş ortakları)"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__activity_type_icon
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Yazı tipi harika simgesi ör. fa-görevler"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__free_days
+msgid "Free Days (per container)"
+msgstr "Serbest Günler (konteyner başına)"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_freight_container__free_time_days
+msgid "Free Time (days)"
+msgstr "Serbest Süre (gün)"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_depot__depot_kind__freezone_depot
+msgid "Free Zone Depot"
+msgstr "Serbest Bölge Deposu"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__gate_hours
+msgid ""
+"Free-text description of gate operating hours, e.g. '24/7' or 'Sat-Thu "
+"06:00-22:00'. The dispatch board warns when scheduled movements fall outside"
+" these hours."
+msgstr ""
+"Kapı çalışma saatlerinin serbest metin açıklaması, örn. '24/7' veya 'Cmt-Prş"
+" 06:00-22:00'. Sevkiyat panosu, planlanan hareketler bu saatlerin dışına "
+"düştüğünde uyarır."
+
+#. module: eh_log_container_mgmt
+#: model:ir.model,name:eh_log_container_mgmt.model_eh_log_freight_container
+msgid "Freight Container or ULD"
+msgstr "Navlun Konteyneri veya ULD"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__gate_hours
+msgid "Gate Hours"
+msgstr "Kapı Saatleri"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_movement_form
+msgid "Gate Movement"
+msgstr "Kapı Hareketi"
+
+#. module: eh_log_container_mgmt
+#. odoo-python
+#: code:addons/eh_log_container_mgmt/models/eh_log_freight_container.py:0
+#: model:ir.actions.act_window,name:eh_log_container_mgmt.action_eh_log_container_mgmt_movement
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_freight_container__movement_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_movement_list
+msgid "Gate Movements"
+msgstr "Kapı Hareketleri"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__gate_operator_name
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "Gate Operator"
+msgstr "Kapı Operatörü"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_movement_search
+msgid "Gate-In"
+msgstr "Kapı Girişi"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_movement__movement_kind__gate_in
+msgid "Gate-In (received)"
+msgstr "Kapı Girişi (teslim alındı)"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_movement_search
+msgid "Gate-Out"
+msgstr "Kapı Çıkışı"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_movement__movement_kind__gate_out
+msgid "Gate-Out (released)"
+msgstr "Kapı Çıkışı (serbest bırakıldı)"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "Gross Weight (kg)"
+msgstr "Brüt Ağırlık (kg)"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_movement_search
+msgid "Group by Depot"
+msgstr "Depoya Göre Grupla"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_movement_search
+msgid "Group by Kind"
+msgstr "Türe göre grupla"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__happened_at
+msgid "Happened At"
+msgstr "Gerçekleşme Zamanı"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__has_message
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__has_message
+msgid "Has Message"
+msgstr "Mesaj Var"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__headline_value
+msgid "Headline Value"
+msgstr "Ana Değer"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order_line__repair_kind__hole
+msgid "Hole / Puncture"
+msgstr "Delik / delinme"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_freight_container__id
+msgid "ID"
+msgstr "İD"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__container_number
+msgid ""
+"ISO 6346 container number: 4 letters (owner code + category) + 6 digits "
+"(serial) + 1 check digit. Validated on save unless 'Manual Override' is set."
+msgstr ""
+"ISO 6346 konteyner numarası: 4 harf (sahip kodu + kategori) + 6 rakam (seri)"
+" + 1 kontrol basamağı. 'Manuel Geçersiz Kılma' ayarlanmadıkça kaydederken "
+"doğrulanır."
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__iso_type_id
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "ISO Type"
+msgstr "ISO Tipi"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__activity_exception_icon
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__activity_exception_icon
+msgid "Icon"
+msgstr "Simge"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__activity_exception_icon
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "İstisnai bir etkinliği belirtmek için kullanılan simge."
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_depot_form
+msgid "Identity"
+msgstr "Künye"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_needaction
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "İşaretliyse, yeni mesajlar dikkatinize sunulacak."
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_has_error
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_has_sms_error
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_has_error
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "İşaretliyse, bazı mesajlar gönderi hatası içermektedir."
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order__state__in_progress
+msgid "In Progress"
+msgstr "İşlemde"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__capacity_teu
+msgid ""
+"Indicative TEU capacity. Used by yard planning to raise warnings when "
+"occupancy approaches the limit."
+msgstr ""
+"Gösterge niteliğinde TEU kapasitesi. Doluluk sınıra yaklaştığında uyarı "
+"vermek için saha planlaması tarafından kullanılır."
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_depot__depot_kind__inland_depot
+msgid "Inland Container Depot"
+msgstr "İç konteyner deposu"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order_line__repair_kind__inspection
+msgid "Inspection / Survey"
+msgstr "İnceleme / Ekspertiz"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_is_follower
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_is_follower
+msgid "Is Follower"
+msgstr "Takipçi mi"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__movement_kind
+msgid "Kind"
+msgstr "Tür"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__write_uid
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__write_uid
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__write_uid
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__write_uid
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__write_uid
+msgid "Last Updated by"
+msgstr "Son Güncelleyen"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__write_date
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__write_date
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__write_date
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__write_date
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__write_date
+msgid "Last Updated on"
+msgstr "Son Güncelleme"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_freight_container__current_depot_id
+msgid ""
+"Last known depot. Updated automatically by gate movements; can be edited "
+"manually for corrections."
+msgstr ""
+"Bilinen son depo. Kapı hareketleriyle otomatik olarak güncellenir; "
+"düzeltmeler için elle düzenlenebilir."
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_freight_container__lease_contract_id
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_lease_contract_form
+msgid "Lease Contract"
+msgstr "Kiralama Sözleşmesi"
+
+#. module: eh_log_container_mgmt
+#: model:ir.actions.act_window,name:eh_log_container_mgmt.action_eh_log_container_mgmt_lease_contract
+#: model:ir.ui.menu,name:eh_log_container_mgmt.menu_eh_log_container_mgmt_lease_contracts
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_lease_contract_list
+msgid "Lease Contracts"
+msgstr "Kiralama Sözleşmeleri"
+
+#. module: eh_log_container_mgmt
+#. odoo-python
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_lease_contract.py:0
+msgid ""
+"Lease contract %(name)s cannot move from %(current)s to %(target)s. Allowed "
+"transitions from %(current)s: %(allowed)s."
+msgstr ""
+"Kiralama sözleşmesi %(name)s, %(current)s durumundan %(target)s durumuna "
+"geçemez. %(current)s durumundan izin verilen geçişler: %(allowed)s."
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_lease_contract__direction__lease_in
+msgid "Lease-In (vendor to us)"
+msgstr "Kiralama Girişi (tedarikçiden bize)"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_lease_contract__direction__lease_out
+msgid "Lease-Out (us to customer)"
+msgstr "Kiralama Çıkışı (bizden müşteriye)"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_work_order_form
+msgid "M&R Work Order"
+msgstr "M&R İş Emri"
+
+#. module: eh_log_container_mgmt
+#: model:ir.actions.act_window,name:eh_log_container_mgmt.action_eh_log_container_mgmt_work_order
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_work_order_list
+msgid "M&R Work Orders"
+msgstr "M&R İş Emirleri"
+
+#. module: eh_log_container_mgmt
+#. odoo-python
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_work_order.py:0
+msgid ""
+"M&R work order %(name)s cannot move from %(current)s to %(target)s. Allowed "
+"transitions from %(current)s: %(allowed)s."
+msgstr ""
+"M&R iş emri %(name)s, %(current)s durumundan %(target)s durumuna geçemez. "
+"%(current)s durumundan izin verilen geçişler: %(allowed)s."
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_work_order_form
+msgid "Mark Completed"
+msgstr "Tamamlandı Olarak İşaretle"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_has_error
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_has_error
+msgid "Message Delivery error"
+msgstr "Mesaj Teslim hatası"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_ids
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_ids
+msgid "Messages"
+msgstr "Mesajlar"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__trigger_movement_id
+msgid ""
+"Movement (typically a damaged-on-arrival gate-in) that triggered the work "
+"order."
+msgstr ""
+"İş emrini tetikleyen hareket (genellikle varışta hasarlı bir kapı girişi)."
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_freight_container__movement_count
+msgid "Movements"
+msgstr "Hareketler"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__my_activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Aktivite Son Tarihim"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__name
+msgid "Name"
+msgstr "Adı"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__needs_repair
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_movement_search
+msgid "Needs Repair"
+msgstr "Onarım Gerekli"
+
+#. module: eh_log_container_mgmt
+#. odoo-python
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_lease_contract.py:0
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_movement.py:0
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_work_order.py:0
+msgid "New"
+msgstr "Yeni"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__activity_calendar_event_id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "Sonraki Aktivite Takvimi Etkinliği"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Sonraki Aktivite Son Tarihi"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__activity_summary
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__activity_summary
+msgid "Next Activity Summary"
+msgstr "Sonraki Aktivite Özeti"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__activity_type_id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__activity_type_id
+msgid "Next Activity Type"
+msgstr "Sonraki Aktivitie Türü"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__notes
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__notes
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__notes
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_lease_contract_form
+msgid "Notes"
+msgstr "Notlar"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_needaction_counter
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Aksiyon Sayısı"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__fleet_count
+msgid ""
+"Number of containers covered. Used for headline pricing and reporting; per-"
+"container assignment lives on the container record (lease_contract_id)."
+msgstr ""
+"Kapsanan konteyner sayısı. Ana fiyatlandırma ve raporlama için kullanılır; "
+"konteyner başına atama, konteyner kaydında (lease_contract_id) bulunur."
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_has_error_counter
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_has_error_counter
+msgid "Number of errors"
+msgstr "Hata adedi"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_needaction_counter
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "İşlem gerektiren mesaj sayısı"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_has_error_counter
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Teslimat hatası olan mesaj adedi"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__operator_id
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "Operator"
+msgstr "Operatör"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order_line__repair_kind__other
+msgid "Other"
+msgstr "Diğer"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order_line__repair_kind__paint
+msgid "Paint / Marking"
+msgstr "Boya / İşaretleme"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_lease_contract_form
+msgid "Parties"
+msgstr "Taraflar"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_freight_container__dnd_rate_per_day
+msgid ""
+"Per-container per-day rate that applies after free time elapses. Lookup "
+"chain: container override, lease contract daily rate, configured default per"
+" ISO type."
+msgstr ""
+"Ücretsiz süre dolduktan sonra geçerli olan konteyner başına günlük tarife. "
+"Arama zinciri: konteyner geçersiz kılması, kira sözleşmesi günlük tarifesi, "
+"ISO türüne göre yapılandırılmış varsayılan."
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__condition_note
+msgid ""
+"Photographs and damage notes captured at the gate. Drives the M&R work order"
+" if a repair is needed."
+msgstr ""
+"Kapıda çekilen fotoğraflar ve hasar notları. Onarım gerekiyorsa M&R iş "
+"emrini tetikler."
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_depot__depot_kind__port_terminal
+msgid "Port Container Terminal"
+msgstr "Liman konteyner terminali"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__quantity
+msgid "Quantity"
+msgstr "Miktar"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__rating_ids
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__rating_ids
+msgid "Ratings"
+msgstr "Değerlendirmeler"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid ""
+"Received in apparent good order and condition except as noted above. The "
+"undersigned hereby acknowledges receipt of the equipment described in this "
+"Equipment Interchange Receipt."
+msgstr ""
+"Yukarıda belirtilenler hariç, görünüşte iyi düzen ve durumda teslim "
+"alınmıştır. Aşağıda imzası bulunan kişi, bu Equipment Interchange Receipt "
+"belgesinde tanımlanan ekipmanı teslim aldığını işbu belgeyle beyan eder."
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "Receiving Party"
+msgstr "Alan taraf"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order_line__repair_kind__reefer_unit
+msgid "Reefer Unit"
+msgstr "Frigorifik Ünite"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__name
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__name
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__name
+msgid "Reference"
+msgstr "Referans"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_movement__movement_kind__repair_in
+msgid "Repair In"
+msgstr "Onarım Girişi"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__repair_kind
+msgid "Repair Kind"
+msgstr "Onarım Türü"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_movement__movement_kind__repair_out
+msgid "Repair Out"
+msgstr "Onarım Çıkışı"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__repair_summary
+msgid "Repair Summary"
+msgstr "Onarım Özeti"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_depot__depot_kind__repair_yard
+msgid "Repair Yard"
+msgstr "Onarım Sahası"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__activity_user_id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__activity_user_id
+msgid "Responsible User"
+msgstr "Sorumlu Kullanıcı"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_has_sms_error
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "SMS İleti hatası"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "Seal"
+msgstr "Mühür"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__seal_number
+msgid "Seal Number"
+msgstr "Mühür numarası"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order_line__repair_kind__seal
+msgid "Seal Replacement"
+msgstr "Mühür değişimi"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__sequence
+msgid "Sequence"
+msgstr "Sıralama"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__needs_repair
+msgid ""
+"Set at gate-in when the container is received with visible damage. Triggers "
+"a draft M&R work order on save."
+msgstr ""
+"Konteyner gözle görülür hasarla teslim alındığında kapı girişinde (gate-in) "
+"ayarlanır. Kaydedildiğinde taslak bir M&R iş emri oluşturur."
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__counterparty_depot_id
+msgid ""
+"Source depot on a transfer-in, destination depot on a transfer-out. Empty "
+"for gate-in / gate-out at a single depot."
+msgstr ""
+"Giriş transferinde kaynak depo, çıkış transferinde hedef depo. Tek bir "
+"depoda kapı girişi/çıkışı için boştur."
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__code
+msgid "Stable depot identifier (e.g. JEA-DP, KH-CMA, RAS-MMI)."
+msgstr "Sabit depo tanımlayıcısı (ör. JEA-DP, KH-CMA, RAS-MMI)."
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_work_order_form
+msgid "Start Repair"
+msgstr "Onarımı Başlat"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__started_at
+msgid "Started At"
+msgstr "Başlangıç Zamanı"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__starts_on
+msgid "Starts On"
+msgstr "Başlangıç Tarihi"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__state
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__state
+msgid "State"
+msgstr "İl/Eyalet"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__activity_state
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Aktivitelere göre durum \n"
+"Gecikmiş\\: Son tarih geçmiş\n"
+"Bugün\\: Aktivite tarihi bugün\n"
+"Planlanmış\\: Gelecek Aktiviteler."
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_depot__depot_kind__storage_yard
+msgid "Storage Yard"
+msgstr "Depolama sahası"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_work_order_form
+msgid "Subject"
+msgstr "Konu"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_work_order_form
+msgid "Submit Estimate"
+msgstr "Tahmini Gönder"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_movement__movement_kind__survey
+msgid "Survey"
+msgstr "Anket"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__days_total
+msgid "Term (days)"
+msgstr "Vade (gün)"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_lease_contract_form
+msgid "Term and Pricing"
+msgstr "Vade ve Fiyatlandırma"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__operator_id
+msgid ""
+"The party operating the depot. Counterparty for movement and lift/handle "
+"billing."
+msgstr ""
+"Depoyu işleten taraf. Hareket ile kaldırma/elleçleme faturalandırması için "
+"karşı taraf."
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_movement__movement_kind__transfer_in
+msgid "Transfer In (depot to depot)"
+msgstr "Transfer Giriş (depodan depoya)"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_movement__movement_kind__transfer_out
+msgid "Transfer Out (depot to depot)"
+msgstr "Transfer Çıkış (depodan depoya)"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__trigger_movement_id
+msgid "Trigger Movement"
+msgstr "Tetikleyici Hareket"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__activity_exception_decoration
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Kayıtlardaki istisna etkinliğinin türü."
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "Value"
+msgstr "Değer"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__partner_id
+msgid "Vendor on lease-in, customer on lease-out."
+msgstr "Lease-in'de tedarikçi, lease-out'ta müşteri."
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__website_message_ids
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__website_message_ids
+msgid "Website Messages"
+msgstr "Websitesi Mesajları"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__website_message_ids
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__website_message_ids
+msgid "Website communication history"
+msgstr "Websitesi iletişim geçmişi"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__work_order_id
+msgid "Work Order"
+msgstr "İş Emre"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model,name:eh_log_container_mgmt.model_eh_log_container_mgmt_work_order_line
+msgid "Work Order Cost Line"
+msgstr "İş Emri Maliyet Satırı"
+
+#. module: eh_log_container_mgmt
+#. odoo-python
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_lease_contract.py:0
+msgid "[EHL-CTNR-LEASE-001] Contract %(name)s end date is before start date."
+msgstr ""
+"[EHL-CTNR-LEASE-001] %(name)s sözleşmesinin bitiş tarihi, başlangıç "
+"tarihinden önce."
+
+#. module: eh_log_container_mgmt
+#. odoo-python
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_lease_contract.py:0
+msgid ""
+"[EHL-CTNR-LEASE-002] State changes on a lease contract must go through the "
+"action buttons. Direct writes are rejected."
+msgstr ""
+"[EHL-CTNR-LEASE-002] Kiralama sözleşmesindeki durum değişiklikleri işlem "
+"düğmeleri aracılığıyla yapılmalıdır. Doğrudan yazma işlemleri reddedilir."
+
+#. module: eh_log_container_mgmt
+#. odoo-python
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_movement.py:0
+msgid ""
+"[EHL-CTNR-MOV-001] Container movements are append-only. The following fields"
+" cannot be edited after capture: %(fields)s. Cancel the movement and create "
+"a corrected one if a fix is required."
+msgstr ""
+"[EHL-CTNR-MOV-001] Konteyner hareketleri yalnızca eklenebilir. Aşağıdaki "
+"alanlar yakalandıktan sonra düzenlenemez: %(fields)s. Bir düzeltme "
+"gerekiyorsa hareketi iptal edin ve düzeltilmiş bir tane oluşturun."
+
+#. module: eh_log_container_mgmt
+#. odoo-python
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_work_order.py:0
+msgid ""
+"[EHL-CTNR-WO-001] State changes on a work order must go through the action "
+"buttons. Direct writes are rejected."
+msgstr ""
+"[EHL-CTNR-WO-001] Bir iş emrindeki durum değişiklikleri işlem düğmeleri "
+"üzerinden yapılmalıdır. Doğrudan yazmalar reddedilir."
+
+#. module: eh_log_container_mgmt
+#. odoo-python
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_work_order.py:0
+msgid ""
+"[EHL-CTNR-WO-002] Work order %(name)s cannot move to Estimated without at "
+"least one cost line."
+msgstr ""
+"[EHL-CTNR-WO-002] %(name)s iş emri, en az bir maliyet satırı olmadan Tahmini"
+" durumuna geçemez."
+
+#. module: eh_log_container_mgmt
+#. odoo-python
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_work_order.py:0
+msgid "[EHL-CTNR-WO-003] Only logistics managers can approve M&R work orders."
+msgstr ""
+"[EHL-CTNR-WO-003] M&R iş emirlerini yalnızca lojistik yöneticileri "
+"onaylayabilir."
+
+#. module: eh_log_container_mgmt
+#. odoo-python
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_work_order.py:0
+msgid ""
+"[EHL-CTNR-WO-004] Cannot complete work order %(name)s: line '%(line)s' has "
+"zero actual cost. Capture actual costs before completion."
+msgstr ""
+"[EHL-CTNR-WO-004] %(name)s iş emri tamamlanamıyor: '%(line)s' satırının "
+"gerçek maliyeti sıfır. Tamamlamadan önce gerçek maliyetleri girin."
+
+#. module: eh_log_container_mgmt
+#. odoo-python
+#: code:addons/eh_log_container_mgmt/models/eh_log_freight_container.py:0
+msgid "container_id"
+msgstr ""

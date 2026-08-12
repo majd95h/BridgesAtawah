@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- Vehicles -->
+
+        <record id="demo_vehicle_truck_01" model="eh.log.transport.vehicle">
+            <field name="registration">DXB-T-1001</field>
+            <field name="name">Mercedes Actros 1845 - DXB-T-1001</field>
+            <field name="vehicle_type">tractor</field>
+            <field name="capacity_payload_kg">26000</field>
+            <field name="capacity_volume_cbm">90</field>
+        </record>
+
+        <record id="demo_vehicle_truck_02" model="eh.log.transport.vehicle">
+            <field name="registration">DXB-T-1002</field>
+            <field name="name">Volvo FH 540 - DXB-T-1002</field>
+            <field name="vehicle_type">tractor</field>
+            <field name="capacity_payload_kg">25000</field>
+            <field name="capacity_volume_cbm">88</field>
+        </record>
+
+        <record id="demo_vehicle_truck_03" model="eh.log.transport.vehicle">
+            <field name="registration">DXB-T-1003</field>
+            <field name="name">Scania R500 - DXB-T-1003</field>
+            <field name="vehicle_type">tractor</field>
+            <field name="capacity_payload_kg">25000</field>
+            <field name="capacity_volume_cbm">88</field>
+        </record>
+
+        <record id="demo_vehicle_truck_04" model="eh.log.transport.vehicle">
+            <field name="registration">DMM-T-2001</field>
+            <field name="name">Mercedes Actros 2645 - DMM-T-2001</field>
+            <field name="vehicle_type">tractor</field>
+            <field name="capacity_payload_kg">28000</field>
+            <field name="capacity_volume_cbm">95</field>
+        </record>
+
+        <record id="demo_vehicle_truck_05" model="eh.log.transport.vehicle">
+            <field name="registration">DMM-T-2002</field>
+            <field name="name">MAN TGX 540 - DMM-T-2002</field>
+            <field name="vehicle_type">tractor</field>
+            <field name="capacity_payload_kg">26000</field>
+            <field name="capacity_volume_cbm">90</field>
+        </record>
+
+        <!-- Drivers -->
+
+        <record id="demo_t_driver_ahmed" model="eh.log.transport.driver">
+            <field name="name">Ahmed Al Mansouri</field>
+            <field name="partner_id" ref="eh_log_base.demo_driver_ahmed"/>
+            <field name="license_number">DXB-LIC-1001</field>
+            <field name="license_class">Heavy Class C</field>
+            <field name="license_expiry_date" eval="(DateTime.today() + relativedelta(months=18)).strftime('%Y-%m-%d')"/>
+            <field name="phone">+971 50 100 0001</field>
+        </record>
+
+        <record id="demo_t_driver_omar" model="eh.log.transport.driver">
+            <field name="name">Omar Hassan</field>
+            <field name="partner_id" ref="eh_log_base.demo_driver_omar"/>
+            <field name="license_number">DXB-LIC-1002</field>
+            <field name="license_class">Heavy Class C</field>
+            <field name="license_expiry_date" eval="(DateTime.today() + relativedelta(months=22)).strftime('%Y-%m-%d')"/>
+            <field name="phone">+971 50 100 0002</field>
+        </record>
+
+        <record id="demo_t_driver_yousef" model="eh.log.transport.driver">
+            <field name="name">Yousef Khalid</field>
+            <field name="partner_id" ref="eh_log_base.demo_driver_yousef"/>
+            <field name="license_number">DXB-LIC-1003</field>
+            <field name="license_class">Heavy Class C</field>
+            <field name="license_expiry_date" eval="(DateTime.today() + relativedelta(months=15)).strftime('%Y-%m-%d')"/>
+            <field name="phone">+971 50 100 0003</field>
+        </record>
+
+        <record id="demo_t_driver_rashid" model="eh.log.transport.driver">
+            <field name="name">Rashid Al Suwaidi</field>
+            <field name="partner_id" ref="eh_log_base.demo_driver_rashid"/>
+            <field name="license_number">SA-LIC-2004</field>
+            <field name="license_class">Heavy Class</field>
+            <field name="license_expiry_date" eval="(DateTime.today() + relativedelta(months=24)).strftime('%Y-%m-%d')"/>
+            <field name="phone">+966 55 100 0004</field>
+        </record>
+
+        <record id="demo_t_driver_fahad" model="eh.log.transport.driver">
+            <field name="name">Fahad Al Otaibi</field>
+            <field name="partner_id" ref="eh_log_base.demo_driver_fahad"/>
+            <field name="license_number">SA-LIC-2005</field>
+            <field name="license_class">Heavy Class</field>
+            <field name="license_expiry_date" eval="(DateTime.today() + relativedelta(months=12)).strftime('%Y-%m-%d')"/>
+            <field name="phone">+966 55 100 0005</field>
+        </record>
+
+        <!-- Trips -->
+
+        <record id="demo_trip_001" model="eh.log.transport.trip">
+            <field name="customer_id" ref="eh_log_base.demo_partner_alpha_trading"/>
+            <field name="customer_reference">AT-MOVE-2026-001</field>
+            <field name="pickup_partner_id" ref="eh_log_base.demo_partner_port_jebelali"/>
+            <field name="pickup_location">Jebel Ali Terminal 2</field>
+            <field name="delivery_partner_id" ref="eh_log_base.demo_partner_alpha_trading"/>
+            <field name="delivery_location">Dubai DIP-1 Warehouse</field>
+            <field name="pickup_planned_at" eval="(DateTime.now() + relativedelta(hours=2)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="delivery_planned_at" eval="(DateTime.now() + relativedelta(hours=6)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="distance_km">38</field>
+            <field name="vehicle_id" ref="demo_vehicle_truck_01"/>
+            <field name="driver_id" ref="demo_t_driver_ahmed"/>
+        </record>
+
+        <record id="demo_trip_002" model="eh.log.transport.trip">
+            <field name="customer_id" ref="eh_log_base.demo_partner_falcon_industries"/>
+            <field name="customer_reference">FAL-MOVE-2026-002</field>
+            <field name="pickup_location">Dubai Cargo Village</field>
+            <field name="delivery_location">Jebel Ali Free Zone Plot 3</field>
+            <field name="pickup_planned_at" eval="(DateTime.now() + relativedelta(hours=4)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="delivery_planned_at" eval="(DateTime.now() + relativedelta(hours=7)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="distance_km">45</field>
+            <field name="vehicle_id" ref="demo_vehicle_truck_02"/>
+            <field name="driver_id" ref="demo_t_driver_omar"/>
+        </record>
+
+        <record id="demo_trip_003" model="eh.log.transport.trip">
+            <field name="customer_id" ref="eh_log_base.demo_partner_oasis_consumer"/>
+            <field name="customer_reference">OCG-LB-2026-003</field>
+            <field name="pickup_location">Dubai DIP-1</field>
+            <field name="delivery_location">Kuwait City DC</field>
+            <field name="pickup_planned_at" eval="(DateTime.now() + relativedelta(hours=8)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="delivery_planned_at" eval="(DateTime.now() + relativedelta(hours=24)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="distance_km">1380</field>
+            <field name="vehicle_id" ref="demo_vehicle_truck_03"/>
+            <field name="driver_id" ref="demo_t_driver_yousef"/>
+        </record>
+
+        <record id="demo_trip_004" model="eh.log.transport.trip">
+            <field name="customer_id" ref="eh_log_base.demo_partner_najd_petrochem"/>
+            <field name="customer_reference">NPC-DOM-2026-004</field>
+            <field name="pickup_location">Jubail Industrial Area 2</field>
+            <field name="delivery_location">King Abdullah Port</field>
+            <field name="pickup_planned_at" eval="(DateTime.now() + relativedelta(hours=12)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="delivery_planned_at" eval="(DateTime.now() + relativedelta(hours=22)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="distance_km">980</field>
+            <field name="vehicle_id" ref="demo_vehicle_truck_04"/>
+            <field name="driver_id" ref="demo_t_driver_rashid"/>
+        </record>
+
+        <record id="demo_trip_005" model="eh.log.transport.trip">
+            <field name="customer_id" ref="eh_log_base.demo_partner_riyadh_proj"/>
+            <field name="customer_reference">RPL-NEOM-2026-005</field>
+            <field name="pickup_location">Jeddah Islamic Port</field>
+            <field name="delivery_location">NEOM Site (Tabuk)</field>
+            <field name="pickup_planned_at" eval="(DateTime.now() + relativedelta(hours=18)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="delivery_planned_at" eval="(DateTime.now() + relativedelta(days=2)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="distance_km">1110</field>
+            <field name="vehicle_id" ref="demo_vehicle_truck_05"/>
+            <field name="driver_id" ref="demo_t_driver_fahad"/>
+        </record>
+
+        <record id="demo_trip_006" model="eh.log.transport.trip">
+            <field name="customer_id" ref="eh_log_base.demo_partner_jeddah_apparel"/>
+            <field name="customer_reference">JAH-DOM-2026-006</field>
+            <field name="pickup_location">Jeddah Islamic Port</field>
+            <field name="delivery_location">Riyadh DC</field>
+            <field name="pickup_planned_at" eval="(DateTime.now() - relativedelta(hours=4)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="delivery_planned_at" eval="(DateTime.now() + relativedelta(hours=8)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="distance_km">950</field>
+        </record>
+
+        <record id="demo_trip_007" model="eh.log.transport.trip">
+            <field name="customer_id" ref="eh_log_base.demo_partner_muscat_marine"/>
+            <field name="customer_reference">MMS-DOM-2026-007</field>
+            <field name="pickup_location">Sohar Port</field>
+            <field name="delivery_location">Muscat Site B</field>
+            <field name="pickup_planned_at" eval="(DateTime.now() + relativedelta(hours=3)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="delivery_planned_at" eval="(DateTime.now() + relativedelta(hours=8)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="distance_km">230</field>
+        </record>
+
+        <record id="demo_trip_008" model="eh.log.transport.trip">
+            <field name="customer_id" ref="eh_log_base.demo_partner_pearl_pharma"/>
+            <field name="customer_reference">PHARMA-DOM-008</field>
+            <field name="pickup_location">Bahrain Airport</field>
+            <field name="delivery_location">Manama DC</field>
+            <field name="pickup_planned_at" eval="(DateTime.now() + relativedelta(hours=2)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="delivery_planned_at" eval="(DateTime.now() + relativedelta(hours=4)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="distance_km">28</field>
+        </record>
+
+    </data>
+</odoo>

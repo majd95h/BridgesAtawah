@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="1">
+    <data>
+
+        <record id="category_cargo_damage" model="eh.log.dispute.category">
+            <field name="name">Cargo Damage</field>
+            <field name="code">DAMAGE</field>
+            <field name="sequence">10</field>
+            <field name="default_sla_days">30</field>
+            <field name="requires_survey">True</field>
+            <field name="description">Physical damage to cargo discovered at receipt or in transit. Survey report required for settlement.</field>
+        </record>
+
+        <record id="category_cargo_loss" model="eh.log.dispute.category">
+            <field name="name">Cargo Loss</field>
+            <field name="code">LOSS</field>
+            <field name="sequence">20</field>
+            <field name="default_sla_days">30</field>
+            <field name="requires_survey">True</field>
+            <field name="description">Loss of cargo in transit, full or partial. Survey report required.</field>
+        </record>
+
+        <record id="category_short_shipment" model="eh.log.dispute.category">
+            <field name="name">Short Shipment</field>
+            <field name="code">SHORT</field>
+            <field name="sequence">30</field>
+            <field name="default_sla_days">14</field>
+            <field name="description">Quantity received less than quantity declared on shipping documents.</field>
+        </record>
+
+        <record id="category_pricing" model="eh.log.dispute.category">
+            <field name="name">Pricing Dispute</field>
+            <field name="code">PRICING</field>
+            <field name="sequence">40</field>
+            <field name="default_sla_days">14</field>
+            <field name="description">Customer contests an invoiced charge against the agreed rate.</field>
+        </record>
+
+        <record id="category_demurrage" model="eh.log.dispute.category">
+            <field name="name">Demurrage / Detention</field>
+            <field name="code">DEMURRAGE</field>
+            <field name="sequence">50</field>
+            <field name="default_sla_days">21</field>
+            <field name="description">Customer disputes a demurrage or detention charge, typically over free-time interpretation or delay attribution.</field>
+        </record>
+
+        <record id="category_documentation" model="eh.log.dispute.category">
+            <field name="name">Documentation</field>
+            <field name="code">DOCS</field>
+            <field name="sequence">60</field>
+            <field name="default_sla_days">7</field>
+            <field name="description">Errors or delays in shipping documents (BL, certificate of origin, packing list).</field>
+        </record>
+
+        <record id="category_customs_penalty" model="eh.log.dispute.category">
+            <field name="name">Customs Penalty</field>
+            <field name="code">CUSTOMS</field>
+            <field name="sequence">70</field>
+            <field name="default_sla_days">21</field>
+            <field name="description">Customs penalty assessed; customer contests responsibility.</field>
+        </record>
+
+        <record id="category_other" model="eh.log.dispute.category">
+            <field name="name">Other</field>
+            <field name="code">OTHER</field>
+            <field name="sequence">100</field>
+            <field name="default_sla_days">14</field>
+            <field name="description">Catch-all for disputes that do not fit the standard categories.</field>
+        </record>
+
+    </data>
+</odoo>

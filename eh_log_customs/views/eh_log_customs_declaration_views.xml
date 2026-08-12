@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="view_eh_log_customs_declaration_list" model="ir.ui.view">
+            <field name="name">eh.log.customs.declaration.list</field>
+            <field name="model">eh.log.customs.declaration</field>
+            <field name="arch" type="xml">
+                <list string="Customs Declarations" decoration-info="state in ('draft', 'ready')" decoration-warning="state in ('submitted', 'queried', 'assessed')" decoration-success="state in ('paid', 'cleared', 'closed')" decoration-danger="state in ('rejected', 'cancelled')">
+                    <field name="name"/>
+                    <field name="state"/>
+                    <field name="declaration_type_id"/>
+                    <field name="customer_id"/>
+                    <field name="regulator_profile_id"/>
+                    <field name="regulator_reference" optional="show"/>
+                    <field name="declaration_date"/>
+                    <field name="payable_amount" optional="show"/>
+                    <field name="company_id" groups="base.group_multi_company"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="view_eh_log_customs_declaration_form" model="ir.ui.view">
+            <field name="name">eh.log.customs.declaration.form</field>
+            <field name="model">eh.log.customs.declaration</field>
+            <field name="arch" type="xml">
+                <form string="Customs Declaration">
+                    <header>
+                        <button name="action_set_ready" string="Mark Ready" type="object" class="btn-primary" invisible="state != 'draft'" groups="eh_log_base.group_eh_log_user"/>
+                        <button name="action_submit" string="Submit to Regulator" type="object" class="btn-primary" invisible="state != 'ready'" groups="eh_log_base.group_eh_log_user"/>
+                        <button name="action_set_assessed" string="Mark Assessed" type="object" class="btn-primary" invisible="state not in ('submitted', 'queried')" groups="eh_log_base.group_eh_log_user"/>
+                        <button name="action_pay" string="Pay (Debit Deferment)" type="object" class="btn-primary" invisible="state != 'assessed'" groups="eh_log_base.group_eh_log_manager"/>
+                        <button name="action_set_cleared" string="Mark Cleared" type="object" class="btn-primary" invisible="state != 'paid'" groups="eh_log_base.group_eh_log_user"/>
+                        <button name="action_close" string="Close" type="object" class="btn-primary" invisible="state != 'cleared'" groups="eh_log_base.group_eh_log_manager"/>
+                        <button name="action_set_queried" string="Mark Queried" type="object" class="btn-secondary" invisible="state != 'submitted'" groups="eh_log_base.group_eh_log_user"/>
+                        <button name="action_cancel" string="Cancel" type="object" class="btn-secondary" invisible="state in ('closed', 'cancelled', 'rejected')" groups="eh_log_base.group_eh_log_manager"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,ready,submitted,assessed,paid,cleared,closed"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name"/>
+                            <h1><field name="name"/></h1>
+                            <h3 invisible="not regulator_reference">
+                                Regulator Ref: <field name="regulator_reference"/>
+                            </h3>
+                        </div>
+
+                        <!-- Snapshot hero -->
+                        <div class="o_eh_log_snapshot mb-3" style="background:linear-gradient(135deg,#0E1E2B 0%,#1A2C3D 100%);color:#FBF8F2;border-radius:14px;padding:22px 26px;border:1px solid #A07A3F;box-shadow:0 6px 18px rgba(14,30,43,0.08);">
+                            <div class="d-flex align-items-center justify-content-between mb-3" style="gap:18px;">
+                                <div style="flex:1;min-width:0;">
+                                    <div style="font-family:'DM Mono',ui-monospace,monospace;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:#E8C887;margin-bottom:4px;">Exporter</div>
+                                    <div style="font-size:1.05rem;font-weight:600;color:#FBF8F2;line-height:1.25;">
+                                        <field name="exporter_id" readonly="1" options="{'no_open': True}" nolabel="1" placeholder="—"/>
+                                    </div>
+                                </div>
+                                <div style="text-align:center;flex-shrink:0;">
+                                    <div style="display:inline-block;padding:10px 20px;background:rgba(212,160,85,0.12);border:1px solid rgba(212,160,85,0.4);border-radius:999px;">
+                                        <i class="fa fa-id-card-o" style="font-size:1.6rem;color:#D4A055;" title="Customs declaration"/>
+                                        <span class="ms-2" style="font-family:'DM Mono',ui-monospace,monospace;font-size:0.78rem;letter-spacing:0.18em;text-transform:uppercase;color:#E8C887;font-weight:600;">
+                                            <field name="declaration_type_id" readonly="1" options="{'no_open': True}" nolabel="1"/>
+                                        </span>
+                                    </div>
+                                    <div style="margin-top:8px;font-family:'DM Mono',ui-monospace,monospace;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(232,200,135,0.7);">
+                                        <field name="regulator_profile_id" readonly="1" options="{'no_open': True}" nolabel="1" placeholder="—"/>
+                                    </div>
+                                </div>
+                                <div style="flex:1;min-width:0;text-align:right;">
+                                    <div style="font-family:'DM Mono',ui-monospace,monospace;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:#E8C887;margin-bottom:4px;">Importer</div>
+                                    <div style="font-size:1.05rem;font-weight:600;color:#FBF8F2;line-height:1.25;">
+                                        <field name="importer_id" readonly="1" options="{'no_open': True}" nolabel="1" placeholder="—"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="display:table;width:100%;border-collapse:separate;border-spacing:10px 0;border-top:1px solid rgba(212,160,85,0.18);padding-top:14px;">
+                                <div style="display:table-cell;width:25%;vertical-align:top;background:rgba(255,255,255,0.04);border-radius:8px;padding:10px 14px;">
+                                    <div style="font-family:'DM Mono',ui-monospace,monospace;font-size:0.66rem;letter-spacing:0.18em;text-transform:uppercase;color:#E8C887;">Customer</div>
+                                    <div style="margin-top:4px;font-size:0.95rem;font-weight:600;color:#FBF8F2;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">
+                                        <field name="customer_id" readonly="1" options="{'no_open': True}" nolabel="1"/>
+                                    </div>
+                                    <div style="font-size:0.78rem;color:rgba(251,248,242,0.6);">
+                                        <field name="broker_reference" readonly="1" nolabel="1" placeholder="—"/>
+                                    </div>
+                                </div>
+                                <div style="display:table-cell;width:25%;vertical-align:top;background:rgba(255,255,255,0.04);border-radius:8px;padding:10px 14px;">
+                                    <div style="font-family:'DM Mono',ui-monospace,monospace;font-size:0.66rem;letter-spacing:0.18em;text-transform:uppercase;color:#E8C887;">Declaration date</div>
+                                    <div style="margin-top:4px;font-size:0.95rem;font-weight:600;color:#FBF8F2;">
+                                        <field name="declaration_date" readonly="1" nolabel="1" placeholder="—"/>
+                                    </div>
+                                </div>
+                                <div style="display:table-cell;width:25%;vertical-align:top;background:rgba(255,255,255,0.04);border-radius:8px;padding:10px 14px;">
+                                    <div style="font-family:'DM Mono',ui-monospace,monospace;font-size:0.66rem;letter-spacing:0.18em;text-transform:uppercase;color:#E8C887;">Customs value</div>
+                                    <div style="margin-top:4px;font-size:1.0rem;font-weight:700;color:#FBF8F2;">
+                                        <field name="customs_value" readonly="1" nolabel="1" widget="monetary"/>
+                                    </div>
+                                </div>
+                                <div style="display:table-cell;width:25%;vertical-align:top;background:rgba(255,255,255,0.04);border-radius:8px;padding:10px 14px;">
+                                    <div style="font-family:'DM Mono',ui-monospace,monospace;font-size:0.66rem;letter-spacing:0.18em;text-transform:uppercase;color:#E8C887;">Duty + VAT</div>
+                                    <div style="margin-top:4px;font-size:1.0rem;font-weight:700;color:#FBF8F2;">
+                                        <field name="payable_amount" readonly="1" nolabel="1" widget="monetary"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /snapshot -->
+
+                        <group>
+                            <group string="Type and Authority">
+                                <field name="declaration_type_id" options="{'no_create': True}"/>
+                                <field name="regulator_profile_id" options="{'no_create': True}"/>
+                                <field name="company_id" invisible="1"/>
+                                <field name="deferment_account_id" options="{'no_create': True}"/>
+                                <field name="broker_reference"/>
+                                <field name="declaration_date"/>
+                            </group>
+                            <group string="Linkage">
+                                <field name="sale_order_id" readonly="1"/>
+                                <field name="freight_job_id" options="{'no_create': True}"/>
+                                <field name="company_id" groups="base.group_multi_company" readonly="1"/>
+                                <field name="currency_id" options="{'no_create': True}" groups="base.group_multi_currency"/>
+                            </group>
+                        </group>
+                        <group string="Parties">
+                            <group>
+                                <field name="customer_id" options="{'no_create': True}"/>
+                                <field name="importer_id" options="{'no_create': True}"/>
+                                <field name="exporter_id" options="{'no_create': True}"/>
+                            </group>
+                            <group string="Timeline">
+                                <field name="submitted_at" readonly="1"/>
+                                <field name="assessed_at" readonly="1"/>
+                                <field name="cleared_at" readonly="1"/>
+                                <field name="closed_at" readonly="1"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="HS Lines">
+                                <field name="line_ids">
+                                    <list editable="bottom">
+                                        <field name="sequence" widget="handle"/>
+                                        <field name="hs_code_id" options="{'no_create': True}"/>
+                                        <field name="description"/>
+                                        <field name="country_of_origin_id" options="{'no_create': True}"/>
+                                        <field name="quantity"/>
+                                        <field name="unit_value"/>
+                                        <field name="customs_value"/>
+                                        <field name="duty_rate_pct"/>
+                                        <field name="duty_amount"/>
+                                        <field name="vat_rate_pct"/>
+                                        <field name="vat_amount"/>
+                                    </list>
+                                </field>
+                            </page>
+                            <page string="Notes">
+                                <field name="notes"/>
+                            </page>
+                        </notebook>
+                        <group string="Totals">
+                            <group>
+                                <field name="customs_value"/>
+                                <field name="duty_amount"/>
+                                <field name="vat_amount"/>
+                                <field name="payable_amount"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <chatter/>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_eh_log_customs_declaration_search" model="ir.ui.view">
+            <field name="name">eh.log.customs.declaration.search</field>
+            <field name="model">eh.log.customs.declaration</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="regulator_reference"/>
+                    <field name="broker_reference"/>
+                    <field name="customer_id"/>
+                    <field name="freight_job_id"/>
+                    <field name="sale_order_id"/>
+                    <separator/>
+                    <filter string="Open" name="filter_open" domain="[('state', 'in', ('draft', 'ready', 'submitted', 'queried', 'assessed', 'paid'))]"/>
+                    <filter string="Cleared" name="filter_cleared" domain="[('state', '=', 'cleared')]"/>
+                    <filter string="Rejected" name="filter_rejected" domain="[('state', '=', 'rejected')]"/>
+                    <filter string="Group by State" name="group_state" context="{'group_by': 'state'}"/>
+                    <filter string="Group by Type" name="group_type" context="{'group_by': 'declaration_type_id'}"/>
+                    <filter string="Group by Regulator" name="group_regulator" context="{'group_by': 'regulator_profile_id'}"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="view_customs_declaration_activity" model="ir.ui.view">
+            <field name="name">eh.log.customs.declaration.activity</field>
+            <field name="model">eh.log.customs.declaration</field>
+            <field name="arch" type="xml">
+                <activity string="Activities">
+                    <templates>
+                        <div t-name="activity-box">
+                            <field name="name" display="full"/>
+                        </div>
+                    </templates>
+                </activity>
+            </field>
+        </record>
+
+        <record id="action_eh_log_customs_declaration" model="ir.actions.act_window">
+            <field name="name">Customs Declarations</field>
+            <field name="res_model">eh.log.customs.declaration</field>
+            <field name="view_mode">list,activity,form</field>
+            <field name="search_view_id" ref="view_eh_log_customs_declaration_search"/>
+            <field name="context">{'search_default_filter_open': 1}</field>
+        </record>
+
+    </data>
+</odoo>

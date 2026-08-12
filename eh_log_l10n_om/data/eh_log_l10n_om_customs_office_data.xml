@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="customs_om_rop" model="eh.log.l10n.om.customs.office">
+            <field name="code">OM-ROP-CUSTOMS</field>
+            <field name="name">Royal Oman Police Customs Department</field>
+            <field name="office_kind">customs_authority</field>
+            <field name="single_window_url">https://www.customs.gov.om</field>
+        </record>
+
+        <record id="customs_om_ota" model="eh.log.l10n.om.customs.office">
+            <field name="code">OM-OTA</field>
+            <field name="name">Oman Tax Authority</field>
+            <field name="office_kind">tax_authority</field>
+            <field name="single_window_url">https://tms.taxoman.gov.om</field>
+        </record>
+
+        <record id="customs_om_sohar" model="eh.log.l10n.om.customs.office">
+            <field name="code">OM-SOH-CUSTOMS</field>
+            <field name="name">Sohar Port Customs House</field>
+            <field name="office_kind">port_customs_house</field>
+            <field name="parent_authority_id" ref="customs_om_rop"/>
+        </record>
+
+        <record id="customs_om_salalah" model="eh.log.l10n.om.customs.office">
+            <field name="code">OM-SLL-CUSTOMS</field>
+            <field name="name">Salalah Port Customs House</field>
+            <field name="office_kind">port_customs_house</field>
+            <field name="parent_authority_id" ref="customs_om_rop"/>
+        </record>
+
+        <record id="customs_om_mct_air" model="eh.log.l10n.om.customs.office">
+            <field name="code">OM-MCT-AIR-CUSTOMS</field>
+            <field name="name">Muscat Airport Customs House</field>
+            <field name="office_kind">airport_customs_house</field>
+            <field name="parent_authority_id" ref="customs_om_rop"/>
+        </record>
+
+        <record id="customs_om_duqm" model="eh.log.l10n.om.customs.office">
+            <field name="code">OM-DUQ-CUSTOMS</field>
+            <field name="name">Duqm Customs House</field>
+            <field name="office_kind">port_customs_house</field>
+            <field name="parent_authority_id" ref="customs_om_rop"/>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="1">
+    <data>
+
+        <record id="cron_dispatch_outbound" model="ir.cron">
+            <field name="name">EDI: Dispatch Outbound Queue</field>
+            <field name="model_id" ref="model_eh_log_edi_outbound"/>
+            <field name="state">code</field>
+            <field name="code">model.cron_dispatch_outbound()</field>
+            <field name="interval_number">5</field>
+            <field name="interval_type">minutes</field>
+            <field name="active" eval="True"/>
+        </record>
+
+        <record id="cron_process_inbound" model="ir.cron">
+            <field name="name">EDI: Process Inbound Queue</field>
+            <field name="model_id" ref="model_eh_log_edi_inbound"/>
+            <field name="state">code</field>
+            <field name="code">model.cron_process_inbound()</field>
+            <field name="interval_number">5</field>
+            <field name="interval_type">minutes</field>
+            <field name="active" eval="True"/>
+        </record>
+
+    </data>
+</odoo>

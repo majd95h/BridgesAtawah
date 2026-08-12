@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <!-- Cross-suite analytical views surfaced from the dashboard
+         menu. Only references the engine models the dashboard
+         hard-depends on; vertical modules add their own pivot menu
+         entries through their own menu files. -->
+
+    <record id="action_eh_log_dashboard_freight_pivot" model="ir.actions.act_window">
+        <field name="name">Freight Pivot</field>
+        <field name="res_model">eh.log.freight.job</field>
+        <field name="view_mode">pivot,graph,kanban,list,form</field>
+    </record>
+
+    <record id="action_eh_log_dashboard_quotation_pivot" model="ir.actions.act_window">
+        <field name="name">Quotation Pivot</field>
+        <field name="res_model">sale.order</field>
+        <field name="view_mode">pivot,graph,kanban,list,form</field>
+        <field name="domain">[('eh_log_is_logistics', '=', True)]</field>
+        <field name="context">{'search_default_filter_eh_log_logistics': 1}</field>
+    </record>
+
+    <record id="action_eh_log_dashboard_customs_pivot" model="ir.actions.act_window">
+        <field name="name">Customs Pivot</field>
+        <field name="res_model">eh.log.customs.declaration</field>
+        <field name="view_mode">pivot,graph,kanban,list,form</field>
+    </record>
+
+    <record id="action_eh_log_dashboard_transport_pivot" model="ir.actions.act_window">
+        <field name="name">Transport Pivot</field>
+        <field name="res_model">eh.log.transport.trip</field>
+        <field name="view_mode">pivot,graph,kanban,list,form</field>
+    </record>
+
+    <menuitem id="menu_eh_log_dashboard_analytics_root"
+              name="Analytics"
+              parent="eh_log_base.menu_eh_log_root"
+              sequence="2"/>
+
+    <menuitem id="menu_eh_log_dashboard_freight_pivot"
+              name="Freight Pivot"
+              parent="menu_eh_log_dashboard_analytics_root"
+              action="action_eh_log_dashboard_freight_pivot"
+              sequence="10"/>
+
+    <menuitem id="menu_eh_log_dashboard_quotation_pivot"
+              name="Quotation Pivot"
+              parent="menu_eh_log_dashboard_analytics_root"
+              action="action_eh_log_dashboard_quotation_pivot"
+              sequence="20"/>
+
+    <menuitem id="menu_eh_log_dashboard_customs_pivot"
+              name="Customs Pivot"
+              parent="menu_eh_log_dashboard_analytics_root"
+              action="action_eh_log_dashboard_customs_pivot"
+              sequence="30"/>
+
+    <menuitem id="menu_eh_log_dashboard_transport_pivot"
+              name="Transport Pivot"
+              parent="menu_eh_log_dashboard_analytics_root"
+              action="action_eh_log_dashboard_transport_pivot"
+              sequence="40"/>
+
+</odoo>

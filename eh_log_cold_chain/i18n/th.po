@@ -1,0 +1,1322 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* eh_log_cold_chain
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-01 04:33+0000\n"
+"PO-Revision-Date: 2026-07-01 04:33+0000\n"
+"Last-Translator: ERP Heritage <info@erpheritage.com.au>\n"
+"Language-Team: Thai\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_cold_chain_deviation.py:0
+#: code:addons/eh_log_cold_chain/models/eh_log_cold_chain_run.py:0
+msgid "(none)"
+msgstr "(ไม่มี)"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid ""
+"<span class=\"eh_pdf_status_badge eh_pdf_status_danger\">NON-"
+"COMPLIANT</span>"
+msgstr ""
+"<span class=\"eh_pdf_status_badge "
+"eh_pdf_status_danger\">ไม่เป็นไปตามข้อกำหนด</span>"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "<span class=\"eh_pdf_status_badge eh_pdf_status_ok\">COMPLIANT</span>"
+msgstr ""
+"<span class=\"eh_pdf_status_badge "
+"eh_pdf_status_ok\">เป็นไปตามข้อกำหนด</span>"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "<strong>Job:</strong>"
+msgstr "<strong>ตำแหน่งงาน:</strong>"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "<strong>Profile:</strong>"
+msgstr "<strong>โปรไฟล์:</strong>"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "<strong>Run:</strong>"
+msgstr "<strong>การรัน:</strong>"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "<strong>State:</strong>"
+msgstr "<strong>สถานะ:</strong>"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_reading__source__api
+msgid "API"
+msgstr ""
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_deviation__deviation_kind__high
+msgid "Above Maximum"
+msgstr "สูงกว่าค่าสูงสุด"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_deviation_form
+msgid "Acknowledge"
+msgstr "รับทราบ"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_deviation__state__acknowledged
+msgid "Acknowledged"
+msgstr "ได้รับการตอบรับแล้ว"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__acknowledged_at
+msgid "Acknowledged At"
+msgstr "รับทราบเมื่อ"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__acknowledged_by_id
+msgid "Acknowledged By"
+msgstr "รับทราบโดย"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__message_needaction
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__message_needaction
+msgid "Action Needed"
+msgstr "จำเป็นต้องดำเนินการ"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_run_form
+msgid "Activate"
+msgstr "เปิดใช้งาน"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_profile__active
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_run__state__active
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_run_search
+msgid "Active"
+msgstr "เปิดใช้งาน"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__activity_ids
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__activity_ids
+msgid "Activities"
+msgstr "กิจกรรม"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__activity_exception_decoration
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "การตกแต่งข้อยกเว้นกิจกรรม"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__activity_state
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__activity_state
+msgid "Activity State"
+msgstr "สถานะกิจกรรม"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__activity_type_icon
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "ไอคอนประเภทกิจกรรม"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_run_form
+msgid "Aggregates"
+msgstr "ยอดรวม"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_profile__alert_window_minutes
+msgid "Alert Window (minutes)"
+msgstr "ช่วงเวลาแจ้งเตือน (นาที)"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_deviation__cause__ambient_extreme
+msgid "Ambient Conditions"
+msgstr "สภาวะแวดล้อม"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__message_attachment_count
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__message_attachment_count
+msgid "Attachment Count"
+msgstr "จำนวนสิ่งที่แนบมา"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_deviation_form
+msgid "Audit"
+msgstr "ตรวจสอบบัญชี"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Authorised Signatory"
+msgstr "ผู้มีอำนาจลงนาม"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__avg_temperature
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Avg Recorded (degC)"
+msgstr "ค่าเฉลี่ยที่บันทึก (degC)"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_deviation__deviation_kind__low
+msgid "Below Minimum"
+msgstr "ต่ำกว่าค่าต่ำสุด"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_reading__is_breach
+msgid "Breach"
+msgstr "การละเมิด"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_run_search
+msgid "Breached"
+msgstr "ละเมิดแล้ว"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_run__state__breached
+msgid "Breached (Cargo Impacting)"
+msgstr "ละเมิดแล้ว (กระทบต่อสินค้า)"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_reading__source__ingest
+msgid "Bulk Ingest"
+msgstr "การนำเข้าจำนวนมาก"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_profile_form
+msgid "Cadence and Alerts"
+msgstr "จังหวะความถี่และการแจ้งเตือน"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_run_form
+msgid "Cancel"
+msgstr "ยกเลิก"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_run__state__cancelled
+msgid "Cancelled"
+msgstr "ยกเลิก"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_reading__captured_at
+msgid "Captured At"
+msgstr "จับภาพเมื่อ"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Cargo Impact"
+msgstr "ผลกระทบต่อสินค้า"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__cargo_impacting
+msgid "Cargo Impacting"
+msgstr "ส่งผลกระทบต่อสินค้า"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_profile__category
+msgid "Category"
+msgstr "หมวดหมู่"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__cause
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Cause"
+msgstr "สาเหตุ"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_deviation_form
+msgid "Cause and Resolution"
+msgstr "สาเหตุและการแก้ไข"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_profile__category__chilled
+msgid "Chilled (-2 to 8 degC)"
+msgstr "แช่เย็น (-2 ถึง 8 องศาเซลเซียส)"
+
+#. module: eh_log_cold_chain
+#: model:eh.log.cold.chain.profile,name:eh_log_cold_chain.profile_chilled
+msgid "Chilled -2 to 8 degC"
+msgstr "แช่เย็น -2 ถึง 8 องศาเซลเซียส"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_profile__code
+msgid "Code"
+msgstr "โค้ด"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_freight_job_form_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_sale_order_form_eh_log_cold_chain
+msgid "Cold Chain"
+msgstr "ห่วงโซ่ความเย็น"
+
+#. module: eh_log_cold_chain
+#: model:ir.actions.report,name:eh_log_cold_chain.action_report_eh_log_cold_chain_compliance
+msgid "Cold Chain Compliance Certificate"
+msgstr "ใบรับรองการปฏิบัติตามข้อกำหนดห่วงโซ่ความเย็น"
+
+#. module: eh_log_cold_chain
+#: model:ir.model,name:eh_log_cold_chain.model_eh_log_cold_chain_deviation
+msgid "Cold Chain Deviation"
+msgstr "การเบี่ยงเบนของห่วงโซ่ความเย็น"
+
+#. module: eh_log_cold_chain
+#: model:ir.actions.act_window,name:eh_log_cold_chain.action_eh_log_cold_chain_deviation
+#: model:ir.ui.menu,name:eh_log_cold_chain.menu_eh_log_cold_chain_deviations
+msgid "Cold Chain Deviations"
+msgstr "การเบี่ยงเบนของห่วงโซ่ความเย็น"
+
+#. module: eh_log_cold_chain
+#: model:ir.model,name:eh_log_cold_chain.model_eh_log_cold_chain_run
+msgid "Cold Chain Monitoring Run"
+msgstr "รอบการตรวจสอบห่วงโซ่ความเย็น"
+
+#. module: eh_log_cold_chain
+#: model:ir.model,name:eh_log_cold_chain.model_eh_log_cold_chain_profile
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_sale_order__eh_log_cold_chain_profile_id
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_profile_form
+msgid "Cold Chain Profile"
+msgstr "โปรไฟล์ห่วงโซ่ความเย็น"
+
+#. module: eh_log_cold_chain
+#: model:ir.actions.act_window,name:eh_log_cold_chain.action_eh_log_cold_chain_profile
+#: model:ir.ui.menu,name:eh_log_cold_chain.menu_eh_log_cold_chain_profiles
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_profile_list
+msgid "Cold Chain Profiles"
+msgstr "โปรไฟล์ห่วงโซ่ความเย็น"
+
+#. module: eh_log_cold_chain
+#: model:ir.model,name:eh_log_cold_chain.model_eh_log_cold_chain_reading
+msgid "Cold Chain Reading"
+msgstr "ค่าที่อ่านได้ของห่วงโซ่ความเย็น"
+
+#. module: eh_log_cold_chain
+#: model:ir.actions.act_window,name:eh_log_cold_chain.action_eh_log_cold_chain_reading
+msgid "Cold Chain Readings"
+msgstr "ค่าที่อ่านได้ของห่วงโซ่ความเย็น"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_sale_order__eh_log_cold_chain_required
+msgid "Cold Chain Required"
+msgstr "ต้องมีห่วงโซ่ความเย็น"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_run_form
+msgid "Cold Chain Run"
+msgstr "รอบห่วงโซ่ความเย็น"
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_freight_job.py:0
+#: model:ir.actions.act_window,name:eh_log_cold_chain.action_eh_log_cold_chain_run
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_freight_job__cold_chain_run_count
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_freight_job__cold_chain_run_ids
+#: model:ir.ui.menu,name:eh_log_cold_chain.menu_eh_log_cold_chain_runs
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_run_list
+msgid "Cold Chain Runs"
+msgstr "รอบห่วงโซ่ความเย็น"
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_freight_job.py:0
+msgid ""
+"Cold chain monitoring required on the source order but no profile selected. "
+"Create the cold chain run manually under the Cold Chain tab."
+msgstr ""
+"จำเป็นต้องมีการตรวจสอบห่วงโซ่ความเย็นในคำสั่งต้นทาง แต่ไม่ได้เลือกโปรไฟล์ "
+"สร้างรอบห่วงโซ่ความเย็นด้วยตนเองภายใต้แท็บ Cold Chain"
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_cold_chain_run.py:0
+msgid ""
+"Cold chain run %(name)s cannot move from %(current)s to %(target)s. Allowed "
+"transitions from %(current)s: %(allowed)s."
+msgstr ""
+"รอบห่วงโซ่ความเย็น %(name)s ไม่สามารถย้ายจาก %(current)s ไปยัง %(target)s "
+"ได้ การเปลี่ยนสถานะที่อนุญาตจาก %(current)s: %(allowed)s"
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_cold_chain_run.py:0
+msgid "Cold chain run %(name)s moved to %(state)s."
+msgstr "รอบห่วงโซ่ความเย็น %(name)s ถูกย้ายไปยัง %(state)s"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__company_ids
+msgid "Companies"
+msgstr "บริษัท"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__company_id
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_reading__company_id
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__company_id
+msgid "Company"
+msgstr "บริษัท"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_run_form
+msgid "Complete"
+msgstr "เสร็จสมบูรณ์"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__completed_at
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_run__state__completed
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Completed"
+msgstr "เสร็จสิ้น"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Compliance"
+msgstr "การปฏิบัติตามข้อกำหนด"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__is_compliant
+msgid "Compliant"
+msgstr "เป็นไปตามข้อกำหนด"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_profile__category__controlled_room
+msgid "Controlled Room (15 to 25 degC)"
+msgstr "ห้องควบคุม (15 ถึง 25 degC)"
+
+#. module: eh_log_cold_chain
+#: model:eh.log.cold.chain.profile,name:eh_log_cold_chain.profile_controlled_room
+msgid "Controlled Room 15 to 25 degC"
+msgstr "ห้องควบคุม 15 ถึง 25 degC"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__create_uid
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_profile__create_uid
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_reading__create_uid
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__create_uid
+msgid "Created by"
+msgstr "สร้างโดย"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__create_date
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_profile__create_date
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_reading__create_date
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__create_date
+msgid "Created on"
+msgstr "สร้างเมื่อ"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_profile__category__custom
+msgid "Custom"
+msgstr "กำหนดเอง"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_reading__source__portal
+msgid "Customer Portal"
+msgstr "พอร์ทัลลูกค้า"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_profile__category__deep_frozen
+msgid "Deep Frozen (-45 degC and below)"
+msgstr "แช่แข็งลึก (-45 องศาC และต่ำกว่า)"
+
+#. module: eh_log_cold_chain
+#: model:eh.log.cold.chain.profile,name:eh_log_cold_chain.profile_deep_frozen
+msgid "Deep Frozen -45 degC and below"
+msgstr "แช่แข็งลึก -45 องศาC และต่ำกว่า"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_sale_order__eh_log_cold_chain_profile_id
+msgid ""
+"Default profile applied to the spawned monitoring run. The operator can "
+"change it on the run before activation."
+msgstr ""
+"โปรไฟล์เริ่มต้นที่ใช้กับการรันการตรวจสอบที่สร้างขึ้น "
+"ผู้ปฏิบัติงานสามารถเปลี่ยนได้ที่การรันก่อนการเปิดใช้งาน"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_profile__description
+msgid "Description"
+msgstr "คำอธิบาย"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_deviation_form
+msgid "Deviation"
+msgstr "การเบี่ยงเบน"
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_cold_chain_deviation.py:0
+msgid ""
+"Deviation %(name)s cannot move from %(current)s to %(target)s. Allowed "
+"transitions: %(allowed)s."
+msgstr ""
+"การเบี่ยงเบน %(name)s ไม่สามารถย้ายจาก %(current)s ไปยัง %(target)s ได้ "
+"การเปลี่ยนสถานะที่อนุญาต: %(allowed)s"
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_cold_chain_deviation.py:0
+msgid ""
+"Deviation flagged as cargo-impacting by %(user)s. The run's compliance "
+"verdict is now non-compliant."
+msgstr ""
+"การเบี่ยงเบนถูกทำเครื่องหมายว่าส่งผลกระทบต่อสินค้าโดย %(user)s "
+"คำตัดสินการปฏิบัติตามข้อกำหนดของการดำเนินการนี้ตอนนี้ไม่เป็นไปตามข้อกำหนด"
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_cold_chain_run.py:0
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__deviation_count
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__deviation_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_deviation_list
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_run_form
+msgid "Deviations"
+msgstr "การเบี่ยงเบน"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__display_name
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_profile__display_name
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_reading__display_name
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__display_name
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_freight_job__display_name
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_sale_order__display_name
+msgid "Display Name"
+msgstr "แสดงชื่อ"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_deviation__cause__door_open
+msgid "Door Open Too Long"
+msgstr "ประตูเปิดนานเกินไป"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_run__state__draft
+msgid "Draft"
+msgstr "ร่าง"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_profile__category__dry_ice
+msgid "Dry Ice"
+msgstr "น้ำแข็งแห้ง"
+
+#. module: eh_log_cold_chain
+#: model:eh.log.cold.chain.profile,name:eh_log_cold_chain.profile_dry_ice
+msgid "Dry Ice (around -78 degC)"
+msgstr "น้ำแข็งแห้ง (ประมาณ -78 องศาเซลเซียส)"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__duration_minutes
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Duration (min)"
+msgstr "ระยะเวลา (นาที)"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__ended_at
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Ended"
+msgstr "สิ้นสุดแล้ว"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_deviation__cause__equipment_failure
+msgid "Equipment Failure"
+msgstr "อุปกรณ์ล้มเหลว"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_profile__excursion_grace_minutes
+msgid "Excursion Grace (minutes)"
+msgstr "ช่วงผ่อนผันการเบี่ยงเบน (นาที)"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_profile__sampling_cadence_minutes
+msgid ""
+"Expected interval between readings. Used by the gap detector to flag missing"
+" data."
+msgstr ""
+"ช่วงเวลาที่คาดหวังระหว่างการอ่านค่า "
+"ใช้โดยตัวตรวจจับช่องว่างเพื่อทำเครื่องหมายข้อมูลที่ขาดหาย"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__message_follower_ids
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__message_follower_ids
+msgid "Followers"
+msgstr "ผู้ติดตาม"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__message_partner_ids
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "ผู้ติดตาม (พาร์ทเนอร์)"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_deviation__activity_type_icon
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_run__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "ไอคอนแบบฟอนต์ที่ยอดเยี่ยมเช่น fa-tasks"
+
+#. module: eh_log_cold_chain
+#: model:ir.model,name:eh_log_cold_chain.model_eh_log_freight_job
+msgid "Freight Forwarding Job"
+msgstr "งานรับจัดการขนส่งสินค้า"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__freight_job_id
+msgid "Freight Job"
+msgstr "งานขนส่งสินค้า"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_profile__category__frozen
+msgid "Frozen (-18 degC and below)"
+msgstr "แช่แข็ง (-18 degC และต่ำกว่า)"
+
+#. module: eh_log_cold_chain
+#: model:eh.log.cold.chain.profile,name:eh_log_cold_chain.profile_frozen
+msgid "Frozen -18 degC and below"
+msgstr "แช่แข็ง -18 degC และต่ำกว่า"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_run_search
+msgid "Group by Profile"
+msgstr "จัดกลุ่มตามโปรไฟล์"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_run_search
+msgid "Group by State"
+msgstr "จัดกลุ่มตามสถานะ"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__has_message
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__has_message
+msgid "Has Message"
+msgstr "มีข้อความ"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_profile_form
+msgid "Humidity"
+msgstr "ความชื้น"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_reading__humidity
+msgid "Humidity (%)"
+msgstr "ความชื้น (%)"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__id
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_profile__id
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_reading__id
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__id
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_freight_job__id
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_sale_order__id
+msgid "ID"
+msgstr "ไอดี"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__activity_exception_icon
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__activity_exception_icon
+msgid "Icon"
+msgstr "ไอคอน"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_deviation__activity_exception_icon
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_run__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "ไอคอนเพื่อระบุการยกเว้นกิจกรรม"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_deviation__message_needaction
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_run__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "ถ้าเลือก ข้อความใหม่จะต้องการความสนใจจากคุณ"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_deviation__message_has_error
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_deviation__message_has_sms_error
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_run__message_has_error
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_run__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "ถ้าเลือก ข้อความบางข้อความมีข้อผิดพลาดในการส่ง"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__message_is_follower
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__message_is_follower
+msgid "Is Follower"
+msgstr "เป็นผู้ติดตาม"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__deviation_kind
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Kind"
+msgstr "ชนิด"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__write_uid
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_profile__write_uid
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_reading__write_uid
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__write_uid
+msgid "Last Updated by"
+msgstr "อัปเดตครั้งล่าสุดโดย"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__write_date
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_profile__write_date
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_reading__write_date
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__write_date
+msgid "Last Updated on"
+msgstr "อัปเดตครั้งล่าสุดเมื่อ"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_run_form
+msgid "Linkage"
+msgstr "การเชื่อมโยง"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_deviation__cause__loading_unloading
+msgid "Loading or Unloading"
+msgstr "การขนถ่ายขึ้นหรือลง"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_deviation__cause__logger_calibration
+msgid "Logger Calibration Drift"
+msgstr "การเบี่ยงเบนการสอบเทียบของอุปกรณ์บันทึก"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_profile__temperature_min
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_run__profile_temperature_min
+msgid ""
+"Lower threshold. Readings below this trigger a deviation after the alert "
+"window elapses."
+msgstr ""
+"เกณฑ์ล่าง "
+"ค่าที่อ่านได้ต่ำกว่านี้จะกระตุ้นการเบี่ยงเบนหลังจากช่วงการแจ้งเตือนสิ้นสุดลง"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_deviation_form
+msgid "Magnitude"
+msgstr "ขนาด"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_reading__source__manual
+msgid "Manual Entry"
+msgstr "การป้อนข้อมูลด้วยตนเอง"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_deviation_form
+msgid "Mark Cargo Impacting"
+msgstr "ทำเครื่องหมายว่ากระทบต่อสินค้า"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_profile__humidity_max
+msgid "Max Humidity (%)"
+msgstr "ความชื้นสูงสุด (%)"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Max Recorded"
+msgstr "ค่าสูงสุดที่บันทึก"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__max_temperature
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Max Recorded (degC)"
+msgstr "ค่าสูงสุดที่บันทึก (degC)"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_profile__temperature_max
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__profile_temperature_max
+msgid "Max Temperature (degC)"
+msgstr "อุณหภูมิสูงสุด (degC)"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__max_temperature
+msgid "Maximum Recorded (degC)"
+msgstr "ค่าสูงสุดที่บันทึก (degC)"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__message_has_error
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__message_has_error
+msgid "Message Delivery error"
+msgstr "เกิดข้อผิดพลาดในการส่งข้อความ"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__message_ids
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__message_ids
+msgid "Messages"
+msgstr "ข้อความ"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Metric"
+msgstr "เมตริก"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_profile__humidity_min
+msgid "Min Humidity (%)"
+msgstr "ความชื้นขั้นต่ำ (%)"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Min Recorded"
+msgstr "ค่าต่ำสุดที่บันทึก"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__min_temperature
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Min Recorded (degC)"
+msgstr "ค่าต่ำสุดที่บันทึก (degC)"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_profile__temperature_min
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__profile_temperature_min
+msgid "Min Temperature (degC)"
+msgstr "อุณหภูมิต่ำสุด (degC)"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__min_temperature
+msgid "Minimum Recorded (degC)"
+msgstr "ค่าต่ำสุดที่บันทึก (degC)"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_profile__alert_window_minutes
+msgid ""
+"Minimum continuous duration that a threshold must be breached before a "
+"deviation is raised. Buffers transient spikes (e.g. door open during gate-"
+"in)."
+msgstr ""
+"ระยะเวลาต่อเนื่องขั้นต่ำที่ต้องละเมิดเกณฑ์ก่อนจะแจ้งความคลาดเคลื่อน "
+"ช่วยกันชนการพุ่งขึ้นชั่วคราว (เช่น ประตูเปิดระหว่างเข้าประตู)"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_profile__monitor_humidity
+msgid "Monitor Humidity"
+msgstr "ตรวจติดตามความชื้น"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__my_activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "วันครบกำหนดกิจกรรมของฉัน"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_profile__name
+msgid "Name"
+msgstr "ชื่อ"
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_cold_chain_run.py:0
+msgid "New"
+msgstr "ใหม่"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__activity_calendar_event_id
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "ปฏิทินอีเวนต์กิจกรรมถัดไป"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "วันครบกำหนดกิจกรรมถัดไป"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__activity_summary
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__activity_summary
+msgid "Next Activity Summary"
+msgstr "สรุปกิจกรรมถัดไป"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__activity_type_id
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__activity_type_id
+msgid "Next Activity Type"
+msgstr "ประเภทกิจกรรมถัดไป"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "No"
+msgstr "ไม่"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__notes
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_run_form
+msgid "Notes"
+msgstr "โน้ต"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__message_needaction_counter
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__message_needaction_counter
+msgid "Number of Actions"
+msgstr "จํานวนการดําเนินการ"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__message_has_error_counter
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__message_has_error_counter
+msgid "Number of errors"
+msgstr "จํานวนข้อผิดพลาด"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_deviation__message_needaction_counter
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_run__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "จำนวนข้อความที่ต้องดำเนินการ"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_deviation__message_has_error_counter
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_run__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "จํานวนข้อความที่มีข้อผิดพลาดในการส่ง"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_deviation__state__open
+msgid "Open"
+msgstr "เปิด"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__open_deviation_count
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_run_form
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_run_search
+msgid "Open Deviations"
+msgstr "ความเบี่ยงเบนที่เปิดอยู่"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_deviation__cause__operator_error
+msgid "Operator Error"
+msgstr "ข้อผิดพลาดของผู้ปฏิบัติงาน"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_reading__sensor_reference
+msgid ""
+"Optional identifier for the source sensor or logger. Useful when multiple "
+"sensors feed into the same run."
+msgstr ""
+"ตัวระบุที่ไม่บังคับสำหรับเซนเซอร์หรือตัวบันทึกต้นทาง "
+"มีประโยชน์เมื่อเซนเซอร์หลายตัวป้อนข้อมูลเข้าสู่การรันเดียวกัน"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_deviation__cause__other
+msgid "Other"
+msgstr "อื่น ๆ"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_profile__category__pharma
+msgid "Pharma (2 to 8 degC)"
+msgstr "เภสัชภัณฑ์ (2 ถึง 8 องศาเซลเซียส)"
+
+#. module: eh_log_cold_chain
+#: model:eh.log.cold.chain.profile,name:eh_log_cold_chain.profile_pharma_2_8
+msgid "Pharma 2 to 8 degC"
+msgstr "เภสัชภัณฑ์ 2 ถึง 8 องศาเซลเซียส"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__profile_id
+msgid "Profile"
+msgstr "โปรไฟล์"
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_cold_chain_profile.py:0
+msgid ""
+"Profile %(name)s has humidity min %(min).1f%% >= max %(max).1f%% but "
+"humidity monitoring is enabled."
+msgstr ""
+"โปรไฟล์ %(name)s มีความชื้นต่ำสุด %(min).1f%% >= สูงสุด %(max).1f%% "
+"แต่การตรวจสอบความชื้นถูกเปิดใช้งาน"
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_cold_chain_profile.py:0
+msgid ""
+"Profile %(name)s has min temperature %(min).2f >= max %(max).2f. The min "
+"must be strictly less than the max."
+msgstr ""
+"โปรไฟล์ %(name)s มีอุณหภูมิต่ำสุด %(min).2f >= สูงสุด %(max).2f "
+"ค่าต่ำสุดต้องน้อยกว่าค่าสูงสุดอย่างเคร่งครัด"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Profile Range"
+msgstr "ช่วงโปรไฟล์"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_run_form
+msgid "Profile Thresholds"
+msgstr "เกณฑ์ของโปรไฟล์"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.constraint,message:eh_log_cold_chain.constraint_eh_log_cold_chain_profile_code_unique
+msgid "Profile code must be unique."
+msgstr "รหัสโปรไฟล์ต้องไม่ซ้ำกัน"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__rating_ids
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__rating_ids
+msgid "Ratings"
+msgstr "การให้คะแนน"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_reading_form
+msgid "Reading"
+msgstr "การอ่านค่า"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Reading Summary"
+msgstr "สรุปการอ่านค่า"
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_cold_chain_run.py:0
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__reading_count
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__reading_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_reading_list
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_run_form
+msgid "Readings"
+msgstr "การอ่านค่า"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__name
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__name
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Reference"
+msgstr "การอ้างอิง"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__resolution_notes
+msgid "Resolution Notes"
+msgstr "บันทึกการแก้ไข"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_deviation_form
+msgid "Resolve"
+msgstr "แก้ไข"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_deviation__state__resolved
+msgid "Resolved"
+msgstr "แก้ไขแล้ว"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__resolved_at
+msgid "Resolved At"
+msgstr "แก้ไขเมื่อ"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__resolved_by_id
+msgid "Resolved By"
+msgstr "แก้ไขโดย"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__activity_user_id
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__activity_user_id
+msgid "Responsible User"
+msgstr "ผู้ใช้ที่รับผิดชอบ"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__run_id
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_reading__run_id
+msgid "Run"
+msgstr "เริ่มทำงาน"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__message_has_sms_error
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "ข้อผิดพลาดในการส่ง SMS"
+
+#. module: eh_log_cold_chain
+#: model:ir.model,name:eh_log_cold_chain.model_sale_order
+msgid "Sales Order"
+msgstr "คำสั่งขาย"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Sample Count"
+msgstr "จำนวนตัวอย่าง"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_profile__sampling_cadence_minutes
+msgid "Sampling Cadence (minutes)"
+msgstr "ความถี่ในการเก็บตัวอย่าง (นาที)"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_reading__sensor_reference
+msgid "Sensor Reference"
+msgstr "ข้อมูลอ้างอิงเซนเซอร์"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_reading__source
+msgid "Source"
+msgstr "แหล่งที่มา"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_profile__code
+msgid "Stable identifier (PHARMA-2-8, FROZEN-18, AMB-15-25, ...)."
+msgstr "ตัวระบุที่คงที่ (PHARMA-2-8, FROZEN-18, AMB-15-25, ...)"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__started_at
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__started_at
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Started"
+msgstr "เริ่มต้นแล้ว"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__state
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__state
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "State"
+msgstr "รัฐ"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_deviation__activity_state
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_run__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"สถานะตามกิจกรรม\n"
+"เกินกำหนด: วันที่ครบกำหนดผ่านไปแล้ว\n"
+"วันนี้: วันที่จัดกิจกรรมคือวันนี้\n"
+"วางแผน: กิจกรรมในอนาคต"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_reading__source__telematics
+msgid "Telematics Stream"
+msgstr "สตรีมเทเลเมติกส์"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_profile_form
+msgid "Temperature"
+msgstr "อุณหภูมิ"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_reading__temperature
+msgid "Temperature (degC)"
+msgstr "อุณหภูมิ (degC)"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid ""
+"This certificate is issued under the responsibility of the operator named "
+"above based on the recorded data above. The compliance verdict reflects the "
+"absence (COMPLIANT) or presence (NON-COMPLIANT) of cargo-impacting "
+"deviations."
+msgstr ""
+"ใบรับรองนี้ออกภายใต้ความรับผิดชอบของผู้ดำเนินการที่ระบุชื่อข้างต้นตามข้อมูลที่บันทึกไว้ข้างต้น"
+" คำวินิจฉัยการปฏิบัติตามข้อกำหนดสะท้อนถึงการไม่มี (COMPLIANT) หรือการมี "
+"(NON-COMPLIANT) ความเบี่ยงเบนที่ส่งผลกระทบต่อสินค้า"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_profile__excursion_grace_minutes
+msgid ""
+"Time after a deviation closes before the run returns to nominal status. "
+"Allows readings to fully stabilise."
+msgstr ""
+"ระยะเวลาหลังจากปิดความเบี่ยงเบนก่อนที่การรันจะกลับสู่สถานะปกติ "
+"ช่วยให้ค่าที่อ่านได้เสถียรอย่างสมบูรณ์"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_deviation__cause__transit_delay
+msgid "Transit Delay"
+msgstr "ความล่าช้าในการขนส่ง"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_run__is_compliant
+msgid ""
+"True when no cargo-impacting deviation has been recorded and at least one "
+"reading has been ingested. Drives the compliance certificate verdict."
+msgstr ""
+"True "
+"เมื่อไม่มีการบันทึกความเบี่ยงเบนที่ส่งผลต่อสินค้าและมีการนำเข้าค่าที่อ่านได้อย่างน้อยหนึ่งค่า"
+" กำหนดผลตัดสินของใบรับรองการปฏิบัติตามข้อกำหนด"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_reading__is_breach
+msgid ""
+"True when this individual reading is outside the run's profile thresholds. "
+"The deviation detector aggregates sustained breaches across continuous time "
+"windows."
+msgstr ""
+"True เมื่อค่าที่อ่านได้แต่ละค่านี้อยู่นอกเกณฑ์โปรไฟล์ของการรัน "
+"ตัวตรวจจับความเบี่ยงเบนจะรวมการละเมิดที่ต่อเนื่องข้ามช่วงเวลาที่ต่อเนื่องกัน"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_deviation__activity_exception_decoration
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_run__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "ประเภทกิจกรรมข้อยกเว้นบนบันทึก"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_profile__temperature_max
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_run__profile_temperature_max
+msgid ""
+"Upper threshold. Readings above this trigger a deviation after the alert "
+"window elapses."
+msgstr ""
+"เกณฑ์ขอบเขตบน "
+"ค่าที่อ่านได้สูงกว่านี้จะทำให้เกิดความเบี่ยงเบนหลังจากหน้าต่างการแจ้งเตือนสิ้นสุดลง"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Value"
+msgstr "ค่า"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Verdict"
+msgstr "คำตัดสิน"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_deviation_form
+msgid "Void (False Alarm)"
+msgstr "ทำให้เป็นโมฆะ (สัญญาณเตือนเท็จ)"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_deviation__state__voided
+msgid "Voided (False Alarm)"
+msgstr "ยกเลิกแล้ว (การแจ้งเตือนเท็จ)"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__website_message_ids
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__website_message_ids
+msgid "Website Messages"
+msgstr "ข้อความเว็บไซต์"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_deviation__website_message_ids
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_run__website_message_ids
+msgid "Website communication history"
+msgstr "ประวัติการสื่อสารของเว็บไซต์"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_profile__monitor_humidity
+msgid ""
+"When True, readings must include humidity and the thresholds above are "
+"enforced."
+msgstr ""
+"เมื่อเป็น True ค่าที่อ่านได้ต้องรวมความชื้นและมีการบังคับใช้ค่าเกณฑ์ด้านบน"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_deviation__cargo_impacting
+msgid ""
+"When True, the deviation is judged to have impacted the cargo's integrity. "
+"This drives the run's compliance verdict and the certificate's verdict line."
+msgstr ""
+"เมื่อเป็น True จะถือว่าความเบี่ยงเบนนั้นส่งผลกระทบต่อความสมบูรณ์ของสินค้า "
+"สิ่งนี้กำหนดคำตัดสินการปฏิบัติตามข้อกำหนดของรอบและบรรทัดคำตัดสินของใบรับรอง"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_sale_order__eh_log_cold_chain_required
+msgid ""
+"When checked, the freight job spawned from this order auto-creates a cold "
+"chain monitoring run."
+msgstr ""
+"เมื่อทำเครื่องหมาย "
+"งานขนส่งที่สร้างจากคำสั่งนี้จะสร้างรอบการตรวจสอบห่วงโซ่ความเย็นโดยอัตโนมัติ"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_deviation_form
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_run_form
+msgid "Window"
+msgstr "หน้าต่าง"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "YES"
+msgstr "ใช่"
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_cold_chain_run.py:0
+msgid ""
+"[EHL-COLD-CHAIN-001] State changes on a cold chain run must go through the "
+"action buttons. Direct writes are rejected."
+msgstr ""
+"[EHL-COLD-CHAIN-001] "
+"การเปลี่ยนสถานะบนการดำเนินการห่วงโซ่ความเย็นต้องดำเนินการผ่านปุ่มการดำเนินการ"
+" การเขียนโดยตรงจะถูกปฏิเสธ"
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_cold_chain_run.py:0
+msgid ""
+"[EHL-COLD-CHAIN-002] Cold chain run %(name)s is in state %(state)s. Readings"
+" can only be ingested while the run is active."
+msgstr ""
+"[EHL-COLD-CHAIN-002] การดำเนินการห่วงโซ่ความเย็น %(name)s อยู่ในสถานะ "
+"%(state)s "
+"สามารถบันทึกค่าที่อ่านได้เฉพาะขณะที่การดำเนินการยังทำงานอยู่เท่านั้น"
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_cold_chain_deviation.py:0
+msgid ""
+"[EHL-COLD-CHAIN-DEV-001] State changes on a cold chain deviation must go "
+"through the action buttons. Direct writes are rejected."
+msgstr ""
+"[EHL-COLD-CHAIN-DEV-001] "
+"การเปลี่ยนสถานะบนความเบี่ยงเบนของห่วงโซ่ความเย็นต้องดำเนินการผ่านปุ่มการดำเนินการ"
+" การเขียนโดยตรงจะถูกปฏิเสธ"
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_cold_chain_deviation.py:0
+msgid ""
+"[EHL-COLD-CHAIN-DEV-002] Deviation %(name)s cannot be resolved without a "
+"cause classification."
+msgstr ""
+"[EHL-COLD-CHAIN-DEV-002] ไม่สามารถแก้ไขความเบี่ยงเบน %(name)s "
+"ได้หากไม่มีการจำแนกสาเหตุ"
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_cold_chain_deviation.py:0
+msgid ""
+"[EHL-COLD-CHAIN-DEV-003] Voiding deviation %(name)s requires a justification"
+" in the resolution notes."
+msgstr ""
+"[EHL-COLD-CHAIN-DEV-003] การยกเลิกความเบี่ยงเบน %(name)s "
+"ต้องมีเหตุผลประกอบในบันทึกการแก้ไข"
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_cold_chain_reading.py:0
+msgid ""
+"[EHL-COLD-CHAIN-READING-001] Cold chain readings are append-only. The "
+"following fields cannot be edited after capture: %(fields)s."
+msgstr ""
+"[EHL-COLD-CHAIN-READING-001] "
+"ค่าที่อ่านของห่วงโซ่ความเย็นเป็นแบบเพิ่มต่อได้เท่านั้น "
+"ฟิลด์ต่อไปนี้ไม่สามารถแก้ไขได้หลังจากบันทึกแล้ว: %(fields)s"
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_freight_job.py:0
+msgid "freight_job_id"
+msgstr ""
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "open"
+msgstr "เปิด"
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_cold_chain_run.py:0
+msgid "run_id"
+msgstr ""
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "total,"
+msgstr "รวม,"

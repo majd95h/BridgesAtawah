@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="0">
+    <data>
+
+        <record id="rule_eh_log_transport_trip_company" model="ir.rule">
+            <field name="name">eh.log.transport.trip: company isolation</field>
+            <field name="model_id" ref="model_eh_log_transport_trip"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+            <field name="global" eval="True"/>
+        </record>
+
+        <record id="rule_eh_log_transport_vehicle_company" model="ir.rule">
+            <field name="name">eh.log.transport.vehicle: company isolation</field>
+            <field name="model_id" ref="model_eh_log_transport_vehicle"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+            <field name="global" eval="True"/>
+        </record>
+
+        <record id="rule_eh_log_transport_driver_company" model="ir.rule">
+            <field name="name">eh.log.transport.driver: company isolation</field>
+            <field name="model_id" ref="model_eh_log_transport_driver"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+            <field name="global" eval="True"/>
+        </record>
+
+        <record id="rule_eh_log_transport_pod_company" model="ir.rule">
+            <field name="name">eh.log.transport.pod: company isolation</field>
+            <field name="model_id" ref="model_eh_log_transport_pod"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+            <field name="global" eval="True"/>
+        </record>
+
+    </data>
+</odoo>

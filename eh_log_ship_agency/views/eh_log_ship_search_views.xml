@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_eh_log_ship_port_call_search_full" model="ir.ui.view">
+        <field name="name">eh.log.ship.port.call.search.full</field>
+        <field name="model">eh.log.ship.port.call</field>
+        <field name="arch" type="xml">
+            <search string="Search Port Calls">
+                <field name="name"/>
+                <field name="vessel_id"/>
+                <field name="port_partner_id"/>
+                <field name="berth_id"/>
+                <field name="principal_partner_id"/>
+                <field name="voyage_reference"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+
+                <separator/>
+                <filter name="filter_state_expected" string="Expected" domain="[('state', '=', 'expected')]"/>
+                <filter name="filter_state_arrived" string="Arrived" domain="[('state', '=', 'arrived')]"/>
+                <filter name="filter_state_berthed" string="Berthed" domain="[('state', '=', 'berthed')]"/>
+                <filter name="filter_state_working" string="Working" domain="[('state', '=', 'working')]"/>
+                <filter name="filter_state_sailed" string="Sailed" domain="[('state', '=', 'sailed')]"/>
+                <filter name="filter_state_closed" string="Closed" domain="[('state', '=', 'closed')]"/>
+                <filter name="filter_state_active" string="Active"
+                        domain="[('state', 'in', ('expected', 'arrived', 'berthed', 'working'))]"/>
+
+                <separator/>
+                <filter name="filter_eta_today" string="ETA Today"
+                        domain="[('eta_at', '&gt;=', context_today().strftime('%Y-%m-%d 00:00:00')),
+                                  ('eta_at', '&lt;=', context_today().strftime('%Y-%m-%d 23:59:59'))]"/>
+                <filter name="filter_eta_this_week" string="ETA This Week"
+                        domain="[('eta_at', '&gt;=', (context_today() - relativedelta(days=context_today().weekday())).strftime('%Y-%m-%d 00:00:00')),
+                                  ('eta_at', '&lt;=', (context_today() + relativedelta(days=6 - context_today().weekday())).strftime('%Y-%m-%d 23:59:59'))]"/>
+                <filter name="filter_nor_tendered" string="NOR Tendered"
+                        domain="[('nor_tendered_at', '!=', False)]"/>
+
+                <separator/>
+                <group>
+                    <filter name="group_by_state" string="State" context="{'group_by': 'state'}"/>
+                    <filter name="group_by_vessel" string="Vessel" context="{'group_by': 'vessel_id'}"/>
+                    <filter name="group_by_port" string="Port" context="{'group_by': 'port_partner_id'}"/>
+                    <filter name="group_by_principal" string="Principal" context="{'group_by': 'principal_partner_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="view_eh_log_ship_disbursement_account_search_full" model="ir.ui.view">
+        <field name="name">eh.log.ship.disbursement.account.search.full</field>
+        <field name="model">eh.log.ship.disbursement.account</field>
+        <field name="arch" type="xml">
+            <search string="Search DAs">
+                <field name="name"/>
+                <field name="port_call_id"/>
+                <field name="vessel_id"/>
+                <field name="principal_partner_id"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+
+                <separator/>
+                <filter name="filter_state_draft" string="Draft" domain="[('state', '=', 'draft')]"/>
+                <filter name="filter_state_proforma" string="Proforma" domain="[('state', '=', 'proforma')]"/>
+                <filter name="filter_state_actual" string="Actual" domain="[('state', '=', 'actual')]"/>
+                <filter name="filter_state_posted" string="Posted" domain="[('state', '=', 'posted')]"/>
+                <filter name="filter_state_settled" string="Settled" domain="[('state', '=', 'settled')]"/>
+
+                <separator/>
+                <filter name="filter_over_budget" string="Over Budget"
+                        domain="[('variance', '&gt;', 0)]"/>
+                <filter name="filter_under_budget" string="Under Budget"
+                        domain="[('variance', '&lt;', 0)]"/>
+
+                <separator/>
+                <group>
+                    <filter name="group_by_state" string="State" context="{'group_by': 'state'}"/>
+                    <filter name="group_by_vessel" string="Vessel" context="{'group_by': 'vessel_id'}"/>
+                    <filter name="group_by_principal" string="Principal" context="{'group_by': 'principal_partner_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+</odoo>

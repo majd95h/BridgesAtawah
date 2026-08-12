@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_sale_order_form_project_cargo" model="ir.ui.view">
+        <field name="name">sale.order.form.eh_log_project_cargo</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Project Cargo Jobs" name="project_cargo_jobs">
+                    <field name="eh_log_project_cargo_job_ids" readonly="1">
+                        <list>
+                            <field name="name"/>
+                            <field name="project_name"/>
+                            <field name="state" widget="badge"/>
+                        </list>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

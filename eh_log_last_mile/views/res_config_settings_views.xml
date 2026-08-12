@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="view_res_config_settings_eh_log_last_mile" model="ir.ui.view">
+            <field name="name">res.config.settings.view.form.inherit.eh.log.last.mile</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="eh_log_base.view_res_config_settings_eh_log"/>
+            <field name="arch" type="xml">
+                <xpath expr="//app[@name='eh_log_base']" position="inside">
+                    <block title="Last Mile" id="eh_log_last_mile_settings">
+                        <setting id="eh_log_last_mile_max_attempts"
+                                 string="Max Delivery Attempts"
+                                 help="Per-company maximum delivery attempts before a stop is auto-marked failed.">
+                            <field name="eh_log_last_mile_max_attempts"/>
+                        </setting>
+                        <setting id="eh_log_last_mile_max_attempts_param"
+                                 string="System-wide Cap"
+                                 help="System parameter mirror for fast lookup. Keeps the per-company limit and the system cap in sync.">
+                            <field name="eh_log_last_mile_max_attempts_param"/>
+                        </setting>
+                    </block>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

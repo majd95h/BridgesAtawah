@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="view_sale_order_form_eh_log_dg" model="ir.ui.view">
+            <field name="name">sale.order.form.inherit.eh.log.dg</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="eh_log_quotation.view_sale_order_form_eh_log"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='eh_log_logistics']" position="inside">
+                    <group string="Dangerous Goods">
+                        <group>
+                            <field name="eh_log_dg_required"/>
+                        </group>
+                    </group>
+                </xpath>
+                <xpath expr="//div[@name='button_box']" position="inside">
+                    <button name="action_view_eh_log_dg_declarations" type="object" class="oe_stat_button" icon="fa-warning" invisible="not eh_log_dg_declaration_count" groups="eh_log_base.group_eh_log_user">
+                        <field name="eh_log_dg_declaration_count" widget="statinfo" string="DG Declarations"/>
+                    </button>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

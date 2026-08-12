@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_eh_log_edi_inbound_list" model="ir.ui.view">
+        <field name="name">eh.log.edi.inbound.list</field>
+        <field name="model">eh.log.edi.inbound</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="partner_config_id"/>
+                <field name="message_type_id"/>
+                <field name="received_at"/>
+                <field name="state" widget="badge"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_eh_log_edi_inbound_form" model="ir.ui.view">
+        <field name="name">eh.log.edi.inbound.form</field>
+        <field name="model">eh.log.edi.inbound</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_parse" string="Parse" type="object" class="btn-primary" invisible="state != 'received'" groups="eh_log_base.group_eh_log_user"/>
+                    <button name="action_process" string="Process" type="object" class="btn-primary" invisible="state != 'parsed'" groups="eh_log_base.group_eh_log_user"/>
+                    <button name="action_close" string="Close" type="object" class="btn-secondary" invisible="state != 'processed'" groups="eh_log_base.group_eh_log_manager"/>
+                    <button name="action_resume" string="Resume" type="object" class="btn-warning" invisible="state != 'rejected'" groups="eh_log_base.group_eh_log_manager"/>
+                    <field name="state" widget="statusbar" statusbar_visible="received,parsed,processed,closed"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1><field name="name"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="partner_config_id" options="{'no_create': True}"/>
+                            <field name="partner_id" readonly="1"/>
+                            <field name="message_type_id" options="{'no_create': True}"/>
+                        </group>
+                        <group>
+                            <field name="received_at" readonly="1"/>
+                            <field name="parsed_at" readonly="1"/>
+                            <field name="processed_at" readonly="1"/>
+                            <field name="target_record_ref" readonly="1"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="raw_payload" filename="raw_filename" readonly="1"/>
+                        <field name="raw_filename" readonly="1"/>
+                    </group>
+                    <group string="Parsed Payload">
+                        <field name="parsed_payload" nolabel="1" readonly="1" widget="text"/>
+                    </group>
+                    <group string="Last Error" invisible="not error_message">
+                        <field name="error_message" nolabel="1" readonly="1"/>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_eh_log_edi_inbound" model="ir.actions.act_window">
+        <field name="name">Inbound</field>
+        <field name="res_model">eh.log.edi.inbound</field>
+        <field name="view_mode">list,form</field>
+        <field name="views" eval="[(False, 'list'), (False, 'form')]"/>
+    </record>
+
+</odoo>

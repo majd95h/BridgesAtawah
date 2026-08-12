@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="1">
+    <data>
+
+        <record id="cron_alert_expiring_permits" model="ir.cron">
+            <field name="name">Project Cargo: Alert Expiring Permits</field>
+            <field name="model_id" ref="model_eh_log_project_cargo_permit"/>
+            <field name="state">code</field>
+            <field name="code">model.cron_alert_expiring()</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="active" eval="True"/>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,1337 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* eh_log_container_mgmt
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-01 04:33+0000\n"
+"PO-Revision-Date: 2026-07-01 04:33+0000\n"
+"Last-Translator: ERP Heritage <info@erpheritage.com.au>\n"
+"Language-Team: Chinese (Traditional)\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. module: eh_log_container_mgmt
+#. odoo-python
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_lease_contract.py:0
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_work_order.py:0
+msgid "(none)"
+msgstr "(無)"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid ""
+"<br/>\n"
+"                                    <span class=\"eh_pdf_status_badge eh_pdf_status_warn\">REPAIR REQUIRED</span>"
+msgstr ""
+"<br/>\n"
+"                                    <span class=\"eh_pdf_status_badge eh_pdf_status_warn\">需要維修</span>"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "<strong>Container:</strong>"
+msgstr "<strong>貨櫃：</strong>"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "<strong>Movement:</strong>"
+msgstr "<strong>異動：</strong>"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "<strong>Reference:</strong>"
+msgstr "<strong>參考：</strong>"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "<strong>When:</strong>"
+msgstr "<strong>時間：</strong>"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__accepts_dangerous
+msgid "Accepts Dangerous Goods"
+msgstr "接受危險品"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__accepts_reefer
+msgid "Accepts Reefer"
+msgstr "接受冷藏櫃"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__accepts_tank
+msgid "Accepts Tank"
+msgstr "接受罐式貨櫃"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_needaction
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_needaction
+msgid "Action Needed"
+msgstr "需要採取行動"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_lease_contract_form
+msgid "Activate"
+msgstr "啟動"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__active
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_lease_contract__state__active
+msgid "Active"
+msgstr "啟用"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_freight_container__lease_contract_id
+msgid ""
+"Active lease contract this container falls under. Used by per-container D&D "
+"and headline billing."
+msgstr "此貨櫃所屬的有效租賃合約。用於按貨櫃計算 D&D 及主帳單。"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__activity_ids
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__activity_ids
+msgid "Activities"
+msgstr "活動"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__activity_exception_decoration
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "活動異常圖示"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__activity_state
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__activity_state
+msgid "Activity State"
+msgstr "活動狀態"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__activity_type_icon
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "活動類型圖示"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__actual_amount
+msgid "Actual Amount"
+msgstr "實際金額"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__actual_cost
+msgid "Actual Cost"
+msgstr "實際成本"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__actual_unit_cost
+msgid "Actual Unit Cost"
+msgstr "實際單位成本"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__address
+msgid "Address"
+msgstr "地址"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_work_order_form
+msgid "Approve"
+msgstr "審批"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order__state__approved
+msgid "Approved"
+msgstr "已審批"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__approved_at
+msgid "Approved At"
+msgstr "核准時間"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__approved_by_id
+msgid "Approved By"
+msgstr "審批人"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_attachment_count
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_attachment_count
+msgid "Attachment Count"
+msgstr "附件數目"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_work_order_form
+msgid "Audit"
+msgstr "審計"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_work_order_form
+msgid "Back to Draft"
+msgstr "退回草稿"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_lease_contract_form
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_work_order_form
+msgid "Cancel"
+msgstr "取消"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_lease_contract__state__cancelled
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order__state__cancelled
+msgid "Cancelled"
+msgstr "已取消"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_depot_form
+msgid "Capacity"
+msgstr "能力"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__capacity_teu
+msgid "Capacity (TEU)"
+msgstr "容量 (TEU)"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_freight_container__dnd_chargeable_days
+msgid "Chargeable days = max(0, days_at_destination - free_time_days)."
+msgstr "計費天數 = max(0, days_at_destination - free_time_days)。"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_work_order_form
+msgid "Close"
+msgstr "關閉"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order__state__closed
+msgid "Closed"
+msgstr "已關閉"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__code
+msgid "Code"
+msgstr "程式碼"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__company_ids
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__company_ids
+msgid "Companies"
+msgstr "公司"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__company_id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__company_id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__company_id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__company_id
+msgid "Company"
+msgstr "公司"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order__state__completed
+msgid "Completed"
+msgstr "已完成"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__completed_at
+msgid "Completed At"
+msgstr "完成於"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__condition_note
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "Condition Note"
+msgstr "狀況備註"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__container_id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__container_id
+msgid "Container"
+msgstr "貨櫃"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_depot_form
+msgid "Container Depot"
+msgstr "貨櫃場"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model,name:eh_log_container_mgmt.model_eh_log_container_mgmt_depot
+msgid "Container Depot or Yard"
+msgstr "貨櫃場或堆場"
+
+#. module: eh_log_container_mgmt
+#: model:ir.actions.act_window,name:eh_log_container_mgmt.action_eh_log_container_mgmt_depot
+#: model:ir.ui.menu,name:eh_log_container_mgmt.menu_eh_log_container_mgmt_depots
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_depot_list
+msgid "Container Depots"
+msgstr "貨櫃場"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model,name:eh_log_container_mgmt.model_eh_log_container_mgmt_movement
+msgid "Container Gate Movement"
+msgstr "貨櫃閘口進出"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model,name:eh_log_container_mgmt.model_eh_log_container_mgmt_lease_contract
+msgid "Container Lease Contract"
+msgstr "貨櫃租賃合約"
+
+#. module: eh_log_container_mgmt
+#: model:ir.ui.menu,name:eh_log_container_mgmt.menu_eh_log_container_mgmt_work_orders
+msgid "Container M&R"
+msgstr "貨櫃維修保養 M&R"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model,name:eh_log_container_mgmt.model_eh_log_container_mgmt_work_order
+msgid "Container M&R Work Order"
+msgstr "貨櫃 M&R 工單"
+
+#. module: eh_log_container_mgmt
+#: model:ir.ui.menu,name:eh_log_container_mgmt.menu_eh_log_container_mgmt_movements
+msgid "Container Movements"
+msgstr "貨櫃移動"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__container_number
+msgid "Container No."
+msgstr "貨櫃編號"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "Container Number"
+msgstr "貨櫃編號"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__iso_type_id
+msgid ""
+"Container type covered by this contract. Mixed-type fleet is modelled as "
+"multiple contracts."
+msgstr "本合約涵蓋的貨櫃類型。混合類型的櫃隊以多份合約建模。"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__container_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_lease_contract_form
+msgid "Containers"
+msgstr "容器"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__container_count
+msgid "Containers Assigned"
+msgstr "已指派的貨櫃"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__line_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_work_order_form
+msgid "Cost Lines"
+msgstr "成本明細"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_work_order_form
+msgid "Costs"
+msgstr "費用"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__partner_id
+msgid "Counterparty"
+msgstr "對手方"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__counterparty_depot_id
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "Counterparty Depot"
+msgstr "對手方倉庫"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__partner_reference
+msgid "Counterparty Reference"
+msgstr "對手方參考編號"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__country_id
+msgid "Country"
+msgstr "國家"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__create_uid
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__create_uid
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__create_uid
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__create_uid
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__create_uid
+msgid "Created by"
+msgstr "建立人員"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__create_date
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__create_date
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__create_date
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__create_date
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__create_date
+msgid "Created on"
+msgstr "建立於"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__currency_id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__currency_id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__currency_id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_freight_container__currency_id
+msgid "Currency"
+msgstr "貨幣"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_freight_container__current_depot_id
+msgid "Current Depot"
+msgstr "目前站場"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_freight_container_form_mgmt
+msgid "D&D"
+msgstr "滯留與滯港費 D&D"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_freight_container__dnd_amount
+msgid "D&D Amount"
+msgstr "D&D 金額"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_freight_container__dnd_chargeable_days
+msgid "D&D Chargeable Days"
+msgstr "D&D 計費天數"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_freight_container__dnd_rate_per_day
+msgid "D&D Rate (per day)"
+msgstr "D&D 費率（每天）"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__daily_rate
+msgid "Daily Rate (per container)"
+msgstr "每日費率（每個貨櫃）"
+
+#. module: eh_log_container_mgmt
+#. odoo-python
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_movement.py:0
+msgid "Damage observed at gate."
+msgstr "在閘口觀察到損壞。"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_freight_container__days_at_destination
+msgid "Days at Destination"
+msgstr "目的地停留天數"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__free_days
+msgid ""
+"Days for which the daily rate is waived per container movement cycle. Useful"
+" for short-turn lease-out arrangements."
+msgstr "每個貨櫃週轉週期中免收日費的天數。適用於短期租出安排。"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_freight_container__free_time_days
+msgid ""
+"Days included in the agreed price after gate-out before demurrage or "
+"detention starts to accrue. Defaults to 7 days; override per container for "
+"special arrangements."
+msgstr "從出閘後到滯期費或滯留費開始累計之前，約定價格中包含的天數。預設為 7 天；可依貨櫃針對特殊安排進行覆寫。"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_freight_container__days_at_destination
+msgid ""
+"Days since destination gate-out, before destination gate-in. Used by the D&D"
+" calculation."
+msgstr "自目的地出閘以來、目的地進閘之前的天數。用於 D&D 計算。"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order_line__repair_kind__dent
+msgid "Dent / Bend"
+msgstr "凹陷 / 彎曲"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__depot_id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__depot_id
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "Depot"
+msgstr "站場"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_freight_container_form_mgmt
+msgid "Depot & Lease"
+msgstr "站場與租賃"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__depot_kind
+msgid "Depot Kind"
+msgstr "站場類型"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.constraint,message:eh_log_container_mgmt.constraint_eh_log_container_mgmt_depot_code_unique
+msgid "Depot code must be unique."
+msgstr "倉庫代碼必須唯一。"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__description
+msgid "Description"
+msgstr "說明"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__direction
+msgid "Direction"
+msgstr "方向"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__display_name
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__display_name
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__display_name
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__display_name
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__display_name
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_freight_container__display_name
+msgid "Display Name"
+msgstr "顯示名稱"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order_line__repair_kind__door
+msgid "Door / Hinge"
+msgstr "門 / 鉸鏈"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_lease_contract__state__draft
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order__state__draft
+msgid "Draft"
+msgstr "草稿"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_depot__depot_kind__dry_port
+msgid "Dry Port"
+msgstr "乾港"
+
+#. module: eh_log_container_mgmt
+#: model:ir.actions.server,name:eh_log_container_mgmt.ir_cron_eh_log_container_mgmt_dnd_alert_ir_actions_server
+msgid "EH Logistics: container D&D free time alerts"
+msgstr "EH 物流：貨櫃 D&D 免費時間提醒"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__ends_on
+msgid "Ends On"
+msgstr "結束於"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "Equipment"
+msgstr "設備"
+
+#. module: eh_log_container_mgmt
+#: model:ir.actions.report,name:eh_log_container_mgmt.action_report_eh_log_container_mgmt_eir
+msgid "Equipment Interchange Receipt"
+msgstr "設備交接單"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order__state__estimated
+msgid "Estimated"
+msgstr "估算"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__estimated_amount
+msgid "Estimated Amount"
+msgstr "預估金額"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__estimated_at
+msgid "Estimated At"
+msgstr "預估時間"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__estimated_cost
+msgid "Estimated Cost"
+msgstr "預估成本"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__estimated_unit_cost
+msgid "Estimated Unit Cost"
+msgstr "預估單位成本"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_lease_contract_form
+msgid "Expire"
+msgstr "使其到期"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_lease_contract__state__expired
+msgid "Expired"
+msgstr "到期"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__fault_description
+msgid "Fault Description"
+msgstr "故障描述"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "Field"
+msgstr "欄位"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_lease_contract_form
+msgid "Fleet"
+msgstr "車隊"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__fleet_count
+msgid "Fleet Count"
+msgstr "車隊數量"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__headline_value
+msgid ""
+"Fleet count * daily rate * term days. Indicative headline only; actual "
+"billing reflects per-container free-day usage."
+msgstr "車隊數量 * 日費率 * 期限天數。僅為指示性概覽；實際帳單反映每個貨櫃的免費天數使用情況。"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order_line__repair_kind__flooring
+msgid "Flooring"
+msgstr "地板"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_follower_ids
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_follower_ids
+msgid "Followers"
+msgstr "關注人"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_partner_ids
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "關注人（業務夥伴）"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__activity_type_icon
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Font awesome 圖示，例如，fa-task"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__free_days
+msgid "Free Days (per container)"
+msgstr "免費天數（每個貨櫃）"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_freight_container__free_time_days
+msgid "Free Time (days)"
+msgstr "免費時間（天）"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_depot__depot_kind__freezone_depot
+msgid "Free Zone Depot"
+msgstr "自由區堆場"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__gate_hours
+msgid ""
+"Free-text description of gate operating hours, e.g. '24/7' or 'Sat-Thu "
+"06:00-22:00'. The dispatch board warns when scheduled movements fall outside"
+" these hours."
+msgstr "閘口營運時間的自由文字描述，例如「24/7」或「週六至週四 06:00-22:00」。當排定的移動落在這些時間之外時，調度看板會發出警告。"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model,name:eh_log_container_mgmt.model_eh_log_freight_container
+msgid "Freight Container or ULD"
+msgstr "貨運貨櫃或 ULD"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__gate_hours
+msgid "Gate Hours"
+msgstr "閘口作業時間"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_movement_form
+msgid "Gate Movement"
+msgstr "閘口進出"
+
+#. module: eh_log_container_mgmt
+#. odoo-python
+#: code:addons/eh_log_container_mgmt/models/eh_log_freight_container.py:0
+#: model:ir.actions.act_window,name:eh_log_container_mgmt.action_eh_log_container_mgmt_movement
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_freight_container__movement_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_movement_list
+msgid "Gate Movements"
+msgstr "閘口進出記錄"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__gate_operator_name
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "Gate Operator"
+msgstr "閘口操作員"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_movement_search
+msgid "Gate-In"
+msgstr "進閘"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_movement__movement_kind__gate_in
+msgid "Gate-In (received)"
+msgstr "進閘（已接收）"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_movement_search
+msgid "Gate-Out"
+msgstr "出閘"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_movement__movement_kind__gate_out
+msgid "Gate-Out (released)"
+msgstr "出閘（已放行）"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "Gross Weight (kg)"
+msgstr "毛重 (kg)"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_movement_search
+msgid "Group by Depot"
+msgstr "按車場分組"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_movement_search
+msgid "Group by Kind"
+msgstr "依種類分組"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__happened_at
+msgid "Happened At"
+msgstr "發生時間"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__has_message
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__has_message
+msgid "Has Message"
+msgstr "有訊息"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__headline_value
+msgid "Headline Value"
+msgstr "主要數值"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order_line__repair_kind__hole
+msgid "Hole / Puncture"
+msgstr "孔洞 / 穿刺"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_freight_container__id
+msgid "ID"
+msgstr "識別號"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__container_number
+msgid ""
+"ISO 6346 container number: 4 letters (owner code + category) + 6 digits "
+"(serial) + 1 check digit. Validated on save unless 'Manual Override' is set."
+msgstr "ISO 6346 貨櫃號：4 個字母（所有者代碼 + 類別）+ 6 位數字（序號）+ 1 位檢查碼。儲存時驗證，除非設定了「手動覆寫」。"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__iso_type_id
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "ISO Type"
+msgstr "ISO 類型"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__activity_exception_icon
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__activity_exception_icon
+msgid "Icon"
+msgstr "圖示"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__activity_exception_icon
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "用於指示異常活動的圖示。"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_depot_form
+msgid "Identity"
+msgstr "視別資訊"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_needaction
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "勾選代表有新訊息需要您留意。"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_has_error
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_has_sms_error
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_has_error
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "勾選代表有訊息發生傳送錯誤。"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order__state__in_progress
+msgid "In Progress"
+msgstr "進行中"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__capacity_teu
+msgid ""
+"Indicative TEU capacity. Used by yard planning to raise warnings when "
+"occupancy approaches the limit."
+msgstr "指示性 TEU 容量。堆場規劃在佔用率接近上限時用其觸發警告。"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_depot__depot_kind__inland_depot
+msgid "Inland Container Depot"
+msgstr "內陸貨櫃場"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order_line__repair_kind__inspection
+msgid "Inspection / Survey"
+msgstr "檢驗 / 勘驗"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_is_follower
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_is_follower
+msgid "Is Follower"
+msgstr "是關注人"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__movement_kind
+msgid "Kind"
+msgstr "類型"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__write_uid
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__write_uid
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__write_uid
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__write_uid
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__write_uid
+msgid "Last Updated by"
+msgstr "最後更新者"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__write_date
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__write_date
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__write_date
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__write_date
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__write_date
+msgid "Last Updated on"
+msgstr "最後更新於"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_freight_container__current_depot_id
+msgid ""
+"Last known depot. Updated automatically by gate movements; can be edited "
+"manually for corrections."
+msgstr "最後已知的倉庫。由閘口移動自動更新；可手動編輯以進行更正。"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_freight_container__lease_contract_id
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_lease_contract_form
+msgid "Lease Contract"
+msgstr "租賃合約"
+
+#. module: eh_log_container_mgmt
+#: model:ir.actions.act_window,name:eh_log_container_mgmt.action_eh_log_container_mgmt_lease_contract
+#: model:ir.ui.menu,name:eh_log_container_mgmt.menu_eh_log_container_mgmt_lease_contracts
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_lease_contract_list
+msgid "Lease Contracts"
+msgstr "租賃合約"
+
+#. module: eh_log_container_mgmt
+#. odoo-python
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_lease_contract.py:0
+msgid ""
+"Lease contract %(name)s cannot move from %(current)s to %(target)s. Allowed "
+"transitions from %(current)s: %(allowed)s."
+msgstr ""
+"租賃合約 %(name)s 無法從 %(current)s 轉為 %(target)s。從 %(current)s 允許的轉換：%(allowed)s。"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_lease_contract__direction__lease_in
+msgid "Lease-In (vendor to us)"
+msgstr "租入（供應商到我方）"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_lease_contract__direction__lease_out
+msgid "Lease-Out (us to customer)"
+msgstr "租出（我方到客戶）"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_work_order_form
+msgid "M&R Work Order"
+msgstr "維修工單"
+
+#. module: eh_log_container_mgmt
+#: model:ir.actions.act_window,name:eh_log_container_mgmt.action_eh_log_container_mgmt_work_order
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_work_order_list
+msgid "M&R Work Orders"
+msgstr "維修工單"
+
+#. module: eh_log_container_mgmt
+#. odoo-python
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_work_order.py:0
+msgid ""
+"M&R work order %(name)s cannot move from %(current)s to %(target)s. Allowed "
+"transitions from %(current)s: %(allowed)s."
+msgstr ""
+"維修工單 %(name)s 無法從 %(current)s 轉到 %(target)s。從 %(current)s 允許的轉換：%(allowed)s。"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_work_order_form
+msgid "Mark Completed"
+msgstr "標記為已完成"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_has_error
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_has_error
+msgid "Message Delivery error"
+msgstr "訊息遞送錯誤"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_ids
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_ids
+msgid "Messages"
+msgstr "訊息"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__trigger_movement_id
+msgid ""
+"Movement (typically a damaged-on-arrival gate-in) that triggered the work "
+"order."
+msgstr "觸發工單的移動（通常是到貨即損的入閘）。"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_freight_container__movement_count
+msgid "Movements"
+msgstr "移動"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__my_activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "我的活動截止時間"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__name
+msgid "Name"
+msgstr "名稱"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__needs_repair
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_movement_search
+msgid "Needs Repair"
+msgstr "需要維修"
+
+#. module: eh_log_container_mgmt
+#. odoo-python
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_lease_contract.py:0
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_movement.py:0
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_work_order.py:0
+msgid "New"
+msgstr "新增"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__activity_calendar_event_id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "下一個活動日曆事件"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "下一活動截止日期"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__activity_summary
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__activity_summary
+msgid "Next Activity Summary"
+msgstr "下一活動摘要"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__activity_type_id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__activity_type_id
+msgid "Next Activity Type"
+msgstr "下一活動類型"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__notes
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__notes
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__notes
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_lease_contract_form
+msgid "Notes"
+msgstr "備註"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_needaction_counter
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_needaction_counter
+msgid "Number of Actions"
+msgstr "動作數量"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__fleet_count
+msgid ""
+"Number of containers covered. Used for headline pricing and reporting; per-"
+"container assignment lives on the container record (lease_contract_id)."
+msgstr "涵蓋的貨櫃數量。用於總體定價和報告；每個貨櫃的指派保存在貨櫃記錄 (lease_contract_id) 中。"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_has_error_counter
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_has_error_counter
+msgid "Number of errors"
+msgstr "錯誤數量"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_needaction_counter
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "需要採取行動的訊息數目"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_has_error_counter
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "有發送錯誤的郵件數量"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__operator_id
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "Operator"
+msgstr "客服人員"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order_line__repair_kind__other
+msgid "Other"
+msgstr "其他"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order_line__repair_kind__paint
+msgid "Paint / Marking"
+msgstr "噴漆 / 標記"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_lease_contract_form
+msgid "Parties"
+msgstr "各方"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_freight_container__dnd_rate_per_day
+msgid ""
+"Per-container per-day rate that applies after free time elapses. Lookup "
+"chain: container override, lease contract daily rate, configured default per"
+" ISO type."
+msgstr "免費時間結束後適用的每個貨櫃每天費率。查找鏈：貨櫃覆寫值、租賃合約日費率、按 ISO 類型設定的預設值。"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__condition_note
+msgid ""
+"Photographs and damage notes captured at the gate. Drives the M&R work order"
+" if a repair is needed."
+msgstr "在閘口擷取的照片和損壞記錄。如需維修，將驅動 M&R 工單。"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_depot__depot_kind__port_terminal
+msgid "Port Container Terminal"
+msgstr "港口貨櫃碼頭"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__quantity
+msgid "Quantity"
+msgstr "數量"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__rating_ids
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__rating_ids
+msgid "Ratings"
+msgstr "評分"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid ""
+"Received in apparent good order and condition except as noted above. The "
+"undersigned hereby acknowledges receipt of the equipment described in this "
+"Equipment Interchange Receipt."
+msgstr "除上述註明的情況外，貨物按表面良好的秩序和狀況接收。簽署人在此確認收到本設備交接單中所述的設備。"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "Receiving Party"
+msgstr "接收方"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order_line__repair_kind__reefer_unit
+msgid "Reefer Unit"
+msgstr "冷凍機組"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__name
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__name
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__name
+msgid "Reference"
+msgstr "編號"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_movement__movement_kind__repair_in
+msgid "Repair In"
+msgstr "維修入庫"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__repair_kind
+msgid "Repair Kind"
+msgstr "維修類型"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_movement__movement_kind__repair_out
+msgid "Repair Out"
+msgstr "維修出庫"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__repair_summary
+msgid "Repair Summary"
+msgstr "維修摘要"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_depot__depot_kind__repair_yard
+msgid "Repair Yard"
+msgstr "維修場"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__activity_user_id
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__activity_user_id
+msgid "Responsible User"
+msgstr "責任使用者"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__message_has_sms_error
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "簡訊發送錯誤"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "Seal"
+msgstr "封條"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__seal_number
+msgid "Seal Number"
+msgstr "封條編號"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_work_order_line__repair_kind__seal
+msgid "Seal Replacement"
+msgstr "封條更換"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__sequence
+msgid "Sequence"
+msgstr "序列號"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__needs_repair
+msgid ""
+"Set at gate-in when the container is received with visible damage. Triggers "
+"a draft M&R work order on save."
+msgstr "在貨櫃進閘接收時若發現明顯損壞則設定此項。儲存時會觸發一個草稿狀態的 M&R 工單。"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_movement__counterparty_depot_id
+msgid ""
+"Source depot on a transfer-in, destination depot on a transfer-out. Empty "
+"for gate-in / gate-out at a single depot."
+msgstr "調入時為來源堆場，調出時為目的堆場。單一堆場進場/出場時為空。"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__code
+msgid "Stable depot identifier (e.g. JEA-DP, KH-CMA, RAS-MMI)."
+msgstr "穩定的堆場識別碼（例如 JEA-DP、KH-CMA、RAS-MMI）。"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_work_order_form
+msgid "Start Repair"
+msgstr "開始維修"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__started_at
+msgid "Started At"
+msgstr "開始於"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__starts_on
+msgid "Starts On"
+msgstr "開始日期"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__state
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__state
+msgid "State"
+msgstr "狀態"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__activity_state
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"根據活動的狀態 \n"
+" 逾期：已經超過截止日期 \n"
+" 現今：活動日期是當天 \n"
+" 計劃：未來活動。"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_depot__depot_kind__storage_yard
+msgid "Storage Yard"
+msgstr "堆場"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_work_order_form
+msgid "Subject"
+msgstr "主題"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_work_order_form
+msgid "Submit Estimate"
+msgstr "提交估算"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_movement__movement_kind__survey
+msgid "Survey"
+msgstr "問卷"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__days_total
+msgid "Term (days)"
+msgstr "期限（天）"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.view_eh_log_container_mgmt_lease_contract_form
+msgid "Term and Pricing"
+msgstr "期限與定價"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_depot__operator_id
+msgid ""
+"The party operating the depot. Counterparty for movement and lift/handle "
+"billing."
+msgstr "營運堆場的一方。移動與吊裝/搬運計費的對方。"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_movement__movement_kind__transfer_in
+msgid "Transfer In (depot to depot)"
+msgstr "轉入（倉庫至倉庫）"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields.selection,name:eh_log_container_mgmt.selection__eh_log_container_mgmt_movement__movement_kind__transfer_out
+msgid "Transfer Out (depot to depot)"
+msgstr "轉出（倉庫至倉庫）"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__trigger_movement_id
+msgid "Trigger Movement"
+msgstr "觸發移動"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__activity_exception_decoration
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "記錄的異常活動的類型。"
+
+#. module: eh_log_container_mgmt
+#: model_terms:ir.ui.view,arch_db:eh_log_container_mgmt.report_eir_document
+msgid "Value"
+msgstr "值"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__partner_id
+msgid "Vendor on lease-in, customer on lease-out."
+msgstr "租入時為供應商,租出時為客戶。"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__website_message_ids
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__website_message_ids
+msgid "Website Messages"
+msgstr "網站資訊"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_lease_contract__website_message_ids
+#: model:ir.model.fields,help:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order__website_message_ids
+msgid "Website communication history"
+msgstr "網站溝通記錄"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model.fields,field_description:eh_log_container_mgmt.field_eh_log_container_mgmt_work_order_line__work_order_id
+msgid "Work Order"
+msgstr "工單"
+
+#. module: eh_log_container_mgmt
+#: model:ir.model,name:eh_log_container_mgmt.model_eh_log_container_mgmt_work_order_line
+msgid "Work Order Cost Line"
+msgstr "工單成本行"
+
+#. module: eh_log_container_mgmt
+#. odoo-python
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_lease_contract.py:0
+msgid "[EHL-CTNR-LEASE-001] Contract %(name)s end date is before start date."
+msgstr "[EHL-CTNR-LEASE-001] 合約 %(name)s 的結束日期早於開始日期。"
+
+#. module: eh_log_container_mgmt
+#. odoo-python
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_lease_contract.py:0
+msgid ""
+"[EHL-CTNR-LEASE-002] State changes on a lease contract must go through the "
+"action buttons. Direct writes are rejected."
+msgstr "[EHL-CTNR-LEASE-002] 租賃合約的狀態變更必須透過動作按鈕進行。直接寫入將被拒絕。"
+
+#. module: eh_log_container_mgmt
+#. odoo-python
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_movement.py:0
+msgid ""
+"[EHL-CTNR-MOV-001] Container movements are append-only. The following fields"
+" cannot be edited after capture: %(fields)s. Cancel the movement and create "
+"a corrected one if a fix is required."
+msgstr ""
+"[EHL-CTNR-MOV-001] 貨櫃移動僅可附加。以下欄位在採集後無法編輯:%(fields)s。如需修正,請取消該移動並建立一筆更正後的移動。"
+
+#. module: eh_log_container_mgmt
+#. odoo-python
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_work_order.py:0
+msgid ""
+"[EHL-CTNR-WO-001] State changes on a work order must go through the action "
+"buttons. Direct writes are rejected."
+msgstr "[EHL-CTNR-WO-001] 工單的狀態變更必須透過操作按鈕進行。直接寫入將被拒絕。"
+
+#. module: eh_log_container_mgmt
+#. odoo-python
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_work_order.py:0
+msgid ""
+"[EHL-CTNR-WO-002] Work order %(name)s cannot move to Estimated without at "
+"least one cost line."
+msgstr "[EHL-CTNR-WO-002] 工單 %(name)s 至少需要一條成本行才能轉為「已估算」。"
+
+#. module: eh_log_container_mgmt
+#. odoo-python
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_work_order.py:0
+msgid "[EHL-CTNR-WO-003] Only logistics managers can approve M&R work orders."
+msgstr "[EHL-CTNR-WO-003] 只有物流經理可以核准 M&R 工單。"
+
+#. module: eh_log_container_mgmt
+#. odoo-python
+#: code:addons/eh_log_container_mgmt/models/eh_log_container_mgmt_work_order.py:0
+msgid ""
+"[EHL-CTNR-WO-004] Cannot complete work order %(name)s: line '%(line)s' has "
+"zero actual cost. Capture actual costs before completion."
+msgstr "[EHL-CTNR-WO-004] 無法完成工單 %(name)s：行 '%(line)s' 的實際成本為零。請在完成前錄入實際成本。"
+
+#. module: eh_log_container_mgmt
+#. odoo-python
+#: code:addons/eh_log_container_mgmt/models/eh_log_freight_container.py:0
+msgid "container_id"
+msgstr ""

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <menuitem id="menu_eh_log_track_root"
+              name="Track and Trace"
+              parent="eh_log_base.menu_eh_log_operations"
+              sequence="55"/>
+
+    <menuitem id="menu_eh_log_track_events"
+              name="Tracking Events"
+              parent="menu_eh_log_track_root"
+              action="action_eh_log_track_event"
+              sequence="10"/>
+
+    <menuitem id="menu_eh_log_track_subscriptions"
+              name="Subscriptions"
+              parent="menu_eh_log_track_root"
+              action="action_eh_log_track_subscription"
+              sequence="20"/>
+
+    <menuitem id="menu_eh_log_track_config_root"
+              name="Track and Trace"
+              parent="eh_log_base.menu_eh_log_configuration"
+              sequence="55"/>
+
+    <menuitem id="menu_eh_log_track_event_codes"
+              name="Event Codes"
+              parent="menu_eh_log_track_config_root"
+              action="action_eh_log_track_event_code"
+              sequence="10"/>
+
+    <menuitem id="menu_eh_log_track_webhooks"
+              name="Carrier Webhooks"
+              parent="menu_eh_log_track_config_root"
+              action="action_eh_log_track_webhook_endpoint"
+              sequence="20"/>
+
+</odoo>

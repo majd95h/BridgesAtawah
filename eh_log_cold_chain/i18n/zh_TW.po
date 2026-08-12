@@ -1,0 +1,1268 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* eh_log_cold_chain
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-01 04:33+0000\n"
+"PO-Revision-Date: 2026-07-01 04:33+0000\n"
+"Last-Translator: ERP Heritage <info@erpheritage.com.au>\n"
+"Language-Team: Chinese (Traditional)\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_cold_chain_deviation.py:0
+#: code:addons/eh_log_cold_chain/models/eh_log_cold_chain_run.py:0
+msgid "(none)"
+msgstr "(無)"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid ""
+"<span class=\"eh_pdf_status_badge eh_pdf_status_danger\">NON-"
+"COMPLIANT</span>"
+msgstr "<span class=\"eh_pdf_status_badge eh_pdf_status_danger\">不合規</span>"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "<span class=\"eh_pdf_status_badge eh_pdf_status_ok\">COMPLIANT</span>"
+msgstr "<span class=\"eh_pdf_status_badge eh_pdf_status_ok\">合規</span>"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "<strong>Job:</strong>"
+msgstr "<strong>職位：</strong>"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "<strong>Profile:</strong>"
+msgstr "<strong>設定檔：</strong>"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "<strong>Run:</strong>"
+msgstr "<strong>執行：</strong>"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "<strong>State:</strong>"
+msgstr "<strong>狀態：</strong>"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_reading__source__api
+msgid "API"
+msgstr ""
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_deviation__deviation_kind__high
+msgid "Above Maximum"
+msgstr "高於最大值"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_deviation_form
+msgid "Acknowledge"
+msgstr "確認收到"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_deviation__state__acknowledged
+msgid "Acknowledged"
+msgstr "已確認收到"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__acknowledged_at
+msgid "Acknowledged At"
+msgstr "確認時間"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__acknowledged_by_id
+msgid "Acknowledged By"
+msgstr "確認人"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__message_needaction
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__message_needaction
+msgid "Action Needed"
+msgstr "需要採取行動"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_run_form
+msgid "Activate"
+msgstr "啟動"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_profile__active
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_run__state__active
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_run_search
+msgid "Active"
+msgstr "啟用"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__activity_ids
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__activity_ids
+msgid "Activities"
+msgstr "活動"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__activity_exception_decoration
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "活動異常圖示"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__activity_state
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__activity_state
+msgid "Activity State"
+msgstr "活動狀態"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__activity_type_icon
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "活動類型圖示"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_run_form
+msgid "Aggregates"
+msgstr "彙總"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_profile__alert_window_minutes
+msgid "Alert Window (minutes)"
+msgstr "提醒時間視窗（分鐘）"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_deviation__cause__ambient_extreme
+msgid "Ambient Conditions"
+msgstr "環境條件"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__message_attachment_count
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__message_attachment_count
+msgid "Attachment Count"
+msgstr "附件數目"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_deviation_form
+msgid "Audit"
+msgstr "審計"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Authorised Signatory"
+msgstr "授權簽署人"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__avg_temperature
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Avg Recorded (degC)"
+msgstr "平均記錄值 (degC)"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_deviation__deviation_kind__low
+msgid "Below Minimum"
+msgstr "低於最小值"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_reading__is_breach
+msgid "Breach"
+msgstr "違規"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_run_search
+msgid "Breached"
+msgstr "已違反"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_run__state__breached
+msgid "Breached (Cargo Impacting)"
+msgstr "已違反（影響貨物）"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_reading__source__ingest
+msgid "Bulk Ingest"
+msgstr "批量匯入"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_profile_form
+msgid "Cadence and Alerts"
+msgstr "節奏與警示"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_run_form
+msgid "Cancel"
+msgstr "取消"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_run__state__cancelled
+msgid "Cancelled"
+msgstr "已取消"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_reading__captured_at
+msgid "Captured At"
+msgstr "擷取時間"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Cargo Impact"
+msgstr "貨物影響"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__cargo_impacting
+msgid "Cargo Impacting"
+msgstr "影響貨物"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_profile__category
+msgid "Category"
+msgstr "類別"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__cause
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Cause"
+msgstr "原因"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_deviation_form
+msgid "Cause and Resolution"
+msgstr "原因和解決方案"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_profile__category__chilled
+msgid "Chilled (-2 to 8 degC)"
+msgstr "冷藏（-2 至 8 攝氏度）"
+
+#. module: eh_log_cold_chain
+#: model:eh.log.cold.chain.profile,name:eh_log_cold_chain.profile_chilled
+msgid "Chilled -2 to 8 degC"
+msgstr "冷藏 -2 至 8 攝氏度"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_profile__code
+msgid "Code"
+msgstr "程式碼"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_freight_job_form_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_sale_order_form_eh_log_cold_chain
+msgid "Cold Chain"
+msgstr "冷鏈"
+
+#. module: eh_log_cold_chain
+#: model:ir.actions.report,name:eh_log_cold_chain.action_report_eh_log_cold_chain_compliance
+msgid "Cold Chain Compliance Certificate"
+msgstr "冷鏈合規證書"
+
+#. module: eh_log_cold_chain
+#: model:ir.model,name:eh_log_cold_chain.model_eh_log_cold_chain_deviation
+msgid "Cold Chain Deviation"
+msgstr "冷鏈偏差"
+
+#. module: eh_log_cold_chain
+#: model:ir.actions.act_window,name:eh_log_cold_chain.action_eh_log_cold_chain_deviation
+#: model:ir.ui.menu,name:eh_log_cold_chain.menu_eh_log_cold_chain_deviations
+msgid "Cold Chain Deviations"
+msgstr "冷鏈偏差"
+
+#. module: eh_log_cold_chain
+#: model:ir.model,name:eh_log_cold_chain.model_eh_log_cold_chain_run
+msgid "Cold Chain Monitoring Run"
+msgstr "冷鏈監控執行"
+
+#. module: eh_log_cold_chain
+#: model:ir.model,name:eh_log_cold_chain.model_eh_log_cold_chain_profile
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_sale_order__eh_log_cold_chain_profile_id
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_profile_form
+msgid "Cold Chain Profile"
+msgstr "冷鏈設定檔"
+
+#. module: eh_log_cold_chain
+#: model:ir.actions.act_window,name:eh_log_cold_chain.action_eh_log_cold_chain_profile
+#: model:ir.ui.menu,name:eh_log_cold_chain.menu_eh_log_cold_chain_profiles
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_profile_list
+msgid "Cold Chain Profiles"
+msgstr "冷鏈設定檔"
+
+#. module: eh_log_cold_chain
+#: model:ir.model,name:eh_log_cold_chain.model_eh_log_cold_chain_reading
+msgid "Cold Chain Reading"
+msgstr "冷鏈讀數"
+
+#. module: eh_log_cold_chain
+#: model:ir.actions.act_window,name:eh_log_cold_chain.action_eh_log_cold_chain_reading
+msgid "Cold Chain Readings"
+msgstr "冷鏈讀數"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_sale_order__eh_log_cold_chain_required
+msgid "Cold Chain Required"
+msgstr "需要冷鏈"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_run_form
+msgid "Cold Chain Run"
+msgstr "冷鏈執行"
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_freight_job.py:0
+#: model:ir.actions.act_window,name:eh_log_cold_chain.action_eh_log_cold_chain_run
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_freight_job__cold_chain_run_count
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_freight_job__cold_chain_run_ids
+#: model:ir.ui.menu,name:eh_log_cold_chain.menu_eh_log_cold_chain_runs
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_run_list
+msgid "Cold Chain Runs"
+msgstr "冷鏈執行"
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_freight_job.py:0
+msgid ""
+"Cold chain monitoring required on the source order but no profile selected. "
+"Create the cold chain run manually under the Cold Chain tab."
+msgstr "來源訂單需要冷鏈監控，但未選擇設定檔。請在「Cold Chain」分頁下手動建立冷鏈執行。"
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_cold_chain_run.py:0
+msgid ""
+"Cold chain run %(name)s cannot move from %(current)s to %(target)s. Allowed "
+"transitions from %(current)s: %(allowed)s."
+msgstr ""
+"冷鏈執行 %(name)s 無法從 %(current)s 轉移到 %(target)s。從 %(current)s "
+"允許的轉換：%(allowed)s。"
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_cold_chain_run.py:0
+msgid "Cold chain run %(name)s moved to %(state)s."
+msgstr "冷鏈執行 %(name)s 已轉移到 %(state)s。"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__company_ids
+msgid "Companies"
+msgstr "公司"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__company_id
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_reading__company_id
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__company_id
+msgid "Company"
+msgstr "公司"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_run_form
+msgid "Complete"
+msgstr "完成"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__completed_at
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_run__state__completed
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Completed"
+msgstr "已完成"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Compliance"
+msgstr "合規"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__is_compliant
+msgid "Compliant"
+msgstr "合規"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_profile__category__controlled_room
+msgid "Controlled Room (15 to 25 degC)"
+msgstr "受控房間（15 至 25 degC）"
+
+#. module: eh_log_cold_chain
+#: model:eh.log.cold.chain.profile,name:eh_log_cold_chain.profile_controlled_room
+msgid "Controlled Room 15 to 25 degC"
+msgstr "受控房間 15 至 25 degC"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__create_uid
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_profile__create_uid
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_reading__create_uid
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__create_uid
+msgid "Created by"
+msgstr "建立人員"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__create_date
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_profile__create_date
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_reading__create_date
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__create_date
+msgid "Created on"
+msgstr "建立於"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_profile__category__custom
+msgid "Custom"
+msgstr "自訂"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_reading__source__portal
+msgid "Customer Portal"
+msgstr "客戶入口網站"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_profile__category__deep_frozen
+msgid "Deep Frozen (-45 degC and below)"
+msgstr "深度冷凍（-45 攝氏度及以下）"
+
+#. module: eh_log_cold_chain
+#: model:eh.log.cold.chain.profile,name:eh_log_cold_chain.profile_deep_frozen
+msgid "Deep Frozen -45 degC and below"
+msgstr "深度冷凍 -45 攝氏度及以下"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_sale_order__eh_log_cold_chain_profile_id
+msgid ""
+"Default profile applied to the spawned monitoring run. The operator can "
+"change it on the run before activation."
+msgstr "套用於產生的監控執行的預設設定檔。操作員可在啟用前於該執行上變更它。"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_profile__description
+msgid "Description"
+msgstr "說明"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_deviation_form
+msgid "Deviation"
+msgstr "偏差"
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_cold_chain_deviation.py:0
+msgid ""
+"Deviation %(name)s cannot move from %(current)s to %(target)s. Allowed "
+"transitions: %(allowed)s."
+msgstr "偏差 %(name)s 無法從 %(current)s 轉移到 %(target)s。允許的轉換:%(allowed)s。"
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_cold_chain_deviation.py:0
+msgid ""
+"Deviation flagged as cargo-impacting by %(user)s. The run's compliance "
+"verdict is now non-compliant."
+msgstr "偏差已被 %(user)s 標記為影響貨物。此次執行的合規裁定現在為不合規。"
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_cold_chain_run.py:0
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__deviation_count
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__deviation_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_deviation_list
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_run_form
+msgid "Deviations"
+msgstr "偏差"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__display_name
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_profile__display_name
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_reading__display_name
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__display_name
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_freight_job__display_name
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_sale_order__display_name
+msgid "Display Name"
+msgstr "顯示名稱"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_deviation__cause__door_open
+msgid "Door Open Too Long"
+msgstr "門開啟時間過長"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_run__state__draft
+msgid "Draft"
+msgstr "草稿"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_profile__category__dry_ice
+msgid "Dry Ice"
+msgstr "乾冰"
+
+#. module: eh_log_cold_chain
+#: model:eh.log.cold.chain.profile,name:eh_log_cold_chain.profile_dry_ice
+msgid "Dry Ice (around -78 degC)"
+msgstr "乾冰（約 -78 攝氏度）"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__duration_minutes
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Duration (min)"
+msgstr "持續時間（分鐘）"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__ended_at
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Ended"
+msgstr "活動結束"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_deviation__cause__equipment_failure
+msgid "Equipment Failure"
+msgstr "設備故障"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_profile__excursion_grace_minutes
+msgid "Excursion Grace (minutes)"
+msgstr "越限寬限時間（分鐘）"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_profile__sampling_cadence_minutes
+msgid ""
+"Expected interval between readings. Used by the gap detector to flag missing"
+" data."
+msgstr "讀數之間的預計間隔。間隔偵測器用它來標記遺失的資料。"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__message_follower_ids
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__message_follower_ids
+msgid "Followers"
+msgstr "關注人"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__message_partner_ids
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "關注人（業務夥伴）"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_deviation__activity_type_icon
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_run__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Font awesome 圖示，例如，fa-task"
+
+#. module: eh_log_cold_chain
+#: model:ir.model,name:eh_log_cold_chain.model_eh_log_freight_job
+msgid "Freight Forwarding Job"
+msgstr "貨運承攬任務"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__freight_job_id
+msgid "Freight Job"
+msgstr "貨運任務"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_profile__category__frozen
+msgid "Frozen (-18 degC and below)"
+msgstr "冷凍（-18 degC 及以下）"
+
+#. module: eh_log_cold_chain
+#: model:eh.log.cold.chain.profile,name:eh_log_cold_chain.profile_frozen
+msgid "Frozen -18 degC and below"
+msgstr "冷凍 -18 degC 及以下"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_run_search
+msgid "Group by Profile"
+msgstr "依設定檔分組"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_run_search
+msgid "Group by State"
+msgstr "依狀態分組"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__has_message
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__has_message
+msgid "Has Message"
+msgstr "有訊息"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_profile_form
+msgid "Humidity"
+msgstr "濕度"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_reading__humidity
+msgid "Humidity (%)"
+msgstr "濕度 (%)"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__id
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_profile__id
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_reading__id
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__id
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_freight_job__id
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_sale_order__id
+msgid "ID"
+msgstr "識別號"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__activity_exception_icon
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__activity_exception_icon
+msgid "Icon"
+msgstr "圖示"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_deviation__activity_exception_icon
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_run__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "用於指示異常活動的圖示。"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_deviation__message_needaction
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_run__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "勾選代表有新訊息需要您留意。"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_deviation__message_has_error
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_deviation__message_has_sms_error
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_run__message_has_error
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_run__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "勾選代表有訊息發生傳送錯誤。"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__message_is_follower
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__message_is_follower
+msgid "Is Follower"
+msgstr "是關注人"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__deviation_kind
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Kind"
+msgstr "類型"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__write_uid
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_profile__write_uid
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_reading__write_uid
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__write_uid
+msgid "Last Updated by"
+msgstr "最後更新者"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__write_date
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_profile__write_date
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_reading__write_date
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__write_date
+msgid "Last Updated on"
+msgstr "最後更新於"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_run_form
+msgid "Linkage"
+msgstr "連結"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_deviation__cause__loading_unloading
+msgid "Loading or Unloading"
+msgstr "裝貨或卸貨"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_deviation__cause__logger_calibration
+msgid "Logger Calibration Drift"
+msgstr "記錄器校準漂移"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_profile__temperature_min
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_run__profile_temperature_min
+msgid ""
+"Lower threshold. Readings below this trigger a deviation after the alert "
+"window elapses."
+msgstr "下限門檻。低於此值的讀數在警示視窗結束後會觸發偏差。"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_deviation_form
+msgid "Magnitude"
+msgstr "量級"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_reading__source__manual
+msgid "Manual Entry"
+msgstr "手動輸入"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_deviation_form
+msgid "Mark Cargo Impacting"
+msgstr "標記為影響貨物"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_profile__humidity_max
+msgid "Max Humidity (%)"
+msgstr "最大濕度 (%)"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Max Recorded"
+msgstr "記錄最大值"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__max_temperature
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Max Recorded (degC)"
+msgstr "記錄最大值 (degC)"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_profile__temperature_max
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__profile_temperature_max
+msgid "Max Temperature (degC)"
+msgstr "最高溫度 (degC)"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__max_temperature
+msgid "Maximum Recorded (degC)"
+msgstr "記錄最大值 (degC)"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__message_has_error
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__message_has_error
+msgid "Message Delivery error"
+msgstr "訊息遞送錯誤"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__message_ids
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__message_ids
+msgid "Messages"
+msgstr "訊息"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Metric"
+msgstr "公制"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_profile__humidity_min
+msgid "Min Humidity (%)"
+msgstr "最小濕度 (%)"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Min Recorded"
+msgstr "記錄的最小值"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__min_temperature
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Min Recorded (degC)"
+msgstr "記錄的最小值 (degC)"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_profile__temperature_min
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__profile_temperature_min
+msgid "Min Temperature (degC)"
+msgstr "最低溫度 (degC)"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__min_temperature
+msgid "Minimum Recorded (degC)"
+msgstr "記錄的最小值 (degC)"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_profile__alert_window_minutes
+msgid ""
+"Minimum continuous duration that a threshold must be breached before a "
+"deviation is raised. Buffers transient spikes (e.g. door open during gate-"
+"in)."
+msgstr "在觸發偏差之前，門檻必須被突破的最短持續時間。可緩衝瞬時尖峰（例如入閘期間開門）。"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_profile__monitor_humidity
+msgid "Monitor Humidity"
+msgstr "監測濕度"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__my_activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "我的活動截止時間"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_profile__name
+msgid "Name"
+msgstr "名稱"
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_cold_chain_run.py:0
+msgid "New"
+msgstr "新增"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__activity_calendar_event_id
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "下一個活動日曆事件"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "下一活動截止日期"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__activity_summary
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__activity_summary
+msgid "Next Activity Summary"
+msgstr "下一活動摘要"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__activity_type_id
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__activity_type_id
+msgid "Next Activity Type"
+msgstr "下一活動類型"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "No"
+msgstr "否"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__notes
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_run_form
+msgid "Notes"
+msgstr "備註"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__message_needaction_counter
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__message_needaction_counter
+msgid "Number of Actions"
+msgstr "動作數量"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__message_has_error_counter
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__message_has_error_counter
+msgid "Number of errors"
+msgstr "錯誤數量"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_deviation__message_needaction_counter
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_run__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "需要採取行動的訊息數目"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_deviation__message_has_error_counter
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_run__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "有發送錯誤的郵件數量"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_deviation__state__open
+msgid "Open"
+msgstr "開啟"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__open_deviation_count
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_run_form
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_run_search
+msgid "Open Deviations"
+msgstr "未結偏差"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_deviation__cause__operator_error
+msgid "Operator Error"
+msgstr "操作員錯誤"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_reading__sensor_reference
+msgid ""
+"Optional identifier for the source sensor or logger. Useful when multiple "
+"sensors feed into the same run."
+msgstr "來源感測器或記錄器的選填識別碼。當多個感測器輸入至同一次執行時非常有用。"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_deviation__cause__other
+msgid "Other"
+msgstr "其他"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_profile__category__pharma
+msgid "Pharma (2 to 8 degC)"
+msgstr "藥品（2 至 8 攝氏度）"
+
+#. module: eh_log_cold_chain
+#: model:eh.log.cold.chain.profile,name:eh_log_cold_chain.profile_pharma_2_8
+msgid "Pharma 2 to 8 degC"
+msgstr "藥品 2 至 8 攝氏度"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__profile_id
+msgid "Profile"
+msgstr "詳情"
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_cold_chain_profile.py:0
+msgid ""
+"Profile %(name)s has humidity min %(min).1f%% >= max %(max).1f%% but "
+"humidity monitoring is enabled."
+msgstr "設定檔 %(name)s 的濕度最小值 %(min).1f%% >= 最大值 %(max).1f%%，但濕度監測已啟用。"
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_cold_chain_profile.py:0
+msgid ""
+"Profile %(name)s has min temperature %(min).2f >= max %(max).2f. The min "
+"must be strictly less than the max."
+msgstr "設定檔 %(name)s 的最低溫度 %(min).2f >= 最高溫度 %(max).2f。最小值必須嚴格小於最大值。"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Profile Range"
+msgstr "設定檔範圍"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_run_form
+msgid "Profile Thresholds"
+msgstr "設定檔閾值"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.constraint,message:eh_log_cold_chain.constraint_eh_log_cold_chain_profile_code_unique
+msgid "Profile code must be unique."
+msgstr "設定檔代碼必須唯一。"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__rating_ids
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__rating_ids
+msgid "Ratings"
+msgstr "評分"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_reading_form
+msgid "Reading"
+msgstr "讀數"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Reading Summary"
+msgstr "讀數摘要"
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_cold_chain_run.py:0
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__reading_count
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__reading_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_reading_list
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_run_form
+msgid "Readings"
+msgstr "讀數"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__name
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__name
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Reference"
+msgstr "編號"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__resolution_notes
+msgid "Resolution Notes"
+msgstr "解決備註"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_deviation_form
+msgid "Resolve"
+msgstr "解決"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_deviation__state__resolved
+msgid "Resolved"
+msgstr "已解決"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__resolved_at
+msgid "Resolved At"
+msgstr "解決時間"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__resolved_by_id
+msgid "Resolved By"
+msgstr "解決人"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__activity_user_id
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__activity_user_id
+msgid "Responsible User"
+msgstr "責任使用者"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__run_id
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_reading__run_id
+msgid "Run"
+msgstr "執行"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__message_has_sms_error
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "簡訊發送錯誤"
+
+#. module: eh_log_cold_chain
+#: model:ir.model,name:eh_log_cold_chain.model_sale_order
+msgid "Sales Order"
+msgstr "銷售訂單"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Sample Count"
+msgstr "樣本數"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_profile__sampling_cadence_minutes
+msgid "Sampling Cadence (minutes)"
+msgstr "取樣頻率（分鐘）"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_reading__sensor_reference
+msgid "Sensor Reference"
+msgstr "感測器編號"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_reading__source
+msgid "Source"
+msgstr "來源"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_profile__code
+msgid "Stable identifier (PHARMA-2-8, FROZEN-18, AMB-15-25, ...)."
+msgstr "穩定的識別碼（PHARMA-2-8、FROZEN-18、AMB-15-25、...）。"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__started_at
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__started_at
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Started"
+msgstr "已發貨"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__state
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__state
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "State"
+msgstr "狀態"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_deviation__activity_state
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_run__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"根據活動的狀態 \n"
+" 逾期：已經超過截止日期 \n"
+" 現今：活動日期是當天 \n"
+" 計劃：未來活動。"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_reading__source__telematics
+msgid "Telematics Stream"
+msgstr "車載資通訊資料流"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_profile_form
+msgid "Temperature"
+msgstr "溫度"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_reading__temperature
+msgid "Temperature (degC)"
+msgstr "溫度 (degC)"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid ""
+"This certificate is issued under the responsibility of the operator named "
+"above based on the recorded data above. The compliance verdict reflects the "
+"absence (COMPLIANT) or presence (NON-COMPLIANT) of cargo-impacting "
+"deviations."
+msgstr ""
+"本證書由上述指定的操作方根據上述記錄的資料負責簽發。合規判定反映是否不存在 (COMPLIANT) 或存在 (NON-COMPLIANT) "
+"影響貨物的偏差。"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_profile__excursion_grace_minutes
+msgid ""
+"Time after a deviation closes before the run returns to nominal status. "
+"Allows readings to fully stabilise."
+msgstr "偏差關閉後至執行恢復到標稱狀態之間的時間。可讓讀數完全穩定。"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_deviation__cause__transit_delay
+msgid "Transit Delay"
+msgstr "運輸延誤"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_run__is_compliant
+msgid ""
+"True when no cargo-impacting deviation has been recorded and at least one "
+"reading has been ingested. Drives the compliance certificate verdict."
+msgstr "當未記錄任何影響貨物的偏差且已擷取至少一次讀數時為 True。據此決定合規證書的判定結果。"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_reading__is_breach
+msgid ""
+"True when this individual reading is outside the run's profile thresholds. "
+"The deviation detector aggregates sustained breaches across continuous time "
+"windows."
+msgstr "當此單次讀數超出該執行的設定檔閾值時為 True。偏差偵測器會跨連續時間窗口彙總持續性超標。"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_deviation__activity_exception_decoration
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_run__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "記錄的異常活動的類型。"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_profile__temperature_max
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_run__profile_temperature_max
+msgid ""
+"Upper threshold. Readings above this trigger a deviation after the alert "
+"window elapses."
+msgstr "上限閾值。超過此值的讀數會在警報視窗結束後觸發偏差。"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Value"
+msgstr "值"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "Verdict"
+msgstr "裁定"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_deviation_form
+msgid "Void (False Alarm)"
+msgstr "作廢（誤報）"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields.selection,name:eh_log_cold_chain.selection__eh_log_cold_chain_deviation__state__voided
+msgid "Voided (False Alarm)"
+msgstr "已作廢（誤報）"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_deviation__website_message_ids
+#: model:ir.model.fields,field_description:eh_log_cold_chain.field_eh_log_cold_chain_run__website_message_ids
+msgid "Website Messages"
+msgstr "網站資訊"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_deviation__website_message_ids
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_run__website_message_ids
+msgid "Website communication history"
+msgstr "網站溝通記錄"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_profile__monitor_humidity
+msgid ""
+"When True, readings must include humidity and the thresholds above are "
+"enforced."
+msgstr "為 True 時，讀數必須包含濕度，並強制執行上述閾值。"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_eh_log_cold_chain_deviation__cargo_impacting
+msgid ""
+"When True, the deviation is judged to have impacted the cargo's integrity. "
+"This drives the run's compliance verdict and the certificate's verdict line."
+msgstr "為 True 時，判定該偏差已影響貨物的完整性。這將決定該執行的合規裁定以及證書的裁定行。"
+
+#. module: eh_log_cold_chain
+#: model:ir.model.fields,help:eh_log_cold_chain.field_sale_order__eh_log_cold_chain_required
+msgid ""
+"When checked, the freight job spawned from this order auto-creates a cold "
+"chain monitoring run."
+msgstr "勾選後，由此訂單產生的貨運作業會自動建立冷鏈監控執行。"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_deviation_form
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.view_eh_log_cold_chain_run_form
+msgid "Window"
+msgstr "視窗"
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "YES"
+msgstr "是"
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_cold_chain_run.py:0
+msgid ""
+"[EHL-COLD-CHAIN-001] State changes on a cold chain run must go through the "
+"action buttons. Direct writes are rejected."
+msgstr "[EHL-COLD-CHAIN-001] 冷鏈運行的狀態變更必須透過動作按鈕進行。直接寫入將被拒絕。"
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_cold_chain_run.py:0
+msgid ""
+"[EHL-COLD-CHAIN-002] Cold chain run %(name)s is in state %(state)s. Readings"
+" can only be ingested while the run is active."
+msgstr ""
+"[EHL-COLD-CHAIN-002] 冷鏈運行 %(name)s 處於狀態 %(state)s。只有在運行處於作用中狀態時才能採集讀數。"
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_cold_chain_deviation.py:0
+msgid ""
+"[EHL-COLD-CHAIN-DEV-001] State changes on a cold chain deviation must go "
+"through the action buttons. Direct writes are rejected."
+msgstr "[EHL-COLD-CHAIN-DEV-001] 冷鏈偏差的狀態變更必須透過動作按鈕進行。直接寫入將被拒絕。"
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_cold_chain_deviation.py:0
+msgid ""
+"[EHL-COLD-CHAIN-DEV-002] Deviation %(name)s cannot be resolved without a "
+"cause classification."
+msgstr "[EHL-COLD-CHAIN-DEV-002] 沒有原因分類,無法解決偏差 %(name)s。"
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_cold_chain_deviation.py:0
+msgid ""
+"[EHL-COLD-CHAIN-DEV-003] Voiding deviation %(name)s requires a justification"
+" in the resolution notes."
+msgstr "[EHL-COLD-CHAIN-DEV-003] 作廢偏差 %(name)s 需要在解決備註中提供理由。"
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_cold_chain_reading.py:0
+msgid ""
+"[EHL-COLD-CHAIN-READING-001] Cold chain readings are append-only. The "
+"following fields cannot be edited after capture: %(fields)s."
+msgstr "[EHL-COLD-CHAIN-READING-001] 冷鏈讀數僅可附加。以下欄位在採集後無法編輯:%(fields)s。"
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_freight_job.py:0
+msgid "freight_job_id"
+msgstr ""
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "open"
+msgstr "開啟"
+
+#. module: eh_log_cold_chain
+#. odoo-python
+#: code:addons/eh_log_cold_chain/models/eh_log_cold_chain_run.py:0
+msgid "run_id"
+msgstr ""
+
+#. module: eh_log_cold_chain
+#: model_terms:ir.ui.view,arch_db:eh_log_cold_chain.report_cold_chain_compliance_document
+msgid "total,"
+msgstr "總計，"

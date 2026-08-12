@@ -1,0 +1,1748 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* eh_log_project_cargo
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-01 04:34+0000\n"
+"PO-Revision-Date: 2026-07-01 04:34+0000\n"
+"Last-Translator: ERP Heritage <info@erpheritage.com.au>\n"
+"Language-Team: Russian\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_kanban
+msgid "<i class=\"fa fa-cube me-1\" title=\"Items\"/>"
+msgstr "<i class=\"fa fa-cube me-1\" title=\"Позиции\"/>"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid ""
+"<i class=\"fa fa-cube\" style=\"font-size:1.6rem;color:#D4A055;\" title=\"Project cargo\"/>\n"
+"                                    <span class=\"ms-2\" style=\"font-family:'DM Mono',ui-monospace,monospace;font-size:0.78rem;letter-spacing:0.18em;text-transform:uppercase;color:#E8C887;font-weight:600;\">Project cargo</span>"
+msgstr ""
+"<i class=\"fa fa-cube\" style=\"font-size:1.6rem;color:#D4A055;\" title=\"Проектный груз\"/>\n"
+"                                    <span class=\"ms-2\" style=\"font-family:'DM Mono',ui-monospace,monospace;font-size:0.78rem;letter-spacing:0.18em;text-transform:uppercase;color:#E8C887;font-weight:600;\">Проектный груз</span>"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_kanban
+msgid "<i class=\"fa fa-folder me-1\" title=\"Project\"/>"
+msgstr "<i class=\"fa fa-folder me-1\" title=\"Проект\"/>"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid "<i class=\"fa fa-warning\"/> Oversized"
+msgstr "<i class=\"fa fa-warning\"/> Негабаритный"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_permit_application_document
+msgid "<strong>Authority:</strong>"
+msgstr "<strong>Орган:</strong>"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_lift_plan_document
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_method_statement_document
+msgid "<strong>Customer:</strong>"
+msgstr "<strong>Клиент:</strong>"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_method_statement_document
+msgid "<strong>Destination:</strong>"
+msgstr "<strong>Пункт назначения:</strong>"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_permit_application_document
+msgid "<strong>Issuing Partner:</strong>"
+msgstr "<strong>Партнёр-эмитент:</strong>"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_permit_application_document
+msgid "<strong>Job:</strong>"
+msgstr "<strong>Должность:</strong>"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_method_statement_document
+msgid "<strong>Origin:</strong>"
+msgstr "<strong>Источник:</strong>"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid ""
+"<strong>Oversized cargo present.</strong>\n"
+"                        Convoy planning, route survey, and permit register are required."
+msgstr ""
+"<strong>Присутствует негабаритный груз.</strong>\n"
+"                        Требуются планирование колонны, обследование маршрута и реестр разрешений."
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_method_statement_document
+msgid "<strong>Project:</strong>"
+msgstr "<strong>Проект:</strong>"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_lift_plan_document
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_method_statement_document
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_permit_application_document
+msgid "<strong>Reference:</strong>"
+msgstr "<strong>Ссылка:</strong>"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_permit_application_document
+msgid "<strong>State:</strong>"
+msgstr "<strong>Состояние:</strong>"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__message_needaction
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__message_needaction
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__message_needaction
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__message_needaction
+msgid "Action Needed"
+msgstr "Требуются действия"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_form
+msgid "Activate"
+msgstr "Активировать"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__active
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_permit__state__active
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_search_full
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_search_full
+msgid "Active"
+msgstr "Активный"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__activity_ids
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__activity_ids
+msgid "Activities"
+msgstr "Активность"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__activity_exception_decoration
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Оформление задачи-исключения"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__activity_state
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__activity_state
+msgid "Activity State"
+msgstr "Состояние активности"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__activity_type_icon
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Значок типа активности"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__actual_arrival
+msgid "Actual Arrival"
+msgstr "Фактическое прибытие"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__actual_departure
+msgid "Actual Departure"
+msgstr "Фактическое отправление"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_permit__state__applied
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_search_full
+msgid "Applied"
+msgstr "Применено"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__applied_at
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_permit_application_document
+msgid "Applied On"
+msgstr "Применяется на"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_lift_plan_document
+msgid "Arrival"
+msgstr "Прибытие"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_convoy__state__arrived
+msgid "Arrived"
+msgstr "Прибыл"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__message_attachment_count
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__message_attachment_count
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__message_attachment_count
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__message_attachment_count
+msgid "Attachment Count"
+msgstr "Количество вложений"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_search_full
+msgid "Authority"
+msgstr "Орган"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_item__is_oversized
+msgid ""
+"Auto-derived from dimensions vs the standard envelope. Drives downstream "
+"requirements (escort, permits, route survey)."
+msgstr ""
+"Автоматически выводится из габаритов относительно стандартного профиля. "
+"Определяет последующие требования (сопровождение, разрешения, обследование "
+"маршрута)."
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__axle_count
+msgid "Axle Lines"
+msgstr "Линии осей"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__cog_x_m
+msgid "COG Offset X (m)"
+msgstr "Смещение COG по X (m)"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__cog_y_m
+msgid "COG Offset Y (m)"
+msgstr "Смещение COG по Y (m)"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__cog_z_m
+msgid "COG Offset Z (m)"
+msgstr "Смещение COG по Z (m)"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_convoy_form
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_form
+msgid "Cancel"
+msgstr "Отменить"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_convoy__state__cancelled
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_job__state__cancelled
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_permit__state__cancelled
+msgid "Cancelled"
+msgstr "Отменен"
+
+#. module: eh_log_project_cargo
+#: model:ir.actions.act_window,name:eh_log_project_cargo.action_eh_log_project_cargo_item
+msgid "Cargo Items"
+msgstr "Позиции груза"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_item_form
+msgid "Centre of Gravity"
+msgstr "Центр тяжести"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_item__cog_x_m
+msgid "Centre of gravity offset along length axis from the geometric centre."
+msgstr "Смещение центра тяжести вдоль оси длины от геометрического центра."
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__is_chosen_route
+msgid "Chosen Route"
+msgstr "Выбранный маршрут"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_form
+msgid "Close"
+msgstr "Закрыть"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_job__state__closed
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_permit__state__closed
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_search_full
+msgid "Closed"
+msgstr "Закрыто"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__code
+msgid "Code"
+msgstr "Код"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__company_id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy_vehicle__company_id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__company_id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__company_id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__company_id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__company_id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__company_id
+msgid "Company"
+msgstr "Компания"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_job__state__completed
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_search_full
+msgid "Completed"
+msgstr "Завершено"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_job__has_oversized_item
+msgid ""
+"Computed: true when any item exceeds the configured oversize thresholds "
+"(length/width/height/weight). Triggers permit and route survey requirements."
+msgstr ""
+"Вычисляется: true, когда любой элемент превышает настроенные пороги "
+"негабаритности (длина/ширина/высота/вес). Активирует требования по "
+"разрешению и обследованию маршрута."
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy_vehicle__convoy_id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__convoy_id
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_lift_plan_document
+msgid "Convoy"
+msgstr "Конвой"
+
+#. module: eh_log_project_cargo
+#: model:ir.model,name:eh_log_project_cargo.model_eh_log_project_cargo_convoy_vehicle
+msgid "Convoy Vehicle Assignment"
+msgstr "Назначение транспортного средства конвоя"
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_job.py:0
+#: model:ir.actions.act_window,name:eh_log_project_cargo.action_eh_log_project_cargo_convoy
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__convoy_count
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__convoy_ids
+#: model:ir.ui.menu,name:eh_log_project_cargo.menu_eh_log_project_cargo_convoys
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_lift_plan_document
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_convoy_calendar
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid "Convoys"
+msgstr "Конвои"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__cost_amount
+msgid "Cost"
+msgstr "Стоимость"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_lift_plan_document
+msgid "Crane"
+msgstr "Тема Crane"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_equipment_form
+msgid "Crane Specifics"
+msgstr "Характеристики крана"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_equipment__equipment_type__crane_crawler
+msgid "Crawler Crane"
+msgstr "Гусеничный кран"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__create_uid
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy_vehicle__create_uid
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__create_uid
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__create_uid
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__create_uid
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__create_uid
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__create_uid
+msgid "Created by"
+msgstr "Создано:"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__create_date
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy_vehicle__create_date
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__create_date
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__create_date
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__create_date
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__create_date
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__create_date
+msgid "Created on"
+msgstr "Дата создания:"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__currency_id
+msgid "Currency"
+msgstr "Валюта"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__customer_partner_id
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_search_full
+msgid "Customer"
+msgstr "Клиент"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__customer_reference
+msgid "Customer Reference"
+msgstr "Ссылка на клиента"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_permit__authority__customs
+msgid "Customs"
+msgstr "Таможня"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__days_until_expiry
+msgid "Days Until Expiry"
+msgstr "Дней до истечения срока"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_convoy_kanban
+msgid "Dep:"
+msgstr "Отпр.:"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_lift_plan_document
+msgid "Departure"
+msgstr "Отъезд"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__name
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_method_statement_document
+msgid "Description"
+msgstr "Описание"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__destination_partner_id
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid "Destination"
+msgstr "Место назначения"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_item_form
+msgid "Dimensions"
+msgstr "Размеры"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__display_name
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy_vehicle__display_name
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__display_name
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__display_name
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__display_name
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__display_name
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__display_name
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_sale_order__display_name
+msgid "Display Name"
+msgstr "Отображаемое имя"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__distance_km
+msgid "Distance (km)"
+msgstr "Расстояние (km)"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_job__state__draft
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_permit__state__draft
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_search_full
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_search_full
+msgid "Draft"
+msgstr "Черновик"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy_vehicle__driver_partner_id
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_lift_plan_document
+msgid "Driver"
+msgstr "Водитель"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_permit__authority__environmental
+msgid "Environmental"
+msgstr "Экологический"
+
+#. module: eh_log_project_cargo
+#: model:ir.actions.act_window,name:eh_log_project_cargo.action_eh_log_project_cargo_equipment
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy_vehicle__equipment_id
+#: model:ir.ui.menu,name:eh_log_project_cargo.menu_eh_log_project_cargo_equipment
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_lift_plan_document
+msgid "Equipment"
+msgstr "Оборудование"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.constraint,message:eh_log_project_cargo.constraint_eh_log_project_cargo_equipment_equipment_code_unique
+msgid "Equipment code must be unique per company."
+msgstr "Код оборудования должен быть уникальным в пределах компании."
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_lift_plan_document
+msgid "Escort"
+msgstr "Сопровождение"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_equipment__equipment_type__escort
+msgid "Escort Vehicle"
+msgstr "Автомобиль сопровождения"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__estimated_duration_h
+msgid "Estimated Duration (h)"
+msgstr "Оценочная продолжительность (ч)"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_job__state__executing
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_search_full
+msgid "Executing"
+msgstr "Выполняется"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_search_full
+msgid "Expired"
+msgstr "Истекший"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_search_full
+msgid "Expiring within 7 days"
+msgstr "Истекает в течение 7 дней"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__message_follower_ids
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__message_follower_ids
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__message_follower_ids
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__message_follower_ids
+msgid "Followers"
+msgstr "Подписчики"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__message_partner_ids
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__message_partner_ids
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__message_partner_ids
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Подписчики"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_job__activity_type_icon
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_permit__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Шрифт, отличный значок, например. к.-а.-задачи"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_equipment__rated_capacity_t
+msgid ""
+"For cranes: lift capacity at the manufacturer's reference radius. For "
+"trailers: payload."
+msgstr ""
+"Для кранов: грузоподъёмность при базовом вылете, указанном производителем. "
+"Для прицепов: полезная нагрузка."
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_job__method_statement
+msgid ""
+"Free-form method statement that prints on the Method Statement PDF. "
+"Operators write this once the survey and the lift plan are agreed."
+msgstr ""
+"Произвольное описание метода, которое печатается в PDF Method Statement. "
+"Операторы заполняют его после согласования обследования и плана подъёма."
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_item__lift_points_notes
+msgid ""
+"Free-text description of designated lift points or cradle / saddle "
+"requirements. The lift contractor's calc package consumes the canonical "
+"structured form; this is the forwarder's working note."
+msgstr ""
+"Произвольное текстовое описание назначенных точек подъёма или требований к "
+"люльке / седлу. Расчётный пакет подрядчика по подъёму использует "
+"каноническую структурированную форму; это рабочая заметка экспедитора."
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__hazards
+msgid "Free-text description of hazards encountered."
+msgstr "Произвольное текстовое описание встреченных опасностей."
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_equipment__equipment_type__crane_gantry
+msgid "Gantry Crane"
+msgstr "Козловой кран"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_method_statement_document
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_permit_application_document
+msgid "H (m)"
+msgstr "В (м)"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__has_escort_vehicle
+msgid "Has Escort Vehicle"
+msgstr "Есть сопровождающее транспортное средство"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__has_lifting_equipment
+msgid "Has Lifting Equipment"
+msgstr "Есть подъёмное оборудование"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__has_message
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__has_message
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__has_message
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__has_message
+msgid "Has Message"
+msgstr "Есть сообщение"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__has_oversized_item
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_search_full
+msgid "Has Oversized Item"
+msgstr "Есть негабаритный предмет"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__hazards
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_route_survey_form
+msgid "Hazards"
+msgstr "Опасности"
+
+#. module: eh_log_project_cargo
+#: model:ir.model,name:eh_log_project_cargo.model_eh_log_project_cargo_equipment
+msgid "Heavy-Lift Equipment"
+msgstr "Тяжёлое подъёмное оборудование"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__height_m
+msgid "Height (m)"
+msgstr "Высота (м)"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__home_depot
+msgid "Home Depot"
+msgstr ""
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_equipment__spmt_modules_available
+msgid "How many modules can be coupled in this configuration."
+msgstr "Сколько модулей можно объединить в этой конфигурации."
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy_vehicle__id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_sale_order__id
+msgid "ID"
+msgstr "Номер"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__activity_exception_icon
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__activity_exception_icon
+msgid "Icon"
+msgstr "Иконка"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_job__activity_exception_icon
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_permit__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Иконка, указывающая на задачу-исключение."
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_convoy__message_needaction
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_equipment__message_needaction
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_job__message_needaction
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_permit__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+"Если флажок установлен, значит, новые сообщения требуют вашего внимания."
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_convoy__message_has_error
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_convoy__message_has_sms_error
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_equipment__message_has_error
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_equipment__message_has_sms_error
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_job__message_has_error
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_job__message_has_sms_error
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_permit__message_has_error
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_permit__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Если отмечено, некоторые сообщения имеют ошибку доставки."
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_convoy__state__in_transit
+msgid "In Transit"
+msgstr "Внутри"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_item__transport_orientation__inverted
+msgid "Inverted"
+msgstr "Инвертировано"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__message_is_follower
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__message_is_follower
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__message_is_follower
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__message_is_follower
+msgid "Is Follower"
+msgstr "Является подписчиком"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_permit__state__issued
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_search_full
+msgid "Issued"
+msgstr "Выпущено"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__issued_at
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_permit_application_document
+msgid "Issued On"
+msgstr "Дата выдачи"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__authority
+msgid "Issuing Authority"
+msgstr "Орган выдачи"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__issuing_partner_id
+msgid "Issuing Partner"
+msgstr "Партнёр-эмитент"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_permit_application_document
+msgid "Item"
+msgstr "Пункт"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__item_count
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__item_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_method_statement_document
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid "Items"
+msgstr "Элементы"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__item_ids
+msgid "Items Carried"
+msgstr "Перевозимые позиции"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__job_id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__job_id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__job_id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__job_id
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_search_full
+msgid "Job"
+msgstr "Работа"
+
+#. module: eh_log_project_cargo
+#: model:ir.ui.menu,name:eh_log_project_cargo.menu_eh_log_project_cargo_jobs
+msgid "Jobs"
+msgstr "Вакансии"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_method_statement_document
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_permit_application_document
+msgid "L (m)"
+msgstr "Д (м)"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__write_uid
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy_vehicle__write_uid
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__write_uid
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__write_uid
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__write_uid
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__write_uid
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__write_uid
+msgid "Last Updated by"
+msgstr "Последнее обновление:"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__write_date
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy_vehicle__write_date
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__write_date
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__write_date
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__write_date
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__write_date
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__write_date
+msgid "Last Updated on"
+msgstr "Дата последнего обновления:"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_convoy_vehicle__role__escort_lead
+msgid "Lead Escort"
+msgstr "Головное сопровождение"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__length_m
+msgid "Length (m)"
+msgstr "Длина (m)"
+
+#. module: eh_log_project_cargo
+#: model:ir.actions.report,name:eh_log_project_cargo.action_report_lift_plan
+msgid "Lift Plan"
+msgstr "План подъёма"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__lift_points_notes
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_item_form
+msgid "Lift Points"
+msgstr "Точки подъёма"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid "Lift Study"
+msgstr "Исследование подъёма"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__lift_study_notes
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_lift_plan_document
+msgid "Lift Study Notes"
+msgstr "Примечания к исследованию подъёма"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_convoy_vehicle__role__crane
+msgid "Lifting Crane"
+msgstr "Подъёмный кран"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_equipment__equipment_type__trailer_lowbed
+msgid "Lowbed Trailer"
+msgstr "Низкорамный трал"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__max_axle_load_t
+msgid ""
+"Lowest bridge axle-load rating encountered. Constrains the convoy weight per"
+" axle line."
+msgstr ""
+"Наименьшая встреченная допустимая осевая нагрузка моста. Ограничивает вес "
+"колонны на осевую линию."
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__min_overhead_clearance_m
+msgid ""
+"Lowest overhead clearance encountered on the route. Driving constraint for "
+"tall cargo; the lift study checks against the cargo's transport height plus "
+"the trailer deck height."
+msgstr ""
+"Наименьший встреченный на маршруте габарит по высоте. Ограничение движения "
+"для высоких грузов; исследование подъёма сверяет его с транспортной высотой "
+"груза плюс высота платформы прицепа."
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_form
+msgid "Mark Applied"
+msgstr "Отметить как применено"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_convoy_form
+msgid "Mark Arrived"
+msgstr "Отметить как прибыло"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid "Mark Completed"
+msgstr "Отметить как завершено"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_convoy_form
+msgid "Mark In Transit"
+msgstr "Отметить как в пути"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_form
+msgid "Mark Issued"
+msgstr "Отметить как выпущено"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid "Mark Planned"
+msgstr "Отметить как запланировано"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_form
+msgid "Mark Rejected"
+msgstr "Отметить как отклонённое"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid "Mark Surveyed"
+msgstr "Отметить как обследованное"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__max_boom_length_m
+msgid "Max Boom Length (m)"
+msgstr "Макс. длина стрелы (m)"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__max_boom_radius_m
+msgid "Max Boom Radius (m)"
+msgstr "Макс. радиус стрелы (m)"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__max_axle_load_t
+msgid "Max Bridge Axle Load (t)"
+msgstr "Макс. осевая нагрузка на мост (t)"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__message_has_error
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__message_has_error
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__message_has_error
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__message_has_error
+msgid "Message Delivery error"
+msgstr "Ошибка доставки сообщения"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__message_ids
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__message_ids
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__message_ids
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__message_ids
+msgid "Messages"
+msgstr "Сообщения"
+
+#. module: eh_log_project_cargo
+#: model:ir.actions.report,name:eh_log_project_cargo.action_report_method_statement
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__method_statement
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid "Method Statement"
+msgstr "Технологическая карта работ"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__min_overhead_clearance_m
+msgid "Min Overhead Clearance (m)"
+msgstr "Мин. верхний габарит (m)"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__min_swing_radius_m
+msgid "Min Swing Radius (m)"
+msgstr "Мин. радиус разворота (m)"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_equipment__equipment_type__crane_mobile
+msgid "Mobile Crane"
+msgstr "Мобильный кран"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_equipment__equipment_type__trailer_modular
+msgid "Modular Trailer"
+msgstr "Модульный прицеп"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_permit_application_document
+msgid "Move Particulars"
+msgstr "Реквизиты проводки"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__my_activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Крайний срок моей активности"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__name
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__name
+msgid "Name"
+msgstr "Имя"
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_convoy.py:0
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_job.py:0
+msgid "New"
+msgstr "Новый"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__activity_calendar_event_id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "Следующее событие календаря активности"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Следующий срок мероприятия"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__activity_summary
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__activity_summary
+msgid "Next Activity Summary"
+msgstr "Резюме следующего действия"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__activity_type_id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__activity_type_id
+msgid "Next Activity Type"
+msgstr "Следующий Тип Мероприятия"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__next_inspection_date
+msgid "Next Inspection"
+msgstr "Следующая проверка"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__night_only
+msgid "Night Move Only"
+msgstr "Только ночное перемещение"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__notes
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy_vehicle__notes
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__notes
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_permit_application_document
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_convoy_form
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_form
+msgid "Notes"
+msgstr "Заметки"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__message_needaction_counter
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__message_needaction_counter
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__message_needaction_counter
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Число действий"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_equipment__spmt_axle_lines
+msgid "Number of axle lines per SPMT module."
+msgstr "Количество осевых линий на модуль SPMT."
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__message_has_error_counter
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__message_has_error_counter
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__message_has_error_counter
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__message_has_error_counter
+msgid "Number of errors"
+msgstr "Число ошибок"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_convoy__message_needaction_counter
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_equipment__message_needaction_counter
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_job__message_needaction_counter
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_permit__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Количество сообщений, требующих принятия мер"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_convoy__message_has_error_counter
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_equipment__message_has_error_counter
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_job__message_has_error_counter
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_permit__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Количество недоставленных сообщений"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_kanban
+msgid "OOG"
+msgstr ""
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_item__transport_orientation__on_side
+msgid "On Side"
+msgstr "Сбоку"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__origin_partner_id
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid "Origin"
+msgstr "Источник"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_equipment__equipment_type__other
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_permit__authority__other
+msgid "Other"
+msgstr "Другое"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__is_oversized
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_method_statement_document
+msgid "Oversized"
+msgstr "Негабаритный"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__owner_partner_id
+msgid "Owner"
+msgstr "Владелец"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__packing_notes
+msgid "Packing / Protection Notes"
+msgstr "Примечания по упаковке / защите"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_item_form
+msgid "Packing Notes"
+msgstr "Примечания по упаковке"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_equipment__owner_partner_id
+msgid ""
+"Partner that owns the equipment. Internal fleet uses the company partner; "
+"rented kit references the rental company so cost reconciliation has the "
+"right vendor."
+msgstr ""
+"Партнёр, которому принадлежит оборудование. Внутренний парк использует "
+"партнёра компании; арендованная техника ссылается на арендную компанию, "
+"чтобы при сверке затрат был указан правильный поставщик."
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_permit.py:0
+msgid "Permit %(name)s cannot move from %(from)s to %(to)s."
+msgstr "Разрешение %(name)s не может перейти из %(from)s в %(to)s."
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_permit.py:0
+msgid "Permit %(name)s expires on %(date)s"
+msgstr "Разрешение %(name)s истекает %(date)s"
+
+#. module: eh_log_project_cargo
+#: model:ir.actions.report,name:eh_log_project_cargo.action_report_permit_application
+msgid "Permit Application"
+msgstr "Заявление на разрешение"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__permit_reference
+msgid "Permit Reference"
+msgstr "Ссылка на разрешение"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_calendar
+msgid "Permit Validity"
+msgstr "Срок действия разрешения"
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_job.py:0
+#: model:ir.actions.act_window,name:eh_log_project_cargo.action_eh_log_project_cargo_permit
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__permit_count
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__permit_ids
+#: model:ir.ui.menu,name:eh_log_project_cargo.menu_eh_log_project_cargo_permits
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid "Permits"
+msgstr "Разрешения"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_convoy__state__planned
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_job__state__planned
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_search_full
+msgid "Planned"
+msgstr "Проектируемый"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_permit__authority__police
+msgid "Police Escort"
+msgstr "Полицейский эскорт"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_permit__authority__port
+msgid "Port Authority"
+msgstr "Портовая администрация"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_convoy_vehicle__role__primary
+msgid "Primary Hauler"
+msgstr "Основной перевозчик"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_equipment__equipment_type__prime_mover
+msgid "Prime Mover"
+msgstr "Тягач"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid "Project"
+msgstr "Проект"
+
+#. module: eh_log_project_cargo
+#: model:ir.ui.menu,name:eh_log_project_cargo.menu_eh_log_project_cargo_config_root
+#: model:ir.ui.menu,name:eh_log_project_cargo.menu_eh_log_project_cargo_root
+msgid "Project Cargo"
+msgstr "Проектный груз"
+
+#. module: eh_log_project_cargo
+#: model:ir.model,name:eh_log_project_cargo.model_eh_log_project_cargo_convoy
+msgid "Project Cargo Convoy"
+msgstr "Колонна проектного груза"
+
+#. module: eh_log_project_cargo
+#: model:ir.model,name:eh_log_project_cargo.model_eh_log_project_cargo_item
+msgid "Project Cargo Item"
+msgstr "Позиция проектного груза"
+
+#. module: eh_log_project_cargo
+#: model:ir.model,name:eh_log_project_cargo.model_eh_log_project_cargo_job
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid "Project Cargo Job"
+msgstr "Задание проектного груза"
+
+#. module: eh_log_project_cargo
+#: model:ir.actions.act_window,name:eh_log_project_cargo.action_eh_log_project_cargo_job
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_sale_order__eh_log_project_cargo_job_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_calendar
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_sale_order_form_project_cargo
+msgid "Project Cargo Jobs"
+msgstr "Задания проектного груза"
+
+#. module: eh_log_project_cargo
+#: model:ir.model,name:eh_log_project_cargo.model_eh_log_project_cargo_permit
+msgid "Project Cargo Permit"
+msgstr "Разрешение на проектный груз"
+
+#. module: eh_log_project_cargo
+#: model:ir.model,name:eh_log_project_cargo.model_eh_log_project_cargo_route_survey
+msgid "Project Cargo Route Survey"
+msgstr "Обследование маршрута проектного груза"
+
+#. module: eh_log_project_cargo
+#: model:ir.actions.server,name:eh_log_project_cargo.cron_alert_expiring_permits_ir_actions_server
+msgid "Project Cargo: Alert Expiring Permits"
+msgstr "Проектный груз: уведомление об истекающих разрешениях"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__project_name
+msgid "Project Name"
+msgstr "Название проекта"
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_job.py:0
+msgid "Project cargo job %(name)s cannot move from %(from)s to %(to)s."
+msgstr ""
+"Задание проектного груза %(name)s не может перейти из %(from)s в %(to)s."
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_method_statement_document
+msgid "Qty"
+msgstr "Количество"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__quantity
+msgid "Quantity"
+msgstr "Количество"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_equipment__equipment_type__ramp
+msgid "Ramp / Loadbed"
+msgstr "Рампа / Грузовая платформа"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__rated_capacity_t
+msgid "Rated Capacity (t)"
+msgstr "Номинальная грузоподъёмность (т)"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__rating_ids
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__rating_ids
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__rating_ids
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__rating_ids
+msgid "Ratings"
+msgstr "Рейтинги"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__name
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__name
+msgid "Reference"
+msgstr "Справка"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_permit__state__rejected
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_search_full
+msgid "Rejected"
+msgstr "Отклонено"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid "Reset to Draft"
+msgstr "Сбросить в черновики"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__activity_user_id
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__activity_user_id
+msgid "Responsible User"
+msgstr "Ответственный пользователь"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_equipment__equipment_type__rigging
+msgid "Rigging Accessory"
+msgstr "Такелажный аксессуар"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_permit__authority__road
+msgid "Road Authority"
+msgstr "Дорожное управление"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy_vehicle__role
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_lift_plan_document
+msgid "Role"
+msgstr "Роль"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__name
+msgid "Route Name"
+msgstr "Название маршрута"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__route_survey_id
+msgid "Route Survey"
+msgstr "Обследование маршрута"
+
+#. module: eh_log_project_cargo
+#: model:ir.actions.act_window,name:eh_log_project_cargo.action_eh_log_project_cargo_route_survey
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__route_survey_ids
+#: model:ir.ui.menu,name:eh_log_project_cargo.menu_eh_log_project_cargo_route_surveys
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid "Route Surveys"
+msgstr "Обследования маршрутов"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid "Route and Schedule"
+msgstr "Маршрут и расписание"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__message_has_sms_error
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__message_has_sms_error
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__message_has_sms_error
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Ошибка доставки SMS"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_equipment__equipment_type__spmt
+msgid "SPMT (Self-Propelled Modular)"
+msgstr "SPMT (самоходный модульный)"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__spmt_axle_lines
+msgid "SPMT Axle Lines"
+msgstr "Осевые линии SPMT"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__spmt_modules_available
+msgid "SPMT Modules Available"
+msgstr "Доступные модули SPMT"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__sale_order_id
+msgid "Sale Order"
+msgstr "Заказ на продажу"
+
+#. module: eh_log_project_cargo
+#: model:ir.model,name:eh_log_project_cargo.model_sale_order
+msgid "Sales Order"
+msgstr "Заказ на продажу"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__scheduled_arrival
+msgid "Scheduled Arrival"
+msgstr "Плановое прибытие"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__scheduled_departure
+msgid "Scheduled Departure"
+msgstr "Плановое отправление"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_search_full
+msgid "Search Jobs"
+msgstr "Поиск заданий"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_search_full
+msgid "Search Permits"
+msgstr "Поиск разрешений"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_convoy_vehicle__role__secondary
+msgid "Secondary Hauler"
+msgstr "Вторичный перевозчик"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__self_weight_t
+msgid "Self Weight (t)"
+msgstr "Собственная масса (t)"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy_vehicle__sequence
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__sequence
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__sequence
+msgid "Sequence"
+msgstr "Последовательность"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__night_only
+msgid ""
+"Set when the route is restricted to night hours by the road authority. "
+"Drives permit selection and convoy scheduling."
+msgstr ""
+"Устанавливается, когда маршрут ограничен ночными часами дорожным ведомством."
+" Определяет выбор разрешений и планирование колонны."
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid "Start Execution"
+msgstr "Начать выполнение"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__state
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__state
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__state
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_search_full
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_search_full
+msgid "State"
+msgstr "Область"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_method_statement_document
+msgid "Statement"
+msgstr "Заявление"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_job__activity_state
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_permit__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Статус, основанный на мероприятии\n"
+"Просроченная: Дата, уже прошла\n"
+"Сегодня: Дата мероприятия сегодня\n"
+"Запланировано: будущая деятельность."
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_equipment__next_inspection_date
+msgid ""
+"Statutory inspection due date. Equipment with a past due-date is blocked "
+"from new convoy assignments."
+msgstr ""
+"Срок обязательного осмотра. Оборудование с истёкшим сроком не допускается к "
+"новым назначениям в колонны."
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_convoy_vehicle__role__support
+msgid "Support"
+msgstr "Поддержка"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_job__state__surveyed
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_search_full
+msgid "Surveyed"
+msgstr "Обследовано"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__surveyed_at
+msgid "Surveyed On"
+msgstr "Дата обследования"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__surveyor_partner_id
+msgid "Surveyor"
+msgstr "Сюрвейер"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__target_end_date
+msgid "Target End"
+msgstr "Целевое окончание"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__target_start_date
+msgid "Target Start"
+msgstr "Целевое начало"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_search_full
+msgid "Target Start Month"
+msgstr "Целевой месяц начала"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid "Target end"
+msgstr "Целевое окончание"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_form
+msgid "Target start"
+msgstr "Целевое начало"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_equipment__equipment_type__crane_telescopic
+msgid "Telescopic Crane"
+msgstr "Телескопический кран"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__is_chosen_route
+msgid ""
+"Tick to mark this survey as the route the convoy will follow. Only one "
+"survey per job may be the chosen route."
+msgstr ""
+"Отметьте, чтобы обозначить это обследование как маршрут, по которому пойдёт "
+"колонна. Только одно обследование на задание может быть выбранным маршрутом."
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__min_swing_radius_m
+msgid ""
+"Tightest swing radius encountered. Drives the choice of trailer (modular vs "
+"lowbed) and limits articulation."
+msgstr ""
+"Наименьший встреченный радиус поворота. Определяет выбор прицепа (модульный "
+"или низкорамный) и ограничивает угол складывания."
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_equipment_form
+msgid "Trailer / SPMT Specifics"
+msgstr "Характеристики прицепа / SPMT"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_convoy_vehicle__role__escort_trail
+msgid "Trailing Escort"
+msgstr "Замыкающее сопровождение"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__transport_orientation
+msgid "Transport Orientation"
+msgstr "Направление транспортировки"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__equipment_type
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_lift_plan_document
+msgid "Type"
+msgstr "Тип"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_job__activity_exception_decoration
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_permit__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Тип задачи-исключения в записи."
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_kanban
+msgid "Until"
+msgstr "Окончание"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_item__transport_orientation__upright
+msgid "Upright"
+msgstr "Вертикально"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields.selection,name:eh_log_project_cargo.selection__eh_log_project_cargo_permit__authority__utility
+msgid "Utility (power/telecom)"
+msgstr "Коммунальные услуги (электроэнергия/телеком)"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__valid_from
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_permit_application_document
+msgid "Valid From"
+msgstr "Действует с"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__valid_until
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_permit_application_document
+msgid "Valid Until"
+msgstr "Действует до"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_permit_application_document
+msgid "Validity"
+msgstr "Период действия"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_lift_plan_document
+msgid "Vehicle Assignments"
+msgstr "Назначения транспорта"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__vehicle_count
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__vehicle_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_lift_plan_document
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_convoy_form
+msgid "Vehicles"
+msgstr "Транспортные средства"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_method_statement_document
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_permit_application_document
+msgid "W (m)"
+msgstr "Ш (m)"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_route_survey__waypoints
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_route_survey_form
+msgid "Waypoints / Notes"
+msgstr "Путевые точки / Заметки"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_convoy__website_message_ids
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_equipment__website_message_ids
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_job__website_message_ids
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_permit__website_message_ids
+msgid "Website Messages"
+msgstr "Веб-сайт сообщения"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_convoy__website_message_ids
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_equipment__website_message_ids
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_job__website_message_ids
+#: model:ir.model.fields,help:eh_log_project_cargo.field_eh_log_project_cargo_permit__website_message_ids
+msgid "Website communication history"
+msgstr "История общений с сайта"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_method_statement_document
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.report_permit_application_document
+msgid "Weight (t)"
+msgstr "Вес (т)"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__weight_t
+msgid "Weight per Piece (t)"
+msgstr "Вес за штуку (т)"
+
+#. module: eh_log_project_cargo
+#: model:ir.model.fields,field_description:eh_log_project_cargo.field_eh_log_project_cargo_item__width_m
+msgid "Width (m)"
+msgstr "Ширина (m)"
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_equipment.py:0
+msgid "[EHL-PCG-001] Equipment %(code)s rated capacity must be positive."
+msgstr ""
+"[EHL-PCG-001] Номинальная мощность оборудования %(code)s должна быть "
+"положительной."
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_job.py:0
+msgid ""
+"[EHL-PCG-002] Job %(name)s cannot move to Surveyed without at least one "
+"route survey."
+msgstr ""
+"[EHL-PCG-002] Задание %(name)s не может перейти в состояние «Обследовано» "
+"без хотя бы одного обследования маршрута."
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_job.py:0
+msgid ""
+"[EHL-PCG-003] Job %(name)s cannot move to Planned without at least one "
+"convoy."
+msgstr ""
+"[EHL-PCG-003] Задание %(name)s не может перейти в состояние «Запланировано» "
+"без хотя бы одной колонны."
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_job.py:0
+msgid "[EHL-PCG-004] Convoy %(name)s has no vehicle assignments."
+msgstr "[EHL-PCG-004] Колонне %(name)s не назначены транспортные средства."
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_job.py:0
+msgid ""
+"[EHL-PCG-005] Job %(name)s has permits not in issued / active state: "
+"%(permits)s"
+msgstr ""
+"[EHL-PCG-005] У задания %(name)s есть разрешения, не находящиеся в состоянии"
+" «выдано» / «активно»: %(permits)s"
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_job.py:0
+msgid ""
+"[EHL-PCG-006] Project-cargo job state must change via the action buttons."
+msgstr ""
+"[EHL-PCG-006] Состояние задания проектного груза необходимо менять с помощью"
+" кнопок действий."
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_item.py:0
+msgid "[EHL-PCG-007] Item %(name)s %(label)s cannot be negative."
+msgstr "[EHL-PCG-007] %(label)s позиции %(name)s не может быть отрицательным."
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_convoy.py:0
+msgid ""
+"[EHL-PCG-008] Convoy %(name)s scheduled arrival is before scheduled "
+"departure."
+msgstr ""
+"[EHL-PCG-008] Запланированное прибытие колонны %(name)s раньше "
+"запланированного отправления."
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_convoy.py:0
+msgid "[EHL-PCG-009] Convoy %(name)s has no vehicles."
+msgstr "[EHL-PCG-009] В колонне %(name)s нет транспортных средств."
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_convoy.py:0
+msgid ""
+"[EHL-PCG-010] Equipment %(code)s is overdue for statutory inspection (was "
+"%(date)s); it cannot be assigned to a convoy until the inspection date is "
+"updated."
+msgstr ""
+"[EHL-PCG-010] Оборудование %(code)s просрочило обязательный осмотр (был "
+"%(date)s); его нельзя назначить в колонну, пока дата осмотра не будет "
+"обновлена."
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_permit.py:0
+msgid ""
+"[EHL-PCG-011] Permit %(name)s requires a valid-until date before it can be "
+"marked issued."
+msgstr ""
+"[EHL-PCG-011] Для разрешения %(name)s требуется дата окончания действия, "
+"прежде чем его можно будет пометить как выданное."
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_permit.py:0
+msgid "[EHL-PCG-012] Permit state must change via the action buttons."
+msgstr ""
+"[EHL-PCG-012] Состояние разрешения необходимо менять с помощью кнопок "
+"действий."
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_route_survey.py:0
+msgid ""
+"[EHL-PCG-013] Job %(name)s already has a chosen route survey; untick it "
+"first."
+msgstr ""
+"[EHL-PCG-013] У задания %(name)s уже есть выбранное обследование маршрута; "
+"сначала снимите отметку."
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_kanban
+msgid "convoys /"
+msgstr "конвои /"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_permit_kanban
+msgid "d"
+msgstr ""
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_kanban
+msgid "items"
+msgstr "позиции"
+
+#. module: eh_log_project_cargo
+#. odoo-python
+#: code:addons/eh_log_project_cargo/models/eh_log_project_cargo_job.py:0
+msgid "job_id"
+msgstr ""
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_job_kanban
+msgid "permits"
+msgstr "Разрешения"
+
+#. module: eh_log_project_cargo
+#: model_terms:ir.ui.view,arch_db:eh_log_project_cargo.view_eh_log_project_cargo_convoy_kanban
+msgid "veh."
+msgstr "ТС"

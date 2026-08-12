@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="seq_eh_log_customs_declaration" model="ir.sequence">
+            <field name="name">Customs Declaration</field>
+            <field name="code">eh.log.customs.declaration</field>
+            <field name="prefix">CD/%(year)s/</field>
+            <field name="padding">6</field>
+            <field name="number_increment">1</field>
+            <field name="implementation">no_gap</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+    </data>
+</odoo>

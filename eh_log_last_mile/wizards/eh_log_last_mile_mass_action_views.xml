@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_eh_log_last_mile_mass_dispatch_form" model="ir.ui.view">
+        <field name="name">eh.log.last.mile.mass.dispatch.form</field>
+        <field name="model">eh.log.last.mile.mass.dispatch</field>
+        <field name="arch" type="xml">
+            <form string="Mass Dispatch Waves">
+                <group>
+                    <field name="wave_ids" widget="many2many_tags" readonly="1"/>
+                </group>
+                <footer>
+                    <button name="action_apply" type="object" string="Dispatch All" class="btn-primary"/>
+                    <button special="cancel" string="Cancel" class="btn-secondary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_eh_log_last_mile_mass_dispatch" model="ir.actions.act_window">
+        <field name="name">Mass Dispatch</field>
+        <field name="res_model">eh.log.last.mile.mass.dispatch</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="binding_model_id" ref="model_eh_log_last_mile_wave"/>
+        <field name="binding_view_types">list</field>
+    </record>
+
+    <record id="view_eh_log_last_mile_mass_mark_delivered_form" model="ir.ui.view">
+        <field name="name">eh.log.last.mile.mass.mark.delivered.form</field>
+        <field name="model">eh.log.last.mile.mass.mark.delivered</field>
+        <field name="arch" type="xml">
+            <form string="Mass Mark Delivered">
+                <group>
+                    <field name="delivery_ids" widget="many2many_tags" readonly="1"/>
+                    <field name="recipient_name"/>
+                </group>
+                <footer>
+                    <button name="action_apply" type="object" string="Mark All Delivered" class="btn-primary"/>
+                    <button special="cancel" string="Cancel" class="btn-secondary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_eh_log_last_mile_mass_mark_delivered" model="ir.actions.act_window">
+        <field name="name">Mass Mark Delivered</field>
+        <field name="res_model">eh.log.last.mile.mass.mark.delivered</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="binding_model_id" ref="model_eh_log_last_mile_delivery"/>
+        <field name="binding_view_types">list</field>
+    </record>
+
+</odoo>

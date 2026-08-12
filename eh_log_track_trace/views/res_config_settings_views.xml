@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="res_config_settings_view_form_track" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.eh_log_track</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="inside">
+                <app data-string="ERP Heritage Track and Trace"
+                     string="ERP Heritage Track and Trace"
+                     name="eh_log_track_trace">
+                    <block title="Public Tracking Page" name="track_public_block">
+                        <setting id="track_public_base_url"
+                                 string="Public Base URL"
+                                 help="Hostname customers see in tracking URLs.">
+                            <field name="eh_log_track_public_base_url"
+                                   placeholder="https://track.example.com"/>
+                        </setting>
+                        <setting id="track_token_salt"
+                                 string="Token Salt"
+                                 help="Per-database salt used to derive non-enumerable tracking tokens. Rotating it invalidates outstanding links.">
+                            <field name="eh_log_track_token_salt"
+                                   password="True"
+                                   placeholder="32+ random hex characters"/>
+                        </setting>
+                    </block>
+                </app>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="action_eh_log_track_trace_settings" model="ir.actions.act_window">
+        <field name="name">Track and Trace Settings</field>
+        <field name="res_model">res.config.settings</field>
+        <field name="view_mode">form</field>
+        <field name="views" eval="[(False, 'form')]"/>
+        <field name="target">current</field>
+        <field name="context">{'module': 'eh_log_track_trace'}</field>
+    </record>
+
+</odoo>

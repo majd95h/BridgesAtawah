@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="action_report_variation_order" model="ir.actions.report">
+        <field name="name">Variation Order</field>
+        <field name="model">eh.log.variation</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">eh_log_disputes_variations.report_variation_order_document</field>
+        <field name="report_file">eh_log_disputes_variations.report_variation_order_document</field>
+        <field name="binding_model_id" ref="model_eh_log_variation"/>
+        <field name="binding_type">report</field>
+        <field name="paperformat_id" ref="eh_log_base.paperformat_eh_log_portrait"/>
+    </record>
+
+    <template id="report_variation_order_document">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="variation">
+                <t t-call="eh_log_base.eh_log_clean_layout">
+                    <t t-set="company" t-value="variation.company_id"/>
+                    <t t-set="report_type" t-value="'pdf'"/>
+                    <t t-call="eh_log_base.eh_log_report_styles"/>
+                    <div class="page eh_pdf_page">
+                        <t t-call="eh_log_base.eh_log_report_header">
+                            <t t-set="title" t-value="'Variation Order'"/>
+                            <t t-set="company" t-value="variation.company_id"/>
+                        </t>
+
+                        <div class="eh_pdf_meta">
+                            <span><strong>Reference:</strong> <t t-out="variation.name"/></span>
+                            <span><strong>Customer:</strong> <t t-out="variation.customer_id.display_name"/></span>
+                            <span><strong>Source:</strong> <t t-out="variation.source_display"/></span>
+                            <span><strong>Sale Order:</strong> <t t-out="variation.sale_order_id.name or ''"/></span>
+                            <span><strong>State:</strong> <t t-out="variation.state"/></span>
+                        </div>
+
+                        <h2 class="eh_pdf_subtitle">Subject</h2>
+                        <p t-out="variation.subject"/>
+                        <p t-out="variation.description or ''"/>
+
+                        <h2 class="eh_pdf_subtitle">Variation Lines</h2>
+                        <table class="eh_pdf_table">
+                            <thead>
+                                <tr>
+                                    <th>Description</th>
+                                    <th class="text-end">Quantity</th>
+                                    <th class="text-end">Unit Price</th>
+                                    <th class="text-end">Subtotal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr t-foreach="variation.line_ids.sorted(lambda l: l.sequence)" t-as="line">
+                                    <td><t t-out="line.description"/></td>
+                                    <td class="text-end"><t t-out="'{:.2f}'.format(line.quantity)"/></td>
+                                    <td class="text-end"><t t-out="'{:.2f}'.format(line.unit_price)"/></td>
+                                    <td class="text-end"><t t-out="'{:.2f}'.format(line.amount_subtotal)"/></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" class="text-end"><strong>Net Variation</strong></td>
+                                    <td class="text-end"><strong><t t-out="'{:.2f}'.format(variation.net_amount)"/></strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2 class="eh_pdf_subtitle">Acknowledgement</h2>
+                        <table class="eh_pdf_table">
+                            <thead>
+                                <tr>
+                                    <th>Role</th>
+                                    <th>Name</th>
+                                    <th>Signature</th>
+                                    <th>Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Agent</td><td>__________________</td><td>__________________</td><td>__________</td></tr>
+                                <tr><td>Customer</td><td>__________________</td><td>__________________</td><td>__________</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>

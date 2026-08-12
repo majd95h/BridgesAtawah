@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_eh_log_carrier_rate_request_list" model="ir.ui.view">
+        <field name="name">eh.log.carrier.rate.request.list</field>
+        <field name="model">eh.log.carrier.rate.request</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="mode"/>
+                <field name="origin_country_id"/>
+                <field name="destination_country_id"/>
+                <field name="ready_by_date"/>
+                <field name="quote_count"/>
+                <field name="state" widget="badge"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_eh_log_carrier_rate_request_form" model="ir.ui.view">
+        <field name="name">eh.log.carrier.rate.request.form</field>
+        <field name="model">eh.log.carrier.rate.request</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,shopped"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1><field name="name"/></h1>
+                    </div>
+                    <group>
+                        <group string="Route">
+                            <field name="mode" widget="radio" options="{'horizontal': true}"/>
+                            <field name="origin_country_id"/>
+                            <field name="origin_location_code"/>
+                            <field name="destination_country_id"/>
+                            <field name="destination_location_code"/>
+                            <field name="ready_by_date"/>
+                        </group>
+                        <group string="Cargo">
+                            <field name="weight_kg"/>
+                            <field name="volume_cbm"/>
+                            <field name="package_count"/>
+                            <field name="is_dangerous_goods"/>
+                            <field name="rank_strategy"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="freight_job_id" options="{'no_create': True}"/>
+                            <field name="sale_order_id" options="{'no_create': True}"/>
+                        </group>
+                        <group>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Quotes" name="quotes">
+                            <field name="quote_ids" readonly="1">
+                                <list>
+                                    <field name="carrier_profile_id"/>
+                                    <field name="service_name"/>
+                                    <field name="transit_days"/>
+                                    <field name="price"/>
+                                    <field name="currency_id"/>
+                                    <field name="valid_until"/>
+                                    <field name="active" widget="boolean_toggle"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_eh_log_carrier_rate_request" model="ir.actions.act_window">
+        <field name="name">Rate Requests</field>
+        <field name="res_model">eh.log.carrier.rate.request</field>
+        <field name="view_mode">list,form</field>
+        <field name="views" eval="[(False, 'list'), (False, 'form')]"/>
+    </record>
+
+</odoo>

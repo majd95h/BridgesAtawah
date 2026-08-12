@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_eh_log_carrier_rate_shop_wizard_form" model="ir.ui.view">
+        <field name="name">eh.log.carrier.rate.shop.wizard.form</field>
+        <field name="model">eh.log.carrier.rate.shop.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Rate Shop">
+                <group>
+                    <group string="Route">
+                        <field name="mode"/>
+                        <field name="origin_country_id"/>
+                        <field name="origin_location_code"/>
+                        <field name="destination_country_id"/>
+                        <field name="destination_location_code"/>
+                        <field name="ready_by_date"/>
+                    </group>
+                    <group string="Cargo">
+                        <field name="weight_kg"/>
+                        <field name="volume_cbm"/>
+                        <field name="package_count"/>
+                        <field name="is_dangerous_goods"/>
+                        <field name="rank_strategy"/>
+                    </group>
+                </group>
+                <group>
+                    <group>
+                        <field name="freight_job_id" options="{'no_create': True}"/>
+                        <field name="sale_order_id" options="{'no_create': True}"/>
+                    </group>
+                    <group>
+                        <field name="carrier_profile_ids"
+                               widget="many2many_tags"
+                               options="{'no_create': True}"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name="action_shop"
+                            type="object"
+                            string="Shop Rates"
+                            class="btn-primary"/>
+                    <button special="cancel" string="Cancel" class="btn-secondary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_eh_log_carrier_rate_shop_wizard" model="ir.actions.act_window">
+        <field name="name">Rate Shop</field>
+        <field name="res_model">eh.log.carrier.rate.shop.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+</odoo>

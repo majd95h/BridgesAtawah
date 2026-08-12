@@ -1,0 +1,1963 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* eh_log_warehouse_3pl
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-01 04:34+0000\n"
+"PO-Revision-Date: 2026-07-01 04:34+0000\n"
+"Last-Translator: ERP Heritage <info@erpheritage.com.au>\n"
+"Language-Team: Korean\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_billing_run.py:0
+msgid "%(service)s (%(period_start)s to %(period_end)s)"
+msgstr "%(service)s (%(period_start)s부터 %(period_end)s까지)"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model,name:eh_log_warehouse_3pl.model_eh_log_warehouse_client
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__client_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__client_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__client_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__client_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_snapshot__client_id
+msgid "3PL Client"
+msgstr "3PL 고객"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.actions.act_window,name:eh_log_warehouse_3pl.action_eh_log_warehouse_client
+#: model:ir.ui.menu,name:eh_log_warehouse_3pl.menu_eh_log_warehouse_clients
+msgid "3PL Clients"
+msgstr "3PL 고객"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model,name:eh_log_warehouse_3pl.model_eh_log_warehouse_rate_card
+msgid "3PL Rate Card"
+msgstr "3PL 요금표"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model,name:eh_log_warehouse_3pl.model_eh_log_warehouse_rate_line
+msgid "3PL Rate Line"
+msgstr "3PL 요율 라인"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_grn_document
+msgid "<strong>Arrived:</strong>"
+msgstr "<strong>도착:</strong>"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_grn_document
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_pick_list_document
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_storage_statement_document
+msgid "<strong>Client:</strong>"
+msgstr "<strong>고객:</strong>"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_pick_list_document
+msgid "<strong>Customer:</strong>"
+msgstr "<strong>고객:</strong>"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_grn_document
+msgid "<strong>Expected:</strong>"
+msgstr "<strong>예상:</strong>"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_grn_document
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_pick_list_document
+msgid "<strong>Facility:</strong>"
+msgstr "<strong>시설:</strong>"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_storage_statement_document
+msgid "<strong>Period:</strong>"
+msgstr "<strong>기간:</strong>"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_pick_list_document
+msgid "<strong>Planned:</strong>"
+msgstr "<strong>계획:</strong>"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_storage_statement_document
+msgid "<strong>Rate Card:</strong>"
+msgstr "<strong>요율표:</strong>"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_grn_document
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_pick_list_document
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_storage_statement_document
+msgid "<strong>Reference:</strong>"
+msgstr "<strong>참조 : </strong>"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_grn_document
+msgid "<strong>Supplier:</strong>"
+msgstr "<strong>공급업체:</strong>"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_storage_statement_document
+msgid "<strong>Total</strong>"
+msgstr "<strong>합계</strong>"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__message_needaction
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__message_needaction
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__message_needaction
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__message_needaction
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__message_needaction
+msgid "Action Needed"
+msgstr "조치 필요"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__active
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__active
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_location__active
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_card__active
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_zone__active
+msgid "Active"
+msgstr "활성화"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_client__rate_card_id
+msgid ""
+"Active rate card. Changing the rate card affects bills raised after the "
+"change date; historic snapshots and movements stay linked to the rate card "
+"in force at that time through the billing line audit."
+msgstr ""
+"활성 요율표. 요율표를 변경하면 변경일 이후 발행되는 청구서에 영향을 미칩니다. 과거 스냅샷과 변동 내역은 청구 라인 감사를 통해 당시 "
+"유효했던 요율표에 계속 연결됩니다."
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__activity_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__activity_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__activity_ids
+msgid "Activities"
+msgstr "활동"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__activity_exception_decoration
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__activity_exception_decoration
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "활동 예외 장식"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__activity_state
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__activity_state
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__activity_state
+msgid "Activity State"
+msgstr "활동 상태"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__activity_type_icon
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__activity_type_icon
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "활동 유형 아이콘"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__address_id
+msgid "Address"
+msgstr "주소"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_movement__movement_type__adjustment_in
+msgid "Adjustment In"
+msgstr "조정 입고"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_movement__movement_type__adjustment_out
+msgid "Adjustment Out"
+msgstr "조정 출고"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_client_form
+msgid "Allowed Facilities"
+msgstr "허용된 시설"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_receipt__state__arrived
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search_full
+msgid "Arrived"
+msgstr "도착함"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__arrived_at
+msgid "Arrived At"
+msgstr "도착 시각"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__message_attachment_count
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__message_attachment_count
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__message_attachment_count
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__message_attachment_count
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__message_attachment_count
+msgid "Attachment Count"
+msgstr "첨부 파일 수"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_client__storage_charging_basis__snapshot_average
+msgid "Average of Daily Snapshots"
+msgstr "일별 스냅샷 평균"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_billing_run_pivot
+msgid "Billing Analysis"
+msgstr "청구 분석"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__billing_day
+msgid "Billing Day"
+msgstr "청구일"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_line__run_id
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_billing_run_form
+msgid "Billing Run"
+msgstr "청구 실행"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.actions.act_window,name:eh_log_warehouse_3pl.action_eh_log_warehouse_billing_run
+#: model:ir.ui.menu,name:eh_log_warehouse_3pl.menu_eh_log_warehouse_billing_runs
+msgid "Billing Runs"
+msgstr "청구 실행"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_client__partner_id
+msgid ""
+"Billing and shipping partner. The monthly billing run raises a sale order "
+"against this partner."
+msgstr "청구 및 배송 파트너입니다. 월별 청구 실행 시 이 파트너에 대해 판매 주문이 생성됩니다."
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_billing_run_graph
+msgid "Billing by Client"
+msgstr "고객별 청구"
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_billing_run.py:0
+msgid "Billing run %(name)s cannot move from %(from)s to %(to)s."
+msgstr "청구 실행 %(name)s은(는) %(from)s에서 %(to)s(으)로 이동할 수 없습니다."
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_facility__customs_status__bonded
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_zone__purpose__bonded
+msgid "Bonded"
+msgstr "보세"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_billing_run_form
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_form
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_form
+msgid "Cancel"
+msgstr "취소"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_billing_run__state__cancelled
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_pick__state__cancelled
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_receipt__state__cancelled
+msgid "Cancelled"
+msgstr "취소됨"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_storage_statement_document
+msgid "Charges"
+msgstr "요금"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_pick_list_document
+msgid "Checker"
+msgstr "확인자"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_billing_run_search_full
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_search_full
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search_full
+msgid "Client"
+msgstr "클라이언트"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.constraint,message:eh_log_warehouse_3pl.constraint_eh_log_warehouse_client_client_code_unique
+msgid "Client code must be unique per company."
+msgstr "클라이언트 코드는 회사별로 고유해야 합니다."
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_form
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_form
+msgid "Close"
+msgstr "닫기"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_pick__state__closed
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_receipt__state__closed
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_search_full
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search_full
+msgid "Closed"
+msgstr "마감됨"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__closed_at
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__closed_at
+msgid "Closed At"
+msgstr "종료 시각"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__code
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__code
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_location__code
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_card__code
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_zone__code
+msgid "Code"
+msgstr "코드"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_line__company_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__company_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__company_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__company_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_location__company_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__company_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__company_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick_line__company_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_card__company_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_line__company_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__company_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt_line__company_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_snapshot__company_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_zone__company_id
+msgid "Company"
+msgstr "회사"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_form
+msgid "Complete Putaway"
+msgstr "적치 완료"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_location__full_code
+msgid ""
+"Composite location reference of facility code, zone code, and location code "
+"joined by slashes. Printed on labels and pick lists."
+msgstr "시설 코드, 구역 코드, 위치 코드를 슬래시로 연결한 복합 위치 참조입니다. 라벨 및 피킹 목록에 인쇄됩니다."
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_billing_run_form
+msgid "Compute Charges"
+msgstr "요금 계산"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_billing_run__state__computed
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_billing_run_search_full
+msgid "Computed"
+msgstr "계산됨"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_line__create_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__create_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__create_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__create_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_location__create_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__create_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__create_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick_line__create_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_card__create_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_line__create_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__create_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt_line__create_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_snapshot__create_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_zone__create_uid
+msgid "Created by"
+msgstr "작성자"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_line__create_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__create_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__create_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__create_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_location__create_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__create_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__create_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick_line__create_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_card__create_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_line__create_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__create_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt_line__create_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_snapshot__create_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_zone__create_date
+msgid "Created on"
+msgstr "작성일자"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_line__currency_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__currency_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__currency_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_card__currency_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_line__currency_id
+msgid "Currency"
+msgstr "통화"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_search_full
+msgid "Customer"
+msgstr "고객"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__customer_reference
+msgid "Customer Reference"
+msgstr "고객 참조"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__customs_status
+msgid "Customs Status"
+msgstr "세관 상태"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__expected_date
+msgid ""
+"Date the receipt is expected to arrive. Drives the dock scheduling list view"
+" and the late-arrival alerts."
+msgstr "입고가 도착할 예정인 날짜입니다. 도크 일정 목록 보기와 도착 지연 알림을 구동합니다."
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_client__billing_day
+msgid ""
+"Day of the month the periodic billing run targets. The run cron checks this "
+"field; clients on different days let billing load be spread across the "
+"month."
+msgstr ""
+"정기 청구 실행이 대상으로 하는 월중 일자입니다. 실행 cron이 이 필드를 확인하며, 고객을 서로 다른 날짜에 배치하면 청구 부하를 한"
+" 달에 걸쳐 분산할 수 있습니다."
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt_line__destination_location_id
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_grn_document
+msgid "Destination"
+msgstr "목적지"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__destination_location_id
+msgid "Destination Location"
+msgstr "목적지 위치"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_line__display_name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__display_name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__display_name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__display_name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_location__display_name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__display_name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__display_name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick_line__display_name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_card__display_name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_line__display_name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__display_name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt_line__display_name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_snapshot__display_name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_zone__display_name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_sale_order__display_name
+msgid "Display Name"
+msgstr "표시명"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_facility__customs_status__domestic
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_zone__purpose__domestic
+msgid "Domestic"
+msgstr "국내"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_billing_run__state__draft
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_billing_run_search_full
+msgid "Draft"
+msgstr "미결"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_grn_document
+msgid "Driver"
+msgstr "운전자"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_location__purpose
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_zone__purpose
+msgid ""
+"Drives movement validation. Bonded zones require a customs declaration on "
+"inbound; free zones require a domestic-customs entry on outbound to a non-"
+"free destination."
+msgstr ""
+"이동 검증을 제어합니다. 보세 구역은 입고 시 세관 신고가 필요하며, 자유 구역은 비자유 목적지로의 출고 시 국내 세관 신고가 "
+"필요합니다."
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.constraint,message:eh_log_warehouse_3pl.constraint_eh_log_warehouse_rate_line_rate_line_unique
+msgid "Duplicate rate line for the same service and product."
+msgstr "동일한 서비스 및 제품에 대한 중복 요율 행입니다."
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.constraint,message:eh_log_warehouse_3pl.constraint_eh_log_warehouse_snapshot_snapshot_unique
+msgid "Duplicate snapshot for the same date / client / location."
+msgstr "동일한 날짜 / 고객 / 위치에 대한 중복 스냅샷입니다."
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_receipt__state__expected
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search_full
+msgid "Expected"
+msgstr "예상됨"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__expected_date
+msgid "Expected Date"
+msgstr "예정일"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search_full
+msgid "Expected Day"
+msgstr "예상 일자"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search_full
+msgid "Expected Today"
+msgstr "오늘 예상"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_grn_document
+msgid "Expiry"
+msgstr "만료"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt_line__expiry_date
+msgid "Expiry Date"
+msgstr "만료일"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.actions.act_window,name:eh_log_warehouse_3pl.action_eh_log_warehouse_facility
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__facility_ids
+#: model:ir.ui.menu,name:eh_log_warehouse_3pl.menu_eh_log_warehouse_facilities
+msgid "Facilities"
+msgstr "시설"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_client__facility_ids
+msgid ""
+"Facilities the client may store in. Receipts and picks are restricted to "
+"this set."
+msgstr "고객이 보관할 수 있는 시설입니다. 입고와 피킹은 이 집합으로 제한됩니다."
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_location__facility_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__facility_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__facility_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__facility_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_snapshot__facility_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_zone__facility_id
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_search_full
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search_full
+msgid "Facility"
+msgstr "시설"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.constraint,message:eh_log_warehouse_3pl.constraint_eh_log_warehouse_facility_facility_code_unique
+msgid "Facility code must be unique per company."
+msgstr "시설 코드는 회사별로 고유해야 합니다."
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_client__storage_charging_basis__snapshot_first_of_month
+msgid "First-of-Month Snapshot"
+msgstr "월초 스냅샷"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__message_follower_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__message_follower_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__message_follower_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__message_follower_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__message_follower_ids
+msgid "Followers"
+msgstr "팔로워"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__message_partner_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__message_partner_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__message_partner_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__message_partner_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "팔로워 (협력사)"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__activity_type_icon
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__activity_type_icon
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "멋진 아이콘 폰트 예: fa-tasks"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_facility__customs_status__free_zone
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_zone__purpose__free
+msgid "Free Zone"
+msgstr "자유 구역"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__freight_job_id
+msgid "Freight Job"
+msgstr "화물 작업"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_location__full_code
+msgid "Full Code"
+msgstr "전체 코드"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__sale_order_id
+msgid "Generated Sale Order"
+msgstr "생성된 판매 주문"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.actions.report,name:eh_log_warehouse_3pl.action_report_eh_log_warehouse_grn
+msgid "Goods Receipt Note"
+msgstr "물품 입고 메모"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_billing_line__service_type__handling_in
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_rate_line__service_type__handling_in
+msgid "Handling In (per pallet)"
+msgstr "입고 취급(팔레트당)"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_billing_line__service_type__handling_out
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_rate_line__service_type__handling_out
+msgid "Handling Out (per pallet)"
+msgstr "출고 취급(팔레트당)"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__has_message
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__has_message
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__has_message
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__has_message
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__has_message
+msgid "Has Message"
+msgstr "메시지가 있습니다"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_client__storage_charging_basis
+msgid ""
+"How storage charges are derived from the snapshot history. Average is the "
+"industry default; peak is a punitive option used for surge-pricing "
+"contracts."
+msgstr ""
+"보관 요금을 스냅샷 이력에서 산출하는 방식입니다. 평균은 업계 표준이며, 피크는 급증 요금제 계약에 사용되는 징벌적 옵션입니다."
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_line__id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_location__id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick_line__id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_card__id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_line__id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt_line__id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_snapshot__id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_zone__id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_sale_order__id
+msgid "ID"
+msgstr ""
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__activity_exception_icon
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__activity_exception_icon
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__activity_exception_icon
+msgid "Icon"
+msgstr "아이콘"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__activity_exception_icon
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__activity_exception_icon
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "예외 활동을 표시하기 위한 아이콘"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__message_needaction
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_client__message_needaction
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__message_needaction
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__message_needaction
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "만약 선택하였으면, 신규 메시지에 주의를 기울여야 합니다."
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__message_has_error
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__message_has_sms_error
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_client__message_has_error
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_client__message_has_sms_error
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__message_has_error
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__message_has_sms_error
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__message_has_error
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__message_has_sms_error
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__message_has_error
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "이 옵션을 선택하면 일부 정보가 전달 오류를 생성합니다."
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_location__inbound_movement_ids
+msgid "Inbound Movements"
+msgstr "입고 이동"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_receipt__state__inspecting
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search_full
+msgid "Inspecting"
+msgstr "검사 중"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_movement__movement_type__transfer
+msgid "Internal Transfer"
+msgstr "내부 이체"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__message_is_follower
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__message_is_follower
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__message_is_follower
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__message_is_follower
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__message_is_follower
+msgid "Is Follower"
+msgstr "팔로워임"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_line__write_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__write_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__write_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__write_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_location__write_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__write_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__write_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick_line__write_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_card__write_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_line__write_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__write_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt_line__write_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_snapshot__write_uid
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_zone__write_uid
+msgid "Last Updated by"
+msgstr "최근 갱신한 사람"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_line__write_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__write_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__write_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__write_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_location__write_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__write_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__write_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick_line__write_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_card__write_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_line__write_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__write_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt_line__write_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_snapshot__write_date
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_zone__write_date
+msgid "Last Updated on"
+msgstr "최근 갱신 일자"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__line_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__line_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_card__line_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__line_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_grn_document
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_pick_list_document
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_billing_run_form
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_form
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_rate_card_form
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_form
+msgid "Lines"
+msgstr "명세"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__freight_job_id
+msgid ""
+"Linked freight job when the receipt is the destination of an inbound "
+"shipment. Optional; standalone receipts for direct supplier deliveries leave"
+" it empty."
+msgstr ""
+"입고가 인바운드 배송의 목적지일 때 연결되는 화물 작업입니다. 선택 사항이며, 공급업체 직배송을 위한 독립 입고는 이를 비워 둡니다."
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_location__pallets_on_hand
+msgid ""
+"Live pallet count derived from the movement log. Authoritative for put-away "
+"decisions; storage billing uses the daily snapshot instead."
+msgstr "이동 로그에서 도출된 실시간 팰릿 수량. 입고 결정의 권위 있는 기준입니다. 보관 청구에는 대신 일별 스냅샷이 사용됩니다."
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_snapshot__location_id
+msgid "Location"
+msgstr "위치"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.constraint,message:eh_log_warehouse_3pl.constraint_eh_log_warehouse_location_location_code_unique
+msgid "Location code must be unique per zone."
+msgstr "위치 코드는 구역별로 고유해야 합니다."
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_zone.py:0
+#: model:ir.actions.act_window,name:eh_log_warehouse_3pl.action_eh_log_warehouse_location
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__location_count
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_zone__location_count
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_zone__location_ids
+#: model:ir.ui.menu,name:eh_log_warehouse_3pl.menu_eh_log_warehouse_locations
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_zone_form
+msgid "Locations"
+msgstr "위치"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_grn_document
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_pick_list_document
+msgid "Lot"
+msgstr "LOT"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__lot_reference
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick_line__lot_reference
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt_line__lot_reference
+msgid "Lot / Batch"
+msgstr "로트 / 배치"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_form
+msgid "Mark Arrived"
+msgstr "도착함으로 표시"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_form
+msgid "Mark Packed"
+msgstr "포장됨으로 표시"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_form
+msgid "Mark Shipped"
+msgstr "배송됨으로 표시"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__message_has_error
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__message_has_error
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__message_has_error
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__message_has_error
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__message_has_error
+msgid "Message Delivery error"
+msgstr "메시지 전송 오류"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__message_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__message_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__message_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__message_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__message_ids
+msgid "Messages"
+msgstr "메시지"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_line__minimum_quantity
+msgid "Minimum Units"
+msgstr "최소 단위 수"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_line__minimum_quantity
+msgid ""
+"Minimum billable quantity for the period. If actual consumption is lower, "
+"the engine bills the minimum."
+msgstr "해당 기간의 최소 청구 가능 수량입니다. 실제 소비량이 더 낮으면 엔진이 최솟값으로 청구합니다."
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_billing_line__service_type__monthly_minimum
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_rate_line__service_type__monthly_minimum
+msgid "Monthly Minimum Charge"
+msgstr "월 최소 요금"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.actions.act_window,name:eh_log_warehouse_3pl.action_eh_log_warehouse_movement
+#: model:ir.ui.menu,name:eh_log_warehouse_3pl.menu_eh_log_warehouse_movements
+msgid "Movements"
+msgstr "이동"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__my_activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__my_activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "내 활동 마감일"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_location__name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_card__name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_zone__name
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_grn_document
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_pick_list_document
+msgid "Name"
+msgstr "이름"
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_billing_run.py:0
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_pick.py:0
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_receipt.py:0
+msgid "New"
+msgstr "신규"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__activity_calendar_event_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__activity_calendar_event_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "다음 활동 캘린더 행사"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "다음 활동 마감일"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__activity_summary
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__activity_summary
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__activity_summary
+msgid "Next Activity Summary"
+msgstr "다음 활동 요약"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__activity_type_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__activity_type_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__activity_type_id
+msgid "Next Activity Type"
+msgstr "다음 활동 유형"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__message_needaction_counter
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__message_needaction_counter
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__message_needaction_counter
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__message_needaction_counter
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__message_needaction_counter
+msgid "Number of Actions"
+msgstr "작업 수"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__message_has_error_counter
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__message_has_error_counter
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__message_has_error_counter
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__message_has_error_counter
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__message_has_error_counter
+msgid "Number of errors"
+msgstr "오류 횟수"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__message_needaction_counter
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_client__message_needaction_counter
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__message_needaction_counter
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__message_needaction_counter
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "조치가 필요한 메시지 수"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__message_has_error_counter
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_client__message_has_error_counter
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__message_has_error_counter
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__message_has_error_counter
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "전송 오류가 발생한 메시지 수입니다."
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__occurred_at
+msgid "Occurred At"
+msgstr "발생 일시"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_search_full
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search_full
+msgid "Open"
+msgstr "열기"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__notes
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_movement_form
+msgid "Operator Notes"
+msgstr "운영자 메모"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__total_pallet_capacity
+msgid ""
+"Operator-supplied design capacity. Reported as a utilisation percentage on "
+"the dashboard but does not block put-away above the threshold; over-capacity"
+" is a valid temporary state during a peak."
+msgstr ""
+"운영자가 제공한 설계 용량입니다. 대시보드에 이용률 백분율로 표시되지만 임계값을 초과하는 입고를 차단하지는 않습니다. 용량 초과는 피크 "
+"동안 유효한 일시적 상태입니다."
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_line__product_id
+msgid ""
+"Optional. Constrain this line to a specific product. If empty, the line "
+"applies to any product. The billing engine prefers product-specific lines."
+msgstr ""
+"선택 사항입니다. 이 라인을 특정 제품으로 제한합니다. 비어 있으면 라인이 모든 제품에 적용됩니다. 청구 엔진은 제품별 라인을 "
+"우선합니다."
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_location__outbound_movement_ids
+msgid "Outbound Movements"
+msgstr "출고 이동"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_pick__state__packed
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_search_full
+msgid "Packed"
+msgstr "포장됨"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__total_pallet_capacity
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_location__pallet_capacity
+msgid "Pallet Capacity"
+msgstr "팔레트 용량"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__pallet_count
+msgid ""
+"Pallet count for storage billing. The snapshot table records this per day "
+"for storage charge computation."
+msgstr "보관 청구를 위한 팔레트 수. 스냅샷 테이블이 보관료 계산을 위해 이 값을 매일 기록합니다."
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__pallet_count
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__pallet_count
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick_line__pallet_count
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__pallet_count
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt_line__pallet_count
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_grn_document
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_pick_list_document
+msgid "Pallets"
+msgstr "팔레트"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_location__pallets_on_hand
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_snapshot__pallets_on_hand
+msgid "Pallets On Hand"
+msgstr "보유 팔레트"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_form
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_form
+msgid "Parties"
+msgstr "당사자"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__partner_id
+msgid "Partner"
+msgstr "협력사"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__address_id
+msgid ""
+"Partner record carrying the street, city, country, and geo coordinates. "
+"Reused on receipts and picks to render the facility address on documents."
+msgstr ""
+"도로명, 도시, 국가, 지리 좌표를 담은 협력사 레코드입니다. 문서에 시설 주소를 표시하기 위해 입고 및 피킹에서 재사용됩니다."
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_client__storage_charging_basis__snapshot_peak
+msgid "Peak of Daily Snapshots"
+msgstr "일별 스냅샷 최고치"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_location__pallet_capacity
+msgid ""
+"Per-bin pallet ceiling. Put-away above this triggers a warning but does not "
+"block; over-capacity is a valid transient state."
+msgstr "빈별 팔레트 상한. 이를 초과하는 입고는 경고를 발생시키지만 차단하지는 않습니다. 용량 초과는 유효한 일시적 상태입니다."
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__period_end
+msgid "Period End"
+msgstr "기간 종료"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_billing_run_search_full
+msgid "Period Month"
+msgstr "기간 월"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__period_start
+msgid "Period Start"
+msgstr "기간 시작"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick_line__pick_id
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_movement__movement_type__pick
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_form
+msgid "Pick"
+msgstr "선별"
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_pick.py:0
+msgid ""
+"Pick %(name)s cannot move from %(from)s to %(to)s. Allowed: %(allowed)s."
+msgstr "피킹 %(name)s은(는) %(from)s에서 %(to)s(으)로 이동할 수 없습니다. 허용: %(allowed)s."
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_pick_list_document
+msgid "Pick Confirmation"
+msgstr "피킹 확인"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_billing_line__service_type__pick_line
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_rate_line__service_type__pick_line
+msgid "Pick Line"
+msgstr "피킹 라인"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__pick_line_count
+msgid "Pick Lines"
+msgstr "피킹 라인"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.actions.report,name:eh_log_warehouse_3pl.action_report_eh_log_warehouse_pick_list
+msgid "Pick List"
+msgstr "피킹 목록"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_pivot
+msgid "Pick Volume"
+msgstr "피킹 볼륨"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_pick_list_document
+msgid "Picked"
+msgstr "선별"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_pick_list_document
+msgid "Picker"
+msgstr "피커"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_pick__state__picking
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_search_full
+msgid "Picking"
+msgstr "선별"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__picking_started_at
+msgid "Picking Started At"
+msgstr "피킹 시작 시각"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.actions.act_window,name:eh_log_warehouse_3pl.action_eh_log_warehouse_pick
+#: model:ir.ui.menu,name:eh_log_warehouse_3pl.menu_eh_log_warehouse_picks
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_calendar
+msgid "Picks"
+msgstr "피킹"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_pick__state__planned
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_search_full
+msgid "Planned"
+msgstr "계획됨"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__planned_date
+msgid "Planned Date"
+msgstr "계획일"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_search_full
+msgid "Planned Today"
+msgstr "오늘 계획됨"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_billing_run_form
+msgid "Post to Sale Order"
+msgstr "판매 주문에 전기"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_billing_run__state__posted
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_billing_run_search_full
+msgid "Posted"
+msgstr "발행 완료"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__product_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick_line__product_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt_line__product_id
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_grn_document
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_pick_list_document
+msgid "Product"
+msgstr "품목"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_line__product_id
+msgid "Product Override"
+msgstr "제품 재정의"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_location__purpose
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_zone__purpose
+msgid "Purpose"
+msgstr "목적"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_receipt__state__putaway
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search_full
+msgid "Putaway"
+msgstr "적치"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__putaway_at
+msgid "Putaway At"
+msgstr "적치 위치"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_line__quantity
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__quantity
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick_line__quantity
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt_line__quantity
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_grn_document
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_pick_list_document
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_storage_statement_document
+msgid "Quantity"
+msgstr "수량"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_zone__purpose__quarantine
+msgid "Quarantine"
+msgstr "격리"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__rate_card_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__rate_card_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_line__rate_card_id
+msgid "Rate Card"
+msgstr "요율표"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.actions.act_window,name:eh_log_warehouse_3pl.action_eh_log_warehouse_rate_card
+#: model:ir.ui.menu,name:eh_log_warehouse_3pl.menu_eh_log_warehouse_rate_cards
+msgid "Rate Cards"
+msgstr "요율표"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.constraint,message:eh_log_warehouse_3pl.constraint_eh_log_warehouse_rate_card_rate_card_code_unique
+msgid "Rate card code must be unique per company."
+msgstr "요율표 코드는 회사별로 고유해야 합니다."
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__rate_card_id
+msgid ""
+"Rate card snapshotted onto the run. Defaults to the client's current card; "
+"can be overridden for replays."
+msgstr "실행에 스냅샷된 요율표입니다. 기본값은 클라이언트의 현재 요율표이며, 재실행 시 재정의할 수 있습니다."
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__rating_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__rating_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__rating_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__rating_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__rating_ids
+msgid "Ratings"
+msgstr "평가"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt_line__receipt_id
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_movement__movement_type__receipt
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_form
+msgid "Receipt"
+msgstr "입고"
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_receipt.py:0
+msgid ""
+"Receipt %(name)s cannot move from %(from)s to %(to)s. Allowed: %(allowed)s."
+msgstr "입고 %(name)s은(는) %(from)s에서 %(to)s(으)로 이동할 수 없습니다. 허용: %(allowed)s."
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_grn_document
+msgid "Receipt Confirmation"
+msgstr "수령 확인"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_pivot
+msgid "Receipt Volume"
+msgstr "입고량"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.actions.act_window,name:eh_log_warehouse_3pl.action_eh_log_warehouse_receipt
+#: model:ir.ui.menu,name:eh_log_warehouse_3pl.menu_eh_log_warehouse_receipts
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_calendar
+msgid "Receipts"
+msgstr "입고"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_graph
+msgid "Receipts by State"
+msgstr "상태별 입고"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_grn_document
+msgid "Receiver"
+msgstr "수취인"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__name
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__name
+msgid "Reference"
+msgstr "참조"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_billing_run_form
+msgid "Reset to Draft"
+msgstr "미결로 초기화"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__activity_user_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__activity_user_id
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__activity_user_id
+msgid "Responsible User"
+msgstr "담당 사용자"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_grn_document
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_pick_list_document
+msgid "Role"
+msgstr "역할"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__message_has_sms_error
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__message_has_sms_error
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__message_has_sms_error
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__message_has_sms_error
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "SMS 전송 에러"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__sale_order_id
+msgid "Sale Order"
+msgstr "판매 주문"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model,name:eh_log_warehouse_3pl.model_sale_order
+msgid "Sales Order"
+msgstr "판매 주문"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_form
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_form
+msgid "Schedule"
+msgstr "예약"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_billing_run_search_full
+msgid "Search Billing Runs"
+msgstr "청구 실행 검색"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_search_full
+msgid "Search Picks"
+msgstr "피킹 검색"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search_full
+msgid "Search Receipts"
+msgstr "영수증 검색"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick_line__sequence
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt_line__sequence
+msgid "Sequence"
+msgstr "순서"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_line__service_type
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_line__service_type
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_storage_statement_document
+msgid "Service"
+msgstr "서비스"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__customer_id
+msgid "Ship-To Customer"
+msgstr "배송처 고객"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_pick__state__shipped
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_search_full
+msgid "Shipped"
+msgstr "배송 완료"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__shipped_at
+msgid "Shipped At"
+msgstr "발송 시각"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__code
+msgid ""
+"Short code prefixed onto location codes. Limit eight characters so the "
+"composite location reference fits a label sticker."
+msgstr "위치 코드 앞에 접두사로 붙는 짧은 코드입니다. 복합 위치 참조가 라벨 스티커에 들어가도록 여덟 자로 제한하십시오."
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_grn_document
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_pick_list_document
+msgid "Signature"
+msgstr "서명"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_snapshot__snapshot_date
+msgid "Snapshot Date"
+msgstr "스냅샷 날짜"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.actions.act_window,name:eh_log_warehouse_3pl.action_eh_log_warehouse_snapshot
+#: model:ir.ui.menu,name:eh_log_warehouse_3pl.menu_eh_log_warehouse_snapshots
+msgid "Snapshots"
+msgstr "스냅샷"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick_line__source_location_id
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_pick_list_document
+msgid "Source"
+msgstr "원본"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__source_location_id
+msgid "Source Location"
+msgstr "기존 위치"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__pick_id
+msgid "Source Pick"
+msgstr "소스 피킹"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__receipt_id
+msgid "Source Receipt"
+msgstr "소스 입고"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_sale_order__eh_log_warehouse_billing_run_id
+msgid ""
+"Source billing run if this order was generated by the monthly warehouse "
+"billing engine."
+msgstr "이 주문이 월간 창고 청구 엔진에 의해 생성된 경우의 소스 청구 실행입니다."
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__sale_order_id
+msgid ""
+"Source sale order if the pick was spawned from a warehouse 3PL service line;"
+" standalone picks leave this empty."
+msgstr "피킹이 창고 3PL 서비스 라인에서 생성된 경우의 소스 판매 주문입니다. 독립형 피킹은 이 값을 비워 둡니다."
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_zone__purpose__staging
+msgid "Staging"
+msgstr "스테이징"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_form
+msgid "Start Inspection"
+msgstr "검사 시작"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_form
+msgid "Start Picking"
+msgstr "피킹 시작"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__state
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__state
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__state
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_billing_run_search_full
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_search_full
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search_full
+msgid "State"
+msgstr "시/도"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__activity_state
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__activity_state
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"활동 기준 상태\n"
+"기한 초과: 기한이 이미 지났습니다.\n"
+"오늘: 활동 날짜가 오늘입니다.\n"
+"예정: 향후 계획된 활동입니다."
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__storage_charging_basis
+msgid "Storage Basis"
+msgstr "보관 기준"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.actions.report,name:eh_log_warehouse_3pl.action_report_eh_log_warehouse_storage_statement
+msgid "Storage Statement"
+msgstr "보관 명세서"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_billing_line__service_type__storage_pallet_day
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_rate_line__service_type__storage_pallet_day
+msgid "Storage per Pallet per Day"
+msgstr "팔레트당 일일 보관료"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_line__subtotal
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_storage_statement_document
+msgid "Subtotal"
+msgstr "소계"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__supplier_id
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search_full
+msgid "Supplier"
+msgstr "공급업체"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__supplier_reference
+msgid "Supplier Reference"
+msgstr "공급업체 참조"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__supplier_id
+msgid ""
+"Supplier who shipped the goods. The receipt reconciles this party against "
+"the PO when the freight job is linked."
+msgstr "상품을 발송한 공급업체입니다. 운송 작업이 연결되면 입고 시 이 당사자를 PO와 대조합니다."
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_search_full
+msgid "This Week"
+msgstr "이번 주"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__total
+msgid "Total"
+msgstr "총계"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_facility__customs_status__transit
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_zone__purpose__transit
+msgid "Transit"
+msgstr "이송"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_movement__movement_type
+msgid "Type"
+msgstr "유형"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__activity_exception_decoration
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__activity_exception_decoration
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "레코드에 있는 예외 활동의 유형입니다."
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_line__unit_price
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_rate_line__unit_price
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.report_warehouse_storage_statement_document
+msgid "Unit Price"
+msgstr "단가"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_billing_line__service_type__vas_kit
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_rate_line__service_type__vas_kit
+msgid "Value-Added Services - Kit"
+msgstr "부가가치 서비스 - 키트"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_billing_line__service_type__vas_label
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_rate_line__service_type__vas_label
+msgid "Value-Added Services - Label"
+msgstr "부가가치 서비스 - 라벨"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_billing_line__service_type__vas_scan
+#: model:ir.model.fields.selection,name:eh_log_warehouse_3pl.selection__eh_log_warehouse_rate_line__service_type__vas_scan
+msgid "Value-Added Services - Scan"
+msgstr "부가가치 서비스 - 스캔"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.ui.menu,name:eh_log_warehouse_3pl.menu_eh_log_warehouse_config_root
+#: model:ir.ui.menu,name:eh_log_warehouse_3pl.menu_eh_log_warehouse_root
+msgid "Warehouse 3PL"
+msgstr "창고 3PL"
+
+#. module: eh_log_warehouse_3pl
+#: model:product.template,name:eh_log_warehouse_3pl.product_warehouse_billing_product_template
+msgid "Warehouse 3PL Service"
+msgstr "창고 3PL 서비스"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model,name:eh_log_warehouse_3pl.model_eh_log_warehouse_billing_line
+msgid "Warehouse Billing Line"
+msgstr "창고 청구 항목"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model,name:eh_log_warehouse_3pl.model_eh_log_warehouse_billing_run
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_sale_order__eh_log_warehouse_billing_run_id
+msgid "Warehouse Billing Run"
+msgstr "창고 청구 실행"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model,name:eh_log_warehouse_3pl.model_eh_log_warehouse_facility
+msgid "Warehouse Facility"
+msgstr "창고 시설"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model,name:eh_log_warehouse_3pl.model_eh_log_warehouse_location
+msgid "Warehouse Location"
+msgstr "창고 위치"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model,name:eh_log_warehouse_3pl.model_eh_log_warehouse_movement
+msgid "Warehouse Movement"
+msgstr "창고 이동"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model,name:eh_log_warehouse_3pl.model_eh_log_warehouse_snapshot
+msgid "Warehouse On-Hand Snapshot"
+msgstr "창고 재고 스냅샷"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model,name:eh_log_warehouse_3pl.model_eh_log_warehouse_pick
+msgid "Warehouse Pick"
+msgstr "창고 피킹"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model,name:eh_log_warehouse_3pl.model_eh_log_warehouse_pick_line
+msgid "Warehouse Pick Line"
+msgstr "창고 피킹 항목"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model,name:eh_log_warehouse_3pl.model_eh_log_warehouse_receipt
+msgid "Warehouse Receipt"
+msgstr "창고 입고"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model,name:eh_log_warehouse_3pl.model_eh_log_warehouse_receipt_line
+msgid "Warehouse Receipt Line"
+msgstr "창고 입고 항목"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model,name:eh_log_warehouse_3pl.model_eh_log_warehouse_zone
+msgid "Warehouse Zone"
+msgstr "창고 구역"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.actions.server,name:eh_log_warehouse_3pl.cron_capture_daily_snapshot_ir_actions_server
+msgid "Warehouse: Capture Daily On-Hand Snapshot"
+msgstr "창고: 일일 재고 스냅샷 캡처"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.actions.server,name:eh_log_warehouse_3pl.cron_run_monthly_billing_ir_actions_server
+msgid "Warehouse: Run Monthly Billing"
+msgstr "창고: 월별 청구 실행"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__website_message_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_client__website_message_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__website_message_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__website_message_ids
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__website_message_ids
+msgid "Website Messages"
+msgstr "웹사이트 메시지"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_billing_run__website_message_ids
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_client__website_message_ids
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__website_message_ids
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_pick__website_message_ids
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt__website_message_ids
+msgid "Website communication history"
+msgstr "웹사이트 대화 이력"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_pick_line__source_location_id
+msgid ""
+"Where this line is picked from. Required before the picking action runs; "
+"planning may use a soon-to-be-resolved location."
+msgstr "이 행을 피킹하는 위치입니다. 피킹 작업이 실행되기 전에 필수이며, 계획 단계에서는 곧 확정될 위치를 사용할 수 있습니다."
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,help:eh_log_warehouse_3pl.field_eh_log_warehouse_receipt_line__destination_location_id
+msgid ""
+"Where this line will be put away. Required before the put-away action runs; "
+"until then, leaving it blank is allowed so the receipt can be created from "
+"the supplier ASN before the storage plan is finalised."
+msgstr ""
+"이 행이 적치될 위치입니다. 적치 작업이 실행되기 전에 필수이며, 그때까지는 비워 둘 수 있어 보관 계획이 확정되기 전에 공급업체 "
+"ASN에서 입고를 생성할 수 있습니다."
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_location__zone_id
+msgid "Zone"
+msgstr "구역"
+
+#. module: eh_log_warehouse_3pl
+#: model:ir.model.constraint,message:eh_log_warehouse_3pl.constraint_eh_log_warehouse_zone_zone_code_unique
+msgid "Zone code must be unique per facility."
+msgstr "구역 코드는 시설별로 고유해야 합니다."
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_facility.py:0
+#: model:ir.actions.act_window,name:eh_log_warehouse_3pl.action_eh_log_warehouse_zone
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__zone_count
+#: model:ir.model.fields,field_description:eh_log_warehouse_3pl.field_eh_log_warehouse_facility__zone_ids
+#: model:ir.ui.menu,name:eh_log_warehouse_3pl.menu_eh_log_warehouse_zones
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_facility_form
+msgid "Zones"
+msgstr "구역"
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_facility.py:0
+msgid ""
+"[EHL-WHS-001] Facility code %(code)s must be alphanumeric or underscore "
+"only."
+msgstr "[EHL-WHS-001] 시설 코드 %(code)s은(는) 영숫자 또는 밑줄만 사용할 수 있습니다."
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_zone.py:0
+msgid ""
+"[EHL-WHS-002] Zone code %(code)s must be alphanumeric or underscore only."
+msgstr "[EHL-WHS-002] 존 코드 %(code)s은(는) 영숫자 또는 밑줄만 사용할 수 있습니다."
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_location.py:0
+msgid ""
+"[EHL-WHS-003] Location code %(code)s must be alphanumeric or underscore "
+"only."
+msgstr "[EHL-WHS-003] 위치 코드 %(code)s은(는) 영숫자 또는 밑줄만 사용할 수 있습니다."
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_client.py:0
+msgid ""
+"[EHL-WHS-004] Billing day %(day)s must be between 1 and 28 so the cron fires"
+" every month."
+msgstr "[EHL-WHS-004] cron이 매월 실행되도록 청구일 %(day)s은(는) 1에서 28 사이여야 합니다."
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_client.py:0
+msgid ""
+"[EHL-WHS-005] Facility %(facility)s is not in client %(client)s's allowed "
+"facilities list."
+msgstr "[EHL-WHS-005] 시설 %(facility)s은(는) 클라이언트 %(client)s의 허용 시설 목록에 없습니다."
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_rate_card.py:0
+msgid "[EHL-WHS-006] Rate line unit price cannot be negative."
+msgstr "[EHL-WHS-006] 요율 항목의 단가는 음수일 수 없습니다."
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_pick.py:0
+msgid ""
+"[EHL-WHS-007] Pick state must be changed via the action buttons, not by "
+"direct write."
+msgstr "[EHL-WHS-007] 피킹 상태는 직접 쓰기가 아니라 작업 버튼을 통해 변경해야 합니다."
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_receipt.py:0
+msgid ""
+"[EHL-WHS-007] Receipt state must be changed via the action buttons, not by "
+"direct write."
+msgstr "[EHL-WHS-007] 입고 상태는 직접 쓰기가 아니라 작업 버튼을 통해 변경해야 합니다."
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_receipt.py:0
+msgid "[EHL-WHS-008] Receipt %(name)s is %(state)s; lines are read-only."
+msgstr "[EHL-WHS-008] 입고 %(name)s이(가) %(state)s 상태입니다. 항목은 읽기 전용입니다."
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_pick.py:0
+msgid "[EHL-WHS-009] Pick %(name)s is %(state)s; lines are read-only."
+msgstr "[EHL-WHS-009] 피킹 %(name)s이(가) %(state)s 상태입니다. 항목은 읽기 전용입니다."
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_receipt.py:0
+msgid ""
+"[EHL-WHS-010] Receipt %(name)s has no lines; add lines before completing "
+"put-away."
+msgstr "[EHL-WHS-010] 입고 %(name)s에 항목이 없습니다. 적치를 완료하기 전에 항목을 추가하세요."
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_receipt.py:0
+msgid ""
+"[EHL-WHS-011] Receipt line for product %(product)s has no destination "
+"location."
+msgstr "[EHL-WHS-011] 제품 %(product)s의 입고 항목에 대상 위치가 없습니다."
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_pick.py:0
+msgid "[EHL-WHS-012] Pick %(name)s has no lines."
+msgstr "[EHL-WHS-012] 피킹 %(name)s에 항목이 없습니다."
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_pick.py:0
+msgid "[EHL-WHS-013] Pick line for %(product)s has no source location."
+msgstr "[EHL-WHS-013] %(product)s의 피킹 항목에 소스 위치가 없습니다."
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_movement.py:0
+msgid ""
+"[EHL-WHS-014] Warehouse movements must be created through receipt put-away, "
+"pick picking, transfer wizard, or adjustment workflow."
+msgstr "[EHL-WHS-014] 창고 이동은 입고 적치, 피킹, 이동 마법사 또는 조정 워크플로를 통해 생성해야 합니다."
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_movement.py:0
+msgid ""
+"[EHL-WHS-015] Movement field(s) %(fields)s are immutable after creation. "
+"Post a reversing adjustment instead."
+msgstr "[EHL-WHS-015] 이동 필드 %(fields)s은(는) 생성 후 변경할 수 없습니다. 대신 역분개 조정을 기표하세요."
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_movement.py:0
+msgid ""
+"[EHL-WHS-016] Warehouse movements are append-only and cannot be deleted."
+msgstr "[EHL-WHS-016] 창고 이동은 추가 전용이며 삭제할 수 없습니다."
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_snapshot.py:0
+msgid ""
+"[EHL-WHS-017] Snapshots are created by the daily cron or the explicit "
+"rebuild action; direct ORM creates are blocked."
+msgstr "[EHL-WHS-017] 스냅샷은 일일 cron 또는 명시적 재구축 작업으로 생성됩니다. 직접적인 ORM 생성은 차단됩니다."
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_snapshot.py:0
+msgid "[EHL-WHS-018] Snapshots are immutable."
+msgstr "[EHL-WHS-018] 스냅샷은 변경할 수 없습니다."
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_snapshot.py:0
+msgid ""
+"[EHL-WHS-019] Snapshots are append-only; use the rebuild action for back-"
+"fill."
+msgstr "[EHL-WHS-019] 스냅샷은 추가 전용입니다. 백필에는 재구축 작업을 사용하세요."
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_billing_run.py:0
+msgid ""
+"[EHL-WHS-020] Billing run period start %(start)s is after period end "
+"%(end)s."
+msgstr "[EHL-WHS-020] 청구 실행의 기간 시작 %(start)s이(가) 기간 종료 %(end)s보다 나중입니다."
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_billing_run.py:0
+msgid "[EHL-WHS-021] Billing run %(name)s has no computed lines."
+msgstr "[EHL-WHS-021] 청구 실행 %(name)s에 계산된 항목이 없습니다."
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_billing_run.py:0
+msgid "[EHL-WHS-022] Billing run state must change via the action buttons."
+msgstr "[EHL-WHS-022] 청구 실행 상태는 작업 버튼을 통해 변경해야 합니다."
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_billing_run.py:0
+msgid ""
+"[EHL-WHS-023] Billing lines are created by the compute action; direct ORM "
+"creates are blocked."
+msgstr "[EHL-WHS-023] 청구 항목은 계산 작업으로 생성됩니다. 직접적인 ORM 생성은 차단됩니다."
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_billing_run.py:0
+msgid ""
+"[EHL-WHS-024] Billing lines can only be cleared by re-running the compute "
+"action."
+msgstr "[EHL-WHS-024] 청구 항목은 계산 작업을 다시 실행해야만 지울 수 있습니다."
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_facility.py:0
+msgid "facility_id"
+msgstr ""
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_kanban
+msgid "lines /"
+msgstr "라인 /"
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_pick.py:0
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_receipt.py:0
+msgid "none"
+msgstr "없음"
+
+#. module: eh_log_warehouse_3pl
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_pick_kanban
+#: model_terms:ir.ui.view,arch_db:eh_log_warehouse_3pl.view_eh_log_warehouse_receipt_kanban
+msgid "pal."
+msgstr ""
+
+#. module: eh_log_warehouse_3pl
+#. odoo-python
+#: code:addons/eh_log_warehouse_3pl/models/eh_log_warehouse_zone.py:0
+msgid "zone_id"
+msgstr ""

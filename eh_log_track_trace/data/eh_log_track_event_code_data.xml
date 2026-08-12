@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="1">
+    <data>
+
+        <!-- Origin -->
+        <record id="event_code_booked" model="eh.log.track.event.code">
+            <field name="code">booked</field>
+            <field name="name">Shipment Booked</field>
+            <field name="sequence">10</field>
+            <field name="category">origin</field>
+            <field name="is_milestone">True</field>
+            <field name="default_description">Shipment confirmed and booked.</field>
+            <field name="icon_name">fa-check</field>
+        </record>
+
+        <record id="event_code_picked_up" model="eh.log.track.event.code">
+            <field name="code">picked_up</field>
+            <field name="name">Picked Up</field>
+            <field name="sequence">15</field>
+            <field name="category">origin</field>
+            <field name="is_milestone">True</field>
+            <field name="default_description">Shipment collected from origin.</field>
+            <field name="icon_name">fa-truck</field>
+        </record>
+
+        <record id="event_code_dispatched" model="eh.log.track.event.code">
+            <field name="code">dispatched</field>
+            <field name="name">Dispatched</field>
+            <field name="sequence">20</field>
+            <field name="category">origin</field>
+            <field name="is_milestone">True</field>
+            <field name="default_description">Vehicle dispatched from origin.</field>
+            <field name="icon_name">fa-truck-fast</field>
+        </record>
+
+        <!-- Transit -->
+        <record id="event_code_in_transit" model="eh.log.track.event.code">
+            <field name="code">in_transit</field>
+            <field name="name">In Transit</field>
+            <field name="sequence">30</field>
+            <field name="category">transit</field>
+            <field name="is_milestone">True</field>
+            <field name="default_description">Shipment in transit.</field>
+            <field name="icon_name">fa-route</field>
+        </record>
+
+        <record id="event_code_at_pickup" model="eh.log.track.event.code">
+            <field name="code">at_pickup</field>
+            <field name="name">At Pickup</field>
+            <field name="sequence">35</field>
+            <field name="category">transit</field>
+            <field name="is_milestone">False</field>
+            <field name="default_description">Vehicle at pickup location.</field>
+            <field name="icon_name">fa-location-dot</field>
+        </record>
+
+        <record id="event_code_at_delivery" model="eh.log.track.event.code">
+            <field name="code">at_delivery</field>
+            <field name="name">At Delivery</field>
+            <field name="sequence">40</field>
+            <field name="category">transit</field>
+            <field name="is_milestone">False</field>
+            <field name="default_description">Vehicle at delivery location.</field>
+            <field name="icon_name">fa-location-dot</field>
+        </record>
+
+        <!-- Destination -->
+        <record id="event_code_arrived" model="eh.log.track.event.code">
+            <field name="code">arrived</field>
+            <field name="name">Arrived at Destination</field>
+            <field name="sequence">50</field>
+            <field name="category">destination</field>
+            <field name="is_milestone">True</field>
+            <field name="default_description">Shipment arrived at destination.</field>
+            <field name="icon_name">fa-flag-checkered</field>
+        </record>
+
+        <record id="event_code_customs_hold" model="eh.log.track.event.code">
+            <field name="code">customs_hold</field>
+            <field name="name">Customs Hold</field>
+            <field name="sequence">55</field>
+            <field name="category">exception</field>
+            <field name="is_milestone">True</field>
+            <field name="default_description">Shipment held at customs pending clearance.</field>
+            <field name="icon_name">fa-pause</field>
+        </record>
+
+        <record id="event_code_customs_cleared" model="eh.log.track.event.code">
+            <field name="code">customs_cleared</field>
+            <field name="name">Customs Cleared</field>
+            <field name="sequence">56</field>
+            <field name="category">destination</field>
+            <field name="is_milestone">True</field>
+            <field name="default_description">Customs cleared.</field>
+            <field name="icon_name">fa-check</field>
+        </record>
+
+        <record id="event_code_out_for_delivery" model="eh.log.track.event.code">
+            <field name="code">out_for_delivery</field>
+            <field name="name">Out for Delivery</field>
+            <field name="sequence">60</field>
+            <field name="category">delivery</field>
+            <field name="is_milestone">True</field>
+            <field name="default_description">Out for last-mile delivery.</field>
+            <field name="icon_name">fa-truck</field>
+        </record>
+
+        <!-- Delivery -->
+        <record id="event_code_delivered" model="eh.log.track.event.code">
+            <field name="code">delivered</field>
+            <field name="name">Delivered</field>
+            <field name="sequence">70</field>
+            <field name="category">delivery</field>
+            <field name="is_milestone">True</field>
+            <field name="default_description">Shipment delivered.</field>
+            <field name="icon_name">fa-circle-check</field>
+        </record>
+
+        <record id="event_code_delivery_failed" model="eh.log.track.event.code">
+            <field name="code">delivery_failed</field>
+            <field name="name">Delivery Failed</field>
+            <field name="sequence">75</field>
+            <field name="category">exception</field>
+            <field name="is_milestone">True</field>
+            <field name="default_description">Delivery attempt failed.</field>
+            <field name="icon_name">fa-triangle-exclamation</field>
+        </record>
+
+        <record id="event_code_returned" model="eh.log.track.event.code">
+            <field name="code">returned</field>
+            <field name="name">Returned</field>
+            <field name="sequence">80</field>
+            <field name="category">exception</field>
+            <field name="is_milestone">True</field>
+            <field name="default_description">Shipment returned to sender.</field>
+            <field name="icon_name">fa-rotate-left</field>
+        </record>
+
+        <record id="event_code_closed" model="eh.log.track.event.code">
+            <field name="code">closed</field>
+            <field name="name">Closed</field>
+            <field name="sequence">90</field>
+            <field name="category">delivery</field>
+            <field name="is_milestone">False</field>
+            <field name="default_description">Shipment file closed.</field>
+            <field name="icon_name">fa-folder</field>
+        </record>
+
+        <record id="event_code_cancelled" model="eh.log.track.event.code">
+            <field name="code">cancelled</field>
+            <field name="name">Cancelled</field>
+            <field name="sequence">95</field>
+            <field name="category">exception</field>
+            <field name="is_milestone">True</field>
+            <field name="default_description">Shipment cancelled.</field>
+            <field name="icon_name">fa-circle-xmark</field>
+        </record>
+
+        <!-- Wave-level (operator dashboards) -->
+        <record id="event_code_wave_dispatched" model="eh.log.track.event.code">
+            <field name="code">wave_dispatched</field>
+            <field name="name">Wave Dispatched</field>
+            <field name="sequence">100</field>
+            <field name="category">origin</field>
+            <field name="is_milestone">False</field>
+            <field name="default_description">Wave dispatched.</field>
+            <field name="icon_name">fa-truck-fast</field>
+        </record>
+
+        <record id="event_code_wave_in_progress" model="eh.log.track.event.code">
+            <field name="code">wave_in_progress</field>
+            <field name="name">Wave In Progress</field>
+            <field name="sequence">105</field>
+            <field name="category">transit</field>
+            <field name="is_milestone">False</field>
+            <field name="default_description">Wave in progress.</field>
+            <field name="icon_name">fa-route</field>
+        </record>
+
+        <record id="event_code_wave_completed" model="eh.log.track.event.code">
+            <field name="code">wave_completed</field>
+            <field name="name">Wave Completed</field>
+            <field name="sequence">110</field>
+            <field name="category">delivery</field>
+            <field name="is_milestone">False</field>
+            <field name="default_description">Wave completed.</field>
+            <field name="icon_name">fa-flag-checkered</field>
+        </record>
+
+        <record id="event_code_exception" model="eh.log.track.event.code">
+            <field name="code">exception</field>
+            <field name="name">Exception</field>
+            <field name="sequence">120</field>
+            <field name="category">exception</field>
+            <field name="is_milestone">True</field>
+            <field name="default_description">Shipment exception reported.</field>
+            <field name="icon_name">fa-triangle-exclamation</field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_eh_log_edi_outbound_search_full" model="ir.ui.view">
+        <field name="name">eh.log.edi.outbound.search.full</field>
+        <field name="model">eh.log.edi.outbound</field>
+        <field name="arch" type="xml">
+            <search string="Search Outbound EDI">
+                <field name="name"/>
+                <field name="partner_id"/>
+                <field name="message_type_id"/>
+                <field name="payload_filename"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+
+                <separator/>
+                <filter name="filter_state_draft" string="Draft" domain="[('state', '=', 'draft')]"/>
+                <filter name="filter_state_queued" string="Queued" domain="[('state', '=', 'queued')]"/>
+                <filter name="filter_state_sent" string="Sent" domain="[('state', '=', 'sent')]"/>
+                <filter name="filter_state_acked" string="Acknowledged" domain="[('state', '=', 'acked')]"/>
+                <filter name="filter_state_dead_letter" string="Dead Letter" domain="[('state', '=', 'dead_letter')]"/>
+                <filter name="filter_state_rejected" string="Rejected" domain="[('state', '=', 'rejected')]"/>
+
+                <separator/>
+                <filter name="filter_today" string="Created Today"
+                        domain="[('create_date', '&gt;=', context_today().strftime('%Y-%m-%d 00:00:00'))]"/>
+                <filter name="filter_with_retries" string="Has Retries"
+                        domain="[('retry_count', '&gt;', 0)]"/>
+
+                <separator/>
+                <group>
+                    <filter name="group_by_state" string="State" context="{'group_by': 'state'}"/>
+                    <filter name="group_by_partner" string="Partner" context="{'group_by': 'partner_id'}"/>
+                    <filter name="group_by_message_type" string="Message Type" context="{'group_by': 'message_type_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="view_eh_log_edi_inbound_search_full" model="ir.ui.view">
+        <field name="name">eh.log.edi.inbound.search.full</field>
+        <field name="model">eh.log.edi.inbound</field>
+        <field name="arch" type="xml">
+            <search string="Search Inbound EDI">
+                <field name="name"/>
+                <field name="partner_id"/>
+                <field name="message_type_id"/>
+                <field name="raw_filename"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+
+                <separator/>
+                <filter name="filter_state_received" string="Received" domain="[('state', '=', 'received')]"/>
+                <filter name="filter_state_parsed" string="Parsed" domain="[('state', '=', 'parsed')]"/>
+                <filter name="filter_state_processed" string="Processed" domain="[('state', '=', 'processed')]"/>
+                <filter name="filter_state_rejected" string="Rejected" domain="[('state', '=', 'rejected')]"/>
+
+                <separator/>
+                <filter name="filter_today" string="Received Today"
+                        domain="[('received_at', '&gt;=', context_today().strftime('%Y-%m-%d 00:00:00'))]"/>
+
+                <separator/>
+                <group>
+                    <filter name="group_by_state" string="State" context="{'group_by': 'state'}"/>
+                    <filter name="group_by_partner" string="Partner" context="{'group_by': 'partner_id'}"/>
+                    <filter name="group_by_message_type" string="Message Type" context="{'group_by': 'message_type_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+</odoo>

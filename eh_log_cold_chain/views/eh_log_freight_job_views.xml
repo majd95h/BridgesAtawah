@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="view_eh_log_freight_job_form_cold_chain" model="ir.ui.view">
+            <field name="name">eh.log.freight.job.form.inherit.cold.chain</field>
+            <field name="model">eh.log.freight.job</field>
+            <field name="inherit_id" ref="eh_log_freight.view_eh_log_freight_job_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@name='button_box']" position="inside">
+                    <button name="action_view_cold_chain_runs" type="object" class="oe_stat_button" icon="fa-thermometer-half" invisible="not cold_chain_run_count" groups="eh_log_base.group_eh_log_user">
+                        <field name="cold_chain_run_count" widget="statinfo" string="Cold Chain"/>
+                    </button>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

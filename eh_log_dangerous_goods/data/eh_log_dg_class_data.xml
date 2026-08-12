@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data noupdate="1">
+
+        <!--
+            Hazard class catalogue. The 9 UN classes plus subdivisions.
+            Incompatibility links are populated below; production
+            deployments may extend with country-specific exceptions.
+        -->
+
+        <record id="dg_class_1" model="eh.log.dg.class">
+            <field name="code">1</field>
+            <field name="name">Explosives</field>
+            <field name="primary_class">1</field>
+            <field name="placard_description">Explosive</field>
+        </record>
+
+        <record id="dg_class_2_1" model="eh.log.dg.class">
+            <field name="code">2.1</field>
+            <field name="name">Flammable Gas</field>
+            <field name="primary_class">2</field>
+            <field name="placard_description">Flammable Gas</field>
+        </record>
+
+        <record id="dg_class_2_2" model="eh.log.dg.class">
+            <field name="code">2.2</field>
+            <field name="name">Non-flammable, Non-toxic Gas</field>
+            <field name="primary_class">2</field>
+            <field name="placard_description">Non-flammable Gas</field>
+        </record>
+
+        <record id="dg_class_2_3" model="eh.log.dg.class">
+            <field name="code">2.3</field>
+            <field name="name">Toxic Gas</field>
+            <field name="primary_class">2</field>
+            <field name="placard_description">Poison Gas</field>
+        </record>
+
+        <record id="dg_class_4_1" model="eh.log.dg.class">
+            <field name="code">4.1</field>
+            <field name="name">Flammable Solid</field>
+            <field name="primary_class">4</field>
+            <field name="placard_description">Flammable Solid</field>
+        </record>
+
+        <record id="dg_class_4_2" model="eh.log.dg.class">
+            <field name="code">4.2</field>
+            <field name="name">Spontaneously Combustible</field>
+            <field name="primary_class">4</field>
+            <field name="placard_description">Spontaneously Combustible</field>
+        </record>
+
+        <record id="dg_class_6_1" model="eh.log.dg.class">
+            <field name="code">6.1</field>
+            <field name="name">Toxic Substance</field>
+            <field name="primary_class">6</field>
+            <field name="placard_description">Toxic</field>
+        </record>
+
+        <record id="dg_class_8" model="eh.log.dg.class">
+            <field name="code">8</field>
+            <field name="name">Corrosive Substance</field>
+            <field name="primary_class">8</field>
+            <field name="placard_description">Corrosive</field>
+        </record>
+
+        <record id="dg_class_9" model="eh.log.dg.class">
+            <field name="code">9</field>
+            <field name="name">Miscellaneous Dangerous Substance</field>
+            <field name="primary_class">9</field>
+            <field name="placard_description">Miscellaneous</field>
+        </record>
+
+        <!--
+            Records below carry their incompatibility links inline. The
+            curated set covers IMDG segregation table 7.2.4 high-impact
+            pairs. Customers can extend or refine via the UI.
+        -->
+
+        <record id="dg_class_5_1" model="eh.log.dg.class">
+            <field name="code">5.1</field>
+            <field name="name">Oxidising Substance</field>
+            <field name="primary_class">5</field>
+            <field name="placard_description">Oxidiser</field>
+            <field name="incompatible_class_ids" eval="[(6, 0, [
+                ref('dg_class_1'),
+                ref('dg_class_4_1'),
+                ref('dg_class_4_2'),
+                ref('dg_class_8'),
+            ])]"/>
+        </record>
+
+        <record id="dg_class_5_2" model="eh.log.dg.class">
+            <field name="code">5.2</field>
+            <field name="name">Organic Peroxide</field>
+            <field name="primary_class">5</field>
+            <field name="placard_description">Organic Peroxide</field>
+            <field name="incompatible_class_ids" eval="[(6, 0, [
+                ref('dg_class_1'),
+                ref('dg_class_4_1'),
+                ref('dg_class_4_2'),
+                ref('dg_class_8'),
+            ])]"/>
+        </record>
+
+        <record id="dg_class_3" model="eh.log.dg.class">
+            <field name="code">3</field>
+            <field name="name">Flammable Liquid</field>
+            <field name="primary_class">3</field>
+            <field name="placard_description">Flammable Liquid</field>
+            <field name="incompatible_class_ids" eval="[(6, 0, [
+                ref('dg_class_1'),
+                ref('dg_class_5_1'),
+                ref('dg_class_5_2'),
+                ref('dg_class_8'),
+            ])]"/>
+        </record>
+
+        <record id="dg_class_4_3" model="eh.log.dg.class">
+            <field name="code">4.3</field>
+            <field name="name">Dangerous When Wet</field>
+            <field name="primary_class">4</field>
+            <field name="placard_description">Dangerous When Wet</field>
+            <field name="incompatible_class_ids" eval="[(6, 0, [
+                ref('dg_class_5_1'),
+                ref('dg_class_5_2'),
+                ref('dg_class_8'),
+            ])]"/>
+        </record>
+
+        <record id="dg_class_6_2" model="eh.log.dg.class">
+            <field name="code">6.2</field>
+            <field name="name">Infectious Substance</field>
+            <field name="primary_class">6</field>
+            <field name="placard_description">Infectious Substance</field>
+            <field name="incompatible_class_ids" eval="[(6, 0, [
+                ref('dg_class_1'),
+                ref('dg_class_3'),
+                ref('dg_class_4_1'),
+                ref('dg_class_4_2'),
+                ref('dg_class_4_3'),
+                ref('dg_class_5_1'),
+                ref('dg_class_5_2'),
+                ref('dg_class_8'),
+            ])]"/>
+        </record>
+
+        <record id="dg_class_7" model="eh.log.dg.class">
+            <field name="code">7</field>
+            <field name="name">Radioactive Material</field>
+            <field name="primary_class">7</field>
+            <field name="placard_description">Radioactive</field>
+            <field name="incompatible_class_ids" eval="[(6, 0, [
+                ref('dg_class_1'),
+            ])]"/>
+        </record>
+
+    </data>
+</odoo>

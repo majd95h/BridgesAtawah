@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="action_report_eh_log_carrier_booking" model="ir.actions.report">
+        <field name="name">Carrier Booking Confirmation</field>
+        <field name="model">eh.log.carrier.booking</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">eh_log_carrier_portal.report_carrier_booking_document</field>
+        <field name="report_file">eh_log_carrier_portal.report_carrier_booking_document</field>
+        <field name="binding_model_id" ref="model_eh_log_carrier_booking"/>
+        <field name="binding_type">report</field>
+        <field name="paperformat_id" ref="eh_log_base.paperformat_eh_log_portrait"/>
+    </record>
+
+    <template id="report_carrier_booking_document">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="booking">
+                <t t-call="eh_log_base.eh_log_clean_layout">
+                    <t t-set="company" t-value="booking.company_id"/>
+                    <t t-set="report_type" t-value="'pdf'"/>
+                    <t t-call="eh_log_base.eh_log_report_styles"/>
+                    <div class="page eh_pdf_page">
+                        <t t-call="eh_log_base.eh_log_report_header">
+                            <t t-set="title" t-value="'Carrier Booking Confirmation'"/>
+                            <t t-set="company" t-value="booking.company_id"/>
+                        </t>
+
+                        <div class="eh_pdf_meta">
+                            <span><strong>Reference:</strong> <t t-out="booking.name"/></span>
+                            <span><strong>Carrier:</strong> <t t-out="booking.carrier_profile_id.name"/></span>
+                            <span><strong>Service:</strong> <t t-out="booking.quote_id.service_name or ''"/></span>
+                            <span><strong>Carrier Reference:</strong> <t t-out="booking.carrier_booking_reference or ''"/></span>
+                            <span><strong>State:</strong> <t t-out="booking.state"/></span>
+                        </div>
+
+                        <h2 class="eh_pdf_subtitle">Route</h2>
+                        <table class="eh_pdf_table">
+                            <thead>
+                                <tr>
+                                    <th>Origin</th>
+                                    <th>Destination</th>
+                                    <th>Mode</th>
+                                    <th>Ready By</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <t t-out="booking.request_id.origin_country_id.code or ''"/>
+                                        <t t-if="booking.request_id.origin_location_code">
+                                            / <t t-out="booking.request_id.origin_location_code"/>
+                                        </t>
+                                    </td>
+                                    <td>
+                                        <t t-out="booking.request_id.destination_country_id.code or ''"/>
+                                        <t t-if="booking.request_id.destination_location_code">
+                                            / <t t-out="booking.request_id.destination_location_code"/>
+                                        </t>
+                                    </td>
+                                    <td><t t-out="booking.request_id.mode or ''"/></td>
+                                    <td><t t-out="booking.request_id.ready_by_date and booking.request_id.ready_by_date.strftime('%Y-%m-%d') or ''"/></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2 class="eh_pdf_subtitle">Cargo</h2>
+                        <table class="eh_pdf_table">
+                            <thead>
+                                <tr>
+                                    <th class="text-end">Weight (kg)</th>
+                                    <th class="text-end">Volume (CBM)</th>
+                                    <th class="text-end">Packages</th>
+                                    <th>Dangerous Goods</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-end"><t t-out="'{:.2f}'.format(booking.request_id.weight_kg)"/></td>
+                                    <td class="text-end"><t t-out="'{:.3f}'.format(booking.request_id.volume_cbm)"/></td>
+                                    <td class="text-end"><t t-out="booking.request_id.package_count"/></td>
+                                    <td><t t-out="booking.request_id.is_dangerous_goods and 'Yes' or 'No'"/></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>

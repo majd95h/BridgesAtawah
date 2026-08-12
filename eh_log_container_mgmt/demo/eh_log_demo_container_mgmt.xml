@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- Depots -->
+
+        <record id="demo_depot_jea_t2" model="eh.log.container.mgmt.depot">
+            <field name="code">AEJEA_T2</field>
+            <field name="name">Jebel Ali Container Terminal 2</field>
+            <field name="depot_kind">port_terminal</field>
+            <field name="country_id" ref="base.ae"/>
+            <field name="capacity_teu">8500</field>
+            <field name="accepts_reefer" eval="True"/>
+            <field name="accepts_dangerous" eval="True"/>
+        </record>
+
+        <record id="demo_depot_dwc" model="eh.log.container.mgmt.depot">
+            <field name="code">AEDWC_ICD</field>
+            <field name="name">Dubai South Inland Container Depot</field>
+            <field name="depot_kind">inland_depot</field>
+            <field name="country_id" ref="base.ae"/>
+            <field name="capacity_teu">3200</field>
+            <field name="accepts_reefer" eval="True"/>
+        </record>
+
+        <record id="demo_depot_kap" model="eh.log.container.mgmt.depot">
+            <field name="code">SAKAP_T1</field>
+            <field name="name">King Abdullah Port Terminal 1</field>
+            <field name="depot_kind">port_terminal</field>
+            <field name="country_id" ref="base.sa"/>
+            <field name="capacity_teu">7200</field>
+            <field name="accepts_reefer" eval="True"/>
+            <field name="accepts_dangerous" eval="True"/>
+        </record>
+
+        <record id="demo_depot_doha" model="eh.log.container.mgmt.depot">
+            <field name="code">QAHMD_CT</field>
+            <field name="name">Hamad Port Container Terminal</field>
+            <field name="depot_kind">port_terminal</field>
+            <field name="country_id" ref="base.qa"/>
+            <field name="capacity_teu">6500</field>
+            <field name="accepts_reefer" eval="True"/>
+        </record>
+
+        <record id="demo_depot_sohar" model="eh.log.container.mgmt.depot">
+            <field name="code">OMSOH_CT</field>
+            <field name="name">Sohar Container Terminal</field>
+            <field name="depot_kind">port_terminal</field>
+            <field name="country_id" ref="base.om"/>
+            <field name="capacity_teu">5500</field>
+        </record>
+
+        <!-- Lease contracts -->
+
+        <record id="demo_lease_msc_in" model="eh.log.container.mgmt.lease.contract">
+            <field name="partner_id" ref="eh_log_base.demo_partner_carrier_msc"/>
+            <field name="direction">lease_in</field>
+            <field name="iso_type_id" ref="eh_log_freight.iso_42g1"/>
+            <field name="partner_reference">MSC-LEASE-2026-AE-001</field>
+            <field name="starts_on" eval="(DateTime.today() - relativedelta(months=2)).strftime('%Y-%m-%d')"/>
+            <field name="ends_on" eval="(DateTime.today() + relativedelta(months=10)).strftime('%Y-%m-%d')"/>
+            <field name="daily_rate">2.85</field>
+        </record>
+
+        <record id="demo_lease_maersk_in" model="eh.log.container.mgmt.lease.contract">
+            <field name="partner_id" ref="eh_log_base.demo_partner_carrier_maersk"/>
+            <field name="direction">lease_in</field>
+            <field name="iso_type_id" ref="eh_log_freight.iso_45g1"/>
+            <field name="partner_reference">MAERSK-LEASE-2026-SA-005</field>
+            <field name="starts_on" eval="(DateTime.today() - relativedelta(months=1)).strftime('%Y-%m-%d')"/>
+            <field name="ends_on" eval="(DateTime.today() + relativedelta(months=11)).strftime('%Y-%m-%d')"/>
+            <field name="daily_rate">3.20</field>
+        </record>
+
+    </data>
+</odoo>

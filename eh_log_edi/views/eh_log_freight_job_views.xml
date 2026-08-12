@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_eh_log_freight_job_form_edi" model="ir.ui.view">
+        <field name="name">eh.log.freight.job.form.edi</field>
+        <field name="model">eh.log.freight.job</field>
+        <field name="inherit_id" ref="eh_log_freight.view_eh_log_freight_job_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button name="action_view_edi_outbound"
+                        type="object"
+                        class="oe_stat_button"
+                        icon="fa-paper-plane">
+                    <field string="EDI Out" name="eh_log_edi_outbound_count" widget="statinfo"/>
+                </button>
+            </xpath>
+            <xpath expr="//header" position="inside">
+                <button name="action_queue_iftmin"
+                        string="Queue IFTMIN"
+                        type="object"
+                        class="btn-secondary"
+                        invisible="state in ('draft', 'cancelled')"
+                        groups="eh_log_base.group_eh_log_user"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

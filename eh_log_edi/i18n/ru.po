@@ -1,0 +1,1322 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* eh_log_edi
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-01 04:33+0000\n"
+"PO-Revision-Date: 2026-07-01 04:33+0000\n"
+"Last-Translator: ERP Heritage <info@erpheritage.com.au>\n"
+"Language-Team: Russian\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/wizards/eh_log_edi_mass_action.py:0
+msgid "%(count)d dead-letter message(s) re-queued."
+msgstr ""
+"%(count)d недоставленное(-ых) сообщение(-й) повторно поставлено в очередь."
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/wizards/eh_log_edi_mass_action.py:0
+msgid "%(count)d inbound message(s) reprocessed."
+msgstr "%(count)d входящее(-их) сообщение(-й) обработано повторно."
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_kanban
+msgid "<i class=\"fa fa-file me-1\" title=\"Payload File\"/>"
+msgstr "<i class=\"fa fa-file me-1\" title=\"Файл полезной нагрузки\"/>"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_kanban
+msgid "<i class=\"fa fa-file me-1\" title=\"Raw File\"/>"
+msgstr "<i class=\"fa fa-file me-1\" title=\"Исходный файл\"/>"
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_transport.py:0
+msgid "<p>Auto-generated EDI message; the EDIFACT payload is attached.</p>"
+msgstr ""
+"<p>Автоматически сгенерированное сообщение EDI; полезная нагрузка EDIFACT "
+"прикреплена.</p>"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_message_type__encoding__x12
+msgid "ANSI X12"
+msgstr ""
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_transport__protocol__as2
+msgid "AS2"
+msgstr ""
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__acked_at
+msgid "Acked At"
+msgstr "Подтверждено в"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_outbound__state__acked
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search_full
+msgid "Acknowledged"
+msgstr "Подтверждено"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__message_needaction
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__message_needaction
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__message_needaction
+msgid "Action Needed"
+msgstr "Требуются действия"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_message_type__active
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__active
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__active
+msgid "Active"
+msgstr "Активный"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__activity_ids
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__activity_ids
+msgid "Activities"
+msgstr "Активность"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__activity_exception_decoration
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Оформление задачи-исключения"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__activity_state
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__activity_state
+msgid "Activity State"
+msgstr "Состояние активности"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__activity_type_icon
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Значок типа активности"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__message_attachment_count
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__message_attachment_count
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__message_attachment_count
+msgid "Attachment Count"
+msgstr "Количество вложений"
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_transport.py:0
+msgid "Auto-generated EDI message from the ERP Heritage logistics suite."
+msgstr ""
+"Автоматически сгенерированное сообщение EDI из логистического пакета ERP "
+"Heritage."
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_message_type__direction__both
+msgid "Both"
+msgstr "Оба"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_mass_reprocess_form
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_form
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_mass_resume_form
+msgid "Cancel"
+msgstr "Отменить"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_outbound__state__cancelled
+msgid "Cancelled"
+msgstr "Отменен"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_form
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_form
+msgid "Close"
+msgstr "Закрыть"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_inbound__state__closed
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_outbound__state__closed
+msgid "Closed"
+msgstr "Закрыто"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_message_type__code
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__code
+msgid "Code"
+msgstr "Код"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__company_id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__company_id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__company_id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__company_id
+msgid "Company"
+msgstr "Компания"
+
+#. module: eh_log_edi
+#: model:ir.model,name:eh_log_edi.model_res_config_settings
+msgid "Config Settings"
+msgstr "Параметры конфигурации"
+
+#. module: eh_log_edi
+#: model:ir.model,name:eh_log_edi.model_res_partner
+msgid "Contact"
+msgstr "Контакты"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search_full
+msgid "Created Today"
+msgstr "Создано сегодня"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__create_uid
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound_mass_reprocess__create_uid
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_message_type__create_uid
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__create_uid
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound_mass_resume__create_uid
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__create_uid
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__create_uid
+msgid "Created by"
+msgstr "Создано:"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__create_date
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound_mass_reprocess__create_date
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_message_type__create_date
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__create_date
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound_mass_resume__create_date
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__create_date
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__create_date
+msgid "Created on"
+msgstr "Дата создания:"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__credentials_key
+msgid "Credentials Key"
+msgstr "Ключ учётных данных"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_outbound__max_retries
+msgid ""
+"Cron retry budget. Reached: row moves to dead_letter; operator must manually"
+" re-queue or cancel."
+msgstr ""
+"Бюджет повторных попыток Cron. При достижении: строка переходит в "
+"dead_letter; оператор должен вручную повторно поставить в очередь или "
+"отменить."
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_outbound__state__dead_letter
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search_full
+msgid "Dead Letter"
+msgstr "Недоставленное сообщение"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound_mass_resume__outbound_ids
+msgid "Dead-letter Messages"
+msgstr "Недоставленные сообщения"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__is_default
+msgid "Default for Partner"
+msgstr "По умолчанию для партнёра"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_message_type__description
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_message_type_form
+msgid "Description"
+msgstr "Описание"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_message_type__direction
+msgid "Direction"
+msgstr "Направление"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__display_name
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound_mass_reprocess__display_name
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_message_type__display_name
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__display_name
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound_mass_resume__display_name
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__display_name
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__display_name
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_freight_job__display_name
+#: model:ir.model.fields,field_description:eh_log_edi.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:eh_log_edi.field_res_partner__display_name
+msgid "Display Name"
+msgstr "Отображаемое имя"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_outbound__state__draft
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search_full
+msgid "Draft"
+msgstr "Черновик"
+
+#. module: eh_log_edi
+#: model:ir.model.constraint,message:eh_log_edi.constraint_eh_log_edi_partner_partner_identifier_unique
+msgid "Duplicate partner identifier for the same partner."
+msgstr "Дубликат идентификатора партнёра для одного и того же партнёра."
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_res_partner__eh_log_edi_partner_ids
+#: model:ir.model.fields,field_description:eh_log_edi.field_res_users__eh_log_edi_partner_ids
+msgid "EDI Configurations"
+msgstr "Конфигурации EDI"
+
+#. module: eh_log_edi
+#: model:ir.ui.menu,name:eh_log_edi.menu_eh_log_edi_config_root
+#: model:ir.ui.menu,name:eh_log_edi.menu_eh_log_edi_root
+msgid "EDI Hub"
+msgstr "Узел EDI"
+
+#. module: eh_log_edi
+#: model:ir.model,name:eh_log_edi.model_eh_log_edi_inbound
+msgid "EDI Inbound Message"
+msgstr "Входящее сообщение EDI"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_pivot
+msgid "EDI Inbound Volume"
+msgstr "Объём входящих EDI"
+
+#. module: eh_log_edi
+#: model:ir.model,name:eh_log_edi.model_eh_log_edi_message_type
+msgid "EDI Message Type"
+msgstr "Тип сообщения EDI"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_freight_job_form_edi
+msgid "EDI Out"
+msgstr "Исходящие EDI"
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_freight_job.py:0
+msgid "EDI Outbound"
+msgstr "Исходящие EDI"
+
+#. module: eh_log_edi
+#: model:ir.model,name:eh_log_edi.model_eh_log_edi_outbound
+msgid "EDI Outbound Message"
+msgstr "Исходящее сообщение EDI"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_freight_job__eh_log_edi_outbound_count
+msgid "EDI Outbound Messages"
+msgstr "Исходящие сообщения EDI"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_pivot
+msgid "EDI Outbound Volume"
+msgstr "Объём исходящих EDI"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_graph
+msgid "EDI Outbound by State"
+msgstr "Исходящие EDI по состоянию"
+
+#. module: eh_log_edi
+#: model:ir.model,name:eh_log_edi.model_eh_log_edi_partner
+msgid "EDI Partner Configuration"
+msgstr "Конфигурация партнёра EDI"
+
+#. module: eh_log_edi
+#: model:ir.actions.act_window,name:eh_log_edi.action_eh_log_edi_partner
+#: model:ir.ui.menu,name:eh_log_edi.menu_eh_log_edi_partners
+msgid "EDI Partners"
+msgstr "Партнёры EDI"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_res_config_settings__eh_log_edi_self_identifier
+msgid "EDI Self Identifier"
+msgstr "Собственный идентификатор EDI"
+
+#. module: eh_log_edi
+#: model:ir.model,name:eh_log_edi.model_eh_log_edi_transport
+msgid "EDI Transport"
+msgstr "Транспорт EDI"
+
+#. module: eh_log_edi
+#: model:ir.actions.server,name:eh_log_edi.cron_dispatch_outbound_ir_actions_server
+msgid "EDI: Dispatch Outbound Queue"
+msgstr "EDI: Отправить исходящую очередь"
+
+#. module: eh_log_edi
+#: model:ir.actions.server,name:eh_log_edi.cron_process_inbound_ir_actions_server
+msgid "EDI: Process Inbound Queue"
+msgstr "EDI: Обработать входящую очередь"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.res_config_settings_view_form_edi
+msgid "ERP Heritage EDI Hub"
+msgstr "Хаб EDI ERP Heritage"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_message_type__encoding
+msgid "Encoding"
+msgstr "Кодировка"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_transport_form
+msgid "Endpoint"
+msgstr "Конечная точка"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_transport__protocol__file
+msgid "File Drop"
+msgstr "Перетаскивание файла"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__raw_filename
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__payload_filename
+msgid "Filename"
+msgstr "Название файла"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__filename_template
+msgid "Filename Template"
+msgstr "Шаблон имени файла"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__message_follower_ids
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__message_follower_ids
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__message_follower_ids
+msgid "Followers"
+msgstr "Подписчики"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__message_partner_ids
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__message_partner_ids
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Подписчики"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_inbound__activity_type_icon
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_outbound__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Шрифт, отличный значок, например. к.-а.-задачи"
+
+#. module: eh_log_edi
+#: model:ir.model,name:eh_log_edi.model_eh_log_freight_job
+msgid "Freight Forwarding Job"
+msgstr "Задание на экспедирование груза"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_partner__partner_identifier
+msgid ""
+"GLN, DUNS, EAN, or internal code carried in the EDI envelope as the "
+"recipient identifier."
+msgstr ""
+"GLN, DUNS, EAN или внутренний код, передаваемый в конверте EDI в качестве "
+"идентификатора получателя."
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.res_config_settings_view_form_edi
+msgid "GLN, DUNS, or internal code"
+msgstr "GLN, DUNS или внутренний код"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_transport__protocol__http
+msgid "HTTP"
+msgstr ""
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__has_message
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__has_message
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__has_message
+msgid "Has Message"
+msgstr "Есть сообщение"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search_full
+msgid "Has Retries"
+msgstr "Есть повторные попытки"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__host
+msgid "Host"
+msgstr "Хост"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound_mass_reprocess__id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_message_type__id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound_mass_resume__id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_freight_job__id
+#: model:ir.model.fields,field_description:eh_log_edi.field_res_config_settings__id
+#: model:ir.model.fields,field_description:eh_log_edi.field_res_partner__id
+msgid "ID"
+msgstr "Номер"
+
+#. module: eh_log_edi
+#: model:eh.log.edi.message.type,name:eh_log_edi.message_type_iftmin
+msgid "IFTMIN - Forwarding Instruction"
+msgstr "IFTMIN - Инструкция по экспедированию"
+
+#. module: eh_log_edi
+#: model:eh.log.edi.message.type,name:eh_log_edi.message_type_iftsta
+msgid "IFTSTA - International Multimodal Status Report"
+msgstr "IFTSTA - Международный отчёт о статусе мультимодальных перевозок"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__activity_exception_icon
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__activity_exception_icon
+msgid "Icon"
+msgstr "Иконка"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_inbound__activity_exception_icon
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_outbound__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Иконка, указывающая на задачу-исключение."
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_res_config_settings__eh_log_edi_self_identifier
+msgid ""
+"Identifier (GLN, DUNS, internal) inserted as the sender party on every "
+"outbound EDI envelope. Per-partner configurations may override this value."
+msgstr ""
+"Идентификатор (GLN, DUNS, внутренний), вставляемый как сторона-отправитель в"
+" каждый исходящий конверт EDI. Настройки для отдельных партнёров могут "
+"переопределять это значение."
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.res_config_settings_view_form_edi
+msgid ""
+"Identifier inserted as the sender party on every outbound EDI envelope."
+msgstr ""
+"Идентификатор, вставляемый как сторона-отправитель в каждый исходящий "
+"конверт EDI."
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_outbound__transport_reference
+msgid ""
+"Identifier returned by the transport (SMTP message id, SFTP path, HTTP "
+"status). Useful for manual lookup."
+msgstr ""
+"Идентификатор, возвращаемый транспортом (id сообщения SMTP, путь SFTP, "
+"статус HTTP). Полезен для ручного поиска."
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_partner__self_party_identifier_override
+msgid ""
+"Identifier the partner expects to see as the sender. Falls back to the "
+"company's eh_log_edi_self_identifier when blank."
+msgstr ""
+"Идентификатор, который партнёр ожидает увидеть в качестве отправителя. При "
+"пустом значении используется eh_log_edi_self_identifier компании."
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.res_config_settings_view_form_edi
+msgid "Identity"
+msgstr "Идентификация"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_inbound__message_needaction
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_outbound__message_needaction
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_partner__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+"Если флажок установлен, значит, новые сообщения требуют вашего внимания."
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_inbound__message_has_error
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_inbound__message_has_sms_error
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_outbound__message_has_error
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_outbound__message_has_sms_error
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_partner__message_has_error
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_partner__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Если отмечено, некоторые сообщения имеют ошибку доставки."
+
+#. module: eh_log_edi
+#: model:ir.actions.act_window,name:eh_log_edi.action_eh_log_edi_inbound
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_message_type__direction__in
+#: model:ir.ui.menu,name:eh_log_edi.menu_eh_log_edi_inbound
+msgid "Inbound"
+msgstr "Входящие"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound_mass_reprocess__inbound_ids
+msgid "Inbound Messages"
+msgstr "Входящие сообщения"
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_inbound.py:0
+msgid "Inbound message %(name)s cannot move from %(from)s to %(to)s."
+msgstr "Входящее сообщение %(name)s не может перейти из %(from)s в %(to)s."
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__message_is_follower
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__message_is_follower
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__message_is_follower
+msgid "Is Follower"
+msgstr "Является подписчиком"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_message_type__encoding__json
+msgid "JSON"
+msgstr ""
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_inbound__parsed_payload
+msgid ""
+"JSON serialisation of the parser output. Stored for operator review and "
+"replay."
+msgstr ""
+"JSON-сериализация выходных данных парсера. Сохраняется для проверки и "
+"воспроизведения оператором."
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__error_message
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__error_message
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_form
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_form
+msgid "Last Error"
+msgstr "Последняя ошибка"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__write_uid
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound_mass_reprocess__write_uid
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_message_type__write_uid
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__write_uid
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound_mass_resume__write_uid
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__write_uid
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__write_uid
+msgid "Last Updated by"
+msgstr "Последнее обновление:"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__write_date
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound_mass_reprocess__write_date
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_message_type__write_date
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__write_date
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound_mass_resume__write_date
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__write_date
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__write_date
+msgid "Last Updated on"
+msgstr "Дата последнего обновления:"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_transport__credentials_key
+msgid "Lookup key for the credentials helper."
+msgstr "Ключ поиска для помощника учётных данных."
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_form
+msgid "Mark Acked"
+msgstr "Отметить как подтверждено"
+
+#. module: eh_log_edi
+#: model:ir.actions.act_window,name:eh_log_edi.action_eh_log_edi_inbound_mass_reprocess
+msgid "Mass-reprocess"
+msgstr "Массовая повторная обработка"
+
+#. module: eh_log_edi
+#: model:ir.model,name:eh_log_edi.model_eh_log_edi_inbound_mass_reprocess
+msgid "Mass-reprocess EDI Inbound"
+msgstr "Массовая повторная обработка входящих EDI"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_mass_reprocess_form
+msgid "Mass-reprocess Inbound"
+msgstr "Массовая повторная обработка входящих"
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/wizards/eh_log_edi_mass_action.py:0
+msgid "Mass-reprocess complete"
+msgstr "Массовая повторная обработка завершена"
+
+#. module: eh_log_edi
+#: model:ir.actions.act_window,name:eh_log_edi.action_eh_log_edi_outbound_mass_resume
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_mass_resume_form
+msgid "Mass-resume Dead-letter"
+msgstr "Массовое возобновление недоставленных сообщений"
+
+#. module: eh_log_edi
+#: model:ir.model,name:eh_log_edi.model_eh_log_edi_outbound_mass_resume
+msgid "Mass-resume EDI Dead-letter"
+msgstr "Массовое возобновление недоставленных сообщений EDI"
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/wizards/eh_log_edi_mass_action.py:0
+msgid "Mass-resume complete"
+msgstr "Массовое возобновление завершено"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__max_retries
+msgid "Max Retries"
+msgstr "Макс. повторных попыток"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__message_has_error
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__message_has_error
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__message_has_error
+msgid "Message Delivery error"
+msgstr "Ошибка доставки сообщения"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__message_type_id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__message_type_id
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_search_full
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search_full
+msgid "Message Type"
+msgstr "Тип сообщения"
+
+#. module: eh_log_edi
+#: model:ir.actions.act_window,name:eh_log_edi.action_eh_log_edi_message_type
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__message_type_ids
+#: model:ir.ui.menu,name:eh_log_edi.menu_eh_log_edi_message_types
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_partner_form
+msgid "Message Types"
+msgstr "Типы сообщений"
+
+#. module: eh_log_edi
+#: model:ir.model.constraint,message:eh_log_edi.constraint_eh_log_edi_message_type_code_direction_unique
+msgid "Message type code/direction combination must be unique."
+msgstr "Комбинация код/направление типа сообщения должна быть уникальной."
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_partner__message_type_ids
+msgid "Message types this configuration may dispatch / receive."
+msgstr "Типы сообщений, которые эта конфигурация может отправлять / получать."
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__message_ids
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__message_ids
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__message_ids
+msgid "Messages"
+msgstr "Сообщения"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_transport__protocol__mock
+msgid "Mock (Tests)"
+msgstr "Заглушка (тесты)"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__my_activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Крайний срок моей активности"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_message_type__name
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__name
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__name
+msgid "Name"
+msgstr "Имя"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_inbound__target_record_ref
+msgid ""
+"Name of the record affected by apply(). For IFTSTA, the freight job that "
+"received the new tracking event."
+msgstr ""
+"Название записи, затронутой apply(). Для IFTSTA — грузовая задача, "
+"получившая новое событие отслеживания."
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_inbound.py:0
+#: code:addons/eh_log_edi/models/eh_log_edi_outbound.py:0
+msgid "New"
+msgstr "Новый"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__activity_calendar_event_id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "Следующее событие календаря активности"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Следующий срок мероприятия"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__activity_summary
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__activity_summary
+msgid "Next Activity Summary"
+msgstr "Резюме следующего действия"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__activity_type_id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__activity_type_id
+msgid "Next Activity Type"
+msgstr "Следующий Тип Мероприятия"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__message_needaction_counter
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__message_needaction_counter
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Число действий"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__message_has_error_counter
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__message_has_error_counter
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__message_has_error_counter
+msgid "Number of errors"
+msgstr "Число ошибок"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_inbound__message_needaction_counter
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_outbound__message_needaction_counter
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_partner__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Количество сообщений, требующих принятия мер"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_inbound__message_has_error_counter
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_outbound__message_has_error_counter
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_partner__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Количество недоставленных сообщений"
+
+#. module: eh_log_edi
+#: model:ir.actions.act_window,name:eh_log_edi.action_eh_log_edi_outbound
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_message_type__direction__out
+#: model:ir.ui.menu,name:eh_log_edi.menu_eh_log_edi_outbound
+msgid "Outbound"
+msgstr "Исходящие"
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_outbound.py:0
+msgid "Outbound message %(name)s cannot move from %(from)s to %(to)s."
+msgstr "Исходящее сообщение %(name)s не может перейти из %(from)s в %(to)s."
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_form
+msgid "Parse"
+msgstr "Разобрать"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_inbound__state__parsed
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_search_full
+msgid "Parsed"
+msgstr "Разобрано"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__parsed_at
+msgid "Parsed At"
+msgstr "Разобрано"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__parsed_payload
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_form
+msgid "Parsed Payload"
+msgstr "Разобранная полезная нагрузка"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__partner_id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__partner_id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__partner_id
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_search_full
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search_full
+msgid "Partner"
+msgstr "Партнер"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__partner_config_id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__partner_config_id
+msgid "Partner Configuration"
+msgstr "Настройка партнёра"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__partner_identifier
+msgid "Partner Identifier"
+msgstr "Идентификатор партнёра"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__payload
+msgid "Payload"
+msgstr "Полезная нагрузка"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_partner__is_default
+msgid ""
+"Pick this configuration when the dispatcher needs to send to the partner "
+"without an explicit configuration reference."
+msgstr ""
+"Выберите эту конфигурацию, когда диспетчеру нужно отправить партнеру без "
+"явной ссылки на конфигурацию."
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__port
+msgid "Port"
+msgstr "Порт"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_form
+msgid "Process"
+msgstr "Процесс"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_inbound__state__processed
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_search_full
+msgid "Processed"
+msgstr "Обработан"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__processed_at
+msgid "Processed At"
+msgstr "Обработано"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__protocol
+msgid "Protocol"
+msgstr "Протокол"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_form
+msgid "Queue"
+msgstr "Очередь"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_freight_job_form_edi
+msgid "Queue IFTMIN"
+msgstr "Поставить IFTMIN в очередь"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_outbound__state__queued
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search_full
+msgid "Queued"
+msgstr "В очереди"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__rating_ids
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__rating_ids
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__rating_ids
+msgid "Ratings"
+msgstr "Рейтинги"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__raw_payload
+msgid "Raw Payload"
+msgstr "Необработанные данные"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_form
+msgid "Re-queue"
+msgstr "Вернуть в очередь"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_mass_resume_form
+msgid "Re-queue All"
+msgstr "Вернуть всё в очередь"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_inbound__state__received
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_search_full
+msgid "Received"
+msgstr "Получено"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__received_at
+msgid "Received At"
+msgstr "Получено"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_search_full
+msgid "Received Today"
+msgstr "Получено сегодня"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__name
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__name
+msgid "Reference"
+msgstr "Справка"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_inbound__state__rejected
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_outbound__state__rejected
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_search_full
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search_full
+msgid "Rejected"
+msgstr "Отклонено"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_mass_reprocess_form
+msgid "Reprocess All"
+msgstr "Обработать всё повторно"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__activity_user_id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__activity_user_id
+msgid "Responsible User"
+msgstr "Ответственный пользователь"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_form
+msgid "Resume"
+msgstr "Резюме"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__retry_count
+msgid "Retries"
+msgstr "Повторные попытки"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_kanban
+msgid "Retries:"
+msgstr "Повторные попытки:"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_transport__protocol__sftp
+msgid "SFTP"
+msgstr ""
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__message_has_sms_error
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__message_has_sms_error
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Ошибка доставки SMS"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_transport__protocol__smtp
+msgid "SMTP"
+msgstr ""
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_search_full
+msgid "Search Inbound EDI"
+msgstr "Поиск входящих EDI"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search_full
+msgid "Search Outbound EDI"
+msgstr "Поиск исходящих EDI"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.res_config_settings_view_form_edi
+msgid "Self Identifier"
+msgstr "Собственный идентификатор"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__self_party_identifier_override
+msgid "Self Identifier Override"
+msgstr "Переопределение собственного идентификатора"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_form
+msgid "Send Now"
+msgstr "Отправить сейчас"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_outbound__state__sent
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search_full
+msgid "Sent"
+msgstr "Отправлено"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__sent_at
+msgid "Sent At"
+msgstr "Отправлено"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__signing_required
+msgid "Signing Required"
+msgstr "Требуется подпись"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__source_id
+msgid "Source ID"
+msgstr "ID источника"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__source_model
+msgid "Source Model"
+msgstr "Исходная модель"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__state
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__state
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_search_full
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search_full
+msgid "State"
+msgstr "Область"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_inbound__activity_state
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_outbound__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Статус, основанный на мероприятии\n"
+"Просроченная: Дата, уже прошла\n"
+"Сегодня: Дата мероприятия сегодня\n"
+"Запланировано: будущая деятельность."
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_partner__filename_template
+msgid ""
+"Substitutions: {message}, {date}, {sequence}, {partner_code}. Used to "
+"compose outbound filenames."
+msgstr ""
+"Подстановки: {message}, {date}, {sequence}, {partner_code}. Используются для"
+" формирования имён исходящих файлов."
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__target_directory
+msgid "Target Directory"
+msgstr "Целевой каталог"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__target_email
+msgid "Target Email"
+msgstr "Целевой адрес электронной почты"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__target_record_ref
+msgid "Target Record"
+msgstr "Запись цели"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__target_url
+msgid "Target URL"
+msgstr "Целевой URL"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__transport_id
+msgid "Transport"
+msgstr "Транспорт"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__transport_reference
+msgid "Transport Reference"
+msgstr "Ссылка на транспорт"
+
+#. module: eh_log_edi
+#: model:ir.model.constraint,message:eh_log_edi.constraint_eh_log_edi_transport_transport_code_unique
+msgid "Transport code must be unique per company."
+msgstr "Код транспорта должен быть уникальным для каждой компании."
+
+#. module: eh_log_edi
+#: model:ir.actions.act_window,name:eh_log_edi.action_eh_log_edi_transport
+#: model:ir.ui.menu,name:eh_log_edi.menu_eh_log_edi_transports
+msgid "Transports"
+msgstr "Транспортировки"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_inbound__activity_exception_decoration
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_outbound__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Тип задачи-исключения в записи."
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_message_type__encoding__edifact
+msgid "UN/EDIFACT"
+msgstr ""
+
+#. module: eh_log_edi
+#: model:eh.log.edi.message.type,description:eh_log_edi.message_type_iftmin
+msgid ""
+"UN/EDIFACT D.96B forwarding instruction. Sent from forwarder to carrier or "
+"upstream agent to instruct handling of a shipment."
+msgstr ""
+"Инструкция по экспедированию UN/EDIFACT D.96B. Отправляется от экспедитора к"
+" перевозчику или вышестоящему агенту для указания порядка обработки "
+"отправления."
+
+#. module: eh_log_edi
+#: model:eh.log.edi.message.type,description:eh_log_edi.message_type_iftsta
+msgid ""
+"UN/EDIFACT D.96B status report. Received from carrier or upstream agent "
+"reporting on the progress of a shipment."
+msgstr ""
+"Отчёт о статусе UN/EDIFACT D.96B. Получается от перевозчика или вышестоящего"
+" агента, сообщающего о ходе выполнения отправления."
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__username
+msgid "Username"
+msgstr "Имя пользователя"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__website_message_ids
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__website_message_ids
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__website_message_ids
+msgid "Website Messages"
+msgstr "Веб-сайт сообщения"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_inbound__website_message_ids
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_outbound__website_message_ids
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_partner__website_message_ids
+msgid "Website communication history"
+msgstr "История общений с сайта"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_outbound__payload
+msgid ""
+"Wire bytes built by the translator. Stored once and re-used on retry so the "
+"partner sees identical content across attempts."
+msgstr ""
+"Байты передачи, созданные транслятором. Сохраняются один раз и повторно "
+"используются при повторной попытке, так что партнёр видит идентичное "
+"содержимое при всех попытках."
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_message_type__encoding__xml
+msgid "XML"
+msgstr ""
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_message_type.py:0
+msgid ""
+"[EHL-EDI-001] No translator registered for message type %(code)s direction "
+"%(direction)s. Install the module that provides the translator or untick "
+"Active."
+msgstr ""
+"[EHL-EDI-001] Не зарегистрирован транслятор для типа сообщения %(code)s "
+"направление %(direction)s. Установите модуль, предоставляющий транслятор, "
+"или снимите флажок «Активно»."
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_transport.py:0
+msgid ""
+"[EHL-EDI-002] Transport %(name)s requires host or target URL for protocol "
+"%(protocol)s."
+msgstr ""
+"[EHL-EDI-002] Транспорт %(name)s требует хост или целевой URL для протокола "
+"%(protocol)s."
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_transport.py:0
+msgid "[EHL-EDI-003] Transport %(name)s requires a target email for SMTP."
+msgstr ""
+"[EHL-EDI-003] Транспорт %(name)s требует целевой адрес электронной почты для"
+" SMTP."
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_transport.py:0
+msgid ""
+"[EHL-EDI-004] AS2 transport requires the optional pyas2 library; install it "
+"and provide a signing certificate before activating an AS2 transport."
+msgstr ""
+"[EHL-EDI-004] Транспорт AS2 требует опциональную библиотеку pyas2; "
+"установите её и предоставьте сертификат подписи перед активацией транспорта "
+"AS2."
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_transport.py:0
+msgid "[EHL-EDI-005] Unsupported transport protocol %(protocol)s."
+msgstr "[EHL-EDI-005] Неподдерживаемый транспортный протокол %(protocol)s."
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_transport.py:0
+msgid ""
+"[EHL-EDI-006] SFTP transport requires the optional paramiko library; pip "
+"install paramiko on the Odoo host before activating SFTP."
+msgstr ""
+"[EHL-EDI-006] Транспорт SFTP требует опциональную библиотеку paramiko; "
+"выполните pip install paramiko на хосте Odoo перед активацией SFTP."
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_transport.py:0
+msgid ""
+"[EHL-EDI-007] HTTP transport %(name)s rejected the payload with status "
+"%(status)s: %(body)s"
+msgstr ""
+"[EHL-EDI-007] Транспорт HTTP %(name)s отклонил полезные данные со статусом "
+"%(status)s: %(body)s"
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_partner.py:0
+msgid ""
+"[EHL-EDI-008] Only one default EDI configuration is allowed per partner."
+msgstr ""
+"[EHL-EDI-008] Для каждого партнёра допускается только одна конфигурация EDI "
+"по умолчанию."
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_outbound.py:0
+msgid "[EHL-EDI-009] Outbound state must change via the action buttons."
+msgstr ""
+"[EHL-EDI-009] Исходящее состояние должно изменяться через кнопки действий."
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_outbound.py:0
+msgid ""
+"[EHL-EDI-010] No outbound translator registered for message type %(code)s."
+msgstr ""
+"[EHL-EDI-010] Не зарегистрирован исходящий транслятор для типа сообщения "
+"%(code)s."
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_outbound.py:0
+msgid ""
+"[EHL-EDI-011] Source record %(model)s/%(id)s no longer exists; cannot build "
+"payload."
+msgstr ""
+"[EHL-EDI-011] Исходная запись %(model)s/%(id)s больше не существует; "
+"невозможно сформировать полезные данные."
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_inbound.py:0
+msgid ""
+"[EHL-EDI-012] No inbound translator registered for message type %(code)s."
+msgstr ""
+"[EHL-EDI-012] Не зарегистрирован входящий транслятор для типа сообщения "
+"%(code)s."
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_inbound.py:0
+msgid "[EHL-EDI-013] No inbound translator for %(code)s."
+msgstr "[EHL-EDI-013] Нет входящего транслятора для %(code)s."
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_inbound.py:0
+msgid "[EHL-EDI-014] Inbound state must change via the action buttons."
+msgstr ""
+"[EHL-EDI-014] Входящее состояние должно изменяться через кнопки действий."
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_freight_job.py:0
+msgid "source_model"
+msgstr ""

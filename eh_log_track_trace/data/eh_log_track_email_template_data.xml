@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="1">
+    <data>
+
+        <record id="email_template_track_event_milestone" model="mail.template">
+            <field name="name">Tracking: Milestone Notification</field>
+            <field name="model_id" ref="model_eh_log_track_event"/>
+            <field name="subject">Shipment update: {{ object.event_code_id.name }}</field>
+            <field name="email_from">{{ user.email_formatted or user.company_id.email_formatted }}</field>
+            <field name="auto_delete" eval="False"/>
+            <field name="body_html" type="html">
+                <div class="eh-track-mail">
+                    <p>A new milestone was recorded for your shipment.</p>
+                    <p>
+                        <strong>
+                            <t t-out="object.event_code_id.name or ''"/>
+                        </strong>
+                    </p>
+                    <p t-if="object.description">
+                        <t t-out="object.description"/>
+                    </p>
+                    <p t-if="object.location">
+                        Location:
+                        <t t-out="object.location"/>
+                    </p>
+                    <p>
+                        Recorded at:
+                        <t t-out="object.occurred_at and object.occurred_at.strftime('%Y-%m-%d %H:%M') or ''"/>
+                    </p>
+                </div>
+            </field>
+        </record>
+
+    </data>
+</odoo>

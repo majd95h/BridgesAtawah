@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="view_eh_log_dg_declaration_list" model="ir.ui.view">
+            <field name="name">eh.log.dg.declaration.list</field>
+            <field name="model">eh.log.dg.declaration</field>
+            <field name="arch" type="xml">
+                <list string="DG Declarations" decoration-info="state in ('draft', 'ready')" decoration-success="state == 'issued'" decoration-muted="state == 'cancelled'" decoration-warning="segregation_status == 'warning'">
+                    <field name="name"/>
+                    <field name="state"/>
+                    <field name="mode"/>
+                    <field name="freight_job_id"/>
+                    <field name="shipper_id"/>
+                    <field name="consignee_id"/>
+                    <field name="line_count" optional="show"/>
+                    <field name="segregation_status" optional="show"/>
+                    <field name="has_marine_pollutant" optional="show"/>
+                    <field name="company_id" groups="base.group_multi_company"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="view_eh_log_dg_declaration_form" model="ir.ui.view">
+            <field name="name">eh.log.dg.declaration.form</field>
+            <field name="model">eh.log.dg.declaration</field>
+            <field name="arch" type="xml">
+                <form string="DG Declaration">
+                    <header>
+                        <button name="action_set_ready" string="Mark Ready" type="object" class="btn-primary" invisible="state != 'draft'" groups="eh_log_base.group_eh_log_user"/>
+                        <button name="action_issue" string="Issue" type="object" class="btn-primary" invisible="state != 'ready'" groups="eh_log_base.group_eh_log_manager"/>
+                        <button name="action_back_to_draft" string="Back to Draft" type="object" class="btn-secondary" invisible="state != 'ready'" groups="eh_log_base.group_eh_log_user"/>
+                        <button name="action_cancel" string="Cancel" type="object" class="btn-secondary" invisible="state in ('issued', 'cancelled')" groups="eh_log_base.group_eh_log_manager"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,ready,issued"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name"/>
+                            <h1><field name="name"/></h1>
+                        </div>
+                        <div invisible="segregation_status != 'warning'" class="alert alert-warning" role="alert">
+                            <strong>Segregation incompatibilities detected.</strong>
+                            <field name="segregation_summary" readonly="1" nolabel="1"/>
+                        </div>
+                        <group>
+                            <group string="Mode and Linkage">
+                                <field name="mode" widget="radio" options="{'horizontal': true}"/>
+                                <field name="sale_order_id" readonly="1"/>
+                                <field name="freight_job_id" options="{'no_create': True}"/>
+                                <field name="company_id" groups="base.group_multi_company"/>
+                            </group>
+                            <group string="Parties">
+                                <field name="shipper_id" options="{'no_create': True}"/>
+                                <field name="consignee_id" options="{'no_create': True}"/>
+                                <field name="notify_party_id" options="{'no_create': True}"/>
+                            </group>
+                        </group>
+                        <group string="Lane">
+                            <group>
+                                <field name="pol_name"/>
+                                <field name="pod_name"/>
+                            </group>
+                            <group>
+                                <field name="vessel_name" invisible="mode != 'sea'"/>
+                                <field name="voyage_number" invisible="mode != 'sea'"/>
+                                <field name="flight_number" invisible="mode != 'air'"/>
+                            </group>
+                        </group>
+                        <group string="Emergency Contact (24-hour)">
+                            <field name="emergency_contact_name"/>
+                            <field name="emergency_contact_phone" widget="phone"/>
+                        </group>
+                        <notebook>
+                            <page string="UN Lines">
+                                <field name="line_ids">
+                                    <list editable="bottom">
+                                        <field name="sequence" widget="handle"/>
+                                        <field name="un_number_id" options="{'no_create': True}"/>
+                                        <field name="primary_class"/>
+                                        <field name="packing_group"/>
+                                        <field name="technical_name"/>
+                                        <field name="packaging_description"/>
+                                        <field name="package_count"/>
+                                        <field name="net_quantity"/>
+                                        <field name="net_quantity_uom"/>
+                                        <field name="total_quantity"/>
+                                        <field name="marine_pollutant"/>
+                                    </list>
+                                </field>
+                            </page>
+                            <page string="Verdict">
+                                <group>
+                                    <field name="segregation_status" readonly="1"/>
+                                    <field name="has_marine_pollutant" widget="boolean_toggle" readonly="1"/>
+                                </group>
+                                <group>
+                                    <field name="segregation_summary" readonly="1" colspan="2"/>
+                                </group>
+                            </page>
+                            <page string="Notes">
+                                <field name="notes"/>
+                            </page>
+                            <page string="Audit">
+                                <group>
+                                    <field name="issued_by_id" readonly="1"/>
+                                    <field name="issued_at" readonly="1"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <chatter/>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_eh_log_dg_declaration_search" model="ir.ui.view">
+            <field name="name">eh.log.dg.declaration.search</field>
+            <field name="model">eh.log.dg.declaration</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="freight_job_id"/>
+                    <field name="shipper_id"/>
+                    <field name="consignee_id"/>
+                    <separator/>
+                    <filter string="Open" name="filter_open" domain="[('state', 'in', ('draft', 'ready'))]"/>
+                    <filter string="Issued" name="filter_issued" domain="[('state', '=', 'issued')]"/>
+                    <filter string="With Incompatibilities" name="filter_warn" domain="[('segregation_status', '=', 'warning')]"/>
+                    <filter string="Marine Pollutant" name="filter_mp" domain="[('has_marine_pollutant', '=', True)]"/>
+                    <filter string="Group by Mode" name="group_mode" context="{'group_by': 'mode'}"/>
+                    <filter string="Group by State" name="group_state" context="{'group_by': 'state'}"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_eh_log_dg_declaration" model="ir.actions.act_window">
+            <field name="name">DG Declarations</field>
+            <field name="res_model">eh.log.dg.declaration</field>
+            <field name="view_mode">list,form</field>
+            <field name="search_view_id" ref="view_eh_log_dg_declaration_search"/>
+        </record>
+
+    </data>
+</odoo>

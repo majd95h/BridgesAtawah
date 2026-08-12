@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_eh_log_edi_partner_list" model="ir.ui.view">
+        <field name="name">eh.log.edi.partner.list</field>
+        <field name="model">eh.log.edi.partner</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="partner_id"/>
+                <field name="name"/>
+                <field name="partner_identifier"/>
+                <field name="transport_id"/>
+                <field name="is_default"/>
+                <field name="active"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_eh_log_edi_partner_form" model="ir.ui.view">
+        <field name="name">eh.log.edi.partner.form</field>
+        <field name="model">eh.log.edi.partner</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1><field name="name"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="partner_id" options="{'no_create': True}"/>
+                            <field name="partner_identifier"/>
+                            <field name="self_party_identifier_override"/>
+                            <field name="transport_id" options="{'no_create': True}"/>
+                        </group>
+                        <group>
+                            <field name="filename_template"/>
+                            <field name="is_default"/>
+                            <field name="active" widget="boolean_toggle"/>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Message Types" name="message_types">
+                            <field name="message_type_ids" widget="many2many_tags"/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_eh_log_edi_partner" model="ir.actions.act_window">
+        <field name="name">EDI Partners</field>
+        <field name="res_model">eh.log.edi.partner</field>
+        <field name="view_mode">list,form</field>
+        <field name="views" eval="[(False, 'list'), (False, 'form')]"/>
+    </record>
+
+</odoo>

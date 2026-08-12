@@ -1,0 +1,1321 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* eh_log_edi
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-01 04:33+0000\n"
+"PO-Revision-Date: 2026-07-01 04:33+0000\n"
+"Last-Translator: ERP Heritage <info@erpheritage.com.au>\n"
+"Language-Team: Spanish\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n != 0 && n % 1000000 == 0) ? 1 : 2);\n"
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/wizards/eh_log_edi_mass_action.py:0
+msgid "%(count)d dead-letter message(s) re-queued."
+msgstr ""
+"%(count)d mensaje(s) de cola de mensajes fallidos vuelto(s) a poner en cola."
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/wizards/eh_log_edi_mass_action.py:0
+msgid "%(count)d inbound message(s) reprocessed."
+msgstr "%(count)d mensaje(s) entrante(s) reprocesado(s)."
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_kanban
+msgid "<i class=\"fa fa-file me-1\" title=\"Payload File\"/>"
+msgstr "<i class=\"fa fa-file me-1\" title=\"Archivo de carga útil\"/>"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_kanban
+msgid "<i class=\"fa fa-file me-1\" title=\"Raw File\"/>"
+msgstr "<i class=\"fa fa-file me-1\" title=\"Archivo sin procesar\"/>"
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_transport.py:0
+msgid "<p>Auto-generated EDI message; the EDIFACT payload is attached.</p>"
+msgstr ""
+"<p>Mensaje EDI generado automáticamente; la carga útil EDIFACT está "
+"adjunta.</p>"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_message_type__encoding__x12
+msgid "ANSI X12"
+msgstr ""
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_transport__protocol__as2
+msgid "AS2"
+msgstr ""
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__acked_at
+msgid "Acked At"
+msgstr "Confirmado el"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_outbound__state__acked
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search_full
+msgid "Acknowledged"
+msgstr "Reconocido"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__message_needaction
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__message_needaction
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__message_needaction
+msgid "Action Needed"
+msgstr "Acción requerida"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_message_type__active
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__active
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__active
+msgid "Active"
+msgstr "Activo"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__activity_ids
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__activity_ids
+msgid "Activities"
+msgstr "Actividades"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__activity_exception_decoration
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Decoración de Actividad de Excepción"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__activity_state
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__activity_state
+msgid "Activity State"
+msgstr "Estado de la actividad"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__activity_type_icon
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Icono de tipo de actividad"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__message_attachment_count
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__message_attachment_count
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__message_attachment_count
+msgid "Attachment Count"
+msgstr "Número de archivos adjuntos"
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_transport.py:0
+msgid "Auto-generated EDI message from the ERP Heritage logistics suite."
+msgstr ""
+"Mensaje EDI generado automáticamente por la suite de logística de ERP "
+"Heritage."
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_message_type__direction__both
+msgid "Both"
+msgstr "Ambos"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_mass_reprocess_form
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_form
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_mass_resume_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_outbound__state__cancelled
+msgid "Cancelled"
+msgstr "Cancelado"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_form
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_form
+msgid "Close"
+msgstr "Cerrar"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_inbound__state__closed
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_outbound__state__closed
+msgid "Closed"
+msgstr "Cerrado"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_message_type__code
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__code
+msgid "Code"
+msgstr "Código"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__company_id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__company_id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__company_id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__company_id
+msgid "Company"
+msgstr "Compañía"
+
+#. module: eh_log_edi
+#: model:ir.model,name:eh_log_edi.model_res_config_settings
+msgid "Config Settings"
+msgstr "Ajustes de configuración"
+
+#. module: eh_log_edi
+#: model:ir.model,name:eh_log_edi.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search_full
+msgid "Created Today"
+msgstr "Creado hoy"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__create_uid
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound_mass_reprocess__create_uid
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_message_type__create_uid
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__create_uid
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound_mass_resume__create_uid
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__create_uid
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__create_date
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound_mass_reprocess__create_date
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_message_type__create_date
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__create_date
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound_mass_resume__create_date
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__create_date
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__credentials_key
+msgid "Credentials Key"
+msgstr "Clave de credenciales"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_outbound__max_retries
+msgid ""
+"Cron retry budget. Reached: row moves to dead_letter; operator must manually"
+" re-queue or cancel."
+msgstr ""
+"Presupuesto de reintentos Cron. Al alcanzarlo: la fila pasa a dead_letter; "
+"el operador debe volver a encolarla o cancelarla manualmente."
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_outbound__state__dead_letter
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search_full
+msgid "Dead Letter"
+msgstr "Mensaje no entregado"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound_mass_resume__outbound_ids
+msgid "Dead-letter Messages"
+msgstr "Mensajes de correo muerto"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__is_default
+msgid "Default for Partner"
+msgstr "Predeterminado para el socio"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_message_type__description
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_message_type_form
+msgid "Description"
+msgstr "Descripción"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_message_type__direction
+msgid "Direction"
+msgstr "Dirección"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__display_name
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound_mass_reprocess__display_name
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_message_type__display_name
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__display_name
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound_mass_resume__display_name
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__display_name
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__display_name
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_freight_job__display_name
+#: model:ir.model.fields,field_description:eh_log_edi.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:eh_log_edi.field_res_partner__display_name
+msgid "Display Name"
+msgstr "Nombre para mostrar"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_outbound__state__draft
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search_full
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: eh_log_edi
+#: model:ir.model.constraint,message:eh_log_edi.constraint_eh_log_edi_partner_partner_identifier_unique
+msgid "Duplicate partner identifier for the same partner."
+msgstr "Identificador de partner duplicado para el mismo partner."
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_res_partner__eh_log_edi_partner_ids
+#: model:ir.model.fields,field_description:eh_log_edi.field_res_users__eh_log_edi_partner_ids
+msgid "EDI Configurations"
+msgstr "Configuraciones EDI"
+
+#. module: eh_log_edi
+#: model:ir.ui.menu,name:eh_log_edi.menu_eh_log_edi_config_root
+#: model:ir.ui.menu,name:eh_log_edi.menu_eh_log_edi_root
+msgid "EDI Hub"
+msgstr "Centro EDI"
+
+#. module: eh_log_edi
+#: model:ir.model,name:eh_log_edi.model_eh_log_edi_inbound
+msgid "EDI Inbound Message"
+msgstr "Mensaje entrante EDI"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_pivot
+msgid "EDI Inbound Volume"
+msgstr "Volumen entrante EDI"
+
+#. module: eh_log_edi
+#: model:ir.model,name:eh_log_edi.model_eh_log_edi_message_type
+msgid "EDI Message Type"
+msgstr "Tipo de mensaje EDI"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_freight_job_form_edi
+msgid "EDI Out"
+msgstr "EDI de salida"
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_freight_job.py:0
+msgid "EDI Outbound"
+msgstr "EDI de salida"
+
+#. module: eh_log_edi
+#: model:ir.model,name:eh_log_edi.model_eh_log_edi_outbound
+msgid "EDI Outbound Message"
+msgstr "Mensaje saliente EDI"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_freight_job__eh_log_edi_outbound_count
+msgid "EDI Outbound Messages"
+msgstr "Mensajes salientes EDI"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_pivot
+msgid "EDI Outbound Volume"
+msgstr "Volumen saliente EDI"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_graph
+msgid "EDI Outbound by State"
+msgstr "EDI de salida por estado"
+
+#. module: eh_log_edi
+#: model:ir.model,name:eh_log_edi.model_eh_log_edi_partner
+msgid "EDI Partner Configuration"
+msgstr "Configuración del socio EDI"
+
+#. module: eh_log_edi
+#: model:ir.actions.act_window,name:eh_log_edi.action_eh_log_edi_partner
+#: model:ir.ui.menu,name:eh_log_edi.menu_eh_log_edi_partners
+msgid "EDI Partners"
+msgstr "Socios EDI"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_res_config_settings__eh_log_edi_self_identifier
+msgid "EDI Self Identifier"
+msgstr "Identificador propio EDI"
+
+#. module: eh_log_edi
+#: model:ir.model,name:eh_log_edi.model_eh_log_edi_transport
+msgid "EDI Transport"
+msgstr "Transporte EDI"
+
+#. module: eh_log_edi
+#: model:ir.actions.server,name:eh_log_edi.cron_dispatch_outbound_ir_actions_server
+msgid "EDI: Dispatch Outbound Queue"
+msgstr "EDI: Enviar cola de salida"
+
+#. module: eh_log_edi
+#: model:ir.actions.server,name:eh_log_edi.cron_process_inbound_ir_actions_server
+msgid "EDI: Process Inbound Queue"
+msgstr "EDI: Procesar cola de entrada"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.res_config_settings_view_form_edi
+msgid "ERP Heritage EDI Hub"
+msgstr "Hub EDI ERP Heritage"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_message_type__encoding
+msgid "Encoding"
+msgstr "Codificación"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_transport_form
+msgid "Endpoint"
+msgstr ""
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_transport__protocol__file
+msgid "File Drop"
+msgstr "Soltar archivo"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__raw_filename
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__payload_filename
+msgid "Filename"
+msgstr "Nombre de archivo"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__filename_template
+msgid "Filename Template"
+msgstr "Plantilla de nombre de archivo"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__message_follower_ids
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__message_follower_ids
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__message_partner_ids
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__message_partner_ids
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidores (Contactos)"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_inbound__activity_type_icon
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_outbound__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Icono de Font Awesome p. ej. fa-tasks"
+
+#. module: eh_log_edi
+#: model:ir.model,name:eh_log_edi.model_eh_log_freight_job
+msgid "Freight Forwarding Job"
+msgstr "Trabajo de agenciamiento de carga"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_partner__partner_identifier
+msgid ""
+"GLN, DUNS, EAN, or internal code carried in the EDI envelope as the "
+"recipient identifier."
+msgstr ""
+"Código GLN, DUNS, EAN o interno que se transporta en el sobre EDI como "
+"identificador del destinatario."
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.res_config_settings_view_form_edi
+msgid "GLN, DUNS, or internal code"
+msgstr "Código GLN, DUNS o interno"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_transport__protocol__http
+msgid "HTTP"
+msgstr ""
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__has_message
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__has_message
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__has_message
+msgid "Has Message"
+msgstr "Tiene un mensaje"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search_full
+msgid "Has Retries"
+msgstr "Tiene reintentos"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__host
+msgid "Host"
+msgstr "Anfitrión"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound_mass_reprocess__id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_message_type__id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound_mass_resume__id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_freight_job__id
+#: model:ir.model.fields,field_description:eh_log_edi.field_res_config_settings__id
+#: model:ir.model.fields,field_description:eh_log_edi.field_res_partner__id
+msgid "ID"
+msgstr "Identificador"
+
+#. module: eh_log_edi
+#: model:eh.log.edi.message.type,name:eh_log_edi.message_type_iftmin
+msgid "IFTMIN - Forwarding Instruction"
+msgstr "IFTMIN - Instrucción de expedición"
+
+#. module: eh_log_edi
+#: model:eh.log.edi.message.type,name:eh_log_edi.message_type_iftsta
+msgid "IFTSTA - International Multimodal Status Report"
+msgstr "IFTSTA - Informe de estado multimodal internacional"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__activity_exception_icon
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__activity_exception_icon
+msgid "Icon"
+msgstr "Icono"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_inbound__activity_exception_icon
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_outbound__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Icono para indicar una actividad de excepción."
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_res_config_settings__eh_log_edi_self_identifier
+msgid ""
+"Identifier (GLN, DUNS, internal) inserted as the sender party on every "
+"outbound EDI envelope. Per-partner configurations may override this value."
+msgstr ""
+"Identificador (GLN, DUNS, interno) insertado como parte remitente en cada "
+"sobre EDI saliente. Las configuraciones por partner pueden anular este "
+"valor."
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.res_config_settings_view_form_edi
+msgid ""
+"Identifier inserted as the sender party on every outbound EDI envelope."
+msgstr ""
+"Identificador insertado como parte remitente en cada sobre EDI saliente."
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_outbound__transport_reference
+msgid ""
+"Identifier returned by the transport (SMTP message id, SFTP path, HTTP "
+"status). Useful for manual lookup."
+msgstr ""
+"Identificador devuelto por el transporte (id de mensaje SMTP, ruta SFTP, "
+"estado HTTP). Útil para la búsqueda manual."
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_partner__self_party_identifier_override
+msgid ""
+"Identifier the partner expects to see as the sender. Falls back to the "
+"company's eh_log_edi_self_identifier when blank."
+msgstr ""
+"Identificador que el partner espera ver como remitente. Recurre al "
+"eh_log_edi_self_identifier de la empresa cuando está en blanco."
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.res_config_settings_view_form_edi
+msgid "Identity"
+msgstr "Identidad"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_inbound__message_needaction
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_outbound__message_needaction
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_partner__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Si está marcada, hay nuevos mensajes que requieren su atención."
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_inbound__message_has_error
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_inbound__message_has_sms_error
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_outbound__message_has_error
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_outbound__message_has_sms_error
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_partner__message_has_error
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_partner__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Si está marcada, algunos mensajes tienen error de envío."
+
+#. module: eh_log_edi
+#: model:ir.actions.act_window,name:eh_log_edi.action_eh_log_edi_inbound
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_message_type__direction__in
+#: model:ir.ui.menu,name:eh_log_edi.menu_eh_log_edi_inbound
+msgid "Inbound"
+msgstr "Entrante"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound_mass_reprocess__inbound_ids
+msgid "Inbound Messages"
+msgstr "Mensajes entrantes"
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_inbound.py:0
+msgid "Inbound message %(name)s cannot move from %(from)s to %(to)s."
+msgstr "El mensaje entrante %(name)s no puede pasar de %(from)s a %(to)s."
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__message_is_follower
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__message_is_follower
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__message_is_follower
+msgid "Is Follower"
+msgstr "Es un seguidor"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_message_type__encoding__json
+msgid "JSON"
+msgstr ""
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_inbound__parsed_payload
+msgid ""
+"JSON serialisation of the parser output. Stored for operator review and "
+"replay."
+msgstr ""
+"Serialización JSON de la salida del analizador. Almacenada para revisión y "
+"reproducción por parte del operador."
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__error_message
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__error_message
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_form
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_form
+msgid "Last Error"
+msgstr "Último error"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__write_uid
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound_mass_reprocess__write_uid
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_message_type__write_uid
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__write_uid
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound_mass_resume__write_uid
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__write_uid
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__write_date
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound_mass_reprocess__write_date
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_message_type__write_date
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__write_date
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound_mass_resume__write_date
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__write_date
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_transport__credentials_key
+msgid "Lookup key for the credentials helper."
+msgstr "Clave de búsqueda para el asistente de credenciales."
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_form
+msgid "Mark Acked"
+msgstr "Marcar como acusado"
+
+#. module: eh_log_edi
+#: model:ir.actions.act_window,name:eh_log_edi.action_eh_log_edi_inbound_mass_reprocess
+msgid "Mass-reprocess"
+msgstr "Reprocesamiento masivo"
+
+#. module: eh_log_edi
+#: model:ir.model,name:eh_log_edi.model_eh_log_edi_inbound_mass_reprocess
+msgid "Mass-reprocess EDI Inbound"
+msgstr "Reprocesar entradas EDI en masa"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_mass_reprocess_form
+msgid "Mass-reprocess Inbound"
+msgstr "Reprocesar entradas en masa"
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/wizards/eh_log_edi_mass_action.py:0
+msgid "Mass-reprocess complete"
+msgstr "Reprocesamiento masivo completado"
+
+#. module: eh_log_edi
+#: model:ir.actions.act_window,name:eh_log_edi.action_eh_log_edi_outbound_mass_resume
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_mass_resume_form
+msgid "Mass-resume Dead-letter"
+msgstr "Reanudar dead-letter en masa"
+
+#. module: eh_log_edi
+#: model:ir.model,name:eh_log_edi.model_eh_log_edi_outbound_mass_resume
+msgid "Mass-resume EDI Dead-letter"
+msgstr "Reanudar dead-letter de EDI en masa"
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/wizards/eh_log_edi_mass_action.py:0
+msgid "Mass-resume complete"
+msgstr "Reanudación masiva completada"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__max_retries
+msgid "Max Retries"
+msgstr "Máx. de reintentos"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__message_has_error
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__message_has_error
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__message_has_error
+msgid "Message Delivery error"
+msgstr "Error de envío de mensaje"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__message_type_id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__message_type_id
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_search_full
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search_full
+msgid "Message Type"
+msgstr "Tipo de mensaje"
+
+#. module: eh_log_edi
+#: model:ir.actions.act_window,name:eh_log_edi.action_eh_log_edi_message_type
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__message_type_ids
+#: model:ir.ui.menu,name:eh_log_edi.menu_eh_log_edi_message_types
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_partner_form
+msgid "Message Types"
+msgstr "Tipos de mensaje"
+
+#. module: eh_log_edi
+#: model:ir.model.constraint,message:eh_log_edi.constraint_eh_log_edi_message_type_code_direction_unique
+msgid "Message type code/direction combination must be unique."
+msgstr ""
+"La combinación de código/dirección del tipo de mensaje debe ser única."
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_partner__message_type_ids
+msgid "Message types this configuration may dispatch / receive."
+msgstr "Tipos de mensaje que esta configuración puede enviar / recibir."
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__message_ids
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__message_ids
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__message_ids
+msgid "Messages"
+msgstr "Mensajes"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_transport__protocol__mock
+msgid "Mock (Tests)"
+msgstr "Simulación (pruebas)"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__my_activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Fecha límite de mi actividad"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_message_type__name
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__name
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_inbound__target_record_ref
+msgid ""
+"Name of the record affected by apply(). For IFTSTA, the freight job that "
+"received the new tracking event."
+msgstr ""
+"Nombre del registro afectado por apply(). Para IFTSTA, el trabajo de flete "
+"que recibió el nuevo evento de seguimiento."
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_inbound.py:0
+#: code:addons/eh_log_edi/models/eh_log_edi_outbound.py:0
+msgid "New"
+msgstr "Nuevo"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__activity_calendar_event_id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "Siguiente evento en el calendario de actividades."
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__activity_date_deadline
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Fecha límite de la siguiente actividad"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__activity_summary
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__activity_summary
+msgid "Next Activity Summary"
+msgstr "Resumen de la siguiente actividad"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__activity_type_id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__activity_type_id
+msgid "Next Activity Type"
+msgstr "Tipo de la siguiente actividad"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__message_needaction_counter
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__message_needaction_counter
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Número de acciones"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__message_has_error_counter
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__message_has_error_counter
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__message_has_error_counter
+msgid "Number of errors"
+msgstr "Número de errores"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_inbound__message_needaction_counter
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_outbound__message_needaction_counter
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_partner__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Número de mensajes que requieren una acción"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_inbound__message_has_error_counter
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_outbound__message_has_error_counter
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_partner__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Número de mensajes con error de envío"
+
+#. module: eh_log_edi
+#: model:ir.actions.act_window,name:eh_log_edi.action_eh_log_edi_outbound
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_message_type__direction__out
+#: model:ir.ui.menu,name:eh_log_edi.menu_eh_log_edi_outbound
+msgid "Outbound"
+msgstr "Saliente"
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_outbound.py:0
+msgid "Outbound message %(name)s cannot move from %(from)s to %(to)s."
+msgstr "El mensaje saliente %(name)s no puede pasar de %(from)s a %(to)s."
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_form
+msgid "Parse"
+msgstr "Analizar"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_inbound__state__parsed
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_search_full
+msgid "Parsed"
+msgstr "Analizado"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__parsed_at
+msgid "Parsed At"
+msgstr "Analizado el"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__parsed_payload
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_form
+msgid "Parsed Payload"
+msgstr "Carga útil analizada"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__partner_id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__partner_id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__partner_id
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_search_full
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search_full
+msgid "Partner"
+msgstr "Contacto"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__partner_config_id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__partner_config_id
+msgid "Partner Configuration"
+msgstr "Configuración de empresa"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__partner_identifier
+msgid "Partner Identifier"
+msgstr "Identificador de empresa"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__payload
+msgid "Payload"
+msgstr "Carga efectiva"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_partner__is_default
+msgid ""
+"Pick this configuration when the dispatcher needs to send to the partner "
+"without an explicit configuration reference."
+msgstr ""
+"Elija esta configuración cuando el despachador deba enviar al socio sin una "
+"referencia de configuración explícita."
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__port
+msgid "Port"
+msgstr "Puerto"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_form
+msgid "Process"
+msgstr "Procesar"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_inbound__state__processed
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_search_full
+msgid "Processed"
+msgstr "Procesado"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__processed_at
+msgid "Processed At"
+msgstr "Procesado el"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__protocol
+msgid "Protocol"
+msgstr "Protocolo"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_form
+msgid "Queue"
+msgstr "Cola"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_freight_job_form_edi
+msgid "Queue IFTMIN"
+msgstr "Poner IFTMIN en cola"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_outbound__state__queued
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search_full
+msgid "Queued"
+msgstr "En cola"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__rating_ids
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__rating_ids
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__rating_ids
+msgid "Ratings"
+msgstr "Calificaciones"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__raw_payload
+msgid "Raw Payload"
+msgstr "Carga útil sin procesar"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_form
+msgid "Re-queue"
+msgstr "Volver a poner en cola"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_mass_resume_form
+msgid "Re-queue All"
+msgstr "Volver a poner todo en cola"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_inbound__state__received
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_search_full
+msgid "Received"
+msgstr "Recibido"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__received_at
+msgid "Received At"
+msgstr "Recibido el"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_search_full
+msgid "Received Today"
+msgstr "Recibido hoy"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__name
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__name
+msgid "Reference"
+msgstr "Referencia"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_inbound__state__rejected
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_outbound__state__rejected
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_search_full
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search_full
+msgid "Rejected"
+msgstr "Rechazado"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_mass_reprocess_form
+msgid "Reprocess All"
+msgstr "Reprocesar todo"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__activity_user_id
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__activity_user_id
+msgid "Responsible User"
+msgstr "Usuario responsable"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_form
+msgid "Resume"
+msgstr "Continuar"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__retry_count
+msgid "Retries"
+msgstr "Reintentos"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_kanban
+msgid "Retries:"
+msgstr "Reintentos:"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_transport__protocol__sftp
+msgid "SFTP"
+msgstr ""
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__message_has_sms_error
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__message_has_sms_error
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Error de envío del SMS"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_transport__protocol__smtp
+msgid "SMTP"
+msgstr ""
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_search_full
+msgid "Search Inbound EDI"
+msgstr "Buscar EDI entrantes"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search_full
+msgid "Search Outbound EDI"
+msgstr "Buscar EDI salientes"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.res_config_settings_view_form_edi
+msgid "Self Identifier"
+msgstr "Identificador propio"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__self_party_identifier_override
+msgid "Self Identifier Override"
+msgstr "Anulación del identificador propio"
+
+#. module: eh_log_edi
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_form
+msgid "Send Now"
+msgstr "Enviar ahora"
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_outbound__state__sent
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search_full
+msgid "Sent"
+msgstr "Enviado"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__sent_at
+msgid "Sent At"
+msgstr "Enviado el"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__signing_required
+msgid "Signing Required"
+msgstr "Firma obligatoria"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__source_id
+msgid "Source ID"
+msgstr "ID de origen"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__source_model
+msgid "Source Model"
+msgstr "Modelo de origen"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__state
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__state
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_inbound_search_full
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search
+#: model_terms:ir.ui.view,arch_db:eh_log_edi.view_eh_log_edi_outbound_search_full
+msgid "State"
+msgstr "Estado"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_inbound__activity_state
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_outbound__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Estado basado en actividades\n"
+"Vencida: la fecha límite ya ha pasado\n"
+"Hoy: la fecha límite es hoy\n"
+"Planificada: actividades futuras."
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_partner__filename_template
+msgid ""
+"Substitutions: {message}, {date}, {sequence}, {partner_code}. Used to "
+"compose outbound filenames."
+msgstr ""
+"Sustituciones: {message}, {date}, {sequence}, {partner_code}. Se usan para "
+"componer los nombres de los archivos salientes."
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__target_directory
+msgid "Target Directory"
+msgstr "Directorio de destino"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__target_email
+msgid "Target Email"
+msgstr "Correo electrónico de destino"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__target_record_ref
+msgid "Target Record"
+msgstr "Registro de destino"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__target_url
+msgid "Target URL"
+msgstr "URL objetivo"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__transport_id
+msgid "Transport"
+msgstr "Transporte"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__transport_reference
+msgid "Transport Reference"
+msgstr "Referencia de transporte"
+
+#. module: eh_log_edi
+#: model:ir.model.constraint,message:eh_log_edi.constraint_eh_log_edi_transport_transport_code_unique
+msgid "Transport code must be unique per company."
+msgstr "El código de transporte debe ser único por empresa."
+
+#. module: eh_log_edi
+#: model:ir.actions.act_window,name:eh_log_edi.action_eh_log_edi_transport
+#: model:ir.ui.menu,name:eh_log_edi.menu_eh_log_edi_transports
+msgid "Transports"
+msgstr "Transportes"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_inbound__activity_exception_decoration
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_outbound__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Tipo de actividad de excepción en el registro."
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_message_type__encoding__edifact
+msgid "UN/EDIFACT"
+msgstr ""
+
+#. module: eh_log_edi
+#: model:eh.log.edi.message.type,description:eh_log_edi.message_type_iftmin
+msgid ""
+"UN/EDIFACT D.96B forwarding instruction. Sent from forwarder to carrier or "
+"upstream agent to instruct handling of a shipment."
+msgstr ""
+"Instrucción de expedición UN/EDIFACT D.96B. Enviada del transitario al "
+"transportista o al agente aguas arriba para instruir el manejo de un envío."
+
+#. module: eh_log_edi
+#: model:eh.log.edi.message.type,description:eh_log_edi.message_type_iftsta
+msgid ""
+"UN/EDIFACT D.96B status report. Received from carrier or upstream agent "
+"reporting on the progress of a shipment."
+msgstr ""
+"Informe de estado UN/EDIFACT D.96B. Recibido del transportista o del agente "
+"aguas arriba que informa sobre el avance de un envío."
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_transport__username
+msgid "Username"
+msgstr "Nombre de usuario"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_inbound__website_message_ids
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_outbound__website_message_ids
+#: model:ir.model.fields,field_description:eh_log_edi.field_eh_log_edi_partner__website_message_ids
+msgid "Website Messages"
+msgstr "Mensajes del sitio web"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_inbound__website_message_ids
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_outbound__website_message_ids
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_partner__website_message_ids
+msgid "Website communication history"
+msgstr "Historial de comunicación del sitio web"
+
+#. module: eh_log_edi
+#: model:ir.model.fields,help:eh_log_edi.field_eh_log_edi_outbound__payload
+msgid ""
+"Wire bytes built by the translator. Stored once and re-used on retry so the "
+"partner sees identical content across attempts."
+msgstr ""
+"Bytes de transmisión creados por el traductor. Se almacenan una vez y se "
+"reutilizan en los reintentos para que el socio vea contenido idéntico en "
+"todos los intentos."
+
+#. module: eh_log_edi
+#: model:ir.model.fields.selection,name:eh_log_edi.selection__eh_log_edi_message_type__encoding__xml
+msgid "XML"
+msgstr ""
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_message_type.py:0
+msgid ""
+"[EHL-EDI-001] No translator registered for message type %(code)s direction "
+"%(direction)s. Install the module that provides the translator or untick "
+"Active."
+msgstr ""
+"[EHL-EDI-001] No hay ningún traductor registrado para el tipo de mensaje "
+"%(code)s dirección %(direction)s. Instale el módulo que proporciona el "
+"traductor o desmarque Activo."
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_transport.py:0
+msgid ""
+"[EHL-EDI-002] Transport %(name)s requires host or target URL for protocol "
+"%(protocol)s."
+msgstr ""
+"[EHL-EDI-002] El transporte %(name)s requiere un host o una URL de destino "
+"para el protocolo %(protocol)s."
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_transport.py:0
+msgid "[EHL-EDI-003] Transport %(name)s requires a target email for SMTP."
+msgstr ""
+"[EHL-EDI-003] El transporte %(name)s requiere un correo electrónico de "
+"destino para SMTP."
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_transport.py:0
+msgid ""
+"[EHL-EDI-004] AS2 transport requires the optional pyas2 library; install it "
+"and provide a signing certificate before activating an AS2 transport."
+msgstr ""
+"[EHL-EDI-004] El transporte AS2 requiere la biblioteca opcional pyas2; "
+"instálela y proporcione un certificado de firma antes de activar un "
+"transporte AS2."
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_transport.py:0
+msgid "[EHL-EDI-005] Unsupported transport protocol %(protocol)s."
+msgstr "[EHL-EDI-005] Protocolo de transporte no compatible %(protocol)s."
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_transport.py:0
+msgid ""
+"[EHL-EDI-006] SFTP transport requires the optional paramiko library; pip "
+"install paramiko on the Odoo host before activating SFTP."
+msgstr ""
+"[EHL-EDI-006] El transporte SFTP requiere la biblioteca opcional paramiko; "
+"ejecute pip install paramiko en el host de Odoo antes de activar SFTP."
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_transport.py:0
+msgid ""
+"[EHL-EDI-007] HTTP transport %(name)s rejected the payload with status "
+"%(status)s: %(body)s"
+msgstr ""
+"[EHL-EDI-007] El transporte HTTP %(name)s rechazó la carga útil con el "
+"estado %(status)s: %(body)s"
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_partner.py:0
+msgid ""
+"[EHL-EDI-008] Only one default EDI configuration is allowed per partner."
+msgstr ""
+"[EHL-EDI-008] Solo se permite una configuración EDI predeterminada por "
+"socio."
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_outbound.py:0
+msgid "[EHL-EDI-009] Outbound state must change via the action buttons."
+msgstr ""
+"[EHL-EDI-009] El estado saliente debe cambiarse mediante los botones de "
+"acción."
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_outbound.py:0
+msgid ""
+"[EHL-EDI-010] No outbound translator registered for message type %(code)s."
+msgstr ""
+"[EHL-EDI-010] No hay ningún traductor saliente registrado para el tipo de "
+"mensaje %(code)s."
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_outbound.py:0
+msgid ""
+"[EHL-EDI-011] Source record %(model)s/%(id)s no longer exists; cannot build "
+"payload."
+msgstr ""
+"[EHL-EDI-011] El registro de origen %(model)s/%(id)s ya no existe; no se "
+"puede crear la carga útil."
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_inbound.py:0
+msgid ""
+"[EHL-EDI-012] No inbound translator registered for message type %(code)s."
+msgstr ""
+"[EHL-EDI-012] No hay ningún traductor entrante registrado para el tipo de "
+"mensaje %(code)s."
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_inbound.py:0
+msgid "[EHL-EDI-013] No inbound translator for %(code)s."
+msgstr "[EHL-EDI-013] No hay traductor entrante para %(code)s."
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_edi_inbound.py:0
+msgid "[EHL-EDI-014] Inbound state must change via the action buttons."
+msgstr ""
+"[EHL-EDI-014] El estado entrante debe cambiarse mediante los botones de "
+"acción."
+
+#. module: eh_log_edi
+#. odoo-python
+#: code:addons/eh_log_edi/models/eh_log_freight_job.py:0
+msgid "source_model"
+msgstr ""

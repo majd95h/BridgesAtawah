@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_eh_log_edi_outbound_list" model="ir.ui.view">
+        <field name="name">eh.log.edi.outbound.list</field>
+        <field name="model">eh.log.edi.outbound</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="partner_config_id"/>
+                <field name="message_type_id"/>
+                <field name="source_model"/>
+                <field name="source_id"/>
+                <field name="retry_count"/>
+                <field name="state" widget="badge"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_eh_log_edi_outbound_form" model="ir.ui.view">
+        <field name="name">eh.log.edi.outbound.form</field>
+        <field name="model">eh.log.edi.outbound</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_queue" string="Queue" type="object" class="btn-primary" invisible="state != 'draft'" groups="eh_log_base.group_eh_log_user"/>
+                    <button name="action_send" string="Send Now" type="object" class="btn-primary" invisible="state != 'queued'" groups="eh_log_base.group_eh_log_user"/>
+                    <button name="action_mark_acked" string="Mark Acked" type="object" class="btn-secondary" invisible="state != 'sent'" groups="eh_log_base.group_eh_log_manager"/>
+                    <button name="action_close" string="Close" type="object" class="btn-secondary" invisible="state != 'acked'" groups="eh_log_base.group_eh_log_manager"/>
+                    <button name="action_resume_dead_letter" string="Re-queue" type="object" class="btn-warning" invisible="state != 'dead_letter'" groups="eh_log_base.group_eh_log_manager"/>
+                    <button name="action_cancel" string="Cancel" type="object" class="btn-secondary" invisible="state in ('closed', 'cancelled')" groups="eh_log_base.group_eh_log_manager"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,queued,sent,acked,closed"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1><field name="name"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="partner_config_id" options="{'no_create': True}"/>
+                            <field name="partner_id" readonly="1"/>
+                            <field name="message_type_id" options="{'no_create': True}"/>
+                            <field name="source_model"/>
+                            <field name="source_id"/>
+                        </group>
+                        <group>
+                            <field name="payload_filename" readonly="1"/>
+                            <field name="transport_reference" readonly="1"/>
+                            <field name="sent_at" readonly="1"/>
+                            <field name="acked_at" readonly="1"/>
+                            <field name="retry_count" readonly="1"/>
+                            <field name="max_retries"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="payload" filename="payload_filename" readonly="1"/>
+                    </group>
+                    <group string="Last Error" invisible="not error_message">
+                        <field name="error_message" nolabel="1" readonly="1"/>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_eh_log_edi_outbound_search" model="ir.ui.view">
+        <field name="name">eh.log.edi.outbound.search</field>
+        <field name="model">eh.log.edi.outbound</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="partner_id"/>
+                <field name="message_type_id"/>
+                <filter name="filter_queued" string="Queued" domain="[('state', '=', 'queued')]"/>
+                <filter name="filter_sent" string="Sent" domain="[('state', '=', 'sent')]"/>
+                <filter name="filter_dead_letter" string="Dead Letter" domain="[('state', '=', 'dead_letter')]"/>
+                <group>
+                    <filter name="group_by_state" string="State" context="{'group_by': 'state'}"/>
+                    <filter name="group_by_partner" string="Partner" context="{'group_by': 'partner_id'}"/>
+                    <filter name="group_by_message_type" string="Message Type" context="{'group_by': 'message_type_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_eh_log_edi_outbound" model="ir.actions.act_window">
+        <field name="name">Outbound</field>
+        <field name="res_model">eh.log.edi.outbound</field>
+        <field name="view_mode">list,form</field>
+        <field name="views" eval="[(False, 'list'), (False, 'form')]"/>
+    </record>
+
+</odoo>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="view_eh_log_freight_job_form_dg" model="ir.ui.view">
+            <field name="name">eh.log.freight.job.form.inherit.dg</field>
+            <field name="model">eh.log.freight.job</field>
+            <field name="inherit_id" ref="eh_log_freight.view_eh_log_freight_job_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@name='button_box']" position="inside">
+                    <button name="action_view_dg_declarations" type="object" class="oe_stat_button" icon="fa-warning" invisible="not dg_declaration_count" groups="eh_log_base.group_eh_log_user">
+                        <field name="dg_declaration_count" widget="statinfo" string="DG"/>
+                    </button>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

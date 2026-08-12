@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_eh_log_edi_outbound_kanban" model="ir.ui.view">
+        <field name="name">eh.log.edi.outbound.kanban</field>
+        <field name="model">eh.log.edi.outbound</field>
+        <field name="arch" type="xml">
+            <kanban default_group_by="state" class="o_kanban_small_column">
+                <field name="name"/>
+                <field name="partner_config_id"/>
+                <field name="message_type_id"/>
+                <field name="state"/>
+                <field name="retry_count"/>
+                <field name="payload_filename"/>
+                <templates>
+                    <t t-name="card">
+                        <div class="oe_kanban_global_click">
+                            <div class="o_kanban_record_top">
+                                <strong><field name="name"/></strong>
+                                <span t-if="record.retry_count.raw_value" class="badge text-bg-warning float-end">
+                                    Retries: <field name="retry_count"/>
+                                </span>
+                            </div>
+                            <div class="text-muted small"><field name="message_type_id"/></div>
+                            <div><field name="partner_config_id"/></div>
+                            <div t-if="record.payload_filename.raw_value" class="text-muted small mt-1">
+                                <i class="fa fa-file me-1" title="Payload File"/><field name="payload_filename"/>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="view_eh_log_edi_outbound_pivot" model="ir.ui.view">
+        <field name="name">eh.log.edi.outbound.pivot</field>
+        <field name="model">eh.log.edi.outbound</field>
+        <field name="arch" type="xml">
+            <pivot string="EDI Outbound Volume" sample="1">
+                <field name="message_type_id" type="row"/>
+                <field name="state" type="col"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="view_eh_log_edi_outbound_graph" model="ir.ui.view">
+        <field name="name">eh.log.edi.outbound.graph</field>
+        <field name="model">eh.log.edi.outbound</field>
+        <field name="arch" type="xml">
+            <graph string="EDI Outbound by State" sample="1" type="bar">
+                <field name="state"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="view_eh_log_edi_inbound_kanban" model="ir.ui.view">
+        <field name="name">eh.log.edi.inbound.kanban</field>
+        <field name="model">eh.log.edi.inbound</field>
+        <field name="arch" type="xml">
+            <kanban default_group_by="state" class="o_kanban_small_column">
+                <field name="name"/>
+                <field name="partner_config_id"/>
+                <field name="message_type_id"/>
+                <field name="received_at"/>
+                <field name="state"/>
+                <field name="raw_filename"/>
+                <templates>
+                    <t t-name="card">
+                        <div class="oe_kanban_global_click">
+                            <strong><field name="name"/></strong>
+                            <div class="text-muted small"><field name="message_type_id"/></div>
+                            <div><field name="partner_config_id"/></div>
+                            <div class="text-muted small mt-1">
+                                <field name="received_at" widget="datetime"/>
+                            </div>
+                            <div t-if="record.raw_filename.raw_value" class="text-muted small">
+                                <i class="fa fa-file me-1" title="Raw File"/><field name="raw_filename"/>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="view_eh_log_edi_inbound_pivot" model="ir.ui.view">
+        <field name="name">eh.log.edi.inbound.pivot</field>
+        <field name="model">eh.log.edi.inbound</field>
+        <field name="arch" type="xml">
+            <pivot string="EDI Inbound Volume" sample="1">
+                <field name="message_type_id" type="row"/>
+                <field name="state" type="col"/>
+            </pivot>
+        </field>
+    </record>
+
+</odoo>

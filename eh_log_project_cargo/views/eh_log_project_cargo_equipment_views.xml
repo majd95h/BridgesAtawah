@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_eh_log_project_cargo_equipment_list" model="ir.ui.view">
+        <field name="name">eh.log.project.cargo.equipment.list</field>
+        <field name="model">eh.log.project.cargo.equipment</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="code"/>
+                <field name="name"/>
+                <field name="equipment_type"/>
+                <field name="rated_capacity_t"/>
+                <field name="home_depot"/>
+                <field name="next_inspection_date"/>
+                <field name="active"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_eh_log_project_cargo_equipment_form" model="ir.ui.view">
+        <field name="name">eh.log.project.cargo.equipment.form</field>
+        <field name="model">eh.log.project.cargo.equipment</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1><field name="name"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="code"/>
+                            <field name="equipment_type"/>
+                            <field name="owner_partner_id"/>
+                            <field name="home_depot"/>
+                            <field name="next_inspection_date"/>
+                        </group>
+                        <group>
+                            <field name="rated_capacity_t"/>
+                            <field name="self_weight_t"/>
+                            <field name="active" widget="boolean_toggle"/>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                        </group>
+                    </group>
+                    <group string="Crane Specifics" invisible="equipment_type not in ('crane_mobile', 'crane_crawler', 'crane_telescopic', 'crane_gantry')">
+                        <group>
+                            <field name="max_boom_radius_m"/>
+                            <field name="max_boom_length_m"/>
+                        </group>
+                    </group>
+                    <group string="Trailer / SPMT Specifics" invisible="equipment_type not in ('trailer_modular', 'trailer_lowbed', 'spmt')">
+                        <group>
+                            <field name="axle_count"/>
+                            <field name="spmt_axle_lines" invisible="equipment_type != 'spmt'"/>
+                            <field name="spmt_modules_available" invisible="equipment_type != 'spmt'"/>
+                        </group>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_eh_log_project_cargo_equipment" model="ir.actions.act_window">
+        <field name="name">Equipment</field>
+        <field name="res_model">eh.log.project.cargo.equipment</field>
+        <field name="view_mode">list,form</field>
+        <field name="views" eval="[(False, 'list'), (False, 'form')]"/>
+    </record>
+
+</odoo>

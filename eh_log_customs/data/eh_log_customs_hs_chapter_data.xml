@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data noupdate="1">
+
+        <!--
+            HS chapter-level seed (2-digit codes). The 21 chapters
+            of HS section IV (Prepared foodstuffs ...), IX (Wood ...),
+            XI (Textiles ...), XV (Base metals), XVI (Machinery and
+            electrical), XVII (Vehicles), and a few others most-used
+            in GCC trade. The full 96 chapters are added by country
+            packs that ship national tariff overlays alongside.
+
+            Heading-, subheading-, and national-level codes ship in
+            country localisation packs (eh_log_l10n_ae_customs etc.)
+            because duty rates are country-specific.
+        -->
+
+        <record id="hs_ch_01" model="eh.log.customs.hs.code">
+            <field name="code">01</field>
+            <field name="name">Live animals</field>
+        </record>
+
+        <record id="hs_ch_03" model="eh.log.customs.hs.code">
+            <field name="code">03</field>
+            <field name="name">Fish, crustaceans, molluscs</field>
+        </record>
+
+        <record id="hs_ch_22" model="eh.log.customs.hs.code">
+            <field name="code">22</field>
+            <field name="name">Beverages, spirits, vinegar</field>
+        </record>
+
+        <record id="hs_ch_27" model="eh.log.customs.hs.code">
+            <field name="code">27</field>
+            <field name="name">Mineral fuels, oils</field>
+        </record>
+
+        <record id="hs_ch_30" model="eh.log.customs.hs.code">
+            <field name="code">30</field>
+            <field name="name">Pharmaceutical products</field>
+        </record>
+
+        <record id="hs_ch_39" model="eh.log.customs.hs.code">
+            <field name="code">39</field>
+            <field name="name">Plastics and articles thereof</field>
+        </record>
+
+        <record id="hs_ch_44" model="eh.log.customs.hs.code">
+            <field name="code">44</field>
+            <field name="name">Wood and articles of wood</field>
+        </record>
+
+        <record id="hs_ch_61" model="eh.log.customs.hs.code">
+            <field name="code">61</field>
+            <field name="name">Apparel, knitted or crocheted</field>
+        </record>
+
+        <record id="hs_ch_62" model="eh.log.customs.hs.code">
+            <field name="code">62</field>
+            <field name="name">Apparel, not knitted or crocheted</field>
+        </record>
+
+        <record id="hs_ch_64" model="eh.log.customs.hs.code">
+            <field name="code">64</field>
+            <field name="name">Footwear, gaiters and similar</field>
+        </record>
+
+        <record id="hs_ch_72" model="eh.log.customs.hs.code">
+            <field name="code">72</field>
+            <field name="name">Iron and steel</field>
+        </record>
+
+        <record id="hs_ch_73" model="eh.log.customs.hs.code">
+            <field name="code">73</field>
+            <field name="name">Articles of iron or steel</field>
+        </record>
+
+        <record id="hs_ch_84" model="eh.log.customs.hs.code">
+            <field name="code">84</field>
+            <field name="name">Machinery, mechanical appliances</field>
+        </record>
+
+        <record id="hs_ch_85" model="eh.log.customs.hs.code">
+            <field name="code">85</field>
+            <field name="name">Electrical machinery and equipment</field>
+        </record>
+
+        <record id="hs_ch_87" model="eh.log.customs.hs.code">
+            <field name="code">87</field>
+            <field name="name">Vehicles other than rail or tram</field>
+        </record>
+
+        <record id="hs_ch_94" model="eh.log.customs.hs.code">
+            <field name="code">94</field>
+            <field name="name">Furniture, lamps, prefabricated buildings</field>
+        </record>
+
+    </data>
+</odoo>

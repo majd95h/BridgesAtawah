@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <menuitem id="menu_eh_log_last_mile_waves"
+                  name="Last Mile Waves"
+                  parent="eh_log_base.menu_eh_log_operations"
+                  sequence="130"
+                  action="action_eh_log_last_mile_wave"
+                  groups="eh_log_base.group_eh_log_user"/>
+
+        <menuitem id="menu_eh_log_last_mile_deliveries"
+                  name="Last Mile Deliveries"
+                  parent="eh_log_base.menu_eh_log_operations"
+                  sequence="140"
+                  action="action_eh_log_last_mile_delivery"
+                  groups="eh_log_base.group_eh_log_user"/>
+
+        <menuitem id="menu_eh_log_last_mile_attempts"
+                  name="Delivery Attempts"
+                  parent="eh_log_base.menu_eh_log_audit"
+                  sequence="30"
+                  action="action_eh_log_last_mile_attempt"
+                  groups="eh_log_base.group_eh_log_user"/>
+
+    </data>
+</odoo>

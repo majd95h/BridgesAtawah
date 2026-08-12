@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="action_report_eh_log_warehouse_pick_list" model="ir.actions.report">
+        <field name="name">Pick List</field>
+        <field name="model">eh.log.warehouse.pick</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">eh_log_warehouse_3pl.report_warehouse_pick_list_document</field>
+        <field name="report_file">eh_log_warehouse_3pl.report_warehouse_pick_list_document</field>
+        <field name="binding_model_id" ref="model_eh_log_warehouse_pick"/>
+        <field name="binding_type">report</field>
+        <field name="paperformat_id" ref="eh_log_base.paperformat_eh_log_portrait"/>
+    </record>
+
+    <template id="report_warehouse_pick_list_document">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="pick">
+                <t t-call="eh_log_base.eh_log_clean_layout">
+                    <t t-set="company" t-value="pick.company_id"/>
+                    <t t-set="report_type" t-value="'pdf'"/>
+                    <t t-call="eh_log_base.eh_log_report_styles"/>
+                    <div class="page eh_pdf_page">
+                        <t t-call="eh_log_base.eh_log_report_header">
+                            <t t-set="title" t-value="'Pick List'"/>
+                            <t t-set="company" t-value="pick.company_id"/>
+                        </t>
+
+                        <div class="eh_pdf_meta">
+                            <span><strong>Reference:</strong> <t t-out="pick.name"/></span>
+                            <span><strong>Client:</strong> <t t-out="pick.client_id.display_name"/></span>
+                            <span><strong>Facility:</strong> <t t-out="pick.facility_id.display_name"/></span>
+                            <span><strong>Customer:</strong> <t t-out="pick.customer_id.display_name or ''"/></span>
+                            <span><strong>Planned:</strong> <t t-out="pick.planned_date and pick.planned_date.strftime('%Y-%m-%d') or ''"/></span>
+                        </div>
+
+                        <h2 class="eh_pdf_subtitle">Lines</h2>
+                        <table class="eh_pdf_table">
+                            <thead>
+                                <tr>
+                                    <th>Source</th>
+                                    <th>Product</th>
+                                    <th>Lot</th>
+                                    <th class="text-end">Quantity</th>
+                                    <th class="text-end">Pallets</th>
+                                    <th>Picked</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr t-foreach="pick.line_ids" t-as="line">
+                                    <td><t t-out="line.source_location_id.full_code or ''"/></td>
+                                    <td><t t-out="line.product_id.display_name"/></td>
+                                    <td><t t-out="line.lot_reference or ''"/></td>
+                                    <td class="text-end"><t t-out="'{:.2f}'.format(line.quantity)"/></td>
+                                    <td class="text-end"><t t-out="line.pallet_count"/></td>
+                                    <td>__________</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2 class="eh_pdf_subtitle">Pick Confirmation</h2>
+                        <table class="eh_pdf_table">
+                            <thead>
+                                <tr>
+                                    <th>Role</th>
+                                    <th>Name</th>
+                                    <th>Signature</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Picker</td><td>__________________</td><td>__________________</td></tr>
+                                <tr><td>Checker</td><td>__________________</td><td>__________________</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>

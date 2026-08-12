@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="seq_eh_log_container_mgmt_movement" model="ir.sequence">
+            <field name="name">Container Gate Movement</field>
+            <field name="code">eh.log.container.mgmt.movement</field>
+            <field name="prefix">CMV/%(year)s/</field>
+            <field name="padding">7</field>
+            <field name="number_increment">1</field>
+            <field name="implementation">no_gap</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <record id="seq_eh_log_container_mgmt_work_order" model="ir.sequence">
+            <field name="name">Container Work Order</field>
+            <field name="code">eh.log.container.mgmt.work.order</field>
+            <field name="prefix">WO/%(year)s/</field>
+            <field name="padding">6</field>
+            <field name="number_increment">1</field>
+            <field name="implementation">no_gap</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <record id="seq_eh_log_container_mgmt_lease_contract" model="ir.sequence">
+            <field name="name">Container Lease Contract</field>
+            <field name="code">eh.log.container.mgmt.lease.contract</field>
+            <field name="prefix">LSE/%(year)s/</field>
+            <field name="padding">6</field>
+            <field name="number_increment">1</field>
+            <field name="implementation">no_gap</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+    </data>
+</odoo>

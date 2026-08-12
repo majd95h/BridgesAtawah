@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <menuitem id="menu_eh_log_ship_root"
+              name="Ship Agency"
+              parent="eh_log_base.menu_eh_log_operations"
+              sequence="75"/>
+
+    <menuitem id="menu_eh_log_ship_port_calls"
+              name="Port Calls"
+              parent="menu_eh_log_ship_root"
+              action="action_eh_log_ship_port_call"
+              sequence="10"/>
+
+    <menuitem id="menu_eh_log_ship_sof_events"
+              name="SOF Events"
+              parent="menu_eh_log_ship_root"
+              action="action_eh_log_ship_sof_event"
+              sequence="20"/>
+
+    <menuitem id="menu_eh_log_ship_disbursement_accounts"
+              name="Disbursement Accounts"
+              parent="menu_eh_log_ship_root"
+              action="action_eh_log_ship_disbursement_account"
+              sequence="30"/>
+
+    <menuitem id="menu_eh_log_ship_config_root"
+              name="Ship Agency"
+              parent="eh_log_base.menu_eh_log_configuration"
+              sequence="75"/>
+
+    <menuitem id="menu_eh_log_ship_vessels"
+              name="Vessels"
+              parent="menu_eh_log_ship_config_root"
+              action="action_eh_log_ship_vessel"
+              sequence="10"/>
+
+    <menuitem id="menu_eh_log_ship_berths"
+              name="Berths"
+              parent="menu_eh_log_ship_config_root"
+              action="action_eh_log_ship_berth"
+              sequence="20"/>
+
+    <menuitem id="menu_eh_log_ship_husbandry_services"
+              name="Husbandry Services"
+              parent="menu_eh_log_ship_config_root"
+              action="action_eh_log_ship_husbandry_service"
+              sequence="30"/>
+
+</odoo>

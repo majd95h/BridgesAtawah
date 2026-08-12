@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="profile_pharma_2_8" model="eh.log.cold.chain.profile">
+            <field name="code">PHARMA-2-8</field>
+            <field name="name">Pharma 2 to 8 degC</field>
+            <field name="category">pharma</field>
+            <field name="temperature_min">2.0</field>
+            <field name="temperature_max">8.0</field>
+            <field name="sampling_cadence_minutes">15</field>
+            <field name="alert_window_minutes">30</field>
+            <field name="excursion_grace_minutes">15</field>
+        </record>
+
+        <record id="profile_chilled" model="eh.log.cold.chain.profile">
+            <field name="code">CHILLED</field>
+            <field name="name">Chilled -2 to 8 degC</field>
+            <field name="category">chilled</field>
+            <field name="temperature_min">-2.0</field>
+            <field name="temperature_max">8.0</field>
+            <field name="sampling_cadence_minutes">30</field>
+            <field name="alert_window_minutes">60</field>
+            <field name="excursion_grace_minutes">30</field>
+        </record>
+
+        <record id="profile_frozen" model="eh.log.cold.chain.profile">
+            <field name="code">FROZEN-18</field>
+            <field name="name">Frozen -18 degC and below</field>
+            <field name="category">frozen</field>
+            <field name="temperature_min">-30.0</field>
+            <field name="temperature_max">-18.0</field>
+            <field name="sampling_cadence_minutes">60</field>
+            <field name="alert_window_minutes">120</field>
+            <field name="excursion_grace_minutes">30</field>
+        </record>
+
+        <record id="profile_deep_frozen" model="eh.log.cold.chain.profile">
+            <field name="code">DEEP-FROZEN-45</field>
+            <field name="name">Deep Frozen -45 degC and below</field>
+            <field name="category">deep_frozen</field>
+            <field name="temperature_min">-80.0</field>
+            <field name="temperature_max">-45.0</field>
+            <field name="sampling_cadence_minutes">30</field>
+            <field name="alert_window_minutes">60</field>
+            <field name="excursion_grace_minutes">15</field>
+        </record>
+
+        <record id="profile_controlled_room" model="eh.log.cold.chain.profile">
+            <field name="code">AMB-15-25</field>
+            <field name="name">Controlled Room 15 to 25 degC</field>
+            <field name="category">controlled_room</field>
+            <field name="temperature_min">15.0</field>
+            <field name="temperature_max">25.0</field>
+            <field name="sampling_cadence_minutes">60</field>
+            <field name="alert_window_minutes">240</field>
+            <field name="excursion_grace_minutes">60</field>
+        </record>
+
+        <record id="profile_dry_ice" model="eh.log.cold.chain.profile">
+            <field name="code">DRY-ICE</field>
+            <field name="name">Dry Ice (around -78 degC)</field>
+            <field name="category">dry_ice</field>
+            <field name="temperature_min">-90.0</field>
+            <field name="temperature_max">-65.0</field>
+            <field name="sampling_cadence_minutes">30</field>
+            <field name="alert_window_minutes">60</field>
+            <field name="excursion_grace_minutes">15</field>
+        </record>
+
+    </data>
+</odoo>

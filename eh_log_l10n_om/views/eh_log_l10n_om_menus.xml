@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <menuitem id="menu_eh_log_l10n_om"
+                  name="Oman"
+                  parent="eh_log_base.menu_eh_log_master_data"
+                  sequence="150"
+                  groups="eh_log_base.group_eh_log_manager"/>
+
+        <menuitem id="menu_eh_log_l10n_om_free_zones"
+                  name="Free Zones"
+                  parent="menu_eh_log_l10n_om"
+                  sequence="10"
+                  action="action_eh_log_l10n_om_free_zone"
+                  groups="eh_log_base.group_eh_log_manager"/>
+
+        <menuitem id="menu_eh_log_l10n_om_ports"
+                  name="Ports"
+                  parent="menu_eh_log_l10n_om"
+                  sequence="20"
+                  action="action_eh_log_l10n_om_port"
+                  groups="eh_log_base.group_eh_log_manager"/>
+
+        <menuitem id="menu_eh_log_l10n_om_airports"
+                  name="Airports"
+                  parent="menu_eh_log_l10n_om"
+                  sequence="30"
+                  action="action_eh_log_l10n_om_airport"
+                  groups="eh_log_base.group_eh_log_manager"/>
+
+        <menuitem id="menu_eh_log_l10n_om_customs_offices"
+                  name="Customs Offices"
+                  parent="menu_eh_log_l10n_om"
+                  sequence="40"
+                  action="action_eh_log_l10n_om_customs_office"
+                  groups="eh_log_base.group_eh_log_manager"/>
+
+    </data>
+</odoo>

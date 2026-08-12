@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="view_eh_log_container_mgmt_depot_list" model="ir.ui.view">
+            <field name="name">eh.log.container.mgmt.depot.list</field>
+            <field name="model">eh.log.container.mgmt.depot</field>
+            <field name="arch" type="xml">
+                <list string="Container Depots">
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="depot_kind"/>
+                    <field name="operator_id"/>
+                    <field name="country_id"/>
+                    <field name="capacity_teu" optional="show"/>
+                    <field name="accepts_reefer" optional="show"/>
+                    <field name="accepts_dangerous" optional="show"/>
+                    <field name="active" optional="hide"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="view_eh_log_container_mgmt_depot_form" model="ir.ui.view">
+            <field name="name">eh.log.container.mgmt.depot.form</field>
+            <field name="model">eh.log.container.mgmt.depot</field>
+            <field name="arch" type="xml">
+                <form string="Container Depot">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="code"/>
+                            <h1><field name="code"/></h1>
+                            <field name="name"/>
+                        </div>
+                        <group>
+                            <group string="Identity">
+                                <field name="depot_kind"/>
+                                <field name="operator_id" options="{'no_create': True}"/>
+                                <field name="country_id" options="{'no_create': True}"/>
+                                <field name="company_id" groups="base.group_multi_company"/>
+                                <field name="active" widget="boolean_toggle"/>
+                            </group>
+                            <group string="Capacity">
+                                <field name="capacity_teu"/>
+                                <field name="accepts_reefer" widget="boolean_toggle"/>
+                                <field name="accepts_dangerous" widget="boolean_toggle"/>
+                                <field name="accepts_tank" widget="boolean_toggle"/>
+                                <field name="gate_hours"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="address" colspan="2"/>
+                        </group>
+                        <group>
+                            <field name="notes" colspan="2"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_eh_log_container_mgmt_depot" model="ir.actions.act_window">
+            <field name="name">Container Depots</field>
+            <field name="res_model">eh.log.container.mgmt.depot</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+    </data>
+</odoo>

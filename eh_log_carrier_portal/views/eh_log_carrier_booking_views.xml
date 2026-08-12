@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_eh_log_carrier_booking_list" model="ir.ui.view">
+        <field name="name">eh.log.carrier.booking.list</field>
+        <field name="model">eh.log.carrier.booking</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="carrier_profile_id"/>
+                <field name="freight_job_id"/>
+                <field name="carrier_booking_reference"/>
+                <field name="state" widget="badge"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_eh_log_carrier_booking_form" model="ir.ui.view">
+        <field name="name">eh.log.carrier.booking.form</field>
+        <field name="model">eh.log.carrier.booking</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_request" string="Send to Carrier" type="object" class="btn-primary" invisible="state != 'requested'" groups="eh_log_base.group_eh_log_user"/>
+                    <button name="action_confirm" string="Mark Confirmed" type="object" class="btn-primary" invisible="state != 'accepted'" groups="eh_log_base.group_eh_log_user"/>
+                    <button name="action_close" string="Close" type="object" class="btn-secondary" invisible="state != 'confirmed'" groups="eh_log_base.group_eh_log_manager"/>
+                    <button name="action_cancel" string="Cancel" type="object" class="btn-secondary" invisible="state in ('closed', 'cancelled')" groups="eh_log_base.group_eh_log_manager"/>
+                    <field name="state" widget="statusbar" statusbar_visible="requested,accepted,confirmed,closed"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1><field name="name"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="quote_id" options="{'no_create': True}"/>
+                            <field name="carrier_profile_id" readonly="1"/>
+                            <field name="request_id" readonly="1"/>
+                            <field name="freight_job_id" options="{'no_create': True}"/>
+                        </group>
+                        <group>
+                            <field name="carrier_booking_reference" readonly="1"/>
+                            <field name="accepted_at" readonly="1"/>
+                            <field name="confirmed_at" readonly="1"/>
+                            <field name="cancelled_at" readonly="1"/>
+                            <field name="cancellation_reason"/>
+                        </group>
+                    </group>
+                    <group string="Status Polling">
+                        <group>
+                            <field name="last_status_polled_at" readonly="1"/>
+                        </group>
+                        <group>
+                            <field name="last_status_message" readonly="1"/>
+                        </group>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_eh_log_carrier_booking" model="ir.actions.act_window">
+        <field name="name">Bookings</field>
+        <field name="res_model">eh.log.carrier.booking</field>
+        <field name="view_mode">list,form</field>
+        <field name="views" eval="[(False, 'list'), (False, 'form')]"/>
+    </record>
+
+</odoo>

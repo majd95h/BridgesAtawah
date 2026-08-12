@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="res_config_settings_view_form_carrier" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.eh_log_carrier</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="inside">
+                <app data-string="ERP Heritage Carrier Portal"
+                     string="ERP Heritage Carrier Portal"
+                     name="eh_log_carrier_portal">
+                    <block title="Rate Shop and Booking" name="carrier_block">
+                        <setting id="carrier_default_rank_strategy"
+                                 string="Default Rank Strategy"
+                                 help="How rate-shop quotes are ranked when no per-request strategy is set.">
+                            <field name="eh_log_carrier_default_rank_strategy"/>
+                        </setting>
+                        <setting id="carrier_auto_book_threshold"
+                                 string="Auto-Book Threshold"
+                                 help="When a single quote falls below this value, it is booked without operator confirmation. Set to 0 to disable.">
+                            <field name="eh_log_carrier_auto_book_threshold"/>
+                        </setting>
+                    </block>
+                </app>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

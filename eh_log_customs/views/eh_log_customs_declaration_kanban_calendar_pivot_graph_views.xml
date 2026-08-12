@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_eh_log_customs_declaration_kanban" model="ir.ui.view">
+        <field name="name">eh.log.customs.declaration.kanban</field>
+        <field name="model">eh.log.customs.declaration</field>
+        <field name="arch" type="xml">
+            <kanban default_group_by="state" class="o_kanban_small_column">
+                <field name="name"/>
+                <field name="state"/>
+                <field name="declaration_type_id"/>
+                <field name="customer_id"/>
+                <field name="regulator_reference"/>
+                <field name="customs_value"/>
+                <field name="currency_id"/>
+                <templates>
+                    <t t-name="card">
+                        <div class="oe_kanban_global_click">
+                            <strong><field name="name"/></strong>
+                            <div class="text-muted small"><field name="declaration_type_id"/></div>
+                            <div><field name="customer_id"/></div>
+                            <div t-if="record.regulator_reference.raw_value" class="small text-muted mt-1">
+                                Reg ref: <field name="regulator_reference"/>
+                            </div>
+                            <div class="o_kanban_record_bottom mt-2">
+                                <div class="oe_kanban_bottom_right">
+                                    <field name="customs_value" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="view_eh_log_customs_declaration_pivot" model="ir.ui.view">
+        <field name="name">eh.log.customs.declaration.pivot</field>
+        <field name="model">eh.log.customs.declaration</field>
+        <field name="arch" type="xml">
+            <pivot string="Customs Analysis" sample="1">
+                <field name="declaration_type_id" type="row"/>
+                <field name="state" type="col"/>
+                <field name="customs_value" type="measure"/>
+                <field name="duty_amount" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="view_eh_log_customs_declaration_graph" model="ir.ui.view">
+        <field name="name">eh.log.customs.declaration.graph</field>
+        <field name="model">eh.log.customs.declaration</field>
+        <field name="arch" type="xml">
+            <graph string="Declarations by State" sample="1" type="bar">
+                <field name="state"/>
+                <field name="customs_value" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
+</odoo>

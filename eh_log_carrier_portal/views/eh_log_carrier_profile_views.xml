@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_eh_log_carrier_profile_list" model="ir.ui.view">
+        <field name="name">eh.log.carrier.profile.list</field>
+        <field name="model">eh.log.carrier.profile</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="code"/>
+                <field name="name"/>
+                <field name="mode"/>
+                <field name="provider_code"/>
+                <field name="lane_count"/>
+                <field name="is_preferred"/>
+                <field name="is_mock"/>
+                <field name="active"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_eh_log_carrier_profile_form" model="ir.ui.view">
+        <field name="name">eh.log.carrier.profile.form</field>
+        <field name="model">eh.log.carrier.profile</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_health_check"
+                            string="Health Check"
+                            type="object"
+                            class="btn-secondary"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1><field name="name"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="code"/>
+                            <field name="mode" widget="radio" options="{'horizontal': true}"/>
+                            <field name="provider_code"/>
+                            <field name="api_version"/>
+                            <field name="endpoint_url" widget="url"/>
+                            <field name="credentials_key"/>
+                            <field name="timeout_seconds"/>
+                        </group>
+                        <group>
+                            <field name="is_preferred" widget="boolean_toggle"/>
+                            <field name="is_mock" widget="boolean_toggle"/>
+                            <field name="active" widget="boolean_toggle"/>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                        </group>
+                    </group>
+                    <group string="Capabilities">
+                        <group>
+                            <field name="can_rate_shop" widget="boolean_toggle"/>
+                            <field name="can_book" widget="boolean_toggle"/>
+                            <field name="can_cancel" widget="boolean_toggle"/>
+                        </group>
+                        <group>
+                            <field name="can_track" widget="boolean_toggle"/>
+                            <field name="can_schedules" widget="boolean_toggle"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Lanes" name="lanes">
+                            <field name="eh_log_carrier_lane_ids">
+                                <list editable="bottom">
+                                    <field name="origin_country_id"/>
+                                    <field name="origin_location_code"/>
+                                    <field name="destination_country_id"/>
+                                    <field name="destination_location_code"/>
+                                    <field name="transit_days_min"/>
+                                    <field name="transit_days_max"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_eh_log_carrier_profile" model="ir.actions.act_window">
+        <field name="name">Carriers</field>
+        <field name="res_model">eh.log.carrier.profile</field>
+        <field name="view_mode">list,form</field>
+        <field name="views" eval="[(False, 'list'), (False, 'form')]"/>
+    </record>
+
+</odoo>

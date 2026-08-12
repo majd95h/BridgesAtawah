@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_eh_log_warehouse_snapshot_list" model="ir.ui.view">
+        <field name="name">eh.log.warehouse.snapshot.list</field>
+        <field name="model">eh.log.warehouse.snapshot</field>
+        <field name="arch" type="xml">
+            <list create="false" delete="false" edit="false">
+                <field name="snapshot_date"/>
+                <field name="client_id"/>
+                <field name="facility_id"/>
+                <field name="location_id"/>
+                <field name="pallets_on_hand"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="action_eh_log_warehouse_snapshot" model="ir.actions.act_window">
+        <field name="name">Snapshots</field>
+        <field name="res_model">eh.log.warehouse.snapshot</field>
+        <field name="view_mode">list</field>
+        <field name="views" eval="[(False, 'list')]"/>
+    </record>
+
+</odoo>

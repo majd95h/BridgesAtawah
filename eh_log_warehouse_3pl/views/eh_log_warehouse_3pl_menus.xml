@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <menuitem id="menu_eh_log_warehouse_root"
+              name="Warehouse 3PL"
+              parent="eh_log_base.menu_eh_log_operations"
+              sequence="60"/>
+
+    <menuitem id="menu_eh_log_warehouse_receipts"
+              name="Receipts"
+              parent="menu_eh_log_warehouse_root"
+              action="action_eh_log_warehouse_receipt"
+              sequence="10"/>
+
+    <menuitem id="menu_eh_log_warehouse_picks"
+              name="Picks"
+              parent="menu_eh_log_warehouse_root"
+              action="action_eh_log_warehouse_pick"
+              sequence="20"/>
+
+    <menuitem id="menu_eh_log_warehouse_movements"
+              name="Movements"
+              parent="menu_eh_log_warehouse_root"
+              action="action_eh_log_warehouse_movement"
+              sequence="30"/>
+
+    <menuitem id="menu_eh_log_warehouse_snapshots"
+              name="Snapshots"
+              parent="menu_eh_log_warehouse_root"
+              action="action_eh_log_warehouse_snapshot"
+              sequence="40"/>
+
+    <menuitem id="menu_eh_log_warehouse_billing_runs"
+              name="Billing Runs"
+              parent="menu_eh_log_warehouse_root"
+              action="action_eh_log_warehouse_billing_run"
+              sequence="50"/>
+
+    <menuitem id="menu_eh_log_warehouse_config_root"
+              name="Warehouse 3PL"
+              parent="eh_log_base.menu_eh_log_configuration"
+              sequence="60"/>
+
+    <menuitem id="menu_eh_log_warehouse_facilities"
+              name="Facilities"
+              parent="menu_eh_log_warehouse_config_root"
+              action="action_eh_log_warehouse_facility"
+              sequence="10"/>
+
+    <menuitem id="menu_eh_log_warehouse_zones"
+              name="Zones"
+              parent="menu_eh_log_warehouse_config_root"
+              action="action_eh_log_warehouse_zone"
+              sequence="20"/>
+
+    <menuitem id="menu_eh_log_warehouse_locations"
+              name="Locations"
+              parent="menu_eh_log_warehouse_config_root"
+              action="action_eh_log_warehouse_location"
+              sequence="30"/>
+
+    <menuitem id="menu_eh_log_warehouse_clients"
+              name="3PL Clients"
+              parent="menu_eh_log_warehouse_config_root"
+              action="action_eh_log_warehouse_client"
+              sequence="40"/>
+
+    <menuitem id="menu_eh_log_warehouse_rate_cards"
+              name="Rate Cards"
+              parent="menu_eh_log_warehouse_config_root"
+              action="action_eh_log_warehouse_rate_card"
+              sequence="50"/>
+
+</odoo>

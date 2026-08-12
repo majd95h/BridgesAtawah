@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_eh_log_dashboard_form" model="ir.ui.view">
+        <field name="name">eh.log.dashboard.form</field>
+        <field name="model">eh.log.dashboard</field>
+        <field name="arch" type="xml">
+            <form create="false" edit="false" delete="false" class="o_eh_log_dashboard">
+                <sheet>
+                    <div class="oe_title mb-4">
+                        <h1 class="mb-1">Logistics Dashboard</h1>
+                        <p class="text-muted mb-0">Live KPIs across the ERP Heritage logistics suite. Click any tile to drill down.</p>
+                    </div>
+
+                    <h3 class="mt-4 mb-3 border-bottom pb-2">Quotes and Pipeline</h3>
+                    <div class="row g-3">
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <button name="action_open_open_quotations" type="object"
+                                    class="btn btn-light w-100 text-start eh_log_kpi_card p-3">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa fa-file-text-o fa-2x text-primary me-3" title="Open Quotations"/>
+                                    <div>
+                                        <div class="fs-3 fw-bold">
+                                            <field name="open_quotation_count"/>
+                                        </div>
+                                        <div class="text-muted small">Open Quotations</div>
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="border rounded p-3 eh_log_kpi_card">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa fa-money fa-2x text-success me-3" title="Weighted Pipeline"/>
+                                    <div>
+                                        <div class="fs-3 fw-bold">
+                                            <field name="weighted_pipeline_value" widget="monetary"
+                                                   options="{'currency_field': 'pipeline_currency_id'}"/>
+                                        </div>
+                                        <div class="text-muted small">Weighted Pipeline</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="mt-4 mb-3 border-bottom pb-2">Freight Forwarding</h3>
+                    <div class="row g-3">
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="border rounded p-3 eh_log_kpi_card">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa fa-cubes fa-2x text-info me-3" title="Open Freight Jobs"/>
+                                    <div>
+                                        <div class="fs-3 fw-bold">
+                                            <field name="open_freight_job_count"/>
+                                        </div>
+                                        <div class="text-muted small">Open Jobs</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <button name="action_open_freight_in_transit" type="object"
+                                    class="btn btn-light w-100 text-start eh_log_kpi_card p-3">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa fa-ship fa-2x text-primary me-3" title="In Transit"/>
+                                    <div>
+                                        <div class="fs-3 fw-bold">
+                                            <field name="in_transit_freight_count"/>
+                                        </div>
+                                        <div class="text-muted small">In Transit</div>
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+
+                    <h3 class="mt-4 mb-3 border-bottom pb-2">Customs</h3>
+                    <div class="row g-3">
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <button name="action_open_customs_open" type="object"
+                                    class="btn btn-light w-100 text-start eh_log_kpi_card p-3">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa fa-list-alt fa-2x text-primary me-3" title="Open Customs Declarations"/>
+                                    <div>
+                                        <div class="fs-3 fw-bold">
+                                            <field name="customs_declarations_open_count"/>
+                                        </div>
+                                        <div class="text-muted small">Open Declarations</div>
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <button name="action_open_customs_rejected" type="object"
+                                    class="btn btn-light w-100 text-start eh_log_kpi_card p-3">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa fa-exclamation-triangle fa-2x text-danger me-3" title="Rejected Declarations"/>
+                                    <div>
+                                        <div class="fs-3 fw-bold">
+                                            <field name="customs_declarations_rejected_count"/>
+                                        </div>
+                                        <div class="text-muted small">Rejected</div>
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+
+                    <h3 class="mt-4 mb-3 border-bottom pb-2">Transport</h3>
+                    <div class="row g-3">
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="border rounded p-3 eh_log_kpi_card">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa fa-truck fa-2x text-info me-3" title="Transport Trips Today"/>
+                                    <div>
+                                        <div class="fs-3 fw-bold">
+                                            <field name="transport_trips_today_count"/>
+                                        </div>
+                                        <div class="text-muted small">Trips Today</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="mt-4 mb-3 border-bottom pb-2" invisible="not has_last_mile">Last Mile</h3>
+                    <div class="row g-3" invisible="not has_last_mile">
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <button name="action_open_deliveries_today" type="object"
+                                    class="btn btn-light w-100 text-start eh_log_kpi_card p-3">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa fa-truck fa-2x text-primary me-3" title="Deliveries Today"/>
+                                    <div>
+                                        <div class="fs-3 fw-bold">
+                                            <field name="deliveries_today_count"/>
+                                        </div>
+                                        <div class="text-muted small">Deliveries Today</div>
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="border rounded p-3 eh_log_kpi_card">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa fa-money fa-2x text-warning me-3" title="COD Outstanding"/>
+                                    <div>
+                                        <div class="fs-3 fw-bold">
+                                            <field name="cod_outstanding_total" widget="float"/>
+                                        </div>
+                                        <div class="text-muted small">COD Outstanding</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="mt-4 mb-3 border-bottom pb-2"
+                        invisible="not (has_warehouse_3pl or has_carrier_portal or has_track_trace or has_edi)">Operations</h3>
+                    <div class="row g-3"
+                         invisible="not (has_warehouse_3pl or has_carrier_portal or has_track_trace or has_edi)">
+                        <div class="col-12 col-md-6 col-lg-4" invisible="not has_warehouse_3pl">
+                            <button name="action_open_warehouse_receipts" type="object"
+                                    class="btn btn-light w-100 text-start eh_log_kpi_card p-3">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa fa-inbox fa-2x text-primary me-3" title="Open Warehouse Receipts"/>
+                                    <div>
+                                        <div class="fs-3 fw-bold">
+                                            <field name="warehouse_open_receipts_count"/>
+                                        </div>
+                                        <div class="text-muted small">Receipts</div>
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4" invisible="not has_warehouse_3pl">
+                            <button name="action_open_warehouse_picks" type="object"
+                                    class="btn btn-light w-100 text-start eh_log_kpi_card p-3">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa fa-shopping-basket fa-2x text-primary me-3" title="Open Warehouse Picks"/>
+                                    <div>
+                                        <div class="fs-3 fw-bold">
+                                            <field name="warehouse_open_picks_count"/>
+                                        </div>
+                                        <div class="text-muted small">Picks</div>
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4" invisible="not has_carrier_portal">
+                            <button name="action_open_carrier_bookings" type="object"
+                                    class="btn btn-light w-100 text-start eh_log_kpi_card p-3">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa fa-paper-plane fa-2x text-primary me-3" title="Active Carrier Bookings"/>
+                                    <div>
+                                        <div class="fs-3 fw-bold">
+                                            <field name="carrier_bookings_active_count"/>
+                                        </div>
+                                        <div class="text-muted small">Bookings</div>
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4" invisible="not has_track_trace">
+                            <div class="border rounded p-3 eh_log_kpi_card">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa fa-feed fa-2x text-info me-3" title="Tracking Events Today"/>
+                                    <div>
+                                        <div class="fs-3 fw-bold">
+                                            <field name="track_events_today_count"/>
+                                        </div>
+                                        <div class="text-muted small">Events Today</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4" invisible="not has_edi">
+                            <button name="action_open_edi_dead_letter" type="object"
+                                    class="btn btn-light w-100 text-start eh_log_kpi_card p-3">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa fa-warning fa-2x text-danger me-3" title="EDI Dead-Letter"/>
+                                    <div>
+                                        <div class="fs-3 fw-bold">
+                                            <field name="edi_dead_letter_count"/>
+                                        </div>
+                                        <div class="text-muted small">EDI Dead-Letter</div>
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+
+                    <h3 class="mt-4 mb-3 border-bottom pb-2"
+                        invisible="not (has_cold_chain or has_dangerous_goods or has_container_mgmt)">Specialised Cargo</h3>
+                    <div class="row g-3"
+                         invisible="not (has_cold_chain or has_dangerous_goods or has_container_mgmt)">
+                        <div class="col-12 col-md-6 col-lg-4" invisible="not has_cold_chain">
+                            <div class="border rounded p-3 eh_log_kpi_card">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa fa-thermometer-half fa-2x text-info me-3" title="Cold Chain Deviations"/>
+                                    <div>
+                                        <div class="fs-3 fw-bold">
+                                            <field name="cold_chain_deviations_count"/>
+                                        </div>
+                                        <div class="text-muted small">Deviations</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4" invisible="not has_dangerous_goods">
+                            <div class="border rounded p-3 eh_log_kpi_card">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa fa-warning fa-2x text-warning me-3" title="Active DG Declarations"/>
+                                    <div>
+                                        <div class="fs-3 fw-bold">
+                                            <field name="dangerous_goods_active_count"/>
+                                        </div>
+                                        <div class="text-muted small">DG Declarations</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4" invisible="not has_container_mgmt">
+                            <div class="border rounded p-3 eh_log_kpi_card">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa fa-archive fa-2x text-info me-3" title="Containers at Yard"/>
+                                    <div>
+                                        <div class="fs-3 fw-bold">
+                                            <field name="containers_at_yard_count"/>
+                                        </div>
+                                        <div class="text-muted small">Containers At Yard</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="mt-4 mb-3 border-bottom pb-2"
+                        invisible="not (has_ship_agency or has_project_cargo)">Maritime and Project Cargo</h3>
+                    <div class="row g-3"
+                         invisible="not (has_ship_agency or has_project_cargo)">
+                        <div class="col-12 col-md-6 col-lg-4" invisible="not has_ship_agency">
+                            <button name="action_open_port_calls" type="object"
+                                    class="btn btn-light w-100 text-start eh_log_kpi_card p-3">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa fa-anchor fa-2x text-primary me-3" title="Active Port Calls"/>
+                                    <div>
+                                        <div class="fs-3 fw-bold">
+                                            <field name="port_calls_active_count"/>
+                                        </div>
+                                        <div class="text-muted small">Port Calls</div>
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4" invisible="not has_project_cargo">
+                            <button name="action_open_project_cargo_executing" type="object"
+                                    class="btn btn-light w-100 text-start eh_log_kpi_card p-3">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa fa-cube fa-2x text-primary me-3" title="Project Cargo Executing"/>
+                                    <div>
+                                        <div class="fs-3 fw-bold">
+                                            <field name="project_cargo_jobs_executing_count"/>
+                                        </div>
+                                        <div class="text-muted small">PC Executing</div>
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4" invisible="not has_project_cargo">
+                            <button name="action_open_permits_expiring" type="object"
+                                    class="btn btn-light w-100 text-start eh_log_kpi_card p-3">
+                                <div class="d-flex align-items-center">
+                                    <i class="fa fa-id-badge fa-2x text-warning me-3" title="Permits Expiring"/>
+                                    <div>
+                                        <div class="fs-3 fw-bold">
+                                            <field name="permits_expiring_count"/>
+                                        </div>
+                                        <div class="text-muted small">Permits Expiring</div>
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+
+                    <field name="has_last_mile" invisible="1"/>
+                    <field name="has_cold_chain" invisible="1"/>
+                    <field name="has_dangerous_goods" invisible="1"/>
+                    <field name="has_container_mgmt" invisible="1"/>
+                    <field name="has_warehouse_3pl" invisible="1"/>
+                    <field name="has_carrier_portal" invisible="1"/>
+                    <field name="has_track_trace" invisible="1"/>
+                    <field name="has_edi" invisible="1"/>
+                    <field name="has_ship_agency" invisible="1"/>
+                    <field name="has_project_cargo" invisible="1"/>
+                    <field name="pipeline_currency_id" invisible="1"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_eh_log_dashboard" model="ir.actions.server">
+        <field name="name">Logistics Dashboard</field>
+        <field name="model_id" ref="model_eh_log_dashboard"/>
+        <field name="state">code</field>
+        <field name="code">action = model.action_open_dashboard()</field>
+    </record>
+
+</odoo>

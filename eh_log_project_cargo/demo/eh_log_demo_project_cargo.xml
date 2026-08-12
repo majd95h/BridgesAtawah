@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="demo_pc_job_001" model="eh.log.project.cargo.job">
+            <field name="customer_partner_id" ref="eh_log_base.demo_partner_riyadh_proj"/>
+            <field name="customer_reference">RPL-NEOM-OOG-014</field>
+            <field name="project_name">NEOM Power Substation Phase 2</field>
+            <field name="origin_partner_id" ref="eh_log_base.demo_partner_germany_machinery"/>
+            <field name="destination_partner_id" ref="eh_log_base.demo_partner_riyadh_proj"/>
+            <field name="target_start_date" eval="(DateTime.today() + relativedelta(days=14)).strftime('%Y-%m-%d')"/>
+            <field name="target_end_date" eval="(DateTime.today() + relativedelta(days=42)).strftime('%Y-%m-%d')"/>
+        </record>
+
+        <record id="demo_pc_job_002" model="eh.log.project.cargo.job">
+            <field name="customer_partner_id" ref="eh_log_base.demo_partner_najd_petrochem"/>
+            <field name="customer_reference">NPC-EXP-2026-007</field>
+            <field name="project_name">Jubail Reactor Vessel Move</field>
+            <field name="target_start_date" eval="(DateTime.today() + relativedelta(days=7)).strftime('%Y-%m-%d')"/>
+            <field name="target_end_date" eval="(DateTime.today() + relativedelta(days=21)).strftime('%Y-%m-%d')"/>
+        </record>
+
+        <record id="demo_pc_job_003" model="eh.log.project.cargo.job">
+            <field name="customer_partner_id" ref="eh_log_base.demo_partner_alpha_trading"/>
+            <field name="customer_reference">AT-PCC-2026-003</field>
+            <field name="project_name">Dubai Wind Tower Sections</field>
+            <field name="origin_partner_id" ref="eh_log_base.demo_partner_germany_machinery"/>
+            <field name="destination_partner_id" ref="eh_log_base.demo_partner_alpha_trading"/>
+            <field name="target_start_date" eval="(DateTime.today() + relativedelta(days=10)).strftime('%Y-%m-%d')"/>
+        </record>
+
+        <!-- Permits -->
+
+        <record id="demo_pc_permit_001" model="eh.log.project.cargo.permit">
+            <field name="name">Police Escort - NEOM Substation</field>
+            <field name="job_id" ref="demo_pc_job_001"/>
+            <field name="permit_reference">RTA-OOG-2026-NM-014</field>
+            <field name="authority">police</field>
+            <field name="issuing_partner_id" ref="eh_log_base.demo_partner_riyadh_proj"/>
+            <field name="valid_from" eval="DateTime.today().strftime('%Y-%m-%d')"/>
+            <field name="valid_until" eval="(DateTime.today() + relativedelta(days=4)).strftime('%Y-%m-%d')"/>
+        </record>
+
+        <record id="demo_pc_permit_002" model="eh.log.project.cargo.permit">
+            <field name="name">MOTC OOG Permit - Jubail Move</field>
+            <field name="job_id" ref="demo_pc_job_002"/>
+            <field name="permit_reference">SA-MOTC-2026-098</field>
+            <field name="authority">road</field>
+            <field name="issuing_partner_id" ref="eh_log_base.demo_partner_najd_petrochem"/>
+            <field name="valid_from" eval="DateTime.today().strftime('%Y-%m-%d')"/>
+            <field name="valid_until" eval="(DateTime.today() + relativedelta(days=6)).strftime('%Y-%m-%d')"/>
+        </record>
+
+    </data>
+</odoo>

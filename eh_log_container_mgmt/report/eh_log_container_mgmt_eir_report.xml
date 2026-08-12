@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="action_report_eh_log_container_mgmt_eir" model="ir.actions.report">
+        <field name="name">Equipment Interchange Receipt</field>
+        <field name="model">eh.log.container.mgmt.movement</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">eh_log_container_mgmt.report_eir_document</field>
+        <field name="report_file">eh_log_container_mgmt.report_eir_document</field>
+        <field name="binding_model_id" ref="model_eh_log_container_mgmt_movement"/>
+        <field name="binding_type">report</field>
+        <field name="paperformat_id" ref="eh_log_base.paperformat_eh_log_portrait"/>
+    </record>
+
+    <template id="report_eir_document">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="mov">
+                <t t-call="eh_log_base.eh_log_clean_layout">
+                    <t t-set="company" t-value="mov.container_id.company_id"/>
+                    <t t-set="report_type" t-value="'pdf'"/>
+                    <t t-call="eh_log_base.eh_log_report_styles"/>
+                    <div class="page eh_pdf_page">
+                        <t t-call="eh_log_base.eh_log_report_header">
+                            <t t-set="title" t-value="'Equipment Interchange Receipt'"/>
+                            <t t-set="company" t-value="mov.container_id.company_id"/>
+                        </t>
+
+                        <div class="eh_pdf_meta">
+                            <span><strong>Reference:</strong> <t t-out="mov.name"/></span>
+                            <span><strong>Container:</strong> <t t-out="mov.container_id.container_number or ''"/></span>
+                            <span><strong>Movement:</strong> <t t-out="dict(mov._fields['movement_kind'].selection).get(mov.movement_kind)"/></span>
+                            <span><strong>When:</strong> <t t-out="mov.happened_at and mov.happened_at.strftime('%Y-%m-%d %H:%M') or ''"/></span>
+                        </div>
+
+                        <h2 class="eh_pdf_subtitle">Equipment</h2>
+                        <table class="eh_pdf_table">
+                            <thead>
+                                <tr>
+                                    <th>Field</th>
+                                    <th>Value</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Container Number</td>
+                                    <td><t t-out="mov.container_id.container_number or ''"/></td>
+                                </tr>
+                                <tr>
+                                    <td>ISO Type</td>
+                                    <td><t t-out="mov.container_id.iso_type_id.display_name or ''"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Seal</td>
+                                    <td><t t-out="mov.seal_number or mov.container_id.seal_number or ''"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Gross Weight (kg)</td>
+                                    <td><t t-out="'{:,.0f}'.format(mov.container_id.gross_weight_kg or 0)"/></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2 class="eh_pdf_subtitle">Depot</h2>
+                        <table class="eh_pdf_table">
+                            <thead>
+                                <tr>
+                                    <th>Field</th>
+                                    <th>Value</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Depot</td>
+                                    <td><t t-out="mov.depot_id.display_name"/></td>
+                                </tr>
+                                <tr t-if="mov.counterparty_depot_id">
+                                    <td>Counterparty Depot</td>
+                                    <td><t t-out="mov.counterparty_depot_id.display_name"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Operator</td>
+                                    <td><t t-out="mov.depot_id.operator_id.display_name or ''"/></td>
+                                </tr>
+                                <tr t-if="mov.gate_operator_name">
+                                    <td>Gate Operator</td>
+                                    <td><t t-out="mov.gate_operator_name"/></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <t t-if="mov.condition_note">
+                            <h2 class="eh_pdf_subtitle">Condition Note</h2>
+                            <div class="eh_pdf_summary_box">
+                                <div class="value">
+                                    <t t-out="mov.condition_note"/>
+                                </div>
+                                <div t-if="mov.needs_repair" class="label"><!-- noqa: gcclog-hardcode trivial inline spacing for a single status badge -->
+                                    <br/>
+                                    <span class="eh_pdf_status_badge eh_pdf_status_warn">REPAIR REQUIRED</span>
+                                </div>
+                            </div>
+                        </t>
+
+                        <div class="eh_pdf_signature_block">
+                            <p>Received in apparent good order and condition except as noted above. The undersigned hereby acknowledges receipt of the equipment described in this Equipment Interchange Receipt.</p>
+                            <div class="eh_pdf_signature_line">Receiving Party</div>
+                        </div>
+
+                        <t t-call="eh_log_base.eh_log_report_footer"/>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>

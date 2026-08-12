@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="view_eh_log_container_mgmt_movement_list" model="ir.ui.view">
+            <field name="name">eh.log.container.mgmt.movement.list</field>
+            <field name="model">eh.log.container.mgmt.movement</field>
+            <field name="arch" type="xml">
+                <list string="Gate Movements" decoration-warning="needs_repair">
+                    <field name="happened_at"/>
+                    <field name="name"/>
+                    <field name="container_number"/>
+                    <field name="movement_kind"/>
+                    <field name="depot_id"/>
+                    <field name="counterparty_depot_id" optional="show"/>
+                    <field name="needs_repair" optional="show"/>
+                    <field name="seal_number" optional="hide"/>
+                    <field name="gate_operator_name" optional="hide"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="view_eh_log_container_mgmt_movement_form" model="ir.ui.view">
+            <field name="name">eh.log.container.mgmt.movement.form</field>
+            <field name="model">eh.log.container.mgmt.movement</field>
+            <field name="arch" type="xml">
+                <form string="Gate Movement">
+                    <sheet>
+                        <div class="oe_title">
+                            <h1><field name="name"/></h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="container_id" options="{'no_create': True}"/>
+                                <field name="movement_kind"/>
+                                <field name="depot_id" options="{'no_create': True}"/>
+                                <field name="counterparty_depot_id" options="{'no_create': True}"/>
+                                <field name="happened_at"/>
+                            </group>
+                            <group>
+                                <field name="seal_number"/>
+                                <field name="gate_operator_name"/>
+                                <field name="needs_repair"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="condition_note" colspan="2"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_eh_log_container_mgmt_movement_search" model="ir.ui.view">
+            <field name="name">eh.log.container.mgmt.movement.search</field>
+            <field name="model">eh.log.container.mgmt.movement</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="container_number"/>
+                    <field name="depot_id"/>
+                    <field name="name"/>
+                    <separator/>
+                    <filter string="Gate-In" name="filter_gate_in" domain="[('movement_kind', '=', 'gate_in')]"/>
+                    <filter string="Gate-Out" name="filter_gate_out" domain="[('movement_kind', '=', 'gate_out')]"/>
+                    <filter string="Needs Repair" name="filter_needs_repair" domain="[('needs_repair', '=', True)]"/>
+                    <filter string="Group by Depot" name="group_depot" context="{'group_by': 'depot_id'}"/>
+                    <filter string="Group by Kind" name="group_kind" context="{'group_by': 'movement_kind'}"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_eh_log_container_mgmt_movement" model="ir.actions.act_window">
+            <field name="name">Gate Movements</field>
+            <field name="res_model">eh.log.container.mgmt.movement</field>
+            <field name="view_mode">list,form</field>
+            <field name="search_view_id" ref="view_eh_log_container_mgmt_movement_search"/>
+        </record>
+
+    </data>
+</odoo>

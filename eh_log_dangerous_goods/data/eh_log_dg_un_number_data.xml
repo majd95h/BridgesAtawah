@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data noupdate="1">
+
+        <!--
+            High-frequency UN numbers seeded so a fresh install can
+            file declarations on day one. Production deployments load
+            the full ~3000-entry UN dangerous-goods list via a
+            customer-supplied data file.
+        -->
+
+        <record id="un_1090" model="eh.log.dg.un.number">
+            <field name="un_number">UN1090</field>
+            <field name="proper_shipping_name">Acetone</field>
+            <field name="primary_class_id" ref="dg_class_3"/>
+            <field name="packing_group">II</field>
+            <field name="flashpoint_celsius">-17.0</field>
+            <field name="ems_code">F-E S-D</field>
+        </record>
+
+        <record id="un_1170" model="eh.log.dg.un.number">
+            <field name="un_number">UN1170</field>
+            <field name="proper_shipping_name">Ethanol or Ethyl alcohol</field>
+            <field name="primary_class_id" ref="dg_class_3"/>
+            <field name="packing_group">II</field>
+            <field name="flashpoint_celsius">12.0</field>
+            <field name="ems_code">F-E S-D</field>
+        </record>
+
+        <record id="un_1203" model="eh.log.dg.un.number">
+            <field name="un_number">UN1203</field>
+            <field name="proper_shipping_name">Petrol or Gasoline</field>
+            <field name="primary_class_id" ref="dg_class_3"/>
+            <field name="packing_group">II</field>
+            <field name="flashpoint_celsius">-43.0</field>
+            <field name="marine_pollutant" eval="True"/>
+            <field name="ems_code">F-E S-E</field>
+        </record>
+
+        <record id="un_1263" model="eh.log.dg.un.number">
+            <field name="un_number">UN1263</field>
+            <field name="proper_shipping_name">Paint or Paint related material</field>
+            <field name="primary_class_id" ref="dg_class_3"/>
+            <field name="packing_group">III</field>
+            <field name="flashpoint_celsius">25.0</field>
+            <field name="ems_code">F-E S-E</field>
+        </record>
+
+        <record id="un_1789" model="eh.log.dg.un.number">
+            <field name="un_number">UN1789</field>
+            <field name="proper_shipping_name">Hydrochloric acid</field>
+            <field name="primary_class_id" ref="dg_class_8"/>
+            <field name="packing_group">II</field>
+            <field name="ems_code">F-A S-B</field>
+        </record>
+
+        <record id="un_1830" model="eh.log.dg.un.number">
+            <field name="un_number">UN1830</field>
+            <field name="proper_shipping_name">Sulphuric acid</field>
+            <field name="primary_class_id" ref="dg_class_8"/>
+            <field name="packing_group">II</field>
+            <field name="ems_code">F-A S-B</field>
+        </record>
+
+        <record id="un_1950" model="eh.log.dg.un.number">
+            <field name="un_number">UN1950</field>
+            <field name="proper_shipping_name">Aerosols</field>
+            <field name="primary_class_id" ref="dg_class_2_1"/>
+            <field name="packing_group">none</field>
+            <field name="ems_code">F-D S-U</field>
+        </record>
+
+        <record id="un_1965" model="eh.log.dg.un.number">
+            <field name="un_number">UN1965</field>
+            <field name="proper_shipping_name">Hydrocarbon gas mixture, liquefied (LPG)</field>
+            <field name="primary_class_id" ref="dg_class_2_1"/>
+            <field name="packing_group">none</field>
+            <field name="ems_code">F-D S-U</field>
+        </record>
+
+        <record id="un_1977" model="eh.log.dg.un.number">
+            <field name="un_number">UN1977</field>
+            <field name="proper_shipping_name">Nitrogen, refrigerated liquid</field>
+            <field name="primary_class_id" ref="dg_class_2_2"/>
+            <field name="packing_group">none</field>
+            <field name="ems_code">F-C S-V</field>
+        </record>
+
+        <record id="un_2794" model="eh.log.dg.un.number">
+            <field name="un_number">UN2794</field>
+            <field name="proper_shipping_name">Batteries, wet, filled with acid</field>
+            <field name="primary_class_id" ref="dg_class_8"/>
+            <field name="packing_group">none</field>
+            <field name="ems_code">F-A S-B</field>
+        </record>
+
+        <record id="un_3077" model="eh.log.dg.un.number">
+            <field name="un_number">UN3077</field>
+            <field name="proper_shipping_name">Environmentally hazardous substance, solid, n.o.s.</field>
+            <field name="primary_class_id" ref="dg_class_9"/>
+            <field name="packing_group">III</field>
+            <field name="marine_pollutant" eval="True"/>
+            <field name="ems_code">F-A S-F</field>
+        </record>
+
+        <record id="un_3082" model="eh.log.dg.un.number">
+            <field name="un_number">UN3082</field>
+            <field name="proper_shipping_name">Environmentally hazardous substance, liquid, n.o.s.</field>
+            <field name="primary_class_id" ref="dg_class_9"/>
+            <field name="packing_group">III</field>
+            <field name="marine_pollutant" eval="True"/>
+            <field name="ems_code">F-A S-F</field>
+        </record>
+
+        <record id="un_3480" model="eh.log.dg.un.number">
+            <field name="un_number">UN3480</field>
+            <field name="proper_shipping_name">Lithium ion batteries</field>
+            <field name="primary_class_id" ref="dg_class_9"/>
+            <field name="packing_group">none</field>
+            <field name="iata_passenger_aircraft_forbidden" eval="True"/>
+            <field name="ems_code">F-A S-I</field>
+        </record>
+
+        <record id="un_3481" model="eh.log.dg.un.number">
+            <field name="un_number">UN3481</field>
+            <field name="proper_shipping_name">Lithium ion batteries contained in equipment</field>
+            <field name="primary_class_id" ref="dg_class_9"/>
+            <field name="packing_group">none</field>
+            <field name="ems_code">F-A S-I</field>
+        </record>
+
+        <record id="un_3373" model="eh.log.dg.un.number">
+            <field name="un_number">UN3373</field>
+            <field name="proper_shipping_name">Biological substance, Category B</field>
+            <field name="primary_class_id" ref="dg_class_6_2"/>
+            <field name="packing_group">none</field>
+            <field name="ems_code">F-A S-T</field>
+        </record>
+
+        <record id="un_2814" model="eh.log.dg.un.number">
+            <field name="un_number">UN2814</field>
+            <field name="proper_shipping_name">Infectious substance, affecting humans</field>
+            <field name="primary_class_id" ref="dg_class_6_2"/>
+            <field name="packing_group">none</field>
+            <field name="iata_passenger_aircraft_forbidden" eval="True"/>
+            <field name="ems_code">F-A S-T</field>
+        </record>
+
+    </data>
+</odoo>

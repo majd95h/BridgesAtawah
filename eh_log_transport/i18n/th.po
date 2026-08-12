@@ -1,0 +1,1045 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* eh_log_transport
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-01 04:34+0000\n"
+"PO-Revision-Date: 2026-07-01 04:34+0000\n"
+"Last-Translator: ERP Heritage <info@erpheritage.com.au>\n"
+"Language-Team: Thai\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. module: eh_log_transport
+#. odoo-python
+#: code:addons/eh_log_transport/models/eh_log_transport_trip.py:0
+msgid "(none)"
+msgstr "(ไม่มี)"
+
+#. module: eh_log_transport
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_trip_kanban
+msgid "<i class=\"fa fa-id-badge me-1\" title=\"Driver\"/>"
+msgstr "<i class=\"fa fa-id-badge me-1\" title=\"คนขับ\"/>"
+
+#. module: eh_log_transport
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_trip_kanban
+msgid "<i class=\"fa fa-truck me-1\" title=\"Vehicle\"/>"
+msgstr "<i class=\"fa fa-truck me-1\" title=\"ยานพาหนะ\"/>"
+
+#. module: eh_log_transport
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_trip_form
+msgid ""
+"<i class=\"fa fa-truck\" style=\"font-size:1.6rem;color:#D4A055;\" "
+"title=\"Road transport\"/>"
+msgstr ""
+"<i class=\"fa fa-truck\" style=\"font-size:1.6rem;color:#D4A055;\" "
+"title=\"การขนส่งทางถนน\"/>"
+
+#. module: eh_log_transport
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_vehicle_form
+msgid "ABC-1234"
+msgstr ""
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__message_needaction
+msgid "Action Needed"
+msgstr "จำเป็นต้องดำเนินการ"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_driver__active
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_vehicle__active
+msgid "Active"
+msgstr "เปิดใช้งาน"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__activity_ids
+msgid "Activities"
+msgstr "กิจกรรม"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "การตกแต่งข้อยกเว้นกิจกรรม"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__activity_state
+msgid "Activity State"
+msgstr "สถานะกิจกรรม"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "ไอคอนประเภทกิจกรรม"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__delivery_actual_at
+msgid "Actual Delivery"
+msgstr "การจัดส่งจริง"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__pickup_actual_at
+msgid "Actual Pickup"
+msgstr "การรับสินค้าจริง"
+
+#. module: eh_log_transport
+#: model:ir.model.fields.selection,name:eh_log_transport.selection__eh_log_transport_trip__state__at_delivery
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_trip_form
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_trip_search_full
+msgid "At Delivery"
+msgstr "เมื่อจัดส่ง"
+
+#. module: eh_log_transport
+#: model:ir.model.fields.selection,name:eh_log_transport.selection__eh_log_transport_trip__state__at_pickup
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_trip_form
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_trip_search_full
+msgid "At Pickup"
+msgstr "เมื่อรับสินค้า"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__message_attachment_count
+msgid "Attachment Count"
+msgstr "จำนวนสิ่งที่แนบมา"
+
+#. module: eh_log_transport
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_trip_form
+msgid "Cancel"
+msgstr "ยกเลิก"
+
+#. module: eh_log_transport
+#: model:ir.model.fields.selection,name:eh_log_transport.selection__eh_log_transport_trip__state__cancelled
+msgid "Cancelled"
+msgstr "ยกเลิก"
+
+#. module: eh_log_transport
+#: model:ir.model.fields.selection,name:eh_log_transport.selection__eh_log_transport_pod__status__captured
+msgid "Captured"
+msgstr "จับภาพแล้ว"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_pod__captured_at
+msgid "Captured At"
+msgstr "จับภาพเมื่อ"
+
+#. module: eh_log_transport
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_trip_form
+msgid "Cargo"
+msgstr "สินค้า"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__cargo_description
+msgid "Cargo Description"
+msgstr "รายละเอียดสินค้า"
+
+#. module: eh_log_transport
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_trip_form
+msgid "Close"
+msgstr "ปิด"
+
+#. module: eh_log_transport
+#: model:ir.model.fields.selection,name:eh_log_transport.selection__eh_log_transport_trip__state__closed
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_trip_search
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_trip_search_full
+msgid "Closed"
+msgstr "ปิดแล้ว"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_driver__company_ids
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__company_ids
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_vehicle__company_ids
+msgid "Companies"
+msgstr "บริษัท"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_driver__company_id
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_pod__company_id
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__company_id
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_vehicle__company_id
+msgid "Company"
+msgstr "บริษัท"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_driver__partner_id
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_driver_form
+msgid "Contact"
+msgstr "ติดต่อ"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_driver__create_uid
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_pod__create_uid
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__create_uid
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_vehicle__create_uid
+msgid "Created by"
+msgstr "สร้างโดย"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_driver__create_date
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_pod__create_date
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__create_date
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_vehicle__create_date
+msgid "Created on"
+msgstr "สร้างเมื่อ"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__currency_id
+msgid "Currency"
+msgstr "สกุลเงิน"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__customer_id
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_trip_form
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_trip_search_full
+msgid "Customer"
+msgstr "ลูกค้า"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__customer_reference
+msgid "Customer Reference"
+msgstr "อ้างอิงลูกค้า"
+
+#. module: eh_log_transport
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_trip_form
+msgid "Customer and Linkage"
+msgstr "ลูกค้าและการเชื่อมโยง"
+
+#. module: eh_log_transport
+#: model:ir.model.fields.selection,name:eh_log_transport.selection__eh_log_transport_trip__state__delivered
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_trip_search
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_trip_search_full
+msgid "Delivered"
+msgstr "จัดส่งแล้ว"
+
+#. module: eh_log_transport
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_trip_form
+msgid "Delivery"
+msgstr "การจัดส่ง"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__delivery_partner_id
+msgid "Delivery Address"
+msgstr "ที่อยู่จัดส่ง"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__delivery_location
+msgid "Delivery Location"
+msgstr "สถานที่จัดส่ง"
+
+#. module: eh_log_transport
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_trip_search_full
+msgid "Delivery Today"
+msgstr "จัดส่งวันนี้"
+
+#. module: eh_log_transport
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_trip_form
+msgid "Delivery planned"
+msgstr "วางแผนการจัดส่งแล้ว"
+
+#. module: eh_log_transport
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_trip_kanban
+msgid "Delivery:"
+msgstr "การจัดส่ง:"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__demurrage_rate_per_hour
+msgid "Demurrage Rate (per hour)"
+msgstr "อัตราค่าเดมัวร์เรจ (ต่อชั่วโมง)"
+
+#. module: eh_log_transport
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_trip_form
+msgid "Demurrage and Detention"
+msgstr "ค่าเดมัวร์เรจและค่าคุมตู้"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__detention_hours
+msgid "Detention (hours)"
+msgstr "การกักเก็บ (ชั่วโมง)"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__detention_amount
+msgid "Detention Amount"
+msgstr "จำนวนเงินค่ากักเก็บ"
+
+#. module: eh_log_transport
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_trip_form
+msgid "Dispatch"
+msgstr "จัดส่ง"
+
+#. module: eh_log_transport
+#: model:ir.model.fields.selection,name:eh_log_transport.selection__eh_log_transport_trip__state__dispatched
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_trip_search_full
+msgid "Dispatched"
+msgstr "ถูกจัดส่งแล้ว"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_driver__display_name
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_pod__display_name
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__display_name
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_vehicle__display_name
+msgid "Display Name"
+msgstr "แสดงชื่อ"
+
+#. module: eh_log_transport
+#: model:ir.model.fields.selection,name:eh_log_transport.selection__eh_log_transport_pod__status__disputed
+msgid "Disputed"
+msgstr "มีข้อพิพาท"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__distance_km
+msgid "Distance (km)"
+msgstr "ระยะทาง (km)"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__driver_id
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_driver_form
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_trip_form
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_trip_search_full
+msgid "Driver"
+msgstr "คนขับ"
+
+#. module: eh_log_transport
+#. odoo-python
+#: code:addons/eh_log_transport/models/eh_log_transport_trip.py:0
+msgid ""
+"Driver %(driver)s has an expired license (expired %(date)s). Renew or assign"
+" a different driver."
+msgstr ""
+"คนขับ %(driver)s มีใบอนุญาตที่หมดอายุ (หมดอายุ %(date)s) "
+"ต่ออายุหรือมอบหมายคนขับคนอื่น"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,help:eh_log_transport.field_eh_log_transport_trip__driver_id
+msgid ""
+"Driver assigned. License expiry date is checked at dispatch; an expired "
+"licence raises a soft warning before the truck rolls."
+msgstr ""
+"มอบหมายคนขับแล้ว จะมีการตรวจสอบวันหมดอายุใบอนุญาตเมื่อจัดส่ง "
+"ใบอนุญาตที่หมดอายุจะแสดงคำเตือนแบบไม่บังคับก่อนที่รถบรรทุกจะออก"
+
+#. module: eh_log_transport
+#. odoo-python
+#: code:addons/eh_log_transport/models/eh_log_transport_trip.py:0
+msgid "Driver is not assigned."
+msgstr "ยังไม่ได้มอบหมายคนขับ"
+
+#. module: eh_log_transport
+#: model:ir.actions.act_window,name:eh_log_transport.action_eh_log_transport_driver
+#: model:ir.ui.menu,name:eh_log_transport.menu_eh_log_transport_drivers
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_driver_list
+msgid "Drivers"
+msgstr "ผู้ขับ"
+
+#. module: eh_log_transport
+#: model:ir.model,name:eh_log_transport.model_eh_log_transport_pod
+msgid "Electronic Proof of Delivery"
+msgstr "หลักฐานการจัดส่งอิเล็กทรอนิกส์"
+
+#. module: eh_log_transport
+#: model:ir.model.fields.selection,name:eh_log_transport.selection__eh_log_transport_vehicle__vehicle_type__flatbed
+msgid "Flatbed"
+msgstr "แฟลตเบด"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__message_follower_ids
+msgid "Followers"
+msgstr "ผู้ติดตาม"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "ผู้ติดตาม (พาร์ทเนอร์)"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,help:eh_log_transport.field_eh_log_transport_trip__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "ไอคอนแบบฟอนต์ที่ยอดเยี่ยมเช่น fa-tasks"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__free_time_hours
+msgid "Free Time (hours)"
+msgstr "เวลาฟรี (ชั่วโมง)"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__freight_job_id
+msgid "Freight Job"
+msgstr "งานขนส่งสินค้า"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_pod__gps_latitude
+msgid "GPS Latitude"
+msgstr "ละติจูด GPS"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_pod__gps_longitude
+msgid "GPS Longitude"
+msgstr "ลองจิจูด GPS"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__gross_weight_kg
+msgid "Gross Weight (kg)"
+msgstr "น้ำหนักรวม (kg)"
+
+#. module: eh_log_transport
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_trip_search
+msgid "Group by Driver"
+msgstr "จัดกลุ่มตามคนขับ"
+
+#. module: eh_log_transport
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_trip_search
+msgid "Group by State"
+msgstr "จัดกลุ่มตามสถานะ"
+
+#. module: eh_log_transport
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_trip_search
+msgid "Group by Vehicle"
+msgstr "จัดกลุ่มตามยานพาหนะ"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__has_message
+msgid "Has Message"
+msgstr "มีข้อความ"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_vehicle__home_depot_id
+msgid "Home Depot"
+msgstr ""
+
+#. module: eh_log_transport
+#: model:ir.model.fields,help:eh_log_transport.field_eh_log_transport_trip__free_time_hours
+msgid ""
+"Hours included in the agreed price before demurrage and detention starts to "
+"accrue."
+msgstr ""
+"ชั่วโมงที่รวมอยู่ในราคาที่ตกลงกันก่อนที่ค่าเสียเวลาเรือและค่ากักตู้จะเริ่มสะสม"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_driver__id
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_pod__id
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__id
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_vehicle__id
+msgid "ID"
+msgstr "ไอดี"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__activity_exception_icon
+msgid "Icon"
+msgstr "ไอคอน"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,help:eh_log_transport.field_eh_log_transport_trip__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "ไอคอนเพื่อระบุการยกเว้นกิจกรรม"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,help:eh_log_transport.field_eh_log_transport_trip__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "ถ้าเลือก ข้อความใหม่จะต้องการความสนใจจากคุณ"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,help:eh_log_transport.field_eh_log_transport_trip__message_has_error
+#: model:ir.model.fields,help:eh_log_transport.field_eh_log_transport_trip__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "ถ้าเลือก ข้อความบางข้อความมีข้อผิดพลาดในการส่ง"
+
+#. module: eh_log_transport
+#: model:ir.model.fields.selection,name:eh_log_transport.selection__eh_log_transport_trip__state__in_transit
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_trip_form
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_trip_search_full
+msgid "In Transit"
+msgstr "อยู่ระหว่างการขนส่ง"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__message_is_follower
+msgid "Is Follower"
+msgstr "เป็นผู้ติดตาม"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_driver__write_uid
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_pod__write_uid
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__write_uid
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_vehicle__write_uid
+msgid "Last Updated by"
+msgstr "อัปเดตครั้งล่าสุดโดย"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_driver__write_date
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_pod__write_date
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__write_date
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_vehicle__write_date
+msgid "Last Updated on"
+msgstr "อัปเดตครั้งล่าสุดเมื่อ"
+
+#. module: eh_log_transport
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_driver_form
+msgid "License"
+msgstr "ใบอนุญาต"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_driver__license_class
+msgid "License Class"
+msgstr "ประเภทใบอนุญาต"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_driver__license_country_id
+msgid "License Country"
+msgstr "ประเทศที่ออกใบอนุญาต"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_driver__is_license_expired
+msgid "License Expired"
+msgstr "ใบอนุญาตหมดอายุ"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_driver__license_expiry_date
+msgid "License Expiry"
+msgstr "วันหมดอายุใบอนุญาต"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_driver__license_number
+msgid "License Number"
+msgstr "หมายเลขใบอนุญาต"
+
+#. module: eh_log_transport
+#: model:ir.model.fields.selection,name:eh_log_transport.selection__eh_log_transport_vehicle__vehicle_type__low_bed
+msgid "Low Bed"
+msgstr "รถพื้นต่ำ"
+
+#. module: eh_log_transport
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_trip_form
+msgid "Mark Delivered"
+msgstr "ทำเครื่องหมายว่าจัดส่งแล้ว"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__message_has_error
+msgid "Message Delivery error"
+msgstr "เกิดข้อผิดพลาดในการส่งข้อความ"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__message_ids
+msgid "Messages"
+msgstr "ข้อความ"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "วันครบกำหนดกิจกรรมของฉัน"
+
+#. module: eh_log_transport
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_trip_search_full
+msgid "My Trips"
+msgstr "การเดินทางของฉัน"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_driver__name
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_vehicle__name
+msgid "Name"
+msgstr "ชื่อ"
+
+#. module: eh_log_transport
+#. odoo-python
+#: code:addons/eh_log_transport/models/eh_log_transport_trip.py:0
+msgid "New"
+msgstr "ใหม่"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "ปฏิทินอีเวนต์กิจกรรมถัดไป"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "วันครบกำหนดกิจกรรมถัดไป"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__activity_summary
+msgid "Next Activity Summary"
+msgstr "สรุปกิจกรรมถัดไป"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__activity_type_id
+msgid "Next Activity Type"
+msgstr "ประเภทกิจกรรมถัดไป"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_driver__notes
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_pod__notes
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__notes
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_vehicle__notes
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_trip_form
+msgid "Notes"
+msgstr "โน้ต"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__message_needaction_counter
+msgid "Number of Actions"
+msgstr "จํานวนการดําเนินการ"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__message_has_error_counter
+msgid "Number of errors"
+msgstr "จํานวนข้อผิดพลาด"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,help:eh_log_transport.field_eh_log_transport_trip__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "จำนวนข้อความที่ต้องดำเนินการ"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,help:eh_log_transport.field_eh_log_transport_trip__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "จํานวนข้อความที่มีข้อผิดพลาดในการส่ง"
+
+#. module: eh_log_transport
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_trip_search
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_trip_search_full
+msgid "Open"
+msgstr "เปิด"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,help:eh_log_transport.field_eh_log_transport_vehicle__name
+msgid "Operator-friendly label, e.g. 'Volvo FH16 #3'."
+msgstr "ป้ายกำกับที่เข้าใจง่ายสำหรับผู้ปฏิบัติงาน เช่น 'Volvo FH16 #3'"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,help:eh_log_transport.field_eh_log_transport_vehicle__home_depot_id
+msgid "Optional. Used by route planning to bias trip start and finish points."
+msgstr ""
+"ไม่บังคับ "
+"ใช้โดยการวางแผนเส้นทางเพื่อถ่วงน้ำหนักจุดเริ่มต้นและจุดสิ้นสุดของการเดินทาง"
+
+#. module: eh_log_transport
+#: model:ir.model.fields.selection,name:eh_log_transport.selection__eh_log_transport_vehicle__vehicle_type__other
+msgid "Other"
+msgstr "อื่น ๆ"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__package_count
+msgid "Packages"
+msgstr "แพ็คเกจ"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_vehicle__capacity_payload_kg
+msgid "Payload (kg)"
+msgstr "น้ำหนักบรรทุก (kg)"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_driver__phone
+msgid "Phone"
+msgstr "โทรศัพท์"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_pod__photo_image
+msgid "Photo"
+msgstr "รูปภาพ"
+
+#. module: eh_log_transport
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_trip_form
+msgid "Pickup"
+msgstr "การรับ"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__pickup_partner_id
+msgid "Pickup Address"
+msgstr "ที่อยู่รับของ"
+
+#. module: eh_log_transport
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_trip_search_full
+msgid "Pickup Day"
+msgstr "วันรับของ"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__pickup_location
+msgid "Pickup Location"
+msgstr "สถานที่รับของ"
+
+#. module: eh_log_transport
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_trip_search_full
+msgid "Pickup Month"
+msgstr "เดือนที่รับของ"
+
+#. module: eh_log_transport
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_trip_search_full
+msgid "Pickup Today"
+msgstr "รับของวันนี้"
+
+#. module: eh_log_transport
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_trip_search_full
+msgid "Pickup Week"
+msgstr "สัปดาห์ที่รับของ"
+
+#. module: eh_log_transport
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_trip_form
+msgid "Pickup planned"
+msgstr "วางแผนการรับของแล้ว"
+
+#. module: eh_log_transport
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_trip_kanban
+msgid "Pickup:"
+msgstr "การรับ:"
+
+#. module: eh_log_transport
+#: model:ir.model.fields.selection,name:eh_log_transport.selection__eh_log_transport_trip__state__planned
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_trip_search_full
+msgid "Planned"
+msgstr "วางแผน"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__delivery_planned_at
+msgid "Planned Delivery"
+msgstr "การจัดส่งที่วางแผน"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__pickup_planned_at
+msgid "Planned Pickup"
+msgstr "การรับสินค้าที่วางแผน"
+
+#. module: eh_log_transport
+#. odoo-python
+#: code:addons/eh_log_transport/models/eh_log_transport_trip.py:0
+msgid "Planned delivery time is not set."
+msgstr "ยังไม่ได้ตั้งเวลาการจัดส่งที่วางแผน"
+
+#. module: eh_log_transport
+#. odoo-python
+#: code:addons/eh_log_transport/models/eh_log_transport_trip.py:0
+msgid "Planned pickup time is not set."
+msgstr "ยังไม่ได้ตั้งเวลาการรับสินค้าที่วางแผน"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__rating_ids
+msgid "Ratings"
+msgstr "การให้คะแนน"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_pod__recipient_name
+msgid "Recipient Name"
+msgstr "ชื่อผู้รับ"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_pod__recipient_role
+msgid "Recipient Role"
+msgstr "บทบาทผู้รับ"
+
+#. module: eh_log_transport
+#: model:ir.model.fields.selection,name:eh_log_transport.selection__eh_log_transport_vehicle__vehicle_type__reefer
+msgid "Reefer Trailer"
+msgstr "รถพ่วงทำความเย็น"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__name
+msgid "Reference"
+msgstr "การอ้างอิง"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_vehicle__registration
+msgid "Registration"
+msgstr "การลงทะเบียน"
+
+#. module: eh_log_transport
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_trip_form
+msgid "Resources"
+msgstr "แหล่งข้อมูล"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__activity_user_id
+msgid "Responsible User"
+msgstr "ผู้ใช้ที่รับผิดชอบ"
+
+#. module: eh_log_transport
+#: model:ir.model.fields.selection,name:eh_log_transport.selection__eh_log_transport_vehicle__vehicle_type__rigid_box
+msgid "Rigid Box"
+msgstr "กล่องแข็ง"
+
+#. module: eh_log_transport
+#: model:ir.model.fields.selection,name:eh_log_transport.selection__eh_log_transport_vehicle__vehicle_type__rigid
+msgid "Rigid Truck"
+msgstr "รถบรรทุกตัวถังแข็ง"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "ข้อผิดพลาดในการส่ง SMS"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__sale_order_id
+msgid "Sale Order"
+msgstr "คำสั่งขาย"
+
+#. module: eh_log_transport
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_trip_search_full
+msgid "Search Trips"
+msgstr "ค้นหาการเดินทาง"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_pod__signature_image
+msgid "Signature"
+msgstr "ลายเซ็น"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__state
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_trip_search_full
+msgid "State"
+msgstr "รัฐ"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_pod__status
+msgid "Status"
+msgstr "สถานะ"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,help:eh_log_transport.field_eh_log_transport_trip__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"สถานะตามกิจกรรม\n"
+"เกินกำหนด: วันที่ครบกำหนดผ่านไปแล้ว\n"
+"วันนี้: วันที่จัดกิจกรรมคือวันนี้\n"
+"วางแผน: กิจกรรมในอนาคต"
+
+#. module: eh_log_transport
+#: model:ir.model.fields.selection,name:eh_log_transport.selection__eh_log_transport_pod__status__synced
+msgid "Synced from Driver App"
+msgstr "ซิงค์จากแอปคนขับ"
+
+#. module: eh_log_transport
+#: model:ir.model.fields.selection,name:eh_log_transport.selection__eh_log_transport_vehicle__vehicle_type__tanker
+msgid "Tanker"
+msgstr "รถบรรทุกน้ำมัน"
+
+#. module: eh_log_transport
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_trip_search_full
+msgid "This Week"
+msgstr "สัปดาห์นี้"
+
+#. module: eh_log_transport
+#: model:ir.model.fields.selection,name:eh_log_transport.selection__eh_log_transport_vehicle__vehicle_type__tipper
+msgid "Tipper"
+msgstr "รถบรรทุกดัมพ์"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,help:eh_log_transport.field_eh_log_transport_trip__detention_hours
+msgid ""
+"Total time at pickup and delivery beyond the free time. Computed when both "
+"ends have actual datetime stamped."
+msgstr ""
+"เวลารวมที่จุดรับและจุดส่งมอบเกินกว่าเวลาฟรี "
+"คำนวณเมื่อทั้งสองปลายทางมีการบันทึกวันที่และเวลาจริง"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,help:eh_log_transport.field_eh_log_transport_driver__license_expiry_date
+msgid ""
+"Tracked so dispatchers do not assign an expired-license driver to a new "
+"trip. The dedicated KYC and HR modules automate the renewal activity."
+msgstr ""
+"มีการติดตามเพื่อไม่ให้ผู้จัดคิวมอบหมายคนขับที่ใบอนุญาตหมดอายุให้กับทริปใหม่ "
+"โมดูล KYC และ HR เฉพาะทางจะทำให้กิจกรรมการต่ออายุเป็นอัตโนมัติ"
+
+#. module: eh_log_transport
+#: model:ir.model.fields.selection,name:eh_log_transport.selection__eh_log_transport_vehicle__vehicle_type__tractor
+msgid "Tractor Unit"
+msgstr "หัวลาก"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,help:eh_log_transport.field_eh_log_transport_trip__vehicle_id
+msgid ""
+"Tractor unit assigned to the trip. Vehicle telematics events (gate-in, gate-"
+"out) bind to this record via the trackable mixin."
+msgstr ""
+"หัวลากที่กำหนดให้กับทริป เหตุการณ์เทเลเมติกส์ของยานพาหนะ (gate-in, gate-out)"
+" จะผูกกับระเบียนนี้ผ่าน trackable mixin"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__trailer_id
+#: model:ir.model.fields.selection,name:eh_log_transport.selection__eh_log_transport_vehicle__vehicle_type__trailer
+msgid "Trailer"
+msgstr "รถพ่วง"
+
+#. module: eh_log_transport
+#: model:ir.model,name:eh_log_transport.model_eh_log_transport_driver
+msgid "Transport Driver"
+msgstr "คนขับรถขนส่ง"
+
+#. module: eh_log_transport
+#: model:ir.model,name:eh_log_transport.model_eh_log_transport_trip
+msgid "Transport Trip"
+msgstr "เที่ยวการขนส่ง"
+
+#. module: eh_log_transport
+#: model:ir.model,name:eh_log_transport.model_eh_log_transport_vehicle
+msgid "Transport Vehicle"
+msgstr "ยานพาหนะขนส่ง"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_pod__trip_id
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_trip_form
+msgid "Trip"
+msgstr "เที่ยว"
+
+#. module: eh_log_transport
+#. odoo-python
+#: code:addons/eh_log_transport/models/eh_log_transport_trip.py:0
+msgid ""
+"Trip %(name)s cannot move from %(current)s to %(target)s. Allowed "
+"transitions from %(current)s: %(allowed)s."
+msgstr ""
+"เที่ยว %(name)s ไม่สามารถย้ายจาก %(current)s ไปยัง %(target)s ได้ "
+"การเปลี่ยนสถานะที่อนุญาตจาก %(current)s: %(allowed)s"
+
+#. module: eh_log_transport
+#. odoo-python
+#: code:addons/eh_log_transport/models/eh_log_transport_trip.py:0
+msgid "Trip %(name)s moved to %(state)s."
+msgstr "เที่ยว %(name)s ถูกย้ายไปยัง %(state)s แล้ว"
+
+#. module: eh_log_transport
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_trip_pivot
+msgid "Trip Volume Analysis"
+msgstr "การวิเคราะห์ปริมาณเที่ยว"
+
+#. module: eh_log_transport
+#: model:ir.actions.act_window,name:eh_log_transport.action_eh_log_transport_trip
+#: model:ir.ui.menu,name:eh_log_transport.menu_eh_log_transport_trips
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_trip_calendar
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_trip_list
+msgid "Trips"
+msgstr "เที่ยว"
+
+#. module: eh_log_transport
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_trip_graph
+msgid "Trips by State"
+msgstr "เที่ยวตามสถานะ"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_vehicle__vehicle_type
+msgid "Type"
+msgstr "ประเภท"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,help:eh_log_transport.field_eh_log_transport_trip__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "ประเภทกิจกรรมข้อยกเว้นบนบันทึก"
+
+#. module: eh_log_transport
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_trip_form
+msgid "Unassigned"
+msgstr "ไม่ได้มอบหมาย"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,help:eh_log_transport.field_eh_log_transport_driver__partner_id
+msgid ""
+"Underlying contact record. Defaults to a new partner created on driver "
+"creation if left empty; reusing an existing partner is supported."
+msgstr ""
+"ระเบียนผู้ติดต่อพื้นฐาน หากเว้นว่างไว้ "
+"ระบบจะสร้างพาร์ทเนอร์ใหม่โดยค่าเริ่มต้นเมื่อสร้างคนขับ "
+"และรองรับการนำพาร์ทเนอร์ที่มีอยู่กลับมาใช้ใหม่"
+
+#. module: eh_log_transport
+#: model:ir.model.fields.selection,name:eh_log_transport.selection__eh_log_transport_vehicle__vehicle_type__van
+msgid "Van"
+msgstr "รถตู้"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__vehicle_id
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_trip_search_full
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_vehicle_form
+msgid "Vehicle"
+msgstr "ยานพาหนะ"
+
+#. module: eh_log_transport
+#. odoo-python
+#: code:addons/eh_log_transport/models/eh_log_transport_trip.py:0
+msgid "Vehicle is not assigned."
+msgstr "ยังไม่ได้กำหนดยานพาหนะ"
+
+#. module: eh_log_transport
+#: model:ir.model.constraint,message:eh_log_transport.constraint_eh_log_transport_vehicle_registration_company_unique
+msgid "Vehicle registration must be unique per company."
+msgstr "การจดทะเบียนยานพาหนะต้องไม่ซ้ำกันในแต่ละบริษัท"
+
+#. module: eh_log_transport
+#: model:ir.actions.act_window,name:eh_log_transport.action_eh_log_transport_vehicle
+#: model:ir.ui.menu,name:eh_log_transport.menu_eh_log_transport_vehicles
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_vehicle_list
+msgid "Vehicles"
+msgstr "ยานพาหนะ"
+
+#. module: eh_log_transport
+#: model:ir.model.fields.selection,name:eh_log_transport.selection__eh_log_transport_pod__status__voided
+msgid "Voided"
+msgstr "ยกเลิกแล้ว"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_vehicle__capacity_volume_cbm
+msgid "Volume (m3)"
+msgstr "ปริมาตร (m3)"
+
+#. module: eh_log_transport
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_vehicle_form
+msgid "Volvo FH16 #3"
+msgstr ""
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__website_message_ids
+msgid "Website Messages"
+msgstr "ข้อความเว็บไซต์"
+
+#. module: eh_log_transport
+#: model:ir.model.fields,help:eh_log_transport.field_eh_log_transport_trip__website_message_ids
+msgid "Website communication history"
+msgstr "ประวัติการสื่อสารของเว็บไซต์"
+
+#. module: eh_log_transport
+#. odoo-python
+#: code:addons/eh_log_transport/models/eh_log_transport_trip.py:0
+msgid ""
+"[EHL-TRIP-001] Trip %(name)s cannot be dispatched. Resolve the following:\n"
+"\n"
+"- %(list)s"
+msgstr ""
+"[EHL-TRIP-001] ไม่สามารถส่งทริป %(name)s ได้ กรุณาแก้ไขสิ่งต่อไปนี้:\n"
+"\n"
+"- %(list)s"
+
+#. module: eh_log_transport
+#. odoo-python
+#: code:addons/eh_log_transport/models/eh_log_transport_trip.py:0
+msgid ""
+"[EHL-TRIP-002] State changes on a trip must go through the action buttons. "
+"Direct writes are rejected."
+msgstr ""
+"[EHL-TRIP-002] การเปลี่ยนสถานะของทริปต้องทำผ่านปุ่มการดำเนินการ "
+"การเขียนโดยตรงจะถูกปฏิเสธ"
+
+#. module: eh_log_transport
+#. odoo-python
+#: code:addons/eh_log_transport/models/eh_log_transport_pod.py:0
+#: code:addons/eh_log_transport/models/eh_log_transport_trip.py:0
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__pod_ids
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_trip_form
+msgid "ePOD"
+msgstr ""
+
+#. module: eh_log_transport
+#: model:ir.model.fields,field_description:eh_log_transport.field_eh_log_transport_trip__pod_count
+msgid "ePODs"
+msgstr ""
+
+#. module: eh_log_transport
+#: model_terms:ir.ui.view,arch_db:eh_log_transport.view_eh_log_transport_trip_form
+msgid "km"
+msgstr "กม."
+
+#. module: eh_log_transport
+#. odoo-python
+#: code:addons/eh_log_transport/models/eh_log_transport_trip.py:0
+msgid "trip_id"
+msgstr ""

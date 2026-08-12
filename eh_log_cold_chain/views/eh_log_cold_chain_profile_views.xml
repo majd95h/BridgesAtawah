@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="view_eh_log_cold_chain_profile_list" model="ir.ui.view">
+            <field name="name">eh.log.cold.chain.profile.list</field>
+            <field name="model">eh.log.cold.chain.profile</field>
+            <field name="arch" type="xml">
+                <list string="Cold Chain Profiles">
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="category"/>
+                    <field name="temperature_min"/>
+                    <field name="temperature_max"/>
+                    <field name="sampling_cadence_minutes" optional="show"/>
+                    <field name="alert_window_minutes" optional="show"/>
+                    <field name="active" optional="hide"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="view_eh_log_cold_chain_profile_form" model="ir.ui.view">
+            <field name="name">eh.log.cold.chain.profile.form</field>
+            <field name="model">eh.log.cold.chain.profile</field>
+            <field name="arch" type="xml">
+                <form string="Cold Chain Profile">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="code"/>
+                            <h1><field name="code"/></h1>
+                            <field name="name"/>
+                        </div>
+                        <group>
+                            <group string="Temperature">
+                                <field name="category"/>
+                                <field name="temperature_min"/>
+                                <field name="temperature_max"/>
+                            </group>
+                            <group string="Humidity">
+                                <field name="monitor_humidity"/>
+                                <field name="humidity_min" invisible="not monitor_humidity"/>
+                                <field name="humidity_max" invisible="not monitor_humidity"/>
+                            </group>
+                        </group>
+                        <group string="Cadence and Alerts">
+                            <group>
+                                <field name="sampling_cadence_minutes"/>
+                                <field name="alert_window_minutes"/>
+                                <field name="excursion_grace_minutes"/>
+                            </group>
+                            <group>
+                                <field name="active" widget="boolean_toggle"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="description" colspan="2"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_eh_log_cold_chain_profile" model="ir.actions.act_window">
+            <field name="name">Cold Chain Profiles</field>
+            <field name="res_model">eh.log.cold.chain.profile</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+    </data>
+</odoo>
