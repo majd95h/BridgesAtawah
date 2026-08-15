@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    
+    <!-- ===================== Custom Root Category ===================== -->
+    <record id="product_category_shipping_all" model="product.category">
+        <field name="name">All Products</field>
+    </record>
+
+    <!-- ===================== Product Categories ===================== -->
+    <record id="product_category_machinery" model="product.category">
+        <field name="name">Machinery &amp; Equipment</field>
+        <field name="parent_id" ref="product_category_shipping_all"/>
+    </record>
+
+    <record id="product_category_materials" model="product.category">
+        <field name="name">Building Materials</field>
+        <field name="parent_id" ref="product_category_shipping_all"/>
+    </record>
+
+    <!-- ===================== Sample Products ===================== -->
+    
+    <!-- CNC Milling Machine -->
+    <record id="product_cnc_machine" model="product.template">
+        <field name="name">CNC Milling Machine (3-Axis)</field>
+        <field name="categ_id" ref="product_category_machinery"/>
+        <field name="type">consu</field>
+        <field name="description">Professional industrial CNC milling machine for precision machining. Suitable for metal, plastic, and composite materials. High-speed spindle with automatic tool changer.</field>
+        <field name="description_sale">Specifications: Power: 15kW | Spindle Speed: 12,000 RPM | Table Size: 1600x800mm | Accuracy: ±0.05mm</field>
+        <field name="list_price">8500.00</field>
+        <field name="standard_price">6200.00</field>
+        <field name="is_published">True</field>
+    </record>
+
+    <!-- Hydraulic Press -->
+    <record id="product_hydraulic_press" model="product.template">
+        <field name="name">Hydraulic Press (100 Ton)</field>
+        <field name="categ_id" ref="product_category_machinery"/>
+        <field name="type">consu</field>
+        <field name="description">Heavy-duty hydraulic press for industrial applications. Ideal for forming, bending, and embossing. Fully automated with safety guards.</field>
+        <field name="description_sale">Specifications: Force: 100 tons | Working Area: 800x600mm | Thickness Capacity: 300mm | Power: 22kW</field>
+        <field name="list_price">12000.00</field>
+        <field name="standard_price">8500.00</field>
+        <field name="is_published">True</field>
+    </record>
+
+    <!-- Ceramic Tiles -->
+    <record id="product_ceramic_tiles" model="product.template">
+        <field name="name">Premium Ceramic Tiles (60x60cm)</field>
+        <field name="categ_id" ref="product_category_materials"/>
+        <field name="type">consu</field>
+        <field name="description">High-quality polished ceramic tiles for residential and commercial spaces. Durable, water-resistant, and easy to clean.</field>
+        <field name="description_sale">Specifications: Size: 600x600mm | Thickness: 10mm | Water Absorption: 0.5% | Mohs Hardness: 7</field>
+        <field name="list_price">2.50</field>
+        <field name="standard_price">1.20</field>
+        <field name="is_published">True</field>
+    </record>
+
+    <!-- Marble Slabs -->
+    <record id="product_marble_slabs" model="product.template">
+        <field name="name">Italian White Marble Slabs</field>
+        <field name="categ_id" ref="product_category_materials"/>
+        <field name="type">consu</field>
+        <field name="description">Premium imported Italian marble for high-end architectural projects. Perfect for countertops, flooring, and decorative finishes.</field>
+        <field name="description_sale">Specifications: Slab Size: 2800x1700mm | Thickness: 20mm | Finish: Polished | Grade: A+</field>
+        <field name="list_price">450.00</field>
+        <field name="standard_price">250.00</field>
+        <field name="is_published">True</field>
+    </record>
+
+    <!-- LED Panel Lights -->
+    <record id="product_led_lights" model="product.template">
+        <field name="name">LED Panel Lights (60W, 600x600mm)</field>
+        <field name="categ_id" ref="product_category_shipping_all"/>
+        <field name="type">consu</field>
+        <field name="description">Energy-efficient LED panel lights with adjustable brightness. Perfect for offices, warehouses, and commercial spaces.</field>
+        <field name="description_sale">Specifications: Power: 60W | Lumens: 4800lm | Color Temperature: 6500K | Lifespan: 50,000 hours</field>
+        <field name="list_price">85.00</field>
+        <field name="standard_price">35.00</field>
+        <field name="is_published">True</field>
+    </record>
+
+    <!-- Industrial Bearing Kit -->
+    <record id="product_bearing_set" model="product.template">
+        <field name="name">Industrial Bearing Assortment Kit</field>
+        <field name="categ_id" ref="product_category_machinery"/>
+        <field name="type">consu</field>
+        <field name="description">Comprehensive set of high-quality ball and roller bearings. Essential for machinery maintenance and repairs.</field>
+        <field name="description_sale">Specifications: Types: Deep groove, Angular contact, Cylindrical roller | Material: Chrome steel | Grade: P5</field>
+        <field name="list_price">280.00</field>
+        <field name="standard_price">120.00</field>
+        <field name="is_published">True</field>
+    </record>
+
+    <!-- Industrial PLC -->
+    <record id="product_industrial_plc" model="product.template">
+        <field name="name">Industrial PLC Controller (24-point I/O)</field>
+        <field name="categ_id" ref="product_category_shipping_all"/>
+        <field name="type">consu</field>
+        <field name="description">Programmable Logic Controller for factory automation. Supports multiple communication protocols and real-time processing.</field>
+        <field name="description_sale">Specifications: Inputs: 16x 24VDC | Outputs: 8x 24VDC/2A | Memory: 64KB | Communication: Ethernet, RS-485</field>
+        <field name="list_price">650.00</field>
+        <field name="standard_price">350.00</field>
+        <field name="is_published">True</field>
+    </record>
+
+    <!-- Office Desk -->
+    <record id="product_office_desk" model="product.template">
+        <field name="name">Modern Office Desk (Executive Style)</field>
+        <field name="categ_id" ref="product_category_shipping_all"/>
+        <field name="type">consu</field>
+        <field name="description">Premium executive office desk with cable management system. Made from sustainable wood with steel frame.</field>
+        <field name="description_sale">Specifications: Dimensions: 1800x900x750mm | Material: MDF + Steel | Weight Capacity: 150kg | Finish: Walnut/Black</field>
+        <field name="list_price">450.00</field>
+        <field name="standard_price">200.00</field>
+        <field name="is_published">True</field>
+    </record>
+</odoo>

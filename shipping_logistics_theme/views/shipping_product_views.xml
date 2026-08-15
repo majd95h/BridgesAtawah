@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ===================== Products Tree View ===================== -->
+    <record id="view_shipping_product_tree" model="ir.ui.view">
+        <field name="name">shipping.product.tree</field>
+        <field name="model">shipping.product</field>
+        <field name="arch" type="xml">
+            <list string="Products" editable="bottom">
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="sku"/>
+                <field name="category"/>
+                <field name="price" sum="Total Price"/>
+                <field name="stock_quantity" sum="Total Stock"/>
+                <field name="is_featured"/>
+                <field name="is_active" optional="hide"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- ===================== Products Form View ===================== -->
+    <record id="view_shipping_product_form" model="ir.ui.view">
+        <field name="name">shipping.product.form</field>
+        <field name="model">shipping.product</field>
+        <field name="arch" type="xml">
+            <form string="Product">
+                <sheet>
+                    <div class="oe_button_box" name="button_box"/>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" placeholder="Product Name"/>
+                        </h1>
+                    </div>
+
+                    <notebook>
+                        <!-- Basic Info Tab -->
+                        <page string="Basic Information" name="basic_info">
+                            <group>
+                                <group>
+                                    <field name="sku"/>
+                                    <field name="category"/>
+                                    <field name="origin"/>
+                                    <field name="is_active"/>
+                                    <field name="is_featured"/>
+                                </group>
+                                <group>
+                                    <field name="price"/>
+                                    <field name="cost"/>
+                                    <field name="stock_quantity"/>
+                                    <field name="lead_time"/>
+                                </group>
+                            </group>
+
+                            <group string="Image" name="image_group">
+                                <field name="image" widget="image" class="oe_avatar"/>
+                            </group>
+
+                            <group string="Description" name="description_group">
+                                <field name="description" nolabel="1"/>
+                            </group>
+                        </page>
+
+                        <!-- Details Tab -->
+                        <page string="Details" name="details">
+                            <group>
+                                <field name="specs" nolabel="1" placeholder="Enter technical specifications..."/>
+                            </group>
+                        </page>
+
+                        <!-- Reviews & Rating -->
+                        <page string="Reviews &amp; Rating" name="reviews">
+                            <group>
+                                <group>
+                                    <field name="rating"/>
+                                    <field name="review_count"/>
+                                </group>
+                                <group>
+                                    <field name="tags"/>
+                                </group>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- ===================== Products Kanban View ===================== -->
+    <record id="view_shipping_product_kanban" model="ir.ui.view">
+    <field name="name">shipping.product.kanban</field>
+    <field name="model">shipping.product</field>
+    <field name="arch" type="xml">
+        <kanban class="o_kanban_small_column" quickCreate="false">
+            <field name="id"/>
+            <field name="name"/>
+            <field name="price"/>
+            <field name="stock_quantity"/>
+            <field name="is_featured"/>
+            <field name="rating"/>
+            <templates>
+                <t t-name="card">
+                    <div class="o_kanban_card">
+                        <div class="o_kanban_image">
+                            <img t-att-src="kanban_image('shipping.product', 'image', record.id.raw_value)" alt="Product"/>
+                        </div>
+                        <div class="o_kanban_details">
+                            <strong t-esc="record.name.value"/>
+                            <p class="o_text_muted">
+                                $<t t-esc="record.price.value"/>
+                            </p>
+                            <p>
+                                Stock: <t t-esc="record.stock_quantity.value"/>
+                            </p>
+                            <div class="o_kanban_footer">
+                                <span t-if="record.is_featured.raw_value" class="badge badge-info">Featured</span>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </templates>
+        </kanban>
+    </field>
+</record>
+    <!-- ===================== Search View ===================== -->
+    <!-- <record id="view_shipping_product_search" model="ir.ui.view">
+        <field name="name">shipping.product.search</field>
+        <field name="model">shipping.product</field>
+        <field name="arch" type="xml">
+            <search string="Search Products">
+                <field name="name" string="Product Name"/>
+                <field name="sku"/>
+                <field name="category"/>
+                <separator/>
+                <filter string="Featured" name="featured" domain="[('is_featured', '=', True)]"/>
+                <filter string="In Stock" name="in_stock" domain="[('stock_quantity', '&gt;', 0)]"/>
+                <filter string="Active" name="active" domain="[('is_active', '=', True)]"/>
+                <group expand="0" string="Group By">
+                    <filter string="Category" name="group_category" context="{'group_by': 'category'}"/>
+                    <filter string="Origin" name="group_origin" context="{'group_by': 'origin'}"/>
+                </group>
+            </search>
+        </field>
+    </record> -->
+
+    <!-- ===================== Actions ===================== -->
+    <record id="action_shipping_product" model="ir.actions.act_window">
+        <field name="name">Products</field>
+        <field name="res_model">shipping.product</field>
+        <field name="view_mode">kanban,list,form</field>
+        <!-- <field name="search_view_id" ref="view_shipping_product_search"/> -->
+        <field name="context">{'search_default_active': 1}</field>
+    </record>
+
+    <!-- ===================== Menu Items ===================== -->
+    <menuitem id="menu_shipping_product" name="Products" parent="menu_shipping_content" 
+              action="action_shipping_product" sequence="15"/>
+</odoo>

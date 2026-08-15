@@ -1576,6 +1576,97 @@ window.addEventListener("load", function() {
         }
     }
 });
+publicWidget.registry.ShippingShop = publicWidget.Widget.extend({
+    selector: ".s_shipping_shop",
+    events: {
+        "keyup #shipping_product_search": "_onSearchInput",
+        "change #shipping_category_filter": "_onCategoryChange",
+        "click .shipping_add_to_cart": "_onAddToCart",
+    },
+
+    start() {
+        this._initProducts();
+        return this._super(...arguments);
+    },
+
+    _initProducts() {
+        this.products = Array.from(document.querySelectorAll(".shipping_product_card"));
+        this.cart = JSON.parse(localStorage.getItem("shipping_cart") || "[]");
+        this._updateCartCount();
+    },
+
+    _onSearchInput(ev) {
+        const query = ev.currentTarget.value.toLowerCase();
+        this._filterProducts(query, null);
+    },
+
+    _onCategoryChange(ev) {
+        const category = ev.currentTarget.value;
+        const query = document.getElementById("shipping_product_search").value.toLowerCase();
+        this._filterProducts(query, category);
+    },
+
+    _filterProducts(query, category) {
+        let visibleCount = 0;
+
+        this.products.forEach((card) => {
+            const name = card.querySelector(".shipping_product_name").textContent.toLowerCase();
+            const description = card.querySelector(".shipping_product_description").textContent.toLowerCase();
+            const cardCategory = card.getAttribute("data-category");
+
+            const matchesSearch = !query || name.includes(query) || description.includes(query);
+            const matchesCategory = !category || cardCategory === category;
+
+            if (matchesSearch && matchesCategory) {
+                card.style.display = "";
+                visibleCount++;
+            } else {
+                card.style.display = "none";
+            }
+        });
+
+        const emptyState = document.getElementById("shipping_shop_empty");
+        if (visibleCount === 0 && emptyState) {
+            emptyState.style.display = "block";
+        } else if (emptyState) {
+            emptyState.style.display = "none";
+        }
+    },
+
+    _onAddToCart(ev) {
+        const btn = ev.currentTarget;
+        const productId = btn.getAttribute("data-product-id");
+        const productName = btn.getAttribute("data-product-name");
+        const productPrice = parseFloat(btn.getAttribute("data-product-price"));
+
+        const existingItem = this.cart.find((item) => item.id === productId);
+        if (existingItem) {
+            existingItem.qty += 1;
+        } else {
+            this.cart.push({
+                id: productId,
+                name: productName,
+                price: productPrice,
+                qty: 1,
+            });
+        }
+
+        localStorage.setItem("shipping_cart", JSON.stringify(this.cart));
+        this._updateCartCount();
+
+        // Animation feedback
+        btn.textContent = "✓ Added!";
+        setTimeout(() => {
+            btn.textContent = "Add to Cart";
+        }, 1500);
+    },
+
+    _updateCartCount() {
+        const totalQty = this.cart.reduce((sum, item) => sum + item.qty, 0);
+        console.log("Cart updated:", totalQty, "items");
+    },
+});
+
 
 // ============================================================
 // GLOBAL TOAST ANIMATIONS

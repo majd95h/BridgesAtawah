@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="s_shipping_shop" name="Shipping Shop">
+        <section id="shop" class="s_shipping_shop pt96 pb96" data-snippet="s_shipping_shop" data-name="Shipping Shop">
+            <div class="container">
+                <!-- Header -->
+                <div class="shipping_section_head shipping_section_head_center">
+                    <h2>Shop with <em>Us</em></h2>
+                    <p>Quality products sourced directly from China with competitive pricing.</p>
+                </div>
+
+                <!-- Filters -->
+                <div class="shipping_shop_filters">
+                    <div class="shipping_filter_search">
+                        <input type="text" id="shipping_product_search" class="form-control" 
+                               placeholder="Search products..."/>
+                    </div>
+                    <div class="shipping_filter_category">
+                        <select id="shipping_category_filter" class="form-control">
+                            <option value="">All Categories</option>
+                            <option value="machinery">Machinery &amp; Equipment</option>
+                            <option value="materials">Building Materials</option>
+                            <option value="commercial">Commercial Goods</option>
+                            <option value="supplies">Supplies &amp; Parts</option>
+                            <option value="furniture">Furniture &amp; Fixtures</option>
+                            <option value="electronics">Electronics</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Products Grid -->
+                <div class="shipping_shop_grid" id="shipping_shop_grid">
+                    <t t-foreach="request.env['shipping.product'].sudo().search([('is_active', '=', True)])" t-as="product">
+                        <div class="shipping_product_card" t-att-data-product-id="product.id" 
+                             t-att-data-category="product.category" t-att-data-price="product.price">
+                            
+                            <!-- Product Image -->
+                            <div class="shipping_product_image">
+                                <t t-if="product.image">
+                                    <img t-att-src="'/web/image/shipping.product/%s/image' % product.id" 
+                                         t-att-alt="product.name" class="img-fluid"/>
+                                </t>
+                                <t t-else="">
+                                    <div class="shipping_product_placeholder">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                                            <rect fill="#ece4d3" width="100" height="100"/>
+                                            <text x="50" y="50" text-anchor="middle" dy="0.3em" fill="#6b7280">Image</text>
+                                        </svg>
+                                    </div>
+                                </t>
+                                <t t-if="product.is_featured">
+                                    <span class="shipping_product_badge shipping_featured_badge">Featured</span>
+                                </t>
+                                <t t-if="product.stock_quantity == 0">
+                                    <span class="shipping_product_badge shipping_stock_badge">Out of Stock</span>
+                                </t>
+                            </div>
+
+                            <!-- Product Info -->
+                            <div class="shipping_product_body">
+                                <span class="shipping_product_category" t-esc="dict([('machinery', 'Machinery'), ('materials', 'Materials'), ('commercial', 'Commercial'), ('supplies', 'Supplies'), ('furniture', 'Furniture'), ('electronics', 'Electronics')]).get(product.category, product.category)"/>
+                                
+                                <h3 class="shipping_product_name" t-esc="product.name"/>
+                                
+                                <p class="shipping_product_description" t-esc="(product.description or '')[:80]"/>
+                                
+                                <!-- Rating -->
+                                <div class="shipping_product_rating">
+                                    <div class="shipping_rating_stars">
+                                        <t t-set="rating_int" t-value="int(product.rating)"/>
+                                        <t t-foreach="range(5)" t-as="star">
+                                            <span class="shipping_star" t-att-class="'filled' if star &lt; rating_int else ''">★</span>
+                                        </t>
+                                    </div>
+                                    <span class="shipping_rating_text" t-esc="'%.1f' % product.rating"/>
+                                    <span class="shipping_review_count">(<t t-esc="product.review_count"/> reviews)</span>
+                                </div>
+
+                                <!-- Price &amp; Stock -->
+                                <div class="shipping_product_footer">
+                                    <div class="shipping_product_price">
+                                        <strong class="shipping_price_value">$<t t-esc="'%.2f' % product.price"/></strong>
+                                    </div>
+                                    <div class="shipping_product_stock">
+                                        <t t-if="product.stock_quantity > 0">
+                                            <small class="text-muted">Stock: <t t-esc="product.stock_quantity"/></small>
+                                        </t>
+                                        <t t-else="">
+                                            <small class="text-danger">Out of Stock</small>
+                                        </t>
+                                    </div>
+                                </div>
+
+                                <!-- Actions -->
+                                <div class="shipping_product_actions">
+                                    <button class="btn shipping_btn_primary shipping_add_to_cart" 
+                                            t-att-disabled="product.stock_quantity == 0" 
+                                            t-att-data-product-id="product.id"
+                                            t-att-data-product-name="product.name"
+                                            t-att-data-product-price="product.price">
+                                        <t t-if="product.stock_quantity > 0">Add to Cart</t>
+                                        <t t-else="">Unavailable</t>
+                                    </button>
+                                    <a href="#contact" class="btn shipping_btn_ghost shipping_inquire_btn">
+                                        Inquire
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </div>
+
+                <!-- Empty State -->
+                <div class="shipping_shop_empty" id="shipping_shop_empty" style="display: none;">
+                    <p>No products found matching your criteria.</p>
+                </div>
+            </div>
+        </section>
+    </template>
+</odoo>
