@@ -9,9 +9,11 @@
     ],
     'data': [
         'security/ir.model.access.csv',
+
+        'wizards/stock_move_destination_wizard_views.xml',
+
         'views/stock_move_line_views.xml',
         'views/stock_move_views.xml',
-        'wizards/stock_move_destination_wizard_views.xml',
     ],
     'installable': True,
     'auto_install': False,
