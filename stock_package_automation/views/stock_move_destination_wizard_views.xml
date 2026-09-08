@@ -1,66 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <data>
-        <!-- Wizard Form View -->
-        <record id="view_stock_move_destination_wizard_form" model="ir.ui.view">
-            <field name="name">stock.move.destination.wizard.form</field>
-            <field name="model">stock.move.destination.wizard</field>
-            <field name="arch" type="xml">
-                <form string="معالج تعديل وجهات المنتجات">
-                    <sheet>
-                        <h1>تعديل وجهات المنتجات</h1>
-                        
-                        <group>
-                            <field name="picking_id" readonly="1"/>
-                        </group>
 
-                        <notebook>
-                            <page string="المنتجات">
-                                <field name="wizard_line_ids">
-                                    <list editable="bottom">
-                                        <field name="move_line_id" invisible="1"/>
-                                        <field name="product_id" readonly="1"/>
-                                        <field name="quantity" readonly="1"/>
-                                        <field name="uom_id" readonly="1"/>
-                                        <field name="location_dest_id" readonly="1"/>
-                                        <field name="new_location_dest_id"/>
-                                    </list>
-                                </field>
-                            </page>
-                        </notebook>
-                    </sheet>
+    <!-- Wizard Form View -->
+    <record id="view_stock_move_destination_wizard_form" model="ir.ui.view">
+        <field name="name">stock.move.destination.wizard.form</field>
+        <field name="model">stock.move.destination.wizard</field>
+        <field name="arch" type="xml">
+            <form string="معالج تعديل وجهات المنتجات">
+                <sheet>
+                    <h1>تعديل وجهات المنتجات</h1>
 
-                    <footer>
-                        <button name="action_apply_changes" string="حفظ التغييرات" type="object" class="btn-primary"/>
-                        <button string="إلغاء" class="btn-secondary" special="cancel"/>
-                    </footer>
-                </form>
-            </field>
-        </record>
+                    <group>
+                        <field name="picking_id" readonly="1"/>
+                    </group>
 
-        <!-- Action لفتح الـ Wizard -->
-        <record id="action_stock_move_destination_wizard" model="ir.actions.act_window">
-            <field name="name">معالج تعديل الوجهات</field>
-            <field name="res_model">stock.move.destination.wizard</field>
-            <field name="view_mode">form</field>
-            <field name="target">new</field>
-            <field name="context">{'active_id': active_id}</field>
-        </record>
+                    <notebook>
+                        <page string="المنتجات">
+                            <field name="wizard_line_ids">
+                                <list editable="bottom">
+                                    <field name="move_line_id" invisible="True"/>
+                                    <field name="product_id" readonly="1"/>
+                                    <field name="quantity" readonly="1"/>
+                                    <field name="uom_id" readonly="1"/>
+                                    <field name="location_dest_id" readonly="1"/>
+                                    <field name="new_location_dest_id"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
 
-        <!-- زر في stock.picking لفتح الـ Wizard -->
-        <record id="view_picking_form_inherit" model="ir.ui.view">
-            <field name="name">stock.picking.form.inherit</field>
-            <field name="model">stock.picking</field>
-            <field name="inherit_id">stock.view_picking_form</field>
-            <field name="arch" type="xml">
-                <xpath expr="//button[@name='button_validate']" position="after">
-                    <button name="%(stock_package_automation.action_stock_move_destination_wizard)d" 
-                            string="معالج تعديل الوجهات"
-                            type="action"
-                            class="btn-info"
-                            context="{'active_id': id}"/>
-                </xpath>
-            </field>
-        </record>
-    </data>
+                <footer>
+                    <button
+                        name="action_apply_changes"
+                        string="حفظ التغييرات"
+                        type="object"
+                        class="btn-primary"
+                    />
+                    <button
+                        string="إلغاء"
+                        class="btn-secondary"
+                        special="cancel"
+                    />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- Wizard Action -->
+    <record id="action_stock_move_destination_wizard" model="ir.actions.act_window">
+        <field name="name">معالج تعديل الوجهات</field>
+        <field name="res_model">stock.move.destination.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_stock_move_destination_wizard_form"/>
+        <field name="target">new</field>
+    </record>
+
+    <!-- Add wizard button to stock.picking -->
+    <record id="view_picking_form_inherit" model="ir.ui.view">
+        <field name="name">stock.picking.form.inherit</field>
+        <field name="model">stock.picking</field>
+
+        <!-- IMPORTANT: use ref -->
+        <field name="inherit_id" ref="stock.view_picking_form"/>
+
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='button_validate']" position="after">
+
+                <button
+                    name="%(stock_package_automation.action_stock_move_destination_wizard)d"
+                    string="معالج تعديل الوجهات"
+                    type="action"
+                    class="btn-info"
+                    context="{'active_id': id}"
+                />
+
+            </xpath>
+        </field>
+    </record>
+
 </odoo>
