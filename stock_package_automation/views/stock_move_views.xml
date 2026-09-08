@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- تعديل نموذج stock.move لإضافة زر الـ wizard -->
+        <record id="view_stock_move_form" model="ir.ui.view">
+            <field name="name">stock.move.form.inherit</field>
+            <field name="model">stock.move</field>
+            <field name="inherit_id">stock.view_move_form</field>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='action_show_details']" position="after">
+                    <button name="%(stock_package_automation.action_stock_move_destination_wizard)d" 
+                            string="فتح معالج الوجهات"
+                            type="action"
+                            class="btn-primary"
+                            attrs="{'invisible': [('state', '!=', 'confirmed')]}"
+                            context="{'active_id': parent_picking_id}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
