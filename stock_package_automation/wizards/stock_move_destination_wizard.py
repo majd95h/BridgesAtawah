@@ -104,48 +104,76 @@ class StockMoveDestinationWizard(models.TransientModel):
         """
         تطبيق التغييرات على وجهات المنتجات و packages
         """
+        if not self.wizard_line_ids:
+            return {
+                'type': 'ir.actions.client',
+                'tag': 'display_notification',
+                'params': {
+                    'title': 'تنبيه',
+                    'message': 'لا توجد عناصر للتحديث',
+                    'type': 'warning',
+                    'sticky': False,
+                }
+            }
+        
+        count = 0
         for line in self.wizard_line_ids:
-            if line.move_line_id and line.new_location_dest_id:
-                # تحديث location_dest_id للـ move line
-                line.move_line_id.location_dest_id = line.new_location_dest_id.id
+            try:
+                if not line.move_line_id:
+                    continue
+                
+                if not line.new_location_dest_id:
+                    continue
+                
+                # تحديث location_dest_id
+                line.move_line_id.write({
+                    'location_dest_id': line.new_location_dest_id.id,
+                })
                 
                 # إنشاء/تحديث package بناءً على الموقع الجديد
-                try:
-                    picking = line.move_line_id.picking_id
-                    if picking:
-                        # إنشاء package جديد بناءً على الموقع الجديد
-                        new_package_name = f"pkg_{line.new_location_dest_id.name.replace(' ', '_')}_{line.move_line_id.id}"
-                        
-                        existing_package = self.env['stock.package'].search(
-                            [('name', '=', new_package_name)],
-                            limit=1
-                        )
-                        
-                        if not existing_package:
-                            new_package = self.env['stock.package'].create({
-                                'name': new_package_name,
-                            })
-                        else:
-                            new_package = existing_package
-                        
-                        # تحديث result_package_id
-                        line.move_line_id.result_package_id = new_package.id
-                except Exception as e:
-                    _logger.warning(f"Error updating package: {str(e)}")
-                    # نستمر حتى لو فشل update package
+                location_name = line.new_location_dest_id.name or 'pkg'
+                new_package_name = f"pkg_{location_name.replace(' ', '_')}_{line.move_line_id.id}"
                 
-                # إذا كان لدينا move مرتبط، نحدثه أيضاً
+                existing_package = self.env['stock.package'].search(
+                    [('name', '=', new_package_name)],
+                    limit=1
+                )
+                
+                if not existing_package:
+                    new_package = self.env['stock.package'].create({
+                        'name': new_package_name,
+                    })
+                else:
+                    new_package = existing_package
+                
+                # تحديث result_package_id
+                line.move_line_id.write({
+                    'result_package_id': new_package.id,
+                    'location_dest_id': line.new_location_dest_id.id,
+                })
+                
+                # تحديث move إذا وجد
                 if line.move_line_id.move_id:
-                    line.move_line_id.move_id.location_dest_id = line.new_location_dest_id.id
+                    line.move_line_id.move_id.write({
+                        'location_dest_id': line.new_location_dest_id.id,
+                    })
+                
+                count += 1
+                _logger.info(f"Updated move line {line.move_line_id.id} with package {new_package_name}")
+                
+            except Exception as e:
+                _logger.error(f"Error updating line: {str(e)}")
+                continue
+        
+        message = f"تم تحديث {count} عنصر بنجاح"
         
         return {
             'type': 'ir.actions.client',
             'tag': 'display_notification',
             'params': {
-                'title': 'تم تحديث الوجهات والـ Packages',
-                'message': 'تم تحديث وجهات المنتجات و destination packages بنجاح',
+                'title': 'تم التحديث',
+                'message': message,
                 'type': 'success',
                 'sticky': False,
             }
         }
-
