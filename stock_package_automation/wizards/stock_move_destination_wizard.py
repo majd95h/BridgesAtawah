@@ -43,13 +43,13 @@ class StockMoveDestinationWizardLine(models.TransientModel):
     location_dest_id = fields.Many2one(
         'stock.location',
         string='Current Destination',
-        required=True
+        readonly=True
     )
     
     new_location_dest_id = fields.Many2one(
         'stock.location',
         string='New Destination',
-        required=True
+        required=False
     )
 
 
@@ -86,10 +86,14 @@ class StockMoveDestinationWizard(models.TransientModel):
             wizard_lines = []
             for move_line in picking.move_line_ids:
                 if move_line.product_id:
+                    # الحصول على الموقع الحالي
+                    current_location = move_line.location_dest_id
+                    new_location = move_line.location_dest_id or picking.location_dest_id
+                    
                     wizard_lines.append((0, 0, {
                         'move_line_id': move_line.id,
-                        'location_dest_id': move_line.location_dest_id.id,
-                        'new_location_dest_id': move_line.location_dest_id.id,
+                        'location_dest_id': current_location.id if current_location else None,
+                        'new_location_dest_id': new_location.id if new_location else None,
                     }))
             
             result['wizard_line_ids'] = wizard_lines
