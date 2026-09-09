@@ -102,12 +102,37 @@ class StockMoveDestinationWizard(models.TransientModel):
 
     def action_apply_changes(self):
         """
-        تطبيق التغييرات على وجهات المنتجات
+        تطبيق التغييرات على وجهات المنتجات و packages
         """
         for line in self.wizard_line_ids:
             if line.move_line_id and line.new_location_dest_id:
                 # تحديث location_dest_id للـ move line
                 line.move_line_id.location_dest_id = line.new_location_dest_id.id
+                
+                # إنشاء/تحديث package بناءً على الموقع الجديد
+                try:
+                    picking = line.move_line_id.picking_id
+                    if picking:
+                        # إنشاء package جديد بناءً على الموقع الجديد
+                        new_package_name = f"pkg_{line.new_location_dest_id.name.replace(' ', '_')}_{line.move_line_id.id}"
+                        
+                        existing_package = self.env['stock.package'].search(
+                            [('name', '=', new_package_name)],
+                            limit=1
+                        )
+                        
+                        if not existing_package:
+                            new_package = self.env['stock.package'].create({
+                                'name': new_package_name,
+                            })
+                        else:
+                            new_package = existing_package
+                        
+                        # تحديث result_package_id
+                        line.move_line_id.result_package_id = new_package.id
+                except Exception as e:
+                    _logger.warning(f"Error updating package: {str(e)}")
+                    # نستمر حتى لو فشل update package
                 
                 # إذا كان لدينا move مرتبط، نحدثه أيضاً
                 if line.move_line_id.move_id:
@@ -117,9 +142,10 @@ class StockMoveDestinationWizard(models.TransientModel):
             'type': 'ir.actions.client',
             'tag': 'display_notification',
             'params': {
-                'title': 'تم تحديث الوجهات',
-                'message': 'تم تحديث وجهات المنتجات بنجاح',
+                'title': 'تم تحديث الوجهات والـ Packages',
+                'message': 'تم تحديث وجهات المنتجات و destination packages بنجاح',
                 'type': 'success',
                 'sticky': False,
             }
         }
+
