@@ -6,7 +6,7 @@
         <field name="name">stock.move.destination.wizard.form</field>
         <field name="model">stock.move.destination.wizard</field>
         <field name="arch" type="xml">
-            <form string="معالج تعديل وجهات المنتجات">
+            <form string="products destinations">
                 <sheet>
                     <h1>تعديل وجهات المنتجات</h1>
 
@@ -15,7 +15,7 @@
                     </group>
 
                     <notebook>
-                        <page string="المنتجات">
+                        <page string="products">
                             <field name="wizard_line_ids">
                                 <list editable="bottom">
                                     <field name="move_line_id" invisible="True"/>
@@ -33,7 +33,7 @@
                 <footer>
                     <button
                         name="action_apply_changes"
-                        string="حفظ التغييرات"
+                        string="save "
                         type="object"
                         class="btn-primary"
                     />
@@ -69,7 +69,7 @@
 
                 <button
                     name="%(stock_package_automation.action_stock_move_destination_wizard)d"
-                    string="معالج تعديل الوجهات"
+                    string="fix destinations"
                     type="action"
                     class="btn-info"
                     context="{'active_id': id}"

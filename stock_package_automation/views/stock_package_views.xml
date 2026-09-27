@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="stock_package_view_form_inherit_cbm" model="ir.ui.view">
+        <field name="name">stock.package.form.inherit.cbm</field>
+        <field name="model">stock.package</field>
+        <field name="inherit_id" ref="stock.stock_package_view_form"/>
+        <field name="arch" type="xml">
+
+            <!-- Package total CBM before Pack Date -->
+            <xpath expr="//field[@name='pack_date']" position="before">
+                <field name="cbm" readonly="1"/>
+            </xpath>
+
+            <!-- Line CBM = product volume × quantity -->
+            <xpath expr="//field[@name='contained_quant_ids']/list/field[@name='quantity']" position="after">
+                <field name="cbm" readonly="1"/>
+            </xpath>
+
+        </field>
+    </record>
+
+</odoo>
