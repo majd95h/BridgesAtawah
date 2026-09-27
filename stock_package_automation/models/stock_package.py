@@ -7,10 +7,10 @@ class StockPackage(models.Model):
     cbm = fields.Float(
         string='CBM',
         compute='_compute_cbm',
+        digits='Volume',
     )
 
     @api.depends(
-        'contained_quant_ids',
         'contained_quant_ids.quantity',
         'contained_quant_ids.product_id',
         'contained_quant_ids.product_id.volume',

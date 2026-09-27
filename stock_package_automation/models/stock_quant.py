@@ -7,7 +7,7 @@ class StockQuant(models.Model):
     cbm = fields.Float(
         string='CBM',
         compute='_compute_cbm',
-        store=True,
+        digits='Volume',
     )
 
     @api.depends('quantity', 'product_id.volume')

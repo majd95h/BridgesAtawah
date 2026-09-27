@@ -4,15 +4,21 @@
     'category': 'Stock',
     'summary': 'Automate package creation and lot number generation in stock moves',
     'author': 'Your Company',
+
     'depends': [
         'stock',
     ],
+
     'data': [
-            'security/ir.model.access.csv',
-            'views/stock_move_destination_wizard_views.xml',
-            'views/stock_move_line_views.xml',
-            'views/stock_move_views.xml',
-        ],
+        'security/ir.model.access.csv',
+
+        'views/stock_move_destination_wizard_views.xml',
+
+        'views/stock_package_views.xml',
+        'views/stock_move_line_views.xml',
+        'views/stock_move_views.xml',
+    ],
+
     'installable': True,
     'auto_install': False,
     'license': 'LGPL-3',
